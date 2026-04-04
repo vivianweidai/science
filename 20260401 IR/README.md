@@ -1,3 +1,5 @@
+<img src="PHOTOS/ir.jpeg" alt="Thermo FT-IR Spectrometer" width="100%">
+
 # FT-IR Spectroscopy of Everyday Materials
 
 **Date:** April 1, 2026

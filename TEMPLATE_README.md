@@ -1,3 +1,5 @@
+<img src="PHOTOS/[photo filename]" alt="[description]" width="100%">
+
 # [Experiment Title]
 
 **Date:** [YYYY-MM-DD]
