@@ -56,5 +56,6 @@ Known instruments at the UNR SIL (expect data from these):
 
 This RESEARCH folder is synced to GitHub. Everything inside each project folder is publicly viewable. Keep this in mind:
 - Do not commit sensitive or personal information.
+- **Never include researcher names or lab location in READMEs or any public-facing files.** Project READMEs should include Date and Instrument but not Researchers or Location.
 - Ensure all code, data, and documentation is presentable and well-organized.
 - Each project's `README.md` serves as the public-facing overview of that experiment.

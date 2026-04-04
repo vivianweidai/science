@@ -7,7 +7,6 @@
 **Sarcomere Genes in Microgravity**
 
 **Date:** March 31, 2026
-**Researcher:** Vivian Dai
 **Program:** [Genes in Space](https://www.genesinspace.org/) — ISS National Laboratory
 
 ## Overview

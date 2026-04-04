@@ -1,8 +1,6 @@
 # [Experiment Title]
 
 **Date:** [YYYY-MM-DD]
-**Researchers:** James Dai, Vivian Dai
-**Location:** [UNR SIL / other]
 **Instrument:** [Instrument name]
 
 ## Overview

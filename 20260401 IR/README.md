@@ -1,8 +1,6 @@
 # FT-IR Spectroscopy of Everyday Materials
 
 **Date:** April 1, 2026
-**Researchers:** James Dai, Vivian Dai
-**Location:** UNR Shared Instruments Laboratory (Room 016)
 **Instrument:** FT-IR Spectrometer (ATR mode)
 
 ## Overview
