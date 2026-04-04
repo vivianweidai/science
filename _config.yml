@@ -1,0 +1,13 @@
+title: Research
+description: Experimental research by James Dai & Vivian Dai
+theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-readme-index
+  - jekyll-relative-links
+
+readme_index:
+  enabled: true
+
+relative_links:
+  enabled: true
