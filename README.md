@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://vivianweidai.com/pyramid6.png" alt="Research" width="200">
+</p>
+
 # Research
 
 Experimental research across science olympiad disciplines — Mathematics, Computing, Physics, Chemistry, Biology, and Astronomy.
