@@ -48,7 +48,7 @@ Cardiomyocyte cultures carrying both wild-type and known mutant MYBPC3 variants 
 
 ## Data
 
-See the <a href="https://github.com/vivianweidai/research/blob/main/20260401%20Genes%20in%20Space/OUTPUT/20260331%20Genes%20in%20Space.pdf">proposal document</a> (PDF) and <a href="https://github.com/vivianweidai/research/tree/main/20260401%20Genes%20in%20Space/PAPERS">reference literature</a>.
+See the <a href="https://github.com/vivianweidai/research/blob/main/20260401%20Genes%20in%20Space/OUTPUT/20260331%20Genes%20in%20Space.pdf">proposal document</a> and <a href="https://github.com/vivianweidai/research/tree/main/20260401%20Genes%20in%20Space/PAPERS">reference literature</a>.
 
 ---
 
