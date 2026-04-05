@@ -18,11 +18,11 @@ Projects are stored on [Github](https://github.com/vivianweidai/research) with t
 
 ```
 YYYYMMDD Project Name/
-├── DATA/       # Raw instrument data (CSVs, spectra, images)
+├── DATA/       # Raw instrument data
 ├── PHOTOS/     # Experiment photos
-├── PAPERS/     # Background reference papers
+├── PAPERS/     # Background papers
 ├── OUTPUT/     # Analysis and reports
-└── README.md   # Project overview, methods, results
+└── README.md   # This summary document
 ```
 
 ## Instruments
