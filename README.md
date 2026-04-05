@@ -21,8 +21,7 @@ YYYYMMDD Project Name/
 ├── DATA/       # Raw instrument data (CSVs, spectra, images)
 ├── PHOTOS/     # Experiment photos
 ├── PAPERS/     # Background reference papers
-├── OUTPUT/     # Analysis scripts, processed data, figures
-│   └── FIGURES/
+├── OUTPUT/     # Analysis and reports
 └── README.md   # Project overview, methods, results
 ```
 
