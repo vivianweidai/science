@@ -3,7 +3,7 @@
 <img src="PHOTOS/probe.jpeg" alt="Jandel RM3 Four-Point Probe" width="100%">
 
 **Date:** April 4th 2026
-**Instrument:** Jandel RM3 Four-Point Probe
+**Instrument:** Jandel RM3-AR Four-Point Probe Test Unit
 
 ## Overview
 

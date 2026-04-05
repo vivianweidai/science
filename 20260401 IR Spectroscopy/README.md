@@ -3,7 +3,7 @@
 <img src="PHOTOS/ir.jpeg" alt="Thermo FT-IR Spectrometer" width="100%">
 
 **Date:** April 1st 2026
-**Instrument:** FT-IR Spectrometer (ATR mode)
+**Instrument:** Thermo Scientific Nicolet iS5 FT-IR Spectrometer (ATR mode)
 
 ## Overview
 

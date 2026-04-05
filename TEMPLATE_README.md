@@ -3,7 +3,7 @@
 <img src="PHOTOS/[photo filename]" alt="[description]" width="100%">
 
 **Date:** [Month Dayth Year, e.g. April 4th 2026]
-**Instrument:** [Instrument name]
+**Instrument:** [Full instrument name, e.g. Thermo Scientific Nicolet iS5 FT-IR Spectrometer]
 
 ## Overview
 
