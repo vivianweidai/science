@@ -27,16 +27,17 @@ The **MYBPC3 gene** — two mutations are known to be associated with HCM in cat
 
 Myriad other MYBPC3 mutations are associated with HCM in humans.
 
-## Experimental Plan
+## Setup
 
-**Materials:** Cardiomyocyte cell cultures from humans and British Shorthair cats, with both wild-type and known mutant MYBPC3 variants. Identical samples processed on Earth under normal gravity serve as controls.
+| Category | Details |
+|----------|---------|
+| Samples | Cardiomyocyte cell cultures (human and British Shorthair cat) |
+| Variants | Wild-type and mutant MYBPC3 (A31P, R820W) |
+| Controls | Identical samples processed on Earth under normal gravity |
+| Measurement | mRNA transcript levels of MYBPC3, normalized against GAPDH |
+| Readout | Fluorescence band intensity comparison (ISS vs. Earth) |
 
-**Measurements:** mRNA transcript levels of MYBPC3 variants, normalized against GAPDH, comparing fluorescence band intensity between ISS and Earth samples.
-
-**Tools (Genes in Space toolkit):**
-- **miniPCR** — amplify MYBPC3 mRNA transcripts
-- **P51 Molecular Fluorescence Viewer** — detect and compare ISS vs. Earth samples
-- **BioBits** — express cMyBP-C protein from amplified cDNA to test whether microgravity affects protein translation as well as transcription
+Cardiomyocyte cultures carrying both wild-type and known mutant MYBPC3 variants are prepared on Earth. Identical sample sets are sent to the ISS and processed in parallel on the ground as controls. On the ISS, mRNA transcripts of MYBPC3 are amplified using **miniPCR** and detected with the **P51 Molecular Fluorescence Viewer**, comparing band intensity between ISS and Earth samples. **BioBits** is used to express cMyBP-C protein from the amplified cDNA, testing whether microgravity affects protein translation as well as transcription.
 
 ## References
 
@@ -47,8 +48,7 @@ Myriad other MYBPC3 mutations are associated with HCM in humans.
 
 ## Data
 
-- <a href="https://github.com/vivianweidai/research/blob/main/20260401%20Genes%20in%20Space/OUTPUT/20260331%20Genes%20in%20Space.pdf">View proposal document</a>
-- <a href="https://github.com/vivianweidai/research/tree/main/20260401%20Genes%20in%20Space/PAPERS">Reference literature</a>
+See the <a href="https://github.com/vivianweidai/research/blob/main/20260401%20Genes%20in%20Space/OUTPUT/20260331%20Genes%20in%20Space.pdf">proposal document</a> (PDF) and <a href="https://github.com/vivianweidai/research/tree/main/20260401%20Genes%20in%20Space/PAPERS">reference literature</a>.
 
 ---
 
