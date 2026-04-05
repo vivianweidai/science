@@ -57,47 +57,36 @@ shufflePhotos();
 
 Does a cat prefer red or green coloured food? This experiment tested whether a British Shorthair cat (Mi) shows a statistically significant preference for red- or green-dyed cat food. Regular dry cat food was dyed with food colouring and presented in two side-by-side bowls over 30 days. The bowl Mi approached first was recorded as his preference for that day. A chi-squared test was used to determine whether the observed preference differed significantly from chance.
 
-## Materials
+## Materials and Methods
 
-| # | Category | Details |
-|---|----------|---------|
-| 1 | Subject | British Shorthair cat (Mi) |
-| 2 | Food | Regular dry cat food (Kirkland) |
-| 3 | Dye | Red and green food colouring |
-| 4 | Serving | 10 pieces per bowl per trial |
-| 5 | Duration | 30 days (August-September 2024) |
+| Category | Details |
+|----------|---------|
+| Subject | British Shorthair cat (Mi) |
+| Food | Regular dry cat food (Kirkland) |
+| Dye | Red and green food colouring |
+| Serving | 10 pieces per bowl per trial |
+| Duration | 30 days (August-September 2024) |
+
+Coloured cat food was prepared by mixing regular dry food with red and green food colouring in separate jars. Each day, two bowls were placed side by side — one with 10 red pieces and one with 10 green pieces. Bowl positions were alternated daily to control for side bias. The colour Mi approached and began eating first was recorded as his preference. Remaining pieces, serving time, and food dye concentration were also tracked. Days where Mi did not eat from either bowl were excluded. After 30 days, a chi-squared goodness-of-fit test was applied to the observed preferences.
 
 ## Data
 
-Raw data is recorded on handwritten data sheets, photographed as JPEG images. Variables tracked per trial include: date, serving number, number of red/green pieces served, pieces remaining, bowl position (left/right), serving time, and number of food dye drops used. View the raw data sheets on <a href="https://github.com/vivianweidai/research/tree/main/20250225%20Catfood/DATA">GitHub</a>.
+Raw data was recorded on handwritten data sheets, photographed as JPEG images. Variables tracked per trial include: date, serving number, pieces served and remaining, bowl position (left/right), serving time, and food dye drops used.
 
 <div class="photo-grid three-col" id="data-grid">
   <img id="data-0" alt="Data sheet">
   <img id="data-1" alt="Data sheet">
   <img id="data-2" alt="Data sheet">
 </div>
-<button class="shuffle-btn" onclick="shuffleData()">Shuffle Data</button>
 
 <script>
 var allData = {{ page.data_photos | jsonify }};
-function shuffleData() {
-  var shuffled = allData.slice().sort(function() { return 0.5 - Math.random(); });
-  for (var i = 0; i < Math.min(shuffled.length, 3); i++) {
-    document.getElementById('data-' + i).src = shuffled[i];
+(function() {
+  for (var i = 0; i < allData.length; i++) {
+    document.getElementById('data-' + i).src = allData[i];
   }
-}
-shuffleData();
+})();
 </script>
-
-## Methods
-
-1. Prepared coloured cat food by mixing regular dry food with red and green food colouring in separate jars
-2. Each trial: placed two bowls side by side, one with 10 red pieces and one with 10 green pieces
-3. Alternated bowl positions (left/right) between trials to control for side bias
-4. Recorded which colour Mi approached and began eating first
-5. Tracked remaining pieces, serving time, and food dye concentration
-6. Days where Mi did not eat from either bowl were excluded
-7. After 30 days, applied a chi-squared test to the observed preferences
 
 ## Results
 

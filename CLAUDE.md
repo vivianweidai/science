@@ -122,21 +122,19 @@ project: [Short Project Name]
 
 [1-2 paragraph description]
 
-## Materials
+## Materials and Methods
 
-| # | Category | Materials |
-|---|----------|-----------|
-| 1 | [Category] | [material1, material2] |
+| Category | Details |
+|----------|---------|
+| [Category] | [details] |
+
+[Prose description of the experimental procedure, flowing naturally from the materials table above.]
 
 ## Data
 
-[Description of data format.] View the raw data on <a href="https://github.com/vivianweidai/research/tree/main/[URL-encoded folder]/DATA">GitHub</a>.
+[Description of data format and what was recorded.]
 
-[If DATA/ contains photos/images, add a photo grid shuffler here using `data_photos` front matter and a separate `shuffleData()` function. Use `three-col` class for 3 images. This is independent from the top PHOTOS shuffler.]
-
-## Methods
-
-1. [Step-by-step procedure]
+[If DATA/ contains photos/images, add a photo grid here using `data_photos` front matter. Show all photos without a shuffle button if count <= 4. Only add shuffle button if there are more photos than grid slots. Use `three-col` class for 3 images. This grid is independent from the top PHOTOS shuffler.]
 
 ## Results
 
