@@ -1,3 +1,8 @@
+---
+layout: project
+project: IR Spectroscopy
+---
+
 # IR Spectroscopy of Everyday Materials
 
 <img src="PHOTOS/ir.jpeg" alt="Thermo FT-IR Spectrometer" width="100%">
@@ -38,4 +43,4 @@ Raw spectra are in `DATA/` as CSV files. Each CSV has two columns (no header): w
 
 ---
 
-[View on GitHub](https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy)
+<div class="footer"><div class="footer-nav"><a href="https://vivianweidai.com/curriculum/">Curriculum</a><a href="https://vivianweidai.com/olympiads/">Olympiads</a><a href="https://vivianweidai.com/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy">View on GitHub</a></div>

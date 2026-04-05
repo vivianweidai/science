@@ -1,3 +1,8 @@
+---
+layout: project
+project: Cat Food Colour Preference
+---
+
 # Red or Green: Cat Food Colour Preference Experiment
 
 <img src="PHOTOS/20240906 Catfood.jpeg" alt="Cat food colour preference experiment" width="100%">
@@ -40,4 +45,4 @@ See `OUTPUT/20250225 Catfood.pdf` for the full written report.
 
 ---
 
-[View on GitHub](https://github.com/vivianweidai/research/tree/main/20250225%20Catfood)
+<div class="footer"><div class="footer-nav"><a href="https://vivianweidai.com/curriculum/">Curriculum</a><a href="https://vivianweidai.com/olympiads/">Olympiads</a><a href="https://vivianweidai.com/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/research/tree/main/20250225%20Catfood">View on GitHub</a></div>

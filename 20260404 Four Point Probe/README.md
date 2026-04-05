@@ -1,3 +1,8 @@
+---
+layout: project
+project: Four-Point Probe
+---
+
 # Four-Point Probe Resistivity Measurements
 
 <img src="PHOTOS/probe.jpeg" alt="Jandel RM3 Four-Point Probe" width="100%">
@@ -26,4 +31,4 @@ Raw measurement data in `DATA/`. See `OUTPUT/` for analysis scripts and figures.
 
 ---
 
-[View on GitHub](https://github.com/vivianweidai/research/tree/main/20260404%20Four%20Point%20Probe)
+<div class="footer"><div class="footer-nav"><a href="https://vivianweidai.com/curriculum/">Curriculum</a><a href="https://vivianweidai.com/olympiads/">Olympiads</a><a href="https://vivianweidai.com/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/research/tree/main/20260404%20Four%20Point%20Probe">View on GitHub</a></div>

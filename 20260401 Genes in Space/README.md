@@ -1,3 +1,8 @@
+---
+layout: project
+project: Genes in Space
+---
+
 # Meow to Mars — Will Space Help or Hurt Mi's Heart?
 
 <img src="PHOTOS/mi.png" alt="Mi the astronaut cat" width="100%">
@@ -48,4 +53,4 @@ Myriad other MYBPC3 mutations are associated with HCM in humans.
 
 ---
 
-[View on GitHub](https://github.com/vivianweidai/research/tree/main/20260401%20Genes%20in%20Space)
+<div class="footer"><div class="footer-nav"><a href="https://vivianweidai.com/curriculum/">Curriculum</a><a href="https://vivianweidai.com/olympiads/">Olympiads</a><a href="https://vivianweidai.com/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/research/tree/main/20260401%20Genes%20in%20Space">View on GitHub</a></div>
