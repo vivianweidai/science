@@ -1,5 +1,7 @@
 ## Research
 
+<img src="research.jpeg" alt="Research" width="100%">
+
 <div class="tabs">
   <input type="radio" name="tab" id="tab-math" checked>
   <input type="radio" name="tab" id="tab-comp">
