@@ -67,6 +67,7 @@
 - **[Biology]** miniPCR bio miniPCR Thermal Cycler — PCR amplification of DNA/RNA targets
 - **[Biology]** miniPCR bio P51 Molecular Fluorescence Viewer — fluorescence detection and gel imaging
 - **[Biology]** miniPCR bio BioBits Cell-Free Protein Expression System — in vitro protein expression from DNA templates
+- **[Computing]** GitHub, Python and Jupyter Notebooks — statistical analysis and reproducible research pipelines
 
 ## Repository Structure
 
