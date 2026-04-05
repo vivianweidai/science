@@ -3,7 +3,7 @@ name: Sync README to other repos
 on:
   push:
     branches: [main]
-    paths: [README.md]
+    paths: [README.md, .github/workflows/sync-readme.yml]
 
 jobs:
   sync:
