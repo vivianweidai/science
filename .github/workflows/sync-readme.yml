@@ -23,7 +23,7 @@ jobs:
         with:
           source_file: README-synced.md
           destination_repo: vivianweidai/vivianweidai
-          destination_file: README.md
+          rename: README.md
           user_email: github-actions[bot]@users.noreply.github.com
           user_name: github-actions[bot]
           commit_message: "Sync README from research"
@@ -35,7 +35,7 @@ jobs:
         with:
           source_file: README-synced.md
           destination_repo: vivianweidai/vivianweidai.github.io
-          destination_file: README.md
+          rename: README.md
           user_email: github-actions[bot]@users.noreply.github.com
           user_name: github-actions[bot]
           commit_message: "Sync README from research"
