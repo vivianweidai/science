@@ -62,7 +62,7 @@
 
 ## Instruments
 
-<p align="center"><img src="research.jpeg" alt="Instruments" style="max-width: 500px; width: 100%;"></p>
+<p align="center"><img src="research.jpeg" alt="Instruments" class="instruments-img"></p>
 
 - **[Chemistry]** Thermo Scientific Nicolet 380 FT-IR Spectrometer — mid-IR absorption/transmittance spectra
 - **[Physics]** Jandel RM3-AR Four-Point Probe Test Unit — sheet resistance and resistivity measurements
