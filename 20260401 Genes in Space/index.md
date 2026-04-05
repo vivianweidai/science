@@ -29,7 +29,7 @@ Myriad other MYBPC3 mutations are associated with HCM in humans.
 
 ## Experimental Plan
 
-**Samples:** Cardiomyocyte cell cultures from humans and British Shorthair cats, with both wild-type and known mutant MYBPC3 variants. Identical samples processed on Earth under normal gravity serve as controls.
+**Materials:** Cardiomyocyte cell cultures from humans and British Shorthair cats, with both wild-type and known mutant MYBPC3 variants. Identical samples processed on Earth under normal gravity serve as controls.
 
 **Measurements:** mRNA transcript levels of MYBPC3 variants, normalized against GAPDH, comparing fluorescence band intensity between ISS and Earth samples.
 
@@ -47,8 +47,8 @@ Myriad other MYBPC3 mutations are associated with HCM in humans.
 
 ## Data
 
-- [View proposal document](https://github.com/vivianweidai/research/blob/main/20260401%20Genes%20in%20Space/OUTPUT/20260331%20Genes%20in%20Space.pdf)
-- See `PAPERS/` for reference literature
+- <a href="https://github.com/vivianweidai/research/blob/main/20260401%20Genes%20in%20Space/OUTPUT/20260331%20Genes%20in%20Space.pdf">View proposal document</a>
+- <a href="https://github.com/vivianweidai/research/tree/main/20260401%20Genes%20in%20Space/PAPERS">Reference literature</a>
 
 ---
 

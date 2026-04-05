@@ -15,7 +15,7 @@ Sheet resistance and resistivity measurements of conductive materials using the 
 
 ## Data
 
-Raw measurement data in `DATA/`. See `OUTPUT/` for analysis scripts and figures.
+Raw measurement data available on <a href="https://github.com/vivianweidai/research/tree/main/20260404%20Four%20Point%20Probe/DATA">GitHub</a>.
 
 ## Methods
 
@@ -26,7 +26,7 @@ Raw measurement data in `DATA/`. See `OUTPUT/` for analysis scripts and figures.
 
 ## Results
 
-*Analysis in progress — see `OUTPUT/` for scripts and figures.*
+*Analysis in progress.*
 
 ---
 

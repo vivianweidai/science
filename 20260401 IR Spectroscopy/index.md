@@ -13,9 +13,9 @@ project: IR Spectroscopy
 
 Infrared spectroscopy survey of common household and laboratory materials. Each sample was measured using the FT-IR spectrometer to capture its absorption/transmittance spectrum across the mid-infrared range (~550-4000 cm-1). The goal is to build a reference library of spectra and identify characteristic functional group signatures in everyday substances.
 
-## Samples
+## Materials
 
-| # | Category | Samples |
+| # | Category | Materials |
 |---|----------|---------|
 | 1 | Solvents | acetone, isopropanol, water |
 | 2 | Food/minerals | coffee, salt, sugar |
@@ -27,7 +27,7 @@ Infrared spectroscopy survey of common household and laboratory materials. Each 
 
 ## Data
 
-Raw spectra are in `DATA/` as CSV files. Each CSV has two columns (no header): wavenumber (cm-1) and transmittance (%), with ~7,150 data points per spectrum spanning approximately 550-4000 cm-1.
+Raw spectra are available as CSV files on <a href="https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy/DATA">GitHub</a>. Each CSV has two columns (no header): wavenumber (cm-1) and transmittance (%), with ~7,150 data points per spectrum spanning approximately 550-4000 cm-1.
 
 ## Methods
 

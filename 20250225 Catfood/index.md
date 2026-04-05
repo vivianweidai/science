@@ -24,6 +24,10 @@ photos:
   - PHOTOS/20240920 Catfood M.jpeg
   - PHOTOS/20240923 Catfood A.jpeg
   - PHOTOS/20240923 Catfood B.jpeg
+data_photos:
+  - DATA/20240901 Catfood B.jpeg
+  - DATA/20240907 Catfood B.jpeg
+  - DATA/20240920 Catfood N.jpeg
 ---
 
 # Red or Green, What Coloured Cat Food does Mi Prefer?
@@ -53,7 +57,7 @@ shufflePhotos();
 
 Does a cat prefer red or green coloured food? This experiment tested whether a British Shorthair cat (Mi) shows a statistically significant preference for red- or green-dyed cat food. Regular dry cat food was dyed with food colouring and presented in two side-by-side bowls over 30 days. The bowl Mi approached first was recorded as his preference for that day. A chi-squared test was used to determine whether the observed preference differed significantly from chance.
 
-## Samples
+## Materials
 
 | # | Category | Details |
 |---|----------|---------|
@@ -65,7 +69,25 @@ Does a cat prefer red or green coloured food? This experiment tested whether a B
 
 ## Data
 
-Raw data is recorded on handwritten data sheets in `DATA/`, photographed as JPEG images. Variables tracked per trial include: date, serving number, number of red/green pieces served, pieces remaining, bowl position (left/right), serving time, and number of food dye drops used.
+Raw data is recorded on handwritten data sheets, photographed as JPEG images. Variables tracked per trial include: date, serving number, number of red/green pieces served, pieces remaining, bowl position (left/right), serving time, and number of food dye drops used. View the raw data sheets on <a href="https://github.com/vivianweidai/research/tree/main/20250225%20Catfood/DATA">GitHub</a>.
+
+<div class="photo-grid three-col" id="data-grid">
+  <img id="data-0" alt="Data sheet">
+  <img id="data-1" alt="Data sheet">
+  <img id="data-2" alt="Data sheet">
+</div>
+<button class="shuffle-btn" onclick="shuffleData()">Shuffle Data</button>
+
+<script>
+var allData = {{ page.data_photos | jsonify }};
+function shuffleData() {
+  var shuffled = allData.slice().sort(function() { return 0.5 - Math.random(); });
+  for (var i = 0; i < Math.min(shuffled.length, 3); i++) {
+    document.getElementById('data-' + i).src = shuffled[i];
+  }
+}
+shuffleData();
+</script>
 
 ## Methods
 
@@ -81,7 +103,7 @@ Raw data is recorded on handwritten data sheets in `DATA/`, photographed as JPEG
 
 Over 30 days, Mi chose red on 13 days and green on 17 days. A chi-squared goodness-of-fit test with one degree of freedom yielded a test statistic of 0.533, well below the critical value of 3.841 at 95% confidence. The null hypothesis (no colour preference) was not rejected. Mi shows no statistically significant preference for red or green cat food.
 
-See the <a href="https://github.com/vivianweidai/research/blob/main/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">full reproducible analysis</a> (Jupyter notebook) or the <a href="https://github.com/vivianweidai/research/blob/main/20250225%20Catfood/OUTPUT/20250225%20Catfood.pdf">written report</a> (PDF).
+See the <a href="https://github.com/vivianweidai/research/blob/main/20250225%20Catfood/OUTPUT/20250225%20Catfood.pdf">written report</a> (PDF) or the <a href="https://github.com/vivianweidai/research/blob/main/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">full reproducible analysis</a> (Jupyter notebook).
 
 ---
 

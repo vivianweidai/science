@@ -122,15 +122,17 @@ project: [Short Project Name]
 
 [1-2 paragraph description]
 
-## Samples
+## Materials
 
-| # | Category | Samples |
-|---|----------|---------|
-| 1 | [Category] | [sample1, sample2] |
+| # | Category | Materials |
+|---|----------|-----------|
+| 1 | [Category] | [material1, material2] |
 
 ## Data
 
-Raw data files are in `DATA/`. [Describe format.]
+[Description of data format.] View the raw data on <a href="https://github.com/vivianweidai/research/tree/main/[URL-encoded folder]/DATA">GitHub</a>.
+
+[If DATA/ contains photos/images, add a photo grid shuffler here using `data_photos` front matter and a separate `shuffleData()` function. Use `three-col` class for 3 images. This is independent from the top PHOTOS shuffler.]
 
 ## Methods
 
@@ -138,13 +140,13 @@ Raw data files are in `DATA/`. [Describe format.]
 
 ## Results
 
-[Summary. Link to analysis/report on GitHub:]
+[Summary. Link to written report first, then notebook:]
 
-See the <a href="https://github.com/vivianweidai/research/blob/main/[URL-encoded path]">full reproducible analysis</a> (Jupyter notebook) or the <a href="https://github.com/vivianweidai/research/blob/main/[URL-encoded path]">written report</a> (PDF).
+See the <a href="https://github.com/vivianweidai/research/blob/main/[path]">written report</a> (PDF) or the <a href="https://github.com/vivianweidai/research/blob/main/[path]">full reproducible analysis</a> (Jupyter notebook).
 
 ---
 
 <div class="footer"><div class="footer-nav"><a href="https://vivianweidai.com/curriculum/">Curriculum</a><a href="https://vivianweidai.com/olympiads/">Olympiads</a><a href="https://vivianweidai.com/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/research/tree/main/[URL-encoded folder name]">View on GitHub</a></div>
 ```
 
-Always use `index.md` (not `README.md`) for project pages. Always include the footer div.
+Always use `index.md` (not `README.md`) for project pages. Always include the footer div. The `photos` front matter array is for PHOTOS/ only; use `data_photos` for DATA/ images.
