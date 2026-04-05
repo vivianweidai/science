@@ -37,7 +37,7 @@ YYYYMMDD Project Name/
 
 ## INSTRUMENTS & DATA FORMATS
 
-Known instruments at the UNR SIL (expect data from these):
+Known instruments (expect data from these):
 - **FT-IR Spectrometer** — produces CSV files with wavenumber (cm⁻¹) vs. transmittance/absorbance
 - **Four-Point Probe (Jandel RM3)** — resistivity measurements
 - Additional instruments as projects expand (XRD, SEM, UV-Vis, etc.)
