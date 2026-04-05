@@ -14,7 +14,7 @@
 
 ## Repository Structure
 
-Each project lives in a date-prefixed folder:
+Projects are stored on [Github](https://github.com/vivianweidai/research) with the folder structure:
 
 ```
 YYYYMMDD Project Name/
