@@ -93,5 +93,18 @@
     <a href="https://vivianweidai.com/research/">Research</a>
   </nav>
   {{ content }}
+  <script>
+    (function() {
+      var tabs = ['math','comp','phys','chem','bio','astro'];
+      var active = tabs.filter(function(t) {
+        var content = document.getElementById('content-' + t);
+        return content && !content.querySelector('em');
+      });
+      if (active.length === 0) active = tabs;
+      var pick = active[Math.floor(Math.random() * active.length)];
+      var el = document.getElementById('tab-' + pick);
+      if (el) el.checked = true;
+    })();
+  </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
   <input type="radio" name="tab" id="tab-math">
   <input type="radio" name="tab" id="tab-comp">
   <input type="radio" name="tab" id="tab-phys">
-  <input type="radio" name="tab" id="tab-chem" checked>
+  <input type="radio" name="tab" id="tab-chem">
   <input type="radio" name="tab" id="tab-bio">
   <input type="radio" name="tab" id="tab-astro">
 
