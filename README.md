@@ -49,6 +49,7 @@
     <table>
       <tr><th>Date</th><th>Project</th><th>Description</th></tr>
       <tr><td>April 2026</td><td><a href="20260401%20Genes%20in%20Space/">Genes in Space</a></td><td>Investigating gene expression changes under simulated microgravity conditions</td></tr>
+      <tr><td>February 2025</td><td><a href="20250225%20Catfood/">Cat Food Colour Preference</a></td><td>Chi-squared analysis of red vs. green food colour preference in a domestic cat</td></tr>
     </table>
   </div>
 
