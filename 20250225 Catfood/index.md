@@ -57,7 +57,7 @@ shufflePhotos();
 
 Does a cat prefer red or green coloured food? This experiment tested whether a British Shorthair cat (Mi) shows a statistically significant preference for red- or green-dyed cat food. Regular dry cat food was dyed with food colouring and presented in two side-by-side bowls over 30 days. The bowl Mi approached first was recorded as his preference for that day. A chi-squared test was used to determine whether the observed preference differed significantly from chance.
 
-## Materials and Methods
+## Setup
 
 | Category | Details |
 |----------|---------|

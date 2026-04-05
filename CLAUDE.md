@@ -123,7 +123,7 @@ project: [Short Project Name]
 
 [1-2 paragraph description]
 
-## Materials and Methods
+## Setup
 
 | Category | Details |
 |----------|---------|
