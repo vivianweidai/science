@@ -23,3 +23,7 @@ Raw measurement data in `DATA/`. See `OUTPUT/` for analysis scripts and figures.
 ## Results
 
 *Analysis in progress — see `OUTPUT/` for scripts and figures.*
+
+---
+
+[View on GitHub](https://github.com/vivianweidai/research/tree/main/20260404%20Four%20Point%20Probe)

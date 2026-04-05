@@ -35,3 +35,7 @@ Raw spectra are in `DATA/` as CSV files. Each CSV has two columns (no header): w
 ## Results
 
 *Analysis in progress — see `OUTPUT/` for scripts and figures.*
+
+---
+
+[View on GitHub](https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy)

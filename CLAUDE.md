@@ -96,4 +96,10 @@ Raw data files are in `DATA/`. [Describe format: columns, units, number of data 
 ## References
 
 - See `PAPERS/` for background literature
+
+---
+
+[View on GitHub](https://github.com/vivianweidai/research/tree/main/[URL-encoded folder name])
 ```
+
+Always include a "View on GitHub" link at the bottom of every project README, linking to the project folder on GitHub.

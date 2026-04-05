@@ -43,4 +43,9 @@ Myriad other MYBPC3 mutations are associated with HCM in humans.
 
 ## Data
 
-See `PAPERS/` for reference literature and `OUTPUT/` for the full proposal document.
+- [View proposal document](https://github.com/vivianweidai/research/blob/main/20260401%20Genes%20in%20Space/OUTPUT/20260331%20Genes%20in%20Space.pdf)
+- See `PAPERS/` for reference literature
+
+---
+
+[View on GitHub](https://github.com/vivianweidai/research/tree/main/20260401%20Genes%20in%20Space)
