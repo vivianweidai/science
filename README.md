@@ -85,4 +85,4 @@ YYYYMMDD Project Name/
 
 ---
 
-<div class="footer"><a href="https://github.com/vivianweidai/research">View on GitHub</a></div>
+<div class="footer"><div class="footer-nav"><a href="https://vivianweidai.com/curriculum/">Curriculum</a><a href="https://vivianweidai.com/olympiads/">Olympiads</a></div><a class="footer-github" href="https://github.com/vivianweidai/research">View on GitHub</a></div>
