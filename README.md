@@ -1,6 +1,6 @@
 # Research
 
-<img src="https://vivianweidai.com/pyramid6.png" alt="Research" width="100%">
+<img src="https://vivianweidai.github.io/science.png" alt="Research" width="100%">
 
 <p align="center"><a href="https://vivianweidai.com">Science</a> — Mathematics Computing Physics Chemistry Biology Astronomy</p>
 
