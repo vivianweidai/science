@@ -79,9 +79,9 @@ Raw data is recorded on handwritten data sheets in `DATA/`, photographed as JPEG
 
 ## Results
 
-Over 30 days, Mi chose red on 13 days and green on 17 days. A chi-squared goodness-of-fit test with one degree of freedom yielded a test statistic of 0.266, well below the critical value of 3.841 at 95% confidence. The null hypothesis (no colour preference) was not rejected. Mi shows no statistically significant preference for red or green cat food.
+Over 30 days, Mi chose red on 13 days and green on 17 days. A chi-squared goodness-of-fit test with one degree of freedom yielded a test statistic of 0.533, well below the critical value of 3.841 at 95% confidence. The null hypothesis (no colour preference) was not rejected. Mi shows no statistically significant preference for red or green cat food.
 
-See the <a href="OUTPUT/20250225%20Catfood.pdf">full written report</a>.
+See the <a href="OUTPUT/catfood_analysis.ipynb">full reproducible analysis</a> (Jupyter notebook) or the <a href="OUTPUT/20250225%20Catfood.pdf">written report</a> (PDF).
 
 ---
 
