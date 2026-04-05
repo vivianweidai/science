@@ -1,6 +1,6 @@
 ## Research
 
-<img src="research.jpeg" alt="Research" width="100%">
+<img src="research.jpeg" alt="Research" style="max-width: 500px; width: 100%;">
 
 <div class="tabs">
   <input type="radio" name="tab" id="tab-math" checked>
