@@ -1,8 +1,8 @@
-<img src="PHOTOS/ir.jpeg" alt="Thermo FT-IR Spectrometer" width="100%">
-
 # IR Spectroscopy of Everyday Materials
 
-**Date:** April 1, 2026
+<img src="PHOTOS/ir.jpeg" alt="Thermo FT-IR Spectrometer" width="100%">
+
+**Date:** April 1st 2026
 **Instrument:** FT-IR Spectrometer (ATR mode)
 
 ## Overview
@@ -11,27 +11,15 @@ Infrared spectroscopy survey of common household and laboratory materials. Each 
 
 ## Samples
 
-| # | Sample | Category |
-|---|--------|----------|
-| 1 | acetone | Solvent |
-| 2 | isopropanol | Solvent |
-| 3 | water | Solvent |
-| 4 | coffee | Food/beverage |
-| 5 | salt | Food/mineral |
-| 6 | sugar | Food/mineral |
-| 7 | soap | Personal care |
-| 8 | shampoo | Personal care |
-| 9 | conditioner | Personal care |
-| 10 | lotion | Personal care |
-| 11 | sunscreen | Personal care |
-| 12 | cleaner | Household |
-| 13 | paper | Material |
-| 14 | plastic bag | Polymer |
-| 15 | plastic cap | Polymer |
-| 16 | plastic glove | Polymer |
-| 17 | paperplasticcup | Composite |
-| 18 | finger | Biological |
-| 19 | background | Control/baseline |
+| # | Category | Samples |
+|---|----------|---------|
+| 1 | Solvents | acetone, isopropanol, water |
+| 2 | Food/minerals | coffee, salt, sugar |
+| 3 | Personal care | soap, shampoo, conditioner, lotion, sunscreen |
+| 4 | Household | cleaner |
+| 5 | Polymers/materials | plastic bag, plastic cap, plastic glove, paper, paperplasticcup |
+| 6 | Biological | finger |
+| 7 | Control | background |
 
 ## Data
 

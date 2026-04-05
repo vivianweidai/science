@@ -1,8 +1,8 @@
-<img src="PHOTOS/[photo filename]" alt="[description]" width="100%">
-
 # [Experiment Title]
 
-**Date:** [YYYY-MM-DD]
+<img src="PHOTOS/[photo filename]" alt="[description]" width="100%">
+
+**Date:** [Month Dayth Year, e.g. April 4th 2026]
 **Instrument:** [Instrument name]
 
 ## Overview
@@ -11,9 +11,11 @@
 
 ## Samples
 
-| # | Sample | Description |
-|---|--------|-------------|
-| 1 | | |
+[Group samples by category to keep the table concise — no more than 7 rows.]
+
+| # | Category | Samples |
+|---|----------|---------|
+| 1 | [Category] | [sample1, sample2, sample3] |
 
 ## Data
 

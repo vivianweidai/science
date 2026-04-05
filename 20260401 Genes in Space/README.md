@@ -1,12 +1,10 @@
-<p align="center">
-  <img src="PHOTOS/mi.png" alt="Mi the astronaut cat" width="400">
-</p>
-
 # Meow to Mars — Will Space Help or Hurt Mi's Heart?
+
+<img src="PHOTOS/mi.png" alt="Mi the astronaut cat" width="100%">
 
 **Sarcomere Genes in Microgravity**
 
-**Date:** March 31, 2026
+**Date:** March 31st 2026
 **Program:** [Genes in Space](https://www.genesinspace.org/) — ISS National Laboratory
 
 ## Overview

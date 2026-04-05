@@ -1,8 +1,8 @@
-<img src="PHOTOS/probe.jpeg" alt="Jandel RM3 Four-Point Probe" width="100%">
-
 # Four-Point Probe Resistivity Measurements
 
-**Date:** April 4, 2026
+<img src="PHOTOS/probe.jpeg" alt="Jandel RM3 Four-Point Probe" width="100%">
+
+**Date:** April 4th 2026
 **Instrument:** Jandel RM3 Four-Point Probe
 
 ## Overview
