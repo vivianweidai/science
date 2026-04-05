@@ -34,6 +34,7 @@ YYYYMMDD Project Name/
 - **Visualizations** — default to matplotlib/seaborn. Use clear axis labels, units, titles, and legends. Save figures as both PNG (300 dpi) and SVG.
 - **Reproducibility** — every analysis script should be runnable end-to-end from the project folder. Include comments explaining what each step does and why. Pin library versions in a `requirements.txt` if the pipeline uses non-standard packages.
 - **Data validation** — always inspect and summarize raw data before analysis (shape, missing values, outliers, units). Flag anything unexpected.
+- **Colab compatibility** — all data file references in Jupyter notebooks must use absolute GitHub raw URLs (e.g., `https://raw.githubusercontent.com/vivianweidai/research/main/...`) so notebooks work when opened in Google Colab. Use `IPython.display.HTML` with styled `<div>` containers (gray bordered background) for cleaner output separation. Add an "Open in Colab" badge at the bottom of every notebook.
 
 ## INSTRUMENTS & DATA FORMATS
 
@@ -140,7 +141,7 @@ project: [Short Project Name]
 
 [Summary. Link to written report first, then notebook:]
 
-See the <a href="https://github.com/vivianweidai/research/blob/main/[path]">written report</a> (PDF) or the <a href="https://github.com/vivianweidai/research/blob/main/[path]">full reproducible analysis</a> (Jupyter notebook).
+See the <a href="https://github.com/vivianweidai/research/blob/main/[path]">written report</a> (PDF), the <a href="https://github.com/vivianweidai/research/blob/main/[path]">static experiment notebook</a> (Jupyter) or <a href="https://colab.research.google.com/github/vivianweidai/research/blob/main/[path]">run the fully reproducible analysis yourself</a> (Colab).
 
 ---
 

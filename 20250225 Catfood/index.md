@@ -92,7 +92,7 @@ var allData = {{ page.data_photos | jsonify }};
 
 Over 30 days, Mi chose red on 13 days and green on 17 days. A chi-squared goodness-of-fit test with one degree of freedom yielded a test statistic of 0.533, well below the critical value of 3.841 at 95% confidence. The null hypothesis (no colour preference) was not rejected. Mi shows no statistically significant preference for red or green cat food.
 
-See the <a href="https://github.com/vivianweidai/research/blob/main/20250225%20Catfood/OUTPUT/20250225%20Catfood.pdf">written report</a> (PDF) or the <a href="https://github.com/vivianweidai/research/blob/main/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">full reproducible analysis</a> (Jupyter notebook).
+See the <a href="https://github.com/vivianweidai/research/blob/main/20250225%20Catfood/OUTPUT/20250225%20Catfood.pdf">written report</a> (PDF), the <a href="https://github.com/vivianweidai/research/blob/main/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">static experiment notebook</a> (Jupyter) or <a href="https://colab.research.google.com/github/vivianweidai/research/blob/main/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">run the fully reproducible analysis yourself</a> (Colab).
 
 ---
 
