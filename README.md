@@ -4,7 +4,7 @@
 
 ## Projects
 
-| Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Project | Science | Description |
+| Date | Project | Science | Description |
 |---|---------|---------|-------------|
 | April 1st 2026 | [IR Spectroscopy](20260401%20IR/) | Chemistry | IR spectroscopy survey of 19 everyday materials — building a reference library of functional group signatures |
 | April 1st 2026 | [Genes in Space](20260401%20Genes%20in%20Space/) | Biology | Investigating gene expression changes under simulated microgravity conditions |
