@@ -5,10 +5,9 @@ project: IR Spectroscopy
 
 # IR Spectroscopy of Everyday Materials
 
-<img src="PHOTOS/ir.jpeg" alt="Thermo FT-IR Spectrometer" width="100%">
+<div class="hero-single"><img src="PHOTOS/ir.jpeg" alt="Thermo FT-IR Spectrometer"></div>
 
-**Date:** April 1st 2026
-**Instrument:** Thermo Scientific Nicolet iS5 FT-IR Spectrometer (ATR mode)
+<div class="project-meta">April 1st 2026<br>Thermo Scientific Nicolet iS5 FT-IR Spectrometer (ATR mode)</div>
 
 ## Overview
 

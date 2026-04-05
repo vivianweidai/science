@@ -5,10 +5,9 @@ project: Four-Point Probe
 
 # Four-Point Probe Resistivity Measurements
 
-<img src="PHOTOS/probe.jpeg" alt="Jandel RM3 Four-Point Probe" width="100%">
+<div class="hero-single"><img src="PHOTOS/probe.jpeg" alt="Jandel RM3 Four-Point Probe"></div>
 
-**Date:** April 4th 2026
-**Instrument:** Jandel RM3-AR Four-Point Probe Test Unit
+<div class="project-meta">April 4th 2026<br>Jandel RM3-AR Four-Point Probe Test Unit</div>
 
 ## Overview
 

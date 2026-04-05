@@ -53,13 +53,17 @@ Known instruments (expect data from these):
 This RESEARCH folder is synced to GitHub. Everything inside each project folder is publicly viewable. Keep this in mind:
 - Do not commit sensitive or personal information.
 - **Never include researcher names or lab location in READMEs or any public-facing files.** Project READMEs should include Date and Instrument but not Researchers or Location.
-- **Each project README must start with a 2x2 photo grid** that randomly selects 4 photos from the `PHOTOS/` directory on each page load, with a "Shuffle Photos" button. List all photos in the front matter `photos` array. The `project.html` layout provides the CSS for `.photo-grid` and `.shuffle-btn`.
+- **Photos:** If a project has 4+ photos, use the 2x2 photo grid with shuffle button (list all photos in front matter `photos` array). If a project has only 1 photo, use a single hero image with `<div class="hero-single">` for rounded styling and controlled height. The `project.html` layout provides CSS for both `.photo-grid`, `.shuffle-btn`, and `.hero-single`.
+- **Date/Instrument metadata** should be right-aligned below the photos using `<div class="project-meta">`. Put Instrument on a new line with `<br>`.
+- **Results links** should point to the GitHub blob URL (e.g. `https://github.com/vivianweidai/research/blob/main/...`) so files render inside GitHub.
 - Ensure all code, data, and documentation is presentable and well-organized.
-- Each project's `README.md` serves as the public-facing overview of that experiment.
+- Each project's `index.md` (not README.md) serves as the public-facing overview — Jekyll requires `index.md` for subdirectory pages.
 
 ## PROJECT README TEMPLATE
 
 When creating a new project README, use this template:
+
+### Template A: Multiple photos (4+)
 
 ```markdown
 ---
@@ -68,6 +72,8 @@ project: [Short Project Name]
 photos:
   - PHOTOS/[filename1].jpeg
   - PHOTOS/[filename2].jpeg
+  - PHOTOS/[filename3].jpeg
+  - PHOTOS/[filename4].jpeg
 ---
 
 # [Experiment Title]
@@ -91,42 +97,54 @@ function shufflePhotos() {
 shufflePhotos();
 </script>
 
-**Date:** [Month Dayth Year, e.g. April 4th 2026]
-**Instrument:** [Full instrument name, e.g. Thermo Scientific Nicolet iS5 FT-IR Spectrometer]
+<div class="project-meta">[Month Dayth Year]<br>[Instrument name]</div>
+```
 
+### Template B: Single photo
+
+```markdown
+---
+layout: project
+project: [Short Project Name]
+---
+
+# [Experiment Title]
+
+<div class="hero-single"><img src="PHOTOS/[filename]" alt="[description]"></div>
+
+<div class="project-meta">[Month Dayth Year]<br>[Instrument name]</div>
+```
+
+### Common sections (both templates)
+
+```markdown
 ## Overview
 
-[1-2 paragraph description of the experiment: what was measured, why, and the key question being investigated.]
+[1-2 paragraph description]
 
 ## Samples
 
-[Group samples by category to keep the table concise — no more than 7 rows.]
-
 | # | Category | Samples |
 |---|----------|---------|
-| 1 | [Category] | [sample1, sample2, sample3] |
+| 1 | [Category] | [sample1, sample2] |
 
 ## Data
 
-Raw data files are in `DATA/`. [Describe format: columns, units, number of data points, file naming convention.]
+Raw data files are in `DATA/`. [Describe format.]
 
 ## Methods
 
-1. [Step-by-step experimental procedure]
+1. [Step-by-step procedure]
 
 ## Results
 
-[Analysis summary. If a written report PDF exists in OUTPUT/, link to it:]
+[Summary. Link to analysis/report on GitHub:]
 
-See the <a href="OUTPUT/[filename].pdf">full written report</a>.
-
-## References
-
-- See `PAPERS/` for background literature
+See the <a href="https://github.com/vivianweidai/research/blob/main/[URL-encoded path]">full reproducible analysis</a> (Jupyter notebook) or the <a href="https://github.com/vivianweidai/research/blob/main/[URL-encoded path]">written report</a> (PDF).
 
 ---
 
 <div class="footer"><div class="footer-nav"><a href="https://vivianweidai.com/curriculum/">Curriculum</a><a href="https://vivianweidai.com/olympiads/">Olympiads</a><a href="https://vivianweidai.com/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/research/tree/main/[URL-encoded folder name]">View on GitHub</a></div>
 ```
 
-Always include the footer div at the bottom of every project README with links to Curriculum, Olympiads, Research, and View on GitHub.
+Always use `index.md` (not `README.md`) for project pages. Always include the footer div.
