@@ -37,7 +37,7 @@ Myriad other MYBPC3 mutations are associated with HCM in humans.
 | Measurement | mRNA transcript levels of MYBPC3, normalized against GAPDH |
 | Readout | Fluorescence band intensity comparison (ISS vs. Earth) |
 
-Cardiomyocyte cultures carrying both wild-type and known mutant MYBPC3 variants are prepared on Earth. Identical sample sets are sent to the ISS and processed in parallel on the ground as controls. On the ISS, mRNA transcripts of MYBPC3 are amplified using **miniPCR** and detected with the **P51 Molecular Fluorescence Viewer**, comparing band intensity between ISS and Earth samples. **BioBits** is used to express cMyBP-C protein from the amplified cDNA, testing whether microgravity affects protein translation as well as transcription.
+Cardiomyocyte cultures carrying both wild-type and known mutant MYBPC3 variants are prepared on Earth. Identical sample sets are sent to the ISS and processed in parallel on the ground as controls. On the ISS, mRNA transcripts of MYBPC3 are amplified using the **miniPCR Mini16 Thermal Cycler** and detected with the **P51 Molecular Fluorescence Viewer**, comparing band intensity between ISS and Earth samples. The **BioBits Cell-Free Protein Expression Kit** is used to express cMyBP-C protein from the amplified cDNA, testing whether microgravity affects protein translation as well as transcription.
 
 ## References
 
