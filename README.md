@@ -62,8 +62,6 @@
 
 ## Instruments
 
-<p align="center"><img src="research.jpeg" alt="Instruments" class="instruments-img"></p>
-
 - **[Chemistry]** Thermo Scientific Nicolet 380 FT-IR Spectrometer — mid-IR absorption/transmittance spectra
 - **[Physics]** Jandel RM3-AR Four-Point Probe Test Unit — sheet resistance and resistivity measurements
 - **[Biology]** miniPCR bio miniPCR Thermal Cycler — PCR amplification of DNA/RNA targets
