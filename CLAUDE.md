@@ -141,7 +141,7 @@ project: [Short Project Name]
 
 [Summary. Link to written report first, then notebook:]
 
-See the <a href="https://github.com/vivianweidai/research/blob/main/[path]">written report</a> (PDF), the <a href="https://github.com/vivianweidai/research/blob/main/[path]">static experiment notebook</a> (Jupyter) or <a href="https://colab.research.google.com/github/vivianweidai/research/blob/main/[path]">run the fully reproducible analysis yourself</a> (Colab).
+See the <a href="https://github.com/vivianweidai/research/blob/main/[path]">written report</a>, the <a href="https://github.com/vivianweidai/research/blob/main/[path]">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/research/blob/main/[path]">run the reproducible analysis yourself</a>.
 
 ---
 
