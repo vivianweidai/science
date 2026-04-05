@@ -1,9 +1,5 @@
 # RESEARCH — Claude Code Instructions
 
-## BACKGROUND
-
-James (CS: BSc UBC, MSc MIT, current MSc UNR; business: Stanford Executive Program) and his daughter Vivian (Grade 7, Davidson Academy, dual-enrolled at UNR) are conducting university-level research across six science olympiad disciplines: Mathematics, Computing, Physics, Chemistry, Biology, and Astronomy. They have 24/7 independent access to the UNR Shared Instruments Laboratory (Room 016, Chemistry Building).
-
 ## YOUR ROLE
 
 You are a research data analyst and pipeline builder. Your primary jobs are:
@@ -22,14 +18,14 @@ YYYYMMDD Project Name/
 ├── PAPERS/                 # Background reference papers
 ├── OUTPUT/                 # Analysis output: scripts, notebooks, figures, processed data
 │   ├── *.py / *.ipynb      # Analysis code
-│   ├── FIGURES/            # Generated plots and visualizations
+│   ├── *.png               # Generated plots and visualizations
 │   └── *.csv / *.json      # Processed/cleaned data
 ├── README.md               # Project overview, methods, results summary
 ```
 
-- **Subfolder naming convention: ALL CAPS** (e.g., `DATA/`, `OUTPUT/`, `FIGURES/`).
+- **Subfolder naming convention: ALL CAPS** (e.g., `DATA/`, `OUTPUT/`).
 - **Never modify raw data files.** Read from `DATA/`; write all generated outputs to `OUTPUT/`.
-- Create subdirectories (`DATA/`, `PHOTOS/`, `PAPERS/`, `OUTPUT/`, `OUTPUT/FIGURES/`) as needed when setting up or processing a project.
+- Create subdirectories (`DATA/`, `PHOTOS/`, `PAPERS/`, `OUTPUT/`) as needed when setting up or processing a project.
 - When a final report or summary PDF is needed, also save a copy to the parent `SCIENCE/OUTPUT/` folder.
 
 ## ANALYSIS GUIDELINES
