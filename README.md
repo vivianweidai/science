@@ -1,7 +1,5 @@
 ## Research
 
-<p align="center"><img src="research.jpeg" alt="Research" style="max-width: 500px; width: 100%;"></p>
-
 <div class="tabs">
   <input type="radio" name="tab" id="tab-math" checked>
   <input type="radio" name="tab" id="tab-comp">
@@ -63,6 +61,8 @@
 </div>
 
 ## Instruments
+
+<p align="center"><img src="research.jpeg" alt="Instruments" style="max-width: 500px; width: 100%;"></p>
 
 - **[Chemistry]** Thermo Scientific Nicolet 380 FT-IR Spectrometer — mid-IR absorption/transmittance spectra
 - **[Physics]** Jandel RM3-AR Four-Point Probe Test Unit — sheet resistance and resistivity measurements
