@@ -32,3 +32,4 @@ YYYYMMDD Project Name/
 - **miniPCR bio miniPCR Thermal Cycler** — PCR amplification of DNA/RNA targets
 - **miniPCR bio P51 Molecular Fluorescence Viewer** — fluorescence detection and gel imaging
 - **miniPCR bio BioBits Cell-Free Protein Expression System** — in vitro protein expression from DNA templates
+
