@@ -1,10 +1,64 @@
 ## Research
 
-| Date | Science | Project | Description |
-|:---:|:---:|:---:|-------------|
-| April 4th 2026 | Physics | [Four-Point Probe](20260404%20Four%20Point%20Probe/) | Sheet resistance and resistivity measurements of conductive materials |
-| April 1st 2026 | Chemistry | [IR Spectroscopy](20260401%20IR%20Spectroscopy/) | IR spectroscopy survey of 19 everyday materials — building a reference library of functional group signatures |
-| April 1st 2026 | Biology | [Genes in Space](20260401%20Genes%20in%20Space/) | Investigating gene expression changes under simulated microgravity conditions |
+<div class="tabs">
+  <input type="radio" name="tab" id="tab-math" checked>
+  <input type="radio" name="tab" id="tab-comp">
+  <input type="radio" name="tab" id="tab-phys">
+  <input type="radio" name="tab" id="tab-chem">
+  <input type="radio" name="tab" id="tab-bio">
+  <input type="radio" name="tab" id="tab-astro">
+
+  <div class="tab-labels">
+    <label for="tab-math">Mathematics</label>
+    <label for="tab-comp">Computing</label>
+    <label for="tab-phys">Physics</label>
+    <label for="tab-chem">Chemistry</label>
+    <label for="tab-bio">Biology</label>
+    <label for="tab-astro">Astronomy</label>
+  </div>
+
+  <div class="tab-content" id="content-math">
+    <table>
+      <tr><th>Date</th><th>Project</th><th>Description</th></tr>
+      <tr><td colspan="3"><em>No projects yet</em></td></tr>
+    </table>
+  </div>
+
+  <div class="tab-content" id="content-comp">
+    <table>
+      <tr><th>Date</th><th>Project</th><th>Description</th></tr>
+      <tr><td colspan="3"><em>No projects yet</em></td></tr>
+    </table>
+  </div>
+
+  <div class="tab-content" id="content-phys">
+    <table>
+      <tr><th>Date</th><th>Project</th><th>Description</th></tr>
+      <tr><td>April 2026</td><td><a href="20260404%20Four%20Point%20Probe/">Four-Point Probe</a></td><td>Sheet resistance and resistivity measurements of conductive materials</td></tr>
+    </table>
+  </div>
+
+  <div class="tab-content" id="content-chem">
+    <table>
+      <tr><th>Date</th><th>Project</th><th>Description</th></tr>
+      <tr><td>April 2026</td><td><a href="20260401%20IR%20Spectroscopy/">IR Spectroscopy</a></td><td>IR spectroscopy survey of 19 everyday materials — building a reference library of functional group signatures</td></tr>
+    </table>
+  </div>
+
+  <div class="tab-content" id="content-bio">
+    <table>
+      <tr><th>Date</th><th>Project</th><th>Description</th></tr>
+      <tr><td>April 2026</td><td><a href="20260401%20Genes%20in%20Space/">Genes in Space</a></td><td>Investigating gene expression changes under simulated microgravity conditions</td></tr>
+    </table>
+  </div>
+
+  <div class="tab-content" id="content-astro">
+    <table>
+      <tr><th>Date</th><th>Project</th><th>Description</th></tr>
+      <tr><td colspan="3"><em>No projects yet</em></td></tr>
+    </table>
+  </div>
+</div>
 
 ## Instruments
 
@@ -16,7 +70,7 @@
 
 ## Repository Structure
 
-Projects are stored on [Github](https://github.com/vivianweidai/research) with the folder structure:
+All projects are documented with the folder structure:
 
 ```
 YYYYMMDD Project Name/

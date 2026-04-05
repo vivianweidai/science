@@ -35,6 +35,46 @@
     pre code { background: none; padding: 0; }
     ul { padding-left: 2em; }
     hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0; }
+    /* CSS-only tabs */
+    .tabs { margin: 1em 0; }
+    .tabs input[type="radio"] { display: none; }
+    .tab-labels {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #d1d9e0;
+      margin-bottom: 0;
+    }
+    .tab-labels label {
+      padding: 0.6em 1.2em;
+      cursor: pointer;
+      font-size: 0.9em;
+      font-weight: 600;
+      color: #656d76;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .tab-labels label:hover { color: #1f2328; }
+    .tab-content { display: none; padding: 1em 0; }
+
+    #tab-math:checked ~ .tab-labels label[for="tab-math"],
+    #tab-comp:checked ~ .tab-labels label[for="tab-comp"],
+    #tab-phys:checked ~ .tab-labels label[for="tab-phys"],
+    #tab-chem:checked ~ .tab-labels label[for="tab-chem"],
+    #tab-bio:checked ~ .tab-labels label[for="tab-bio"],
+    #tab-astro:checked ~ .tab-labels label[for="tab-astro"] {
+      color: #0969da;
+      border-bottom-color: #0969da;
+    }
+    #tab-math:checked ~ #content-math,
+    #tab-comp:checked ~ #content-comp,
+    #tab-phys:checked ~ #content-phys,
+    #tab-chem:checked ~ #content-chem,
+    #tab-bio:checked ~ #content-bio,
+    #tab-astro:checked ~ #content-astro {
+      display: block;
+    }
+
     .footer {
       text-align: right;
       font-size: 0.9em;
