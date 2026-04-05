@@ -53,7 +53,7 @@ Known instruments (expect data from these):
 This RESEARCH folder is synced to GitHub. Everything inside each project folder is publicly viewable. Keep this in mind:
 - Do not commit sensitive or personal information.
 - **Never include researcher names or lab location in READMEs or any public-facing files.** Project READMEs should include Date and Instrument but not Researchers or Location.
-- **Each project README must start with a full-width photo** from the `PHOTOS/` directory: `<img src="PHOTOS/[filename]" alt="[description]" width="100%">`. Pick any photo from the directory.
+- **Each project README must start with a 2x2 photo grid** that randomly selects 4 photos from the `PHOTOS/` directory on each page load, with a "Shuffle Photos" button. List all photos in the front matter `photos` array. The `project.html` layout provides the CSS for `.photo-grid` and `.shuffle-btn`.
 - Ensure all code, data, and documentation is presentable and well-organized.
 - Each project's `README.md` serves as the public-facing overview of that experiment.
 
@@ -62,9 +62,34 @@ This RESEARCH folder is synced to GitHub. Everything inside each project folder 
 When creating a new project README, use this template:
 
 ```markdown
+---
+layout: project
+project: [Short Project Name]
+photos:
+  - PHOTOS/[filename1].jpeg
+  - PHOTOS/[filename2].jpeg
+---
+
 # [Experiment Title]
 
-<img src="PHOTOS/[photo filename]" alt="[description]" width="100%">
+<div class="photo-grid" id="photo-grid">
+  <img id="photo-0" alt="Experiment photo">
+  <img id="photo-1" alt="Experiment photo">
+  <img id="photo-2" alt="Experiment photo">
+  <img id="photo-3" alt="Experiment photo">
+</div>
+<button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
+
+<script>
+var allPhotos = {{ page.photos | jsonify }};
+function shufflePhotos() {
+  var shuffled = allPhotos.slice().sort(function() { return 0.5 - Math.random(); });
+  for (var i = 0; i < 4; i++) {
+    document.getElementById('photo-' + i).src = shuffled[i];
+  }
+}
+shufflePhotos();
+</script>
 
 **Date:** [Month Dayth Year, e.g. April 4th 2026]
 **Instrument:** [Full instrument name, e.g. Thermo Scientific Nicolet iS5 FT-IR Spectrometer]
@@ -85,13 +110,15 @@ When creating a new project README, use this template:
 
 Raw data files are in `DATA/`. [Describe format: columns, units, number of data points, file naming convention.]
 
-## Results
-
-*Analysis in progress — see `OUTPUT/` for scripts and figures.*
-
 ## Methods
 
 1. [Step-by-step experimental procedure]
+
+## Results
+
+[Analysis summary. If a written report PDF exists in OUTPUT/, link to it:]
+
+See the <a href="OUTPUT/[filename].pdf">full written report</a>.
 
 ## References
 
@@ -99,7 +126,7 @@ Raw data files are in `DATA/`. [Describe format: columns, units, number of data 
 
 ---
 
-[View on GitHub](https://github.com/vivianweidai/research/tree/main/[URL-encoded folder name])
+<div class="footer"><div class="footer-nav"><a href="https://vivianweidai.com/curriculum/">Curriculum</a><a href="https://vivianweidai.com/olympiads/">Olympiads</a><a href="https://vivianweidai.com/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/research/tree/main/[URL-encoded folder name]">View on GitHub</a></div>
 ```
 
-Always include a "View on GitHub" link at the bottom of every project README, linking to the project folder on GitHub.
+Always include the footer div at the bottom of every project README with links to Curriculum, Olympiads, Research, and View on GitHub.
