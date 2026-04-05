@@ -1,0 +1,41 @@
+name: Sync README to other repos
+
+on:
+  push:
+    branches: [main]
+    paths: [README.md]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout research
+        uses: actions/checkout@v4
+
+      - name: Rewrite relative links to absolute GitHub URLs
+        run: |
+          sed -E 's|\]\(([0-9]{8}%20[^)]+)\)|](https://github.com/vivianweidai/research/tree/main/\1)|g' README.md > README-synced.md
+
+      - name: Push to vivianweidai
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.SYNC_TOKEN }}
+        with:
+          source_file: README-synced.md
+          destination_repo: vivianweidai/vivianweidai
+          destination_file: README.md
+          user_email: github-actions[bot]@users.noreply.github.com
+          user_name: github-actions[bot]
+          commit_message: "Sync README from research"
+
+      - name: Push to vivianweidai.github.io
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.SYNC_TOKEN }}
+        with:
+          source_file: README-synced.md
+          destination_repo: vivianweidai/vivianweidai.github.io
+          destination_file: README.md
+          user_email: github-actions[bot]@users.noreply.github.com
+          user_name: github-actions[bot]
+          commit_message: "Sync README from research"
