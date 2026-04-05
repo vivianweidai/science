@@ -6,11 +6,11 @@
 
 ## Projects
 
-| Date | Project | Science | Description |
-|---|---------|---------|-------------|
-| April 4th 2026 | [Four-Point Probe](20260404%20Four%20Point%20Probe/) | Physics | Sheet resistance and resistivity measurements of conductive materials |
-| April 1st 2026 | [IR Spectroscopy](20260401%20IR%20Spectroscopy/) | Chemistry | IR spectroscopy survey of 19 everyday materials — building a reference library of functional group signatures |
-| April 1st 2026 | [Genes in Space](20260401%20Genes%20in%20Space/) | Biology | Investigating gene expression changes under simulated microgravity conditions |
+| Date | Science | Project | Description |
+|:---:|:---:|:---:|-------------|
+| April 4th 2026 | Physics | [Four-Point Probe](20260404%20Four%20Point%20Probe/) | Sheet resistance and resistivity measurements of conductive materials |
+| April 1st 2026 | Chemistry | [IR Spectroscopy](20260401%20IR%20Spectroscopy/) | IR spectroscopy survey of 19 everyday materials — building a reference library of functional group signatures |
+| April 1st 2026 | Biology | [Genes in Space](20260401%20Genes%20in%20Space/) | Investigating gene expression changes under simulated microgravity conditions |
 
 ## Repository Structure
 
