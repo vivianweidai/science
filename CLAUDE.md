@@ -34,7 +34,13 @@ YYYYMMDD Project Name/
 - **Visualizations** — default to matplotlib/seaborn. Use clear axis labels, units, titles, and legends. Save figures as both PNG (300 dpi) and SVG.
 - **Reproducibility** — every analysis script should be runnable end-to-end from the project folder. Include comments explaining what each step does and why. Pin library versions in a `requirements.txt` if the pipeline uses non-standard packages.
 - **Data validation** — always inspect and summarize raw data before analysis (shape, missing values, outliers, units). Flag anything unexpected.
-- **Colab compatibility** — all data file references in Jupyter notebooks must use absolute GitHub raw URLs (e.g., `https://raw.githubusercontent.com/vivianweidai/research/main/...`) so notebooks work when opened in Google Colab. Use `IPython.display.HTML` with styled `<div>` containers (gray bordered background) for cleaner output separation. Add an "Open in Colab" badge at the bottom of every notebook.
+- **Jupyter notebook conventions:**
+  - **Colab compatibility** — all data file references must use absolute GitHub raw URLs (e.g., `https://raw.githubusercontent.com/vivianweidai/research/main/...`) so notebooks work in Colab. Ship notebooks **with outputs** so GitHub renders results statically; Colab users re-run themselves.
+  - **Sections** — use numbered markdown heading cells (`## 1. Title`, `## 2. Title`, etc.) to separate logical sections. Typical flow: Data Collection → Load and Inspect Data → Visualize → Statistical Test → Conclusion.
+  - **Output styling** — use `IPython.display.HTML` to wrap text outputs in styled containers: `background:#f6f8fa; border:1px solid #d0d7de; border-radius:6px; padding:12px; text-align:left;` with `<pre>` inside. Return `HTML(...)` as the last expression (not `display()`) so cells get proper `Out[#]` labels.
+  - **Input/output spacing** — add `display(HTML('<br>'))` before the final output in each code cell to visually separate input from output.
+  - **Chart styling** — set `facecolor='#f6f8fa'` on both the figure and axes to match the gray output boxes. Use pastel colours for data (e.g., `#e8a0a0`, `#a0d8a0`). Remove top/right/left spines, disable left ticks, add light y-grid (`alpha=0.3`). Save as both PNG (300 dpi) and SVG with matching facecolor.
+  - **Colab badge** — add a final markdown cell with `---` separator, then the Colab badge inline with descriptive text: `<a href="COLAB_URL"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"></a>&nbsp;&nbsp;Try running this analysis yourself in Google Colab — no setup required.`
 
 ## INSTRUMENTS & DATA FORMATS
 
