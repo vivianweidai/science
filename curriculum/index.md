@@ -6,7 +6,7 @@ layout: default
 
 <img src="../archives/IMAGES/curriculum.png" alt="Curriculum" width="100%">
 
-<div class="pdf-links">
+<div class="nav-links">
   <a href="NOTES/mathematics.pdf">Mathematics</a>
   <a href="NOTES/computing.pdf">Computing</a>
   <a href="NOTES/physics.pdf">Physics</a>
