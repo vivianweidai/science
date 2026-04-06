@@ -191,7 +191,7 @@ Raw data were photographs of the instrument display taken after each measurement
 
 **Conductivity ranking.** The quarter (nickel-clad copper) and stainless steel spoon were the most conductive samples, with the lowest sheet resistance. The brass house key was the least conductive metal tested. All non-metals were too resistive to measure.
 
-**Penny surface condition.** Sanding the penny from unpolished copper through to fully exposed zinc *increased* sheet resistance — the unpolished copper surface (47.3 Ω/□) was more conductive than the fully polished zinc (50.1 Ω/□). This is consistent with copper being a better conductor than zinc.
+**Penny surface condition.** Sanding the penny from unpolished copper through to fully exposed zinc *increased* sheet resistance — the unpolished copper surface (47.3 Ω/□) was more conductive than the fully polished zinc (50.1 Ω/□). This is consistent with copper being a better conductor than zinc, though the ranges overlap so the difference is not definitive.
 
 <img src="OUTPUT/IMAGES/penny_surface_direction.png" alt="Penny surface condition analysis" style="width:100%; border-radius:6px;">
 
