@@ -43,11 +43,11 @@ YYYYMMDD Project Name/
 
 ## INSTRUMENTS & DATA FORMATS
 
-35 instruments are available at UNR SIL (see `CONTEXT/UNR_Toy_List.pdf` for full list). Instruments used so far:
+35 instruments are available at UNR SIL (see `CONTEXT/UNR_Toy_List.pdf` for full list). **All instrument names must exactly match the Toy List.** When referencing any instrument, always verify the name against the Toy List — do not abbreviate, add prefixes (e.g., no "SRS" before OptiMelt), or rearrange words. Instruments used so far:
 - **Thermo Scientific Nicolet 380 FT-IR Spectrometer** — CSV files with wavenumber (cm⁻¹) vs. transmittance/absorbance
-- **Jandel RM3-AR Four-Point Probe** — sheet resistance measurements (Ω/□)
-- **SRS OptiMelt Melting Point System** — non-functional (touchscreen unresponsive)
-- **Next up: TA Instruments Q50 TGA** — thermogravimetric analysis (walk-up guide available)
+- **Jandel RM3-AR Four-Point Probe Test Unit** — sheet resistance measurements (Ω/□)
+- **OptiMelt Automated Melting Point System** — non-functional (touchscreen unresponsive)
+- **Next up: TA Instruments TGA Q50** — thermogravimetric analysis (walk-up guide available)
 
 ## SUPPLIES & LOGISTICS
 

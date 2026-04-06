@@ -39,7 +39,7 @@ function shufflePhotos() {
 shufflePhotos();
 </script>
 
-<div class="project-meta">April 5th 2026<br>SRS OptiMelt Automated Melting Point System</div>
+<div class="project-meta">April 5th 2026<br>OptiMelt Automated Melting Point System</div>
 
 ## Overview
 
@@ -51,7 +51,7 @@ Melting point determination is a fundamental technique for identifying and asses
 
 | Category | Details |
 |----------|---------|
-| Instrument | SRS OptiMelt Automated Melting Point System |
+| Instrument | OptiMelt Automated Melting Point System |
 | Method | Capillary tube, digital image processing |
 | Capillary tubes | Eisco Labs Borosilicate Glass Capillary Melting Tubes, 4″ long, 0.05″ OD |
 | Samples | Caffeine (CAF), aspirin (ASP) |
@@ -76,7 +76,7 @@ Pending instrument repair. Expected deliverables when data is available:
 - Comparison to literature values (caffeine: 235–237 °C, aspirin: 135–136 °C)
 - Temperature-time curves from the OptiMelt software
 
-This project connects to the broader thermal analysis series — the next step is thermogravimetric analysis (TGA) on the TA Instruments Q50.
+This project connects to the broader thermal analysis series — the next step is thermogravimetric analysis (TGA) on the TA Instruments TGA Q50.
 
 ---
 

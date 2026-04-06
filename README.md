@@ -64,11 +64,11 @@
 ## Instruments
 
 - **[Chemistry]** Thermo Scientific Nicolet 380 FT-IR Spectrometer — mid-IR absorption/transmittance spectra
-- **[Chemistry]** SRS OptiMelt Automated Melting Point System — capillary tube melting point determination
+- **[Chemistry]** OptiMelt Automated Melting Point System — capillary tube melting point determination
 - **[Physics]** Jandel RM3-AR Four-Point Probe Test Unit — sheet resistance measurements
-- **[Biology]** miniPCR bio miniPCR Thermal Cycler — PCR amplification of DNA/RNA targets
-- **[Biology]** miniPCR bio P51 Molecular Fluorescence Viewer — fluorescence detection and gel imaging
-- **[Biology]** miniPCR bio BioBits Cell-Free Protein Expression System — in vitro protein expression from DNA templates
+- **[Biology]** miniPCR Thermal Cycler — PCR amplification of DNA/RNA targets
+- **[Biology]** P51 Fluorescence Viewer — fluorescence detection and gel imaging
+- **[Biology]** BioBits Cell Free System — in vitro protein expression from DNA templates
 - **[Computing]** GitHub, Python and Jupyter Notebooks — statistical analysis and reproducible research pipelines
 
 ## Repository Structure
