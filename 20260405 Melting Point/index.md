@@ -56,6 +56,10 @@ Melting point determination is a fundamental technique for identifying and asses
 | Samples | Caffeine (CAF), aspirin (MP) |
 | Replicates | 3 capillary tubes per compound |
 
+### Samples
+
+<div class="hero-single"><img src="PHOTOS/20260405 Samples A.jpeg" alt="Capillary tubes labeled CAF1–3 and MP1–3"></div>
+
 Samples were ground to a fine powder and packed into glass capillary tubes (~2–3 mm fill height). Each compound was prepared in triplicate (CAF1–3, MP1–3) to allow averaging and assess reproducibility. Tubes were labeled and inserted into the OptiMelt sample chamber.
 
 ## Data
