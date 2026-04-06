@@ -138,7 +138,7 @@ shufflePhotos();
 
 ## Overview
 
-Sheet resistance is a measure of how easily electric current flows across a thin material's surface, reported in ohms per square (Ω/□). It is widely used in semiconductor fabrication and materials science to characterize conductive coatings, thin films, and bulk materials without needing to know the exact thickness — making it practical for quick quality checks on anything from silicon wafers to household metals.
+Sheet resistance is a measure of how easily electric current flows across a thin material's surface, reported in ohms per square (Ω/□). It is widely used in semiconductor fabrication and materials science to characterize conductive coatings, thin films, and bulk materials without needing to know the exact thickness — making it practical for quality control in semiconductor fabrication and thin-film manufacturing.
 
 The four-point probe technique separates the current-carrying and voltage-sensing functions into different probe pairs. The Jandel RM3 applies a known current through the outer two probes and measures the voltage drop across the inner two. Because virtually no current flows through the voltage-sensing probes, the contact resistance between each probe tip and the sample surface drops out of the measurement entirely — only the resistance of the sample itself is captured. This is the same principle behind Kelvin (four-terminal) sensing used in precision resistance metrology.
 
