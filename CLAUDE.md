@@ -12,6 +12,7 @@ Each research project lives in a date-prefixed folder:
 YYYYMMDD Project Name/
 ├── DATA/                   # Raw data from instruments (CSVs, spectra, etc.)
 ├── PHOTOS/                 # Experiment photos (YYYYMMDD format filenames)
+├── PAPERS/                 # Background papers
 ├── OUTPUT/                 # Analysis output: scripts, notebooks, figures, processed data
 │   ├── *.py / *.ipynb      # Analysis code
 │   ├── *.png               # Generated plots and visualizations
@@ -21,7 +22,7 @@ YYYYMMDD Project Name/
 
 - **Subfolder naming convention: ALL CAPS** (e.g., `DATA/`, `OUTPUT/`).
 - **Never modify raw data files.** Read from `DATA/`; write all generated outputs to `OUTPUT/`.
-- Create subdirectories (`DATA/`, `PHOTOS/`, `OUTPUT/`) as needed when setting up or processing a project.
+- Create subdirectories (`DATA/`, `PHOTOS/`, `PAPERS/`, `OUTPUT/`) as needed when setting up or processing a project.
 
 ## ANALYSIS GUIDELINES
 

@@ -81,7 +81,7 @@ YYYYMMDD Project Name/
 ├── PHOTOS/     # Experiment photos
 ├── PAPERS/     # Background papers
 ├── OUTPUT/     # Analysis and reports
-└── README.md   # This summary document
+└── index.md    # Project summary page
 ```
 
 ---
