@@ -53,7 +53,7 @@ Melting point determination is a fundamental technique for identifying and asses
 |----------|---------|
 | Instrument | SRS OptiMelt Automated Melting Point System |
 | Method | Capillary tube, digital image processing |
-| Samples | Caffeine (CAF), aspirin (MP) |
+| Samples | Caffeine (CAF), aspirin (ASP) |
 | Replicates | 3 capillary tubes per compound |
 
 ### Samples
