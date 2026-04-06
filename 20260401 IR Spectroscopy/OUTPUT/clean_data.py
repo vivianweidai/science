@@ -4,7 +4,7 @@ Clean raw FT-IR CSV exports into standardised per-sample files.
 Input:  DATA/ONE/*.CSV and DATA/TWO/*.CSV  (headerless: wavenumber, transmittance)
 Output: OUTPUT/SCRUBBED/<sample>.csv        (headers: wavenumber,transmittance,absorbance)
 
-The Nicolet iS5 already applies background correction, so transmittance
+The Nicolet 380 already applies background correction, so transmittance
 values are already relative to the background (~100 % in non-absorbing
 regions).  This script parses the scientific-notation format, adds an
 absorbance column [A = -log10(T/100)], and writes clean CSVs.
