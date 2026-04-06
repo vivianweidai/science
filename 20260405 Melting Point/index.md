@@ -45,7 +45,7 @@ shufflePhotos();
 
 Melting point determination is a fundamental technique for identifying and assessing the purity of solid compounds. A pure substance melts sharply at a characteristic temperature, while impurities broaden the melting range and depress the onset temperature. This experiment aimed to measure melting points of caffeine and acetaminophen using capillary tube method on an automated melting point apparatus with digital image processing.
 
-**Status:** The OptiMelt instrument was non-functional during this session — the heating element did not respond and the system could not run a temperature ramp. Samples were prepared but no measurements were collected. This project is on hold pending instrument repair or access to an alternative melting point apparatus.
+**Status:** The OptiMelt instrument was non-functional during this session — the touchscreen was unresponsive and could not be used to configure or start a run. Samples were prepared but no measurements were collected. This project is on hold pending instrument repair or access to an alternative melting point apparatus.
 
 ## Setup
 
