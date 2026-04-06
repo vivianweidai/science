@@ -31,7 +31,7 @@ YYYYMMDD Project Name/
 - **Reproducibility** — every analysis script should be runnable end-to-end from the project folder. Include comments explaining what each step does and why. Pin library versions in a `requirements.txt` if the pipeline uses non-standard packages.
 - **Data validation** — always inspect and summarize raw data before analysis (shape, missing values, outliers, units). Flag anything unexpected.
 - **Jupyter notebook conventions:**
-  - **Colab compatibility** — all data file references must use absolute GitHub raw URLs (e.g., `https://raw.githubusercontent.com/vivianweidai/research/main/...`) so notebooks work in Colab. Ship notebooks **with outputs** so GitHub renders results statically; Colab users re-run themselves.
+  - **Colab compatibility** — all data file references must use absolute GitHub raw URLs (e.g., `https://raw.githubusercontent.com/vivianweidai/science/main/...`) so notebooks work in Colab. Ship notebooks **with outputs** so GitHub renders results statically; Colab users re-run themselves.
   - **Sections** — use numbered markdown heading cells (`## 1. Title`, `## 2. Title`, etc.) to separate logical sections. Typical flow: Data Collection → Load and Inspect Data → Visualize → Statistical Test → Conclusion.
   - **Output styling** — use plain `print()` for text output. Keep code tight and minimal — no HTML boxes, no `IPython.display`, no extra spacing hacks.
   - **Chart styling** — use matplotlib defaults (no custom fonts, no facecolor overrides). Use soft, muted pastels for colours — reference palette: pink `#f8d7da`, green `#d4edda`, blue `#cce5ff`, yellow `#fff3cd`, purple `#e2d9f3`, orange `#fce4b8`. For data line traces use slightly deeper tones like `#d95f5f`. Always keep colours light and airy — never saturated or bold. Save as PNG (300 dpi). If a project produces many images, save into an `OUTPUT/IMAGES/` subfolder; if only one or two images, save directly into `OUTPUT/`.
@@ -52,7 +52,7 @@ This RESEARCH folder is synced to GitHub. Everything inside each project folder 
 - **Never include researcher names or lab location in READMEs or any public-facing files.** Project READMEs should include Date and Instrument but not Researchers or Location.
 - **Photos:** If a project has 4+ photos, use the 2x2 photo grid with shuffle button (list all photos in front matter `photos` array). If a project has only 1 photo, use a single hero image with `<div class="hero-single">` for rounded styling and controlled height. The `project.html` layout provides CSS for both `.photo-grid`, `.shuffle-btn`, and `.hero-single`.
 - **Date/Instrument metadata** should be right-aligned below the photos using `<div class="project-meta">`. Put Instrument on a new line with `<br>`.
-- **Results links** should point to the GitHub blob URL (e.g. `https://github.com/vivianweidai/research/blob/main/...`) so files render inside GitHub.
+- **Results links** should point to the GitHub blob URL (e.g. `https://github.com/vivianweidai/science/blob/main/...`) so files render inside GitHub.
 - Ensure all code, data, and documentation is presentable and well-organized.
 - Each project's `index.md` (not README.md) serves as the public-facing overview — Jekyll requires `index.md` for subdirectory pages.
 - **When creating a new project**, always add it to the tabbed project table in the root `README.md` under the appropriate discipline tab (Mathematics, Computing, Physics, Chemistry, Biology, Astronomy). Also add any new instruments to the Instruments section in `README.md`.
@@ -151,11 +151,11 @@ project: [Short Project Name]
 
 [Summary. Link to written report first, then notebook:]
 
-See the <a href="https://github.com/vivianweidai/research/blob/main/[path]">written report</a>, the <a href="https://github.com/vivianweidai/research/blob/main/[path]">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/research/blob/main/[path]">run the reproducible analysis yourself</a>.
+See the <a href="https://github.com/vivianweidai/science/blob/main/[path]">written report</a>, the <a href="https://github.com/vivianweidai/science/blob/main/[path]">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/[path]">run the reproducible analysis yourself</a>.
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="https://vivianweidai.com/curriculum/">Curriculum</a><a href="https://vivianweidai.com/olympiads/">Olympiads</a><a href="https://vivianweidai.com/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/research/tree/main/[URL-encoded folder name]">View on GitHub</a></div>
+<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/[URL-encoded folder name]">View on GitHub</a></div>
 ```
 
 Always use `index.md` (not `README.md`) for project pages. Always include the footer div. The `photos` front matter array is for PHOTOS/ only; use `data_photos` for DATA/ images. **Samples** is a top-level `##` section (not a subsection of Setup). Never include a `#` numbering column in tables.
