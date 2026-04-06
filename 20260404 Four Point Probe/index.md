@@ -195,7 +195,7 @@ Raw data were photographs of the instrument display taken after each measurement
 
 <img src="OUTPUT/IMAGES/penny_surface_direction.png" alt="Penny surface condition analysis" style="width:100%; border-radius:6px;">
 
-**Current direction.** Forward current consistently produced higher readings than reverse across all samples tested in both directions. The mean FWD–REV offset was several Ω/□, likely due to thermoelectric (Seebeck) effects at the probe-sample contacts or slight asymmetry in probe pressure.
+**Current direction.** Forward current consistently produced higher readings than reverse across all samples tested in both directions. The mean FWD–REV offset was several Ω/□.
 
 **Aluminum foil orientation.** Flipping the foil upside down increased sheet resistance from 48.1 to 54.7 Ω/□ — the matte and shiny sides of aluminum foil have measurably different surface conductivity, possibly due to differences in oxide layer thickness or surface roughness from the rolling process.
 
