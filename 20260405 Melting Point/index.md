@@ -75,7 +75,7 @@ Pending instrument repair. Expected deliverables when data is available:
 - Comparison to literature values (caffeine: 235–237 °C, aspirin: 135–136 °C)
 - Temperature-time curves from the OptiMelt software
 
-This project connects to the broader thermal analysis series — the next step is thermogravimetric analysis (TGA) on the Q50.
+This project connects to the broader thermal analysis series — the next step is thermogravimetric analysis (TGA) on the TA Instruments Q50.
 
 ---
 
