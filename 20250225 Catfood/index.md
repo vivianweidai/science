@@ -75,7 +75,7 @@ Colored cat food was prepared by mixing regular dry food with red and green food
 
 ## Data
 
-Raw data was recorded on handwritten data sheets, photographed as JPEG images. Variables tracked per trial include: date, serving number, pieces served and remaining, bowl position (left/right), serving time, and food dye drops used.
+Raw data was recorded on handwritten data sheets and photographed. Variables tracked per trial include: date, serving number, pieces served and remaining, bowl position (left/right), serving time, and food dye drops used.
 
 <div class="photo-grid three-col" id="data-grid">
   <img id="data-0" alt="Data sheet">
