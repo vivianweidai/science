@@ -53,19 +53,20 @@ A background spectrum was collected first to establish a baseline. Each sample w
 
 ### Samples
 
+<div class="hero-single"><img src="PHOTOS/20260404 Samples B.jpeg" alt="Samples"></div>
+
 | # | Category | Samples |
 |---|----------|---------|
 | 1 | Solvents | acetone, isopropanol, water |
 | 2 | Food/minerals | coffee, salt, sugar |
-| 3 | Personal care | soap, shampoo, conditioner, lotion, sunscreen |
-| 4 | Household | cleaner |
-| 5 | Polymers | plastic bag, plastic cap, plastic glove, plastic wrapper, paper, paper-plastic cup |
-| 6 | Biological | finger, leaf, orange peel |
-| 7 | Control | background |
+| 3 | Personal care | soap, shampoo, conditioner, lotion, sunscreen, cleaner |
+| 4 | Polymers/paper | plastic bag, plastic cap, plastic glove, plastic wrapper, paper, paper-plastic cup |
+| 5 | Biological | finger, leaf, orange peel |
+| 6 | Control | background |
 
 ## Data
 
-Raw spectra are available as CSV files on <a href="https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy/DATA">GitHub</a>. Each CSV contains two columns (wavenumber in cm⁻¹ and transmittance in %) with ~7,150 data points per spectrum. Data is organized into two experimental runs: <a href="https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy/DATA/ONE">ONE</a> (19 samples) and <a href="https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy/DATA/TWO">TWO</a> (6 samples).
+Raw spectra are available as CSV files each containing two columns (wavenumber in cm⁻¹ and transmittance in %) with ~7,150 data points per spectrum. Data is organized into two experimental runs: <a href="https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy/DATA/ONE">ONE</a> (19 samples) and <a href="https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy/DATA/TWO">TWO</a> (6 samples) over two different days.
 
 ## Results
 
