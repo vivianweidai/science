@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## Curriculum
 
 <img src="../archives/IMAGES/curriculum.png" alt="Curriculum" width="100%">

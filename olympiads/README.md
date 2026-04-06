@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## Olympiads
 
 <img src="../archives/IMAGES/olympiads2.jpeg" alt="Olympiads" width="100%">

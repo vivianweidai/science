@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## Research
 
 <div class="tabs">
