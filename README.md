@@ -27,7 +27,7 @@
   <div class="tab-content" id="content-comp">
     <table>
       <tr><th>Date</th><th>Project</th><th>Description</th></tr>
-      <tr><td>February 2025</td><td><a href="20250225%20Catfood/">Cat Food Colour Preference</a></td><td>Chi-squared analysis of red vs. green food colour preference in a domestic cat</td></tr>
+      <tr><td>February 2025</td><td><a href="20250225%20Catfood/">Cat Food Color Preference</a></td><td>Chi-squared analysis of red vs. green food color preference in a domestic cat</td></tr>
     </table>
   </div>
 
@@ -64,7 +64,7 @@
 ## Instruments
 
 - **[Chemistry]** Thermo Scientific Nicolet 380 FT-IR Spectrometer — mid-IR absorption/transmittance spectra
-- **[Chemistry]** OptiMelt Automated Melting Point System — capillary tube melting point determination
+- **[Chemistry]** OptiMelt Automated Melting Point System — melting point determination
 - **[Physics]** Jandel RM3 Four-Point Probe — sheet resistance measurements
 - **[Biology]** miniPCR Thermal Cycler — PCR amplification of DNA/RNA targets
 - **[Biology]** P51 Fluorescence Viewer — fluorescence detection and gel imaging
