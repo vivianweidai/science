@@ -43,7 +43,7 @@ shufflePhotos();
 
 ## Overview
 
-Melting point determination is a fundamental technique for identifying and assessing the purity of solid compounds. A pure substance melts sharply at a characteristic temperature, while impurities broaden the melting range and depress the onset temperature. This experiment aimed to measure melting points of caffeine and acetaminophen using capillary tube method on an automated melting point apparatus with digital image processing.
+Melting point determination is a fundamental technique for identifying and assessing the purity of solid compounds. A pure substance melts sharply at a characteristic temperature, while impurities broaden the melting range and depress the onset temperature. This experiment aimed to measure melting points of caffeine and aspirin using capillary tube method on an automated melting point apparatus with digital image processing.
 
 **Status:** The OptiMelt instrument was non-functional during this session — the touchscreen was unresponsive and could not be used to configure or start a run. Samples were prepared but no measurements were collected. This project is on hold pending instrument repair or access to an alternative melting point apparatus.
 
@@ -53,7 +53,7 @@ Melting point determination is a fundamental technique for identifying and asses
 |----------|---------|
 | Instrument | SRS OptiMelt Automated Melting Point System |
 | Method | Capillary tube, digital image processing |
-| Samples | Caffeine (CAF), acetaminophen (MP) |
+| Samples | Caffeine (CAF), aspirin (MP) |
 | Replicates | 3 capillary tubes per compound |
 
 Samples were ground to a fine powder and packed into glass capillary tubes (~2–3 mm fill height). Each compound was prepared in triplicate (CAF1–3, MP1–3) to allow averaging and assess reproducibility. Tubes were labeled and inserted into the OptiMelt sample chamber.
@@ -68,7 +68,7 @@ No data was collected — the instrument was non-functional. If the experiment i
 
 - Melting onset and clear point for each replicate
 - Mean melting point ± standard deviation per compound
-- Comparison to literature values (caffeine: 235–237 °C, acetaminophen: 169–171 °C)
+- Comparison to literature values (caffeine: 235–237 °C, aspirin: 135–136 °C)
 - Temperature-time curves from the OptiMelt software
 
 *This project connects to the broader thermal analysis series — the next step is thermogravimetric analysis (TGA) on the Q50.*
