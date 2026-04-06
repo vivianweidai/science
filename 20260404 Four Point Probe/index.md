@@ -157,12 +157,12 @@ Each sample was placed on the measurement stage, the four-point probe head lower
 
 <div class="hero-single"><img src="PHOTOS/20260404 Setup 39.jpeg" alt="Tri-band penny under four-point probe"></div>
 
-| # | Category | Samples |
-|---|----------|---------|
-| 1 | Coins | quarter, penny (unpolished / semi-polished / fully polished) |
-| 2 | Household metals | stainless steel spoon, aluminum foil, metal washer, house key |
-| 3 | Biological | leaf |
-| 4 | Other | DVD, paper cardboard |
+| Category | Samples |
+|----------|---------|
+| Coins | quarter, penny (unpolished / semi-polished / fully polished) |
+| Household metals | stainless steel spoon, aluminum foil, metal washer, house key |
+| Biological | leaf |
+| Other | DVD, paper cardboard |
 
 Conductive samples (coins, household metals) produced measurable sheet resistance readings. Non-conductive samples (leaf, DVD, paper cardboard) returned Contact Limit or Out of Range at all current settings. The penny was sanded into three bands — untouched copper, lightly polished, and fully sanded to exposed zinc — to compare surface condition effects. Each sample was measured multiple times in both forward and reverse current directions.
 
