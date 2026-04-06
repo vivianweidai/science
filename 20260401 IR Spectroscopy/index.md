@@ -152,6 +152,12 @@ The instrument (Nicolet iS5) applies background correction automatically — eac
 })();
 </script>
 
+### Food / Minerals
+
+<img src="OUTPUT/food_minerals_spectrum.png" alt="Food / Minerals spectra" style="width:100%; border-radius:6px;">
+
+All three food/mineral samples overlay on a single plot reveals how different their chemistry is. **Coffee** produces a broad O–H band around 3,300 cm⁻¹ (water and hydroxyl groups in organic acids) plus C=O and C–O absorptions in the fingerprint region from caffeine, chlorogenic acids, and lipids. **Sugar** (sucrose) shows a similarly broad O–H region from its many hydroxyl groups, but its fingerprint region below 1,500 cm⁻¹ is dominated by intense C–O stretching vibrations of the glycosidic bond and sugar ring — each sugar has a unique fingerprint here. **Salt** (NaCl) is the outlier: as a purely ionic compound with no covalent bonds, it produces an almost perfectly flat baseline — no IR-active vibrations to absorb. This makes salt an excellent negative control and explains its traditional use as IR sample windows.
+
 See the <a href="https://github.com/vivianweidai/research/blob/main/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/research/blob/main/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">run the reproducible analysis yourself</a>.
 
 ---
