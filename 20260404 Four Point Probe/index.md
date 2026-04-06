@@ -138,20 +138,19 @@ shufflePhotos();
 
 ## Overview
 
-Sheet resistance is a measure of how easily electric current flows across a thin material's surface, reported in ohms per square (Ω/□). It is widely used in semiconductor fabrication and materials science to characterize conductive coatings, thin films, and bulk materials without needing to know the exact thickness — making it practical for quality control in semiconductor fabrication and thin-film manufacturing.
+Sheet resistance is a measure of how easily electric current flows across a material's surface, reported in ohms per square (Ω/□). It characterizes conductive materials without needing to know the exact thickness.
 
-The four-point probe technique separates the current-carrying and voltage-sensing functions into different probe pairs. The Jandel RM3 applies a known current through the outer two probes and measures the voltage drop across the inner two. Because virtually no current flows through the voltage-sensing probes, the contact resistance between each probe tip and the sample surface drops out of the measurement entirely — only the resistance of the sample itself is captured. This is the same principle behind Kelvin (four-terminal) sensing used in precision resistance metrology.
+The four-point probe technique separates the current-carrying and voltage-sensing functions into different probe pairs. The Jandel RM3 applies a known current through the outer two probes and measures the voltage drop across the inner two. Because virtually no current flows through the voltage-sensing probes, the contact resistance between each probe tip and the sample surface drops out of the measurement entirely — only the resistance of the sample itself is captured.
 
 ## Setup
 
 | Category | Details |
 |----------|---------|
 | Instrument | Jandel RM3-AR Four-Point Probe Test Unit |
-| Technique | Four-point probe (Kelvin sensing) — separate current and voltage pairs eliminate contact resistance |
-| Measurement | Sheet resistance (Ω/□) and resistivity (Ω·cm) |
-| Correction | Geometric correction factor (π/ln2 ≈ 4.532) applied to V/I ratio for semi-infinite thin samples |
+| Technique | Four-point probe — separate current and voltage pairs eliminate contact resistance |
+| Measurement | Sheet resistance (Ω/□) |
 
-Each sample was placed on the measurement stage, the four-point probe head lowered onto the surface, and current applied through the outer probes while voltage was measured across the inner two. The instrument computes sheet resistance as R□ = (π/ln2) × (V/I), where the factor π/ln2 ≈ 4.532 is a geometric correction that accounts for the linear arrangement of four equally spaced probes on a large, thin sample. Multiple points were measured per sample.
+Each sample was placed on the measurement stage, the four-point probe head lowered onto the surface, and current applied through the outer probes while voltage was measured across the inner two. Multiple points were measured per sample.
 
 ### Samples
 
@@ -174,17 +173,17 @@ Raw data were photographs of the instrument display taken after each measurement
 
 Of the 67 measurement attempts, 56 produced valid sheet resistance readings at 9 µA. Three non-conductive samples (leaf, DVD, paper cardboard) returned Contact Limit at all current settings, and one metal washer reading was excluded due to an incorrect current range (20 mA).
 
-| Sample | Material | n | Mean (Ω/□) | ± Std | Range |
-|--------|----------|--:|------------|-------|-------|
-| Quarter | Nickel-clad copper | 2 | 37.8 | 0.2 | 37.6–37.9 |
-| Spoon | Stainless steel | 7 | 39.0 | 1.8 | 36.6–41.5 |
-| Penny (unpolished) | Copper-plated zinc | 3 | 47.3 | 2.4 | 44.5–48.9 |
-| Aluminum foil | Aluminum | 5 | 48.1 | 0.4 | 47.6–48.7 |
-| Penny (semi-polished) | Copper-plated zinc | 10 | 48.6 | 1.6 | 46.1–51.8 |
-| Penny (fully polished) | Copper-plated zinc | 16 | 50.1 | 2.5 | 47.5–55.7 |
-| Aluminum foil (flipped) | Aluminum | 3 | 54.7 | 1.8 | 52.8–56.2 |
-| Metal washer | Steel | 5 | 54.8 | 1.2 | 53.2–56.2 |
-| House key | Brass | 5 | 57.2 | 1.0 | 56.1–58.3 |
+| Sample | Material | n | Mean (Ω/□) | Range |
+|--------|----------|--:|------------|-------|
+| Quarter | Nickel-clad copper | 2 | 37.8 | 37.6–37.9 |
+| Spoon | Stainless steel | 7 | 39.0 | 36.6–41.5 |
+| Penny (unpolished) | Copper-plated zinc | 3 | 47.3 | 44.5–48.9 |
+| Aluminum foil | Aluminum | 5 | 48.1 | 47.6–48.7 |
+| Penny (semi-polished) | Copper-plated zinc | 10 | 48.6 | 46.1–51.8 |
+| Penny (fully polished) | Copper-plated zinc | 16 | 50.1 | 47.5–55.7 |
+| Aluminum foil (flipped) | Aluminum | 3 | 54.7 | 52.8–56.2 |
+| Metal washer | Steel | 5 | 54.8 | 53.2–56.2 |
+| House key | Brass | 5 | 57.2 | 56.1–58.3 |
 
 <img src="OUTPUT/IMAGES/mean_sheet_resistance.png" alt="Mean sheet resistance by sample" style="width:100%; border-radius:6px;">
 
