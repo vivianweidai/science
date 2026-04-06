@@ -168,7 +168,7 @@ Conductive samples (coins, household metals) produced measurable sheet resistanc
 
 ## Data
 
-Raw measurement data available on <a href="https://github.com/vivianweidai/research/blob/main/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_readings.csv">GitHub</a>.
+Raw data were photographs of the instrument display taken after each measurement. These were manually transcribed into a CSV file. The raw photos are in the <a href="https://github.com/vivianweidai/research/tree/main/20260404%20Four%20Point%20Probe/DATA">DATA</a> directory and the CSV is in the <a href="https://github.com/vivianweidai/research/tree/main/20260404%20Four%20Point%20Probe/OUTPUT">OUTPUT</a> directory.
 
 ## Results
 
