@@ -2,10 +2,7 @@
 
 ## YOUR ROLE
 
-You are a research data analyst and pipeline builder. Your primary jobs are:
-
-1. **Process experimental data** — parse raw instrument outputs (CSVs, spectra, images), clean and validate data, perform statistical analysis, and generate publication-quality visualizations.
-2. **Build reproducible pipelines** — create reusable scripts that can be re-run on new data with minimal modification. Each experiment should have a clear, repeatable analysis workflow.
+Process experimental data and build reproducible analysis pipelines. Parse raw instrument outputs, clean and validate data, perform statistical analysis, and generate visualizations.
 
 ## PROJECT STRUCTURE
 
@@ -15,18 +12,16 @@ Each research project lives in a date-prefixed folder:
 YYYYMMDD Project Name/
 ├── DATA/                   # Raw data from instruments (CSVs, spectra, etc.)
 ├── PHOTOS/                 # Experiment photos (YYYYMMDD format filenames)
-├── PAPERS/                 # Background reference papers
 ├── OUTPUT/                 # Analysis output: scripts, notebooks, figures, processed data
 │   ├── *.py / *.ipynb      # Analysis code
 │   ├── *.png               # Generated plots and visualizations
 │   └── *.csv / *.json      # Processed/cleaned data
-├── README.md               # Project overview, methods, results summary
+├── index.md                # Project overview, methods, results summary
 ```
 
 - **Subfolder naming convention: ALL CAPS** (e.g., `DATA/`, `OUTPUT/`).
 - **Never modify raw data files.** Read from `DATA/`; write all generated outputs to `OUTPUT/`.
-- Create subdirectories (`DATA/`, `PHOTOS/`, `PAPERS/`, `OUTPUT/`) as needed when setting up or processing a project.
-- When a final report or summary PDF is needed, also save a copy to the parent `SCIENCE/OUTPUT/` folder.
+- Create subdirectories (`DATA/`, `PHOTOS/`, `OUTPUT/`) as needed when setting up or processing a project.
 
 ## ANALYSIS GUIDELINES
 
@@ -43,17 +38,11 @@ YYYYMMDD Project Name/
 
 ## INSTRUMENTS & DATA FORMATS
 
-39 instruments are available (see `CONTEXT/CONTEXT Toys.pdf` for the canonical list). **All instrument names must exactly match CONTEXT Toys.pdf.** When referencing any instrument, always verify the name against that file — do not abbreviate, add prefixes, or rearrange words. Instruments used so far:
+**All instrument names must exactly match the canonical Toy List.** When referencing any instrument, verify the name — do not abbreviate, add prefixes, or rearrange words. Instruments used so far:
 - **Thermo Scientific Nicolet 380 FT-IR Spectrometer** — CSV files with wavenumber (cm⁻¹) vs. transmittance/absorbance
 - **Jandel RM3 Four-Point Probe** — sheet resistance measurements (Ω/□)
 - **OptiMelt Automated Melting Point System** — non-functional (touchscreen unresponsive)
 - **Next up: TA Instruments TGA Q50** — thermogravimetric analysis (walk-up guide available)
-
-## SUPPLIES & LOGISTICS
-
-- All consumables and supplies are ordered from Amazon (not university Chemstore).
-- Nothing is stored at the lab — assume all materials are walked in each session.
-- Operate independently: no training sessions with lab staff, minimal contact.
 
 ## GITHUB & VISIBILITY
 
