@@ -54,7 +54,7 @@ Fourier-transform infrared (FT-IR) spectroscopy identifies the polar covalent bo
 | Runs | Two sessions (19 + 6 samples) |
 | Software | Thermo Scientific OMNIC 8 |
 
-A background spectrum was collected first to establish a baseline. Each sample was placed directly on the ATR crystal — in ATR mode, an infrared beam reflects internally within the crystal and an evanescent wave penetrates a few microns into the sample surface, so samples can be measured as-is without any preparation. A spectrum was acquired across the mid-IR range and the raw CSV exported from OMNIC 8.
+A background spectrum was collected first to establish a baseline. Each sample was placed directly on the ATR crystal — in ATR mode, an infrared beam reflects internally within the crystal and an evanescent wave penetrates a few microns into the sample surface, so samples can be measured as-is without any preparation. A spectrum was acquired across the mid-IR range and <a href="https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy/DATA">the raw CSV</a> exported from OMNIC 8.
 
 ## Samples
 
