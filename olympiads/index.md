@@ -4,7 +4,7 @@ layout: default
 
 ## Olympiads
 
-<img src="../archives/IMAGES/olympiads2.jpeg" alt="Olympiads" width="100%">
+<img src="../archives/IMAGES/olympiads.jpeg" alt="Olympiads" width="100%">
 
 <div class="tabs">
   <input type="radio" name="oly" id="oly-math">
