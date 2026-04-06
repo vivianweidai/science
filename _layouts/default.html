@@ -73,6 +73,32 @@
       display: block;
     }
 
+    /* Nav links styled like tabs */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #d1d9e0;
+      margin: 1em 0 0;
+    }
+    .nav-links a {
+      padding: 0.6em 1.2em;
+      font-size: 0.9em;
+      font-weight: 600;
+      color: #656d76;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: color 0.15s, border-color 0.15s;
+      text-decoration: none;
+    }
+    .nav-links a:hover {
+      color: #1f2328;
+      text-decoration: none;
+    }
+    .nav-links a.active {
+      color: #0969da;
+      border-bottom-color: #0969da;
+    }
+
     .footer {
       display: flex;
       justify-content: space-between;
@@ -96,6 +122,16 @@
       var pick = active[Math.floor(Math.random() * active.length)];
       var el = document.getElementById('tab-' + pick);
       if (el) el.checked = true;
+    })();
+    (function() {
+      var links = document.querySelectorAll('.nav-links a');
+      var path = window.location.pathname;
+      for (var i = 0; i < links.length; i++) {
+        if (path.indexOf(links[i].getAttribute('href')) === 0 ||
+            path.indexOf('/' + links[i].getAttribute('href')) === 0) {
+          links[i].classList.add('active');
+        }
+      }
     })();
   </script>
 </body>
