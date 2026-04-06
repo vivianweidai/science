@@ -1,3 +1,12 @@
+## Science
+
+- [Research](research/) — experiments and instrument data
+- [Curriculum](curriculum/) — study materials
+- [Olympiads](olympiads/) — competition preparation
+- [Archives](archives/) — past materials
+
+---
+
 ## Research
 
 <div class="tabs">
@@ -27,29 +36,29 @@
   <div class="tab-content" id="content-comp">
     <table>
       <tr><th>Date</th><th>Project</th><th>Description</th></tr>
-      <tr><td>February 2025</td><td><a href="20250225%20Catfood/">Cat Food Color Preference</a></td><td>Chi-squared analysis of red vs. green food color preference in a domestic cat</td></tr>
+      <tr><td>February 2025</td><td><a href="research/20250225%20Catfood/">Cat Food Color Preference</a></td><td>Chi-squared analysis of red vs. green food color preference in a domestic cat</td></tr>
     </table>
   </div>
 
   <div class="tab-content" id="content-phys">
     <table>
       <tr><th>Date</th><th>Project</th><th>Description</th></tr>
-      <tr><td>April 2026</td><td><a href="20260404%20Four%20Point%20Probe/">Four-Point Probe</a></td><td>Sheet resistance measurements of conductive materials</td></tr>
+      <tr><td>April 2026</td><td><a href="research/20260404%20Four%20Point%20Probe/">Four-Point Probe</a></td><td>Sheet resistance measurements of conductive materials</td></tr>
     </table>
   </div>
 
   <div class="tab-content" id="content-chem">
     <table>
       <tr><th>Date</th><th>Project</th><th>Description</th></tr>
-      <tr><td>April 2026</td><td><a href="20260401%20IR%20Spectroscopy/">IR Spectroscopy</a></td><td>IR spectroscopy of 19 everyday materials — functional group identification</td></tr>
-      <tr><td>April 2026</td><td><a href="20260405%20Melting%20Point/">Melting Point</a></td><td>Melting point determination of caffeine and aspirin — on hold pending instrument repair</td></tr>
+      <tr><td>April 2026</td><td><a href="research/20260401%20IR%20Spectroscopy/">IR Spectroscopy</a></td><td>IR spectroscopy of 19 everyday materials — functional group identification</td></tr>
+      <tr><td>April 2026</td><td><a href="research/20260405%20Melting%20Point/">Melting Point</a></td><td>Melting point determination of caffeine and aspirin — on hold pending instrument repair</td></tr>
     </table>
   </div>
 
   <div class="tab-content" id="content-bio">
     <table>
       <tr><th>Date</th><th>Project</th><th>Description</th></tr>
-      <tr><td>April 2026</td><td><a href="20260401%20Genes%20in%20Space/">Genes in Space</a></td><td>Investigating gene expression changes under simulated microgravity conditions</td></tr>
+      <tr><td>April 2026</td><td><a href="research/20260401%20Genes%20in%20Space/">Genes in Space</a></td><td>Investigating gene expression changes under simulated microgravity conditions</td></tr>
     </table>
   </div>
 
@@ -63,12 +72,12 @@
 
 ## Instruments
 
-- **[Chemistry]** <a href="20260401%20IR%20Spectroscopy/">Thermo Scientific Nicolet 380 FT-IR Spectrometer</a> — mid-IR absorption/transmittance spectra
-- **[Chemistry]** <a href="20260405%20Melting%20Point/">OptiMelt Automated Melting Point System</a> — melting point determination
-- **[Physics]** <a href="20260404%20Four%20Point%20Probe/">Jandel RM3 Four-Point Probe</a> — sheet resistance measurements
-- **[Biology]** <a href="20260401%20Genes%20in%20Space/">miniPCR Thermal Cycler</a> — PCR amplification of DNA/RNA targets
-- **[Biology]** <a href="20260401%20Genes%20in%20Space/">P51 Fluorescence Viewer</a> — fluorescence detection and gel imaging
-- **[Biology]** <a href="20260401%20Genes%20in%20Space/">BioBits Cell Free System</a> — in vitro protein expression from DNA templates
+- **[Chemistry]** <a href="research/20260401%20IR%20Spectroscopy/">Thermo Scientific Nicolet 380 FT-IR Spectrometer</a> — mid-IR absorption/transmittance spectra
+- **[Chemistry]** <a href="research/20260405%20Melting%20Point/">OptiMelt Automated Melting Point System</a> — melting point determination
+- **[Physics]** <a href="research/20260404%20Four%20Point%20Probe/">Jandel RM3 Four-Point Probe</a> — sheet resistance measurements
+- **[Biology]** <a href="research/20260401%20Genes%20in%20Space/">miniPCR Thermal Cycler</a> — PCR amplification of DNA/RNA targets
+- **[Biology]** <a href="research/20260401%20Genes%20in%20Space/">P51 Fluorescence Viewer</a> — fluorescence detection and gel imaging
+- **[Biology]** <a href="research/20260401%20Genes%20in%20Space/">BioBits Cell Free System</a> — in vitro protein expression from DNA templates
 - **[Computing]** GitHub, Python and Jupyter Notebooks — statistical analysis and reproducible research pipelines
 
 ## Repository Structure
@@ -86,4 +95,4 @@ YYYYMMDD Project Name/
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="https://vivianweidai.com/curriculum/">Curriculum</a><a href="https://vivianweidai.com/olympiads/">Olympiads</a></div><a class="footer-github" href="https://github.com/vivianweidai/research">View on GitHub</a></div>
+<div class="footer"><div class="footer-nav"><a href="https://vivianweidai.com/science/curriculum/">Curriculum</a><a href="https://vivianweidai.com/science/olympiads/">Olympiads</a><a href="https://vivianweidai.com/science/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science">View on GitHub</a></div>
