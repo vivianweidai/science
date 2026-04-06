@@ -152,7 +152,7 @@ The instrument (Nicolet iS5) applies background correction automatically — eac
 })();
 </script>
 
-### Categories
+### Household Categories
 
 <style>
 #cat-solvents:checked ~ .cat-tab-labels label[for="cat-solvents"],
@@ -227,6 +227,93 @@ The instrument (Nicolet iS5) applies background correction automatically — eac
   var cats = ['solvents','food','personal','polymers','paper','biological'];
   var pick = cats[Math.floor(Math.random() * cats.length)];
   document.getElementById('cat-' + pick).checked = true;
+})();
+</script>
+
+### Chemical Categories
+
+<style>
+#chem-oh:checked ~ .chem-tab-labels label[for="chem-oh"],
+#chem-ch:checked ~ .chem-tab-labels label[for="chem-ch"],
+#chem-co:checked ~ .chem-tab-labels label[for="chem-co"],
+#chem-mixed:checked ~ .chem-tab-labels label[for="chem-mixed"],
+#chem-cellulose:checked ~ .chem-tab-labels label[for="chem-cellulose"],
+#chem-protein:checked ~ .chem-tab-labels label[for="chem-protein"],
+#chem-ionic:checked ~ .chem-tab-labels label[for="chem-ionic"] {
+  color: #0969da;
+  border-bottom-color: #0969da;
+}
+#chem-oh:checked ~ #content-chem-oh,
+#chem-ch:checked ~ #content-chem-ch,
+#chem-co:checked ~ #content-chem-co,
+#chem-mixed:checked ~ #content-chem-mixed,
+#chem-cellulose:checked ~ #content-chem-cellulose,
+#chem-protein:checked ~ #content-chem-protein,
+#chem-ionic:checked ~ #content-chem-ionic {
+  display: block;
+}
+</style>
+
+<div class="tabs">
+  <input type="radio" name="chem-tab" id="chem-oh">
+  <input type="radio" name="chem-tab" id="chem-ch">
+  <input type="radio" name="chem-tab" id="chem-co">
+  <input type="radio" name="chem-tab" id="chem-mixed">
+  <input type="radio" name="chem-tab" id="chem-cellulose">
+  <input type="radio" name="chem-tab" id="chem-protein">
+  <input type="radio" name="chem-tab" id="chem-ionic">
+
+  <div class="chem-tab-labels tab-labels">
+    <label for="chem-oh">O–H Dominant</label>
+    <label for="chem-ch">C–H Dominant</label>
+    <label for="chem-co">Carbonyl</label>
+    <label for="chem-mixed">Mixed Organic</label>
+    <label for="chem-cellulose">Cellulose</label>
+    <label for="chem-protein">Protein</label>
+    <label for="chem-ionic">Ionic</label>
+  </div>
+
+  <div class="tab-content" id="content-chem-oh">
+    <img src="OUTPUT/chem_oh_spectrum.png" alt="O–H dominant spectra" style="width:100%; border-radius:6px;">
+    <p><strong>Water, coffee, sugar, lotion, shampoo, conditioner</strong> — all share the broad O–H stretching band at 3,200–3,600 cm⁻¹ as their most prominent feature. Whether the hydroxyl comes from liquid water, dissolved sugars, or glycerin in cosmetics, the hydrogen-bonded O–H stretch dominates the spectrum. The fingerprint regions diverge — sugar and coffee show rich C–O patterns while the personal care products are smoother — but the O–H signature ties them together.</p>
+  </div>
+
+  <div class="tab-content" id="content-chem-ch">
+    <img src="OUTPUT/chem_ch_spectrum.png" alt="C–H dominant spectra" style="width:100%; border-radius:6px;">
+    <p><strong>Plastic bag, plastic cap, plastic wrapper (×2)</strong> — polyolefin plastics made almost entirely of carbon and hydrogen. The sharp C–H stretching doublet at ~2,920/2,850 cm⁻¹ and C–H bending at ~1,460 cm⁻¹ are virtually the only features. These spectra overlap closely because the underlying polymer (polyethylene or polypropylene) is chemically simple — long hydrocarbon chains with no heteroatoms.</p>
+  </div>
+
+  <div class="tab-content" id="content-chem-co">
+    <img src="OUTPUT/chem_co_spectrum.png" alt="Carbonyl spectra" style="width:100%; border-radius:6px;">
+    <p><strong>Acetone, sunscreen</strong> — both produce a strong C=O carbonyl stretch at ~1,715 cm⁻¹. In acetone it's the ketone carbonyl; in sunscreen it's from UV-absorbing compounds (avobenzone, octinoxate) that contain ester or ketone groups. Despite being very different products, the carbonyl peak is the defining spectral feature in both.</p>
+  </div>
+
+  <div class="tab-content" id="content-chem-mixed">
+    <img src="OUTPUT/chem_mixed_spectrum.png" alt="Mixed organic spectra" style="width:100%; border-radius:6px;">
+    <p><strong>Isopropanol, soap, cleaner, orange peel</strong> — these samples show multiple functional groups without any single one dominating. Isopropanol has O–H, C–H, and C–O all in balance. Soap and cleaner contain fatty acid salts with C–H chains plus carboxylate groups. Orange peel is a natural mixture of terpenes, citric acid, pectin, and essential oils — producing a busy spectrum with contributions from nearly every region.</p>
+  </div>
+
+  <div class="tab-content" id="content-chem-cellulose">
+    <img src="OUTPUT/chem_cellulose_spectrum.png" alt="Cellulose spectra" style="width:100%; border-radius:6px;">
+    <p><strong>Paper, paper (run 2), paper-plastic cup, leaf</strong> — all contain cellulose as the structural backbone. The characteristic pattern is a broad O–H band (hydroxyl groups along the polysaccharide chain) combined with strong C–O stretching at 1,000–1,150 cm⁻¹ from glycosidic linkages. The paper-plastic cup adds polyethylene C–H peaks on top of the cellulose base. Leaf includes additional cuticle wax signatures but the underlying cellulose framework is clearly visible.</p>
+  </div>
+
+  <div class="tab-content" id="content-chem-protein">
+    <img src="OUTPUT/chem_protein_spectrum.png" alt="Protein / amide spectra" style="width:100%; border-radius:6px;">
+    <p><strong>Finger (skin), plastic glove</strong> — an unexpected pairing. Human skin (keratin) shows the classic amide I band at ~1,640 cm⁻¹ and amide II at ~1,540 cm⁻¹ from protein peptide bonds. The plastic glove (nitrile or vinyl) also shows amide-like absorptions from its polymer structure. Both spectra feature these mid-range carbonyl/nitrogen bands that distinguish them from the simpler hydrocarbon or hydroxyl-dominated groups.</p>
+  </div>
+
+  <div class="tab-content" id="content-chem-ionic">
+    <img src="OUTPUT/chem_ionic_spectrum.png" alt="Ionic spectra" style="width:100%; border-radius:6px;">
+    <p><strong>Salt</strong> — NaCl is purely ionic with no covalent bonds, so it has no IR-active vibrations and produces an essentially flat baseline. The minor features are trace surface moisture and atmospheric CO₂. Salt stands alone as the only sample with no molecular absorption signature — which is precisely why NaCl has historically been used to make IR-transparent windows and pellets.</p>
+  </div>
+</div>
+
+<script>
+(function() {
+  var chems = ['oh','ch','co','mixed','cellulose','protein','ionic'];
+  var pick = chems[Math.floor(Math.random() * chems.length)];
+  document.getElementById('chem-' + pick).checked = true;
 })();
 </script>
 
