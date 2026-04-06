@@ -64,6 +64,7 @@ This RESEARCH folder is synced to GitHub. Everything inside each project folder 
 - **Results links** should point to the GitHub blob URL (e.g. `https://github.com/vivianweidai/research/blob/main/...`) so files render inside GitHub.
 - Ensure all code, data, and documentation is presentable and well-organized.
 - Each project's `index.md` (not README.md) serves as the public-facing overview — Jekyll requires `index.md` for subdirectory pages.
+- **When creating a new project**, always add it to the tabbed project table in the root `README.md` under the appropriate discipline tab (Mathematics, Computing, Physics, Chemistry, Biology, Astronomy). Also add any new instruments to the Instruments section in `README.md`.
 
 ## PROJECT README TEMPLATE
 
