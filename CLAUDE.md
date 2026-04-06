@@ -1,12 +1,53 @@
-# RESEARCH — Claude Code Instructions
+# SCIENCE — Claude Code Instructions
 
 ## YOUR ROLE
 
 Process experimental data and build reproducible analysis pipelines. Parse raw instrument outputs, clean and validate data, perform statistical analysis, and generate visualizations.
 
-## PROJECT STRUCTURE
+## REFERENCE MATERIALS
 
-Each research project lives in a date-prefixed folder:
+The shared SCIENCE project folder at `/Users/jamesdai/CLAUDE/SCIENCE/` contains comprehensive reference materials. Read these files as needed for instrument details, available equipment, curriculum context, and research planning:
+
+- **`CONTEXT/CONTEXT Toys.pdf`** — **canonical instrument list** (39 instruments across Biology, Chemistry). All instrument names in repos must exactly match this file.
+- **`CONTEXT/CONTEXT Technology.pdf`** — technology landscape: what each technique measures, what questions it answers, sample state required
+- **`CONTEXT/CONTEXT Overview.pdf`** — overview of goals
+- **`CONTEXT/CONTEXT Guide.pdf`** — Claude's guide on intended approach
+- **`CONTEXT/CONTEXT Workflow.pdf`** — technical reproducible framework
+- **`CONTEXT/CONTEXT Books.pdf`** — books for learning Machine Learning
+- **`CONTEXT/NOTES *.pdf`** — curriculum notes (Astronomy, Biology, Chemistry, Computing, Mathematics, Physics)
+- **`CONTEXT/PAPER *.pdf`** — classic papers (Turing, Rosenblatt, Hubel & Wiesel, Q-Learning, Transformers, AlphaGo, etc.)
+- **`OUTPUT/UNR_Toy_List.pdf`** — expanded instrument list with locations and contact info
+- **`OUTPUT/University_Technology_Landscape.xlsx`** — 5-sheet comparison of UNR vs UBC vs MIT vs Caltech
+- **`OUTPUT/UNR_SIL_Instrument_Inventory.xlsx`** — detailed SIL instrument inventory
+- **`OUTPUT/UNR_SIL_Lab_Guide.pdf`** — lab access and procedures
+- **`OUTPUT/UNR_SIL_Technique_Map.pdf`** — technique-to-instrument mapping
+- **`OUTPUT/UNR_Faculty_Catalogue_Updated.xlsx`** — UNR faculty research areas
+- **`OUTPUT/UNR_Labs_Catalogue_Updated.xlsx`** — UNR lab catalogue
+- **Instrument walk-up guides** — `OUTPUT/DSC_Q100_WalkUp_Guide.pdf`, `OUTPUT/DSC_Q20_WalkUp_Guide.pdf`, `OUTPUT/TGA_Q50_WalkUp_Guide.pdf`, `OUTPUT/FT-IR_Quick_Start_Guide.pdf`, `OUTPUT/FT-IR_Spectral_Analysis.pdf`, `OUTPUT/Jandel_RM3_Four_Point_Probe_Guide.pdf`, `OUTPUT/OptiMelt_WalkUp_Guide.pdf`
+- **`OUTPUT/Science_Competitions_Guide.pdf`** — science competitions guide
+- **`OUTPUT/UBC_Faculty_Catalogue.xlsx`**, **`OUTPUT/UBC_Vancouver_Research_Opportunities.pdf`** — UBC references
+- **`OUTPUT/University_Shared_Labs.pdf`** — university shared labs overview
+
+## REPO STRUCTURE
+
+```
+science/
+├── _layouts/               # Jekyll layouts (default.html, project.html)
+├── _config.yml             # Jekyll config (title, baseurl)
+├── index.md                # Landing page (vivianweidai.com)
+├── CNAME                   # Custom domain: vivianweidai.com
+├── curriculum/             # Curriculum page + NOTES PDFs
+├── olympiads/              # Olympiads page
+├── research/               # Research projects
+│   ├── index.md            # Research landing with tabbed project table
+│   └── YYYYMMDD Project/   # Individual projects (see below)
+└── archives/               # Shared assets
+    ├── IMAGES/             # Consolidated images
+    ├── textbooks.csv       # Textbook database
+    └── olympiads.csv       # Olympiad contest database
+```
+
+Each research project lives in a date-prefixed folder under `research/`:
 
 ```
 YYYYMMDD Project Name/
@@ -47,15 +88,15 @@ YYYYMMDD Project Name/
 
 ## GITHUB & VISIBILITY
 
-This RESEARCH folder is synced to GitHub. Everything inside each project folder is publicly viewable. Keep this in mind:
+This repo is synced to GitHub at `vivianweidai/science` and served at `vivianweidai.com`. Everything is publicly viewable. Keep this in mind:
 - Do not commit sensitive or personal information.
-- **Never include researcher names or lab location in READMEs or any public-facing files.** Project READMEs should include Date and Instrument but not Researchers or Location.
+- **Never include researcher names or lab location in any public-facing files.** Project pages should include Date and Instrument but not Researchers or Location.
 - **Photos:** If a project has 4+ photos, use the 2x2 photo grid with shuffle button (list all photos in front matter `photos` array). If a project has only 1 photo, use a single hero image with `<div class="hero-single">` for rounded styling and controlled height. The `project.html` layout provides CSS for both `.photo-grid`, `.shuffle-btn`, and `.hero-single`.
 - **Date/Instrument metadata** should be right-aligned below the photos using `<div class="project-meta">`. Put Instrument on a new line with `<br>`.
 - **Results links** should point to the GitHub blob URL (e.g. `https://github.com/vivianweidai/science/blob/main/...`) so files render inside GitHub.
 - Ensure all code, data, and documentation is presentable and well-organized.
 - Each project's `index.md` (not README.md) serves as the public-facing overview — Jekyll requires `index.md` for subdirectory pages.
-- **When creating a new project**, always add it to the tabbed project table in the root `README.md` under the appropriate discipline tab (Mathematics, Computing, Physics, Chemistry, Biology, Astronomy). Also add any new instruments to the Instruments section in `README.md`.
+- **When creating a new project**, always add it to the tabbed project table in `research/index.md` under the appropriate discipline tab (Mathematics, Computing, Physics, Chemistry, Biology, Astronomy). Also add any new instruments to the Instruments section in `research/index.md`.
 - **Always commit and push after completing all changes.** Do not wait to be asked — once edits are done, stage, commit, and push to GitHub.
 
 ## PROJECT README TEMPLATE
