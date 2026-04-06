@@ -27,9 +27,9 @@ layout: default
     <table>
       <tr><th>Date</th><th>Country</th><th>Olympiad</th></tr>
       <tr class="highlight"><td>November 2025</td><td>United States</td><td>American Mathematics Competition 12</td></tr>
-      <tr><td>October 2025</td><td>Canada</td><td>Canadian Open Mathematics Challenge</td></tr>
-      <tr><td>November 2024</td><td>United States</td><td>American Mathematics Competition 12</td></tr>
-      <tr><td>October 2024</td><td>Canada</td><td>Canadian Open Mathematics Challenge</td></tr>
+      <tr><td><s>October 2025</s></td><td><s>Canada</s></td><td><s>Canadian Open Mathematics Challenge</s></td></tr>
+      <tr><td><s>November 2024</s></td><td><s>United States</s></td><td><s>American Mathematics Competition 12</s></td></tr>
+      <tr><td><s>October 2024</s></td><td><s>Canada</s></td><td><s>Canadian Open Mathematics Challenge</s></td></tr>
     </table>
   </div>
 
@@ -38,12 +38,12 @@ layout: default
       <tr><th>Date</th><th>Country</th><th>Olympiad</th></tr>
       <tr><td>December 2026</td><td>United States</td><td>USA North America Artificial Intelligence Olympiad</td></tr>
       <tr><td>November 2026</td><td>Canada</td><td>Canada Artificial Intelligence National Challenge</td></tr>
-      <tr><td>January 2026</td><td>United States</td><td>North American Computational Linguistics Open Exam</td></tr>
-      <tr><td>March 2025</td><td>Canada</td><td>Canadian Computing Competition Senior Exam</td></tr>
-      <tr><td>January 2025</td><td>Canada</td><td>North American Computational Linguistics Open Exam</td></tr>
-      <tr><td>January 2025</td><td>United States</td><td>USA Computing Olympiad Bronze Exam</td></tr>
-      <tr><td>March 2024</td><td>Canada</td><td>Canadian Computing Competition Senior Exam</td></tr>
-      <tr><td>January 2024</td><td>United States</td><td>USA Computing Olympiad Bronze Exam</td></tr>
+      <tr><td><s>January 2026</s></td><td><s>United States</s></td><td><s>North American Computational Linguistics Open Exam</s></td></tr>
+      <tr><td><s>March 2025</s></td><td><s>Canada</s></td><td><s>Canadian Computing Competition Senior Exam</s></td></tr>
+      <tr><td><s>January 2025</s></td><td><s>Canada</s></td><td><s>North American Computational Linguistics Open Exam</s></td></tr>
+      <tr><td><s>January 2025</s></td><td><s>United States</s></td><td><s>USA Computing Olympiad Bronze Exam</s></td></tr>
+      <tr><td><s>March 2024</s></td><td><s>Canada</s></td><td><s>Canadian Computing Competition Senior Exam</s></td></tr>
+      <tr><td><s>January 2024</s></td><td><s>United States</s></td><td><s>USA Computing Olympiad Bronze Exam</s></td></tr>
     </table>
   </div>
 
@@ -52,14 +52,14 @@ layout: default
       <tr><th>Date</th><th>Country</th><th>Olympiad</th></tr>
       <tr><td>April 2026</td><td>Canada</td><td>Canadian Association of Physicists High School Prize Exam</td></tr>
       <tr class="highlight"><td>March 2026</td><td>Canada</td><td>Junior Science Olympiad of Canada Exam</td></tr>
-      <tr><td>February 2026</td><td>United States</td><td>USA Physics Olympiad F=ma Qualifying Exam</td></tr>
+      <tr><td><s>February 2026</s></td><td><s>United States</s></td><td><s>USA Physics Olympiad F=ma Qualifying Exam</s></td></tr>
       <tr class="highlight"><td>November 2025</td><td>Canada</td><td>Junior Science Olympiad of Canada National Camp - Invitation</td></tr>
-      <tr><td>May 2025</td><td>Canada</td><td>Junior Science Olympiad of Canada Exams</td></tr>
-      <tr><td>April 2025</td><td>Canada</td><td>Canadian Association of Physicists High School Prize Exam</td></tr>
-      <tr><td>February 2025</td><td>United States</td><td>USA Physics Olympiad F=ma Qualifying Exam</td></tr>
-      <tr><td>May 2024</td><td>Canada</td><td>Junior Science Olympiad of Canada Exams</td></tr>
-      <tr><td>April 2024</td><td>Canada</td><td>Canadian Association of Physicists High School Prize Exam</td></tr>
-      <tr><td>February 2024</td><td>United States</td><td>USA Physics Olympiad F=ma Qualifying Exam</td></tr>
+      <tr><td><s>May 2025</s></td><td><s>Canada</s></td><td><s>Junior Science Olympiad of Canada Exams</s></td></tr>
+      <tr><td><s>April 2025</s></td><td><s>Canada</s></td><td><s>Canadian Association of Physicists High School Prize Exam</s></td></tr>
+      <tr><td><s>February 2025</s></td><td><s>United States</s></td><td><s>USA Physics Olympiad F=ma Qualifying Exam</s></td></tr>
+      <tr><td><s>May 2024</s></td><td><s>Canada</s></td><td><s>Junior Science Olympiad of Canada Exams</s></td></tr>
+      <tr><td><s>April 2024</s></td><td><s>Canada</s></td><td><s>Canadian Association of Physicists High School Prize Exam</s></td></tr>
+      <tr><td><s>February 2024</s></td><td><s>United States</s></td><td><s>USA Physics Olympiad F=ma Qualifying Exam</s></td></tr>
     </table>
   </div>
 
@@ -70,12 +70,12 @@ layout: default
       <tr class="highlight"><td>March 2026</td><td>United States</td><td>United States National Chemistry Olympiad Local Exam</td></tr>
       <tr class="highlight"><td>March 2026</td><td>Canada</td><td>Junior Science Olympiad of Canada Exam</td></tr>
       <tr class="highlight"><td>November 2025</td><td>Canada</td><td>Junior Science Olympiad of Canada National Camp - Invitation</td></tr>
-      <tr><td>May 2025</td><td>Canada</td><td>Junior Science Olympiad of Canada Exams</td></tr>
-      <tr><td>April 2025</td><td>Canada</td><td>Canadian Chemistry Olympiad Exams</td></tr>
-      <tr><td>April 2025</td><td>United States</td><td>United States National Chemistry Olympiad National Exam</td></tr>
-      <tr><td>March 2025</td><td>United States</td><td>United States National Chemistry Olympiad Local Exam</td></tr>
-      <tr><td>May 2024</td><td>Canada</td><td>Junior Science Olympiad of Canada Exams</td></tr>
-      <tr><td>April 2024</td><td>Canada</td><td>Canadian Chemistry Olympiad Exams</td></tr>
+      <tr><td><s>May 2025</s></td><td><s>Canada</s></td><td><s>Junior Science Olympiad of Canada Exams</s></td></tr>
+      <tr><td><s>April 2025</s></td><td><s>Canada</s></td><td><s>Canadian Chemistry Olympiad Exams</s></td></tr>
+      <tr><td><s>April 2025</s></td><td><s>United States</s></td><td><s>United States National Chemistry Olympiad National Exam</s></td></tr>
+      <tr><td><s>March 2025</s></td><td><s>United States</s></td><td><s>United States National Chemistry Olympiad Local Exam</s></td></tr>
+      <tr><td><s>May 2024</s></td><td><s>Canada</s></td><td><s>Junior Science Olympiad of Canada Exams</s></td></tr>
+      <tr><td><s>April 2024</s></td><td><s>Canada</s></td><td><s>Canadian Chemistry Olympiad Exams</s></td></tr>
     </table>
   </div>
 
@@ -84,12 +84,12 @@ layout: default
       <tr><th>Date</th><th>Country</th><th>Olympiad</th></tr>
       <tr><td>April 2026</td><td>Canada</td><td>Canadian Biology Olympiad Competition Exam</td></tr>
       <tr class="highlight"><td>March 2026</td><td>Canada</td><td>Junior Science Olympiad of Canada Exam</td></tr>
-      <tr><td>February 2026</td><td>United States</td><td>USA Biology Olympiad Open Exam</td></tr>
+      <tr><td><s>February 2026</s></td><td><s>United States</s></td><td><s>USA Biology Olympiad Open Exam</s></td></tr>
       <tr class="highlight"><td>November 2025</td><td>Canada</td><td>Junior Science Olympiad of Canada National Camp - Invitation</td></tr>
-      <tr><td>May 2025</td><td>Canada</td><td>Junior Science Olympiad of Canada Exams</td></tr>
-      <tr><td>February 2025</td><td>United States</td><td>USA Biology Olympiad Open Exam</td></tr>
-      <tr><td>May 2024</td><td>Canada</td><td>Junior Science Olympiad of Canada Exams</td></tr>
-      <tr><td>April 2024</td><td>Canada</td><td>Canadian Biology Olympiad Competition Exam</td></tr>
+      <tr><td><s>May 2025</s></td><td><s>Canada</s></td><td><s>Junior Science Olympiad of Canada Exams</s></td></tr>
+      <tr><td><s>February 2025</s></td><td><s>United States</s></td><td><s>USA Biology Olympiad Open Exam</s></td></tr>
+      <tr><td><s>May 2024</s></td><td><s>Canada</s></td><td><s>Junior Science Olympiad of Canada Exams</s></td></tr>
+      <tr><td><s>April 2024</s></td><td><s>Canada</s></td><td><s>Canadian Biology Olympiad Competition Exam</s></td></tr>
     </table>
   </div>
 
@@ -97,14 +97,14 @@ layout: default
     <table>
       <tr><th>Date</th><th>Country</th><th>Olympiad</th></tr>
       <tr><td>May 2026</td><td>Canada</td><td>Canadian Astronomy and Astrophysics Olympiad Junior Exam</td></tr>
-      <tr><td>March 2026</td><td>Canada</td><td>Canadian Astronomy and Astrophysics Olympiad Senior Exam</td></tr>
+      <tr><td><s>March 2026</s></td><td><s>Canada</s></td><td><s>Canadian Astronomy and Astrophysics Olympiad Senior Exam</s></td></tr>
       <tr class="highlight"><td>February 2026</td><td>United States</td><td>USA Astronomy and Astrophysics Olympiad First Round Exam</td></tr>
       <tr class="highlight"><td>October 2025</td><td>Canada</td><td>International Olympiad on Astronomy and Astrophysics Junior - Invitation</td></tr>
-      <tr><td>May 2025</td><td>Canada</td><td>Canadian Astronomy and Astrophysics Olympiad Junior Exam</td></tr>
-      <tr><td>March 2025</td><td>Canada</td><td>Canadian Astronomy and Astrophysics Olympiad Senior Exam</td></tr>
-      <tr><td>February 2025</td><td>United States</td><td>USA Astronomy and Astrophysics Olympiad First Round Exam</td></tr>
-      <tr><td>March 2024</td><td>Canada</td><td>Canadian Astronomy and Astrophysics Olympiad Senior Exam</td></tr>
-      <tr><td>February 2024</td><td>United States</td><td>USA Astronomy and Astrophysics Olympiad First Round Exam</td></tr>
+      <tr><td><s>May 2025</s></td><td><s>Canada</s></td><td><s>Canadian Astronomy and Astrophysics Olympiad Junior Exam</s></td></tr>
+      <tr><td><s>March 2025</s></td><td><s>Canada</s></td><td><s>Canadian Astronomy and Astrophysics Olympiad Senior Exam</s></td></tr>
+      <tr><td><s>February 2025</s></td><td><s>United States</s></td><td><s>USA Astronomy and Astrophysics Olympiad First Round Exam</s></td></tr>
+      <tr><td><s>March 2024</s></td><td><s>Canada</s></td><td><s>Canadian Astronomy and Astrophysics Olympiad Senior Exam</s></td></tr>
+      <tr><td><s>February 2024</s></td><td><s>United States</s></td><td><s>USA Astronomy and Astrophysics Olympiad First Round Exam</s></td></tr>
     </table>
   </div>
 </div>
@@ -168,7 +168,7 @@ layout: default
       <tr><td>Future</td><td>The Feynman Lectures on Physics by Richard Feynman</td></tr>
       <tr><td>Future</td><td>The Art of Problem Solving Physics Worldwide Online Olympiad Training A</td></tr>
       <tr><td>Future</td><td>The Art of Problem Solving Physics Worldwide Online Olympiad Training B</td></tr>
-      <tr class="highlight"><td>December 2025</td><td><a href="https://knzhou.github.io">Physics Olympiad Handouts</a> by Kevin Zhou</td></tr>
+      <tr class="highlight"><td>December 2025</td><td><a href="https://knzhou.github.io" target="_blank">Physics Olympiad Handouts</a> by Kevin Zhou</td></tr>
       <tr><td><s>March 2025</s></td><td><s>The Art of Problem Solving Physics F=ma Series</s></td></tr>
     </table>
   </div>
