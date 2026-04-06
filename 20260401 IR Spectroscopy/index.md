@@ -152,11 +152,83 @@ The instrument (Nicolet iS5) applies background correction automatically — eac
 })();
 </script>
 
-### Food / Minerals
+### Categories
 
-<img src="OUTPUT/food_minerals_spectrum.png" alt="Food / Minerals spectra" style="width:100%; border-radius:6px;">
+<style>
+#cat-solvents:checked ~ .cat-tab-labels label[for="cat-solvents"],
+#cat-food:checked ~ .cat-tab-labels label[for="cat-food"],
+#cat-personal:checked ~ .cat-tab-labels label[for="cat-personal"],
+#cat-polymers:checked ~ .cat-tab-labels label[for="cat-polymers"],
+#cat-paper:checked ~ .cat-tab-labels label[for="cat-paper"],
+#cat-biological:checked ~ .cat-tab-labels label[for="cat-biological"] {
+  color: #0969da;
+  border-bottom-color: #0969da;
+}
+#cat-solvents:checked ~ #content-solvents,
+#cat-food:checked ~ #content-food,
+#cat-personal:checked ~ #content-personal,
+#cat-polymers:checked ~ #content-polymers,
+#cat-paper:checked ~ #content-paper,
+#cat-biological:checked ~ #content-biological {
+  display: block;
+}
+</style>
 
-All three food/mineral samples overlay on a single plot reveals how different their chemistry is. **Coffee** produces a broad O–H band around 3,300 cm⁻¹ (water and hydroxyl groups in organic acids) plus C=O and C–O absorptions in the fingerprint region from caffeine, chlorogenic acids, and lipids. **Sugar** (sucrose) shows a similarly broad O–H region from its many hydroxyl groups, but its fingerprint region below 1,500 cm⁻¹ is dominated by intense C–O stretching vibrations of the glycosidic bond and sugar ring — each sugar has a unique fingerprint here. **Salt** (NaCl) is the outlier: as a purely ionic compound with no covalent bonds, it produces an almost perfectly flat baseline — no IR-active vibrations to absorb. This makes salt an excellent negative control and explains its traditional use as IR sample windows.
+<div class="tabs">
+  <input type="radio" name="cat-tab" id="cat-solvents">
+  <input type="radio" name="cat-tab" id="cat-food">
+  <input type="radio" name="cat-tab" id="cat-personal">
+  <input type="radio" name="cat-tab" id="cat-polymers">
+  <input type="radio" name="cat-tab" id="cat-paper">
+  <input type="radio" name="cat-tab" id="cat-biological">
+
+  <div class="cat-tab-labels tab-labels">
+    <label for="cat-solvents">Solvents</label>
+    <label for="cat-food">Food / Minerals</label>
+    <label for="cat-personal">Personal Care</label>
+    <label for="cat-polymers">Polymers</label>
+    <label for="cat-paper">Paper</label>
+    <label for="cat-biological">Biological</label>
+  </div>
+
+  <div class="tab-content" id="content-solvents">
+    <img src="OUTPUT/solvents_spectrum.png" alt="Solvents spectra" style="width:100%; border-radius:6px;">
+    <p>Three solvents with very different bonding. <strong>Water</strong> dominates with its broad O–H stretch centered at ~3,300 cm⁻¹ and sharp O–H bend at ~1,640 cm⁻¹. <strong>Isopropanol</strong> combines a broad O–H band (hydrogen-bonded alcohol) with strong C–H stretches at ~2,950 cm⁻¹ and a rich C–O stretching region around 1,000–1,150 cm⁻¹. <strong>Acetone</strong> stands out with its sharp C=O carbonyl peak at ~1,715 cm⁻¹ — the hallmark of a ketone — and no O–H band, confirming it is anhydrous.</p>
+  </div>
+
+  <div class="tab-content" id="content-food">
+    <img src="OUTPUT/food_minerals_spectrum.png" alt="Food / Minerals spectra" style="width:100%; border-radius:6px;">
+    <p><strong>Coffee</strong> produces a broad O–H band around 3,300 cm⁻¹ (water and hydroxyl groups in organic acids) plus C=O and C–O absorptions in the fingerprint region from caffeine, chlorogenic acids, and lipids. <strong>Sugar</strong> (sucrose) shows a similarly broad O–H region from its many hydroxyl groups, but its fingerprint region below 1,500 cm⁻¹ is dominated by intense C–O stretching vibrations of the glycosidic bond and sugar ring — each sugar has a unique fingerprint here. <strong>Salt</strong> (NaCl) is the outlier: as a purely ionic compound with no covalent bonds, it produces an almost perfectly flat baseline — no IR-active vibrations to absorb.</p>
+  </div>
+
+  <div class="tab-content" id="content-personal">
+    <img src="OUTPUT/personal_care_spectrum.png" alt="Personal Care spectra" style="width:100%; border-radius:6px;">
+    <p>Personal care products are complex mixtures but share common signatures. All six samples show a broad O–H/N–H band at 3,000–3,500 cm⁻¹ from water, glycerin, and fatty alcohols. The C–H stretches at ~2,920/2,850 cm⁻¹ reflect long-chain fatty acids and surfactants. <strong>Soap</strong> and <strong>cleaner</strong> stand out with sharper C–H peaks and stronger fingerprint absorptions, while <strong>shampoo</strong>, <strong>conditioner</strong>, and <strong>lotion</strong> cluster together — unsurprising given their similar water-and-surfactant formulations. <strong>Sunscreen</strong> diverges with additional C=O absorption from UV-filtering compounds.</p>
+  </div>
+
+  <div class="tab-content" id="content-polymers">
+    <img src="OUTPUT/polymers_spectrum.png" alt="Polymers spectra" style="width:100%; border-radius:6px;">
+    <p>Four plastic samples show that not all polymers are alike. <strong>Plastic bag</strong> (polyethylene) and <strong>plastic wrapper</strong> both display the classic PE signature: sharp C–H doublet at ~2,920/2,850 cm⁻¹ with minimal other absorptions. <strong>Plastic cap</strong> (polypropylene) adds a methyl C–H shoulder and extra bending peaks. <strong>Plastic glove</strong> (nitrile or vinyl) is the outlier — its spectrum includes C=O, C–O, and possible C≡N stretches, revealing a more complex polymer with heteroatom functional groups.</p>
+  </div>
+
+  <div class="tab-content" id="content-paper">
+    <img src="OUTPUT/paper_spectrum.png" alt="Paper spectra" style="width:100%; border-radius:6px;">
+    <p><strong>Paper</strong> is primarily cellulose — the broad O–H stretch at 3,000–3,500 cm⁻¹ comes from hydroxyl groups along the polysaccharide chain, and the strong C–O absorptions at 1,000–1,150 cm⁻¹ are characteristic of the glycosidic linkages. The <strong>paper-plastic cup</strong> overlays a polyethylene coating on the cellulose base: the added C–H stretches at ~2,920/2,850 cm⁻¹ reveal the PE lining, while the underlying O–H and C–O bands from the paper substrate remain visible.</p>
+  </div>
+
+  <div class="tab-content" id="content-biological">
+    <img src="OUTPUT/biological_spectrum.png" alt="Biological spectra" style="width:100%; border-radius:6px;">
+    <p>Biological samples are chemically rich. <strong>Finger</strong> (skin) shows amide I (~1,640 cm⁻¹) and amide II (~1,540 cm⁻¹) bands from keratin protein, plus lipid C–H stretches and a broad O–H/N–H region. <strong>Leaf</strong> combines cellulose signatures (O–H, C–O) with cuticle wax C–H peaks and possible chlorophyll absorptions. <strong>Orange peel</strong> is dominated by terpene and essential oil signatures — strong C–H stretches, a C=O band from citric acid or esters, and complex C–O absorptions from pectin and sugars in the rind.</p>
+  </div>
+</div>
+
+<script>
+(function() {
+  var cats = ['solvents','food','personal','polymers','paper','biological'];
+  var pick = cats[Math.floor(Math.random() * cats.length)];
+  document.getElementById('cat-' + pick).checked = true;
+})();
+</script>
 
 See the <a href="https://github.com/vivianweidai/research/blob/main/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/research/blob/main/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">run the reproducible analysis yourself</a>.
 
