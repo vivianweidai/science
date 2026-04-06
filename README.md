@@ -34,7 +34,7 @@
   <div class="tab-content" id="content-phys">
     <table>
       <tr><th>Date</th><th>Project</th><th>Description</th></tr>
-      <tr><td>April 2026</td><td><a href="20260404%20Four%20Point%20Probe/">Four-Point Probe</a></td><td>Sheet resistance and resistivity measurements of conductive materials</td></tr>
+      <tr><td>April 2026</td><td><a href="20260404%20Four%20Point%20Probe/">Four-Point Probe</a></td><td>Sheet resistance measurements of conductive materials</td></tr>
     </table>
   </div>
 
