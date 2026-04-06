@@ -8,7 +8,6 @@
   <a href="curriculum/">Curriculum</a>
   <a href="olympiads/">Olympiads</a>
   <a href="research/">Research</a>
-  <a href="archives/">Archives</a>
 </div>
 
 ---
