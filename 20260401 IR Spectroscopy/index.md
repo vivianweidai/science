@@ -60,9 +60,10 @@ A background spectrum was collected first to establish a baseline. Each sample w
 | 1 | Solvents | acetone, isopropanol, water |
 | 2 | Food/minerals | coffee, salt, sugar |
 | 3 | Personal care | soap, shampoo, conditioner, lotion, sunscreen, cleaner |
-| 4 | Polymers/paper | plastic bag, plastic cap, plastic glove, plastic wrapper, paper, paper-plastic cup |
-| 5 | Biological | finger, leaf, orange peel |
-| 6 | Control | background |
+| 4 | Polymers | plastic bag, plastic cap, plastic glove, plastic wrapper |
+| 5 | Paper | paper, paper-plastic cup |
+| 6 | Biological | finger, leaf, orange peel |
+| 7 | Control | background |
 
 ## Data
 
