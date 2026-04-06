@@ -1,6 +1,6 @@
 ## Vivian Dai
 
-<img src="science.png" alt="Science" width="100%">
+<img src="archives/IMAGES/science.png" alt="Science" width="100%">
 
 <p align="center">Mathematics Computing Physics Chemistry Biology Astronomy</p>
 

@@ -1,6 +1,6 @@
 ## Curriculum
 
-<img src="IMAGES/curriculum.png" alt="Curriculum" width="100%">
+<img src="../archives/IMAGES/curriculum.png" alt="Curriculum" width="100%">
 
 <div class="pdf-links">
   <a href="NOTES/mathematics.pdf">Mathematics</a>
@@ -13,7 +13,7 @@
 
 ## Textbooks
 
-<img src="IMAGES/bookshelf.jpeg" alt="Bookshelf" width="100%">
+<img src="../archives/IMAGES/bookshelf.jpeg" alt="Bookshelf" width="100%">
 
 <div class="tabs">
   <input type="radio" name="tab" id="tab-math">
