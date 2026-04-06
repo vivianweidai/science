@@ -109,7 +109,7 @@ photos:
   - PHOTOS/20260404 Setup 102.jpeg
 ---
 
-# Four-Point Probe Resistivity Measurements
+# Four-Point Probe Sheet Resistance Measurements
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
@@ -167,11 +167,11 @@ Conductive samples (coins, household metals) produced measurable sheet resistanc
 
 ## Data
 
-Raw data were photographs of the instrument display taken after each measurement. These were manually transcribed into a CSV file. The raw photos are in the <a href="https://github.com/vivianweidai/research/tree/main/20260404%20Four%20Point%20Probe/DATA">DATA</a> directory and the CSV is in the <a href="https://github.com/vivianweidai/research/tree/main/20260404%20Four%20Point%20Probe/OUTPUT">OUTPUT</a> directory.
+Raw data were photographs of the instrument display taken after each measurement. These were manually transcribed into a CSV file. The raw photos are in the <a href="https://github.com/vivianweidai/research/tree/main/20260404%20Four%20Point%20Probe/PHOTOS">PHOTOS</a> directory and the CSV is in the <a href="https://github.com/vivianweidai/research/tree/main/20260404%20Four%20Point%20Probe/OUTPUT">OUTPUT</a> directory.
 
 ## Results
 
-Of the 67 measurement attempts, 56 produced valid sheet resistance readings at 9 µA. Three non-conductive samples (leaf, DVD, paper cardboard) returned Contact Limit at all current settings, and one metal washer reading was excluded due to an incorrect current range (20 mA).
+56 valid sheet resistance readings were collected at 9 µA. Three non-conductive samples (leaf, DVD, paper cardboard) returned Contact Limit at all current settings, and one metal washer reading was excluded due to an incorrect current range (20 mA).
 
 | Sample | Material | n | Mean (Ω/□) | Range |
 |--------|----------|--:|------------|-------|
