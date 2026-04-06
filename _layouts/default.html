@@ -84,14 +84,6 @@
   </style>
 </head>
 <body>
-  <nav class="breadcrumb">
-    <a href="https://vivianweidai.com">Vivian Dai</a>
-    {% assign parts = page.url | split: "/" %}
-    {% if parts.size > 1 and parts[1] != "" %}
-    <span class="sep">&gt;</span>
-    <a href="/{{ parts[1] }}/">{{ parts[1] | capitalize }}</a>
-    {% endif %}
-  </nav>
   {{ content }}
   <script>
     (function() {
