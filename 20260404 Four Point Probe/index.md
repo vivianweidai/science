@@ -185,7 +185,7 @@ Raw data were photographs of the instrument display taken after each measurement
 | Metal washer | Steel | 5 | 54.8 | 53.2–56.2 |
 | House key | Brass | 5 | 57.2 | 56.1–58.3 |
 
-<img src="OUTPUT/IMAGES/mean_sheet_resistance.png" alt="Mean sheet resistance by sample" style="width:100%; border-radius:6px;">
+<img src="OUTPUT/mean_sheet_resistance.png" alt="Mean sheet resistance by sample" style="width:100%; border-radius:6px;">
 
 ### Key Findings
 
