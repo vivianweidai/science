@@ -191,9 +191,7 @@ The quarter (nickel-clad copper) and stainless steel spoon were the most conduct
 
 ### Limitations
 
-Readings fluctuated significantly during measurement — the display value drifted continuously and never fully stabilized, even on the same sample without moving the probes. Repeated measurements of the same item produced a wide spread of values, making it difficult to draw firm quantitative conclusions. The broad ranges in the table above reflect this instability rather than true differences between measurement points.
-
-Four-point probes are typically used on flat, uniform thin films (e.g., semiconductor wafers or sputtered coatings) where the sample makes consistent contact across all four probe tips. The irregular, curved, and oxidized surfaces of household objects likely caused inconsistent probe contact and variable current paths through the material. In standard practice, samples are also held in place with a vacuum chuck or clamp, and the probe head is lowered with controlled force to ensure repeatable contact pressure — none of which was available here. A future attempt would benefit from flat, polished samples and a stabilization period before recording each reading.
+Readings fluctuated significantly during measurement — the display value drifted continuously and never fully stabilized, even on the same sample without moving the probes. Repeated measurements of the same item produced a wide spread of values, making it difficult to draw firm quantitative conclusions. The broad ranges in the table above reflect this instability rather than true differences between measurement points. Four-point probes are designed for flat, uniform samples with controlled contact pressure, so the irregular and curved surfaces of household objects likely contributed to the variability.
 
 See the <a href="https://github.com/vivianweidai/research/blob/main/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/research/blob/main/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_analysis.ipynb">run the reproducible analysis yourself</a>.
 
