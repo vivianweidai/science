@@ -73,30 +73,28 @@
       display: block;
     }
 
-    /* Nav links styled like tabs */
+    /* Nav link cards */
     .nav-links {
       display: flex;
       justify-content: center;
-      border-bottom: 2px solid #d1d9e0;
-      margin: 1em 0 0;
+      gap: 0.5em;
+      flex-wrap: wrap;
+      margin: 1.5em 0;
     }
     .nav-links a {
-      padding: 0.6em 1.2em;
+      display: inline-block;
+      padding: 0.4em 1em;
+      border: 1px solid #d1d9e0;
+      border-radius: 6px;
+      background: #f6f8fa;
+      color: #1f2328;
       font-size: 0.9em;
-      font-weight: 600;
-      color: #656d76;
-      border-bottom: 2px solid transparent;
-      margin-bottom: -2px;
-      transition: color 0.15s, border-color 0.15s;
-      text-decoration: none;
+      transition: background 0.15s, border-color 0.15s;
     }
     .nav-links a:hover {
-      color: #1f2328;
+      background: #ddf4ff;
+      border-color: #0969da;
       text-decoration: none;
-    }
-    .nav-links a.active {
-      color: #0969da;
-      border-bottom-color: #0969da;
     }
 
     .footer {
@@ -122,16 +120,6 @@
       var pick = active[Math.floor(Math.random() * active.length)];
       var el = document.getElementById('tab-' + pick);
       if (el) el.checked = true;
-    })();
-    (function() {
-      var links = document.querySelectorAll('.nav-links a');
-      var path = window.location.pathname;
-      for (var i = 0; i < links.length; i++) {
-        if (path.indexOf(links[i].getAttribute('href')) === 0 ||
-            path.indexOf('/' + links[i].getAttribute('href')) === 0) {
-          links[i].classList.add('active');
-        }
-      }
     })();
   </script>
 </body>
