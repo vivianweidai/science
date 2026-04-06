@@ -63,12 +63,12 @@
 
 ## Instruments
 
-- **[Chemistry]** Thermo Scientific Nicolet 380 FT-IR Spectrometer — mid-IR absorption/transmittance spectra
-- **[Chemistry]** OptiMelt Automated Melting Point System — melting point determination
-- **[Physics]** Jandel RM3 Four-Point Probe — sheet resistance measurements
-- **[Biology]** miniPCR Thermal Cycler — PCR amplification of DNA/RNA targets
-- **[Biology]** P51 Fluorescence Viewer — fluorescence detection and gel imaging
-- **[Biology]** BioBits Cell Free System — in vitro protein expression from DNA templates
+- **[Chemistry]** <a href="20260401%20IR%20Spectroscopy/">Thermo Scientific Nicolet 380 FT-IR Spectrometer</a> — mid-IR absorption/transmittance spectra
+- **[Chemistry]** <a href="20260405%20Melting%20Point/">OptiMelt Automated Melting Point System</a> — melting point determination
+- **[Physics]** <a href="20260404%20Four%20Point%20Probe/">Jandel RM3 Four-Point Probe</a> — sheet resistance measurements
+- **[Biology]** <a href="20260401%20Genes%20in%20Space/">miniPCR Thermal Cycler</a> — PCR amplification of DNA/RNA targets
+- **[Biology]** <a href="20260401%20Genes%20in%20Space/">P51 Fluorescence Viewer</a> — fluorescence detection and gel imaging
+- **[Biology]** <a href="20260401%20Genes%20in%20Space/">BioBits Cell Free System</a> — in vitro protein expression from DNA templates
 - **[Computing]** GitHub, Python and Jupyter Notebooks — statistical analysis and reproducible research pipelines
 
 ## Repository Structure
