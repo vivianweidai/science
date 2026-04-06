@@ -65,7 +65,7 @@
 
 - **[Chemistry]** Thermo Scientific Nicolet 380 FT-IR Spectrometer — mid-IR absorption/transmittance spectra
 - **[Chemistry]** OptiMelt Automated Melting Point System — capillary tube melting point determination
-- **[Physics]** Jandel RM3-AR Four-Point Probe Test Unit — sheet resistance measurements
+- **[Physics]** Jandel RM3 Four-Point Probe — sheet resistance measurements
 - **[Biology]** miniPCR Thermal Cycler — PCR amplification of DNA/RNA targets
 - **[Biology]** P51 Fluorescence Viewer — fluorescence detection and gel imaging
 - **[Biology]** BioBits Cell Free System — in vitro protein expression from DNA templates

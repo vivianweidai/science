@@ -134,7 +134,7 @@ function shufflePhotos() {
 shufflePhotos();
 </script>
 
-<div class="project-meta">April 4th 2026<br>Jandel RM3-AR Four-Point Probe Test Unit</div>
+<div class="project-meta">April 4th 2026<br>Jandel RM3 Four-Point Probe</div>
 
 ## Overview
 
@@ -146,7 +146,7 @@ The four-point probe technique separates the current-carrying and voltage-sensin
 
 | Category | Details |
 |----------|---------|
-| Instrument | Jandel RM3-AR Four-Point Probe Test Unit |
+| Instrument | Jandel RM3 Four-Point Probe |
 | Technique | Four-point probe — separate current and voltage pairs eliminate contact resistance |
 | Measurement | Sheet resistance (Ω/□) |
 
