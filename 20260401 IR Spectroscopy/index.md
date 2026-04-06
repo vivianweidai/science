@@ -52,8 +52,9 @@ Fourier-transform infrared (FT-IR) spectroscopy identifies the polar covalent bo
 | Range | ~550–4000 cm⁻¹ |
 | Resolution | ~7,150 data points per spectrum |
 | Runs | Two sessions (19 + 6 samples) |
+| Software | Thermo Scientific OMNIC 8 |
 
-A background spectrum was collected first to establish a baseline. Each sample was placed directly on the ATR crystal — in ATR mode, an infrared beam reflects internally within the crystal and an evanescent wave penetrates a few microns into the sample surface, so samples can be measured as-is without any preparation. A spectrum was acquired across the mid-IR range and the raw CSV exported from the instrument software.
+A background spectrum was collected first to establish a baseline. Each sample was placed directly on the ATR crystal — in ATR mode, an infrared beam reflects internally within the crystal and an evanescent wave penetrates a few microns into the sample surface, so samples can be measured as-is without any preparation. A spectrum was acquired across the mid-IR range and the raw CSV exported from OMNIC 8.
 
 ## Samples
 
