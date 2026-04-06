@@ -61,7 +61,7 @@ The shared SCIENCE project folder at `/Users/jamesdai/CLAUDE/SCIENCE/` contains 
 ## INSTRUMENTS & DATA FORMATS
 
 35 instruments are available at UNR SIL (see `CONTEXT/UNR_Toy_List.pdf` for full list). Instruments used so far:
-- **Thermo Scientific Nicolet iS5 FT-IR Spectrometer** — CSV files with wavenumber (cm⁻¹) vs. transmittance/absorbance
+- **Thermo Scientific Nicolet 380 FT-IR Spectrometer** — CSV files with wavenumber (cm⁻¹) vs. transmittance/absorbance
 - **Jandel RM3-AR Four-Point Probe** — sheet resistance measurements (Ω/□)
 - **SRS OptiMelt Melting Point System** — non-functional (touchscreen unresponsive)
 - **Next up: TA Instruments Q50 TGA** — thermogravimetric analysis (walk-up guide available)
