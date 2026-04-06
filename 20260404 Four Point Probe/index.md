@@ -193,10 +193,6 @@ Raw data were photographs of the instrument display taken after each measurement
 
 **Penny surface condition.** Sanding the penny from unpolished copper through to fully exposed zinc *increased* sheet resistance — the unpolished copper surface (47.3 Ω/□) was more conductive than the fully polished zinc (50.1 Ω/□). This is consistent with copper being a better conductor than zinc, though the ranges overlap so the difference is not definitive.
 
-<img src="OUTPUT/IMAGES/penny_surface_direction.png" alt="Penny surface condition analysis" style="width:100%; border-radius:6px;">
-
-**Current direction.** Forward current consistently produced higher readings than reverse across all samples tested in both directions. The mean FWD–REV offset was several Ω/□.
-
 **Aluminum foil orientation.** Flipping the foil upside down increased sheet resistance from 48.1 to 54.7 Ω/□ — the matte and shiny sides of aluminum foil have measurably different surface conductivity, possibly due to differences in oxide layer thickness or surface roughness from the rolling process.
 
 See the <a href="https://github.com/vivianweidai/research/blob/main/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/research/blob/main/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_analysis.ipynb">run the reproducible analysis yourself</a>.
