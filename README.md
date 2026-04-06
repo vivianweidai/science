@@ -42,6 +42,7 @@
     <table>
       <tr><th>Date</th><th>Project</th><th>Description</th></tr>
       <tr><td>April 2026</td><td><a href="20260401%20IR%20Spectroscopy/">IR Spectroscopy</a></td><td>IR spectroscopy survey of 19 everyday materials — building a reference library of functional group signatures</td></tr>
+      <tr><td>April 2026</td><td><a href="20260405%20Melting%20Point/">Melting Point</a></td><td>Melting point determination of caffeine and acetaminophen — on hold pending instrument repair</td></tr>
     </table>
   </div>
 
@@ -63,6 +64,7 @@
 ## Instruments
 
 - **[Chemistry]** Thermo Scientific Nicolet 380 FT-IR Spectrometer — mid-IR absorption/transmittance spectra
+- **[Chemistry]** SRS OptiMelt Automated Melting Point System — capillary tube melting point determination
 - **[Physics]** Jandel RM3-AR Four-Point Probe Test Unit — sheet resistance and resistivity measurements
 - **[Biology]** miniPCR bio miniPCR Thermal Cycler — PCR amplification of DNA/RNA targets
 - **[Biology]** miniPCR bio P51 Molecular Fluorescence Viewer — fluorescence detection and gel imaging
