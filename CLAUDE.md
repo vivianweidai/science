@@ -41,12 +41,30 @@ YYYYMMDD Project Name/
   - **Chart styling** — use matplotlib defaults (no custom fonts, no facecolor overrides). Use soft, muted pastels for colours — reference palette: pink `#f8d7da`, green `#d4edda`, blue `#cce5ff`, yellow `#fff3cd`, purple `#e2d9f3`, orange `#fce4b8`. For data line traces use slightly deeper tones like `#d95f5f`. Always keep colours light and airy — never saturated or bold. Save as PNG (300 dpi). If a project produces many images, save into an `OUTPUT/IMAGES/` subfolder; if only one or two images, save directly into `OUTPUT/`.
   - **Colab badge** — add a final markdown cell with `---` separator, then just the Colab badge image link (no descriptive text): `<a href="COLAB_URL"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"></a>`
 
+## SCIENCE PROJECT REFERENCE
+
+The shared SCIENCE project folder at `/Users/jamesdai/CLAUDE/SCIENCE/` contains comprehensive reference materials. Read these files as needed for instrument details, available equipment, curriculum context, and research planning:
+
+- **`CONTEXT/UNR_Toy_List.pdf`** — master list of 35 instruments across 4 sciences (Biology, Chemistry, Mathematics, Computing) available at UNR SIL Room 016
+- **`CONTEXT/University_Technology_Landscape.xlsx`** — 5-sheet comparison of UNR vs UBC vs MIT vs Caltech (105 technology sub-categories, SIL coverage analysis)
+- **`CONTEXT/UNR_SIL_Instrument_Inventory.xlsx`** — detailed SIL instrument inventory
+- **`CONTEXT/UNR_SIL_Lab_Guide.pdf`** — lab access and procedures
+- **`CONTEXT/UNR_SIL_Technique_Map.pdf`** — technique-to-instrument mapping
+- **`CONTEXT/UNR_Faculty_Catalogue_Updated.xlsx`** — UNR faculty research areas
+- **`CONTEXT/UNR_Labs_Catalogue_Updated.xlsx`** — UNR lab catalogue
+- **Instrument walk-up guides** — `DSC_Q100_WalkUp_Guide.pdf`, `DSC_Q20_WalkUp_Guide.pdf`, `TGA_Q50_WalkUp_Guide.pdf`, `CONTEXT/FT-IR_Quick_Start_Guide.pdf`, `CONTEXT/FT-IR_Spectral_Analysis.pdf`, `CONTEXT/Jandel_RM3_Four_Point_Probe_Guide.pdf`, `CONTEXT/OptiMelt_WalkUp_Guide.pdf`
+- **Curriculum notes** — `CONTEXT/NOTES *.pdf` (Astronomy, Biology, Chemistry, Computing, Mathematics, Physics)
+- **Classic papers** — `CONTEXT/PAPER *.pdf` (Turing, Rosenblatt, Hubel & Wiesel, Q-Learning, Transformers, AlphaGo, etc.)
+- **UBC references** — `CONTEXT/UBC_Faculty_Catalogue.xlsx`, `CONTEXT/UBC_Vancouver_Research_Opportunities.pdf`
+- **General** — `CONTEXT/CONTEXT Overview.pdf`, `CONTEXT/CONTEXT Books.pdf`, `CONTEXT/CONTEXT Guide.pdf`, `CONTEXT/CONTEXT Workflow.pdf`, `CONTEXT/Science_Competitions_Guide.pdf`, `CONTEXT/University_Shared_Labs.pdf`
+
 ## INSTRUMENTS & DATA FORMATS
 
-Known instruments (expect data from these):
-- **FT-IR Spectrometer** — produces CSV files with wavenumber (cm⁻¹) vs. transmittance/absorbance
-- **Four-Point Probe (Jandel RM3)** — resistivity measurements
-- Additional instruments as projects expand (XRD, SEM, UV-Vis, etc.)
+35 instruments are available at UNR SIL (see `CONTEXT/UNR_Toy_List.pdf` for full list). Instruments used so far:
+- **Thermo Scientific Nicolet iS5 FT-IR Spectrometer** — CSV files with wavenumber (cm⁻¹) vs. transmittance/absorbance
+- **Jandel RM3-AR Four-Point Probe** — sheet resistance measurements (Ω/□)
+- **SRS OptiMelt Melting Point System** — non-functional (touchscreen unresponsive)
+- **Next up: TA Instruments Q50 TGA** — thermogravimetric analysis (walk-up guide available)
 
 ## SUPPLIES & LOGISTICS
 
