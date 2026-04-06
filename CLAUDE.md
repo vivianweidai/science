@@ -31,14 +31,14 @@ YYYYMMDD Project Name/
 ## ANALYSIS GUIDELINES
 
 - **Tool choice is flexible** — use Python, R, Julia, shell scripts, or whatever fits the task best. Default to Python scientific stack (pandas, numpy, scipy, matplotlib, seaborn) when there's no strong reason to pick something else.
-- **Visualizations** — default to matplotlib/seaborn. Use clear axis labels, units, titles, and legends. Save figures as both PNG (300 dpi) and SVG.
+- **Visualizations** — default to matplotlib/seaborn. Use clear axis labels, units, titles, and legends. Save figures as PNG (300 dpi).
 - **Reproducibility** — every analysis script should be runnable end-to-end from the project folder. Include comments explaining what each step does and why. Pin library versions in a `requirements.txt` if the pipeline uses non-standard packages.
 - **Data validation** — always inspect and summarize raw data before analysis (shape, missing values, outliers, units). Flag anything unexpected.
 - **Jupyter notebook conventions:**
   - **Colab compatibility** — all data file references must use absolute GitHub raw URLs (e.g., `https://raw.githubusercontent.com/vivianweidai/research/main/...`) so notebooks work in Colab. Ship notebooks **with outputs** so GitHub renders results statically; Colab users re-run themselves.
   - **Sections** — use numbered markdown heading cells (`## 1. Title`, `## 2. Title`, etc.) to separate logical sections. Typical flow: Data Collection → Load and Inspect Data → Visualize → Statistical Test → Conclusion.
   - **Output styling** — use plain `print()` for text output. Keep code tight and minimal — no HTML boxes, no `IPython.display`, no extra spacing hacks.
-  - **Chart styling** — use matplotlib defaults (no custom fonts, no facecolor overrides). Use soft, muted pastels for colours — reference palette: pink `#f8d7da`, green `#d4edda`, blue `#cce5ff`, yellow `#fff3cd`, purple `#e2d9f3`, orange `#fce4b8`. For data line traces use slightly deeper tones like `#d95f5f`. Always keep colours light and airy — never saturated or bold. Save as both PNG (300 dpi) and SVG.
+  - **Chart styling** — use matplotlib defaults (no custom fonts, no facecolor overrides). Use soft, muted pastels for colours — reference palette: pink `#f8d7da`, green `#d4edda`, blue `#cce5ff`, yellow `#fff3cd`, purple `#e2d9f3`, orange `#fce4b8`. For data line traces use slightly deeper tones like `#d95f5f`. Always keep colours light and airy — never saturated or bold. Save as PNG (300 dpi) into an `OUTPUT/IMAGES/` subfolder.
   - **Colab badge** — add a final markdown cell with `---` separator, then just the Colab badge image link (no descriptive text): `<a href="COLAB_URL"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"></a>`
 
 ## INSTRUMENTS & DATA FORMATS
