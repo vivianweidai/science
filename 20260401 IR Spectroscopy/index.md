@@ -270,7 +270,7 @@ All spectra plots, peak identification, and category overlays were generated fro
     <label for="chem-oh">O–H Dominant</label>
     <label for="chem-ch">C–H Dominant</label>
     <label for="chem-co">Carbonyl</label>
-    <label for="chem-mixed">Mixed Organic</label>
+    <label for="chem-mixed">Organic</label>
     <label for="chem-cellulose">Cellulose</label>
     <label for="chem-protein">Protein</label>
     <label for="chem-ionic">Ionic</label>
