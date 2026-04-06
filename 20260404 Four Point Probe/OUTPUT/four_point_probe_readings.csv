@@ -1,0 +1,66 @@
+sample,material,category,reading,sheet_resistance_ohm_per_sq,current_uA,direction,photo_range,on_stage_confirmed,notes
+quarter,nickel-clad copper,metal,1,37.91,9,FWD,8-12,yes,
+quarter,nickel-clad copper,metal,2,37.60,9,FWD,8-12,yes,
+stainless steel spoon,stainless steel,metal,1,41.52,9,FWD,18-24,yes,
+stainless steel spoon,stainless steel,metal,2,40.05,9,FWD,18-24,yes,
+stainless steel spoon,stainless steel,metal,3,39.87,9,FWD,18-24,yes,
+stainless steel spoon,stainless steel,metal,4,39.27,9,FWD,18-24,yes,
+stainless steel spoon,stainless steel,metal,5,39.07,9,FWD,18-24,yes,
+stainless steel spoon,stainless steel,metal,6,36.65,9,FWD,18-24,yes,
+stainless steel spoon,stainless steel,metal,7,36.69,9,FWD,18-24,yes,
+pencil,graphite,carbon,,,,,,uncertain,pencil visible on desk near instrument; may have been measured but not confirmed under probes
+penny (unpolished),copper-plated zinc,metal,1,44.48,9,REV,29-30,yes,2019 penny sanded into 3 sections (untouched / lightly polished / fully sanded to silver); photos 25-28 show preparation
+penny (semi-polished),copper-plated zinc,metal,1,47.94,9,REV,31,yes,
+penny (semi-polished),copper-plated zinc,metal,2,47.30,9,REV,32,yes,
+penny (fully polished),copper-plated zinc,metal,1,48.54,9,REV,33,yes,fully sanded to silver/zinc
+penny (fully polished),copper-plated zinc,metal,2,47.80,9,REV,34,yes,
+penny (fully polished),copper-plated zinc,metal,3,47.80,9,REV,35,yes,photos 36-39 show close-ups of tri-band penny in device
+penny (unpolished),copper-plated zinc,metal,2,48.44,9,REV,40,yes,
+penny (unpolished),copper-plated zinc,metal,3,48.85,9,REV,41,yes,
+penny (semi-polished),copper-plated zinc,metal,3,48.05,9,REV,42-43,yes,
+penny (semi-polished),copper-plated zinc,metal,4,46.13,9,REV,44,yes,
+penny (semi-polished),copper-plated zinc,metal,5,47.89,9,REV,45,yes,
+penny (semi-polished),copper-plated zinc,metal,6,47.94,9,REV,46,yes,
+penny (semi-polished),copper-plated zinc,metal,7,48.21,9,REV,47,yes,
+penny (fully polished),copper-plated zinc,metal,4,49.11,9,REV,49,yes,probe moved to fully polished section at photo 48
+penny (fully polished),copper-plated zinc,metal,5,48.82,9,REV,50,yes,
+penny (fully polished),copper-plated zinc,metal,6,48.84,9,REV,51,yes,
+penny (fully polished),copper-plated zinc,metal,7,48.29,9,REV,52,yes,
+penny (fully polished),copper-plated zinc,metal,8,48.92,9,REV,53,yes,
+penny (fully polished),copper-plated zinc,metal,9,48.40,9,REV,54,yes,
+penny (fully polished),copper-plated zinc,metal,10,47.49,9,REV,55,yes,
+penny (fully polished),copper-plated zinc,metal,1,55.68,9,FWD,56,yes,FWD run starts at photo 56; polished section first
+penny (fully polished),copper-plated zinc,metal,2,53.46,9,FWD,57,yes,
+penny (fully polished),copper-plated zinc,metal,3,53.60,9,FWD,58-59,yes,
+penny (fully polished),copper-plated zinc,metal,4,52.47,9,FWD,60,yes,
+penny (semi-polished),copper-plated zinc,metal,1,51.76,9,FWD,61-62,yes,
+penny (semi-polished),copper-plated zinc,metal,2,50.02,9,FWD,63,yes,
+penny (semi-polished),copper-plated zinc,metal,3,50.28,9,FWD,64,yes,
+penny (fully polished),copper-plated zinc,metal,5,50.92,9,FWD,65-66,yes,back to polished section
+penny (fully polished),copper-plated zinc,metal,6,50.77,9,FWD,67,yes,
+aluminum foil,aluminum,metal,1,48.29,9,FWD,68,yes,thin metal foil
+aluminum foil,aluminum,metal,2,47.65,9,FWD,69,yes,
+aluminum foil,aluminum,metal,3,48.05,9,FWD,70,yes,
+aluminum foil,aluminum,metal,4,48.67,9,REV,71,yes,current switched to reverse
+aluminum foil,aluminum,metal,5,47.94,9,REV,72,yes,
+aluminum foil (flipped),aluminum,metal,6,56.25,9,REV,73,yes,foil flipped upside down
+aluminum foil (flipped),aluminum,metal,7,55.12,9,REV,74-75,yes,
+aluminum foil (flipped),aluminum,metal,8,52.77,9,REV,76,yes,
+leaf,plant tissue,biological,,,,,77-81,yes,all current ranges attempted; always Contact Limit or Out of Range — too resistive to measure
+DVD,polycarbonate with metallic layer,optical media,,,,,82-83,yes,Contact Limit — too resistive to measure
+paper cardboard,cardboard,paper,,,,,84-87,yes,Contact Limit — too resistive to measure
+metal washer,steel,metal,1,13000,,20mA,88-92,yes,accidentally left on 20mA instead of 9µA; reading in ohms not Ω/□
+metal washer,steel,metal,1,56.21,9,FWD,93,yes,switched back to 9µA
+metal washer,steel,metal,2,55.46,9,FWD,94,yes,
+metal washer,steel,metal,3,55.22,9,FWD,95,yes,
+metal washer,steel,metal,4,53.16,9,FWD,96,yes,
+metal washer,steel,metal,5,53.84,9,FWD,97,yes,
+house key,brass,metal,1,58.33,9,FWD,98,yes,
+house key,brass,metal,2,58.02,9,FWD,99,yes,
+house key,brass,metal,3,57.04,9,FWD,100,yes,
+house key,brass,metal,4,56.47,9,REV,101,yes,switched to reverse
+house key,brass,metal,5,56.13,9,REV,102,yes,key pulled out and broke 2 probe pins — end of experiment
+graph paper,paper,paper,,,,,,no,visible in Samples A photo; not measured
+small leaf,plant tissue,biological,,,,,,no,visible in Samples A photo; not measured
+bread/cracker A,baked wheat,food,,,,,,no,visible in Samples A photo; not measured
+bread/cracker B,baked wheat,food,,,,,,no,visible in Samples A photo; not measured
