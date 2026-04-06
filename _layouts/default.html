@@ -13,13 +13,6 @@
       color: #1f2328;
       line-height: 1.6;
     }
-    .breadcrumb {
-      text-align: right;
-      font-size: 0.9em;
-      margin-bottom: 0.5em;
-      color: #656d76;
-    }
-    .breadcrumb .sep { margin: 0 0.3em; color: #656d76; }
     h1, h2 { border-bottom: 1px solid #d1d9e0; padding-bottom: 0.3em; }
     h2 { margin-top: 1.5em; }
     h2:first-child { margin-top: 0; }
@@ -35,6 +28,7 @@
     pre code { background: none; padding: 0; }
     ul { padding-left: 2em; }
     hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0 0.5em 0; }
+
     /* CSS-only tabs */
     .tabs { margin: 1em 0; }
     .tabs input[type="radio"] { display: none; }
@@ -131,20 +125,42 @@
   {{ content }}
   <script>
     (function() {
-      var prefixes = ['tab-', 'oly-'];
       var tabs = ['math','comp','phys','chem','bio','astro'];
-      prefixes.forEach(function(prefix) {
-        var contentPrefix = prefix === 'oly-' ? 'oly-content-' : 'content-';
-        var el = document.getElementById(prefix + tabs[0]);
-        if (!el) return;
-        var active = tabs.filter(function(t) {
-          var content = document.getElementById(contentPrefix + t);
-          return content && !content.querySelector('em');
-        });
-        if (active.length === 0) active = tabs;
-        var pick = active[Math.floor(Math.random() * active.length)];
+      var prefixes = ['tab-', 'oly-'];
+      var present = prefixes.filter(function(p) {
+        return document.getElementById(p + tabs[0]);
+      });
+      if (present.length === 0) return;
+
+      // Pick one random tab based on non-empty content in the first prefix found
+      var firstPrefix = present[0];
+      var contentPrefix = firstPrefix === 'oly-' ? 'oly-content-' : 'content-';
+      var active = tabs.filter(function(t) {
+        var el = document.getElementById(contentPrefix + t);
+        return el && !el.querySelector('em');
+      });
+      if (active.length === 0) active = tabs;
+      var pick = active[Math.floor(Math.random() * active.length)];
+
+      // Apply the same pick to all tab groups
+      present.forEach(function(prefix) {
         var radio = document.getElementById(prefix + pick);
         if (radio) radio.checked = true;
+      });
+
+      // Sync clicks: when a tab label is clicked, select the same subject in all groups
+      present.forEach(function(prefix) {
+        tabs.forEach(function(t) {
+          var radio = document.getElementById(prefix + t);
+          if (!radio) return;
+          radio.addEventListener('change', function() {
+            present.forEach(function(other) {
+              if (other === prefix) return;
+              var target = document.getElementById(other + t);
+              if (target) target.checked = true;
+            });
+          });
+        });
       });
     })();
   </script>
