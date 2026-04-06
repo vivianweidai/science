@@ -68,14 +68,14 @@ No data was collected — the instrument was non-functional. If the experiment i
 
 ## Results
 
-*Pending instrument repair. Expected deliverables when data is available:*
+Pending instrument repair. Expected deliverables when data is available:
 
 - Melting onset and clear point for each replicate
 - Mean melting point ± standard deviation per compound
 - Comparison to literature values (caffeine: 235–237 °C, aspirin: 135–136 °C)
 - Temperature-time curves from the OptiMelt software
 
-*This project connects to the broader thermal analysis series — the next step is thermogravimetric analysis (TGA) on the Q50.*
+This project connects to the broader thermal analysis series — the next step is thermogravimetric analysis (TGA) on the Q50.
 
 ---
 
