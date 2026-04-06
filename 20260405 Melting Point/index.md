@@ -53,6 +53,7 @@ Melting point determination is a fundamental technique for identifying and asses
 |----------|---------|
 | Instrument | SRS OptiMelt Automated Melting Point System |
 | Method | Capillary tube, digital image processing |
+| Capillary tubes | Eisco Labs Borosilicate Glass Capillary Melting Tubes, 4″ long, 0.05″ OD (100-pack) |
 | Samples | Caffeine (CAF), aspirin (ASP) |
 | Replicates | 3 capillary tubes per compound |
 
