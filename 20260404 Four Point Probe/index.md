@@ -185,15 +185,9 @@ In total 56 valid sheet resistance readings were collected at 9 µA. Three non-c
 | Metal washer | Steel | 5 | 54.8 | 53.2–56.2 |
 | House key | Brass | 5 | 57.2 | 56.1–58.3 |
 
+The quarter (nickel-clad copper) and stainless steel spoon were the most conductive samples, while the brass house key was the least conductive metal tested — all non-metals were too resistive to measure. Two results stood out: sanding the penny from unpolished copper through to fully exposed zinc *increased* sheet resistance (47.3 → 50.1 Ω/□), consistent with copper being a better conductor than zinc, though the ranges overlap. Flipping the aluminum foil also increased sheet resistance (48.1 → 54.7 Ω/□), suggesting the matte and shiny sides have measurably different surface conductivity, possibly due to differences in oxide layer thickness or surface roughness from the rolling process.
+
 <img src="OUTPUT/mean_sheet_resistance.png" alt="Mean sheet resistance by sample" style="width:100%; border-radius:6px;">
-
-### Key Findings
-
-**Conductivity ranking.** The quarter (nickel-clad copper) and stainless steel spoon were the most conductive samples, with the lowest sheet resistance. The brass house key was the least conductive metal tested. All non-metals were too resistive to measure.
-
-**Penny surface condition.** Sanding the penny from unpolished copper through to fully exposed zinc *increased* sheet resistance — the unpolished copper surface (47.3 Ω/□) was more conductive than the fully polished zinc (50.1 Ω/□). This is consistent with copper being a better conductor than zinc, though the ranges overlap so the difference is not definitive.
-
-**Aluminum foil orientation.** Flipping the foil upside down increased sheet resistance from 48.1 to 54.7 Ω/□ — the matte and shiny sides of aluminum foil have measurably different surface conductivity, possibly due to differences in oxide layer thickness or surface roughness from the rolling process.
 
 ### Limitations
 
