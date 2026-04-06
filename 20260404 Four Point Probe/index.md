@@ -152,7 +152,7 @@ The four-point probe technique separates the current-carrying and voltage-sensin
 
 Each sample was placed on the measurement stage, the four-point probe head lowered onto the surface, and current applied through the outer probes while voltage was measured across the inner two. Multiple points were measured per sample.
 
-### Samples
+## Samples
 
 <div class="hero-single"><img src="PHOTOS/20260404 Setup 39.jpeg" alt="Tri-band penny under four-point probe"></div>
 

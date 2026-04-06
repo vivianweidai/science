@@ -55,19 +55,19 @@ Fourier-transform infrared (FT-IR) spectroscopy identifies the polar covalent bo
 
 A background spectrum was collected first to establish a baseline. Each sample was placed directly on the ATR crystal, a spectrum acquired across the mid-IR range, and the raw CSV exported from the instrument software.
 
-### Samples
+## Samples
 
 <div class="hero-single"><img src="PHOTOS/20260404 Samples B.jpeg" alt="Samples"></div>
 
-| # | Category | Samples |
-|---|----------|---------|
-| 1 | Solvents | acetone, isopropanol, water |
-| 2 | Food/minerals | coffee, salt, sugar |
-| 3 | Personal care | soap, shampoo, conditioner, lotion, sunscreen, cleaner |
-| 4 | Polymers | plastic bag, plastic cap, plastic glove, plastic wrapper |
-| 5 | Paper | paper, paper-plastic cup |
-| 6 | Biological | finger, leaf, orange peel |
-| 7 | Control | background |
+| Category | Samples |
+|----------|---------|
+| Solvents | acetone, isopropanol, water |
+| Food/minerals | coffee, salt, sugar |
+| Personal care | soap, shampoo, conditioner, lotion, sunscreen, cleaner |
+| Polymers | plastic bag, plastic cap, plastic glove, plastic wrapper |
+| Paper | paper, paper-plastic cup |
+| Biological | finger, leaf, orange peel |
+| Control | background |
 
 ## Data
 
@@ -83,7 +83,7 @@ The instrument (Nicolet iS5) applies background correction automatically — eac
 
 ## Results
 
-### Representatives
+### Representative Samples
 
 <style>
 #tab-acetone:checked ~ .tab-labels label[for="tab-acetone"],

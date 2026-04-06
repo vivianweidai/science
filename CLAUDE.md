@@ -141,6 +141,14 @@ project: [Short Project Name]
 
 [Prose description of the experimental procedure, flowing naturally from the materials table above.]
 
+## Samples
+
+| Category | Samples |
+|----------|---------|
+| [Category] | [samples] |
+
+[Description of samples. Do NOT include a "#" numbering column in sample tables.]
+
 ## Data
 
 [Description of data format and what was recorded.]
@@ -158,4 +166,4 @@ See the <a href="https://github.com/vivianweidai/research/blob/main/[path]">writ
 <div class="footer"><div class="footer-nav"><a href="https://vivianweidai.com/curriculum/">Curriculum</a><a href="https://vivianweidai.com/olympiads/">Olympiads</a><a href="https://vivianweidai.com/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/research/tree/main/[URL-encoded folder name]">View on GitHub</a></div>
 ```
 
-Always use `index.md` (not `README.md`) for project pages. Always include the footer div. The `photos` front matter array is for PHOTOS/ only; use `data_photos` for DATA/ images.
+Always use `index.md` (not `README.md`) for project pages. Always include the footer div. The `photos` front matter array is for PHOTOS/ only; use `data_photos` for DATA/ images. **Samples** is a top-level `##` section (not a subsection of Setup). Never include a `#` numbering column in tables.
