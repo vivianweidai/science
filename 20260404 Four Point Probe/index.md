@@ -170,7 +170,37 @@ Raw measurement data available on <a href="https://github.com/vivianweidai/resea
 
 ## Results
 
-*Analysis in progress.*
+Of the 67 measurement attempts, 56 produced valid sheet resistance readings at 9 µA. Three non-conductive samples (leaf, DVD, paper cardboard) returned Contact Limit at all current settings, and one metal washer reading was excluded due to an incorrect current range (20 mA).
+
+### Summary
+
+| Sample | Material | n | Mean (Ω/□) | ± Std | Range |
+|--------|----------|--:|------------|-------|-------|
+| Quarter | Nickel-clad copper | 2 | 37.8 | 0.2 | 37.6–37.9 |
+| Spoon | Stainless steel | 7 | 39.0 | 1.8 | 36.6–41.5 |
+| Penny (unpolished) | Copper-plated zinc | 3 | 47.3 | 2.4 | 44.5–48.9 |
+| Aluminum foil | Aluminum | 5 | 48.1 | 0.4 | 47.6–48.7 |
+| Penny (semi-polished) | Copper-plated zinc | 10 | 48.6 | 1.6 | 46.1–51.8 |
+| Penny (fully polished) | Copper-plated zinc | 16 | 50.1 | 2.5 | 47.5–55.7 |
+| Aluminum foil (flipped) | Aluminum | 3 | 54.7 | 1.8 | 52.8–56.2 |
+| Metal washer | Steel | 5 | 54.8 | 1.2 | 53.2–56.2 |
+| House key | Brass | 5 | 57.2 | 1.0 | 56.1–58.3 |
+
+<img src="OUTPUT/IMAGES/mean_sheet_resistance.png" alt="Mean sheet resistance by sample" style="width:100%; border-radius:6px;">
+
+### Key Findings
+
+**Conductivity ranking.** The quarter (nickel-clad copper) and stainless steel spoon were the most conductive samples, with the lowest sheet resistance. The brass house key was the least conductive metal tested. All non-metals were too resistive to measure.
+
+**Penny surface condition.** Sanding the penny from unpolished copper through to fully exposed zinc *increased* sheet resistance — the unpolished copper surface (47.3 Ω/□) was more conductive than the fully polished zinc (50.1 Ω/□). This is consistent with copper being a better conductor than zinc.
+
+<img src="OUTPUT/IMAGES/penny_surface_direction.png" alt="Penny surface condition analysis" style="width:100%; border-radius:6px;">
+
+**Current direction.** Forward current consistently produced higher readings than reverse across all samples tested in both directions. The mean FWD–REV offset was several Ω/□, likely due to thermoelectric (Seebeck) effects at the probe-sample contacts or slight asymmetry in probe pressure.
+
+**Aluminum foil orientation.** Flipping the foil upside down increased sheet resistance from 48.1 to 54.7 Ω/□ — the matte and shiny sides of aluminum foil have measurably different surface conductivity, possibly due to differences in oxide layer thickness or surface roughness from the rolling process.
+
+See the <a href="https://github.com/vivianweidai/research/blob/main/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/research/blob/main/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_analysis.ipynb">run the reproducible analysis yourself</a>.
 
 ---
 
