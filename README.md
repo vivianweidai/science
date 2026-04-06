@@ -41,7 +41,7 @@
   <div class="tab-content" id="content-chem">
     <table>
       <tr><th>Date</th><th>Project</th><th>Description</th></tr>
-      <tr><td>April 2026</td><td><a href="20260401%20IR%20Spectroscopy/">IR Spectroscopy</a></td><td>IR spectroscopy survey of 19 everyday materials — building a reference library of functional group signatures</td></tr>
+      <tr><td>April 2026</td><td><a href="20260401%20IR%20Spectroscopy/">IR Spectroscopy</a></td><td>IR spectroscopy of 19 everyday materials — functional group identification</td></tr>
       <tr><td>April 2026</td><td><a href="20260405%20Melting%20Point/">Melting Point</a></td><td>Melting point determination of caffeine and aspirin — on hold pending instrument repair</td></tr>
     </table>
   </div>
