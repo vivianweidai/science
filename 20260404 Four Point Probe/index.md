@@ -174,8 +174,6 @@ Raw data were photographs of the instrument display taken after each measurement
 
 Of the 67 measurement attempts, 56 produced valid sheet resistance readings at 9 µA. Three non-conductive samples (leaf, DVD, paper cardboard) returned Contact Limit at all current settings, and one metal washer reading was excluded due to an incorrect current range (20 mA).
 
-### Summary
-
 | Sample | Material | n | Mean (Ω/□) | ± Std | Range |
 |--------|----------|--:|------------|-------|-------|
 | Quarter | Nickel-clad copper | 2 | 37.8 | 0.2 | 37.6–37.9 |
