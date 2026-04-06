@@ -54,7 +54,7 @@ Fourier-transform infrared (FT-IR) spectroscopy identifies the polar covalent bo
 | Runs | Two sessions (19 + 6 samples) |
 | Software | Thermo Scientific OMNIC 8 |
 
-A background spectrum was collected first to establish a baseline. Each sample was placed directly on the ATR crystal — in ATR mode, an infrared beam reflects internally within the crystal and an evanescent wave penetrates a few microns into the sample surface, so samples can be measured as-is without any preparation. A spectrum was acquired across the mid-IR range and <a href="https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy/DATA">the raw CSV</a> exported from OMNIC 8.
+A background spectrum was collected first to establish a baseline. Each sample was placed directly on the ATR crystal — in ATR mode, an infrared beam reflects internally within the crystal and an evanescent wave penetrates a few microns into the sample surface, so samples can be measured as-is without any preparation. A spectrum was acquired across the mid-IR range and <a href="https://github.com/vivianweidai/science/tree/main/research/20260401%20IR%20Spectroscopy/DATA">the raw CSV</a> exported from OMNIC 8.
 
 ## Samples
 
@@ -72,17 +72,17 @@ A background spectrum was collected first to establish a baseline. Each sample w
 
 ## Data
 
-Raw spectra are available as CSV files each containing two columns (wavenumber in cm⁻¹ and transmittance in %) with ~7,150 data points per spectrum. Data is organized into two experimental runs: <a href="https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy/DATA/ONE">ONE</a> (19 samples) and <a href="https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy/DATA/TWO">TWO</a> (6 samples) over two different days.
+Raw spectra are available as CSV files each containing two columns (wavenumber in cm⁻¹ and transmittance in %) with ~7,150 data points per spectrum. Data is organized into two experimental runs: <a href="https://github.com/vivianweidai/science/tree/main/research/20260401%20IR%20Spectroscopy/DATA/ONE">ONE</a> (19 samples) and <a href="https://github.com/vivianweidai/science/tree/main/research/20260401%20IR%20Spectroscopy/DATA/TWO">TWO</a> (6 samples) over two different days.
 
 ## Methods
 
-The instrument (Nicolet 380) applies background correction automatically — each sample's transmittance is already measured relative to the background spectrum, so non-absorbing regions read ~100% transmittance. The <a href="https://github.com/vivianweidai/research/blob/main/20260401%20IR%20Spectroscopy/OUTPUT/clean_data.py">data cleaning pipeline</a>:
+The instrument (Nicolet 380) applies background correction automatically — each sample's transmittance is already measured relative to the background spectrum, so non-absorbing regions read ~100% transmittance. The <a href="https://github.com/vivianweidai/science/blob/main/research/20260401%20IR%20Spectroscopy/OUTPUT/clean_data.py">data cleaning pipeline</a>:
 
 1. **Parse** — raw CSVs use scientific notation with no headers; each file was parsed into numeric wavenumber and transmittance columns.
 2. **Convert to absorbance** — transmittance was converted using A = −log₁₀(T/100), where T is transmittance in percent. Absorbance is dimensionless and directly proportional to concentration via the Beer-Lambert law.
-3. **Export** — all 23 samples were saved as individual cleaned CSVs with headers (wavenumber, transmittance, absorbance) into a single <a href="https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy/OUTPUT/SCRUBBED">SCRUBBED</a> folder.
+3. **Export** — all 23 samples were saved as individual cleaned CSVs with headers (wavenumber, transmittance, absorbance) into a single <a href="https://github.com/vivianweidai/science/tree/main/research/20260401%20IR%20Spectroscopy/OUTPUT/SCRUBBED">SCRUBBED</a> folder.
 
-All spectra plots, peak identification, and category overlays were generated from the cleaned data using Python libraries in the <a href="https://github.com/vivianweidai/research/blob/main/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">analysis notebook</a>.
+All spectra plots, peak identification, and category overlays were generated from the cleaned data using Python libraries in the <a href="https://github.com/vivianweidai/science/blob/main/research/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">analysis notebook</a>.
 
 ## Results
 
@@ -320,8 +320,8 @@ All spectra plots, peak identification, and category overlays were generated fro
 })();
 </script>
 
-See the <a href="https://github.com/vivianweidai/research/blob/main/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/research/blob/main/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">run the reproducible analysis yourself</a>.
+See the <a href="https://github.com/vivianweidai/science/blob/main/research/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">run the reproducible analysis yourself</a>.
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="https://vivianweidai.com/curriculum/">Curriculum</a><a href="https://vivianweidai.com/olympiads/">Olympiads</a><a href="https://vivianweidai.com/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/research/tree/main/20260401%20IR%20Spectroscopy">View on GitHub</a></div>
+<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/research/20260401%20IR%20Spectroscopy">View on GitHub</a></div>
