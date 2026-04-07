@@ -119,20 +119,8 @@ photos:
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script>
-var allPhotos = {{ page.photos | jsonify }};
-function shufflePhotos() {
-  var a = allPhotos.slice();
-  for (var i = a.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var t = a[i]; a[i] = a[j]; a[j] = t;
-  }
-  for (var i = 0; i < 4; i++) {
-    document.getElementById('photo-' + i).src = a[i];
-  }
-}
-shufflePhotos();
-</script>
+<script>var _pagePhotos = {{ page.photos | jsonify }};</script>
+<script src="/archives/formatting/shuffle.js"></script>
 
 <div class="project-meta">April 4th 2026<br>Jandel RM3 Four-Point Probe</div>
 
@@ -187,7 +175,7 @@ In total 56 valid sheet resistance readings were collected at 9 µA. Three non-c
 
 The quarter and spoon were the most conductive samples, while the brass house key was the least — all non-metals were too resistive to measure. Two results stood out: sanding the penny from copper through to zinc *increased* sheet resistance (47.3 → 50.1 Ω/□), and flipping the aluminum foil also increased it (48.1 → 54.7 Ω/□), showing the matte and shiny sides have measurably different surface conductivity.
 
-<img src="OUTPUT/mean_sheet_resistance.png" alt="Mean sheet resistance by sample" style="width:100%; border-radius:6px;">
+<img src="OUTPUT/mean_sheet_resistance.png" alt="Mean sheet resistance by sample" class="result-img">
 
 ### Limitations
 

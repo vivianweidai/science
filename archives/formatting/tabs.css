@@ -1,0 +1,96 @@
+/* Tab activation rules — all tab systems across the site.
+   Pattern: #id:checked highlights its label and shows its content panel. */
+
+/* default.html: research/olympiad subject tabs */
+#tab-math:checked ~ .tab-labels label[for="tab-math"],
+#tab-comp:checked ~ .tab-labels label[for="tab-comp"],
+#tab-phys:checked ~ .tab-labels label[for="tab-phys"],
+#tab-chem:checked ~ .tab-labels label[for="tab-chem"],
+#tab-bio:checked ~ .tab-labels label[for="tab-bio"],
+#tab-astro:checked ~ .tab-labels label[for="tab-astro"] {
+  color: #0969da;
+  border-bottom-color: #0969da;
+}
+#tab-math:checked ~ #content-math,
+#tab-comp:checked ~ #content-comp,
+#tab-phys:checked ~ #content-phys,
+#tab-chem:checked ~ #content-chem,
+#tab-bio:checked ~ #content-bio,
+#tab-astro:checked ~ #content-astro {
+  display: block;
+}
+
+#oly-math:checked ~ .tab-labels label[for="oly-math"],
+#oly-comp:checked ~ .tab-labels label[for="oly-comp"],
+#oly-phys:checked ~ .tab-labels label[for="oly-phys"],
+#oly-chem:checked ~ .tab-labels label[for="oly-chem"],
+#oly-bio:checked ~ .tab-labels label[for="oly-bio"],
+#oly-astro:checked ~ .tab-labels label[for="oly-astro"] {
+  color: #0969da;
+  border-bottom-color: #0969da;
+}
+#oly-math:checked ~ #oly-content-math,
+#oly-comp:checked ~ #oly-content-comp,
+#oly-phys:checked ~ #oly-content-phys,
+#oly-chem:checked ~ #oly-content-chem,
+#oly-bio:checked ~ #oly-content-bio,
+#oly-astro:checked ~ #oly-content-astro {
+  display: block;
+}
+
+/* IR Spectroscopy: representative samples */
+#tab-acetone:checked ~ .tab-labels label[for="tab-acetone"],
+#tab-water:checked ~ .tab-labels label[for="tab-water"],
+#tab-salt:checked ~ .tab-labels label[for="tab-salt"],
+#tab-plastic:checked ~ .tab-labels label[for="tab-plastic"],
+#tab-sugar:checked ~ .tab-labels label[for="tab-sugar"] {
+  color: #0969da;
+  border-bottom-color: #0969da;
+}
+#tab-acetone:checked ~ #content-acetone,
+#tab-water:checked ~ #content-water,
+#tab-salt:checked ~ #content-salt,
+#tab-plastic:checked ~ #content-plastic,
+#tab-sugar:checked ~ #content-sugar {
+  display: block;
+}
+
+/* IR Spectroscopy: household categories */
+#cat-solvents:checked ~ .cat-tab-labels label[for="cat-solvents"],
+#cat-food:checked ~ .cat-tab-labels label[for="cat-food"],
+#cat-personal:checked ~ .cat-tab-labels label[for="cat-personal"],
+#cat-polymers:checked ~ .cat-tab-labels label[for="cat-polymers"],
+#cat-paper:checked ~ .cat-tab-labels label[for="cat-paper"],
+#cat-biological:checked ~ .cat-tab-labels label[for="cat-biological"] {
+  color: #0969da;
+  border-bottom-color: #0969da;
+}
+#cat-solvents:checked ~ #content-solvents,
+#cat-food:checked ~ #content-food,
+#cat-personal:checked ~ #content-personal,
+#cat-polymers:checked ~ #content-polymers,
+#cat-paper:checked ~ #content-paper,
+#cat-biological:checked ~ #content-biological {
+  display: block;
+}
+
+/* IR Spectroscopy: chemical categories */
+#chem-oh:checked ~ .chem-tab-labels label[for="chem-oh"],
+#chem-ch:checked ~ .chem-tab-labels label[for="chem-ch"],
+#chem-co:checked ~ .chem-tab-labels label[for="chem-co"],
+#chem-mixed:checked ~ .chem-tab-labels label[for="chem-mixed"],
+#chem-cellulose:checked ~ .chem-tab-labels label[for="chem-cellulose"],
+#chem-protein:checked ~ .chem-tab-labels label[for="chem-protein"],
+#chem-ionic:checked ~ .chem-tab-labels label[for="chem-ionic"] {
+  color: #0969da;
+  border-bottom-color: #0969da;
+}
+#chem-oh:checked ~ #content-chem-oh,
+#chem-ch:checked ~ #content-chem-ch,
+#chem-co:checked ~ #content-chem-co,
+#chem-mixed:checked ~ #content-chem-mixed,
+#chem-cellulose:checked ~ #content-chem-cellulose,
+#chem-protein:checked ~ #content-chem-protein,
+#chem-ionic:checked ~ #content-chem-ionic {
+  display: block;
+}

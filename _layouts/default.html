@@ -4,90 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="/archives/formatting/base.css">
+  <link rel="stylesheet" href="/archives/formatting/tabs.css">
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 30px 1rem;
-      color: #1f2328;
-      line-height: 1.6;
-    }
-    h1, h2 { border-bottom: 1px solid #d1d9e0; padding-bottom: 0.3em; }
-    h2 { margin-top: 1.5em; }
-    h1:first-child, h2:first-child { margin-top: 0; }
-    a { color: #0969da; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    img { max-width: 100%; }
-    table { border-collapse: collapse; width: 100%; margin: 1em 0; }
-    th, td { border: 1px solid #d1d9e0; padding: 8px 12px; text-align: left; }
-    th { background: #f6f8fa; }
-    tr.highlight td { background: #ffee00; }
-    code { background: #f6f8fa; padding: 0.2em 0.4em; border-radius: 3px; font-size: 0.9em; }
-    pre { background: #f6f8fa; padding: 1em; border-radius: 6px; overflow-x: auto; }
-    pre code { background: none; padding: 0; }
-    ul, ol { padding-left: 2em; }
-    hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0 0.5em 0; }
-
-    /* CSS-only tabs */
-    .tabs { margin: 1em 0; }
-    .tabs input[type="radio"] { display: none; }
-    .tab-labels {
-      display: flex;
-      justify-content: center;
-      border-bottom: 2px solid #d1d9e0;
-      margin-bottom: 0;
-    }
-    .tab-labels label {
-      padding: 0.6em 1.2em;
-      cursor: pointer;
-      font-size: 0.9em;
-      font-weight: 600;
-      color: #656d76;
-      border-bottom: 2px solid transparent;
-      margin-bottom: -2px;
-      transition: color 0.15s, border-color 0.15s;
-    }
-    .tab-labels label:hover { color: #1f2328; }
-    .tab-content { display: none; padding: 1em 0; }
-
-    #tab-math:checked ~ .tab-labels label[for="tab-math"],
-    #tab-comp:checked ~ .tab-labels label[for="tab-comp"],
-    #tab-phys:checked ~ .tab-labels label[for="tab-phys"],
-    #tab-chem:checked ~ .tab-labels label[for="tab-chem"],
-    #tab-bio:checked ~ .tab-labels label[for="tab-bio"],
-    #tab-astro:checked ~ .tab-labels label[for="tab-astro"] {
-      color: #0969da;
-      border-bottom-color: #0969da;
-    }
-    #tab-math:checked ~ #content-math,
-    #tab-comp:checked ~ #content-comp,
-    #tab-phys:checked ~ #content-phys,
-    #tab-chem:checked ~ #content-chem,
-    #tab-bio:checked ~ #content-bio,
-    #tab-astro:checked ~ #content-astro {
-      display: block;
-    }
-
-    #oly-math:checked ~ .tab-labels label[for="oly-math"],
-    #oly-comp:checked ~ .tab-labels label[for="oly-comp"],
-    #oly-phys:checked ~ .tab-labels label[for="oly-phys"],
-    #oly-chem:checked ~ .tab-labels label[for="oly-chem"],
-    #oly-bio:checked ~ .tab-labels label[for="oly-bio"],
-    #oly-astro:checked ~ .tab-labels label[for="oly-astro"] {
-      color: #0969da;
-      border-bottom-color: #0969da;
-    }
-    #oly-math:checked ~ #oly-content-math,
-    #oly-comp:checked ~ #oly-content-comp,
-    #oly-phys:checked ~ #oly-content-phys,
-    #oly-chem:checked ~ #oly-content-chem,
-    #oly-bio:checked ~ #oly-content-bio,
-    #oly-astro:checked ~ #oly-content-astro {
-      display: block;
-    }
-
-    /* Nav link cards */
+    /* Nav link cards (default layout only) */
     .nav-links {
       display: flex;
       justify-content: center;
@@ -110,15 +30,6 @@
       border-color: #0969da;
       text-decoration: none;
     }
-
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.9em;
-      color: #656d76;
-    }
-    .footer .footer-nav { display: flex; gap: 0.5em; }
-    .footer .footer-github { margin-left: auto; }
   </style>
 </head>
 <body>
@@ -132,7 +43,6 @@
       });
       if (present.length === 0) return;
 
-      // Pick one random tab based on non-empty content in the first prefix found
       var firstPrefix = present[0];
       var contentPrefix = firstPrefix === 'oly-' ? 'oly-content-' : 'content-';
       var active = tabs.filter(function(t) {
@@ -142,13 +52,11 @@
       if (active.length === 0) active = tabs;
       var pick = active[Math.floor(Math.random() * active.length)];
 
-      // Apply the same pick to all tab groups
       present.forEach(function(prefix) {
         var radio = document.getElementById(prefix + pick);
         if (radio) radio.checked = true;
       });
 
-      // Sync clicks: when a tab label is clicked, select the same subject in all groups
       present.forEach(function(prefix) {
         tabs.forEach(function(t) {
           var radio = document.getElementById(prefix + t);

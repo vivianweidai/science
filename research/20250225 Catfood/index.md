@@ -40,20 +40,8 @@ data_photos:
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script>
-var allPhotos = {{ page.photos | jsonify }};
-function shufflePhotos() {
-  var a = allPhotos.slice();
-  for (var i = a.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var t = a[i]; a[i] = a[j]; a[j] = t;
-  }
-  for (var i = 0; i < 4; i++) {
-    document.getElementById('photo-' + i).src = a[i];
-  }
-}
-shufflePhotos();
-</script>
+<script>var _pagePhotos = {{ page.photos | jsonify }};</script>
+<script src="/archives/formatting/shuffle.js"></script>
 
 <div class="project-meta">February 25th 2025</div>
 
