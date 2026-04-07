@@ -1,9 +1,31 @@
 ---
 layout: project
 project: Melting Point
+photos:
+  - PHOTOS/20260405 Setup A.jpeg
+  - PHOTOS/20260405 Setup B.jpeg
+  - PHOTOS/20260405 Setup C.jpeg
+  - PHOTOS/20260405 Setup D.jpeg
+  - PHOTOS/20260405 Setup E.jpeg
+  - PHOTOS/20260405 Setup F.jpeg
+  - PHOTOS/20260405 Setup G.jpeg
+  - PHOTOS/20260405 Samples A.jpeg
+  - PHOTOS/20260405 Samples B.jpeg
+  - PHOTOS/20260405 Samples C.jpeg
 ---
 
 # Melting Point of Everyday Compounds
+
+<div class="photo-grid" id="photo-grid">
+  <img id="photo-0" alt="Experiment photo">
+  <img id="photo-1" alt="Experiment photo">
+  <img id="photo-2" alt="Experiment photo">
+  <img id="photo-3" alt="Experiment photo">
+</div>
+<button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
+
+<script>var _pagePhotos = {{ page.photos | jsonify }};</script>
+<script src="/archives/formatting/shuffle.js"></script>
 
 <div class="project-meta">April 5th 2026<br>OptiMelt Automated Melting Point System</div>
 
@@ -24,6 +46,8 @@ Melting point determination is a fundamental technique for identifying and asses
 | Replicates | 3 capillary tubes per compound |
 
 ## Samples
+
+<div class="hero-single"><img src="PHOTOS/20260405 Samples A.jpeg" alt="Capillary tubes labeled CAF1–3 and MP1–3"></div>
 
 Samples were ground to a fine powder and packed into glass capillary tubes (~2–3 mm fill height). Each compound was prepared in triplicate (CAF 1–3, ASP 1–3) to allow averaging and assess reproducibility. Tubes were labeled and inserted into the OptiMelt sample chamber.
 
