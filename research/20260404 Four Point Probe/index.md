@@ -120,7 +120,7 @@ photos:
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
-<script src="/archives/formatting/shuffle.js"></script>
+<script src="/archives/CSS/shuffle.js"></script>
 
 <div class="project-meta">April 4th 2026<br>Jandel RM3 Four-Point Probe</div>
 

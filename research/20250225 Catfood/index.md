@@ -41,7 +41,7 @@ data_photos:
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
-<script src="/archives/formatting/shuffle.js"></script>
+<script src="/archives/CSS/shuffle.js"></script>
 
 <div class="project-meta">February 25th 2025</div>
 
