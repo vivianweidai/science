@@ -32,6 +32,11 @@ hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0 0.5em 0; }
 }
 .footer .footer-nav { display: flex; gap: 0.5em; }
 .footer .footer-github { margin-left: auto; }
+.orcid-short { display: none; }
+@media (max-width: 600px) {
+  .orcid-full { display: none; }
+  .orcid-short { display: inline; }
+}
 
 /* CSS-only tabs */
 .tabs { margin: 1em 0; }
