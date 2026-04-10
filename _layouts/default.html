@@ -71,6 +71,24 @@
         });
       });
     })();
+
+    /* Fix tab-switching jump: lock each .tabs container to its tallest panel */
+    (function() {
+      document.querySelectorAll('.tabs').forEach(function(container) {
+        var panels = container.querySelectorAll('.tab-content');
+        if (panels.length === 0) return;
+        var maxH = 0;
+        panels.forEach(function(p) {
+          var prev = p.style.display;
+          p.style.display = 'block';
+          if (p.offsetHeight > maxH) maxH = p.offsetHeight;
+          p.style.display = prev;
+        });
+        var labels = container.querySelector('.tab-labels');
+        var labelsH = labels ? labels.offsetHeight : 0;
+        container.style.minHeight = (labelsH + maxH) + 'px';
+      });
+    })();
   </script>
 </body>
 </html>
