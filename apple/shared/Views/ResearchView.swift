@@ -1,0 +1,73 @@
+import SwiftUI
+
+struct ResearchView: View {
+    @State private var projects: [ResearchProject] = []
+    @State private var loading = true
+    @State private var error: String?
+
+    var body: some View {
+        NavigationStack {
+            Group {
+                if loading {
+                    ProgressView()
+                } else if let error {
+                    Text(error).foregroundStyle(.red).padding()
+                } else {
+                    List(projects) { project in
+                        NavigationLink {
+                            ProjectDetailView(project: project)
+                        } label: {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(project.title).font(.headline)
+                                Text(project.date)
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Research")
+            .task { await load() }
+            .refreshable { await load() }
+        }
+    }
+
+    private func load() async {
+        loading = true
+        do {
+            projects = try await ResearchLoader.shared.projects()
+            error = nil
+        } catch {
+            self.error = error.localizedDescription
+        }
+        loading = false
+    }
+}
+
+struct ProjectDetailView: View {
+    let project: ResearchProject
+    @State private var markdown: String = ""
+    @State private var loading = true
+
+    var body: some View {
+        Group {
+            if loading {
+                ProgressView()
+            } else {
+                MarkdownWebView(markdown: markdown)
+            }
+        }
+        .navigationTitle(project.title)
+        .navigationBarTitleDisplayMode(.inline)
+        .task {
+            do {
+                let (data, _) = try await URLSession.shared.data(from: project.indexURL)
+                markdown = String(data: data, encoding: .utf8) ?? ""
+            } catch {
+                markdown = "# Error\n\n\(error.localizedDescription)"
+            }
+            loading = false
+        }
+    }
+}
