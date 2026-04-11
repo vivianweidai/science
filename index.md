@@ -13,8 +13,6 @@ title: Vivian Dai
   <a href="research/">Research</a>
 </div>
 
-## Foundation
-
 <a href="curriculum/"><img src="archives/IMAGES/curriculum.png" alt="Curriculum" width="100%"></a>
 
 <div class="nav-links">
