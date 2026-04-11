@@ -66,8 +66,9 @@
           sectionIdx: parseInt(a.dataset.sec, 10),
           topicIdx: parseInt(a.dataset.topic, 10),
         };
+        var y = window.scrollY;
         render();
-        scrollToWidget();
+        requestAnimationFrame(function () { window.scrollTo(0, y); });
       });
     });
   }
@@ -137,8 +138,9 @@
         e.preventDefault();
         if (a.dataset.action === 'prev') state.topicIdx -= 1;
         else if (a.dataset.action === 'next') state.topicIdx += 1;
+        var y = window.scrollY;
         render();
-        scrollToWidget();
+        requestAnimationFrame(function () { window.scrollTo(0, y); });
       });
     });
   }
@@ -168,8 +170,4 @@
       .replace(/'/g, '&#39;');
   }
 
-  function scrollToWidget() {
-    var top = widget.getBoundingClientRect().top + window.scrollY - 20;
-    window.scrollTo({ top: top, behavior: 'instant' in Element.prototype ? 'instant' : 'auto' });
-  }
 })();
