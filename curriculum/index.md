@@ -6,16 +6,15 @@ layout: default
 
 <img src="../archives/IMAGES/curriculum.png" alt="Curriculum" width="100%">
 
-<div class="nav-links">
-  <a href="mathematics/">Mathematics</a>
-  <a href="computing/">Computing</a>
-  <a href="physics/">Physics</a>
-  <a href="chemistry/">Chemistry</a>
-  <a href="biology/">Biology</a>
-  <a href="astronomy/">Astronomy</a>
-</div>
+<link rel="stylesheet" href="/archives/CSS/curriculum.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 
-Notes are organized as flashcard-style markdown files under each subject, grouped by section and topic. The iOS and web apps render these dynamically with KaTeX.
+<div id="curriculum-widget"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script src="/archives/JS/curriculum.js"></script>
 
 ---
 

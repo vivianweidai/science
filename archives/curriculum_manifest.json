@@ -1,0 +1,3443 @@
+{
+  "mathematics": {
+    "slug": "mathematics",
+    "name": "Mathematics",
+    "sections": [
+      {
+        "slug": "number-theory",
+        "name": "Number Theory",
+        "topics": [
+          {
+            "slug": "divisors",
+            "name": "Divisors",
+            "tables": [
+              {
+                "name": "Divisors",
+                "order": 1,
+                "path": "mathematics/number-theory/divisors.md"
+              },
+              {
+                "name": "Factorization",
+                "order": 2,
+                "path": "mathematics/number-theory/factorization.md"
+              },
+              {
+                "name": "Bases",
+                "order": 3,
+                "path": "mathematics/number-theory/bases.md"
+              }
+            ]
+          },
+          {
+            "slug": "modular-arithmetic",
+            "name": "Modular Arithmetic",
+            "tables": [
+              {
+                "name": "Congruence",
+                "order": 4,
+                "path": "mathematics/number-theory/congruence.md"
+              },
+              {
+                "name": "Divisibility",
+                "order": 5,
+                "path": "mathematics/number-theory/divisibility.md"
+              }
+            ]
+          },
+          {
+            "slug": "linear-congruence",
+            "name": "Linear Congruence",
+            "tables": [
+              {
+                "name": "Linear Congruence",
+                "order": 6,
+                "path": "mathematics/number-theory/linear-congruence.md"
+              },
+              {
+                "name": "Theorems",
+                "order": 7,
+                "path": "mathematics/number-theory/theorems.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "combinatorics",
+        "name": "Combinatorics",
+        "topics": [
+          {
+            "slug": "counting",
+            "name": "Counting",
+            "tables": [
+              {
+                "name": "Permutations",
+                "order": 1,
+                "path": "mathematics/combinatorics/permutations.md"
+              },
+              {
+                "name": "Combinations",
+                "order": 2,
+                "path": "mathematics/combinatorics/combinations.md"
+              },
+              {
+                "name": "Identities",
+                "order": 3,
+                "path": "mathematics/combinatorics/identities.md"
+              }
+            ]
+          },
+          {
+            "slug": "probability",
+            "name": "Probability",
+            "tables": [
+              {
+                "name": "Probability",
+                "order": 4,
+                "path": "mathematics/combinatorics/probability.md"
+              },
+              {
+                "name": "Expected Value",
+                "order": 5,
+                "path": "mathematics/combinatorics/expected-value.md"
+              }
+            ]
+          },
+          {
+            "slug": "sets",
+            "name": "Sets",
+            "tables": [
+              {
+                "name": "Concepts",
+                "order": 6,
+                "path": "mathematics/combinatorics/concepts.md"
+              },
+              {
+                "name": "Recursion",
+                "order": 7,
+                "path": "mathematics/combinatorics/recursion.md"
+              },
+              {
+                "name": "Generating Functions",
+                "order": 8,
+                "path": "mathematics/combinatorics/generating-functions.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "geometry",
+        "name": "Geometry",
+        "topics": [
+          {
+            "slug": "triangles",
+            "name": "Triangles",
+            "tables": [
+              {
+                "name": "Triangles",
+                "order": 1,
+                "path": "mathematics/geometry/triangles.md"
+              },
+              {
+                "name": "Relations",
+                "order": 2,
+                "path": "mathematics/geometry/relations.md"
+              }
+            ]
+          },
+          {
+            "slug": "centers",
+            "name": "Centers",
+            "tables": [
+              {
+                "name": "Centers",
+                "order": 3,
+                "path": "mathematics/geometry/centers.md"
+              },
+              {
+                "name": "Relations",
+                "order": 4,
+                "path": "mathematics/geometry/centers-relations.md"
+              }
+            ]
+          },
+          {
+            "slug": "circles",
+            "name": "Circles",
+            "tables": [
+              {
+                "name": "Inscriptions",
+                "order": 5,
+                "path": "mathematics/geometry/inscriptions.md"
+              },
+              {
+                "name": "Intersections",
+                "order": 6,
+                "path": "mathematics/geometry/intersections.md"
+              }
+            ]
+          },
+          {
+            "slug": "vectors",
+            "name": "Vectors",
+            "tables": [
+              {
+                "name": "Polygons",
+                "order": 7,
+                "path": "mathematics/geometry/polygons.md"
+              },
+              {
+                "name": "Vectors",
+                "order": 8,
+                "path": "mathematics/geometry/vectors.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "algebra",
+        "name": "Algebra",
+        "topics": [
+          {
+            "slug": "functions",
+            "name": "Functions",
+            "tables": [
+              {
+                "name": "Functions",
+                "order": 1,
+                "path": "mathematics/algebra/functions.md"
+              },
+              {
+                "name": "Characteristics",
+                "order": 2,
+                "path": "mathematics/algebra/characteristics.md"
+              }
+            ]
+          },
+          {
+            "slug": "sequences-and-series",
+            "name": "Sequences and Series",
+            "tables": [
+              {
+                "name": "Arithmetic",
+                "order": 3,
+                "path": "mathematics/algebra/arithmetic.md"
+              },
+              {
+                "name": "Geometric",
+                "order": 4,
+                "path": "mathematics/algebra/geometric.md"
+              },
+              {
+                "name": "Notation",
+                "order": 5,
+                "path": "mathematics/algebra/notation.md"
+              }
+            ]
+          },
+          {
+            "slug": "polynomials",
+            "name": "Polynomials",
+            "tables": [
+              {
+                "name": "Polynomials",
+                "order": 6,
+                "path": "mathematics/algebra/polynomials.md"
+              },
+              {
+                "name": "Division",
+                "order": 7,
+                "path": "mathematics/algebra/division.md"
+              }
+            ]
+          },
+          {
+            "slug": "roots",
+            "name": "Roots",
+            "tables": [
+              {
+                "name": "Rational",
+                "order": 8,
+                "path": "mathematics/algebra/rational.md"
+              },
+              {
+                "name": "Non-rational",
+                "order": 9,
+                "path": "mathematics/algebra/non-rational.md"
+              },
+              {
+                "name": "Vieta",
+                "order": 10,
+                "path": "mathematics/algebra/vieta.md"
+              }
+            ]
+          },
+          {
+            "slug": "identities",
+            "name": "Identities",
+            "tables": [
+              {
+                "name": "Factoring",
+                "order": 11,
+                "path": "mathematics/algebra/factoring.md"
+              },
+              {
+                "name": "Identities",
+                "order": 12,
+                "path": "mathematics/algebra/identities.md"
+              }
+            ]
+          },
+          {
+            "slug": "inequalities",
+            "name": "Inequalities",
+            "tables": [
+              {
+                "name": "Inequalities",
+                "order": 13,
+                "path": "mathematics/algebra/inequalities.md"
+              },
+              {
+                "name": "Toolkit",
+                "order": 14,
+                "path": "mathematics/algebra/toolkit.md"
+              },
+              {
+                "name": "Optimization",
+                "order": 15,
+                "path": "mathematics/algebra/optimization.md"
+              }
+            ]
+          },
+          {
+            "slug": "relations",
+            "name": "Relations",
+            "tables": [
+              {
+                "name": "Polynomial Series",
+                "order": 16,
+                "path": "mathematics/algebra/polynomial-series.md"
+              },
+              {
+                "name": "Functional Equations",
+                "order": 17,
+                "path": "mathematics/algebra/functional-equations.md"
+              },
+              {
+                "name": "Strategies",
+                "order": 18,
+                "path": "mathematics/algebra/strategies.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "precalculus",
+        "name": "Precalculus",
+        "topics": [
+          {
+            "slug": "trigonometry",
+            "name": "Trigonometry",
+            "tables": [
+              {
+                "name": "Identities",
+                "order": 1,
+                "path": "mathematics/precalculus/identities.md"
+              },
+              {
+                "name": "Parametric",
+                "order": 2,
+                "path": "mathematics/precalculus/parametric.md"
+              }
+            ]
+          },
+          {
+            "slug": "complex",
+            "name": "Complex",
+            "tables": [
+              {
+                "name": "Complex Numbers",
+                "order": 3,
+                "path": "mathematics/precalculus/complex-numbers.md"
+              },
+              {
+                "name": "Powers",
+                "order": 4,
+                "path": "mathematics/precalculus/powers.md"
+              },
+              {
+                "name": "Roots",
+                "order": 5,
+                "path": "mathematics/precalculus/roots.md"
+              }
+            ]
+          },
+          {
+            "slug": "vectors",
+            "name": "Vectors",
+            "tables": [
+              {
+                "name": "Dot Product",
+                "order": 6,
+                "path": "mathematics/precalculus/dot-product.md"
+              },
+              {
+                "name": "Cross Product",
+                "order": 7,
+                "path": "mathematics/precalculus/cross-product.md"
+              },
+              {
+                "name": "Matrices",
+                "order": 8,
+                "path": "mathematics/precalculus/matrices.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "calculus",
+        "name": "Calculus",
+        "topics": [
+          {
+            "slug": "limits",
+            "name": "Limits",
+            "tables": [
+              {
+                "name": "Limits",
+                "order": 1,
+                "path": "mathematics/calculus/limits.md"
+              },
+              {
+                "name": "Continuity",
+                "order": 2,
+                "path": "mathematics/calculus/continuity.md"
+              }
+            ]
+          },
+          {
+            "slug": "differentiation",
+            "name": "Differentiation",
+            "tables": [
+              {
+                "name": "Differentiation",
+                "order": 3,
+                "path": "mathematics/calculus/differentiation.md"
+              },
+              {
+                "name": "Rules",
+                "order": 4,
+                "path": "mathematics/calculus/rules.md"
+              }
+            ]
+          },
+          {
+            "slug": "integration",
+            "name": "Integration",
+            "tables": [
+              {
+                "name": "Integration",
+                "order": 5,
+                "path": "mathematics/calculus/integration.md"
+              },
+              {
+                "name": "Rules",
+                "order": 6,
+                "path": "mathematics/calculus/integration-rules.md"
+              }
+            ]
+          },
+          {
+            "slug": "approximation",
+            "name": "Approximation",
+            "tables": [
+              {
+                "name": "Infinite Series",
+                "order": 7,
+                "path": "mathematics/calculus/infinite-series.md"
+              },
+              {
+                "name": "Approximation",
+                "order": 8,
+                "path": "mathematics/calculus/approximation.md"
+              }
+            ]
+          },
+          {
+            "slug": "vectors",
+            "name": "Vectors",
+            "tables": [
+              {
+                "name": "Surfaces",
+                "order": 9,
+                "path": "mathematics/calculus/surfaces.md"
+              },
+              {
+                "name": "Functions",
+                "order": 10,
+                "path": "mathematics/calculus/functions.md"
+              },
+              {
+                "name": "Multivariable",
+                "order": 11,
+                "path": "mathematics/calculus/multivariable.md"
+              }
+            ]
+          },
+          {
+            "slug": "fields",
+            "name": "Fields",
+            "tables": [
+              {
+                "name": "Fields",
+                "order": 12,
+                "path": "mathematics/calculus/fields.md"
+              },
+              {
+                "name": "Theorems",
+                "order": 13,
+                "path": "mathematics/calculus/theorems.md"
+              }
+            ]
+          },
+          {
+            "slug": "differentials",
+            "name": "Differentials",
+            "tables": [
+              {
+                "name": "Differentials",
+                "order": 14,
+                "path": "mathematics/calculus/differentials.md"
+              },
+              {
+                "name": "First Order",
+                "order": 15,
+                "path": "mathematics/calculus/first-order.md"
+              },
+              {
+                "name": "Second Order",
+                "order": 16,
+                "path": "mathematics/calculus/second-order.md"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "computing": {
+    "slug": "computing",
+    "name": "Computing",
+    "sections": [
+      {
+        "slug": "statistics",
+        "name": "Statistics",
+        "topics": [
+          {
+            "slug": "measurement",
+            "name": "Measurement",
+            "tables": [
+              {
+                "name": "Single",
+                "order": 1,
+                "path": "computing/statistics/single.md"
+              },
+              {
+                "name": "Compound",
+                "order": 2,
+                "path": "computing/statistics/compound.md"
+              }
+            ]
+          },
+          {
+            "slug": "distributions",
+            "name": "Distributions",
+            "tables": [
+              {
+                "name": "Single",
+                "order": 3,
+                "path": "computing/statistics/distributions-single.md"
+              },
+              {
+                "name": "Dual",
+                "order": 4,
+                "path": "computing/statistics/dual.md"
+              }
+            ]
+          },
+          {
+            "slug": "probability",
+            "name": "Probability",
+            "tables": [
+              {
+                "name": "Probability",
+                "order": 5,
+                "path": "computing/statistics/probability.md"
+              },
+              {
+                "name": "Addition",
+                "order": 6,
+                "path": "computing/statistics/addition.md"
+              },
+              {
+                "name": "Multiplication",
+                "order": 7,
+                "path": "computing/statistics/multiplication.md"
+              }
+            ]
+          },
+          {
+            "slug": "variables",
+            "name": "Variables",
+            "tables": [
+              {
+                "name": "Random Variable",
+                "order": 8,
+                "path": "computing/statistics/random-variable.md"
+              },
+              {
+                "name": "Repeated",
+                "order": 9,
+                "path": "computing/statistics/repeated.md"
+              },
+              {
+                "name": "Continuous",
+                "order": 10,
+                "path": "computing/statistics/continuous.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "inference",
+        "name": "Inference",
+        "topics": [
+          {
+            "slug": "confidence-interval",
+            "name": "Confidence Interval",
+            "tables": [
+              {
+                "name": "Inference",
+                "order": 1,
+                "path": "computing/inference/inference.md"
+              },
+              {
+                "name": "Confidence Interval",
+                "order": 2,
+                "path": "computing/inference/confidence-interval.md"
+              }
+            ]
+          },
+          {
+            "slug": "significance-test",
+            "name": "Significance Test",
+            "tables": [
+              {
+                "name": "Significance Test",
+                "order": 3,
+                "path": "computing/inference/significance-test.md"
+              },
+              {
+                "name": "Chi Square",
+                "order": 4,
+                "path": "computing/inference/chi-square.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "language",
+        "name": "Language",
+        "topics": [
+          {
+            "slug": "writing",
+            "name": "Writing",
+            "tables": [
+              {
+                "name": "Structure",
+                "order": 1,
+                "path": "computing/language/structure.md"
+              },
+              {
+                "name": "Systems",
+                "order": 2,
+                "path": "computing/language/systems.md"
+              }
+            ]
+          },
+          {
+            "slug": "sounds",
+            "name": "Sounds",
+            "tables": [
+              {
+                "name": "Syllables",
+                "order": 3,
+                "path": "computing/language/syllables.md"
+              },
+              {
+                "name": "Versification",
+                "order": 4,
+                "path": "computing/language/versification.md"
+              }
+            ]
+          },
+          {
+            "slug": "nouns",
+            "name": "Nouns",
+            "tables": [
+              {
+                "name": "Nouns",
+                "order": 5,
+                "path": "computing/language/nouns.md"
+              },
+              {
+                "name": "Modifiers",
+                "order": 6,
+                "path": "computing/language/modifiers.md"
+              },
+              {
+                "name": "Variables",
+                "order": 7,
+                "path": "computing/language/variables.md"
+              }
+            ]
+          },
+          {
+            "slug": "verbs",
+            "name": "Verbs",
+            "tables": [
+              {
+                "name": "Verbs",
+                "order": 8,
+                "path": "computing/language/verbs.md"
+              },
+              {
+                "name": "Modifiers",
+                "order": 9,
+                "path": "computing/language/verbs-modifiers.md"
+              },
+              {
+                "name": "Variables",
+                "order": 10,
+                "path": "computing/language/verbs-variables.md"
+              }
+            ]
+          },
+          {
+            "slug": "structure",
+            "name": "Structure",
+            "tables": [
+              {
+                "name": "Syntax",
+                "order": 11,
+                "path": "computing/language/syntax.md"
+              },
+              {
+                "name": "Semantics",
+                "order": 12,
+                "path": "computing/language/semantics.md"
+              },
+              {
+                "name": "Others",
+                "order": 13,
+                "path": "computing/language/others.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "computing",
+        "name": "Computing",
+        "topics": [
+          {
+            "slug": "efficiency",
+            "name": "Efficiency",
+            "tables": [
+              {
+                "name": "Efficiency",
+                "order": 1,
+                "path": "computing/computing/efficiency.md"
+              },
+              {
+                "name": "Order",
+                "order": 2,
+                "path": "computing/computing/order.md"
+              },
+              {
+                "name": "Sub Array Sum",
+                "order": 3,
+                "path": "computing/computing/sub-array-sum.md"
+              }
+            ]
+          },
+          {
+            "slug": "data",
+            "name": "Data",
+            "tables": [
+              {
+                "name": "Data",
+                "order": 4,
+                "path": "computing/computing/data.md"
+              },
+              {
+                "name": "Syntax",
+                "order": 5,
+                "path": "computing/computing/syntax.md"
+              }
+            ]
+          },
+          {
+            "slug": "logic",
+            "name": "Logic",
+            "tables": [
+              {
+                "name": "Logic",
+                "order": 6,
+                "path": "computing/computing/logic.md"
+              },
+              {
+                "name": "References",
+                "order": 7,
+                "path": "computing/computing/references.md"
+              },
+              {
+                "name": "Loop",
+                "order": 8,
+                "path": "computing/computing/loop.md"
+              }
+            ]
+          },
+          {
+            "slug": "combinations",
+            "name": "Combinations",
+            "tables": [
+              {
+                "name": "Combinations",
+                "order": 9,
+                "path": "computing/computing/combinations.md"
+              },
+              {
+                "name": "Recursion",
+                "order": 10,
+                "path": "computing/computing/recursion.md"
+              }
+            ]
+          },
+          {
+            "slug": "algorithms",
+            "name": "Algorithms",
+            "tables": [
+              {
+                "name": "Algorithms",
+                "order": 11,
+                "path": "computing/computing/algorithms.md"
+              },
+              {
+                "name": "Others",
+                "order": 12,
+                "path": "computing/computing/others.md"
+              }
+            ]
+          },
+          {
+            "slug": "problems",
+            "name": "Problems",
+            "tables": [
+              {
+                "name": "Simulation",
+                "order": 13,
+                "path": "computing/computing/simulation.md"
+              },
+              {
+                "name": "Complete Search",
+                "order": 14,
+                "path": "computing/computing/complete-search.md"
+              },
+              {
+                "name": "Preprocessing",
+                "order": 15,
+                "path": "computing/computing/preprocessing.md"
+              },
+              {
+                "name": "Greedy",
+                "order": 16,
+                "path": "computing/computing/greedy.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "learning",
+        "name": "Learning",
+        "topics": [
+          {
+            "slug": "methods",
+            "name": "Methods",
+            "tables": [
+              {
+                "name": "Ai",
+                "order": 1,
+                "path": "computing/learning/ai.md"
+              }
+            ]
+          },
+          {
+            "slug": "algorithms",
+            "name": "Algorithms",
+            "tables": [
+              {
+                "name": "Perceptrons",
+                "order": 2,
+                "path": "computing/learning/perceptrons.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "sampling",
+        "name": "Sampling",
+        "topics": [
+          {
+            "slug": "methods",
+            "name": "Methods",
+            "tables": [
+              {
+                "name": "Experiment",
+                "order": 1,
+                "path": "computing/sampling/experiment.md"
+              },
+              {
+                "name": "Methods",
+                "order": 2,
+                "path": "computing/sampling/methods.md"
+              },
+              {
+                "name": "Bias",
+                "order": 3,
+                "path": "computing/sampling/bias.md"
+              }
+            ]
+          },
+          {
+            "slug": "experiments",
+            "name": "Experiments",
+            "tables": [
+              {
+                "name": "Experiments",
+                "order": 4,
+                "path": "computing/sampling/experiments.md"
+              },
+              {
+                "name": "Design",
+                "order": 5,
+                "path": "computing/sampling/design.md"
+              }
+            ]
+          },
+          {
+            "slug": "sampling-distribution",
+            "name": "Sampling Distribution",
+            "tables": [
+              {
+                "name": "Sampling Distribution",
+                "order": 6,
+                "path": "computing/sampling/sampling-distribution.md"
+              },
+              {
+                "name": "Normal Distribution",
+                "order": 7,
+                "path": "computing/sampling/normal-distribution.md"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "physics": {
+    "slug": "physics",
+    "name": "Physics",
+    "sections": [
+      {
+        "slug": "mechanics",
+        "name": "Mechanics",
+        "topics": [
+          {
+            "slug": "kinematics",
+            "name": "Kinematics",
+            "tables": [
+              {
+                "name": "Kinematics",
+                "order": 1,
+                "path": "physics/mechanics/kinematics.md"
+              },
+              {
+                "name": "Problems",
+                "order": 2,
+                "path": "physics/mechanics/problems.md"
+              }
+            ]
+          },
+          {
+            "slug": "dynamics",
+            "name": "Dynamics",
+            "tables": [
+              {
+                "name": "Dynamics",
+                "order": 3,
+                "path": "physics/mechanics/dynamics.md"
+              },
+              {
+                "name": "Problems",
+                "order": 4,
+                "path": "physics/mechanics/dynamics-problems.md"
+              }
+            ]
+          },
+          {
+            "slug": "energy",
+            "name": "Energy",
+            "tables": [
+              {
+                "name": "Energy",
+                "order": 5,
+                "path": "physics/mechanics/energy.md"
+              },
+              {
+                "name": "Problems",
+                "order": 6,
+                "path": "physics/mechanics/energy-problems.md"
+              }
+            ]
+          },
+          {
+            "slug": "system-of-particles",
+            "name": "System of Particles",
+            "tables": [
+              {
+                "name": "Center of Mass",
+                "order": 7,
+                "path": "physics/mechanics/center-of-mass.md"
+              },
+              {
+                "name": "Momentum",
+                "order": 8,
+                "path": "physics/mechanics/momentum.md"
+              },
+              {
+                "name": "Collisions",
+                "order": 9,
+                "path": "physics/mechanics/collisions.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "harmonics",
+        "name": "Harmonics",
+        "topics": [
+          {
+            "slug": "circular",
+            "name": "Circular",
+            "tables": [
+              {
+                "name": "Circular",
+                "order": 1,
+                "path": "physics/harmonics/circular.md"
+              },
+              {
+                "name": "Kepler",
+                "order": 2,
+                "path": "physics/harmonics/kepler.md"
+              }
+            ]
+          },
+          {
+            "slug": "rotational",
+            "name": "Rotational",
+            "tables": [
+              {
+                "name": "Rotational",
+                "order": 3,
+                "path": "physics/harmonics/rotational.md"
+              },
+              {
+                "name": "Relationships",
+                "order": 4,
+                "path": "physics/harmonics/relationships.md"
+              }
+            ]
+          },
+          {
+            "slug": "oscillatory",
+            "name": "Oscillatory",
+            "tables": [
+              {
+                "name": "Oscillatory",
+                "order": 5,
+                "path": "physics/harmonics/oscillatory.md"
+              },
+              {
+                "name": "Energy",
+                "order": 6,
+                "path": "physics/harmonics/energy.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "electromagnetism",
+        "name": "Electromagnetism",
+        "topics": [
+          {
+            "slug": "statics",
+            "name": "Statics",
+            "tables": [
+              {
+                "name": "Statics",
+                "order": 1,
+                "path": "physics/electromagnetism/statics.md"
+              },
+              {
+                "name": "Conductor",
+                "order": 2,
+                "path": "physics/electromagnetism/conductor.md"
+              }
+            ]
+          },
+          {
+            "slug": "dynamics",
+            "name": "Dynamics",
+            "tables": [
+              {
+                "name": "Current",
+                "order": 3,
+                "path": "physics/electromagnetism/current.md"
+              },
+              {
+                "name": "Circuits",
+                "order": 4,
+                "path": "physics/electromagnetism/circuits.md"
+              }
+            ]
+          },
+          {
+            "slug": "capacitor",
+            "name": "Capacitor",
+            "tables": [
+              {
+                "name": "Capacitor",
+                "order": 5,
+                "path": "physics/electromagnetism/capacitor.md"
+              },
+              {
+                "name": "Behaviour",
+                "order": 6,
+                "path": "physics/electromagnetism/behaviour.md"
+              }
+            ]
+          },
+          {
+            "slug": "magnetism",
+            "name": "Magnetism",
+            "tables": [
+              {
+                "name": "Magnetism",
+                "order": 7,
+                "path": "physics/electromagnetism/magnetism.md"
+              },
+              {
+                "name": "Field",
+                "order": 8,
+                "path": "physics/electromagnetism/field.md"
+              },
+              {
+                "name": "Usage",
+                "order": 9,
+                "path": "physics/electromagnetism/usage.md"
+              }
+            ]
+          },
+          {
+            "slug": "inductor",
+            "name": "Inductor",
+            "tables": [
+              {
+                "name": "Induction",
+                "order": 10,
+                "path": "physics/electromagnetism/induction.md"
+              },
+              {
+                "name": "Behaviour",
+                "order": 11,
+                "path": "physics/electromagnetism/inductor-behaviour.md"
+              }
+            ]
+          },
+          {
+            "slug": "maxwell",
+            "name": "Maxwell",
+            "tables": [
+              {
+                "name": "Fields",
+                "order": 12,
+                "path": "physics/electromagnetism/fields.md"
+              },
+              {
+                "name": "Maxwell",
+                "order": 13,
+                "path": "physics/electromagnetism/maxwell.md"
+              },
+              {
+                "name": "Waves",
+                "order": 14,
+                "path": "physics/electromagnetism/waves.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "thermodynamics",
+        "name": "Thermodynamics",
+        "topics": [
+          {
+            "slug": "fluids",
+            "name": "Fluids",
+            "tables": [
+              {
+                "name": "Statics",
+                "order": 1,
+                "path": "physics/thermodynamics/statics.md"
+              },
+              {
+                "name": "Dynamics",
+                "order": 2,
+                "path": "physics/thermodynamics/dynamics.md"
+              }
+            ]
+          },
+          {
+            "slug": "zeroth-law",
+            "name": "Zeroth Law",
+            "tables": [
+              {
+                "name": "Thermodynamics",
+                "order": 3,
+                "path": "physics/thermodynamics/thermodynamics.md"
+              },
+              {
+                "name": "Temperature",
+                "order": 4,
+                "path": "physics/thermodynamics/temperature.md"
+              }
+            ]
+          },
+          {
+            "slug": "first-law",
+            "name": "First Law",
+            "tables": [
+              {
+                "name": "First Law",
+                "order": 5,
+                "path": "physics/thermodynamics/first-law.md"
+              },
+              {
+                "name": "Isothermal",
+                "order": 6,
+                "path": "physics/thermodynamics/isothermal.md"
+              },
+              {
+                "name": "Isometric",
+                "order": 7,
+                "path": "physics/thermodynamics/isometric.md"
+              },
+              {
+                "name": "Isobaric",
+                "order": 8,
+                "path": "physics/thermodynamics/isobaric.md"
+              },
+              {
+                "name": "Adiabatic",
+                "order": 9,
+                "path": "physics/thermodynamics/adiabatic.md"
+              }
+            ]
+          },
+          {
+            "slug": "second-law",
+            "name": "Second Law",
+            "tables": [
+              {
+                "name": "Second Law",
+                "order": 10,
+                "path": "physics/thermodynamics/second-law.md"
+              },
+              {
+                "name": "Entropy",
+                "order": 11,
+                "path": "physics/thermodynamics/entropy.md"
+              },
+              {
+                "name": "Measurement",
+                "order": 12,
+                "path": "physics/thermodynamics/measurement.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "optics",
+        "name": "Optics",
+        "topics": [
+          {
+            "slug": "geometric",
+            "name": "Geometric",
+            "tables": [
+              {
+                "name": "Refraction",
+                "order": 1,
+                "path": "physics/optics/refraction.md"
+              },
+              {
+                "name": "Images",
+                "order": 2,
+                "path": "physics/optics/images.md"
+              }
+            ]
+          },
+          {
+            "slug": "physical",
+            "name": "Physical",
+            "tables": [
+              {
+                "name": "Physical",
+                "order": 3,
+                "path": "physics/optics/physical.md"
+              },
+              {
+                "name": "Interference",
+                "order": 4,
+                "path": "physics/optics/interference.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "modern",
+        "name": "Modern",
+        "topics": [
+          {
+            "slug": "modern",
+            "name": "Modern",
+            "tables": [
+              {
+                "name": "Relativity",
+                "order": 1,
+                "path": "physics/modern/relativity.md"
+              },
+              {
+                "name": "Quantum",
+                "order": 2,
+                "path": "physics/modern/quantum.md"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "chemistry": {
+    "slug": "chemistry",
+    "name": "Chemistry",
+    "sections": [
+      {
+        "slug": "atoms",
+        "name": "Atoms",
+        "topics": [
+          {
+            "slug": "elements",
+            "name": "Elements",
+            "tables": [
+              {
+                "name": "Matter",
+                "order": 1,
+                "path": "chemistry/atoms/matter.md"
+              },
+              {
+                "name": "Models",
+                "order": 2,
+                "path": "chemistry/atoms/models.md"
+              }
+            ]
+          },
+          {
+            "slug": "electrons",
+            "name": "Electrons",
+            "tables": [
+              {
+                "name": "Relations",
+                "order": 3,
+                "path": "chemistry/atoms/relations.md"
+              },
+              {
+                "name": "Configuration",
+                "order": 4,
+                "path": "chemistry/atoms/configuration.md"
+              }
+            ]
+          },
+          {
+            "slug": "radioactivity",
+            "name": "Radioactivity",
+            "tables": [
+              {
+                "name": "Radioactivity",
+                "order": 5,
+                "path": "chemistry/atoms/radioactivity.md"
+              },
+              {
+                "name": "Half Life",
+                "order": 6,
+                "path": "chemistry/atoms/half-life.md"
+              }
+            ]
+          },
+          {
+            "slug": "nomenclature",
+            "name": "Nomenclature",
+            "tables": [
+              {
+                "name": "Compounds",
+                "order": 7,
+                "path": "chemistry/atoms/compounds.md"
+              },
+              {
+                "name": "Oxoacids",
+                "order": 8,
+                "path": "chemistry/atoms/oxoacids.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "bonds",
+        "name": "Bonds",
+        "topics": [
+          {
+            "slug": "intramolecular",
+            "name": "Intramolecular",
+            "tables": [
+              {
+                "name": "Intramolecular",
+                "order": 1,
+                "path": "chemistry/bonds/intramolecular.md"
+              },
+              {
+                "name": "Ionic",
+                "order": 2,
+                "path": "chemistry/bonds/ionic.md"
+              },
+              {
+                "name": "Covalent",
+                "order": 3,
+                "path": "chemistry/bonds/covalent.md"
+              }
+            ]
+          },
+          {
+            "slug": "localized",
+            "name": "Localized",
+            "tables": [
+              {
+                "name": "Localized",
+                "order": 4,
+                "path": "chemistry/bonds/localized.md"
+              },
+              {
+                "name": "Shape",
+                "order": 5,
+                "path": "chemistry/bonds/shape.md"
+              }
+            ]
+          },
+          {
+            "slug": "quantum",
+            "name": "Quantum",
+            "tables": [
+              {
+                "name": "Molecular Orbital",
+                "order": 6,
+                "path": "chemistry/bonds/molecular-orbital.md"
+              },
+              {
+                "name": "Diatomic",
+                "order": 7,
+                "path": "chemistry/bonds/diatomic.md"
+              }
+            ]
+          },
+          {
+            "slug": "intermolecular",
+            "name": "Intermolecular",
+            "tables": [
+              {
+                "name": "Intermolecular",
+                "order": 8,
+                "path": "chemistry/bonds/intermolecular.md"
+              },
+              {
+                "name": "Solids",
+                "order": 9,
+                "path": "chemistry/bonds/solids.md"
+              }
+            ]
+          },
+          {
+            "slug": "states",
+            "name": "States",
+            "tables": [
+              {
+                "name": "Vapor Pressure",
+                "order": 10,
+                "path": "chemistry/bonds/vapor-pressure.md"
+              },
+              {
+                "name": "States",
+                "order": 11,
+                "path": "chemistry/bonds/states.md"
+              },
+              {
+                "name": "Phase Diagram",
+                "order": 12,
+                "path": "chemistry/bonds/phase-diagram.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "stoichiometry",
+        "name": "Stoichiometry",
+        "topics": [
+          {
+            "slug": "stoichiometry",
+            "name": "Stoichiometry",
+            "tables": [
+              {
+                "name": "Stoichiometry",
+                "order": 1,
+                "path": "chemistry/stoichiometry/stoichiometry.md"
+              },
+              {
+                "name": "Solutions",
+                "order": 2,
+                "path": "chemistry/stoichiometry/solutions.md"
+              }
+            ]
+          },
+          {
+            "slug": "reactions",
+            "name": "Reactions",
+            "tables": [
+              {
+                "name": "Precipitation",
+                "order": 3,
+                "path": "chemistry/stoichiometry/precipitation.md"
+              },
+              {
+                "name": "Oxidation Reduction",
+                "order": 4,
+                "path": "chemistry/stoichiometry/oxidation-reduction.md"
+              }
+            ]
+          },
+          {
+            "slug": "gases",
+            "name": "Gases",
+            "tables": [
+              {
+                "name": "Ideal Gas Law",
+                "order": 5,
+                "path": "chemistry/stoichiometry/ideal-gas-law.md"
+              },
+              {
+                "name": "Kinetic Molecular Theory",
+                "order": 6,
+                "path": "chemistry/stoichiometry/kinetic-molecular-theory.md"
+              }
+            ]
+          },
+          {
+            "slug": "solutions",
+            "name": "Solutions",
+            "tables": [
+              {
+                "name": "Ideal Solution Law",
+                "order": 7,
+                "path": "chemistry/stoichiometry/ideal-solution-law.md"
+              },
+              {
+                "name": "Colligative",
+                "order": 8,
+                "path": "chemistry/stoichiometry/colligative.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "physical",
+        "name": "Physical",
+        "topics": [
+          {
+            "slug": "rate-laws",
+            "name": "Rate Laws",
+            "tables": [
+              {
+                "name": "Differential",
+                "order": 1,
+                "path": "chemistry/physical/differential.md"
+              },
+              {
+                "name": "Integral",
+                "order": 2,
+                "path": "chemistry/physical/integral.md"
+              }
+            ]
+          },
+          {
+            "slug": "reaction-mechanism",
+            "name": "Reaction Mechanism",
+            "tables": [
+              {
+                "name": "Reaction Mechanism",
+                "order": 3,
+                "path": "chemistry/physical/reaction-mechanism.md"
+              },
+              {
+                "name": "Collision Model",
+                "order": 4,
+                "path": "chemistry/physical/collision-model.md"
+              }
+            ]
+          },
+          {
+            "slug": "equilibrium",
+            "name": "Equilibrium",
+            "tables": [
+              {
+                "name": "Equilibrium",
+                "order": 5,
+                "path": "chemistry/physical/equilibrium.md"
+              },
+              {
+                "name": "Le Chatelier",
+                "order": 6,
+                "path": "chemistry/physical/le-chatelier.md"
+              },
+              {
+                "name": "Multiple Equilibria",
+                "order": 7,
+                "path": "chemistry/physical/multiple-equilibria.md"
+              }
+            ]
+          },
+          {
+            "slug": "acid-base",
+            "name": "Acid Base",
+            "tables": [
+              {
+                "name": "Acid Base",
+                "order": 8,
+                "path": "chemistry/physical/acid-base.md"
+              },
+              {
+                "name": "Water",
+                "order": 9,
+                "path": "chemistry/physical/water.md"
+              }
+            ]
+          },
+          {
+            "slug": "weak-acid",
+            "name": "Weak Acid",
+            "tables": [
+              {
+                "name": "Weak Acid",
+                "order": 10,
+                "path": "chemistry/physical/weak-acid.md"
+              },
+              {
+                "name": "Characteristics",
+                "order": 11,
+                "path": "chemistry/physical/characteristics.md"
+              }
+            ]
+          },
+          {
+            "slug": "buffers",
+            "name": "Buffers",
+            "tables": [
+              {
+                "name": "Common Ions",
+                "order": 12,
+                "path": "chemistry/physical/common-ions.md"
+              },
+              {
+                "name": "Buffer",
+                "order": 13,
+                "path": "chemistry/physical/buffer.md"
+              }
+            ]
+          },
+          {
+            "slug": "titration",
+            "name": "Titration",
+            "tables": [
+              {
+                "name": "Titration",
+                "order": 14,
+                "path": "chemistry/physical/titration.md"
+              },
+              {
+                "name": "Weak Acid Strong Base",
+                "order": 15,
+                "path": "chemistry/physical/weak-acid-strong-base.md"
+              }
+            ]
+          },
+          {
+            "slug": "precipitation",
+            "name": "Precipitation",
+            "tables": [
+              {
+                "name": "Solubility",
+                "order": 16,
+                "path": "chemistry/physical/solubility.md"
+              },
+              {
+                "name": "Qualitative",
+                "order": 17,
+                "path": "chemistry/physical/qualitative.md"
+              }
+            ]
+          },
+          {
+            "slug": "multiple",
+            "name": "Multiple",
+            "tables": [
+              {
+                "name": "Acid Base",
+                "order": 18,
+                "path": "chemistry/physical/multiple-acid-base.md"
+              },
+              {
+                "name": "Coordination",
+                "order": 19,
+                "path": "chemistry/physical/coordination.md"
+              }
+            ]
+          },
+          {
+            "slug": "enthalpy",
+            "name": "Enthalpy",
+            "tables": [
+              {
+                "name": "First Law",
+                "order": 20,
+                "path": "chemistry/physical/first-law.md"
+              },
+              {
+                "name": "Enthalpy",
+                "order": 21,
+                "path": "chemistry/physical/enthalpy.md"
+              }
+            ]
+          },
+          {
+            "slug": "entropy",
+            "name": "Entropy",
+            "tables": [
+              {
+                "name": "Second Law",
+                "order": 22,
+                "path": "chemistry/physical/second-law.md"
+              },
+              {
+                "name": "Free Energy",
+                "order": 23,
+                "path": "chemistry/physical/free-energy.md"
+              }
+            ]
+          },
+          {
+            "slug": "electrochemistry",
+            "name": "Electrochemistry",
+            "tables": [
+              {
+                "name": "Galvanic Cell",
+                "order": 24,
+                "path": "chemistry/physical/galvanic-cell.md"
+              },
+              {
+                "name": "Equilibrium",
+                "order": 25,
+                "path": "chemistry/physical/electrochemistry-equilibrium.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "organic",
+        "name": "Organic",
+        "topics": [
+          {
+            "slug": "structure",
+            "name": "Structure",
+            "tables": [
+              {
+                "name": "Organic Chemistry",
+                "order": 1,
+                "path": "chemistry/organic/organic-chemistry.md"
+              },
+              {
+                "name": "Conformations",
+                "order": 2,
+                "path": "chemistry/organic/conformations.md"
+              },
+              {
+                "name": "Configurations",
+                "order": 3,
+                "path": "chemistry/organic/configurations.md"
+              }
+            ]
+          },
+          {
+            "slug": "mechanisms",
+            "name": "Mechanisms",
+            "tables": [
+              {
+                "name": "Mechanisms",
+                "order": 4,
+                "path": "chemistry/organic/mechanisms.md"
+              },
+              {
+                "name": "Thermodynamics",
+                "order": 5,
+                "path": "chemistry/organic/thermodynamics.md"
+              },
+              {
+                "name": "Kinetics",
+                "order": 6,
+                "path": "chemistry/organic/kinetics.md"
+              }
+            ]
+          },
+          {
+            "slug": "alkanes",
+            "name": "Alkanes",
+            "tables": [
+              {
+                "name": "Alkanes",
+                "order": 7,
+                "path": "chemistry/organic/alkanes.md"
+              },
+              {
+                "name": "Substitution",
+                "order": 8,
+                "path": "chemistry/organic/substitution.md"
+              }
+            ]
+          },
+          {
+            "slug": "alkenes",
+            "name": "Alkenes",
+            "tables": [
+              {
+                "name": "Alkenes",
+                "order": 9,
+                "path": "chemistry/organic/alkenes.md"
+              },
+              {
+                "name": "Synthesis",
+                "order": 10,
+                "path": "chemistry/organic/synthesis.md"
+              }
+            ]
+          },
+          {
+            "slug": "alkynes",
+            "name": "Alkynes",
+            "tables": [
+              {
+                "name": "Alkynes",
+                "order": 11,
+                "path": "chemistry/organic/alkynes.md"
+              },
+              {
+                "name": "Synthesis",
+                "order": 12,
+                "path": "chemistry/organic/alkynes-synthesis.md"
+              }
+            ]
+          },
+          {
+            "slug": "synthesis",
+            "name": "Synthesis",
+            "tables": [
+              {
+                "name": "Alcohols",
+                "order": 13,
+                "path": "chemistry/organic/alcohols.md"
+              },
+              {
+                "name": "Ethers",
+                "order": 14,
+                "path": "chemistry/organic/ethers.md"
+              },
+              {
+                "name": "Synthesis",
+                "order": 15,
+                "path": "chemistry/organic/synthesis-synthesis.md"
+              }
+            ]
+          },
+          {
+            "slug": "aromatics",
+            "name": "Aromatics",
+            "tables": [
+              {
+                "name": "Aromatics",
+                "order": 16,
+                "path": "chemistry/organic/aromatics.md"
+              },
+              {
+                "name": "Reactions",
+                "order": 17,
+                "path": "chemistry/organic/reactions.md"
+              }
+            ]
+          },
+          {
+            "slug": "spectroscopy",
+            "name": "Spectroscopy",
+            "tables": [
+              {
+                "name": "Ir",
+                "order": 18,
+                "path": "chemistry/organic/ir.md"
+              },
+              {
+                "name": "Nmr",
+                "order": 19,
+                "path": "chemistry/organic/nmr.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "inorganic",
+        "name": "Inorganic",
+        "topics": [
+          {
+            "slug": "coordination",
+            "name": "Coordination",
+            "tables": [
+              {
+                "name": "Structure",
+                "order": 1,
+                "path": "chemistry/inorganic/structure.md"
+              },
+              {
+                "name": "Isomers",
+                "order": 2,
+                "path": "chemistry/inorganic/isomers.md"
+              }
+            ]
+          },
+          {
+            "slug": "crystal-field",
+            "name": "Crystal Field",
+            "tables": [
+              {
+                "name": "Splitting",
+                "order": 3,
+                "path": "chemistry/inorganic/splitting.md"
+              },
+              {
+                "name": "Stabilization",
+                "order": 4,
+                "path": "chemistry/inorganic/stabilization.md"
+              }
+            ]
+          },
+          {
+            "slug": "mechanisms",
+            "name": "Mechanisms",
+            "tables": [
+              {
+                "name": "Merchanisms",
+                "order": 5,
+                "path": "chemistry/inorganic/merchanisms.md"
+              },
+              {
+                "name": "Applications",
+                "order": 6,
+                "path": "chemistry/inorganic/applications.md"
+              }
+            ]
+          },
+          {
+            "slug": "solids",
+            "name": "Solids",
+            "tables": [
+              {
+                "name": "Unit Cells",
+                "order": 7,
+                "path": "chemistry/inorganic/unit-cells.md"
+              },
+              {
+                "name": "Energetics",
+                "order": 8,
+                "path": "chemistry/inorganic/energetics.md"
+              }
+            ]
+          },
+          {
+            "slug": "ideas",
+            "name": "Ideas",
+            "tables": [
+              {
+                "name": "Ideas",
+                "order": 9,
+                "path": "chemistry/inorganic/ideas.md"
+              },
+              {
+                "name": "Additional",
+                "order": 10,
+                "path": "chemistry/inorganic/additional.md"
+              }
+            ]
+          },
+          {
+            "slug": "foundation",
+            "name": "Foundation",
+            "tables": [
+              {
+                "name": "Hydrides",
+                "order": 11,
+                "path": "chemistry/inorganic/hydrides.md"
+              },
+              {
+                "name": "Anhydrides",
+                "order": 12,
+                "path": "chemistry/inorganic/anhydrides.md"
+              }
+            ]
+          },
+          {
+            "slug": "alkali",
+            "name": "Alkali",
+            "tables": [
+              {
+                "name": "Alkali",
+                "order": 13,
+                "path": "chemistry/inorganic/alkali.md"
+              },
+              {
+                "name": "Reduction Potential",
+                "order": 14,
+                "path": "chemistry/inorganic/reduction-potential.md"
+              },
+              {
+                "name": "Peroxides",
+                "order": 15,
+                "path": "chemistry/inorganic/peroxides.md"
+              }
+            ]
+          },
+          {
+            "slug": "bonds",
+            "name": "Bonds",
+            "tables": [
+              {
+                "name": "Alkaline",
+                "order": 16,
+                "path": "chemistry/inorganic/alkaline.md"
+              },
+              {
+                "name": "3a",
+                "order": 17,
+                "path": "chemistry/inorganic/3a.md"
+              },
+              {
+                "name": "4a",
+                "order": 18,
+                "path": "chemistry/inorganic/4a.md"
+              }
+            ]
+          },
+          {
+            "slug": "representative",
+            "name": "Representative",
+            "tables": [
+              {
+                "name": "Pnicogens",
+                "order": 19,
+                "path": "chemistry/inorganic/pnicogens.md"
+              },
+              {
+                "name": "Chalcogens",
+                "order": 20,
+                "path": "chemistry/inorganic/chalcogens.md"
+              },
+              {
+                "name": "Noble",
+                "order": 21,
+                "path": "chemistry/inorganic/noble.md"
+              }
+            ]
+          },
+          {
+            "slug": "halogens",
+            "name": "Halogens",
+            "tables": [
+              {
+                "name": "Halogens",
+                "order": 22,
+                "path": "chemistry/inorganic/halogens.md"
+              },
+              {
+                "name": "Halides",
+                "order": 23,
+                "path": "chemistry/inorganic/halides.md"
+              },
+              {
+                "name": "Oxoacids",
+                "order": 24,
+                "path": "chemistry/inorganic/oxoacids.md"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "biology": {
+    "slug": "biology",
+    "name": "Biology",
+    "sections": [
+      {
+        "slug": "cells",
+        "name": "Cells",
+        "topics": [
+          {
+            "slug": "macromolecules",
+            "name": "Macromolecules",
+            "tables": [
+              {
+                "name": "Macromolecules",
+                "order": 1,
+                "path": "biology/cells/macromolecules.md"
+              },
+              {
+                "name": "Enzymes",
+                "order": 2,
+                "path": "biology/cells/enzymes.md"
+              }
+            ]
+          },
+          {
+            "slug": "organelles",
+            "name": "Organelles",
+            "tables": [
+              {
+                "name": "Cells",
+                "order": 3,
+                "path": "biology/cells/cells.md"
+              },
+              {
+                "name": "Endomembrane",
+                "order": 4,
+                "path": "biology/cells/endomembrane.md"
+              },
+              {
+                "name": "Cytoskeleton",
+                "order": 5,
+                "path": "biology/cells/cytoskeleton.md"
+              }
+            ]
+          },
+          {
+            "slug": "membranes",
+            "name": "Membranes",
+            "tables": [
+              {
+                "name": "Plasma Membrane",
+                "order": 6,
+                "path": "biology/cells/plasma-membrane.md"
+              },
+              {
+                "name": "Transport",
+                "order": 7,
+                "path": "biology/cells/transport.md"
+              },
+              {
+                "name": "Communication",
+                "order": 8,
+                "path": "biology/cells/communication.md"
+              }
+            ]
+          },
+          {
+            "slug": "photosynthesis",
+            "name": "Photosynthesis",
+            "tables": [
+              {
+                "name": "Photosynthesis",
+                "order": 9,
+                "path": "biology/cells/photosynthesis.md"
+              },
+              {
+                "name": "Light",
+                "order": 10,
+                "path": "biology/cells/light.md"
+              },
+              {
+                "name": "Dark",
+                "order": 11,
+                "path": "biology/cells/dark.md"
+              }
+            ]
+          },
+          {
+            "slug": "respiration",
+            "name": "Respiration",
+            "tables": [
+              {
+                "name": "Respiration",
+                "order": 12,
+                "path": "biology/cells/respiration.md"
+              },
+              {
+                "name": "Glycolysis",
+                "order": 13,
+                "path": "biology/cells/glycolysis.md"
+              },
+              {
+                "name": "Aerobic",
+                "order": 14,
+                "path": "biology/cells/aerobic.md"
+              }
+            ]
+          },
+          {
+            "slug": "mitosis",
+            "name": "Mitosis",
+            "tables": [
+              {
+                "name": "Mitosis",
+                "order": 15,
+                "path": "biology/cells/mitosis.md"
+              },
+              {
+                "name": "Mitotic Phase",
+                "order": 16,
+                "path": "biology/cells/mitotic-phase.md"
+              },
+              {
+                "name": "Regulation",
+                "order": 17,
+                "path": "biology/cells/regulation.md"
+              }
+            ]
+          },
+          {
+            "slug": "meiosis",
+            "name": "Meiosis",
+            "tables": [
+              {
+                "name": "Meiosis",
+                "order": 18,
+                "path": "biology/cells/meiosis.md"
+              },
+              {
+                "name": "Meiosis I",
+                "order": 19,
+                "path": "biology/cells/meiosis-i.md"
+              },
+              {
+                "name": "Disorders",
+                "order": 20,
+                "path": "biology/cells/disorders.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "genetics",
+        "name": "Genetics",
+        "topics": [
+          {
+            "slug": "mendel",
+            "name": "Mendel",
+            "tables": [
+              {
+                "name": "Mendel",
+                "order": 1,
+                "path": "biology/genetics/mendel.md"
+              },
+              {
+                "name": "Inheritance",
+                "order": 2,
+                "path": "biology/genetics/inheritance.md"
+              },
+              {
+                "name": "Recessive Disorders",
+                "order": 3,
+                "path": "biology/genetics/recessive-disorders.md"
+              }
+            ]
+          },
+          {
+            "slug": "non-mendel",
+            "name": "Non Mendel",
+            "tables": [
+              {
+                "name": "Non Mendel",
+                "order": 4,
+                "path": "biology/genetics/non-mendel.md"
+              },
+              {
+                "name": "Others",
+                "order": 5,
+                "path": "biology/genetics/others.md"
+              }
+            ]
+          },
+          {
+            "slug": "replication",
+            "name": "Replication",
+            "tables": [
+              {
+                "name": "Replication",
+                "order": 6,
+                "path": "biology/genetics/replication.md"
+              },
+              {
+                "name": "Process",
+                "order": 7,
+                "path": "biology/genetics/process.md"
+              },
+              {
+                "name": "Control",
+                "order": 8,
+                "path": "biology/genetics/control.md"
+              }
+            ]
+          },
+          {
+            "slug": "expression",
+            "name": "Expression",
+            "tables": [
+              {
+                "name": "Expression",
+                "order": 9,
+                "path": "biology/genetics/expression.md"
+              },
+              {
+                "name": "Transcription",
+                "order": 10,
+                "path": "biology/genetics/transcription.md"
+              },
+              {
+                "name": "Translation",
+                "order": 11,
+                "path": "biology/genetics/translation.md"
+              }
+            ]
+          },
+          {
+            "slug": "regulation",
+            "name": "Regulation",
+            "tables": [
+              {
+                "name": "Regulation",
+                "order": 12,
+                "path": "biology/genetics/regulation.md"
+              },
+              {
+                "name": "Operons",
+                "order": 13,
+                "path": "biology/genetics/operons.md"
+              }
+            ]
+          },
+          {
+            "slug": "mutations",
+            "name": "Mutations",
+            "tables": [
+              {
+                "name": "Mutations",
+                "order": 14,
+                "path": "biology/genetics/mutations.md"
+              },
+              {
+                "name": "Genetic Variation",
+                "order": 15,
+                "path": "biology/genetics/genetic-variation.md"
+              },
+              {
+                "name": "Biotechnology",
+                "order": 16,
+                "path": "biology/genetics/biotechnology.md"
+              }
+            ]
+          },
+          {
+            "slug": "natural-selection",
+            "name": "Natural Selection",
+            "tables": [
+              {
+                "name": "Natural Selection",
+                "order": 17,
+                "path": "biology/genetics/natural-selection.md"
+              },
+              {
+                "name": "Evidence",
+                "order": 18,
+                "path": "biology/genetics/evidence.md"
+              }
+            ]
+          },
+          {
+            "slug": "phylogeny",
+            "name": "Phylogeny",
+            "tables": [
+              {
+                "name": "Tree of Life",
+                "order": 19,
+                "path": "biology/genetics/tree-of-life.md"
+              },
+              {
+                "name": "Phylogenetic Tree",
+                "order": 20,
+                "path": "biology/genetics/phylogenetic-tree.md"
+              },
+              {
+                "name": "Genomics",
+                "order": 21,
+                "path": "biology/genetics/genomics.md"
+              }
+            ]
+          },
+          {
+            "slug": "speciation",
+            "name": "Speciation",
+            "tables": [
+              {
+                "name": "Microevolution",
+                "order": 22,
+                "path": "biology/genetics/microevolution.md"
+              },
+              {
+                "name": "Speciation",
+                "order": 23,
+                "path": "biology/genetics/speciation.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "ecology",
+        "name": "Ecology",
+        "topics": [
+          {
+            "slug": "community",
+            "name": "Community",
+            "tables": [
+              {
+                "name": "Ecology",
+                "order": 1,
+                "path": "biology/ecology/ecology.md"
+              },
+              {
+                "name": "Interactions",
+                "order": 2,
+                "path": "biology/ecology/interactions.md"
+              }
+            ]
+          },
+          {
+            "slug": "population",
+            "name": "Population",
+            "tables": [
+              {
+                "name": "Population",
+                "order": 3,
+                "path": "biology/ecology/population.md"
+              },
+              {
+                "name": "Ethology",
+                "order": 4,
+                "path": "biology/ecology/ethology.md"
+              }
+            ]
+          },
+          {
+            "slug": "viruses",
+            "name": "Viruses",
+            "tables": [
+              {
+                "name": "Systematics",
+                "order": 5,
+                "path": "biology/ecology/systematics.md"
+              },
+              {
+                "name": "Viruses",
+                "order": 6,
+                "path": "biology/ecology/viruses.md"
+              },
+              {
+                "name": "Hosts",
+                "order": 7,
+                "path": "biology/ecology/hosts.md"
+              }
+            ]
+          },
+          {
+            "slug": "prokaryotes",
+            "name": "Prokaryotes",
+            "tables": [
+              {
+                "name": "Prokaryotes",
+                "order": 8,
+                "path": "biology/ecology/prokaryotes.md"
+              },
+              {
+                "name": "Diversity",
+                "order": 9,
+                "path": "biology/ecology/diversity.md"
+              }
+            ]
+          },
+          {
+            "slug": "eukaryotes",
+            "name": "Eukaryotes",
+            "tables": [
+              {
+                "name": "Eukaryotes",
+                "order": 10,
+                "path": "biology/ecology/eukaryotes.md"
+              },
+              {
+                "name": "Plants",
+                "order": 11,
+                "path": "biology/ecology/plants.md"
+              },
+              {
+                "name": "Fungi",
+                "order": 12,
+                "path": "biology/ecology/fungi.md"
+              },
+              {
+                "name": "Animals",
+                "order": 13,
+                "path": "biology/ecology/animals.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "plants",
+        "name": "Plants",
+        "topics": [
+          {
+            "slug": "growth",
+            "name": "Growth",
+            "tables": [
+              {
+                "name": "Structure",
+                "order": 1,
+                "path": "biology/plants/structure.md"
+              },
+              {
+                "name": "Growth",
+                "order": 2,
+                "path": "biology/plants/growth.md"
+              },
+              {
+                "name": "Primary",
+                "order": 3,
+                "path": "biology/plants/primary.md"
+              },
+              {
+                "name": "Secondary",
+                "order": 4,
+                "path": "biology/plants/secondary.md"
+              },
+              {
+                "name": "Layers",
+                "order": 5,
+                "path": "biology/plants/layers.md"
+              },
+              {
+                "name": "Development",
+                "order": 6,
+                "path": "biology/plants/development.md"
+              }
+            ]
+          },
+          {
+            "slug": "transport",
+            "name": "Transport",
+            "tables": [
+              {
+                "name": "Transport",
+                "order": 7,
+                "path": "biology/plants/transport.md"
+              },
+              {
+                "name": "Water",
+                "order": 8,
+                "path": "biology/plants/water.md"
+              },
+              {
+                "name": "Sugar",
+                "order": 9,
+                "path": "biology/plants/sugar.md"
+              }
+            ]
+          },
+          {
+            "slug": "nutrition",
+            "name": "Nutrition",
+            "tables": [
+              {
+                "name": "Nutrition",
+                "order": 10,
+                "path": "biology/plants/nutrition.md"
+              },
+              {
+                "name": "Adaptations",
+                "order": 11,
+                "path": "biology/plants/adaptations.md"
+              }
+            ]
+          },
+          {
+            "slug": "reproduction",
+            "name": "Reproduction",
+            "tables": [
+              {
+                "name": "Sexual",
+                "order": 12,
+                "path": "biology/plants/sexual.md"
+              },
+              {
+                "name": "Asexual",
+                "order": 13,
+                "path": "biology/plants/asexual.md"
+              }
+            ]
+          },
+          {
+            "slug": "behaviour",
+            "name": "Behaviour",
+            "tables": [
+              {
+                "name": "Behaviour",
+                "order": 14,
+                "path": "biology/plants/behaviour.md"
+              },
+              {
+                "name": "Stimuli",
+                "order": 15,
+                "path": "biology/plants/stimuli.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "animals",
+        "name": "Animals",
+        "topics": [
+          {
+            "slug": "endocrine",
+            "name": "Endocrine",
+            "tables": [
+              {
+                "name": "Structure",
+                "order": 1,
+                "path": "biology/animals/structure.md"
+              },
+              {
+                "name": "Homeostasis",
+                "order": 2,
+                "path": "biology/animals/homeostasis.md"
+              },
+              {
+                "name": "Endocrine",
+                "order": 3,
+                "path": "biology/animals/endocrine.md"
+              }
+            ]
+          },
+          {
+            "slug": "digestive",
+            "name": "Digestive",
+            "tables": [
+              {
+                "name": "Digestive",
+                "order": 4,
+                "path": "biology/animals/digestive.md"
+              },
+              {
+                "name": "Stages",
+                "order": 5,
+                "path": "biology/animals/stages.md"
+              }
+            ]
+          },
+          {
+            "slug": "transport",
+            "name": "Transport",
+            "tables": [
+              {
+                "name": "Circulatory",
+                "order": 6,
+                "path": "biology/animals/circulatory.md"
+              },
+              {
+                "name": "Respiratory",
+                "order": 7,
+                "path": "biology/animals/respiratory.md"
+              }
+            ]
+          },
+          {
+            "slug": "excretory",
+            "name": "Excretory",
+            "tables": [
+              {
+                "name": "Excretory",
+                "order": 8,
+                "path": "biology/animals/excretory.md"
+              },
+              {
+                "name": "Stages",
+                "order": 9,
+                "path": "biology/animals/excretory-stages.md"
+              }
+            ]
+          },
+          {
+            "slug": "reproductive",
+            "name": "Reproductive",
+            "tables": [
+              {
+                "name": "Gestation",
+                "order": 10,
+                "path": "biology/animals/gestation.md"
+              },
+              {
+                "name": "Development",
+                "order": 11,
+                "path": "biology/animals/development.md"
+              }
+            ]
+          },
+          {
+            "slug": "immune",
+            "name": "Immune",
+            "tables": [
+              {
+                "name": "Immune",
+                "order": 12,
+                "path": "biology/animals/immune.md"
+              },
+              {
+                "name": "Adaptive",
+                "order": 13,
+                "path": "biology/animals/adaptive.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "neuroscience",
+        "name": "Neuroscience",
+        "topics": [
+          {
+            "slug": "nervous",
+            "name": "Nervous",
+            "tables": [
+              {
+                "name": "Nervous",
+                "order": 1,
+                "path": "biology/neuroscience/nervous.md"
+              },
+              {
+                "name": "Brain",
+                "order": 2,
+                "path": "biology/neuroscience/brain.md"
+              }
+            ]
+          },
+          {
+            "slug": "cognition",
+            "name": "Cognition",
+            "tables": [
+              {
+                "name": "Cerebral Cortex",
+                "order": 3,
+                "path": "biology/neuroscience/cerebral-cortex.md"
+              },
+              {
+                "name": "Cognition",
+                "order": 4,
+                "path": "biology/neuroscience/cognition.md"
+              },
+              {
+                "name": "Function",
+                "order": 5,
+                "path": "biology/neuroscience/function.md"
+              }
+            ]
+          },
+          {
+            "slug": "neurons",
+            "name": "Neurons",
+            "tables": [
+              {
+                "name": "Signal",
+                "order": 6,
+                "path": "biology/neuroscience/signal.md"
+              },
+              {
+                "name": "Integration",
+                "order": 7,
+                "path": "biology/neuroscience/integration.md"
+              }
+            ]
+          },
+          {
+            "slug": "receptors",
+            "name": "Receptors",
+            "tables": [
+              {
+                "name": "Receptors",
+                "order": 8,
+                "path": "biology/neuroscience/receptors.md"
+              },
+              {
+                "name": "Hearing",
+                "order": 9,
+                "path": "biology/neuroscience/hearing.md"
+              },
+              {
+                "name": "Balance",
+                "order": 10,
+                "path": "biology/neuroscience/balance.md"
+              }
+            ]
+          },
+          {
+            "slug": "senses",
+            "name": "Senses",
+            "tables": [
+              {
+                "name": "Vision",
+                "order": 11,
+                "path": "biology/neuroscience/vision.md"
+              },
+              {
+                "name": "Taste",
+                "order": 12,
+                "path": "biology/neuroscience/taste.md"
+              },
+              {
+                "name": "Smell",
+                "order": 13,
+                "path": "biology/neuroscience/smell.md"
+              }
+            ]
+          },
+          {
+            "slug": "motor",
+            "name": "Motor",
+            "tables": [
+              {
+                "name": "Muscles",
+                "order": 14,
+                "path": "biology/neuroscience/muscles.md"
+              },
+              {
+                "name": "Skeleton",
+                "order": 15,
+                "path": "biology/neuroscience/skeleton.md"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "astronomy": {
+    "slug": "astronomy",
+    "name": "Astronomy",
+    "sections": [
+      {
+        "slug": "observations",
+        "name": "Observations",
+        "topics": [
+          {
+            "slug": "constellations",
+            "name": "Constellations",
+            "tables": [
+              {
+                "name": "Location",
+                "order": 1,
+                "path": "astronomy/observations/location.md"
+              },
+              {
+                "name": "Sky Chart",
+                "order": 2,
+                "path": "astronomy/observations/sky-chart.md"
+              },
+              {
+                "name": "Nomenclature",
+                "order": 3,
+                "path": "astronomy/observations/nomenclature.md"
+              }
+            ]
+          },
+          {
+            "slug": "telescopes",
+            "name": "Telescopes",
+            "tables": [
+              {
+                "name": "Camera",
+                "order": 4,
+                "path": "astronomy/observations/camera.md"
+              },
+              {
+                "name": "Telescope",
+                "order": 5,
+                "path": "astronomy/observations/telescope.md"
+              },
+              {
+                "name": "Magnitude",
+                "order": 6,
+                "path": "astronomy/observations/magnitude.md"
+              },
+              {
+                "name": "Magnification",
+                "order": 7,
+                "path": "astronomy/observations/magnification.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "coordinates",
+        "name": "Coordinates",
+        "topics": [
+          {
+            "slug": "geometry",
+            "name": "Geometry",
+            "tables": [
+              {
+                "name": "Spheres",
+                "order": 1,
+                "path": "astronomy/coordinates/spheres.md"
+              },
+              {
+                "name": "Earth",
+                "order": 2,
+                "path": "astronomy/coordinates/earth.md"
+              }
+            ]
+          },
+          {
+            "slug": "local",
+            "name": "Local",
+            "tables": [
+              {
+                "name": "Horizontal",
+                "order": 3,
+                "path": "astronomy/coordinates/horizontal.md"
+              },
+              {
+                "name": "Local Equatorial",
+                "order": 4,
+                "path": "astronomy/coordinates/local-equatorial.md"
+              }
+            ]
+          },
+          {
+            "slug": "conversions",
+            "name": "Conversions",
+            "tables": [
+              {
+                "name": "Observational",
+                "order": 5,
+                "path": "astronomy/coordinates/observational.md"
+              },
+              {
+                "name": "General",
+                "order": 6,
+                "path": "astronomy/coordinates/general.md"
+              }
+            ]
+          },
+          {
+            "slug": "celestial",
+            "name": "Celestial",
+            "tables": [
+              {
+                "name": "Equatorial",
+                "order": 7,
+                "path": "astronomy/coordinates/equatorial.md"
+              },
+              {
+                "name": "Ecliptical",
+                "order": 8,
+                "path": "astronomy/coordinates/ecliptical.md"
+              },
+              {
+                "name": "Galactic",
+                "order": 9,
+                "path": "astronomy/coordinates/galactic.md"
+              }
+            ]
+          },
+          {
+            "slug": "time",
+            "name": "Time",
+            "tables": [
+              {
+                "name": "Time",
+                "order": 10,
+                "path": "astronomy/coordinates/time.md"
+              },
+              {
+                "name": "Day",
+                "order": 11,
+                "path": "astronomy/coordinates/day.md"
+              },
+              {
+                "name": "Month",
+                "order": 12,
+                "path": "astronomy/coordinates/month.md"
+              },
+              {
+                "name": "Year",
+                "order": 13,
+                "path": "astronomy/coordinates/year.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "mechanics",
+        "name": "Mechanics",
+        "topics": [
+          {
+            "slug": "orbits",
+            "name": "Orbits",
+            "tables": [
+              {
+                "name": "Orbits",
+                "order": 1,
+                "path": "astronomy/mechanics/orbits.md"
+              },
+              {
+                "name": "Energy",
+                "order": 2,
+                "path": "astronomy/mechanics/energy.md"
+              }
+            ]
+          },
+          {
+            "slug": "kepler",
+            "name": "Kepler",
+            "tables": [
+              {
+                "name": "Reduced Mass",
+                "order": 3,
+                "path": "astronomy/mechanics/reduced-mass.md"
+              },
+              {
+                "name": "Ellipse",
+                "order": 4,
+                "path": "astronomy/mechanics/ellipse.md"
+              },
+              {
+                "name": "Sweep",
+                "order": 5,
+                "path": "astronomy/mechanics/sweep.md"
+              },
+              {
+                "name": "Period",
+                "order": 6,
+                "path": "astronomy/mechanics/period.md"
+              }
+            ]
+          },
+          {
+            "slug": "maneuvers",
+            "name": "Maneuvers",
+            "tables": [
+              {
+                "name": "Rocket",
+                "order": 7,
+                "path": "astronomy/mechanics/rocket.md"
+              },
+              {
+                "name": "Oberth",
+                "order": 8,
+                "path": "astronomy/mechanics/oberth.md"
+              },
+              {
+                "name": "Hohmann",
+                "order": 9,
+                "path": "astronomy/mechanics/hohmann.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "solar-system",
+        "name": "Solar System",
+        "topics": [
+          {
+            "slug": "planets",
+            "name": "Planets",
+            "tables": [
+              {
+                "name": "History",
+                "order": 1,
+                "path": "astronomy/solar-system/history.md"
+              },
+              {
+                "name": "Planets",
+                "order": 2,
+                "path": "astronomy/solar-system/planets.md"
+              }
+            ]
+          },
+          {
+            "slug": "earth",
+            "name": "Earth",
+            "tables": [
+              {
+                "name": "Earth",
+                "order": 3,
+                "path": "astronomy/solar-system/earth.md"
+              },
+              {
+                "name": "Aberration",
+                "order": 4,
+                "path": "astronomy/solar-system/aberration.md"
+              },
+              {
+                "name": "Parallax",
+                "order": 5,
+                "path": "astronomy/solar-system/parallax.md"
+              }
+            ]
+          },
+          {
+            "slug": "moon",
+            "name": "Moon",
+            "tables": [
+              {
+                "name": "Distortions",
+                "order": 6,
+                "path": "astronomy/solar-system/distortions.md"
+              },
+              {
+                "name": "Orbit",
+                "order": 7,
+                "path": "astronomy/solar-system/orbit.md"
+              },
+              {
+                "name": "Eclipse",
+                "order": 8,
+                "path": "astronomy/solar-system/eclipse.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "stars",
+        "name": "Stars",
+        "topics": [
+          {
+            "slug": "radiation",
+            "name": "Radiation",
+            "tables": [
+              {
+                "name": "Orbits",
+                "order": 1,
+                "path": "astronomy/stars/orbits.md"
+              },
+              {
+                "name": "Spectral Lines",
+                "order": 2,
+                "path": "astronomy/stars/spectral-lines.md"
+              },
+              {
+                "name": "Blackbody",
+                "order": 3,
+                "path": "astronomy/stars/blackbody.md"
+              },
+              {
+                "name": "Planet",
+                "order": 4,
+                "path": "astronomy/stars/planet.md"
+              }
+            ]
+          },
+          {
+            "slug": "brightness",
+            "name": "Brightness",
+            "tables": [
+              {
+                "name": "Magnitude",
+                "order": 5,
+                "path": "astronomy/stars/magnitude.md"
+              },
+              {
+                "name": "Temperature",
+                "order": 6,
+                "path": "astronomy/stars/temperature.md"
+              }
+            ]
+          },
+          {
+            "slug": "mass",
+            "name": "Mass",
+            "tables": [
+              {
+                "name": "Size",
+                "order": 7,
+                "path": "astronomy/stars/size.md"
+              },
+              {
+                "name": "Mass",
+                "order": 8,
+                "path": "astronomy/stars/mass.md"
+              }
+            ]
+          },
+          {
+            "slug": "relations",
+            "name": "Relations",
+            "tables": [
+              {
+                "name": "Relations",
+                "order": 9,
+                "path": "astronomy/stars/relations.md"
+              },
+              {
+                "name": "Exoplanets",
+                "order": 10,
+                "path": "astronomy/stars/exoplanets.md"
+              }
+            ]
+          },
+          {
+            "slug": "atmosphere",
+            "name": "Atmosphere",
+            "tables": [
+              {
+                "name": "Atmosphere",
+                "order": 11,
+                "path": "astronomy/stars/atmosphere.md"
+              },
+              {
+                "name": "Temperature",
+                "order": 12,
+                "path": "astronomy/stars/atmosphere-temperature.md"
+              },
+              {
+                "name": "Luminosity",
+                "order": 13,
+                "path": "astronomy/stars/luminosity.md"
+              }
+            ]
+          },
+          {
+            "slug": "interior",
+            "name": "Interior",
+            "tables": [
+              {
+                "name": "Temperature",
+                "order": 14,
+                "path": "astronomy/stars/interior-temperature.md"
+              },
+              {
+                "name": "Transport",
+                "order": 15,
+                "path": "astronomy/stars/transport.md"
+              },
+              {
+                "name": "Generation",
+                "order": 16,
+                "path": "astronomy/stars/generation.md"
+              },
+              {
+                "name": "Interstellar",
+                "order": 17,
+                "path": "astronomy/stars/interstellar.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "cosmology",
+        "name": "Cosmology",
+        "topics": [
+          {
+            "slug": "evolution",
+            "name": "Evolution",
+            "tables": [
+              {
+                "name": "Formation",
+                "order": 1,
+                "path": "astronomy/cosmology/formation.md"
+              },
+              {
+                "name": "Evolution",
+                "order": 2,
+                "path": "astronomy/cosmology/evolution.md"
+              }
+            ]
+          },
+          {
+            "slug": "remnants",
+            "name": "Remnants",
+            "tables": [
+              {
+                "name": "Remnants",
+                "order": 3,
+                "path": "astronomy/cosmology/remnants.md"
+              },
+              {
+                "name": "White Dwarf",
+                "order": 4,
+                "path": "astronomy/cosmology/white-dwarf.md"
+              },
+              {
+                "name": "Neutron Star",
+                "order": 5,
+                "path": "astronomy/cosmology/neutron-star.md"
+              },
+              {
+                "name": "Black Hole",
+                "order": 6,
+                "path": "astronomy/cosmology/black-hole.md"
+              },
+              {
+                "name": "Variables",
+                "order": 7,
+                "path": "astronomy/cosmology/variables.md"
+              }
+            ]
+          },
+          {
+            "slug": "galaxies",
+            "name": "Galaxies",
+            "tables": [
+              {
+                "name": "Milky Way",
+                "order": 8,
+                "path": "astronomy/cosmology/milky-way.md"
+              },
+              {
+                "name": "Classification",
+                "order": 9,
+                "path": "astronomy/cosmology/classification.md"
+              }
+            ]
+          },
+          {
+            "slug": "active-nucleus",
+            "name": "Active Nucleus",
+            "tables": [
+              {
+                "name": "Active Galaxies",
+                "order": 10,
+                "path": "astronomy/cosmology/active-galaxies.md"
+              },
+              {
+                "name": "Clusters",
+                "order": 11,
+                "path": "astronomy/cosmology/clusters.md"
+              }
+            ]
+          },
+          {
+            "slug": "universe",
+            "name": "Universe",
+            "tables": [
+              {
+                "name": "Universe",
+                "order": 12,
+                "path": "astronomy/cosmology/universe.md"
+              },
+              {
+                "name": "Scale Factor",
+                "order": 13,
+                "path": "astronomy/cosmology/scale-factor.md"
+              },
+              {
+                "name": "Friedmann",
+                "order": 14,
+                "path": "astronomy/cosmology/friedmann.md"
+              },
+              {
+                "name": "History",
+                "order": 15,
+                "path": "astronomy/cosmology/history.md"
+              },
+              {
+                "name": "Acceleration",
+                "order": 16,
+                "path": "astronomy/cosmology/acceleration.md"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
