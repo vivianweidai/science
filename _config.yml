@@ -3,6 +3,19 @@ description: Mathematics Computing Physics Chemistry Biology Astronomy
 baseurl: ""
 plugins: []
 
+# Keep Jekyll's scan small — the full repo has ~500MB of raw research data
+# and an iOS app sibling tree that don't need to be in _site.
+exclude:
+  - apple/
+  - .wrangler/
+  - CLAUDE.md
+  - MIGRATION.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - node_modules/
+
 defaults:
   - scope:
       path: "curriculum"
