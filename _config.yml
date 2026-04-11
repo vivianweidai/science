@@ -3,8 +3,7 @@ description: Mathematics Computing Physics Chemistry Biology Astronomy
 baseurl: ""
 plugins: []
 
-# DEBUG: temporarily excluding research/ to see if the build succeeds
-# without the 477MB tree. If yes, we know the problem is in there.
+# Keep Jekyll's scan small — apple/ is iOS source, the rest is dev cruft.
 exclude:
   - apple/
   - .wrangler/
@@ -15,10 +14,14 @@ exclude:
   - Gemfile.lock
   - vendor/
   - node_modules/
-  - research/
 
+# Curriculum markdown contains LaTeX math with `{{...}}` sequences that
+# Jekyll's Liquid parser mis-interprets as variable syntax (fatal error in
+# parallax.md etc.). Skip Liquid rendering for the whole curriculum tree.
+# type: pages is required here — a bare path scope was silently ignored.
 defaults:
   - scope:
       path: "curriculum"
+      type: pages
     values:
       render_with_liquid: false
