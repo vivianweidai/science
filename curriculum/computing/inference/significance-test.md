@@ -4,7 +4,6 @@ section: Inference
 topic: Significance Test
 table: Significance Test
 order: 3
-render_with_liquid: false
 ---
 
 # Significance Test
