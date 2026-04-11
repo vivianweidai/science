@@ -1,17 +1,18 @@
 // Cloudflare Pages Function — sole API handler for the science app.
 // Routes:
-//   GET    /api/olympiads            → list all olympiads
-//   POST   /api/olympiads            → insert one
-//   PATCH  /api/olympiads/:id        → update finished/highlighted
-//   DELETE /api/olympiads/:id        → remove one
-//   GET    /api/textbooks            → list all textbooks
-//   POST   /api/textbooks            → insert one
-//   PATCH  /api/textbooks/:id        → update finished/highlighted
-//   DELETE /api/textbooks/:id        → remove one
+//   GET    /api/olympiads                  → list all olympiads       (public)
+//   GET    /api/textbooks                  → list all textbooks       (public)
+//   POST   /api/admin/olympiads            → insert one               (auth)
+//   PATCH  /api/admin/olympiads/:id        → update finished/highlighted (auth)
+//   DELETE /api/admin/olympiads/:id        → remove one               (auth)
+//   POST   /api/admin/textbooks            → insert one               (auth)
+//   PATCH  /api/admin/textbooks/:id        → update finished/highlighted (auth)
+//   DELETE /api/admin/textbooks/:id        → remove one               (auth)
 //
-// Writes require Cloudflare Access — the Function only checks that a
-// CF-Access-Authenticated-User-Email header is present. Access itself
-// enforces identity at the edge.
+// Admin routes live under /api/admin/* so Cloudflare Access can gate
+// the whole prefix without affecting public reads at /api/*. Access
+// injects CF-Access-Authenticated-User-Email once identity is proven;
+// this handler double-checks the header as defense in depth.
 
 const JSON_HEADERS = {
   "content-type": "application/json",
@@ -92,14 +93,22 @@ async function deleteRow(db, table, id) {
 export const onRequest = async (context) => {
   const { request, env } = context;
   const url = new URL(request.url);
-  const parts = url.pathname.replace(/^\/api\/?/, "").split("/").filter(Boolean);
+  const rest = url.pathname.replace(/^\/api\/?/, "");
+  const isAdmin = rest.startsWith("admin/") || rest === "admin";
+  const tail = isAdmin ? rest.replace(/^admin\/?/, "") : rest;
+  const parts = tail.split("/").filter(Boolean);
   const [resource, maybeId] = parts;
 
   if (!env.DB) return bad("DB binding not configured", 500);
   if (resource !== "olympiads" && resource !== "textbooks") return bad("not found", 404);
 
-  if (request.method === "GET") return listTable(env.DB, resource);
+  // Public read path
+  if (!isAdmin) {
+    if (request.method === "GET") return listTable(env.DB, resource);
+    return bad("writes must use /api/admin/*", 405);
+  }
 
+  // Admin path — gated by Cloudflare Access
   const email = requireAuth(request);
   if (!email) return bad("unauthorized", 401);
 
