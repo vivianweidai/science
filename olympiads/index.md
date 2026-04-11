@@ -6,6 +6,8 @@ layout: default
 
 <img src="../archives/IMAGES/olympiads.jpeg" alt="Olympiads" width="100%">
 
+### Contests
+
 <div class="tabs">
   <input type="radio" name="oly" id="oly-math">
   <input type="radio" name="oly" id="oly-comp">
@@ -109,7 +111,7 @@ layout: default
   </div>
 </div>
 
-## Textbooks
+### Textbooks
 
 <div class="tabs">
   <input type="radio" name="tab" id="tab-math">
@@ -138,11 +140,16 @@ layout: default
       <tr><td>Future</td><td>The Art of Problem Solving Math Worldwide Online Olympiad Training B</td></tr>
       <tr class="highlight"><td>June 2026</td><td>Euclidean Geometry in Mathematical Olympiads by Evan Chen</td></tr>
       <tr class="highlight"><td>June 2026</td><td>AwesomeMath Summer Program</td></tr>
+      <tr class="highlight"><td>December 2025</td><td>Calculus: Early Transcendentals by James Stewart</td></tr>
       <tr><td><s>November 2025</s></td><td><s>Athemath Women in Math Online Social Network</s></td></tr>
       <tr><td><s>September 2025</s></td><td><s>The Art of Problem Solving American Mathematics Competition 12 Series</s></td></tr>
       <tr><td><s>July 2025</s></td><td><s>MathPath Summer Camp at Mount Holyoke College</s></td></tr>
+      <tr><td><s>May 2025</s></td><td><s>Advanced Placement Calculus BC Exam</s></td></tr>
       <tr><td><s>July 2024</s></td><td><s>MathPath Summer Camp at Rockhurst University</s></td></tr>
+      <tr><td><s>May 2024</s></td><td><s>Advanced Placement Precalculus Exam</s></td></tr>
       <tr class="highlight"><td>May 2024</td><td>The Art of Problem Solving Book Series by Richard Rusczyk et al</td></tr>
+      <tr><td><s>May 2024</s></td><td><s>The Art of Problem Solving by Richard Rusczyk et al</s></td></tr>
+      <tr class="highlight"><td>September 2023</td><td>Precalculus Mathematics in a Nutshell by George F. Simmons</td></tr>
     </table>
   </div>
 
@@ -150,6 +157,7 @@ layout: default
     <table>
       <tr><th>Date</th><th>Textbook</th></tr>
       <tr><td>Future</td><td>The Art of Problem Solving Code Worldwide Online Olympiad Training</td></tr>
+      <tr><td>May 2026</td><td>Advanced Placement Statistics Exam</td></tr>
       <tr><td>June 2026</td><td>Introduction to Machine Learning by Etienne Bernard</td></tr>
       <tr><td>June 2026</td><td>Introduction to Machine Learning with Python by Andreas Müller and Sarah Guido</td></tr>
       <tr><td>June 2026</td><td>Deep Learning for Coders with fastai and PyTorch by Jeremy Howard and Sylvain Gugger</td></tr>
@@ -158,7 +166,11 @@ layout: default
       <tr><td><s>January 2026</s></td><td><s>Puzzles in Logic, Languages and Computation: the Red book by Dragomir Radev</s></td></tr>
       <tr><td><s>January 2026</s></td><td><s>Puzzles in Logic, Languages and Computation: the Green book by Dragomir Radev</s></td></tr>
       <tr class="highlight"><td>December 2025</td><td>Linguistics Olympiad: Training Guide - the Yellow book by Vlad A. Neacșu</td></tr>
+      <tr><td><s>May 2025</s></td><td><s>Advanced Placement Statistics Exam</s></td></tr>
+      <tr><td><s>May 2025</s></td><td><s>Advanced Placement Computer Science A Exam</s></td></tr>
       <tr><td><s>January 2025</s></td><td><s>The Art of Problem Solving USACO Bronze Series</s></td></tr>
+      <tr><td><s>May 2024</s></td><td><s>Advanced Placement Computer Science A Exam</s></td></tr>
+      <tr><td><s>May 2024</s></td><td><s>Advanced Placement Computer Science Principles Exam</s></td></tr>
     </table>
   </div>
 
@@ -168,8 +180,19 @@ layout: default
       <tr><td>Future</td><td>The Feynman Lectures on Physics by Richard Feynman</td></tr>
       <tr><td>Future</td><td>The Art of Problem Solving Physics Worldwide Online Olympiad Training A</td></tr>
       <tr><td>Future</td><td>The Art of Problem Solving Physics Worldwide Online Olympiad Training B</td></tr>
+      <tr><td>May 2026</td><td>Advanced Placement Physics 2 Exam</td></tr>
+      <tr><td>May 2026</td><td>Advanced Placement Physics C: Electricity and Magnetism Exam</td></tr>
       <tr class="highlight"><td>December 2025</td><td><a href="https://knzhou.github.io" target="_blank">Physics Olympiad Handouts</a> by Kevin Zhou</td></tr>
+      <tr><td><s>December 2025</s></td><td><s>Physics: Principles with Applications by Douglas C. Giancoli</s></td></tr>
+      <tr><td><s>December 2025</s></td><td><s>Physics by Halliday, Resnick and Krane</s></td></tr>
+      <tr><td><s>May 2025</s></td><td><s>Advanced Placement Physics 1 Exam</s></td></tr>
+      <tr><td><s>May 2025</s></td><td><s>Advanced Placement Physics 2 Exam</s></td></tr>
+      <tr><td><s>May 2025</s></td><td><s>Advanced Placement Physics C: Mechanics Exam</s></td></tr>
+      <tr><td><s>May 2025</s></td><td><s>Advanced Placement Physics C: Electricity and Magnetism Exam</s></td></tr>
       <tr><td><s>March 2025</s></td><td><s>The Art of Problem Solving Physics F=ma Series</s></td></tr>
+      <tr class="highlight"><td>May 2024</td><td>University Physics by Richard Wolfson</td></tr>
+      <tr><td><s>May 2024</s></td><td><s>Advanced Placement Physics 1 Exam</s></td></tr>
+      <tr><td><s>March 2024</s></td><td><s>Johns Hopkins University Center for Talented Youth AP Physics 1</s></td></tr>
     </table>
   </div>
 
@@ -178,6 +201,7 @@ layout: default
       <tr><th>Date</th><th>Textbook</th></tr>
       <tr><td>January 2027</td><td><a href="https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1093165" target="_blank">Chemistry 342</a> Organic Chemistry B Organic Chemistry by Paula Yurkanis Bruice</td></tr>
       <tr><td>September 2026</td><td><a href="https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1093164" target="_blank">Chemistry 341</a> Organic Chemistry A Organic Chemistry by Paula Yurkanis Bruice</td></tr>
+      <tr><td>May 2026</td><td>Advanced Placement Chemistry Exam</td></tr>
       <tr><td>May 2026</td><td>British Columbia Chemistry Olympiad</td></tr>
       <tr><td>May 2026</td><td>Atkins' Physical Chemistry by Peter Atkins, Julio de Paula and James Keeler</td></tr>
       <tr><td>May 2026</td><td>Organic Chemistry by Jonathan Clayden, Nick Greeves and Stuart Warren</td></tr>
@@ -187,10 +211,15 @@ layout: default
       <tr class="highlight"><td>February 2026</td><td>Organic Chemistry as a Second Language by David Klein</td></tr>
       <tr><td><s>January 2026</s></td><td><s>The Art of Problem Solving Chemistry Worldwide Online Olympiad Training B</s></td></tr>
       <tr><td><s>January 2026</s></td><td><s>The Art of Problem Solving Chemistry Worldwide Online Olympiad Training A</s></td></tr>
+      <tr><td><s>December 2025</s></td><td><s>Chemical Principles: The Quest for Insight by Peter Atkins</s></td></tr>
       <tr><td><s>May 2025</s></td><td><s>British Columbia Chemistry Olympiad</s></td></tr>
+      <tr><td><s>May 2025</s></td><td><s>Advanced Placement Chemistry Exam</s></td></tr>
       <tr><td><s>April 2025</s></td><td><s>Washington University Chemistry Tournament</s></td></tr>
+      <tr class="highlight"><td>April 2025</td><td>Chemistry by Zumdahl and Zumdahl</td></tr>
       <tr><td><s>March 2025</s></td><td><s>University of California Berkeley Chemistry Tournament</s></td></tr>
       <tr><td><s>May 2024</s></td><td><s>British Columbia Chemistry Olympiad</s></td></tr>
+      <tr><td><s>May 2024</s></td><td><s>Advanced Placement Chemistry Exam</s></td></tr>
+      <tr><td><s>March 2024</s></td><td><s>Johns Hopkins University Center for Talented Youth AP Chemistry</s></td></tr>
     </table>
   </div>
 
@@ -198,7 +227,13 @@ layout: default
     <table>
       <tr><th>Date</th><th>Textbook</th></tr>
       <tr><td>Future</td><td>The USA Biology Olympiad Semifinal Exams Worked Solutions by Martyna Petrulyte</td></tr>
+      <tr><td>May 2026</td><td>Advanced Placement Biology Exam</td></tr>
+      <tr class="highlight"><td>May 2025</td><td>Biology: A Global Approach by Neil A. Campbell</td></tr>
+      <tr><td><s>May 2025</s></td><td><s>Advanced Placement Psychology Exam</s></td></tr>
+      <tr><td><s>May 2025</s></td><td><s>Advanced Placement Biology Exam</s></td></tr>
+      <tr><td><s>May 2024</s></td><td><s>Advanced Placement Biology Exam</s></td></tr>
       <tr class="highlight"><td>March 2024</td><td>The USA Biology Olympiad Open Exam Exams Worked Solutions by Martyna Petrulyte</td></tr>
+      <tr><td><s>March 2024</s></td><td><s>Johns Hopkins University Center for Talented Youth AP Biology</s></td></tr>
     </table>
   </div>
 
@@ -208,6 +243,9 @@ layout: default
       <tr><td>January 2027</td><td><a href="https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1092619" target="_blank">Astronomy 410</a> Astrophysics Astrophysics in a Nutshell by Dan Maoz</td></tr>
       <tr><td>September 2026</td><td><a href="https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1092618" target="_blank">Astronomy 310</a> Astrophysics Measurements To Measure the Sky by Frederick R. Chromey</td></tr>
       <tr class="highlight"><td>March 2026</td><td>Foundations of Astrophysics by Barbara Ryden and Bradley Peterson</td></tr>
+      <tr><td><s>August 2024</s></td><td><s>Fundamental Astronomy by Hannu Karttunen et al</s></td></tr>
+      <tr><td><s>July 2024</s></td><td><s>Everaise Academy: Astronomy by Je Qin Chooi and Gregory Pylypovych</s></td></tr>
+      <tr><td><s>June 2024</s></td><td><s>Fundamentals of Astronomy: A Guide for Olympiads by Flavio Salvati</s></td></tr>
     </table>
   </div>
 </div>
