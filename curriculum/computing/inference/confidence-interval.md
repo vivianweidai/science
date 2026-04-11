@@ -4,6 +4,7 @@ section: Inference
 topic: Confidence Interval
 table: Confidence Interval
 order: 2
+render_with_liquid: false
 ---
 
 # Confidence Interval
