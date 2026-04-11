@@ -8,4 +8,4 @@ pages_build_output_dir = "_site"
 [[d1_databases]]
 binding = "DB"
 database_name = "science"
-database_id = "REPLACE_WITH_DATABASE_ID"
+database_id = "682188ef-02e1-47f0-8776-3d4ab4979750"
