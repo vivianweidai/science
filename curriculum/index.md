@@ -4,17 +4,6 @@ layout: default
 
 ## Curriculum
 
-<img src="../archives/IMAGES/curriculum.png" alt="Curriculum" width="100%">
-
-<div class="nav-links">
-  <a href="/archives/NOTES/mathematics.pdf">Mathematics</a>
-  <a href="/archives/NOTES/computing.pdf">Computing</a>
-  <a href="/archives/NOTES/physics.pdf">Physics</a>
-  <a href="/archives/NOTES/chemistry.pdf">Chemistry</a>
-  <a href="/archives/NOTES/biology.pdf">Biology</a>
-  <a href="/archives/NOTES/astronomy.pdf">Astronomy</a>
-</div>
-
 <link rel="stylesheet" href="/archives/CSS/curriculum.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 
