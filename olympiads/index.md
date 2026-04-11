@@ -4,8 +4,6 @@ layout: default
 
 ## Olympiads
 
-<img src="../archives/IMAGES/olympiads.jpeg" alt="Olympiads" width="100%">
-
 ### Contests
 
 <div class="tabs">
@@ -110,6 +108,8 @@ layout: default
     </table>
   </div>
 </div>
+
+<img src="../archives/IMAGES/olympiads.jpeg" alt="Olympiads" width="100%">
 
 ### Textbooks
 
