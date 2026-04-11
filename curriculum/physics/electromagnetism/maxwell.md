@@ -8,9 +8,10 @@ order: 13
 
 # Maxwell
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| Gauss | $\oint E \cdot dA = \frac{q}{\epsilon_{0}}$ | charge makes electric field |
-| Ampere | $\oint B \cdot dl = \mu_{0}I$ | current makes magnetic field |
-| Ampere | $\oint B \cdot dl = \mu_{0}\epsilon_{0}\frac{d\Phi_{E}}{dt}$ | changing magnetic $\rightarrow$ electric |
-| Faraday | $\oint E \cdot dl = - \frac{d\Phi_{B}}{dt}$ | changing electric $\rightarrow$ magnetic |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>Gauss</td><td>$\oint E \cdot dA = \frac{q}{\epsilon_{0}}$</td><td>charge makes electric field</td></tr>
+<tr class="highlight"><td>Ampere</td><td>$\oint B \cdot dl = \mu_{0}I$</td><td>current makes magnetic field</td></tr>
+<tr class="highlight"><td>Ampere</td><td>$\oint B \cdot dl = \mu_{0}\epsilon_{0}\frac{d\Phi_{E}}{dt}$</td><td>changing magnetic $\rightarrow$ electric</td></tr>
+<tr class="highlight"><td>Faraday</td><td>$\oint E \cdot dl = - \frac{d\Phi_{B}}{dt}$</td><td>changing electric $\rightarrow$ magnetic</td></tr>
+</table>

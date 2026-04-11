@@ -8,13 +8,14 @@ order: 1
 
 # Differential
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| rate law | $A + B \rightarrow C$ | single step reaction |
-| rate law | speed of reaction | rate of change substances |
-| rate law | rates for different reagents | related by mass conservation |
-| differential | instantaneous rate | at specific time |
-| differential | proportional to | instant concentrations |
-| differential | $\text{rate} = k\lbrack A\rbrack^{m}\lbrack B\rbrack^{n}$ | experimentally determined |
-| limiting | $\text{rate} = k'\lbrack A\rbrack^{m}$ | limiting reactants |
-| limiting | excess reactants | at constant concentration |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>rate law</td><td>$A + B \rightarrow C$</td><td>single step reaction</td></tr>
+<tr class="highlight"><td>rate law</td><td>speed of reaction</td><td>rate of change substances</td></tr>
+<tr class="highlight"><td>rate law</td><td>rates for different reagents</td><td>related by mass conservation</td></tr>
+<tr><td>differential</td><td>instantaneous rate</td><td>at specific time</td></tr>
+<tr><td>differential</td><td>proportional to</td><td>instant concentrations</td></tr>
+<tr class="highlight"><td>differential</td><td>$\text{rate} = k\lbrack A\rbrack^{m}\lbrack B\rbrack^{n}$</td><td>experimentally determined</td></tr>
+<tr class="highlight"><td>limiting</td><td>$\text{rate} = k'\lbrack A\rbrack^{m}$</td><td>limiting reactants</td></tr>
+<tr><td>limiting</td><td>excess reactants</td><td>at constant concentration</td></tr>
+</table>

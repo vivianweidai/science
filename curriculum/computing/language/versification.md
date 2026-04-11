@@ -8,15 +8,16 @@ order: 4
 
 # Versification
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| versification | verse | series of lines |
-| versification | meter | weight pattern |
-| weight | onset | irrelevant |
-| weight | nucleus | short long |
-| weight | coda | open closed |
-| schemas | vowel length | light short |
-| schemas | coda existance | light no coda |
-| schemas | rhyme length | light single element |
-| meter | sequence | light heavy |
-| meter | equivalence | one heavy two lights |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>versification</td><td>verse</td><td>series of lines</td></tr>
+<tr class="highlight"><td>versification</td><td>meter</td><td>weight pattern</td></tr>
+<tr><td>weight</td><td>onset</td><td>irrelevant</td></tr>
+<tr><td>weight</td><td>nucleus</td><td>short long</td></tr>
+<tr><td>weight</td><td>coda</td><td>open closed</td></tr>
+<tr class="highlight"><td>schemas</td><td>vowel length</td><td>light short</td></tr>
+<tr class="highlight"><td>schemas</td><td>coda existance</td><td>light no coda</td></tr>
+<tr class="highlight"><td>schemas</td><td>rhyme length</td><td>light single element</td></tr>
+<tr><td>meter</td><td>sequence</td><td>light heavy</td></tr>
+<tr><td>meter</td><td>equivalence</td><td>one heavy two lights</td></tr>
+</table>

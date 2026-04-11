@@ -8,12 +8,13 @@ order: 3
 
 # Remnants
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| evolution | stellar evolution | depends on initial mass |
-| evolution | higher mass stars | neutron stars black holes |
-| remnants | LT brown dwarfs | $M < 0.08M_{\odot}$ |
-| remnants | M $He$ white dwarfs | $0.08M_{\odot} < M < 0.5M_{\odot}$ |
-| remnants | AFGK $\frac{C}{O}$ white dwarfs | $0.5M_{\odot} < M < 5M_{\odot}$ |
-| remnants | B $Ne/Mg$ white dwarfs | $5M_{\odot} < M < 7M_{\odot}$ |
-| remnants | O neutron stars black holes | $M > 7M_{\odot}$ |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>evolution</td><td>stellar evolution</td><td>depends on initial mass</td></tr>
+<tr class="highlight"><td>evolution</td><td>higher mass stars</td><td>neutron stars black holes</td></tr>
+<tr><td>remnants</td><td>LT brown dwarfs</td><td>$M < 0.08M_{\odot}$</td></tr>
+<tr><td>remnants</td><td>M $He$ white dwarfs</td><td>$0.08M_{\odot} < M < 0.5M_{\odot}$</td></tr>
+<tr><td>remnants</td><td>AFGK $\frac{C}{O}$ white dwarfs</td><td>$0.5M_{\odot} < M < 5M_{\odot}$</td></tr>
+<tr><td>remnants</td><td>B $Ne/Mg$ white dwarfs</td><td>$5M_{\odot} < M < 7M_{\odot}$</td></tr>
+<tr><td>remnants</td><td>O neutron stars black holes</td><td>$M > 7M_{\odot}$</td></tr>
+</table>

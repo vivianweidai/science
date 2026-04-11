@@ -8,11 +8,12 @@ order: 9
 
 # Sugar
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| sugar | phloem sap sugars | leaf to whole plant |
-| sugar | sugar source to sugar sink | either up or down |
-| source to vascular | symplast or apoplast | mesophyll to sieve tube |
-| source to vascular | active or cotransport | with proton gradient |
-| bulk flow | positive pressure by gradient | if not enough remove sinks |
-| vascular to sink | sugar passive diffusion | water follow by osmosis |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>sugar</td><td>phloem sap sugars</td><td>leaf to whole plant</td></tr>
+<tr class="highlight"><td>sugar</td><td>sugar source to sugar sink</td><td>either up or down</td></tr>
+<tr><td>source to vascular</td><td>symplast or apoplast</td><td>mesophyll to sieve tube</td></tr>
+<tr><td>source to vascular</td><td>active or cotransport</td><td>with proton gradient</td></tr>
+<tr><td>bulk flow</td><td>positive pressure by gradient</td><td>if not enough remove sinks</td></tr>
+<tr><td>vascular to sink</td><td>sugar passive diffusion</td><td>water follow by osmosis</td></tr>
+</table>

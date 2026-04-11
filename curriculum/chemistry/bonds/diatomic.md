@@ -8,13 +8,14 @@ order: 7
 
 # Diatomic
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| $2s$ **orbitals** | $\sigma_{2s}$ between atoms | bonding stable low energy |
-| $2s$ **orbitals** | $\sigma_{2s}*$ outside atoms | antibonding unstable high energy |
-| $2p$ **orbitals** | $\sigma_{2p}$ one bonding between | $\sigma_{2p}*$ one antibonding outside |
-| $2p$ **orbitals** | $\pi_{2p}$ two bonding | $\pi_{2p}*$ two antibonding |
-| paramagnetic | molecular orbital | contains unpaired electron |
-| paramagnetic | $p - s$ mixing | explains $B_{2}C_{2}N_{2}$ |
-| heteronuclear | adjacent atoms have | same molecular orbitals |
-| heteronuclear | none adjacent atoms | have different orbitals |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>$2s$ **orbitals**</td><td>$\sigma_{2s}$ between atoms</td><td>bonding stable low energy</td></tr>
+<tr class="highlight"><td>$2s$ **orbitals**</td><td>$\sigma_{2s}*$ outside atoms</td><td>antibonding unstable high energy</td></tr>
+<tr class="highlight"><td>$2p$ **orbitals**</td><td>$\sigma_{2p}$ one bonding between</td><td>$\sigma_{2p}*$ one antibonding outside</td></tr>
+<tr class="highlight"><td>$2p$ **orbitals**</td><td>$\pi_{2p}$ two bonding</td><td>$\pi_{2p}*$ two antibonding</td></tr>
+<tr><td>paramagnetic</td><td>molecular orbital</td><td>contains unpaired electron</td></tr>
+<tr><td>paramagnetic</td><td>$p - s$ mixing</td><td>explains $B_{2}C_{2}N_{2}$</td></tr>
+<tr><td>heteronuclear</td><td>adjacent atoms have</td><td>same molecular orbitals</td></tr>
+<tr><td>heteronuclear</td><td>none adjacent atoms</td><td>have different orbitals</td></tr>
+</table>

@@ -8,13 +8,14 @@ order: 11
 
 # Characteristics
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| salts | ionic compounds that | dissolve completely to ions |
-| salts | solution has variable pH | acid base properties of ions |
-| salts | $K_{a} \times K_{b} = K_{w}$ | $K_{1}$ versus $K_{2}$ |
-| salts | first equilibrium effect | secondary cycle immaterial |
-| structure | $H - X$ halides | bond strength and polarity |
-| structure | $K_{a}(HX) > K_{a}(HF)$ | close bond too strong |
-| structure | $H - O - X$ oxoacids | electron withdrawing ability |
-| structure | $K_{a}(HClO_{3}) > K_{a}(HClO)$ | more withdrawing more polar |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>salts</td><td>ionic compounds that</td><td>dissolve completely to ions</td></tr>
+<tr class="highlight"><td>salts</td><td>solution has variable pH</td><td>acid base properties of ions</td></tr>
+<tr class="highlight"><td>salts</td><td>$K_{a} \times K_{b} = K_{w}$</td><td>$K_{1}$ versus $K_{2}$</td></tr>
+<tr><td>salts</td><td>first equilibrium effect</td><td>secondary cycle immaterial</td></tr>
+<tr class="highlight"><td>structure</td><td>$H - X$ halides</td><td>bond strength and polarity</td></tr>
+<tr><td>structure</td><td>$K_{a}(HX) > K_{a}(HF)$</td><td>close bond too strong</td></tr>
+<tr class="highlight"><td>structure</td><td>$H - O - X$ oxoacids</td><td>electron withdrawing ability</td></tr>
+<tr><td>structure</td><td>$K_{a}(HClO_{3}) > K_{a}(HClO)$</td><td>more withdrawing more polar</td></tr>
+</table>

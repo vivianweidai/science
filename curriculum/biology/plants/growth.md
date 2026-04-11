@@ -8,7 +8,8 @@ order: 2
 
 # Growth
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| growth | indeterminate growth | continuous through life |
-| growth | primary growth length | secondary growth thickness |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>growth</td><td>indeterminate growth</td><td>continuous through life</td></tr>
+<tr class="highlight"><td>growth</td><td>primary growth length</td><td>secondary growth thickness</td></tr>
+</table>

@@ -8,15 +8,16 @@ order: 7
 
 # Infinite Series
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| sequence | discrete function | values approach limit |
-| sequence | convergence of limit | monotonic and bounded |
-| series | corresponding sequence | limit of partial sums |
-| series | convergence of limit | sequence limit is zero |
-| convergence | divergence | sequence limit not zero |
-| convergence | comparison | to known series |
-| convergence | integral | to improper integral |
-| convergence | limit | of ratio of terms |
-| convergence | ratio | of ratio of successive terms |
-| convergence | alternating | both series convergent |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>sequence</td><td>discrete function</td><td>values approach limit</td></tr>
+<tr class="highlight"><td>sequence</td><td>convergence of limit</td><td>monotonic and bounded</td></tr>
+<tr><td>series</td><td>corresponding sequence</td><td>limit of partial sums</td></tr>
+<tr class="highlight"><td>series</td><td>convergence of limit</td><td>sequence limit is zero</td></tr>
+<tr><td>convergence</td><td>divergence</td><td>sequence limit not zero</td></tr>
+<tr><td>convergence</td><td>comparison</td><td>to known series</td></tr>
+<tr><td>convergence</td><td>integral</td><td>to improper integral</td></tr>
+<tr><td>convergence</td><td>limit</td><td>of ratio of terms</td></tr>
+<tr><td>convergence</td><td>ratio</td><td>of ratio of successive terms</td></tr>
+<tr><td>convergence</td><td>alternating</td><td>both series convergent</td></tr>
+</table>

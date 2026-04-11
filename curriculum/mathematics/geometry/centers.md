@@ -8,17 +8,18 @@ order: 3
 
 # Centers
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| **circumcenter** $O$ | median perpendicular | exterior circle |
-| **circumcenter** $O$ | equidistant origin vertices | circumradius $R$ |
-| **circumcenter** $O$ | $\frac{abc}{4R}$ | area |
-| **incenter** $I$ | angle bisector | interior circle |
-| **incenter** $I$ | equidistant origin sides | inradius $r$ |
-| **incenter** $I$ | $rs$ | area |
-| **centroid** $G$ | median to vertex | six areas four triangles |
-| **centroid** $G$ | one to two | length ratios |
-| **orthocenter** $H$ | perpendicular to radius | triangle altitudes |
-| **orthocenter** $H$ | location either | inside or outside |
-| **excenter** $I_{A}$ | internal external bisectors | intersection is $\text{excenter}_{A}$ |
-| **excenter** $I_{A}$ | equidistant excenter sides | $\text{exradius}_{A}$ |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>**circumcenter** $O$</td><td>median perpendicular</td><td>exterior circle</td></tr>
+<tr><td>**circumcenter** $O$</td><td>equidistant origin vertices</td><td>circumradius $R$</td></tr>
+<tr><td>**circumcenter** $O$</td><td>$\frac{abc}{4R}$</td><td>area</td></tr>
+<tr class="highlight"><td>**incenter** $I$</td><td>angle bisector</td><td>interior circle</td></tr>
+<tr><td>**incenter** $I$</td><td>equidistant origin sides</td><td>inradius $r$</td></tr>
+<tr><td>**incenter** $I$</td><td>$rs$</td><td>area</td></tr>
+<tr class="highlight"><td>**centroid** $G$</td><td>median to vertex</td><td>six areas four triangles</td></tr>
+<tr><td>**centroid** $G$</td><td>one to two</td><td>length ratios</td></tr>
+<tr class="highlight"><td>**orthocenter** $H$</td><td>perpendicular to radius</td><td>triangle altitudes</td></tr>
+<tr><td>**orthocenter** $H$</td><td>location either</td><td>inside or outside</td></tr>
+<tr class="highlight"><td>**excenter** $I_{A}$</td><td>internal external bisectors</td><td>intersection is $\text{excenter}_{A}$</td></tr>
+<tr><td>**excenter** $I_{A}$</td><td>equidistant excenter sides</td><td>$\text{exradius}_{A}$</td></tr>
+</table>

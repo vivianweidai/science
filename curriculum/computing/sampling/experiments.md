@@ -8,13 +8,14 @@ order: 4
 
 # Experiments
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| experiments | deliberately setup | comparison groups |
-| experiments | use comparison of results | to infer cause and effect |
-| experiments | impose treatments | on experimental units |
-| experiments | treatment specific condition | single or combo variable values |
-| experiments | experimental unit objects | called subjects if human beings |
-| variables | explanatory variable effect | on response variable value |
-| variables | confounding if two variables | both associated with third |
-| variables | factor is explanatory variable | levels are its different values |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>experiments</td><td>deliberately setup</td><td>comparison groups</td></tr>
+<tr class="highlight"><td>experiments</td><td>use comparison of results</td><td>to infer cause and effect</td></tr>
+<tr><td>experiments</td><td>impose treatments</td><td>on experimental units</td></tr>
+<tr><td>experiments</td><td>treatment specific condition</td><td>single or combo variable values</td></tr>
+<tr><td>experiments</td><td>experimental unit objects</td><td>called subjects if human beings</td></tr>
+<tr><td>variables</td><td>explanatory variable effect</td><td>on response variable value</td></tr>
+<tr><td>variables</td><td>confounding if two variables</td><td>both associated with third</td></tr>
+<tr><td>variables</td><td>factor is explanatory variable</td><td>levels are its different values</td></tr>
+</table>

@@ -8,14 +8,15 @@ order: 13
 
 # Alcohols
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| alcohols | amphiphatic with both | hydrophobic hydrophillic areas |
-| alcohols | solubility depends on areas | only if less than five $C$ per $OH$ |
-| alcohols | acidity depends on | stability of conjugate base |
-| create by conversion | substitution of alkanes | fast and slow nucleophillic attack |
-| create by conversion | addition to alkenes | hydration hydrohalogenation |
-| create by reduction | oxidation state of carbon | increase $C - O$ bonds |
-| create by reduction | alkane to alcohol to aldehyde | reduce carbonyl to alcohol |
-| create by reduction | $LiAlH_{4}/H_{3}O^{+}NaBH_{4}/MeOH$ | hydride $H^{-}$ attack carbonyl |
-| create by reduction | $RMgX/H_{3}O^{+}$ Grignard | carbanion $RC^{-}$ attack carbonyl |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>alcohols</td><td>amphiphatic with both</td><td>hydrophobic hydrophillic areas</td></tr>
+<tr class="highlight"><td>alcohols</td><td>solubility depends on areas</td><td>only if less than five $C$ per $OH$</td></tr>
+<tr><td>alcohols</td><td>acidity depends on</td><td>stability of conjugate base</td></tr>
+<tr class="highlight"><td>create by conversion</td><td>substitution of alkanes</td><td>fast and slow nucleophillic attack</td></tr>
+<tr class="highlight"><td>create by conversion</td><td>addition to alkenes</td><td>hydration hydrohalogenation</td></tr>
+<tr class="highlight"><td>create by reduction</td><td>oxidation state of carbon</td><td>increase $C - O$ bonds</td></tr>
+<tr class="highlight"><td>create by reduction</td><td>alkane to alcohol to aldehyde</td><td>reduce carbonyl to alcohol</td></tr>
+<tr><td>create by reduction</td><td>$LiAlH_{4}/H_{3}O^{+}NaBH_{4}/MeOH$</td><td>hydride $H^{-}$ attack carbonyl</td></tr>
+<tr><td>create by reduction</td><td>$RMgX/H_{3}O^{+}$ Grignard</td><td>carbanion $RC^{-}$ attack carbonyl</td></tr>
+</table>

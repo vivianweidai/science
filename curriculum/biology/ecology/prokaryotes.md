@@ -8,15 +8,16 @@ order: 8
 
 # Prokaryotes
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| prokaryotes | singled celled organisms | massive diversity of being |
-| prokaryotes | shape spherical rod spiral | cell wall hypotonic not burst |
-| archaea vs bacteria | peptidoglycan | bacteria yes archaea no |
-| archaea vs bacteria | introns | bacteria no archaea some |
-| archaea vs bacteria | histones | bacteria no archaea some |
-| archaea vs bacteria | RNA polymerase | bacteria one archaea several |
-| archaea vs bacteria | start amino acid | bacteria formyl-methionine |
-| bacteria | quick staining classification | cell wall peptidoglycan |
-| bacteria | Gram positive | thick seeped dye purple stain |
-| bacteria | Gram negative | double membrane blocked blue |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>prokaryotes</td><td>singled celled organisms</td><td>massive diversity of being</td></tr>
+<tr class="highlight"><td>prokaryotes</td><td>shape spherical rod spiral</td><td>cell wall hypotonic not burst</td></tr>
+<tr><td>archaea vs bacteria</td><td>peptidoglycan</td><td>bacteria yes archaea no</td></tr>
+<tr><td>archaea vs bacteria</td><td>introns</td><td>bacteria no archaea some</td></tr>
+<tr><td>archaea vs bacteria</td><td>histones</td><td>bacteria no archaea some</td></tr>
+<tr><td>archaea vs bacteria</td><td>RNA polymerase</td><td>bacteria one archaea several</td></tr>
+<tr><td>archaea vs bacteria</td><td>start amino acid</td><td>bacteria formyl-methionine</td></tr>
+<tr class="highlight"><td>bacteria</td><td>quick staining classification</td><td>cell wall peptidoglycan</td></tr>
+<tr><td>bacteria</td><td>Gram positive</td><td>thick seeped dye purple stain</td></tr>
+<tr><td>bacteria</td><td>Gram negative</td><td>double membrane blocked blue</td></tr>
+</table>

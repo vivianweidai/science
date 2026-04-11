@@ -8,11 +8,12 @@ order: 7
 
 # Magnetism
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| magnetism | electric charges | interact with electric fields |
-| magnetism | moving electric charges | interact with magnetic fields |
-| charge | $F_{B} = qv \times B$ | change direction does no work |
-| charge | charges spiral | between field lines |
-| current | microscopic | drift velocity |
-| current | $F = Il \times B$ | substitution |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>magnetism</td><td>electric charges</td><td>interact with electric fields</td></tr>
+<tr class="highlight"><td>magnetism</td><td>moving electric charges</td><td>interact with magnetic fields</td></tr>
+<tr class="highlight"><td>charge</td><td>$F_{B} = qv \times B$</td><td>change direction does no work</td></tr>
+<tr><td>charge</td><td>charges spiral</td><td>between field lines</td></tr>
+<tr><td>current</td><td>microscopic</td><td>drift velocity</td></tr>
+<tr class="highlight"><td>current</td><td>$F = Il \times B$</td><td>substitution</td></tr>
+</table>

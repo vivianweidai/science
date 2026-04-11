@@ -8,9 +8,10 @@ order: 15
 
 # Genetic Variation
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| variation | mitosis uncaught error | mutation is propagated |
-| variation | meiosis crossover | translocation rearragements |
-| variation | meiosis independent assortment | $2^{23}$ permutations |
-| variation | fertilization random pairing | $2^{23} \cdot 2^{23}$ combinations |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>variation</td><td>mitosis uncaught error</td><td>mutation is propagated</td></tr>
+<tr class="highlight"><td>variation</td><td>meiosis crossover</td><td>translocation rearragements</td></tr>
+<tr class="highlight"><td>variation</td><td>meiosis independent assortment</td><td>$2^{23}$ permutations</td></tr>
+<tr class="highlight"><td>variation</td><td>fertilization random pairing</td><td>$2^{23} \cdot 2^{23}$ combinations</td></tr>
+</table>

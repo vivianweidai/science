@@ -8,14 +8,15 @@ order: 3
 
 # Primary
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| roots | apical meristem behind cap | divide elongate differentiate |
-| roots | vascular central cylinder | monocot ring eudicot star |
-| roots | ground filler to epidermis | short distance transport |
-| shoots | apital meristem in bud | dominates axillary lateral |
-| shoots | dermal waxy layer water loss | ground support storage |
-| shoots | vascular xylem in phloem out | monocot scattered eudicot ring |
-| leaves | dermal water loss | gas exchange stomata guard |
-| leaves | ground photosyn mesophyll | eudicot mesophyll layers |
-| leaves | vascular gas exchange | bundle sheath regulate |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>roots</td><td>apical meristem behind cap</td><td>divide elongate differentiate</td></tr>
+<tr><td>roots</td><td>vascular central cylinder</td><td>monocot ring eudicot star</td></tr>
+<tr><td>roots</td><td>ground filler to epidermis</td><td>short distance transport</td></tr>
+<tr class="highlight"><td>shoots</td><td>apital meristem in bud</td><td>dominates axillary lateral</td></tr>
+<tr><td>shoots</td><td>dermal waxy layer water loss</td><td>ground support storage</td></tr>
+<tr><td>shoots</td><td>vascular xylem in phloem out</td><td>monocot scattered eudicot ring</td></tr>
+<tr><td>leaves</td><td>dermal water loss</td><td>gas exchange stomata guard</td></tr>
+<tr><td>leaves</td><td>ground photosyn mesophyll</td><td>eudicot mesophyll layers</td></tr>
+<tr><td>leaves</td><td>vascular gas exchange</td><td>bundle sheath regulate</td></tr>
+</table>

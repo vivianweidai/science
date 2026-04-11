@@ -8,9 +8,10 @@ order: 11
 
 # Alkynes
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| alkynes | unsaturated triple bonds | addition reactions |
-| alkynes | location of triple bond | terminal or internal |
-| deprotonation | terminal alkyne is weak acid | strong orbital effect |
-| deprotonation | $NaNH_{2}\text{or}NaH$ removes $H^{+}$ | terminal alkyne stable conjugate |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>alkynes</td><td>unsaturated triple bonds</td><td>addition reactions</td></tr>
+<tr class="highlight"><td>alkynes</td><td>location of triple bond</td><td>terminal or internal</td></tr>
+<tr class="highlight"><td>deprotonation</td><td>terminal alkyne is weak acid</td><td>strong orbital effect</td></tr>
+<tr><td>deprotonation</td><td>$NaNH_{2}\text{or}NaH$ removes $H^{+}$</td><td>terminal alkyne stable conjugate</td></tr>
+</table>

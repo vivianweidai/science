@@ -8,12 +8,13 @@ order: 14
 
 # Mutations
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| mutations | error in genetic code | permanent propagation if DNA |
-| mutations | single error base substitutions | or sequence rearragement errors |
-| substitutions | silent error same amino acid | results in same protein |
-| substitutions | missense different amino acid | possibly different protein |
-| substitutions | nonsense stop codon | terminates protein synthesis |
-| rearrangements | frameshift insertion deletion | changes entire sequence |
-| rearrangements | duplication and inversion | translocation break and rejoin |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>mutations</td><td>error in genetic code</td><td>permanent propagation if DNA</td></tr>
+<tr class="highlight"><td>mutations</td><td>single error base substitutions</td><td>or sequence rearragement errors</td></tr>
+<tr><td>substitutions</td><td>silent error same amino acid</td><td>results in same protein</td></tr>
+<tr><td>substitutions</td><td>missense different amino acid</td><td>possibly different protein</td></tr>
+<tr><td>substitutions</td><td>nonsense stop codon</td><td>terminates protein synthesis</td></tr>
+<tr><td>rearrangements</td><td>frameshift insertion deletion</td><td>changes entire sequence</td></tr>
+<tr><td>rearrangements</td><td>duplication and inversion</td><td>translocation break and rejoin</td></tr>
+</table>

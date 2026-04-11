@@ -8,11 +8,12 @@ order: 7
 
 # References
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| references | link two variables | with flow through updates |
-| references | int b = a; copies value | int& b = a; reference other |
-| references | if referenced variable changes | so does reference variable |
-| swap | void swap(int& a, int & b) { int temp = a; a = b; b = temp; } | permanently alters pass in array |
-| pairs | auto \[a, b\] = p; | copies values only |
-| pairs | auto& \[a, b\] = p; | updates the pair variable |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>references</td><td>link two variables</td><td>with flow through updates</td></tr>
+<tr><td>references</td><td>int b = a; copies value</td><td>int& b = a; reference other</td></tr>
+<tr><td>references</td><td>if referenced variable changes</td><td>so does reference variable</td></tr>
+<tr><td>swap</td><td>void swap(int& a, int & b) { int temp = a; a = b; b = temp; }</td><td>permanently alters pass in array</td></tr>
+<tr><td>pairs</td><td>auto \[a, b\] = p;</td><td>copies values only</td></tr>
+<tr><td>pairs</td><td>auto& \[a, b\] = p;</td><td>updates the pair variable</td></tr>
+</table>

@@ -8,14 +8,15 @@ order: 19
 
 # Nmr
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| NMR | carbon and hydrogen | proton field altered by electrons |
-| NMR | equivalent by symmetry | $CH_{2}$ no chiral $CH_{3}$ chiral |
-| location | chemical shift $10 - 0\text{ppm}$ | downfield unshielded protons |
-| location | deshielding by induction | cumulative and tapers off |
-| area | relative number protons | integration of signals |
-| shape | number neighbour protons | equivalent protons do not split |
-| shape | complex splitting subgroups | no splitting alcohol aldehyde |
-| analysis | hydrogen deficiency index | degree unsaturation rings $\pi$ |
-| analysis | ${}^{13}C$ NMR only uses location | number of groups of similars |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>NMR</td><td>carbon and hydrogen</td><td>proton field altered by electrons</td></tr>
+<tr class="highlight"><td>NMR</td><td>equivalent by symmetry</td><td>$CH_{2}$ no chiral $CH_{3}$ chiral</td></tr>
+<tr><td>location</td><td>chemical shift $10 - 0\text{ppm}$</td><td>downfield unshielded protons</td></tr>
+<tr><td>location</td><td>deshielding by induction</td><td>cumulative and tapers off</td></tr>
+<tr><td>area</td><td>relative number protons</td><td>integration of signals</td></tr>
+<tr><td>shape</td><td>number neighbour protons</td><td>equivalent protons do not split</td></tr>
+<tr><td>shape</td><td>complex splitting subgroups</td><td>no splitting alcohol aldehyde</td></tr>
+<tr><td>analysis</td><td>hydrogen deficiency index</td><td>degree unsaturation rings $\pi$</td></tr>
+<tr><td>analysis</td><td>${}^{13}C$ NMR only uses location</td><td>number of groups of similars</td></tr>
+</table>

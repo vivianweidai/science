@@ -8,12 +8,13 @@ order: 4
 
 # Digestive
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| digestive | preassembled essential nutrients | amino acids and fatty acids |
-| digestive | vitamin organic catalysts | mineral inorganic catalysts |
-| feeding | filter baleen whale | substrate worm on leaf |
-| feeding | fluid mosquito | bulk humans |
-| digestion | compartmentalize avoid self | accessory glands add enzymes |
-| digestion | gastrovascular cavity | in and out same way |
-| digestion | alimentary canal | digestion in stages |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>digestive</td><td>preassembled essential nutrients</td><td>amino acids and fatty acids</td></tr>
+<tr class="highlight"><td>digestive</td><td>vitamin organic catalysts</td><td>mineral inorganic catalysts</td></tr>
+<tr><td>feeding</td><td>filter baleen whale</td><td>substrate worm on leaf</td></tr>
+<tr><td>feeding</td><td>fluid mosquito</td><td>bulk humans</td></tr>
+<tr class="highlight"><td>digestion</td><td>compartmentalize avoid self</td><td>accessory glands add enzymes</td></tr>
+<tr><td>digestion</td><td>gastrovascular cavity</td><td>in and out same way</td></tr>
+<tr><td>digestion</td><td>alimentary canal</td><td>digestion in stages</td></tr>
+</table>

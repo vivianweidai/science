@@ -8,13 +8,14 @@ order: 10
 
 # Light
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| light | use light energy | to make ATP NADPH |
-| light | electron flow carrying energy | down transport chain |
-| light | $\text{photons} + H_{2}O \rightarrow O_{2} + ATP + NADPH$ |  |
-| linear | at photosystem II | light energize $e^{-}$ to acceptor |
-| linear | at cytochrome complex | hydrogen gradient make ATP |
-| linear | at photosystem I | terminal carrier make NADPH |
-| cyclic | if NADP+ not available | as terminal carrier |
-| cyclic | back to cytochrome complex | more ATP to balance NADPH |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>light</td><td>use light energy</td><td>to make ATP NADPH</td></tr>
+<tr class="highlight"><td>light</td><td>electron flow carrying energy</td><td>down transport chain</td></tr>
+<tr><td>light</td><td>$\text{photons} + H_{2}O \rightarrow O_{2} + ATP + NADPH$</td><td></td></tr>
+<tr><td>linear</td><td>at photosystem II</td><td>light energize $e^{-}$ to acceptor</td></tr>
+<tr><td>linear</td><td>at cytochrome complex</td><td>hydrogen gradient make ATP</td></tr>
+<tr><td>linear</td><td>at photosystem I</td><td>terminal carrier make NADPH</td></tr>
+<tr><td>cyclic</td><td>if NADP+ not available</td><td>as terminal carrier</td></tr>
+<tr class="highlight"><td>cyclic</td><td>back to cytochrome complex</td><td>more ATP to balance NADPH</td></tr>
+</table>

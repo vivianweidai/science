@@ -8,12 +8,13 @@ order: 3
 
 # Current
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| current | charges in motion | net force exists |
-| current | inside conductors | where charges mobile |
-| current | charge per time | drift velocity on random |
-| current | $I = nqAv_{d}$ microscopic | $J = \frac{I}{A}$ flux |
-| resistance | charges accelerate in field | collisions stop motion |
-| resistance | $J = \frac{E}{\rho}$ microscopic | $I = \frac{V}{R}$ macroscopic |
-| resistance | $R = \rho\frac{L}{A}$ | by geometry |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>current</td><td>charges in motion</td><td>net force exists</td></tr>
+<tr class="highlight"><td>current</td><td>inside conductors</td><td>where charges mobile</td></tr>
+<tr><td>current</td><td>charge per time</td><td>drift velocity on random</td></tr>
+<tr><td>current</td><td>$I = nqAv_{d}$ microscopic</td><td>$J = \frac{I}{A}$ flux</td></tr>
+<tr class="highlight"><td>resistance</td><td>charges accelerate in field</td><td>collisions stop motion</td></tr>
+<tr class="highlight"><td>resistance</td><td>$J = \frac{E}{\rho}$ microscopic</td><td>$I = \frac{V}{R}$ macroscopic</td></tr>
+<tr class="highlight"><td>resistance</td><td>$R = \rho\frac{L}{A}$</td><td>by geometry</td></tr>
+</table>

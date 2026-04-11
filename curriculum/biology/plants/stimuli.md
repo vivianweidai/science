@@ -8,19 +8,20 @@ order: 15
 
 # Stimuli
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| light | etiolation grow in darkness | focus elongate out of soil |
-| light | blue cryptochrome receptors | phototropism toward light |
-| light | red phytochrome receptors | red and far red competition |
-| time | circadian rhythm | internal clock reset by light |
-| time | photoperiodism flowering | seaons dark period vs critical |
-| gravity | gravitropism response | roots towards stem against |
-| gravity | statoliths to cell bottom | trigger asymmetric auxin |
-| touch | thigmotropism response | vine climb what reaches |
-| touch | thigmomorphogenesis | propagated rapid change |
-| stresses | dry wet salt heat cold freeze | stomata ethylene fluidity |
-| stresses | herbivory multiple levels | molecular chemicals population |
-| pathogens | innate immune system | no animal adaptive immunity |
-| pathogens | associated molecular patterns | recognize flagellin protein |
-| pathogens | effector triggered immunity | local isolation systemic alarm |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>light</td><td>etiolation grow in darkness</td><td>focus elongate out of soil</td></tr>
+<tr><td>light</td><td>blue cryptochrome receptors</td><td>phototropism toward light</td></tr>
+<tr><td>light</td><td>red phytochrome receptors</td><td>red and far red competition</td></tr>
+<tr class="highlight"><td>time</td><td>circadian rhythm</td><td>internal clock reset by light</td></tr>
+<tr class="highlight"><td>time</td><td>photoperiodism flowering</td><td>seaons dark period vs critical</td></tr>
+<tr class="highlight"><td>gravity</td><td>gravitropism response</td><td>roots towards stem against</td></tr>
+<tr><td>gravity</td><td>statoliths to cell bottom</td><td>trigger asymmetric auxin</td></tr>
+<tr class="highlight"><td>touch</td><td>thigmotropism response</td><td>vine climb what reaches</td></tr>
+<tr><td>touch</td><td>thigmomorphogenesis</td><td>propagated rapid change</td></tr>
+<tr><td>stresses</td><td>dry wet salt heat cold freeze</td><td>stomata ethylene fluidity</td></tr>
+<tr class="highlight"><td>stresses</td><td>herbivory multiple levels</td><td>molecular chemicals population</td></tr>
+<tr class="highlight"><td>pathogens</td><td>innate immune system</td><td>no animal adaptive immunity</td></tr>
+<tr><td>pathogens</td><td>associated molecular patterns</td><td>recognize flagellin protein</td></tr>
+<tr><td>pathogens</td><td>effector triggered immunity</td><td>local isolation systemic alarm</td></tr>
+</table>

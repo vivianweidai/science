@@ -8,14 +8,15 @@ order: 8
 
 # Water
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| water | water and solutes | from root to leaves |
-| water | short distance root to xylem | long distance up xylem |
-| short distance | root hair absorption | selective permeability |
-| short distance | Casparian strip block apoplast | force endodermis filter |
-| long distance | root pressure positive push | active ions passive water |
-| long distance | minor source | guttation not dew |
-| long distance | transpiration negative pull | evaporation lower pressure |
-| long distance | major source | regulate by stomata opening |
-| long distance | xerophytes desert plants | reduce water loss |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>water</td><td>water and solutes</td><td>from root to leaves</td></tr>
+<tr class="highlight"><td>water</td><td>short distance root to xylem</td><td>long distance up xylem</td></tr>
+<tr><td>short distance</td><td>root hair absorption</td><td>selective permeability</td></tr>
+<tr class="highlight"><td>short distance</td><td>Casparian strip block apoplast</td><td>force endodermis filter</td></tr>
+<tr class="highlight"><td>long distance</td><td>root pressure positive push</td><td>active ions passive water</td></tr>
+<tr><td>long distance</td><td>minor source</td><td>guttation not dew</td></tr>
+<tr class="highlight"><td>long distance</td><td>transpiration negative pull</td><td>evaporation lower pressure</td></tr>
+<tr><td>long distance</td><td>major source</td><td>regulate by stomata opening</td></tr>
+<tr><td>long distance</td><td>xerophytes desert plants</td><td>reduce water loss</td></tr>
+</table>

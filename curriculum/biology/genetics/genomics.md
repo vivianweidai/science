@@ -8,14 +8,15 @@ order: 21
 
 # Genomics
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| genomics | genome of species | entire genetic code |
-| genomics | genomic evidence | of evolutionary history |
-| genomics | focus on homology | similar from shared ancestry |
-| homology | orthologous genes | from ancestor in different species |
-| homology | paralogous genes | from duplication in same species |
-| molecular clock | rate of mutations | roughly constant |
-| molecular clock | can be used to date | speciation and diseases |
-| gene transfer | primarily vertical | parent to child |
-| gene transfer | with extensive horizontal | viral between species |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>genomics</td><td>genome of species</td><td>entire genetic code</td></tr>
+<tr class="highlight"><td>genomics</td><td>genomic evidence</td><td>of evolutionary history</td></tr>
+<tr class="highlight"><td>genomics</td><td>focus on homology</td><td>similar from shared ancestry</td></tr>
+<tr><td>homology</td><td>orthologous genes</td><td>from ancestor in different species</td></tr>
+<tr><td>homology</td><td>paralogous genes</td><td>from duplication in same species</td></tr>
+<tr><td>molecular clock</td><td>rate of mutations</td><td>roughly constant</td></tr>
+<tr><td>molecular clock</td><td>can be used to date</td><td>speciation and diseases</td></tr>
+<tr><td>gene transfer</td><td>primarily vertical</td><td>parent to child</td></tr>
+<tr><td>gene transfer</td><td>with extensive horizontal</td><td>viral between species</td></tr>
+</table>

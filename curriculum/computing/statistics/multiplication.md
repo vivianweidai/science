@@ -8,12 +8,13 @@ order: 7
 
 # Multiplication
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| conditional | probability one event happens | given another event happened |
-| conditional | $P(A\vert B) = \frac{P(A \cap B)}{P(B)}$ |  |
-| independence | whether one event happens | does not affect the other |
-| independence | $P(A\vert B) = P(A)$ |  |
-| multiplication | the probability that | both events occur |
-| multiplication | $P(A \cap B) = P(A) \cdot P(B\vert A)$ | rearrangement |
-| multiplication | $P(A \cap B) = P(A) \cdot P(B)$ | independent events |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>conditional</td><td>probability one event happens</td><td>given another event happened</td></tr>
+<tr class="highlight"><td>conditional</td><td>$P(A\vert B) = \frac{P(A \cap B)}{P(B)}$</td><td></td></tr>
+<tr><td>independence</td><td>whether one event happens</td><td>does not affect the other</td></tr>
+<tr><td>independence</td><td>$P(A\vert B) = P(A)$</td><td></td></tr>
+<tr class="highlight"><td>multiplication</td><td>the probability that</td><td>both events occur</td></tr>
+<tr class="highlight"><td>multiplication</td><td>$P(A \cap B) = P(A) \cdot P(B\vert A)$</td><td>rearrangement</td></tr>
+<tr class="highlight"><td>multiplication</td><td>$P(A \cap B) = P(A) \cdot P(B)$</td><td>independent events</td></tr>
+</table>

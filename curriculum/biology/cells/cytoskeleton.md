@@ -8,9 +8,10 @@ order: 5
 
 # Cytoskeleton
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| cytoskeleton | fibers network through cell | cell shape organelle movement |
-| cytoskeleton | microtubule hollow rods | for organelle movement |
-| cytoskeleton | microfilament solid rods | for cell division and muscles |
-| cytoskeleton | intermediate filaments | coiled cables for cell shape |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>cytoskeleton</td><td>fibers network through cell</td><td>cell shape organelle movement</td></tr>
+<tr><td>cytoskeleton</td><td>microtubule hollow rods</td><td>for organelle movement</td></tr>
+<tr><td>cytoskeleton</td><td>microfilament solid rods</td><td>for cell division and muscles</td></tr>
+<tr><td>cytoskeleton</td><td>intermediate filaments</td><td>coiled cables for cell shape</td></tr>
+</table>

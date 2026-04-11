@@ -8,11 +8,12 @@ order: 1
 
 # Single
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| absolute | $x \pm \Delta x$ | absolute error |
-| absolute | $u = 2x$ | $\Delta u = 2\Delta x$ scaling |
-| relative | $\frac{\Delta x}{x}$ | relative error |
-| relative | $u = 2x$ $\frac{du}{u} = \frac{2dx}{2x} = \frac{dx}{x}$ | $\frac{\Delta 2x}{2x} = \frac{\Delta x}{x}$ scaling |
-| relative | $v = \frac{x}{t}$ $\frac{dv}{v} = \frac{- \frac{x}{t^{2}}}{\frac{x}{t}} = - \frac{dt}{t}$ | $\frac{\Delta(1/x)}{\frac{1}{x}} = \frac{\Delta x}{x}$ reciprocal |
-| relative | $A = s^{2}$ $\frac{dA}{A} = \frac{2sds}{s^{2}} = 2 \cdot \frac{ds}{s}$ | $\frac{\Delta(x^{2})}{x^{2}} = 2 \cdot \frac{\Delta x}{x}$ power |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>absolute</td><td>$x \pm \Delta x$</td><td>absolute error</td></tr>
+<tr class="highlight"><td>absolute</td><td>$u = 2x$</td><td>$\Delta u = 2\Delta x$ scaling</td></tr>
+<tr><td>relative</td><td>$\frac{\Delta x}{x}$</td><td>relative error</td></tr>
+<tr class="highlight"><td>relative</td><td>$u = 2x$ $\frac{du}{u} = \frac{2dx}{2x} = \frac{dx}{x}$</td><td>$\frac{\Delta 2x}{2x} = \frac{\Delta x}{x}$ scaling</td></tr>
+<tr class="highlight"><td>relative</td><td>$v = \frac{x}{t}$ $\frac{dv}{v} = \frac{- \frac{x}{t^{2}}}{\frac{x}{t}} = - \frac{dt}{t}$</td><td>$\frac{\Delta(1/x)}{\frac{1}{x}} = \frac{\Delta x}{x}$ reciprocal</td></tr>
+<tr class="highlight"><td>relative</td><td>$A = s^{2}$ $\frac{dA}{A} = \frac{2sds}{s^{2}} = 2 \cdot \frac{ds}{s}$</td><td>$\frac{\Delta(x^{2})}{x^{2}} = 2 \cdot \frac{\Delta x}{x}$ power</td></tr>
+</table>

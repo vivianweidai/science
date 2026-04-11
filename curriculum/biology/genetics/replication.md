@@ -8,7 +8,8 @@ order: 6
 
 # Replication
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| replication | duplicate genetic material | during mitotic synthesis phase |
-| replication | takes place inside nucleus | using semiconservative model |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>replication</td><td>duplicate genetic material</td><td>during mitotic synthesis phase</td></tr>
+<tr class="highlight"><td>replication</td><td>takes place inside nucleus</td><td>using semiconservative model</td></tr>
+</table>

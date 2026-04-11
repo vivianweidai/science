@@ -8,14 +8,15 @@ order: 5
 
 # Radioactivity
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| radioactivity | nuclei decomposition | conserve mass and charge |
-| radioactivity | stability ratio | $3:2$ neutron proton |
-| radioactivity | ${}_{Z}^{A}X$ nuclide | unique atom |
-| radioactivity | $A$ nucleons atomic mass | $Z$ protons atomic number |
-| decay | ${}_{2}^{4}He$ helium | alpha decay |
-| decay | ${}_{- 1}^{0}e$ electron | beta decay |
-| decay | ${}_{0}^{0}\gamma$ photon | gamma decay |
-| decay | ${}_{Z - 1}^{A}Y$ proton to neutron | electron capture |
-| decay | ${}_{+ 1}^{0}e$ positive charge | positron capture |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>radioactivity</td><td>nuclei decomposition</td><td>conserve mass and charge</td></tr>
+<tr><td>radioactivity</td><td>stability ratio</td><td>$3:2$ neutron proton</td></tr>
+<tr><td>radioactivity</td><td>${}_{Z}^{A}X$ nuclide</td><td>unique atom</td></tr>
+<tr><td>radioactivity</td><td>$A$ nucleons atomic mass</td><td>$Z$ protons atomic number</td></tr>
+<tr class="highlight"><td>decay</td><td>${}_{2}^{4}He$ helium</td><td>alpha decay</td></tr>
+<tr><td>decay</td><td>${}_{- 1}^{0}e$ electron</td><td>beta decay</td></tr>
+<tr><td>decay</td><td>${}_{0}^{0}\gamma$ photon</td><td>gamma decay</td></tr>
+<tr class="highlight"><td>decay</td><td>${}_{Z - 1}^{A}Y$ proton to neutron</td><td>electron capture</td></tr>
+<tr><td>decay</td><td>${}_{+ 1}^{0}e$ positive charge</td><td>positron capture</td></tr>
+</table>

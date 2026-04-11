@@ -8,8 +8,9 @@ order: 14
 
 # Differentials
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| differentials | relates variable | with its rate of change |
-| differentials | graphical slope fields | numerical Euler |
-| differentials | separatable | separation of variables |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>differentials</td><td>relates variable</td><td>with its rate of change</td></tr>
+<tr><td>differentials</td><td>graphical slope fields</td><td>numerical Euler</td></tr>
+<tr class="highlight"><td>differentials</td><td>separatable</td><td>separation of variables</td></tr>
+</table>

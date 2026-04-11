@@ -8,17 +8,18 @@ order: 15
 
 # Weak Acid Strong Base
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| stoichiometry | add strong base | drive to completion |
-| stoichiometry | left with remaining | weak acid conjugate base |
-| equilibrium | weak acid equilibrium | updated initial concentrations |
-| equilibrium | determine pH | updated volume with titrant |
-| equivalence point | strong base with weak acid | all used up mole for mole |
-| equivalence point | left with remaining | produced conjugate base |
-| equivalence point | weak base equilibrium | for hydroxide concentration |
-| beyond equivalance | excess strong base | dominates conjugate base |
-| beyond equivalance | hydroxide determines pH | curve identical to strong acid |
-| characteristics | different weak acids | same equivalence point |
-| characteristics | amount of weak acid | is amount base required |
-| characteristics | strength of weak acid | pH at equivalence point |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>stoichiometry</td><td>add strong base</td><td>drive to completion</td></tr>
+<tr><td>stoichiometry</td><td>left with remaining</td><td>weak acid conjugate base</td></tr>
+<tr><td>equilibrium</td><td>weak acid equilibrium</td><td>updated initial concentrations</td></tr>
+<tr class="highlight"><td>equilibrium</td><td>determine pH</td><td>updated volume with titrant</td></tr>
+<tr><td>equivalence point</td><td>strong base with weak acid</td><td>all used up mole for mole</td></tr>
+<tr><td>equivalence point</td><td>left with remaining</td><td>produced conjugate base</td></tr>
+<tr class="highlight"><td>equivalence point</td><td>weak base equilibrium</td><td>for hydroxide concentration</td></tr>
+<tr><td>beyond equivalance</td><td>excess strong base</td><td>dominates conjugate base</td></tr>
+<tr><td>beyond equivalance</td><td>hydroxide determines pH</td><td>curve identical to strong acid</td></tr>
+<tr><td>characteristics</td><td>different weak acids</td><td>same equivalence point</td></tr>
+<tr><td>characteristics</td><td>amount of weak acid</td><td>is amount base required</td></tr>
+<tr class="highlight"><td>characteristics</td><td>strength of weak acid</td><td>pH at equivalence point</td></tr>
+</table>

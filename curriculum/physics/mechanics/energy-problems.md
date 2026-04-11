@@ -8,7 +8,8 @@ order: 6
 
 # Problems
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| shortcut | end points simpler | via energy conservation |
-| shortcut | three balls thrown | same speed at bottom |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>shortcut</td><td>end points simpler</td><td>via energy conservation</td></tr>
+<tr class="highlight"><td>shortcut</td><td>three balls thrown</td><td>same speed at bottom</td></tr>
+</table>

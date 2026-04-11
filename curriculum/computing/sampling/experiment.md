@@ -8,12 +8,13 @@ order: 1
 
 # Experiment
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| data | population is entire group | we want to study |
-| data | census data from all | sample data from subset |
-| sampling | use sample survey to | learn about whole population |
-| sampling | random sample | chance process determine sample |
-| experiment | observational study | no attempt influence responses |
-| experiment | experimental study | impost treatments to influence |
-| experiment | observational no causation | experiment distill causation |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>data</td><td>population is entire group</td><td>we want to study</td></tr>
+<tr class="highlight"><td>data</td><td>census data from all</td><td>sample data from subset</td></tr>
+<tr class="highlight"><td>sampling</td><td>use sample survey to</td><td>learn about whole population</td></tr>
+<tr><td>sampling</td><td>random sample</td><td>chance process determine sample</td></tr>
+<tr><td>experiment</td><td>observational study</td><td>no attempt influence responses</td></tr>
+<tr><td>experiment</td><td>experimental study</td><td>impost treatments to influence</td></tr>
+<tr class="highlight"><td>experiment</td><td>observational no causation</td><td>experiment distill causation</td></tr>
+</table>

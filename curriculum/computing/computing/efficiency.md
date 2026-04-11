@@ -8,10 +8,11 @@ order: 1
 
 # Efficiency
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| programming | be correct | solve the right problem |
-| programming | and be efficient | as the inputs get very large |
-| efficiency | worst case as size grows | mathematical order |
-| efficiency | size can grow | in amount or in values |
-| efficiency | $10^{8}$ operations a second | complete in $2$ seconds |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>programming</td><td>be correct</td><td>solve the right problem</td></tr>
+<tr class="highlight"><td>programming</td><td>and be efficient</td><td>as the inputs get very large</td></tr>
+<tr><td>efficiency</td><td>worst case as size grows</td><td>mathematical order</td></tr>
+<tr><td>efficiency</td><td>size can grow</td><td>in amount or in values</td></tr>
+<tr><td>efficiency</td><td>$10^{8}$ operations a second</td><td>complete in $2$ seconds</td></tr>
+</table>

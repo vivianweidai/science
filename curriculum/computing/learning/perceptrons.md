@@ -8,9 +8,10 @@ order: 2
 
 # Perceptrons
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| perceptrons |  |  |
-| perceptrons |  |  |
-| perceptrons |  |  |
-| perceptrons |  |  |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>perceptrons</td><td></td><td></td></tr>
+<tr><td>perceptrons</td><td></td><td></td></tr>
+<tr><td>perceptrons</td><td></td><td></td></tr>
+<tr><td>perceptrons</td><td></td><td></td></tr>
+</table>

@@ -8,9 +8,10 @@ order: 10
 
 # Vapor Pressure
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| vapor pressure | equilibrium between | evaporation and condensation |
-| vapor pressure | weaker intermolecular forces | more evaporation larger pressure |
-| temperature | higher temperature | more kinetic energy |
-| temperature | escape intermolecular forces | larger vapor pressure |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>vapor pressure</td><td>equilibrium between</td><td>evaporation and condensation</td></tr>
+<tr class="highlight"><td>vapor pressure</td><td>weaker intermolecular forces</td><td>more evaporation larger pressure</td></tr>
+<tr><td>temperature</td><td>higher temperature</td><td>more kinetic energy</td></tr>
+<tr><td>temperature</td><td>escape intermolecular forces</td><td>larger vapor pressure</td></tr>
+</table>

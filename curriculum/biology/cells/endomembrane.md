@@ -8,12 +8,13 @@ order: 4
 
 # Endomembrane
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| endomembrane | internal membrane network | from nucleus to outside |
-| endomembrane | synthesize macromolecules | store transport and recycle |
-| components | smooth ER makes lipids | rough ER makes phospholipids |
-| components | cisternae sacs store | vesicle sacs transport |
-| components | Golgi apparatus | hosts and directs vesicles |
-| components | lysosomes breakdown | recycle macromolecules |
-| components | peroxisomes detoxify toxins | inside livers and kidney |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>endomembrane</td><td>internal membrane network</td><td>from nucleus to outside</td></tr>
+<tr class="highlight"><td>endomembrane</td><td>synthesize macromolecules</td><td>store transport and recycle</td></tr>
+<tr><td>components</td><td>smooth ER makes lipids</td><td>rough ER makes phospholipids</td></tr>
+<tr><td>components</td><td>cisternae sacs store</td><td>vesicle sacs transport</td></tr>
+<tr><td>components</td><td>Golgi apparatus</td><td>hosts and directs vesicles</td></tr>
+<tr><td>components</td><td>lysosomes breakdown</td><td>recycle macromolecules</td></tr>
+<tr><td>components</td><td>peroxisomes detoxify toxins</td><td>inside livers and kidney</td></tr>
+</table>

@@ -8,15 +8,16 @@ order: 6
 
 # Intersections
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| secants | intersect inside | average arc angles |
-| secants | intersect outside | half difference arcs |
-| tangents | perpendicular | to radius |
-| tangents | tangent-chord | half chord arc |
-| tangents | tangents meet | equal to point |
-| incircle | $\overline{AT} = s - a$ | two tangents meet |
-| incircle | right triangle | hypothenus $c$ |
-| incircle | $\frac{a + b - c}{2}$ | inradius |
-| power of a point | line meets circle | at two points |
-| power of a point | $OP \cdot OQ = OS \cdot OT$ | segment products equal |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>secants</td><td>intersect inside</td><td>average arc angles</td></tr>
+<tr><td>secants</td><td>intersect outside</td><td>half difference arcs</td></tr>
+<tr><td>tangents</td><td>perpendicular</td><td>to radius</td></tr>
+<tr class="highlight"><td>tangents</td><td>tangent-chord</td><td>half chord arc</td></tr>
+<tr><td>tangents</td><td>tangents meet</td><td>equal to point</td></tr>
+<tr><td>incircle</td><td>$\overline{AT} = s - a$</td><td>two tangents meet</td></tr>
+<tr><td>incircle</td><td>right triangle</td><td>hypothenus $c$</td></tr>
+<tr><td>incircle</td><td>$\frac{a + b - c}{2}$</td><td>inradius</td></tr>
+<tr><td>power of a point</td><td>line meets circle</td><td>at two points</td></tr>
+<tr class="highlight"><td>power of a point</td><td>$OP \cdot OQ = OS \cdot OT$</td><td>segment products equal</td></tr>
+</table>

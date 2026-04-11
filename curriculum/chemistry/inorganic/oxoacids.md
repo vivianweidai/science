@@ -8,12 +8,13 @@ order: 24
 
 # Oxoacids
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| oxoacids | multiple oxidation states | expect variety of oxoacids |
-| oxoacids | 3A 4A single $H_{3}BO_{3}H_{2}CO_{3}$ | 5A 6A two $H_{3}PO_{3}H_{3}PO_{4}$ |
-| oxoacids | halogens four oxoacids $HOClHOClOHOClO_{2}HOClO_{3}$ |  |
-| characteristics | fluorine no oxoacids | most electronegative element |
-| characteristics | various oxoacids | not polyprotic acids |
-| characteristics | hypohalous $HOX$ single $O$ | weak acid strong oxidizer |
-| characteristics | reduction potential | oxoacid larger than oxoanion |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>oxoacids</td><td>multiple oxidation states</td><td>expect variety of oxoacids</td></tr>
+<tr><td>oxoacids</td><td>3A 4A single $H_{3}BO_{3}H_{2}CO_{3}$</td><td>5A 6A two $H_{3}PO_{3}H_{3}PO_{4}$</td></tr>
+<tr><td>oxoacids</td><td>halogens four oxoacids $HOClHOClOHOClO_{2}HOClO_{3}$</td><td></td></tr>
+<tr><td>characteristics</td><td>fluorine no oxoacids</td><td>most electronegative element</td></tr>
+<tr class="highlight"><td>characteristics</td><td>various oxoacids</td><td>not polyprotic acids</td></tr>
+<tr><td>characteristics</td><td>hypohalous $HOX$ single $O$</td><td>weak acid strong oxidizer</td></tr>
+<tr><td>characteristics</td><td>reduction potential</td><td>oxoacid larger than oxoanion</td></tr>
+</table>

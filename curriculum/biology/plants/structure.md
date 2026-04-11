@@ -8,11 +8,12 @@ order: 1
 
 # Structure
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| organs | root system below | anchor absorb store |
-| organs | shoot system stem leaves | photosynthesis reproduce store |
-| tissues | continuous through plant | dermal vascular ground |
-| cells | parenchyma cells | stem cells and storage |
-| cells | collenchyma live support | sclerenchyma dead support |
-| cells | sieve tube live sugar transport | tracheids dead water transport |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>organs</td><td>root system below</td><td>anchor absorb store</td></tr>
+<tr class="highlight"><td>organs</td><td>shoot system stem leaves</td><td>photosynthesis reproduce store</td></tr>
+<tr class="highlight"><td>tissues</td><td>continuous through plant</td><td>dermal vascular ground</td></tr>
+<tr><td>cells</td><td>parenchyma cells</td><td>stem cells and storage</td></tr>
+<tr><td>cells</td><td>collenchyma live support</td><td>sclerenchyma dead support</td></tr>
+<tr><td>cells</td><td>sieve tube live sugar transport</td><td>tracheids dead water transport</td></tr>
+</table>

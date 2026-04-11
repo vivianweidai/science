@@ -8,12 +8,13 @@ order: 5
 
 # Thermodynamics
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| equilibrium | reaction direction | depends on charge stability |
-| equilibrium | ability of the conjugate base | to absorb negative charge |
-| charge stability | atom | electronegativity polarizability |
-| charge stability | resonance | delocalize the charge |
-| charge stability | induction | delocalize the charge |
-| charge stability | orbitals | closer to nucleus more stable |
-| charge stability | solvating by solvent | nonsteric more stable |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>equilibrium</td><td>reaction direction</td><td>depends on charge stability</td></tr>
+<tr class="highlight"><td>equilibrium</td><td>ability of the conjugate base</td><td>to absorb negative charge</td></tr>
+<tr><td>charge stability</td><td>atom</td><td>electronegativity polarizability</td></tr>
+<tr><td>charge stability</td><td>resonance</td><td>delocalize the charge</td></tr>
+<tr><td>charge stability</td><td>induction</td><td>delocalize the charge</td></tr>
+<tr><td>charge stability</td><td>orbitals</td><td>closer to nucleus more stable</td></tr>
+<tr><td>charge stability</td><td>solvating by solvent</td><td>nonsteric more stable</td></tr>
+</table>

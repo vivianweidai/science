@@ -8,10 +8,11 @@ order: 12
 
 # Taste
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| taste | chemoreceptors gustation | tastant chemicals in solution |
-| taste | papillae tongue bumps | lined with taste buds |
-| taste | taste buds all five receptors | sweet salty sour bitter unami |
-| taste | salt sodium channel | sour ion channel |
-| taste | sweet unami G protein | bitter G protein 30 types |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>taste</td><td>chemoreceptors gustation</td><td>tastant chemicals in solution</td></tr>
+<tr><td>taste</td><td>papillae tongue bumps</td><td>lined with taste buds</td></tr>
+<tr><td>taste</td><td>taste buds all five receptors</td><td>sweet salty sour bitter unami</td></tr>
+<tr><td>taste</td><td>salt sodium channel</td><td>sour ion channel</td></tr>
+<tr><td>taste</td><td>sweet unami G protein</td><td>bitter G protein 30 types</td></tr>
+</table>

@@ -8,17 +8,18 @@ order: 5
 
 # Merchanisms
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| mechanisms | coordination reactions | changes to metal or ligands |
-| mechanisms | most common is substitution | octohedral or square planar |
-| octohedral | first row metals labile | $Cr^{3 +}Co^{3 +}$ other rows inert |
-| octohedral | dissociation not association | evidenced by reaction rates |
-| octohedral | larger charge size less steric | stronger $M - L$ bonds |
-| octohedral | intermediate five coordinate | negative $\Delta CFSE$ more $E_{A}$ |
-| redox | electron transfer | from one metal to other |
-| redox | outer sphere coordinations intact | $M - L$ distance difference |
-| redox | inner sphere bridging complex | larger halide more polarizable |
-| square planar | association not dissociation | readily attack above below |
-| square planar | kinetic trans effect | more polarizable trans directing |
-| square planar | $CN^{-} > I^{-} > Br^{-} > Cl^{-} > NH_{3} > H_{2}O$ |  |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>mechanisms</td><td>coordination reactions</td><td>changes to metal or ligands</td></tr>
+<tr><td>mechanisms</td><td>most common is substitution</td><td>octohedral or square planar</td></tr>
+<tr class="highlight"><td>octohedral</td><td>first row metals labile</td><td>$Cr^{3 +}Co^{3 +}$ other rows inert</td></tr>
+<tr class="highlight"><td>octohedral</td><td>dissociation not association</td><td>evidenced by reaction rates</td></tr>
+<tr><td>octohedral</td><td>larger charge size less steric</td><td>stronger $M - L$ bonds</td></tr>
+<tr><td>octohedral</td><td>intermediate five coordinate</td><td>negative $\Delta CFSE$ more $E_{A}$</td></tr>
+<tr class="highlight"><td>redox</td><td>electron transfer</td><td>from one metal to other</td></tr>
+<tr><td>redox</td><td>outer sphere coordinations intact</td><td>$M - L$ distance difference</td></tr>
+<tr><td>redox</td><td>inner sphere bridging complex</td><td>larger halide more polarizable</td></tr>
+<tr class="highlight"><td>square planar</td><td>association not dissociation</td><td>readily attack above below</td></tr>
+<tr><td>square planar</td><td>kinetic trans effect</td><td>more polarizable trans directing</td></tr>
+<tr><td>square planar</td><td>$CN^{-} > I^{-} > Br^{-} > Cl^{-} > NH_{3} > H_{2}O$</td><td></td></tr>
+</table>

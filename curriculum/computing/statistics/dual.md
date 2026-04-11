@@ -8,12 +8,13 @@ order: 4
 
 # Dual
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| correlation | numerical relationship | between two variables |
-| correlation | $r = \frac{1}{n - 1}\sum\left( \frac{x_{i} - \overline{x}}{s_{x}} \right)\left( \frac{y_{i} - \overline{y}}{s_{y}} \right)$ |  |
-| correlation | $r^{2}$ | proportion accounted for |
-| regression | how one variable changes | in response to other change |
-| regression | $\widehat{y} = a + bx$ | predicted value |
-| regression | $b = r\frac{s_{y}}{s_{x}}$ | relation to correlation |
-| regression | $y = ax^{b}\ln y = \ln a + b\ln x$ | transform to linear |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>correlation</td><td>numerical relationship</td><td>between two variables</td></tr>
+<tr class="highlight"><td>correlation</td><td>$r = \frac{1}{n - 1}\sum\left( \frac{x_{i} - \overline{x}}{s_{x}} \right)\left( \frac{y_{i} - \overline{y}}{s_{y}} \right)$</td><td></td></tr>
+<tr><td>correlation</td><td>$r^{2}$</td><td>proportion accounted for</td></tr>
+<tr class="highlight"><td>regression</td><td>how one variable changes</td><td>in response to other change</td></tr>
+<tr class="highlight"><td>regression</td><td>$\widehat{y} = a + bx$</td><td>predicted value</td></tr>
+<tr><td>regression</td><td>$b = r\frac{s_{y}}{s_{x}}$</td><td>relation to correlation</td></tr>
+<tr><td>regression</td><td>$y = ax^{b}\ln y = \ln a + b\ln x$</td><td>transform to linear</td></tr>
+</table>

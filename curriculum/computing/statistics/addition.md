@@ -8,10 +8,11 @@ order: 6
 
 # Addition
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| complement | $P(\overline{A}) = 1 - P(A)$ | event does not occur |
-| complement | $\frac{P(A)}{P(\overline{A})}$ | odds in favor |
-| addition | the probability that | either event occurs |
-| addition | $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ |  |
-| addition | $P(A \cap B) = 0$ | mutually exclusive |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>complement</td><td>$P(\overline{A}) = 1 - P(A)$</td><td>event does not occur</td></tr>
+<tr><td>complement</td><td>$\frac{P(A)}{P(\overline{A})}$</td><td>odds in favor</td></tr>
+<tr class="highlight"><td>addition</td><td>the probability that</td><td>either event occurs</td></tr>
+<tr class="highlight"><td>addition</td><td>$P(A \cup B) = P(A) + P(B) - P(A \cap B)$</td><td></td></tr>
+<tr class="highlight"><td>addition</td><td>$P(A \cap B) = 0$</td><td>mutually exclusive</td></tr>
+</table>

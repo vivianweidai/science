@@ -8,11 +8,12 @@ order: 7
 
 # Size
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| size | angular diameter | Sun Betelgeuse |
-| size | $r \approx \frac{d\alpha}{2}$ | small angle |
-| size | precise measurement | interferometry |
-| size | $\alpha_{\text{radians}} > \lambda/b$ | slit distance |
-| temperature | luminosity radius | effective temperature |
-| temperature | $L = 4\pi r^{2}\sigma T^{4}$ | Stefan-Boltzmann |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>size</td><td>angular diameter</td><td>Sun Betelgeuse</td></tr>
+<tr class="highlight"><td>size</td><td>$r \approx \frac{d\alpha}{2}$</td><td>small angle</td></tr>
+<tr><td>size</td><td>precise measurement</td><td>interferometry</td></tr>
+<tr class="highlight"><td>size</td><td>$\alpha_{\text{radians}} > \lambda/b$</td><td>slit distance</td></tr>
+<tr><td>temperature</td><td>luminosity radius</td><td>effective temperature</td></tr>
+<tr class="highlight"><td>temperature</td><td>$L = 4\pi r^{2}\sigma T^{4}$</td><td>Stefan-Boltzmann</td></tr>
+</table>

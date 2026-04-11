@@ -8,13 +8,14 @@ order: 9
 
 # Adiabatic
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| adiabatic | no heat flow | insulated quick processes |
-| adiabatic | $\Delta E = W$ | work done only |
-| adiabatic | $W = \int pdV$ | integration |
-| adiabatic | transition between isotherms | loses temperature and energy |
-| equipartition | $pV^{\gamma} = \text{constant}$ | substitution |
-| equipartition | $\gamma = \frac{C_{p}}{C_{V}}$ | by definition |
-| equipartition | particles store energy | for each degree of freedom |
-| equipartition | increase degrees | exponent closer to one |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>adiabatic</td><td>no heat flow</td><td>insulated quick processes</td></tr>
+<tr><td>adiabatic</td><td>$\Delta E = W$</td><td>work done only</td></tr>
+<tr><td>adiabatic</td><td>$W = \int pdV$</td><td>integration</td></tr>
+<tr><td>adiabatic</td><td>transition between isotherms</td><td>loses temperature and energy</td></tr>
+<tr><td>equipartition</td><td>$pV^{\gamma} = \text{constant}$</td><td>substitution</td></tr>
+<tr><td>equipartition</td><td>$\gamma = \frac{C_{p}}{C_{V}}$</td><td>by definition</td></tr>
+<tr><td>equipartition</td><td>particles store energy</td><td>for each degree of freedom</td></tr>
+<tr><td>equipartition</td><td>increase degrees</td><td>exponent closer to one</td></tr>
+</table>

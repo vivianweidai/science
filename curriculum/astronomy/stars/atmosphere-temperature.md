@@ -8,12 +8,13 @@ order: 12
 
 # Temperature
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| spectral lines | Balmer lines | hydrogen second level |
-| spectral lines | competing temp effects | neutral state second level |
-| spectral lines | $T \approx 10,000\text{K}$ | maximum Balmer |
-| spectral lines | other element lines | deduce temperature range |
-| classification | with spectral lines | temperature sequence |
-| classification | OBAFGKM LT | decrease temperature |
-| classification | LT brown dwarfs | no luminous fusion |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>spectral lines</td><td>Balmer lines</td><td>hydrogen second level</td></tr>
+<tr><td>spectral lines</td><td>competing temp effects</td><td>neutral state second level</td></tr>
+<tr class="highlight"><td>spectral lines</td><td>$T \approx 10,000\text{K}$</td><td>maximum Balmer</td></tr>
+<tr><td>spectral lines</td><td>other element lines</td><td>deduce temperature range</td></tr>
+<tr class="highlight"><td>classification</td><td>with spectral lines</td><td>temperature sequence</td></tr>
+<tr><td>classification</td><td>OBAFGKM LT</td><td>decrease temperature</td></tr>
+<tr class="highlight"><td>classification</td><td>LT brown dwarfs</td><td>no luminous fusion</td></tr>
+</table>

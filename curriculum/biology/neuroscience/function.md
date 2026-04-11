@@ -8,11 +8,12 @@ order: 5
 
 # Function
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| sleep | rest and consolidate | learning and memory |
-| sleep | no receive external stimuli | cycles of shallower sleep |
-| clock | pacemaker for a day | resets with retina sunlight |
-| clock | suprachiasmatic nucleus | in hypothalamus |
-| emotions | store emotional experiences | recall by similar circumstances |
-| emotions | limbic system amygdala | memory induces autonomic |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>sleep</td><td>rest and consolidate</td><td>learning and memory</td></tr>
+<tr><td>sleep</td><td>no receive external stimuli</td><td>cycles of shallower sleep</td></tr>
+<tr class="highlight"><td>clock</td><td>pacemaker for a day</td><td>resets with retina sunlight</td></tr>
+<tr><td>clock</td><td>suprachiasmatic nucleus</td><td>in hypothalamus</td></tr>
+<tr class="highlight"><td>emotions</td><td>store emotional experiences</td><td>recall by similar circumstances</td></tr>
+<tr><td>emotions</td><td>limbic system amygdala</td><td>memory induces autonomic</td></tr>
+</table>

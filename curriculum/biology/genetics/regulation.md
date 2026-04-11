@@ -8,12 +8,13 @@ order: 12
 
 # Regulation
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| regulation | control DNA expression | different times multiple points |
-| pre transcription | epigenetic regulation | chromatin wrapping availability |
-| pre transcription | operons in prokaryotes | transcription factors eukaryotes |
-| post transcription | splicing arrangement | alternative exon sequences |
-| post transcription | telomere cell life spans | RNAi mark for destruction |
-| post translation | activation of proteins | controlled by enzymes |
-| post translation | ubiquitin mark proteins | slated for destruction |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>regulation</td><td>control DNA expression</td><td>different times multiple points</td></tr>
+<tr><td>pre transcription</td><td>epigenetic regulation</td><td>chromatin wrapping availability</td></tr>
+<tr class="highlight"><td>pre transcription</td><td>operons in prokaryotes</td><td>transcription factors eukaryotes</td></tr>
+<tr><td>post transcription</td><td>splicing arrangement</td><td>alternative exon sequences</td></tr>
+<tr><td>post transcription</td><td>telomere cell life spans</td><td>RNAi mark for destruction</td></tr>
+<tr><td>post translation</td><td>activation of proteins</td><td>controlled by enzymes</td></tr>
+<tr><td>post translation</td><td>ubiquitin mark proteins</td><td>slated for destruction</td></tr>
+</table>

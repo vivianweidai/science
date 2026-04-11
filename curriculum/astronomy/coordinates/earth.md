@@ -8,15 +8,16 @@ order: 2
 
 # Earth
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| Earth | locate | position |
-| Earth | Earth | surface |
-| **latitude** $\phi$ | equator | great circle rotational |
-| **latitude** $\phi$ | parallel | lessor parallel equator |
-| **latitude** $\phi$ | north south | of equator |
-| **longitude** $\lambda$ | prime meridian | semi great circle |
-| **longitude** $\lambda$ | west east | of prime meridian |
-| **longitude** $\lambda$ | prime meridian | poles through Greenwich |
-| departure | distance | same parallel |
-| departure | $d = \Delta\lambda\cos\varphi$ | trigonometry |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>Earth</td><td>locate</td><td>position</td></tr>
+<tr><td>Earth</td><td>Earth</td><td>surface</td></tr>
+<tr class="highlight"><td>**latitude** $\phi$</td><td>equator</td><td>great circle rotational</td></tr>
+<tr><td>**latitude** $\phi$</td><td>parallel</td><td>lessor parallel equator</td></tr>
+<tr><td>**latitude** $\phi$</td><td>north south</td><td>of equator</td></tr>
+<tr class="highlight"><td>**longitude** $\lambda$</td><td>prime meridian</td><td>semi great circle</td></tr>
+<tr><td>**longitude** $\lambda$</td><td>west east</td><td>of prime meridian</td></tr>
+<tr><td>**longitude** $\lambda$</td><td>prime meridian</td><td>poles through Greenwich</td></tr>
+<tr><td>departure</td><td>distance</td><td>same parallel</td></tr>
+<tr class="highlight"><td>departure</td><td>$d = \Delta\lambda\cos\varphi$</td><td>trigonometry</td></tr>
+</table>

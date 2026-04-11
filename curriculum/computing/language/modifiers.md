@@ -8,11 +8,12 @@ order: 6
 
 # Modifiers
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| morphemes | smallest | function groups |
-| morphemes | stem affixes | un-desire-able-ity |
-| different | same forms | different functions |
-| different | different morphemes | cat**s** see**s** |
-| allomorphs | different forms | same function |
-| allomorphs | same morphemes | **il**legal **im**possible |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>morphemes</td><td>smallest</td><td>function groups</td></tr>
+<tr><td>morphemes</td><td>stem affixes</td><td>un-desire-able-ity</td></tr>
+<tr><td>different</td><td>same forms</td><td>different functions</td></tr>
+<tr><td>different</td><td>different morphemes</td><td>cat**s** see**s**</td></tr>
+<tr class="highlight"><td>allomorphs</td><td>different forms</td><td>same function</td></tr>
+<tr><td>allomorphs</td><td>same morphemes</td><td>**il**legal **im**possible</td></tr>
+</table>

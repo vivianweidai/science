@@ -8,16 +8,17 @@ order: 1
 
 # Stoichiometry
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| stoichiometry | balanced reactions | by conservation mass charge |
-| stoichiometry | atomic mass unit | $\frac{1}{12}$ of carbon twelve |
-| stoichiometry | atomic mass | isotopes nucleon mass |
-| stoichiometry | molar mass | mass of one mole |
-| stoichiometry | percent composition | of reactants by mass |
-| stoichiometry | empirical formula | the generic reduced ratio |
-| stoichiometry | molecular formula | the specific ratio |
-| limiting | the reactant | that runs out first |
-| limiting | when matched | by mass conservation |
-| yield | theoretical yield | as calculated |
-| yield | percent yield | actual experimental result |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>stoichiometry</td><td>balanced reactions</td><td>by conservation mass charge</td></tr>
+<tr><td>stoichiometry</td><td>atomic mass unit</td><td>$\frac{1}{12}$ of carbon twelve</td></tr>
+<tr><td>stoichiometry</td><td>atomic mass</td><td>isotopes nucleon mass</td></tr>
+<tr><td>stoichiometry</td><td>molar mass</td><td>mass of one mole</td></tr>
+<tr><td>stoichiometry</td><td>percent composition</td><td>of reactants by mass</td></tr>
+<tr><td>stoichiometry</td><td>empirical formula</td><td>the generic reduced ratio</td></tr>
+<tr><td>stoichiometry</td><td>molecular formula</td><td>the specific ratio</td></tr>
+<tr><td>limiting</td><td>the reactant</td><td>that runs out first</td></tr>
+<tr><td>limiting</td><td>when matched</td><td>by mass conservation</td></tr>
+<tr><td>yield</td><td>theoretical yield</td><td>as calculated</td></tr>
+<tr><td>yield</td><td>percent yield</td><td>actual experimental result</td></tr>
+</table>

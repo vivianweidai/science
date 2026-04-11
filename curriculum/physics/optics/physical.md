@@ -8,11 +8,12 @@ order: 3
 
 # Physical
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| physical | light as waves interference | small scale at wavelengths |
-| physical | coherent steady interference | same frequency and phase |
-| coherence | recombine different paths | slits coherent light |
-| coherence | interferometry single light | diffraction circular wavefronts |
-| interference | superposition of waves | path difference determines |
-| interference | constructive whole wavelengths | destructive half wavelengths |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>physical</td><td>light as waves interference</td><td>small scale at wavelengths</td></tr>
+<tr class="highlight"><td>physical</td><td>coherent steady interference</td><td>same frequency and phase</td></tr>
+<tr><td>coherence</td><td>recombine different paths</td><td>slits coherent light</td></tr>
+<tr><td>coherence</td><td>interferometry single light</td><td>diffraction circular wavefronts</td></tr>
+<tr class="highlight"><td>interference</td><td>superposition of waves</td><td>path difference determines</td></tr>
+<tr><td>interference</td><td>constructive whole wavelengths</td><td>destructive half wavelengths</td></tr>
+</table>

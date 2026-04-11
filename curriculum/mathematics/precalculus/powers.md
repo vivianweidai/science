@@ -8,11 +8,12 @@ order: 4
 
 # Powers
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| product | multiplication | magnitudes sum |
-| product | $wz = rs(\cos(\alpha + \beta) + i\sin(\alpha + \beta))$ |  |
-| product | $f(x)f(y) = f(x + y)$ | functional equation |
-| product | $e^{i\theta} = \cos\theta + i\sin\theta$ | exponential relation |
-| powers | angle multiples | de Moivre |
-| powers | $(\cos\theta + i\sin\theta)^{n} = \cos n\theta + i\sin n\theta$ |  |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>product</td><td>multiplication</td><td>magnitudes sum</td></tr>
+<tr class="highlight"><td>product</td><td>$wz = rs(\cos(\alpha + \beta) + i\sin(\alpha + \beta))$</td><td></td></tr>
+<tr class="highlight"><td>product</td><td>$f(x)f(y) = f(x + y)$</td><td>functional equation</td></tr>
+<tr class="highlight"><td>product</td><td>$e^{i\theta} = \cos\theta + i\sin\theta$</td><td>exponential relation</td></tr>
+<tr class="highlight"><td>powers</td><td>angle multiples</td><td>de Moivre</td></tr>
+<tr class="highlight"><td>powers</td><td>$(\cos\theta + i\sin\theta)^{n} = \cos n\theta + i\sin n\theta$</td><td></td></tr>
+</table>

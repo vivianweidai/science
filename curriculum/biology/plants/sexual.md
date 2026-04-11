@@ -8,17 +8,18 @@ order: 12
 
 # Sexual
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| sexual | flower unique structure | four concentric whorls |
-| sexual | sepals protect floral bud | petals attract polinators |
-| sexual | stamens male gametophyte | carpels female gametophyte |
-| fertilization | uneven meiosis triple mitosis | no cytokinesis embryo $8$ nuclei |
-| fertilization | pollen tube double fertilization | zygote and triploid endosperm |
-| fertilization | zygote asymmetric mitosis | makes seed leaf cotyldons |
-| fertilization | monocot endosperm energy | eudicot cotyldon energy |
-| germination | environmental trigger | imbibition water uptake |
-| germination | monocot single cotyldon | eudicot cotyldon pair rise up |
-| germination | vegetative growth continous | flowering environmental trigger |
-| fruits | flower wither if no fertilize | fruit protect seed aid dispersal |
-| fruits | ovary walls become pericarp | thickened dry or fleshy wall |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>sexual</td><td>flower unique structure</td><td>four concentric whorls</td></tr>
+<tr class="highlight"><td>sexual</td><td>sepals protect floral bud</td><td>petals attract polinators</td></tr>
+<tr class="highlight"><td>sexual</td><td>stamens male gametophyte</td><td>carpels female gametophyte</td></tr>
+<tr><td>fertilization</td><td>uneven meiosis triple mitosis</td><td>no cytokinesis embryo $8$ nuclei</td></tr>
+<tr><td>fertilization</td><td>pollen tube double fertilization</td><td>zygote and triploid endosperm</td></tr>
+<tr class="highlight"><td>fertilization</td><td>zygote asymmetric mitosis</td><td>makes seed leaf cotyldons</td></tr>
+<tr><td>fertilization</td><td>monocot endosperm energy</td><td>eudicot cotyldon energy</td></tr>
+<tr class="highlight"><td>germination</td><td>environmental trigger</td><td>imbibition water uptake</td></tr>
+<tr class="highlight"><td>germination</td><td>monocot single cotyldon</td><td>eudicot cotyldon pair rise up</td></tr>
+<tr><td>germination</td><td>vegetative growth continous</td><td>flowering environmental trigger</td></tr>
+<tr class="highlight"><td>fruits</td><td>flower wither if no fertilize</td><td>fruit protect seed aid dispersal</td></tr>
+<tr><td>fruits</td><td>ovary walls become pericarp</td><td>thickened dry or fleshy wall</td></tr>
+</table>

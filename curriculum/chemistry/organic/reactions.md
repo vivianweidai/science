@@ -8,19 +8,20 @@ order: 17
 
 # Reactions
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| electrophilic | strengthen electrophile substrate | for ring $\pi$ nucleophiles to attack |
-| electrophilic | $X_{2}/AlBr_{3}$ Lewis acid helps | substitution not addition install $X$ |
-| electrophilic | $HNO_{3}/H_{2}SO_{4}$ | nitration install $NO_{2}$ |
-| electrophilic | $RX/AlCl_{3}$ $Zn(Hg)/HCl\text{heat}$ | Friedel-Crafts install acyl alkyl |
-| electrophilic | $\text{conc. fuming}H_{2}SO_{4}$ | sulfonation install $SO_{3}H$ |
-| directing | strengthen aromatic nucleophile | substituent activate or deactivate |
-| directing | activators direct to ortho para | deactivators direct meta except $X$ |
-| directing | ortho para $>$ meta directors | strong $>$ weak activators |
-| nucleophillic | weaken aromatic to electrophile | requires specific conditions |
-| nucleophillic | substituent electron withdrawing | leaving group in ortho or para |
-| nucleophillic | $X - ◯ - NO_{2}$ Nuc replace $X$ | not $S_{N}1$ or $S_{N}2$ but $S_{N}Ar$ |
-| nucleophillic | $NaOH/H_{3}O^{+}$ | addition elimination $S_{N}Ar$ |
-| nucleophillic | $X - ◯$ Nuc replace $X$ | no withdrawing substituent |
-| nucleophillic | $NaOH350{}^{\circ}C/H_{3}O^{+}$ | elimination addition |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>electrophilic</td><td>strengthen electrophile substrate</td><td>for ring $\pi$ nucleophiles to attack</td></tr>
+<tr class="highlight"><td>electrophilic</td><td>$X_{2}/AlBr_{3}$ Lewis acid helps</td><td>substitution not addition install $X$</td></tr>
+<tr><td>electrophilic</td><td>$HNO_{3}/H_{2}SO_{4}$</td><td>nitration install $NO_{2}$</td></tr>
+<tr><td>electrophilic</td><td>$RX/AlCl_{3}$ $Zn(Hg)/HCl\text{heat}$</td><td>Friedel-Crafts install acyl alkyl</td></tr>
+<tr><td>electrophilic</td><td>$\text{conc. fuming}H_{2}SO_{4}$</td><td>sulfonation install $SO_{3}H$</td></tr>
+<tr class="highlight"><td>directing</td><td>strengthen aromatic nucleophile</td><td>substituent activate or deactivate</td></tr>
+<tr class="highlight"><td>directing</td><td>activators direct to ortho para</td><td>deactivators direct meta except $X$</td></tr>
+<tr class="highlight"><td>directing</td><td>ortho para $>$ meta directors</td><td>strong $>$ weak activators</td></tr>
+<tr class="highlight"><td>nucleophillic</td><td>weaken aromatic to electrophile</td><td>requires specific conditions</td></tr>
+<tr class="highlight"><td>nucleophillic</td><td>substituent electron withdrawing</td><td>leaving group in ortho or para</td></tr>
+<tr><td>nucleophillic</td><td>$X - ◯ - NO_{2}$ Nuc replace $X$</td><td>not $S_{N}1$ or $S_{N}2$ but $S_{N}Ar$</td></tr>
+<tr><td>nucleophillic</td><td>$NaOH/H_{3}O^{+}$</td><td>addition elimination $S_{N}Ar$</td></tr>
+<tr><td>nucleophillic</td><td>$X - ◯$ Nuc replace $X$</td><td>no withdrawing substituent</td></tr>
+<tr><td>nucleophillic</td><td>$NaOH350{}^{\circ}C/H_{3}O^{+}$</td><td>elimination addition</td></tr>
+</table>

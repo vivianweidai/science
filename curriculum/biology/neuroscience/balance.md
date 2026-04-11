@@ -8,9 +8,10 @@ order: 10
 
 # Balance
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| orientation | vestibule vertical chambers | gelcap otolith bend hairs |
-| orientation | orientation by gravity | linear acceleration by differnce |
-| rotation | three semicircular canals | gelcap with hair cells |
-| rotation | three axes angular rotation | spin dizzy stuck gelcaps |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>orientation</td><td>vestibule vertical chambers</td><td>gelcap otolith bend hairs</td></tr>
+<tr class="highlight"><td>orientation</td><td>orientation by gravity</td><td>linear acceleration by differnce</td></tr>
+<tr><td>rotation</td><td>three semicircular canals</td><td>gelcap with hair cells</td></tr>
+<tr class="highlight"><td>rotation</td><td>three axes angular rotation</td><td>spin dizzy stuck gelcaps</td></tr>
+</table>

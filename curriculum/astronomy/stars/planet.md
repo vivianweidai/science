@@ -8,15 +8,16 @@ order: 4
 
 # Planet
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| temperature | equilibrium | energy balance |
-| temperature | absorb energy | cross section albedo |
-| temperature | $W = \frac{L}{4\pi a^{2}}(1 - A)\pi r^{2}$ | substitution |
-| temperature | radiate energy | Stefan-Boltzmann |
-| radiation | approximate sum | two blackbody spectra |
-| radiation | reflected sunlight | thermal emission |
-| radiation | emission modified | atmosphere absorption |
-| atmosphere | terrestrial too hot | retain hydrogen helium |
-| atmosphere | mean free path | density collisions |
-| atmosphere | escape velocity | Maxwell-Boltzmann |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>temperature</td><td>equilibrium</td><td>energy balance</td></tr>
+<tr><td>temperature</td><td>absorb energy</td><td>cross section albedo</td></tr>
+<tr><td>temperature</td><td>$W = \frac{L}{4\pi a^{2}}(1 - A)\pi r^{2}$</td><td>substitution</td></tr>
+<tr><td>temperature</td><td>radiate energy</td><td>Stefan-Boltzmann</td></tr>
+<tr><td>radiation</td><td>approximate sum</td><td>two blackbody spectra</td></tr>
+<tr><td>radiation</td><td>reflected sunlight</td><td>thermal emission</td></tr>
+<tr><td>radiation</td><td>emission modified</td><td>atmosphere absorption</td></tr>
+<tr><td>atmosphere</td><td>terrestrial too hot</td><td>retain hydrogen helium</td></tr>
+<tr><td>atmosphere</td><td>mean free path</td><td>density collisions</td></tr>
+<tr><td>atmosphere</td><td>escape velocity</td><td>Maxwell-Boltzmann</td></tr>
+</table>

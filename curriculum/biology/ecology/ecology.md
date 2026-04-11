@@ -8,20 +8,21 @@ order: 1
 
 # Ecology
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| ecology | organism interactions | with hierarchy of environments |
-| ecology | biosphere Earth climate | sunlight air precipitation |
-| biomes | major life zones | terrestrial and aquatic |
-| biomes | terrestrial climate vegetation | with vertical layering |
-| biomes | aquatic sunlight nutrients | with layering and turover |
-| biomes | distribution of species | dispersal of gametes |
-| biomes | conservation of biodiversity | genetic species and ecosystem |
-| community | species interactions | with each other in ecosystem |
-| community | trophic food chain hierarchy | 10% energy limits number levels |
-| community | each level has organisms | decomposer producer consumer |
-| community | regulated by keystone engineers | bottom up or top down |
-| community | chemical cycles water nutrients | toxins accumulated magnified |
-| community | change is the norm | succession after disturbance |
-| community | $1 - \sum\left( \frac{n}{N} \right)^{2}$ | Simon\'s diversity index |
-| community | some disturbance more diverse | more adaptive more resistant |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>ecology</td><td>organism interactions</td><td>with hierarchy of environments</td></tr>
+<tr class="highlight"><td>ecology</td><td>biosphere Earth climate</td><td>sunlight air precipitation</td></tr>
+<tr class="highlight"><td>biomes</td><td>major life zones</td><td>terrestrial and aquatic</td></tr>
+<tr><td>biomes</td><td>terrestrial climate vegetation</td><td>with vertical layering</td></tr>
+<tr><td>biomes</td><td>aquatic sunlight nutrients</td><td>with layering and turover</td></tr>
+<tr><td>biomes</td><td>distribution of species</td><td>dispersal of gametes</td></tr>
+<tr><td>biomes</td><td>conservation of biodiversity</td><td>genetic species and ecosystem</td></tr>
+<tr class="highlight"><td>community</td><td>species interactions</td><td>with each other in ecosystem</td></tr>
+<tr class="highlight"><td>community</td><td>trophic food chain hierarchy</td><td>10% energy limits number levels</td></tr>
+<tr><td>community</td><td>each level has organisms</td><td>decomposer producer consumer</td></tr>
+<tr><td>community</td><td>regulated by keystone engineers</td><td>bottom up or top down</td></tr>
+<tr><td>community</td><td>chemical cycles water nutrients</td><td>toxins accumulated magnified</td></tr>
+<tr><td>community</td><td>change is the norm</td><td>succession after disturbance</td></tr>
+<tr class="highlight"><td>community</td><td>$1 - \sum\left( \frac{n}{N} \right)^{2}$</td><td>Simon\'s diversity index</td></tr>
+<tr class="highlight"><td>community</td><td>some disturbance more diverse</td><td>more adaptive more resistant</td></tr>
+</table>

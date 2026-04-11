@@ -8,14 +8,15 @@ order: 1
 
 # Statics
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| fluids | liquids or gases | fill given container |
-| fluids | $\rho = \frac{M}{V}$ | density gas compressible |
-| fluids | $p = \frac{F}{A}$ | pressure force per area |
-| equilibrium | no motion inside fluid | no net force anywhere |
-| equilibrium | $p = \rho gh + p_{0}$ | gravity differential pressure |
-| Pascal | surface pressure | felt throughout liquid |
-| Pascal | $\frac{F_{1}}{A_{1}} = \frac{F_{2}}{A_{2}}$ | work constant distances vary |
-| Archimedes | buoyancy force | displaced fluid weight |
-| Archimedes | $V_{w}\rho_{w} = V_{o}\rho_{o}$ | equilibrium |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>fluids</td><td>liquids or gases</td><td>fill given container</td></tr>
+<tr class="highlight"><td>fluids</td><td>$\rho = \frac{M}{V}$</td><td>density gas compressible</td></tr>
+<tr class="highlight"><td>fluids</td><td>$p = \frac{F}{A}$</td><td>pressure force per area</td></tr>
+<tr class="highlight"><td>equilibrium</td><td>no motion inside fluid</td><td>no net force anywhere</td></tr>
+<tr class="highlight"><td>equilibrium</td><td>$p = \rho gh + p_{0}$</td><td>gravity differential pressure</td></tr>
+<tr><td>Pascal</td><td>surface pressure</td><td>felt throughout liquid</td></tr>
+<tr class="highlight"><td>Pascal</td><td>$\frac{F_{1}}{A_{1}} = \frac{F_{2}}{A_{2}}$</td><td>work constant distances vary</td></tr>
+<tr><td>Archimedes</td><td>buoyancy force</td><td>displaced fluid weight</td></tr>
+<tr class="highlight"><td>Archimedes</td><td>$V_{w}\rho_{w} = V_{o}\rho_{o}$</td><td>equilibrium</td></tr>
+</table>

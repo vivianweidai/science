@@ -8,18 +8,19 @@ order: 4
 
 # Ellipse
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| ellipse | gravitation | central force |
-| ellipse | elliptical orbits | star at focus |
-| ellipse | $- \frac{GM}{r_{2}} = \frac{d^{2}r}{dt^{2}} - \omega^{2}r$ | acceleration |
-| ellipse | $r = \frac{a(1 - e^{2})}{1 + e\cos\theta}$ | ellipse |
-| eccentricity | $e = \frac{c}{a}$ | definition |
-| eccentricity | $a^{2} = b^{2} + c^{2}$ | Pythagoras |
-| eccentricity | $a - c$ | periapsis |
-| eccentricity | $a + c$ | apoapsis |
-| vis viva | $E = - \frac{GMm}{2a}$ | mechnical energy |
-| vis viva | $v^{2} = GM\left( \frac{2}{r} - \frac{1}{a} \right)$ | substitution |
-| virial | $U = - 2K$ | substitution |
-| virial | $E = - K$ | total mechanial |
-| virial | lower orbit | more kinetic less total |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>ellipse</td><td>gravitation</td><td>central force</td></tr>
+<tr><td>ellipse</td><td>elliptical orbits</td><td>star at focus</td></tr>
+<tr class="highlight"><td>ellipse</td><td>$- \frac{GM}{r_{2}} = \frac{d^{2}r}{dt^{2}} - \omega^{2}r$</td><td>acceleration</td></tr>
+<tr><td>ellipse</td><td>$r = \frac{a(1 - e^{2})}{1 + e\cos\theta}$</td><td>ellipse</td></tr>
+<tr class="highlight"><td>eccentricity</td><td>$e = \frac{c}{a}$</td><td>definition</td></tr>
+<tr class="highlight"><td>eccentricity</td><td>$a^{2} = b^{2} + c^{2}$</td><td>Pythagoras</td></tr>
+<tr><td>eccentricity</td><td>$a - c$</td><td>periapsis</td></tr>
+<tr><td>eccentricity</td><td>$a + c$</td><td>apoapsis</td></tr>
+<tr class="highlight"><td>vis viva</td><td>$E = - \frac{GMm}{2a}$</td><td>mechnical energy</td></tr>
+<tr class="highlight"><td>vis viva</td><td>$v^{2} = GM\left( \frac{2}{r} - \frac{1}{a} \right)$</td><td>substitution</td></tr>
+<tr><td>virial</td><td>$U = - 2K$</td><td>substitution</td></tr>
+<tr class="highlight"><td>virial</td><td>$E = - K$</td><td>total mechanial</td></tr>
+<tr><td>virial</td><td>lower orbit</td><td>more kinetic less total</td></tr>
+</table>

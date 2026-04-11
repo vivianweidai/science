@@ -8,13 +8,14 @@ order: 12
 
 # Identities
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| identities | true for | all values |
-| identities | brute force check | by expansion |
-| ratios | $\frac{a}{b} = \frac{c}{d} = k$ | set ratio to variable |
-| ratios | assume is true | and work backwards |
-| ratios | $\frac{a}{b} = \frac{c}{d} = \frac{a + kc}{b + kd}$ | equals same ratio |
-| ratios | $\frac{a + kb}{a - kb} = \frac{c + kd}{c - kd}$ | equals different ratio |
-| induction | base case identify | induction compels next |
-| induction | binomial theorem | identity by induction |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>identities</td><td>true for</td><td>all values</td></tr>
+<tr><td>identities</td><td>brute force check</td><td>by expansion</td></tr>
+<tr><td>ratios</td><td>$\frac{a}{b} = \frac{c}{d} = k$</td><td>set ratio to variable</td></tr>
+<tr><td>ratios</td><td>assume is true</td><td>and work backwards</td></tr>
+<tr><td>ratios</td><td>$\frac{a}{b} = \frac{c}{d} = \frac{a + kc}{b + kd}$</td><td>equals same ratio</td></tr>
+<tr><td>ratios</td><td>$\frac{a + kb}{a - kb} = \frac{c + kd}{c - kd}$</td><td>equals different ratio</td></tr>
+<tr><td>induction</td><td>base case identify</td><td>induction compels next</td></tr>
+<tr class="highlight"><td>induction</td><td>binomial theorem</td><td>identity by induction</td></tr>
+</table>

@@ -8,8 +8,9 @@ order: 16
 
 # Greedy
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| drink dispenser aops | edge constraints | fill up each step |
-| mooloo | completed | completed |
-| astral superposition usaco | completed | completed |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>drink dispenser aops</td><td>edge constraints</td><td>fill up each step</td></tr>
+<tr><td>mooloo</td><td>completed</td><td>completed</td></tr>
+<tr><td>astral superposition usaco</td><td>completed</td><td>completed</td></tr>
+</table>

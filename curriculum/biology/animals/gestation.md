@@ -8,15 +8,16 @@ order: 10
 
 # Gestation
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| reproduction | asexual no gamete fusion | budding fission parthenogensis |
-| reproduction | sexual fertilized zygote | external aquatic internal care |
-| gametogenesis | sperm from testes | coiled seminiferous tubules |
-| gametogenesis | egg from ovary follicles | ovulation to uterus endometrium |
-| oogenesis | all eggs at birth | suspended at prophase I |
-| oogenesis | monthly mature at puberty | suspended at metaphase II |
-| cycle | ovarian cycle | follicle matures release oocyte |
-| cycle | uterine cycle | menstrual uterus lining prepared |
-| cycle | ovulation release egg | follicle to corpus luteum |
-| cycle | continue if no fertilization | cycles pause if fertilization |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>reproduction</td><td>asexual no gamete fusion</td><td>budding fission parthenogensis</td></tr>
+<tr class="highlight"><td>reproduction</td><td>sexual fertilized zygote</td><td>external aquatic internal care</td></tr>
+<tr><td>gametogenesis</td><td>sperm from testes</td><td>coiled seminiferous tubules</td></tr>
+<tr><td>gametogenesis</td><td>egg from ovary follicles</td><td>ovulation to uterus endometrium</td></tr>
+<tr><td>oogenesis</td><td>all eggs at birth</td><td>suspended at prophase I</td></tr>
+<tr><td>oogenesis</td><td>monthly mature at puberty</td><td>suspended at metaphase II</td></tr>
+<tr><td>cycle</td><td>ovarian cycle</td><td>follicle matures release oocyte</td></tr>
+<tr><td>cycle</td><td>uterine cycle</td><td>menstrual uterus lining prepared</td></tr>
+<tr><td>cycle</td><td>ovulation release egg</td><td>follicle to corpus luteum</td></tr>
+<tr><td>cycle</td><td>continue if no fertilization</td><td>cycles pause if fertilization</td></tr>
+</table>

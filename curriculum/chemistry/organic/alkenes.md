@@ -8,17 +8,18 @@ order: 9
 
 # Alkenes
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| alkenes | unsaturated double bonds | addition reactions |
-| alkenes | regiochemistry Markovnikov | syn or anti with enantiomers |
-| hydrogenation | $H_{2}/Pt$ | metal surface catalyst |
-| hydrogenation | no regiochemistry | syn held by catalyst |
-| hydrohalogenation | $HX$ | carbocation rearrangement |
-| hydrohalogenation | Markovnikov more substituted | syn and anti |
-| hydrobromination | $HBr/ROOR$ | light or heat makes radical |
-| hydrobromination | anti Markovnikov | syn and anti |
-| hydration | $H_{2}O/\lbrack\text{dilute}H_{2}SO_{4}\rbrack$ | reverse of alcohol elimination |
-| hydration | Markovnikov | syn and anti |
-| hydration | $BH_{3}THF/H_{2}O_{2}NaOH$ | hydroboration oxidation |
-| hydration | anti Markovnikov | syn |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>alkenes</td><td>unsaturated double bonds</td><td>addition reactions</td></tr>
+<tr class="highlight"><td>alkenes</td><td>regiochemistry Markovnikov</td><td>syn or anti with enantiomers</td></tr>
+<tr><td>hydrogenation</td><td>$H_{2}/Pt$</td><td>metal surface catalyst</td></tr>
+<tr><td>hydrogenation</td><td>no regiochemistry</td><td>syn held by catalyst</td></tr>
+<tr><td>hydrohalogenation</td><td>$HX$</td><td>carbocation rearrangement</td></tr>
+<tr><td>hydrohalogenation</td><td>Markovnikov more substituted</td><td>syn and anti</td></tr>
+<tr><td>hydrobromination</td><td>$HBr/ROOR$</td><td>light or heat makes radical</td></tr>
+<tr><td>hydrobromination</td><td>anti Markovnikov</td><td>syn and anti</td></tr>
+<tr><td>hydration</td><td>$H_{2}O/\lbrack\text{dilute}H_{2}SO_{4}\rbrack$</td><td>reverse of alcohol elimination</td></tr>
+<tr><td>hydration</td><td>Markovnikov</td><td>syn and anti</td></tr>
+<tr><td>hydration</td><td>$BH_{3}THF/H_{2}O_{2}NaOH$</td><td>hydroboration oxidation</td></tr>
+<tr><td>hydration</td><td>anti Markovnikov</td><td>syn</td></tr>
+</table>

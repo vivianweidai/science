@@ -8,9 +8,10 @@ order: 8
 
 # Eclipse
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| incline | ${5.1}^{\circ}$ | half each day |
-| incline | nodes | intersection |
-| eclipse | Sun Moon | near nodes |
-| eclipse | Saros cycle | synodic repeats |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>incline</td><td>${5.1}^{\circ}$</td><td>half each day</td></tr>
+<tr><td>incline</td><td>nodes</td><td>intersection</td></tr>
+<tr class="highlight"><td>eclipse</td><td>Sun Moon</td><td>near nodes</td></tr>
+<tr><td>eclipse</td><td>Saros cycle</td><td>synodic repeats</td></tr>
+</table>

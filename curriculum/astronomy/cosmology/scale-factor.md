@@ -8,12 +8,13 @@ order: 13
 
 # Scale Factor
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| expansion | energy conservation | Newton |
-| expansion | expansion proportional | mass density |
-| expansion | critical mass density | cosmological constant |
-| expansion | repulsive acceleration | Einstein |
-| scale factor | $z = \frac{\lambda_{0} - \lambda_{e}}{\lambda_{e}}$ | Doppler |
-| scale factor | $\frac{\lambda_{e}}{a(t_{e})} = \frac{\lambda_{0}}{a(t_{0})}$ | expansion |
-| scale factor | $1 + z = \frac{1}{a(t_{e})}$ | proportional redshift |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>expansion</td><td>energy conservation</td><td>Newton</td></tr>
+<tr class="highlight"><td>expansion</td><td>expansion proportional</td><td>mass density</td></tr>
+<tr><td>expansion</td><td>critical mass density</td><td>cosmological constant</td></tr>
+<tr><td>expansion</td><td>repulsive acceleration</td><td>Einstein</td></tr>
+<tr class="highlight"><td>scale factor</td><td>$z = \frac{\lambda_{0} - \lambda_{e}}{\lambda_{e}}$</td><td>Doppler</td></tr>
+<tr class="highlight"><td>scale factor</td><td>$\frac{\lambda_{e}}{a(t_{e})} = \frac{\lambda_{0}}{a(t_{0})}$</td><td>expansion</td></tr>
+<tr class="highlight"><td>scale factor</td><td>$1 + z = \frac{1}{a(t_{e})}$</td><td>proportional redshift</td></tr>
+</table>

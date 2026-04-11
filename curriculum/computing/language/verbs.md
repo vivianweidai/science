@@ -8,11 +8,12 @@ order: 8
 
 # Verbs
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| verbs | verb | action existence state |
-| verbs | arguments | subject object |
-| verb phrase | main verb | modifiers |
-| verb phrase | transitive | direct object |
-| sentence | noun phrase | verb phrase |
-| sentence | a boy eats the apples | $NP + VP(V + NP)$ |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>verbs</td><td>verb</td><td>action existence state</td></tr>
+<tr class="highlight"><td>verbs</td><td>arguments</td><td>subject object</td></tr>
+<tr><td>verb phrase</td><td>main verb</td><td>modifiers</td></tr>
+<tr class="highlight"><td>verb phrase</td><td>transitive</td><td>direct object</td></tr>
+<tr><td>sentence</td><td>noun phrase</td><td>verb phrase</td></tr>
+<tr><td>sentence</td><td>a boy eats the apples</td><td>$NP + VP(V + NP)$</td></tr>
+</table>

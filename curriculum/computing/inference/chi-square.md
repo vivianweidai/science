@@ -8,9 +8,10 @@ order: 4
 
 # Chi Square
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| chi square | assess hypothetical distributions | for two categories of data |
-| chi square | random sample $10\%$ rule | large counts condition all$> 5$ |
-| chi square | $\chi^{2} = \sum\frac{(O - E)^{2}}{E}$ | $df = (r - 1)(c - 1)$ |
-| chi square | $\text{expected} = \frac{(\text{row total})(\text{column total})}{\text{table total}}$ |  |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>chi square</td><td>assess hypothetical distributions</td><td>for two categories of data</td></tr>
+<tr class="highlight"><td>chi square</td><td>random sample $10\%$ rule</td><td>large counts condition all$> 5$</td></tr>
+<tr><td>chi square</td><td>$\chi^{2} = \sum\frac{(O - E)^{2}}{E}$</td><td>$df = (r - 1)(c - 1)$</td></tr>
+<tr class="highlight"><td>chi square</td><td>$\text{expected} = \frac{(\text{row total})(\text{column total})}{\text{table total}}$</td><td></td></tr>
+</table>

@@ -8,13 +8,14 @@ order: 2
 
 # Evolution
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| prologue | protostar gravity | $50\text{Myr}$ |
-| I main sequence | $H \rightarrow He$ fusion | $10\text{Gyr}$ |
-| II red giant | $He$ core gravity $H \rightarrow He$ shell | $1\text{Gyr}$ |
-| III horizontal | $He \rightarrow C$ core $H \rightarrow He$ shell | $100\text{Myr}$ |
-| IV asymptotic giant branch | $He \rightarrow CH \rightarrow He$ two shells | $20\text{Myr}$ |
-| IV asymptotic giant branch | brief luminous unstable | pulsate eject envelope |
-| V planetary nebula | $\frac{C}{O}$ core thermal hot | $50\text{kyr}$ |
-| epilogue | white dwarf thermal | $\infty$ |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>prologue</td><td>protostar gravity</td><td>$50\text{Myr}$</td></tr>
+<tr class="highlight"><td>I main sequence</td><td>$H \rightarrow He$ fusion</td><td>$10\text{Gyr}$</td></tr>
+<tr class="highlight"><td>II red giant</td><td>$He$ core gravity $H \rightarrow He$ shell</td><td>$1\text{Gyr}$</td></tr>
+<tr class="highlight"><td>III horizontal</td><td>$He \rightarrow C$ core $H \rightarrow He$ shell</td><td>$100\text{Myr}$</td></tr>
+<tr class="highlight"><td>IV asymptotic giant branch</td><td>$He \rightarrow CH \rightarrow He$ two shells</td><td>$20\text{Myr}$</td></tr>
+<tr class="highlight"><td>IV asymptotic giant branch</td><td>brief luminous unstable</td><td>pulsate eject envelope</td></tr>
+<tr class="highlight"><td>V planetary nebula</td><td>$\frac{C}{O}$ core thermal hot</td><td>$50\text{kyr}$</td></tr>
+<tr class="highlight"><td>epilogue</td><td>white dwarf thermal</td><td>$\infty$</td></tr>
+</table>

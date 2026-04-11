@@ -8,13 +8,14 @@ order: 17
 
 # Functional Equations
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| functional equations | equation input | includes function |
-| functional equations | search through | known values |
-| substitution | determine function | constant derives form |
-| substitution | form satisfies function | places restritions on constant |
-| separation | same relation | among variables |
-| separation | both relations | equal constant |
-| cyclic | repeated identity | step backwards with inverse |
-| cyclic | cyclic argument | system of equations |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>functional equations</td><td>equation input</td><td>includes function</td></tr>
+<tr class="highlight"><td>functional equations</td><td>search through</td><td>known values</td></tr>
+<tr class="highlight"><td>substitution</td><td>determine function</td><td>constant derives form</td></tr>
+<tr class="highlight"><td>substitution</td><td>form satisfies function</td><td>places restritions on constant</td></tr>
+<tr><td>separation</td><td>same relation</td><td>among variables</td></tr>
+<tr><td>separation</td><td>both relations</td><td>equal constant</td></tr>
+<tr><td>cyclic</td><td>repeated identity</td><td>step backwards with inverse</td></tr>
+<tr><td>cyclic</td><td>cyclic argument</td><td>system of equations</td></tr>
+</table>

@@ -8,12 +8,13 @@ order: 9
 
 # Relations
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| relations | most stars | main sequence |
-| relations | well defined relations | mass radius luminosity |
-| relations | larger stars | less dense |
-| relations | more massive stars | more more luminous |
-| lifetime | mass total fuel | luminosity rate of use |
-| lifetime | $\tau \propto M/L \propto M^{- 1.62}$ | $M < 0.7M_{\odot}$ |
-| lifetime | $\tau \propto M/L \propto M^{- 2.92}$ | $M > 0.7M_{\odot}$ |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>relations</td><td>most stars</td><td>main sequence</td></tr>
+<tr class="highlight"><td>relations</td><td>well defined relations</td><td>mass radius luminosity</td></tr>
+<tr class="highlight"><td>relations</td><td>larger stars</td><td>less dense</td></tr>
+<tr class="highlight"><td>relations</td><td>more massive stars</td><td>more more luminous</td></tr>
+<tr><td>lifetime</td><td>mass total fuel</td><td>luminosity rate of use</td></tr>
+<tr class="highlight"><td>lifetime</td><td>$\tau \propto M/L \propto M^{- 1.62}$</td><td>$M < 0.7M_{\odot}$</td></tr>
+<tr class="highlight"><td>lifetime</td><td>$\tau \propto M/L \propto M^{- 2.92}$</td><td>$M > 0.7M_{\odot}$</td></tr>
+</table>

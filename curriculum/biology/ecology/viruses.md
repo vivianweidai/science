@@ -8,11 +8,12 @@ order: 6
 
 # Viruses
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| viruses | non living agents | that infect cells |
-| viruses | bind to surface proteins | inject DNA to replicate |
-| structure | capsid protein shell | enclosed genetic material |
-| structure | optional viral envelope | of stolen host membrane |
-| epidemic | is disease outbreak | pandemic if global |
-| epidemic | usually existing virus | expand host type territory |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>viruses</td><td>non living agents</td><td>that infect cells</td></tr>
+<tr class="highlight"><td>viruses</td><td>bind to surface proteins</td><td>inject DNA to replicate</td></tr>
+<tr><td>structure</td><td>capsid protein shell</td><td>enclosed genetic material</td></tr>
+<tr><td>structure</td><td>optional viral envelope</td><td>of stolen host membrane</td></tr>
+<tr><td>epidemic</td><td>is disease outbreak</td><td>pandemic if global</td></tr>
+<tr><td>epidemic</td><td>usually existing virus</td><td>expand host type territory</td></tr>
+</table>

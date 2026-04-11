@@ -8,16 +8,17 @@ order: 1
 
 # Structure
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| structure | ligands around central metal | coordinate covalent bond |
-| structure | primary valence oxidation state | secondary valence coordination |
-| structure | some partners double duty | secondary valence not ionizable |
-| structure | tetraaminechromium(III)-$\mu$-amido-$\mu$-hydroxobis(en)iron(III) sulfate |  |
-| ligands | monodentate one bite | amine $NH_{3}M \longleftarrow \text{:L}$ |
-| ligands | chelating multi bite claw ring | enthylenediamine (2) EDTA (6) |
-| ligands | ambidentate two donors $\text{:AB:}$ | bridging $M \longleftarrow \text{:L:} \longrightarrow M$ |
-| coordination | metal coordination sphere | coordination number of ligands |
-| coordination | six ligands octahedral | four square planar tetrahedral |
-| coordination | isomers same atoms | with different properties |
-| coordination | structural different bonds | stereoisomers same bonds |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>structure</td><td>ligands around central metal</td><td>coordinate covalent bond</td></tr>
+<tr class="highlight"><td>structure</td><td>primary valence oxidation state</td><td>secondary valence coordination</td></tr>
+<tr><td>structure</td><td>some partners double duty</td><td>secondary valence not ionizable</td></tr>
+<tr class="highlight"><td>structure</td><td>tetraaminechromium(III)-$\mu$-amido-$\mu$-hydroxobis(en)iron(III) sulfate</td><td></td></tr>
+<tr><td>ligands</td><td>monodentate one bite</td><td>amine $NH_{3}M \longleftarrow \text{:L}$</td></tr>
+<tr><td>ligands</td><td>chelating multi bite claw ring</td><td>enthylenediamine (2) EDTA (6)</td></tr>
+<tr><td>ligands</td><td>ambidentate two donors $\text{:AB:}$</td><td>bridging $M \longleftarrow \text{:L:} \longrightarrow M$</td></tr>
+<tr class="highlight"><td>coordination</td><td>metal coordination sphere</td><td>coordination number of ligands</td></tr>
+<tr class="highlight"><td>coordination</td><td>six ligands octahedral</td><td>four square planar tetrahedral</td></tr>
+<tr class="highlight"><td>coordination</td><td>isomers same atoms</td><td>with different properties</td></tr>
+<tr class="highlight"><td>coordination</td><td>structural different bonds</td><td>stereoisomers same bonds</td></tr>
+</table>

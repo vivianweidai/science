@@ -8,15 +8,16 @@ order: 1
 
 # Matter
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| matter | pure substances | elements and compounds |
-| matter | states of matter | solid liquid gas |
-| matter | chemical changes | change of substance |
-| matter | physical changes | no change substance |
-| matter | physical properties | internal independent of amount |
-| mixtures | mingled pure substances | homogenous same composition |
-| mixtures | separation into pure substances | physical chemical techniques |
-| mixtures | distillation | physical boiling point |
-| mixtures | chromatography | physical carrier affinity |
-| mixtures | gravimetric | chemical precipitation |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>matter</td><td>pure substances</td><td>elements and compounds</td></tr>
+<tr><td>matter</td><td>states of matter</td><td>solid liquid gas</td></tr>
+<tr><td>matter</td><td>chemical changes</td><td>change of substance</td></tr>
+<tr><td>matter</td><td>physical changes</td><td>no change substance</td></tr>
+<tr><td>matter</td><td>physical properties</td><td>internal independent of amount</td></tr>
+<tr><td>mixtures</td><td>mingled pure substances</td><td>homogenous same composition</td></tr>
+<tr class="highlight"><td>mixtures</td><td>separation into pure substances</td><td>physical chemical techniques</td></tr>
+<tr><td>mixtures</td><td>distillation</td><td>physical boiling point</td></tr>
+<tr><td>mixtures</td><td>chromatography</td><td>physical carrier affinity</td></tr>
+<tr><td>mixtures</td><td>gravimetric</td><td>chemical precipitation</td></tr>
+</table>

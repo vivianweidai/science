@@ -8,9 +8,10 @@ order: 6
 
 # Black Hole
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| black hole | massive stars | initial $M > 18M_{\odot}$ |
-| black hole | remnant mass larger | neutron star maximum |
-| black hole | light cannot escape | Schwarzschild radius |
-| black hole | detection via effects | accretion disk emissions |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>black hole</td><td>massive stars</td><td>initial $M > 18M_{\odot}$</td></tr>
+<tr><td>black hole</td><td>remnant mass larger</td><td>neutron star maximum</td></tr>
+<tr><td>black hole</td><td>light cannot escape</td><td>Schwarzschild radius</td></tr>
+<tr><td>black hole</td><td>detection via effects</td><td>accretion disk emissions</td></tr>
+</table>

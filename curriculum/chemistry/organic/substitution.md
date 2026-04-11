@@ -8,9 +8,10 @@ order: 8
 
 # Substitution
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| kinetics | electrophile degree | tertiatry steric unreactive |
-| kinetics | nucleophile strength | more polarizable more reactive |
-| kinetics | leaving group charge stability | more stable more reactive |
-| kinetics | polar aprotic solvent $DMSO$ | no solvent shell reactive |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>kinetics</td><td>electrophile degree</td><td>tertiatry steric unreactive</td></tr>
+<tr class="highlight"><td>kinetics</td><td>nucleophile strength</td><td>more polarizable more reactive</td></tr>
+<tr class="highlight"><td>kinetics</td><td>leaving group charge stability</td><td>more stable more reactive</td></tr>
+<tr class="highlight"><td>kinetics</td><td>polar aprotic solvent $DMSO$</td><td>no solvent shell reactive</td></tr>
+</table>

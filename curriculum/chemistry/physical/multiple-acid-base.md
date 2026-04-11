@@ -8,12 +8,13 @@ order: 18
 
 # Acid Base
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| multiple | multiple step reaction | each with own equilibrium |
-| multiple | system of equations | with conservation laws |
-| acid base | $H_{2}A \rightleftharpoons H^{+} + HA^{-}$ | $HA^{-} \rightleftharpoons H^{+} + A^{2 -}$ |
-| acid base | $\lbrack A\rbrack_{0} = \lbrack H_{2}A\rbrack + \lbrack HA^{-}\rbrack + \lbrack A^{2 -}\rbrack$ | mass conservation |
-| acid base | $\lbrack H^{+}\rbrack = \lbrack HA^{-}\rbrack + 2\lbrack A^{2 -}\rbrack$ | charge conservation |
-| acid base | pH overlapping bell curves | by component mole fractions |
-| acid base | $pH = pK_{avg}$ | when equal component fractions |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>multiple</td><td>multiple step reaction</td><td>each with own equilibrium</td></tr>
+<tr class="highlight"><td>multiple</td><td>system of equations</td><td>with conservation laws</td></tr>
+<tr><td>acid base</td><td>$H_{2}A \rightleftharpoons H^{+} + HA^{-}$</td><td>$HA^{-} \rightleftharpoons H^{+} + A^{2 -}$</td></tr>
+<tr class="highlight"><td>acid base</td><td>$\lbrack A\rbrack_{0} = \lbrack H_{2}A\rbrack + \lbrack HA^{-}\rbrack + \lbrack A^{2 -}\rbrack$</td><td>mass conservation</td></tr>
+<tr class="highlight"><td>acid base</td><td>$\lbrack H^{+}\rbrack = \lbrack HA^{-}\rbrack + 2\lbrack A^{2 -}\rbrack$</td><td>charge conservation</td></tr>
+<tr><td>acid base</td><td>pH overlapping bell curves</td><td>by component mole fractions</td></tr>
+<tr><td>acid base</td><td>$pH = pK_{avg}$</td><td>when equal component fractions</td></tr>
+</table>

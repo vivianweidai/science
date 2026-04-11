@@ -8,10 +8,11 @@ order: 6
 
 # Dot Product
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| dot product | map vector to scalar | normal zero |
-| dot product | $\mathbf{a} \cdot \mathbf{b} = \vert \mathbf{a}\vert \vert \mathbf{b}\vert \cos\theta$ | magnitude |
-| dot product | $\mathbf{a} \cdot \mathbf{b} = a_{1}b_{1} + a_{2}b_{2}$ | algebra |
-| dot product | $\mathbf{a} \cdot \mathbf{a} = \vert \mathbf{a}\vert ^{2}$ | substitution |
-| dot product | $\text{proj}_{\mathbf{a}}\mathbf{b} = \frac{\mathbf{a} \cdot \mathbf{b}}{\vert \mathbf{a}\vert ^{2}}\mathbf{a}$ | projected vector |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>dot product</td><td>map vector to scalar</td><td>normal zero</td></tr>
+<tr><td>dot product</td><td>$\mathbf{a} \cdot \mathbf{b} = \vert \mathbf{a}\vert \vert \mathbf{b}\vert \cos\theta$</td><td>magnitude</td></tr>
+<tr><td>dot product</td><td>$\mathbf{a} \cdot \mathbf{b} = a_{1}b_{1} + a_{2}b_{2}$</td><td>algebra</td></tr>
+<tr><td>dot product</td><td>$\mathbf{a} \cdot \mathbf{a} = \vert \mathbf{a}\vert ^{2}$</td><td>substitution</td></tr>
+<tr><td>dot product</td><td>$\text{proj}_{\mathbf{a}}\mathbf{b} = \frac{\mathbf{a} \cdot \mathbf{b}}{\vert \mathbf{a}\vert ^{2}}\mathbf{a}$</td><td>projected vector</td></tr>
+</table>

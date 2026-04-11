@@ -8,17 +8,18 @@ order: 6
 
 # Polynomials
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| polynomials | sum of | integer powers |
-| polynomials | degree is | highest power |
-| operations | addition | group by degrees |
-| operations | multiplication | cross expand |
-| degree | product | sum degrees |
-| degree | zero polynomial | is undefined |
-| zero | factors | are intercepts |
-| zero | inequalities | by intervals |
-| graphing | intercepts | zero multiplicity |
-| graphing | end behavour | leading coefficient |
-| graphing | symmetry | $f( - x)$ behaviour |
-| graphing | intervals | by test values |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>polynomials</td><td>sum of</td><td>integer powers</td></tr>
+<tr><td>polynomials</td><td>degree is</td><td>highest power</td></tr>
+<tr><td>operations</td><td>addition</td><td>group by degrees</td></tr>
+<tr><td>operations</td><td>multiplication</td><td>cross expand</td></tr>
+<tr class="highlight"><td>degree</td><td>product</td><td>sum degrees</td></tr>
+<tr><td>degree</td><td>zero polynomial</td><td>is undefined</td></tr>
+<tr><td>zero</td><td>factors</td><td>are intercepts</td></tr>
+<tr><td>zero</td><td>inequalities</td><td>by intervals</td></tr>
+<tr><td>graphing</td><td>intercepts</td><td>zero multiplicity</td></tr>
+<tr><td>graphing</td><td>end behavour</td><td>leading coefficient</td></tr>
+<tr><td>graphing</td><td>symmetry</td><td>$f( - x)$ behaviour</td></tr>
+<tr><td>graphing</td><td>intervals</td><td>by test values</td></tr>
+</table>

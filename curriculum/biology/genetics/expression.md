@@ -8,7 +8,8 @@ order: 9
 
 # Expression
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| expression | use DNA to make proteins | DNA to RNA to proteins |
-| expression | RNA single strand copy DNA | work as messengers and carriers |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>expression</td><td>use DNA to make proteins</td><td>DNA to RNA to proteins</td></tr>
+<tr class="highlight"><td>expression</td><td>RNA single strand copy DNA</td><td>work as messengers and carriers</td></tr>
+</table>

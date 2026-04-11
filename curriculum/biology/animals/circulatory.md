@@ -8,14 +8,15 @@ order: 6
 
 # Circulatory
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| circulatory | connect exchange surfaces | to all cells for nutrients |
-| circulatory | open system interstitial fluid | closed system dedicated blood |
-| circulatory | single circuit body to gill | double circuit lung and body |
-| cycle | pulmonary heart arteries lungs | systemic heart arteries body |
-| cycle | atria collect ventricle pump | double beat atria ven body |
-| cycle | pacemaker synchronize pumps | autorhythmic cells periodic |
-| structure | blood cells erythrocytes red | leukocytes white platelets clot |
-| structure | vessels arteries strong elastic | veins smooth with valves |
-| structure | capillaries large surface area | lymphatic system recover fluids |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>circulatory</td><td>connect exchange surfaces</td><td>to all cells for nutrients</td></tr>
+<tr><td>circulatory</td><td>open system interstitial fluid</td><td>closed system dedicated blood</td></tr>
+<tr><td>circulatory</td><td>single circuit body to gill</td><td>double circuit lung and body</td></tr>
+<tr><td>cycle</td><td>pulmonary heart arteries lungs</td><td>systemic heart arteries body</td></tr>
+<tr><td>cycle</td><td>atria collect ventricle pump</td><td>double beat atria ven body</td></tr>
+<tr><td>cycle</td><td>pacemaker synchronize pumps</td><td>autorhythmic cells periodic</td></tr>
+<tr><td>structure</td><td>blood cells erythrocytes red</td><td>leukocytes white platelets clot</td></tr>
+<tr><td>structure</td><td>vessels arteries strong elastic</td><td>veins smooth with valves</td></tr>
+<tr><td>structure</td><td>capillaries large surface area</td><td>lymphatic system recover fluids</td></tr>
+</table>

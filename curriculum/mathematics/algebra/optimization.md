@@ -8,9 +8,10 @@ order: 15
 
 # Optimization
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| optimization | use | inequalities |
-| optimization | to find | maxima and minima |
-| optimization | show inequality | there is no better value |
-| optimization | show equality | the best value is attainable |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>optimization</td><td>use</td><td>inequalities</td></tr>
+<tr><td>optimization</td><td>to find</td><td>maxima and minima</td></tr>
+<tr class="highlight"><td>optimization</td><td>show inequality</td><td>there is no better value</td></tr>
+<tr class="highlight"><td>optimization</td><td>show equality</td><td>the best value is attainable</td></tr>
+</table>

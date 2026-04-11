@@ -8,11 +8,12 @@ order: 5
 
 # Ideal Gas Law
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| ideal gas law | experimental behaviour | of all gases |
-| ideal gas law | $pV = nRT$ | state variables |
-| ideal gas law | $0$ celsius $1$ atm $1$ mole $22.4L$ | all gases at standard conditions |
-| partial pressure | total pressure | is sum of partial pressures |
-| partial pressure | $P_{T} = P_{1} + P_{2}$ | total is sum of partials |
-| partial pressure | colligative property | depends on number particles |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>ideal gas law</td><td>experimental behaviour</td><td>of all gases</td></tr>
+<tr class="highlight"><td>ideal gas law</td><td>$pV = nRT$</td><td>state variables</td></tr>
+<tr class="highlight"><td>ideal gas law</td><td>$0$ celsius $1$ atm $1$ mole $22.4L$</td><td>all gases at standard conditions</td></tr>
+<tr><td>partial pressure</td><td>total pressure</td><td>is sum of partial pressures</td></tr>
+<tr class="highlight"><td>partial pressure</td><td>$P_{T} = P_{1} + P_{2}$</td><td>total is sum of partials</td></tr>
+<tr><td>partial pressure</td><td>colligative property</td><td>depends on number particles</td></tr>
+</table>

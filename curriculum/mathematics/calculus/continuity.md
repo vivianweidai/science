@@ -8,11 +8,12 @@ order: 2
 
 # Continuity
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| continuity | approaches limit | and actually hits |
-| continuity | does not | skip jump infinite |
-| continuous | polynomials | and combinations |
-| continuous | trigonometric | exponential |
-| theorems | extreme values | continuous has extremes |
-| theorems | intermediate values | continuous passes all values |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>continuity</td><td>approaches limit</td><td>and actually hits</td></tr>
+<tr><td>continuity</td><td>does not</td><td>skip jump infinite</td></tr>
+<tr><td>continuous</td><td>polynomials</td><td>and combinations</td></tr>
+<tr><td>continuous</td><td>trigonometric</td><td>exponential</td></tr>
+<tr><td>theorems</td><td>extreme values</td><td>continuous has extremes</td></tr>
+<tr><td>theorems</td><td>intermediate values</td><td>continuous passes all values</td></tr>
+</table>

@@ -8,16 +8,17 @@ order: 4
 
 # Local Equatorial
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| local equatorial | observer on | Earth surface |
-| local equatorial | denote using | Earth equator |
-| local equatorial | independent of location | dependent on time |
-| **declination** $\delta$ | north south | of equator |
-| **declination** $\delta$ | any observer location | look to declination |
-| **hour angle** $h$ | west east | of observer meridian |
-| **hour angle** $h$ | observer meridian | poles through location |
-| **hour angle** $h$ | observation depends on time | Earth rotation $24$ hours |
-| horizontal-local equatorial | object culmination | at observer meridian |
-| horizontal-local equatorial | zero hour angle | for this location |
-| horizontal-local equatorial | highest altitude | zero azimuth |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>local equatorial</td><td>observer on</td><td>Earth surface</td></tr>
+<tr><td>local equatorial</td><td>denote using</td><td>Earth equator</td></tr>
+<tr class="highlight"><td>local equatorial</td><td>independent of location</td><td>dependent on time</td></tr>
+<tr class="highlight"><td>**declination** $\delta$</td><td>north south</td><td>of equator</td></tr>
+<tr><td>**declination** $\delta$</td><td>any observer location</td><td>look to declination</td></tr>
+<tr class="highlight"><td>**hour angle** $h$</td><td>west east</td><td>of observer meridian</td></tr>
+<tr><td>**hour angle** $h$</td><td>observer meridian</td><td>poles through location</td></tr>
+<tr><td>**hour angle** $h$</td><td>observation depends on time</td><td>Earth rotation $24$ hours</td></tr>
+<tr class="highlight"><td>horizontal-local equatorial</td><td>object culmination</td><td>at observer meridian</td></tr>
+<tr class="highlight"><td>horizontal-local equatorial</td><td>zero hour angle</td><td>for this location</td></tr>
+<tr class="highlight"><td>horizontal-local equatorial</td><td>highest altitude</td><td>zero azimuth</td></tr>
+</table>

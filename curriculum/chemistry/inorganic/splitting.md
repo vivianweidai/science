@@ -8,17 +8,18 @@ order: 3
 
 # Splitting
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| crystal field | metal is Lewis acid | electron pair acceptor |
-| crystal field | match next noble gas | effective atomic number |
-| crystal field | effect of field of ligands | on energies of $nd$ orbitals |
-| crystal field | six dependent orbitals | any one combo of other pair |
-| crystal field | five independent orbitals | combine dependent pair to $d_{z^{2}}$ |
-| octohedral | two of six ligands along axis | two of five orbitals along axis |
-| octohedral | $3\left( \frac{2}{5}\Delta_{o} \right) = 2\left( \frac{3}{5}\Delta_{o} \right)$ | ligand and orbital repulsion |
-| octohedral | $d_{z^{2}}d_{x^{2} - y^{2}} > d_{xy}d_{yz}d_{xz}$ | two $z$ orbitals higher energy |
-| octohedral | tetragonally elongated | $z$ ligands pushed further |
-| octohedral | square planar $d^{8}$ metals | $z$ ligands completely removed |
-| tetrahedral | no orbital points at ligand | differ by repulsion distance |
-| tetrahedral | $d_{z^{2}}d_{x^{2} - y^{2}} < d_{xy}d_{yz}d_{xz}$ | $\Delta_{t} \approx \frac{4}{9}\Delta_{o}$ |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>crystal field</td><td>metal is Lewis acid</td><td>electron pair acceptor</td></tr>
+<tr class="highlight"><td>crystal field</td><td>match next noble gas</td><td>effective atomic number</td></tr>
+<tr class="highlight"><td>crystal field</td><td>effect of field of ligands</td><td>on energies of $nd$ orbitals</td></tr>
+<tr><td>crystal field</td><td>six dependent orbitals</td><td>any one combo of other pair</td></tr>
+<tr><td>crystal field</td><td>five independent orbitals</td><td>combine dependent pair to $d_{z^{2}}$</td></tr>
+<tr class="highlight"><td>octohedral</td><td>two of six ligands along axis</td><td>two of five orbitals along axis</td></tr>
+<tr class="highlight"><td>octohedral</td><td>$3\left( \frac{2}{5}\Delta_{o} \right) = 2\left( \frac{3}{5}\Delta_{o} \right)$</td><td>ligand and orbital repulsion</td></tr>
+<tr class="highlight"><td>octohedral</td><td>$d_{z^{2}}d_{x^{2} - y^{2}} > d_{xy}d_{yz}d_{xz}$</td><td>two $z$ orbitals higher energy</td></tr>
+<tr><td>octohedral</td><td>tetragonally elongated</td><td>$z$ ligands pushed further</td></tr>
+<tr><td>octohedral</td><td>square planar $d^{8}$ metals</td><td>$z$ ligands completely removed</td></tr>
+<tr class="highlight"><td>tetrahedral</td><td>no orbital points at ligand</td><td>differ by repulsion distance</td></tr>
+<tr class="highlight"><td>tetrahedral</td><td>$d_{z^{2}}d_{x^{2} - y^{2}} < d_{xy}d_{yz}d_{xz}$</td><td>$\Delta_{t} \approx \frac{4}{9}\Delta_{o}$</td></tr>
+</table>

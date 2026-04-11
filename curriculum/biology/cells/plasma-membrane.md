@@ -8,12 +8,13 @@ order: 6
 
 # Plasma Membrane
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| plasma membrane | phospholipid bilayer | with selective permeability |
-| plasma membrane | polar head non polar tail | like dissolves like fat soluble |
-| fluid mosaic model | fluidity by fatty acid saturation | cholesterol reduces fluidity |
-| fluid mosaic model | mosaic of embedded proteins | for transport and communication |
-| inter cellular junctions | connect cells to each other | allow inter cellular transfer |
-| inter cellular junctions | plants plasmodesmata | direct cytoplasmic exchange |
-| inter cellular junctions | animals gap junction direct | tight leaks desmosomes staple |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>plasma membrane</td><td>phospholipid bilayer</td><td>with selective permeability</td></tr>
+<tr class="highlight"><td>plasma membrane</td><td>polar head non polar tail</td><td>like dissolves like fat soluble</td></tr>
+<tr class="highlight"><td>fluid mosaic model</td><td>fluidity by fatty acid saturation</td><td>cholesterol reduces fluidity</td></tr>
+<tr class="highlight"><td>fluid mosaic model</td><td>mosaic of embedded proteins</td><td>for transport and communication</td></tr>
+<tr><td>inter cellular junctions</td><td>connect cells to each other</td><td>allow inter cellular transfer</td></tr>
+<tr><td>inter cellular junctions</td><td>plants plasmodesmata</td><td>direct cytoplasmic exchange</td></tr>
+<tr><td>inter cellular junctions</td><td>animals gap junction direct</td><td>tight leaks desmosomes staple</td></tr>
+</table>

@@ -8,13 +8,14 @@ order: 1
 
 # Ai
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| ai | symbolic formal logic | deterministic rules |
-| ai | subsymbolic unconscious | probabilistic distributions |
-| probabilistic | perceptrons | inputs to output |
-| probabilistic | neural networks | convolution layers |
-| probabilistic | language model | memory for context |
-| ml | ai decision making | mimic human processes |
-| ml | ml based on data | remember formulate predict |
-| ml | models learn then predict | labeled or unlabeled data |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>ai</td><td>symbolic formal logic</td><td>deterministic rules</td></tr>
+<tr><td>ai</td><td>subsymbolic unconscious</td><td>probabilistic distributions</td></tr>
+<tr><td>probabilistic</td><td>perceptrons</td><td>inputs to output</td></tr>
+<tr><td>probabilistic</td><td>neural networks</td><td>convolution layers</td></tr>
+<tr><td>probabilistic</td><td>language model</td><td>memory for context</td></tr>
+<tr><td>ml</td><td>ai decision making</td><td>mimic human processes</td></tr>
+<tr><td>ml</td><td>ml based on data</td><td>remember formulate predict</td></tr>
+<tr><td>ml</td><td>models learn then predict</td><td>labeled or unlabeled data</td></tr>
+</table>

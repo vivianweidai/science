@@ -8,8 +8,9 @@ order: 1
 
 # Divisors
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| divisors | $m = nq + r$ | division |
-| divisors | $\gcd(m,n) = \gcd(r,n)$ | Euclidean |
-| divisors | $\gcd(m,n) = am + bn$ | Bezout |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>divisors</td><td>$m = nq + r$</td><td>division</td></tr>
+<tr class="highlight"><td>divisors</td><td>$\gcd(m,n) = \gcd(r,n)$</td><td>Euclidean</td></tr>
+<tr class="highlight"><td>divisors</td><td>$\gcd(m,n) = am + bn$</td><td>Bezout</td></tr>
+</table>

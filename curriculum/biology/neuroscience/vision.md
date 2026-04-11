@@ -8,15 +8,16 @@ order: 11
 
 # Vision
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| vision | photoreceptors detect light | light absorbing visual pigments |
-| vision | invertebrates eye spots | hide in shade |
-| vision | insects compound eyes | wide field detect motion |
-| vision | invertebrates and fishes | move lens change focus |
-| vision | mammals single lens eyes | change lens shape |
-| eye | through pupil hole in iris | lens focus onto retina |
-| eye | contrast rods colors cones | neurons with visual pigments |
-| eye | retina deepest layer first | integration at retina surface |
-| eye | horizontal cell sharpen | ganglion cell group |
-| eye | optical nerve to brain | left right fields by both eyes |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>vision</td><td>photoreceptors detect light</td><td>light absorbing visual pigments</td></tr>
+<tr><td>vision</td><td>invertebrates eye spots</td><td>hide in shade</td></tr>
+<tr><td>vision</td><td>insects compound eyes</td><td>wide field detect motion</td></tr>
+<tr><td>vision</td><td>invertebrates and fishes</td><td>move lens change focus</td></tr>
+<tr class="highlight"><td>vision</td><td>mammals single lens eyes</td><td>change lens shape</td></tr>
+<tr><td>eye</td><td>through pupil hole in iris</td><td>lens focus onto retina</td></tr>
+<tr><td>eye</td><td>contrast rods colors cones</td><td>neurons with visual pigments</td></tr>
+<tr><td>eye</td><td>retina deepest layer first</td><td>integration at retina surface</td></tr>
+<tr><td>eye</td><td>horizontal cell sharpen</td><td>ganglion cell group</td></tr>
+<tr><td>eye</td><td>optical nerve to brain</td><td>left right fields by both eyes</td></tr>
+</table>

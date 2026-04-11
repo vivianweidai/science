@@ -8,12 +8,13 @@ order: 2
 
 # Enzymes
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| enzymes | protein catalysts for reactions | heat denatures structure function |
-| enzymes | reagent substrate binds enzyme | at active site form complex |
-| regulation | activator binds allosteric site | change enzyme shape activates |
-| regulation | inhibitor prevent enzyme | competitive or non competitive |
-| regulation | cofactor supports enzyme | cooperation feedback mechanism |
-| kinetics | $v = \frac{v_{max}a}{K_{M} + a}$ | Michaelis-Menten |
-| kinetics | $\frac{1}{v} = \frac{K_{M}}{v_{max}} \cdot \frac{1}{a} + \frac{1}{v_{max}}$ | Lineweaver-Burk |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>enzymes</td><td>protein catalysts for reactions</td><td>heat denatures structure function</td></tr>
+<tr><td>enzymes</td><td>reagent substrate binds enzyme</td><td>at active site form complex</td></tr>
+<tr><td>regulation</td><td>activator binds allosteric site</td><td>change enzyme shape activates</td></tr>
+<tr><td>regulation</td><td>inhibitor prevent enzyme</td><td>competitive or non competitive</td></tr>
+<tr><td>regulation</td><td>cofactor supports enzyme</td><td>cooperation feedback mechanism</td></tr>
+<tr class="highlight"><td>kinetics</td><td>$v = \frac{v_{max}a}{K_{M} + a}$</td><td>Michaelis-Menten</td></tr>
+<tr class="highlight"><td>kinetics</td><td>$\frac{1}{v} = \frac{K_{M}}{v_{max}} \cdot \frac{1}{a} + \frac{1}{v_{max}}$</td><td>Lineweaver-Burk</td></tr>
+</table>

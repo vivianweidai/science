@@ -8,9 +8,10 @@ order: 3
 
 # Sub Array Sum
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| sub array sum | for all sub array sums | determine the largest |
-| sub array sum | check all possible | triple for-loop $O(n^{3})$ |
-| sub array sum | check sum same time | double for-loop $O(n^{2})$ |
-| sub array sum | maximum at each position | single for-loop $O(n)$ |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>sub array sum</td><td>for all sub array sums</td><td>determine the largest</td></tr>
+<tr><td>sub array sum</td><td>check all possible</td><td>triple for-loop $O(n^{3})$</td></tr>
+<tr><td>sub array sum</td><td>check sum same time</td><td>double for-loop $O(n^{2})$</td></tr>
+<tr><td>sub array sum</td><td>maximum at each position</td><td>single for-loop $O(n)$</td></tr>
+</table>

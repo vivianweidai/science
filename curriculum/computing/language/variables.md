@@ -8,12 +8,13 @@ order: 7
 
 # Variables
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| variables | noun features | that can change |
-| variables | different forms | same function |
-| allomorphs | definitive | the a |
-| allomorphs | numbers | singular plural few |
-| allomorphs | gender | masculine feminine |
-| allomorphs | class | humans mammals birds |
-| allomorphs | case | subjective objective possessive |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>variables</td><td>noun features</td><td>that can change</td></tr>
+<tr><td>variables</td><td>different forms</td><td>same function</td></tr>
+<tr class="highlight"><td>allomorphs</td><td>definitive</td><td>the a</td></tr>
+<tr class="highlight"><td>allomorphs</td><td>numbers</td><td>singular plural few</td></tr>
+<tr class="highlight"><td>allomorphs</td><td>gender</td><td>masculine feminine</td></tr>
+<tr class="highlight"><td>allomorphs</td><td>class</td><td>humans mammals birds</td></tr>
+<tr class="highlight"><td>allomorphs</td><td>case</td><td>subjective objective possessive</td></tr>
+</table>

@@ -8,9 +8,10 @@ order: 9
 
 # Galactic
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| galactic | rotational plane | Milky Way |
-| galactic | fixed point | galaxy center |
-| position | galactic latitude | north south |
-| position | galactic longitude | west east |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>galactic</td><td>rotational plane</td><td>Milky Way</td></tr>
+<tr><td>galactic</td><td>fixed point</td><td>galaxy center</td></tr>
+<tr class="highlight"><td>position</td><td>galactic latitude</td><td>north south</td></tr>
+<tr class="highlight"><td>position</td><td>galactic longitude</td><td>west east</td></tr>
+</table>

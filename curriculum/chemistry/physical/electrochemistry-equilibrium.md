@@ -8,9 +8,10 @@ order: 25
 
 # Equilibrium
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| deviation | concentration but not quantity | directly affects potential |
-| deviation | $\varepsilon = \varepsilon^{\circ} - \frac{RT}{nF}\ln(Q)$ | Nernst |
-| equilibrium | as reaction progresses | concentrations are updated |
-| equilibrium | $\varepsilon^{\circ} = \frac{RT}{nF}\ln(K)$ | $Q = K\Delta G = 0\varepsilon = 0$ |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>deviation</td><td>concentration but not quantity</td><td>directly affects potential</td></tr>
+<tr class="highlight"><td>deviation</td><td>$\varepsilon = \varepsilon^{\circ} - \frac{RT}{nF}\ln(Q)$</td><td>Nernst</td></tr>
+<tr><td>equilibrium</td><td>as reaction progresses</td><td>concentrations are updated</td></tr>
+<tr class="highlight"><td>equilibrium</td><td>$\varepsilon^{\circ} = \frac{RT}{nF}\ln(K)$</td><td>$Q = K\Delta G = 0\varepsilon = 0$</td></tr>
+</table>

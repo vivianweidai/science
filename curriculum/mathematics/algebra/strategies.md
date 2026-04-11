@@ -8,9 +8,10 @@ order: 18
 
 # Strategies
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| substitution | homogeneous | solutions scale |
-| substitution | substitute ratio | or factor |
-| symmetric sums | are elementary | building blocks |
-| symmetric sums | of larger | symmetric polynomials |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>substitution</td><td>homogeneous</td><td>solutions scale</td></tr>
+<tr><td>substitution</td><td>substitute ratio</td><td>or factor</td></tr>
+<tr><td>symmetric sums</td><td>are elementary</td><td>building blocks</td></tr>
+<tr><td>symmetric sums</td><td>of larger</td><td>symmetric polynomials</td></tr>
+</table>

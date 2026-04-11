@@ -8,12 +8,13 @@ order: 8
 
 # Control
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| repairs | polymerase proofreads | if it makes mistakes |
-| repairs | mismatch repair | other enzymes fix single error |
-| repairs | nucleotide excision | nuclease replaces whole segment |
-| chromatin | histone stick ball protein | positive holds negative DNA |
-| chromatin | nucleosome string of beads | wrap around sets of $8$ histones |
-| chromatin | euchromatin loose packing | ready for expression |
-| chromatin | heterochromatin tight packing | not available for expression |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>repairs</td><td>polymerase proofreads</td><td>if it makes mistakes</td></tr>
+<tr><td>repairs</td><td>mismatch repair</td><td>other enzymes fix single error</td></tr>
+<tr><td>repairs</td><td>nucleotide excision</td><td>nuclease replaces whole segment</td></tr>
+<tr class="highlight"><td>chromatin</td><td>histone stick ball protein</td><td>positive holds negative DNA</td></tr>
+<tr class="highlight"><td>chromatin</td><td>nucleosome string of beads</td><td>wrap around sets of $8$ histones</td></tr>
+<tr><td>chromatin</td><td>euchromatin loose packing</td><td>ready for expression</td></tr>
+<tr><td>chromatin</td><td>heterochromatin tight packing</td><td>not available for expression</td></tr>
+</table>

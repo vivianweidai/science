@@ -8,11 +8,12 @@ order: 20
 
 # Disorders
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| aneuploidy | abnormal number chromosomes | either one or three |
-| aneuploidy | due to nondisjunction | failed anaphase separation |
-| crossover | lack of crossover | increases nondisjunction rate |
-| crossover | faulty crossover | translocation lose segment |
-| examples | monosomy X | Turner |
-| examples | trisomy 21 | Down |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>aneuploidy</td><td>abnormal number chromosomes</td><td>either one or three</td></tr>
+<tr><td>aneuploidy</td><td>due to nondisjunction</td><td>failed anaphase separation</td></tr>
+<tr><td>crossover</td><td>lack of crossover</td><td>increases nondisjunction rate</td></tr>
+<tr><td>crossover</td><td>faulty crossover</td><td>translocation lose segment</td></tr>
+<tr><td>examples</td><td>monosomy X</td><td>Turner</td></tr>
+<tr><td>examples</td><td>trisomy 21</td><td>Down</td></tr>
+</table>

@@ -8,15 +8,16 @@ order: 5
 
 # Design
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| control | keep environment constant | to distill cause and effect |
-| control | confounding remove variation | placebo null treatment |
-| control | control group of units | provide baseline for comparison |
-| assignment | treatment is unknown | either single or double blind |
-| assignment | random assignment | treatments assigned randomly |
-| assignment | completely randomized design | no restrictions on pairings |
-| assignment | replication enough units | for statistical significance |
-| assignment | blocks groups of units | thought to be similar |
-| assignment | randomized block design | well chosen more precise |
-| assignment | matched pair design | use blocks of size two |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>control</td><td>keep environment constant</td><td>to distill cause and effect</td></tr>
+<tr><td>control</td><td>confounding remove variation</td><td>placebo null treatment</td></tr>
+<tr><td>control</td><td>control group of units</td><td>provide baseline for comparison</td></tr>
+<tr><td>assignment</td><td>treatment is unknown</td><td>either single or double blind</td></tr>
+<tr class="highlight"><td>assignment</td><td>random assignment</td><td>treatments assigned randomly</td></tr>
+<tr><td>assignment</td><td>completely randomized design</td><td>no restrictions on pairings</td></tr>
+<tr><td>assignment</td><td>replication enough units</td><td>for statistical significance</td></tr>
+<tr><td>assignment</td><td>blocks groups of units</td><td>thought to be similar</td></tr>
+<tr><td>assignment</td><td>randomized block design</td><td>well chosen more precise</td></tr>
+<tr><td>assignment</td><td>matched pair design</td><td>use blocks of size two</td></tr>
+</table>

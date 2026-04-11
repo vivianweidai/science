@@ -8,16 +8,17 @@ order: 14
 
 # Muscles
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| muscles | move bones and body | hierarchical organization |
-| muscles | bundle of muscles fibers | single long cell multiple nuclei |
-| muscles | longitudinal microfibrils | repeating sacromere sections |
-| sacromere | basic contractile unit | borders line up |
-| sacromere | visible striations | light and dark bands |
-| sacromere | thin filaments attach end | thick filaments attach middle |
-| contraction | resting state | thin thick partial overlap |
-| contraction | contraction | filaments slide past each other |
-| contraction | powered by | myosin bind to actin |
-| regulation | tropomyosin binds actin | blocks myosin binding sites |
-| regulation | motor neurons | release binding sites |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>muscles</td><td>move bones and body</td><td>hierarchical organization</td></tr>
+<tr class="highlight"><td>muscles</td><td>bundle of muscles fibers</td><td>single long cell multiple nuclei</td></tr>
+<tr><td>muscles</td><td>longitudinal microfibrils</td><td>repeating sacromere sections</td></tr>
+<tr class="highlight"><td>sacromere</td><td>basic contractile unit</td><td>borders line up</td></tr>
+<tr><td>sacromere</td><td>visible striations</td><td>light and dark bands</td></tr>
+<tr><td>sacromere</td><td>thin filaments attach end</td><td>thick filaments attach middle</td></tr>
+<tr class="highlight"><td>contraction</td><td>resting state</td><td>thin thick partial overlap</td></tr>
+<tr><td>contraction</td><td>contraction</td><td>filaments slide past each other</td></tr>
+<tr><td>contraction</td><td>powered by</td><td>myosin bind to actin</td></tr>
+<tr><td>regulation</td><td>tropomyosin binds actin</td><td>blocks myosin binding sites</td></tr>
+<tr><td>regulation</td><td>motor neurons</td><td>release binding sites</td></tr>
+</table>

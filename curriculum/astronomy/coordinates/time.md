@@ -8,16 +8,17 @@ order: 10
 
 # Time
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| observer | observer on | Earth surface |
-| observer | local time | depends on location |
-| hour angle | time zero | culmination |
-| hour angle | time elapsed | since transit |
-| local sidereal time | sidereal | infinite sphere |
-| local sidereal time | non rotating | frame reference |
-| local sidereal time | $\text{LST} = h$ | vernal equinox |
-| local sidereal time | $\text{LST} = \alpha + h$ | any star |
-| equation of time | $\text{apparent solar time} - \text{mean solar time}$ |  |
-| equation of time | mean deviation | obliquity eccentricity |
-| equation of time | analemma | deviation vs day |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>observer</td><td>observer on</td><td>Earth surface</td></tr>
+<tr><td>observer</td><td>local time</td><td>depends on location</td></tr>
+<tr><td>hour angle</td><td>time zero</td><td>culmination</td></tr>
+<tr><td>hour angle</td><td>time elapsed</td><td>since transit</td></tr>
+<tr><td>local sidereal time</td><td>sidereal</td><td>infinite sphere</td></tr>
+<tr class="highlight"><td>local sidereal time</td><td>non rotating</td><td>frame reference</td></tr>
+<tr class="highlight"><td>local sidereal time</td><td>$\text{LST} = h$</td><td>vernal equinox</td></tr>
+<tr class="highlight"><td>local sidereal time</td><td>$\text{LST} = \alpha + h$</td><td>any star</td></tr>
+<tr><td>equation of time</td><td>$\text{apparent solar time} - \text{mean solar time}$</td><td></td></tr>
+<tr><td>equation of time</td><td>mean deviation</td><td>obliquity eccentricity</td></tr>
+<tr><td>equation of time</td><td>analemma</td><td>deviation vs day</td></tr>
+</table>

@@ -8,13 +8,14 @@ order: 2
 
 # Ionic
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| ionic | large difference | electrons transferred |
-| ionic | strong ionic bond | ion on ion force |
-| ionic | weak covalent bond | polarized electron cloud |
-| structure | activation energy to ionize | Born-Haber |
-| structure | solid crystal lattice | balance forces |
-| structure | complete valence | stable low energy |
-| ion radius | charge effect | across period smaller radius |
-| ion radius | distance effect | down group larger radius |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>ionic</td><td>large difference</td><td>electrons transferred</td></tr>
+<tr><td>ionic</td><td>strong ionic bond</td><td>ion on ion force</td></tr>
+<tr><td>ionic</td><td>weak covalent bond</td><td>polarized electron cloud</td></tr>
+<tr class="highlight"><td>structure</td><td>activation energy to ionize</td><td>Born-Haber</td></tr>
+<tr class="highlight"><td>structure</td><td>solid crystal lattice</td><td>balance forces</td></tr>
+<tr><td>structure</td><td>complete valence</td><td>stable low energy</td></tr>
+<tr><td>ion radius</td><td>charge effect</td><td>across period smaller radius</td></tr>
+<tr><td>ion radius</td><td>distance effect</td><td>down group larger radius</td></tr>
+</table>

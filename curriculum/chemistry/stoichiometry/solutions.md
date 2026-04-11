@@ -8,16 +8,17 @@ order: 2
 
 # Solutions
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| solutions | substances in water | hydration pulls apart |
-| solutions | how much dissolves | competing forces equilibrium |
-| saturation | maximum dissolution | of a given solution |
-| saturation | concentration constant | no longer changes as add |
-| conductivity | strong electrolytes | full dissolution into ions |
-| conductivity | has mobile charges | is good conductor |
-| reaction | molecular undissociated | ionic dissociated ions |
-| reaction | net ionic equation | cancel spectator ions |
-| driving force | precipitation | solubility |
-| driving force | acid base | acid strength |
-| driving force | oxidation reduction | reduction potential |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>solutions</td><td>substances in water</td><td>hydration pulls apart</td></tr>
+<tr class="highlight"><td>solutions</td><td>how much dissolves</td><td>competing forces equilibrium</td></tr>
+<tr><td>saturation</td><td>maximum dissolution</td><td>of a given solution</td></tr>
+<tr><td>saturation</td><td>concentration constant</td><td>no longer changes as add</td></tr>
+<tr><td>conductivity</td><td>strong electrolytes</td><td>full dissolution into ions</td></tr>
+<tr><td>conductivity</td><td>has mobile charges</td><td>is good conductor</td></tr>
+<tr><td>reaction</td><td>molecular undissociated</td><td>ionic dissociated ions</td></tr>
+<tr><td>reaction</td><td>net ionic equation</td><td>cancel spectator ions</td></tr>
+<tr class="highlight"><td>driving force</td><td>precipitation</td><td>solubility</td></tr>
+<tr class="highlight"><td>driving force</td><td>acid base</td><td>acid strength</td></tr>
+<tr class="highlight"><td>driving force</td><td>oxidation reduction</td><td>reduction potential</td></tr>
+</table>

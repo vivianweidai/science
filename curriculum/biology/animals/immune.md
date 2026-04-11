@@ -8,13 +8,14 @@ order: 12
 
 # Immune
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| immune | innate immunity | recognize common molecules |
-| immune | adaptive immunity | recognize specific pathogens |
-| innate | phagocytes | neutrophils macrophages |
-| innate | hemocytes | antimicrobial peptides |
-| innate | specialized cells | dendritic eosinophils killer mast |
-| innate | inflammation | cytokines histamines |
-| lymphatic | network and organs | interstitial fluids back to blood |
-| lymphatic | host of white blood cells | from bone marrow stem cells |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>immune</td><td>innate immunity</td><td>recognize common molecules</td></tr>
+<tr class="highlight"><td>immune</td><td>adaptive immunity</td><td>recognize specific pathogens</td></tr>
+<tr><td>innate</td><td>phagocytes</td><td>neutrophils macrophages</td></tr>
+<tr><td>innate</td><td>hemocytes</td><td>antimicrobial peptides</td></tr>
+<tr><td>innate</td><td>specialized cells</td><td>dendritic eosinophils killer mast</td></tr>
+<tr><td>innate</td><td>inflammation</td><td>cytokines histamines</td></tr>
+<tr class="highlight"><td>lymphatic</td><td>network and organs</td><td>interstitial fluids back to blood</td></tr>
+<tr class="highlight"><td>lymphatic</td><td>host of white blood cells</td><td>from bone marrow stem cells</td></tr>
+</table>

@@ -8,10 +8,11 @@ order: 10
 
 # Transcription
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| transcription | use DNA to make RNA | with chromatin inside nucleus |
-| initiation | helicase unwind DNA | at promoter staging area |
-| elongation | polymerase build RNA 5\' to 3\' | multiple simultaneous no primer |
-| termination | detach and release | as pre mRNA |
-| splicing | remove non coding introns | keep exons add cap and tail |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>transcription</td><td>use DNA to make RNA</td><td>with chromatin inside nucleus</td></tr>
+<tr><td>initiation</td><td>helicase unwind DNA</td><td>at promoter staging area</td></tr>
+<tr><td>elongation</td><td>polymerase build RNA 5\' to 3\'</td><td>multiple simultaneous no primer</td></tr>
+<tr><td>termination</td><td>detach and release</td><td>as pre mRNA</td></tr>
+<tr><td>splicing</td><td>remove non coding introns</td><td>keep exons add cap and tail</td></tr>
+</table>

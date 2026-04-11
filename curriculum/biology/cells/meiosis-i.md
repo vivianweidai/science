@@ -8,11 +8,12 @@ order: 19
 
 # Meiosis I
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| prophase I | chromatin to chromosomes | homolog pairs form tetrad |
-| prophase I | crossover at overlap tips | exchange genetic material |
-| metaphase I | tetrads lineup metaphase plate | independent assortment |
-| metaphase I | daughter haploids | random mix of grandparents |
-| anaphase I | tetrads separate homolog pairs | chromatic pairs remain intact |
-| anaphase I | daughter get one haploid pair | get half of parent chromosomes |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>prophase I</td><td>chromatin to chromosomes</td><td>homolog pairs form tetrad</td></tr>
+<tr class="highlight"><td>prophase I</td><td>crossover at overlap tips</td><td>exchange genetic material</td></tr>
+<tr class="highlight"><td>metaphase I</td><td>tetrads lineup metaphase plate</td><td>independent assortment</td></tr>
+<tr class="highlight"><td>metaphase I</td><td>daughter haploids</td><td>random mix of grandparents</td></tr>
+<tr><td>anaphase I</td><td>tetrads separate homolog pairs</td><td>chromatic pairs remain intact</td></tr>
+<tr class="highlight"><td>anaphase I</td><td>daughter get one haploid pair</td><td>get half of parent chromosomes</td></tr>
+</table>

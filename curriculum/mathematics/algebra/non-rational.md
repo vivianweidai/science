@@ -8,9 +8,10 @@ order: 9
 
 # Non-rational
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| irrational | if real coefficients | then conjugate pair |
-| irrational | show existence | by rational interval |
-| complex | real coefficients | conjugate pair |
-| complex | imaginary coefficients | convert to real |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>irrational</td><td>if real coefficients</td><td>then conjugate pair</td></tr>
+<tr class="highlight"><td>irrational</td><td>show existence</td><td>by rational interval</td></tr>
+<tr><td>complex</td><td>real coefficients</td><td>conjugate pair</td></tr>
+<tr><td>complex</td><td>imaginary coefficients</td><td>convert to real</td></tr>
+</table>

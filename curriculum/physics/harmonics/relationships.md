@@ -8,14 +8,15 @@ order: 4
 
 # Relationships
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| rolling motion | rolling without slipping | due to static friction |
-| rolling motion | center of mass translation | edges rotation |
-| rolling motion | $v_{cm} = \omega R$ | total wheel radius |
-| rolling motion | double velocity top | zero velocity bottom |
-| rolling motion | friction does no work | mechanical energy conserved |
-| gyroscope | maintains orientation | fast spin large momentum |
-| gyroscope | requires large torque | to change axis |
-| precession | no spin falls gravity torque | has spin does not fall |
-| precession | perpendicular torque | changes rotation axis |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>rolling motion</td><td>rolling without slipping</td><td>due to static friction</td></tr>
+<tr><td>rolling motion</td><td>center of mass translation</td><td>edges rotation</td></tr>
+<tr class="highlight"><td>rolling motion</td><td>$v_{cm} = \omega R$</td><td>total wheel radius</td></tr>
+<tr class="highlight"><td>rolling motion</td><td>double velocity top</td><td>zero velocity bottom</td></tr>
+<tr class="highlight"><td>rolling motion</td><td>friction does no work</td><td>mechanical energy conserved</td></tr>
+<tr><td>gyroscope</td><td>maintains orientation</td><td>fast spin large momentum</td></tr>
+<tr><td>gyroscope</td><td>requires large torque</td><td>to change axis</td></tr>
+<tr><td>precession</td><td>no spin falls gravity torque</td><td>has spin does not fall</td></tr>
+<tr><td>precession</td><td>perpendicular torque</td><td>changes rotation axis</td></tr>
+</table>

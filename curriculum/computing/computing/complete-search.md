@@ -8,16 +8,17 @@ order: 14
 
 # Complete Search
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| milk pails | pour without spilling | all combinations |
-| diamond collector | max diamond displayed | all combinations |
-| daisy chains | average petal daisies | triple for-loop |
-| counting liars | check all positions | double for-loop |
-| cow gynmastics | consistent pairs | double for-loop |
-| bovine genomics | locations of spotiness | count non-overlaps |
-| air conditioning II (recursion) | minimum adjustments | recursion, check validity |
-| quality photo aops | gcd neighbour scores | remove primes still optimal |
-| cheese block usaco | completed | completed |
-| it\'s mooing time usaco | completed | completed |
-| it\'s mooing time II usaco | completed | completed |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>milk pails</td><td>pour without spilling</td><td>all combinations</td></tr>
+<tr><td>diamond collector</td><td>max diamond displayed</td><td>all combinations</td></tr>
+<tr><td>daisy chains</td><td>average petal daisies</td><td>triple for-loop</td></tr>
+<tr><td>counting liars</td><td>check all positions</td><td>double for-loop</td></tr>
+<tr><td>cow gynmastics</td><td>consistent pairs</td><td>double for-loop</td></tr>
+<tr><td>bovine genomics</td><td>locations of spotiness</td><td>count non-overlaps</td></tr>
+<tr><td>air conditioning II (recursion)</td><td>minimum adjustments</td><td>recursion, check validity</td></tr>
+<tr><td>quality photo aops</td><td>gcd neighbour scores</td><td>remove primes still optimal</td></tr>
+<tr><td>cheese block usaco</td><td>completed</td><td>completed</td></tr>
+<tr><td>it\'s mooing time usaco</td><td>completed</td><td>completed</td></tr>
+<tr><td>it\'s mooing time II usaco</td><td>completed</td><td>completed</td></tr>
+</table>

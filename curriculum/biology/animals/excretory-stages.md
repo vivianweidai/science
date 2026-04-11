@@ -8,14 +8,15 @@ order: 9
 
 # Stages
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| filtration | blood to tubules | filtered in stages |
-| filtration | blood pressure pushes filtrate | glomerulus to Bowman capsule |
-| filtration | selective permeability | only small molecules pass |
-| reabsorption | filtrate through nephron | proximal loop of Henle distal |
-| reabsorption | active sodium reabsorbed | passive water salts reabsorbed |
-| excretion | selective secretion | passive urea ejection |
-| excretion | release filtrate as urine | isoosmotic to inner medulla |
-| water | countercurrent exchange | medulla increasing osmolarity |
-| water | countercurrent multiplier | active maintain gradient |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>filtration</td><td>blood to tubules</td><td>filtered in stages</td></tr>
+<tr class="highlight"><td>filtration</td><td>blood pressure pushes filtrate</td><td>glomerulus to Bowman capsule</td></tr>
+<tr><td>filtration</td><td>selective permeability</td><td>only small molecules pass</td></tr>
+<tr><td>reabsorption</td><td>filtrate through nephron</td><td>proximal loop of Henle distal</td></tr>
+<tr><td>reabsorption</td><td>active sodium reabsorbed</td><td>passive water salts reabsorbed</td></tr>
+<tr><td>excretion</td><td>selective secretion</td><td>passive urea ejection</td></tr>
+<tr><td>excretion</td><td>release filtrate as urine</td><td>isoosmotic to inner medulla</td></tr>
+<tr><td>water</td><td>countercurrent exchange</td><td>medulla increasing osmolarity</td></tr>
+<tr><td>water</td><td>countercurrent multiplier</td><td>active maintain gradient</td></tr>
+</table>

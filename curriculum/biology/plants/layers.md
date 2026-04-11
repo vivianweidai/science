@@ -8,11 +8,12 @@ order: 5
 
 # Layers
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| heartwood | oldest secondary xylem | resin hardened no transport |
-| heartwood | growth ring demarcation | recent cells are larger |
-| sapwood | youngest secondary xylem | transports water |
-| sapwood | radial vascular rays | connect xylem phloem |
-| bark | secondary phloem | transports sugar |
-| bark | periderm suberin waxed | lenticels slits gas exchange |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>heartwood</td><td>oldest secondary xylem</td><td>resin hardened no transport</td></tr>
+<tr><td>heartwood</td><td>growth ring demarcation</td><td>recent cells are larger</td></tr>
+<tr><td>sapwood</td><td>youngest secondary xylem</td><td>transports water</td></tr>
+<tr><td>sapwood</td><td>radial vascular rays</td><td>connect xylem phloem</td></tr>
+<tr><td>bark</td><td>secondary phloem</td><td>transports sugar</td></tr>
+<tr><td>bark</td><td>periderm suberin waxed</td><td>lenticels slits gas exchange</td></tr>
+</table>

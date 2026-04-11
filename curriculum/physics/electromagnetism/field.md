@@ -8,10 +8,11 @@ order: 8
 
 # Field
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| field | electric charges | produce electric fields |
-| field | moving electric charges | produce magnetic fields |
-| field | $dB = \frac{\mu_{0}I}{4\pi}\frac{dl}{r^{2}} \times \widehat{r}$ | Bio-Savart |
-| field | closed loop field lengths | proportional enclosed current |
-| field | $\oint B \cdot dl = \mu_{0}I$ | Ampere |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>field</td><td>electric charges</td><td>produce electric fields</td></tr>
+<tr class="highlight"><td>field</td><td>moving electric charges</td><td>produce magnetic fields</td></tr>
+<tr class="highlight"><td>field</td><td>$dB = \frac{\mu_{0}I}{4\pi}\frac{dl}{r^{2}} \times \widehat{r}$</td><td>Bio-Savart</td></tr>
+<tr class="highlight"><td>field</td><td>closed loop field lengths</td><td>proportional enclosed current</td></tr>
+<tr class="highlight"><td>field</td><td>$\oint B \cdot dl = \mu_{0}I$</td><td>Ampere</td></tr>
+</table>

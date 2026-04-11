@@ -8,18 +8,19 @@ order: 7
 
 # Unit Cells
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| $A$ **type** | crystal lattice of spheres | spheres are same size |
-| $A$ **type** | simple cubic $52\%$ | touching $6$ containing $1$ |
-| $A$ **type** | body centered cubic $68\%$ | touching $8$ containing $2$ |
-| $A$ **type** | face centered cubic $74\%$ | touching $12$ containing $4$ |
-| $A$ **type** | cubic close packed $ABC$ | rotated face centered cubic |
-| $A$ **type** | hexagonal close packed $ABAB$ | touching $12$ containing $6$ |
-| holes | spheres are two sizes | smaller in holes of larger |
-| holes | simple cubic $A$ type | $1$ cubic hole per sphere |
-| holes | close packed $A$ type | $1$ octahedral $2$ tetrahedral holes |
-| $AB_{n}$ **type** | structure of $AB_{n}$ solids | depend on ratio of ionic radii |
-| $AB_{n}$ **type** | cubic hole | max touch $8$ ratio $73\% +$ |
-| $AB_{n}$ **type** | octahedral hole | max touch $6$ ratio $41\% +$ |
-| $AB_{n}$ **type** | tetrahedral hole | max touch $4$ ratio $23\% +$ |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>$A$ **type**</td><td>crystal lattice of spheres</td><td>spheres are same size</td></tr>
+<tr><td>$A$ **type**</td><td>simple cubic $52\%$</td><td>touching $6$ containing $1$</td></tr>
+<tr><td>$A$ **type**</td><td>body centered cubic $68\%$</td><td>touching $8$ containing $2$</td></tr>
+<tr><td>$A$ **type**</td><td>face centered cubic $74\%$</td><td>touching $12$ containing $4$</td></tr>
+<tr><td>$A$ **type**</td><td>cubic close packed $ABC$</td><td>rotated face centered cubic</td></tr>
+<tr><td>$A$ **type**</td><td>hexagonal close packed $ABAB$</td><td>touching $12$ containing $6$</td></tr>
+<tr class="highlight"><td>holes</td><td>spheres are two sizes</td><td>smaller in holes of larger</td></tr>
+<tr><td>holes</td><td>simple cubic $A$ type</td><td>$1$ cubic hole per sphere</td></tr>
+<tr><td>holes</td><td>close packed $A$ type</td><td>$1$ octahedral $2$ tetrahedral holes</td></tr>
+<tr class="highlight"><td>$AB_{n}$ **type**</td><td>structure of $AB_{n}$ solids</td><td>depend on ratio of ionic radii</td></tr>
+<tr><td>$AB_{n}$ **type**</td><td>cubic hole</td><td>max touch $8$ ratio $73\% +$</td></tr>
+<tr><td>$AB_{n}$ **type**</td><td>octahedral hole</td><td>max touch $6$ ratio $41\% +$</td></tr>
+<tr><td>$AB_{n}$ **type**</td><td>tetrahedral hole</td><td>max touch $4$ ratio $23\% +$</td></tr>
+</table>

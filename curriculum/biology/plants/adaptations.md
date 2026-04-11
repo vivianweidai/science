@@ -8,15 +8,16 @@ order: 11
 
 # Adaptations
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| mutalisms | vital for plant nutrition | trade minerals for sugar |
-| mutalisms | nitrifying bacteria | adds nitrate to soil |
-| mutalisms | nitrogen fixing bacteria | invited into legume roots |
-| mutalisms | mycorrhizae fungi | wrap roots or insert into cells |
-| epiphytes | plant grows on other | anchor not sustenance |
-| epiphytes | water minerals from rain | orchids staghorn ferns |
-| parasitic | plant grows in other | anchor and sustenance |
-| parasitic | hausoria roots penetrate host | mistletoe dodder indian pipe |
-| carnivorous | supplement photosynthesis | minerals from insects |
-| carnivorous | dissolve with enzymes | pitcher flytraps sundew |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>mutalisms</td><td>vital for plant nutrition</td><td>trade minerals for sugar</td></tr>
+<tr class="highlight"><td>mutalisms</td><td>nitrifying bacteria</td><td>adds nitrate to soil</td></tr>
+<tr class="highlight"><td>mutalisms</td><td>nitrogen fixing bacteria</td><td>invited into legume roots</td></tr>
+<tr class="highlight"><td>mutalisms</td><td>mycorrhizae fungi</td><td>wrap roots or insert into cells</td></tr>
+<tr><td>epiphytes</td><td>plant grows on other</td><td>anchor not sustenance</td></tr>
+<tr><td>epiphytes</td><td>water minerals from rain</td><td>orchids staghorn ferns</td></tr>
+<tr><td>parasitic</td><td>plant grows in other</td><td>anchor and sustenance</td></tr>
+<tr><td>parasitic</td><td>hausoria roots penetrate host</td><td>mistletoe dodder indian pipe</td></tr>
+<tr><td>carnivorous</td><td>supplement photosynthesis</td><td>minerals from insects</td></tr>
+<tr><td>carnivorous</td><td>dissolve with enzymes</td><td>pitcher flytraps sundew</td></tr>
+</table>

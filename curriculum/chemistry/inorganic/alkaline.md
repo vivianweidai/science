@@ -8,9 +8,10 @@ order: 16
 
 # Alkaline
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| alkaline | ashes of plants | whose oxides do not melt |
-| alkaline | $MgCl_{2(s)} + K_{(s)}\overset{\text{reduce}}{\underset{}{\rightarrow}}Mg_{(s)} + KCl_{(s)}$ | $CaCl_{(l)}\overset{\text{electrolysis}}{\underset{}{\rightarrow}}Ca_{(l)} + Cl_{2(g)}$ |
-| deficient | $BeX_{2}$ electron deficient | excellent Lewis acid |
-| deficient | $BeX_{2} + 2X^{-} \rightarrow BeX_{4}^{2 -}$ | complete octet |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>alkaline</td><td>ashes of plants</td><td>whose oxides do not melt</td></tr>
+<tr><td>alkaline</td><td>$MgCl_{2(s)} + K_{(s)}\overset{\text{reduce}}{\underset{}{\rightarrow}}Mg_{(s)} + KCl_{(s)}$</td><td>$CaCl_{(l)}\overset{\text{electrolysis}}{\underset{}{\rightarrow}}Ca_{(l)} + Cl_{2(g)}$</td></tr>
+<tr class="highlight"><td>deficient</td><td>$BeX_{2}$ electron deficient</td><td>excellent Lewis acid</td></tr>
+<tr><td>deficient</td><td>$BeX_{2} + 2X^{-} \rightarrow BeX_{4}^{2 -}$</td><td>complete octet</td></tr>
+</table>

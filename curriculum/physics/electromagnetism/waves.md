@@ -8,10 +8,11 @@ order: 14
 
 # Waves
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| waves | electric magnetic fields | induce each other |
-| waves | electromagnetic disturbance | propagate through space |
-| waves | changing fields | regenerate and propagate |
-| source | changing motion of | accelerated charges |
-| source | wavelength equals | size of accelerating system |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>waves</td><td>electric magnetic fields</td><td>induce each other</td></tr>
+<tr><td>waves</td><td>electromagnetic disturbance</td><td>propagate through space</td></tr>
+<tr><td>waves</td><td>changing fields</td><td>regenerate and propagate</td></tr>
+<tr class="highlight"><td>source</td><td>changing motion of</td><td>accelerated charges</td></tr>
+<tr class="highlight"><td>source</td><td>wavelength equals</td><td>size of accelerating system</td></tr>
+</table>

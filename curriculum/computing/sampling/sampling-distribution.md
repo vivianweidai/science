@@ -8,12 +8,13 @@ order: 6
 
 # Sampling Distribution
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| statistics | use data from sample | to conclude about population |
-| statistics | parameter describes | a characteristic of a population |
-| statistics | statistic describes | a characteristic of a sample |
-| sampling distribution | distribution of a statistic | of all possible samples |
-| sampling distribution | mean weight of $100$ pennies | all mean weights of $20$ pennies |
-| sampling distribution | large populations not possible | approximate by many samples |
-| sampling distribution | distribution is of statistics | not of individual data values |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>statistics</td><td>use data from sample</td><td>to conclude about population</td></tr>
+<tr><td>statistics</td><td>parameter describes</td><td>a characteristic of a population</td></tr>
+<tr><td>statistics</td><td>statistic describes</td><td>a characteristic of a sample</td></tr>
+<tr class="highlight"><td>sampling distribution</td><td>distribution of a statistic</td><td>of all possible samples</td></tr>
+<tr><td>sampling distribution</td><td>mean weight of $100$ pennies</td><td>all mean weights of $20$ pennies</td></tr>
+<tr><td>sampling distribution</td><td>large populations not possible</td><td>approximate by many samples</td></tr>
+<tr class="highlight"><td>sampling distribution</td><td>distribution is of statistics</td><td>not of individual data values</td></tr>
+</table>

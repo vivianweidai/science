@@ -8,17 +8,18 @@ order: 11
 
 # Plants
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| plants | photosynthetic eukaryotes | alternation of generations |
-| plants | walled spores sporopollenin | meristems continous division |
-| non vascular | ground hugging mosses | dominant gametophyte |
-| non vascular | bryophyte moss with sprouts | dependent sporophyte |
-| non vascular | rhizoids anchor no absorb | sperm swim need water |
-| seedless vascular | ferns dominant sporophyte | zombie gametophyte |
-| seedless vascular | vascular tissue allows | transport and support |
-| seedless vascular | roots anchor absorb | leaves photosynthesis |
-| seed plants | dominant sporophytes | microscopic gametophytes |
-| seed plants | multicellular spores | for distance and time |
-| seed plants | gynosperms naked seeds | pine cones |
-| seed plants | angiosperms protected seeds | flowers and fruits |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>plants</td><td>photosynthetic eukaryotes</td><td>alternation of generations</td></tr>
+<tr class="highlight"><td>plants</td><td>walled spores sporopollenin</td><td>meristems continous division</td></tr>
+<tr class="highlight"><td>non vascular</td><td>ground hugging mosses</td><td>dominant gametophyte</td></tr>
+<tr><td>non vascular</td><td>bryophyte moss with sprouts</td><td>dependent sporophyte</td></tr>
+<tr><td>non vascular</td><td>rhizoids anchor no absorb</td><td>sperm swim need water</td></tr>
+<tr class="highlight"><td>seedless vascular</td><td>ferns dominant sporophyte</td><td>zombie gametophyte</td></tr>
+<tr><td>seedless vascular</td><td>vascular tissue allows</td><td>transport and support</td></tr>
+<tr><td>seedless vascular</td><td>roots anchor absorb</td><td>leaves photosynthesis</td></tr>
+<tr class="highlight"><td>seed plants</td><td>dominant sporophytes</td><td>microscopic gametophytes</td></tr>
+<tr class="highlight"><td>seed plants</td><td>multicellular spores</td><td>for distance and time</td></tr>
+<tr><td>seed plants</td><td>gynosperms naked seeds</td><td>pine cones</td></tr>
+<tr><td>seed plants</td><td>angiosperms protected seeds</td><td>flowers and fruits</td></tr>
+</table>

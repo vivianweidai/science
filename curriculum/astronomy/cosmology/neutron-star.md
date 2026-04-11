@@ -8,14 +8,15 @@ order: 5
 
 # Neutron Star
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| main sequence | massive stars | initial $M > 7M_{\odot}$ |
-| main sequence | short life $30\text{Myr}$ | shorter giant phase |
-| main sequence | dense iron core | concentric fusing shells |
-| core collapse | core reaches limit | Chandraskekhar |
-| core collapse | supernova ejection | proton electron merge |
-| core collapse | neutron degeneracy | Heisenberg |
-| neutron star | $R \approx 10\text{km}$ | neutron electron ratio |
-| neutron star | $M_{\text{max}} = 3M_{\odot}$ | Oppenheimer-Volkov |
-| neutron star | detection via hot surface | or by pulsar radiation |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>main sequence</td><td>massive stars</td><td>initial $M > 7M_{\odot}$</td></tr>
+<tr><td>main sequence</td><td>short life $30\text{Myr}$</td><td>shorter giant phase</td></tr>
+<tr><td>main sequence</td><td>dense iron core</td><td>concentric fusing shells</td></tr>
+<tr><td>core collapse</td><td>core reaches limit</td><td>Chandraskekhar</td></tr>
+<tr><td>core collapse</td><td>supernova ejection</td><td>proton electron merge</td></tr>
+<tr><td>core collapse</td><td>neutron degeneracy</td><td>Heisenberg</td></tr>
+<tr><td>neutron star</td><td>$R \approx 10\text{km}$</td><td>neutron electron ratio</td></tr>
+<tr><td>neutron star</td><td>$M_{\text{max}} = 3M_{\odot}$</td><td>Oppenheimer-Volkov</td></tr>
+<tr><td>neutron star</td><td>detection via hot surface</td><td>or by pulsar radiation</td></tr>
+</table>

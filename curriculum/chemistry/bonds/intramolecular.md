@@ -8,9 +8,10 @@ order: 1
 
 # Intramolecular
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| intramolecular | electron sharing | between atoms |
-| intramolecular | bond type depends on | electronegativity difference |
-| energy | balance Coulomb | attraction and repulsion |
-| energy | stable equilibrium | at lowest energy |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>intramolecular</td><td>electron sharing</td><td>between atoms</td></tr>
+<tr class="highlight"><td>intramolecular</td><td>bond type depends on</td><td>electronegativity difference</td></tr>
+<tr><td>energy</td><td>balance Coulomb</td><td>attraction and repulsion</td></tr>
+<tr><td>energy</td><td>stable equilibrium</td><td>at lowest energy</td></tr>
+</table>

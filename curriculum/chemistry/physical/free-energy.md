@@ -8,16 +8,17 @@ order: 23
 
 # Free Energy
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| free energy | $\Delta S_{\text{univ}} = - \frac{\Delta G}{T}$ | spontaneous direction |
-| free energy | $\Delta G^{\circ} = \Delta H^{\circ} - T\Delta S^{\circ}$ | energy available for work |
-| free energy | total energy in heat | minus loss in energy quality |
-| free energy | reversible | extensible |
-| free energy | $\Delta G^{\circ}\text{(reaction)} = \Delta G_{f}^{\circ}\text{(products)} - \Delta G_{f}^{\circ}\text{(reactants)}$ |  |
-| free energy | free energy available | in non standard conditions |
-| deviation | energy temperature relation | proportional to partial pressures |
-| deviation | $\Delta G = \Delta G^{\circ} + RT\ln(Q)$ | based on reaction quotient |
-| equilibrium | through kinetics | equal forward backward rates |
-| equilibrium | through thermodynamics | stable lowest energy |
-| equilibrium | $\Delta G^{\circ} = - RT\ln(K)$ | kinetics and thermodynamics |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>free energy</td><td>$\Delta S_{\text{univ}} = - \frac{\Delta G}{T}$</td><td>spontaneous direction</td></tr>
+<tr class="highlight"><td>free energy</td><td>$\Delta G^{\circ} = \Delta H^{\circ} - T\Delta S^{\circ}$</td><td>energy available for work</td></tr>
+<tr class="highlight"><td>free energy</td><td>total energy in heat</td><td>minus loss in energy quality</td></tr>
+<tr><td>free energy</td><td>reversible</td><td>extensible</td></tr>
+<tr class="highlight"><td>free energy</td><td>$\Delta G^{\circ}\text{(reaction)} = \Delta G_{f}^{\circ}\text{(products)} - \Delta G_{f}^{\circ}\text{(reactants)}$</td><td></td></tr>
+<tr><td>free energy</td><td>free energy available</td><td>in non standard conditions</td></tr>
+<tr><td>deviation</td><td>energy temperature relation</td><td>proportional to partial pressures</td></tr>
+<tr class="highlight"><td>deviation</td><td>$\Delta G = \Delta G^{\circ} + RT\ln(Q)$</td><td>based on reaction quotient</td></tr>
+<tr><td>equilibrium</td><td>through kinetics</td><td>equal forward backward rates</td></tr>
+<tr><td>equilibrium</td><td>through thermodynamics</td><td>stable lowest energy</td></tr>
+<tr class="highlight"><td>equilibrium</td><td>$\Delta G^{\circ} = - RT\ln(K)$</td><td>kinetics and thermodynamics</td></tr>
+</table>

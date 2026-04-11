@@ -8,16 +8,17 @@ order: 1
 
 # Spheres
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| spheres | infinite sphere | distances angles |
-| spheres | planes center | poles perpendicular |
-| distances | arc minutes | $60' = 1^{\circ}$ |
-| distances | hour angles | $1h = 15^{\circ}$ |
-| triangle | intersection | three great circles |
-| triangle | triangle sides | circle segments |
-| triangle | $A + B + C > 180^{\circ}$ | sum excess |
-| triangle | $Er^{2}$ | area |
-| trigonometry | radians | small angles |
-| trigonometry | $\frac{\sin a}{\sin A} = \frac{\sin b}{\sin B} = \frac{\sin c}{\sin C}$ |  |
-| trigonometry | $\cos a = \cos b\cos c + \sin b\sin c\cos A$ |  |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>spheres</td><td>infinite sphere</td><td>distances angles</td></tr>
+<tr><td>spheres</td><td>planes center</td><td>poles perpendicular</td></tr>
+<tr class="highlight"><td>distances</td><td>arc minutes</td><td>$60' = 1^{\circ}$</td></tr>
+<tr class="highlight"><td>distances</td><td>hour angles</td><td>$1h = 15^{\circ}$</td></tr>
+<tr class="highlight"><td>triangle</td><td>intersection</td><td>three great circles</td></tr>
+<tr><td>triangle</td><td>triangle sides</td><td>circle segments</td></tr>
+<tr class="highlight"><td>triangle</td><td>$A + B + C > 180^{\circ}$</td><td>sum excess</td></tr>
+<tr class="highlight"><td>triangle</td><td>$Er^{2}$</td><td>area</td></tr>
+<tr><td>trigonometry</td><td>radians</td><td>small angles</td></tr>
+<tr class="highlight"><td>trigonometry</td><td>$\frac{\sin a}{\sin A} = \frac{\sin b}{\sin B} = \frac{\sin c}{\sin C}$</td><td></td></tr>
+<tr class="highlight"><td>trigonometry</td><td>$\cos a = \cos b\cos c + \sin b\sin c\cos A$</td><td></td></tr>
+</table>

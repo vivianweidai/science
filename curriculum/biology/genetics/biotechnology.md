@@ -8,13 +8,14 @@ order: 16
 
 # Biotechnology
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| technology | manipulate the genetic code | emulate nature hijack organisms |
-| technology | copy genes insert in bacteria | natural replication factory |
-| technology | edit genes bacterial defense | CRISPR cut repair replace |
-| technology | clone genes undifferentiated | plants totipotent animal stems |
-| polymerase chain reaction | mass produce via replication | unwind target elongate |
-| hybridization | stain to match complementary | fluorescent strand detect pair |
-| gel electrophoresis | separate target segments | fingerprinting total uniques |
-| blotting | separate and stain to search | southern DNA northern RNA |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>technology</td><td>manipulate the genetic code</td><td>emulate nature hijack organisms</td></tr>
+<tr class="highlight"><td>technology</td><td>copy genes insert in bacteria</td><td>natural replication factory</td></tr>
+<tr class="highlight"><td>technology</td><td>edit genes bacterial defense</td><td>CRISPR cut repair replace</td></tr>
+<tr><td>technology</td><td>clone genes undifferentiated</td><td>plants totipotent animal stems</td></tr>
+<tr><td>polymerase chain reaction</td><td>mass produce via replication</td><td>unwind target elongate</td></tr>
+<tr><td>hybridization</td><td>stain to match complementary</td><td>fluorescent strand detect pair</td></tr>
+<tr><td>gel electrophoresis</td><td>separate target segments</td><td>fingerprinting total uniques</td></tr>
+<tr><td>blotting</td><td>separate and stain to search</td><td>southern DNA northern RNA</td></tr>
+</table>

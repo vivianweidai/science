@@ -8,15 +8,16 @@ order: 15
 
 # Skeleton
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| skeleton | convert muscle contraction | to body movement |
-| skeleton | muscles only contract | back forth antogonistic pair |
-| hydrostatic | no skeleton fluid based | muscles change shape |
-| hydrostatic | undulations nematodes | peristalsis earthworms |
-| exoskeletons | hard external skeleton | deposited on surface |
-| exoskeletons | arthropods secrete chitin | muscles in and out molt shell |
-| endoskeletons | hardened internal skeleton | buried in soft tissues |
-| endoskeletons | humans bones and cartilage | fused or joined |
-| locomotion | form suits function | moving through medium |
-| locomotion | energy to overcome | gravity and friction |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>skeleton</td><td>convert muscle contraction</td><td>to body movement</td></tr>
+<tr class="highlight"><td>skeleton</td><td>muscles only contract</td><td>back forth antogonistic pair</td></tr>
+<tr><td>hydrostatic</td><td>no skeleton fluid based</td><td>muscles change shape</td></tr>
+<tr><td>hydrostatic</td><td>undulations nematodes</td><td>peristalsis earthworms</td></tr>
+<tr><td>exoskeletons</td><td>hard external skeleton</td><td>deposited on surface</td></tr>
+<tr><td>exoskeletons</td><td>arthropods secrete chitin</td><td>muscles in and out molt shell</td></tr>
+<tr><td>endoskeletons</td><td>hardened internal skeleton</td><td>buried in soft tissues</td></tr>
+<tr><td>endoskeletons</td><td>humans bones and cartilage</td><td>fused or joined</td></tr>
+<tr class="highlight"><td>locomotion</td><td>form suits function</td><td>moving through medium</td></tr>
+<tr class="highlight"><td>locomotion</td><td>energy to overcome</td><td>gravity and friction</td></tr>
+</table>

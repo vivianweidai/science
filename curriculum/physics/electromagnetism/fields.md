@@ -8,11 +8,12 @@ order: 12
 
 # Fields
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| electric | induced emf | moves charges via electric field |
-| electric | $\varepsilon = \oint E \cdot dl$ | around magnetic flux circuit |
-| electric | new source electric field | closed loops not conservative |
-| electric | $\oint E \cdot dl = - \frac{d\Phi_{B}}{dt}$ | Faraday |
-| magnetic | new source magnetic field | changing electric field |
-| magnetic | $\oint B \cdot dl = \mu_{0}I + \mu_{0}\epsilon_{0}\frac{d\Phi_{E}}{dt}$ | Ampere |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>electric</td><td>induced emf</td><td>moves charges via electric field</td></tr>
+<tr><td>electric</td><td>$\varepsilon = \oint E \cdot dl$</td><td>around magnetic flux circuit</td></tr>
+<tr class="highlight"><td>electric</td><td>new source electric field</td><td>closed loops not conservative</td></tr>
+<tr class="highlight"><td>electric</td><td>$\oint E \cdot dl = - \frac{d\Phi_{B}}{dt}$</td><td>Faraday</td></tr>
+<tr class="highlight"><td>magnetic</td><td>new source magnetic field</td><td>changing electric field</td></tr>
+<tr class="highlight"><td>magnetic</td><td>$\oint B \cdot dl = \mu_{0}I + \mu_{0}\epsilon_{0}\frac{d\Phi_{E}}{dt}$</td><td>Ampere</td></tr>
+</table>

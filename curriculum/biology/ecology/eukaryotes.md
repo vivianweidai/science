@@ -8,13 +8,14 @@ order: 10
 
 # Eukaryotes
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| eukaryotes | more complex organisms | most are single celled |
-| eukaryotes | organized by supergroups | phylogenetic hypothesis |
-| eukaryotes | excavata feeding groove | SAR shells photosynthesis |
-| eukaryotes | archaeplastida algae plants | unikonta fungi animals |
-| algae vs plants | algae are aquatic protists | green algae evolved to plants |
-| algae vs plants | red green brown algae | multicellular photosynthesis |
-| algae vs plants | green brown algae cell walls | green algae have chloroplasts |
-| algae vs plants | charophytes with sporopollenin | prevent dry out migrate to land |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>eukaryotes</td><td>more complex organisms</td><td>most are single celled</td></tr>
+<tr class="highlight"><td>eukaryotes</td><td>organized by supergroups</td><td>phylogenetic hypothesis</td></tr>
+<tr><td>eukaryotes</td><td>excavata feeding groove</td><td>SAR shells photosynthesis</td></tr>
+<tr><td>eukaryotes</td><td>archaeplastida algae plants</td><td>unikonta fungi animals</td></tr>
+<tr class="highlight"><td>algae vs plants</td><td>algae are aquatic protists</td><td>green algae evolved to plants</td></tr>
+<tr><td>algae vs plants</td><td>red green brown algae</td><td>multicellular photosynthesis</td></tr>
+<tr><td>algae vs plants</td><td>green brown algae cell walls</td><td>green algae have chloroplasts</td></tr>
+<tr class="highlight"><td>algae vs plants</td><td>charophytes with sporopollenin</td><td>prevent dry out migrate to land</td></tr>
+</table>

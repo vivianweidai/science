@@ -8,14 +8,15 @@ order: 5
 
 # Observational
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| Earth-horizontal | horizontal | local equatorial |
-| Earth-horizontal | North pole altitude | observer latitude |
-| Earth-horizontal | observer latitude | zenith to equator |
-| horizontal-local equatorial | if culminates | north of zenith |
-| horizontal-local equatorial | $a_{max} = 90^{\circ} + \varphi - \delta$ | culmination |
-| horizontal-local equatorial | never set | horizontal |
-| horizontal-local equatorial | $a_{min} = \delta + \varphi - 90^{\circ}$ | circumpolar |
-| horizontal-local equatorial | declination | from observations |
-| horizontal-local equatorial | $\delta = \frac{1}{2}\left( a_{min} - a_{max} + 180^{\circ} \right)$ | substitution |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr><td>Earth-horizontal</td><td>horizontal</td><td>local equatorial</td></tr>
+<tr class="highlight"><td>Earth-horizontal</td><td>North pole altitude</td><td>observer latitude</td></tr>
+<tr><td>Earth-horizontal</td><td>observer latitude</td><td>zenith to equator</td></tr>
+<tr><td>horizontal-local equatorial</td><td>if culminates</td><td>north of zenith</td></tr>
+<tr class="highlight"><td>horizontal-local equatorial</td><td>$a_{max} = 90^{\circ} + \varphi - \delta$</td><td>culmination</td></tr>
+<tr><td>horizontal-local equatorial</td><td>never set</td><td>horizontal</td></tr>
+<tr class="highlight"><td>horizontal-local equatorial</td><td>$a_{min} = \delta + \varphi - 90^{\circ}$</td><td>circumpolar</td></tr>
+<tr><td>horizontal-local equatorial</td><td>declination</td><td>from observations</td></tr>
+<tr class="highlight"><td>horizontal-local equatorial</td><td>$\delta = \frac{1}{2}\left( a_{min} - a_{max} + 180^{\circ} \right)$</td><td>substitution</td></tr>
+</table>

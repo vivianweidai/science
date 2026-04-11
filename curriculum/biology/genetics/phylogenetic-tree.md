@@ -8,12 +8,13 @@ order: 20
 
 # Phylogenetic Tree
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| phylogenetic tree | taxon are nodes | common ancestor branches |
-| phylogenetic tree | basal taxon are earliest | diverging common ancestor |
-| phylogenetic tree | clade monophyletic grouping | ancestor and descendants |
-| phylogenetic tree | cladistics use shared traits to | hypothesize phylogentic tree |
-| phylogenetic tree | ancestral traits from ancestor | derived traits new to group |
-| phylogenetic tree | cladogram groups species | with shared derived traits |
-| phylogenetic tree | test phylogenetic hypothesis | parsimonious fewest changes |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>phylogenetic tree</td><td>taxon are nodes</td><td>common ancestor branches</td></tr>
+<tr><td>phylogenetic tree</td><td>basal taxon are earliest</td><td>diverging common ancestor</td></tr>
+<tr class="highlight"><td>phylogenetic tree</td><td>clade monophyletic grouping</td><td>ancestor and descendants</td></tr>
+<tr class="highlight"><td>phylogenetic tree</td><td>cladistics use shared traits to</td><td>hypothesize phylogentic tree</td></tr>
+<tr><td>phylogenetic tree</td><td>ancestral traits from ancestor</td><td>derived traits new to group</td></tr>
+<tr><td>phylogenetic tree</td><td>cladogram groups species</td><td>with shared derived traits</td></tr>
+<tr class="highlight"><td>phylogenetic tree</td><td>test phylogenetic hypothesis</td><td>parsimonious fewest changes</td></tr>
+</table>

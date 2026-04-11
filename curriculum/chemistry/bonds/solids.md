@@ -8,15 +8,16 @@ order: 9
 
 # Solids
 
-| Label | Formula / Concept | Description |
-|-------|-------------------|-------------|
-| solids | crystalline lattice | of repeating cells |
-| solids | different nodes | and different bonds |
-| metallic | metal atoms $Cu$ | metallic electron sea |
-| metallic | conductor malleable | high melting point |
-| network | nonmetal atoms $C$ | covalent bonds |
-| network | insulator brittle | high melting point |
-| ionic | ions $Na^{+}Cl^{-}$ | ionic bonds |
-| ionic | insulator | high melting point |
-| molecular | molecules $SiO_{4}$ | intermolecular |
-| molecular | insulator | low melting point |
+<table>
+<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
+<tr class="highlight"><td>solids</td><td>crystalline lattice</td><td>of repeating cells</td></tr>
+<tr class="highlight"><td>solids</td><td>different nodes</td><td>and different bonds</td></tr>
+<tr><td>metallic</td><td>metal atoms $Cu$</td><td>metallic electron sea</td></tr>
+<tr><td>metallic</td><td>conductor malleable</td><td>high melting point</td></tr>
+<tr><td>network</td><td>nonmetal atoms $C$</td><td>covalent bonds</td></tr>
+<tr><td>network</td><td>insulator brittle</td><td>high melting point</td></tr>
+<tr><td>ionic</td><td>ions $Na^{+}Cl^{-}$</td><td>ionic bonds</td></tr>
+<tr><td>ionic</td><td>insulator</td><td>high melting point</td></tr>
+<tr><td>molecular</td><td>molecules $SiO_{4}$</td><td>intermolecular</td></tr>
+<tr><td>molecular</td><td>insulator</td><td>low melting point</td></tr>
+</table>
