@@ -1,0 +1,299 @@
+# Olympiad events — source of truth.
+# Each entry: subject, date ("Month YYYY"), country, name, finished, highlighted.
+# Optional: url (link for the name on the webapp).
+# Run `python scripts/build_listings.py` after edits to regenerate archives/olympiads.json.
+
+- subject: Mathematics
+  date: November 2025
+  country: United States
+  name: American Mathematics Competition 12
+  finished: false
+  highlighted: true
+- subject: Mathematics
+  date: October 2025
+  country: Canada
+  name: Canadian Open Mathematics Challenge
+  finished: true
+  highlighted: false
+- subject: Mathematics
+  date: November 2024
+  country: United States
+  name: American Mathematics Competition 12
+  finished: true
+  highlighted: false
+- subject: Mathematics
+  date: October 2024
+  country: Canada
+  name: Canadian Open Mathematics Challenge
+  finished: true
+  highlighted: false
+- subject: Computing
+  date: December 2026
+  country: United States
+  name: USA North America Artificial Intelligence Olympiad
+  finished: false
+  highlighted: false
+- subject: Computing
+  date: November 2026
+  country: Canada
+  name: Canada Artificial Intelligence National Challenge
+  finished: false
+  highlighted: false
+- subject: Computing
+  date: January 2026
+  country: United States
+  name: North American Computational Linguistics Open Exam
+  finished: true
+  highlighted: false
+- subject: Computing
+  date: March 2025
+  country: Canada
+  name: Canadian Computing Competition Senior Exam
+  finished: true
+  highlighted: false
+- subject: Computing
+  date: January 2025
+  country: Canada
+  name: North American Computational Linguistics Open Exam
+  finished: true
+  highlighted: false
+- subject: Computing
+  date: January 2025
+  country: United States
+  name: USA Computing Olympiad Bronze Exam
+  finished: true
+  highlighted: false
+- subject: Computing
+  date: March 2024
+  country: Canada
+  name: Canadian Computing Competition Senior Exam
+  finished: true
+  highlighted: false
+- subject: Computing
+  date: January 2024
+  country: United States
+  name: USA Computing Olympiad Bronze Exam
+  finished: true
+  highlighted: false
+- subject: Physics
+  date: April 2026
+  country: Canada
+  name: Canadian Association of Physicists High School Prize Exam
+  finished: false
+  highlighted: false
+- subject: Physics
+  date: March 2026
+  country: Canada
+  name: Junior Science Olympiad of Canada Exam
+  finished: false
+  highlighted: true
+- subject: Physics
+  date: February 2026
+  country: United States
+  name: USA Physics Olympiad F=ma Qualifying Exam
+  finished: true
+  highlighted: false
+- subject: Physics
+  date: November 2025
+  country: Canada
+  name: Junior Science Olympiad of Canada National Camp - Invitation
+  finished: false
+  highlighted: true
+- subject: Physics
+  date: May 2025
+  country: Canada
+  name: Junior Science Olympiad of Canada Exams
+  finished: true
+  highlighted: false
+- subject: Physics
+  date: April 2025
+  country: Canada
+  name: Canadian Association of Physicists High School Prize Exam
+  finished: true
+  highlighted: false
+- subject: Physics
+  date: February 2025
+  country: United States
+  name: USA Physics Olympiad F=ma Qualifying Exam
+  finished: true
+  highlighted: false
+- subject: Physics
+  date: May 2024
+  country: Canada
+  name: Junior Science Olympiad of Canada Exams
+  finished: true
+  highlighted: false
+- subject: Physics
+  date: April 2024
+  country: Canada
+  name: Canadian Association of Physicists High School Prize Exam
+  finished: true
+  highlighted: false
+- subject: Physics
+  date: February 2024
+  country: United States
+  name: USA Physics Olympiad F=ma Qualifying Exam
+  finished: true
+  highlighted: false
+- subject: Chemistry
+  date: April 2026
+  country: Canada
+  name: Canadian Chemistry Olympiad Exams
+  finished: false
+  highlighted: false
+- subject: Chemistry
+  date: March 2026
+  country: United States
+  name: United States National Chemistry Olympiad Local Exam
+  finished: false
+  highlighted: true
+- subject: Chemistry
+  date: March 2026
+  country: Canada
+  name: Junior Science Olympiad of Canada Exam
+  finished: false
+  highlighted: true
+- subject: Chemistry
+  date: November 2025
+  country: Canada
+  name: Junior Science Olympiad of Canada National Camp - Invitation
+  finished: false
+  highlighted: true
+- subject: Chemistry
+  date: May 2025
+  country: Canada
+  name: Junior Science Olympiad of Canada Exams
+  finished: true
+  highlighted: false
+- subject: Chemistry
+  date: April 2025
+  country: Canada
+  name: Canadian Chemistry Olympiad Exams
+  finished: true
+  highlighted: false
+- subject: Chemistry
+  date: April 2025
+  country: United States
+  name: United States National Chemistry Olympiad National Exam
+  finished: true
+  highlighted: false
+- subject: Chemistry
+  date: March 2025
+  country: United States
+  name: United States National Chemistry Olympiad Local Exam
+  finished: true
+  highlighted: false
+- subject: Chemistry
+  date: May 2024
+  country: Canada
+  name: Junior Science Olympiad of Canada Exams
+  finished: true
+  highlighted: false
+- subject: Chemistry
+  date: April 2024
+  country: Canada
+  name: Canadian Chemistry Olympiad Exams
+  finished: true
+  highlighted: false
+- subject: Biology
+  date: April 2026
+  country: Canada
+  name: Canadian Biology Olympiad Competition Exam
+  finished: false
+  highlighted: false
+- subject: Biology
+  date: March 2026
+  country: Canada
+  name: Junior Science Olympiad of Canada Exam
+  finished: false
+  highlighted: true
+- subject: Biology
+  date: February 2026
+  country: United States
+  name: USA Biology Olympiad Open Exam
+  finished: true
+  highlighted: false
+- subject: Biology
+  date: November 2025
+  country: Canada
+  name: Junior Science Olympiad of Canada National Camp - Invitation
+  finished: false
+  highlighted: true
+- subject: Biology
+  date: May 2025
+  country: Canada
+  name: Junior Science Olympiad of Canada Exams
+  finished: true
+  highlighted: false
+- subject: Biology
+  date: February 2025
+  country: United States
+  name: USA Biology Olympiad Open Exam
+  finished: true
+  highlighted: false
+- subject: Biology
+  date: May 2024
+  country: Canada
+  name: Junior Science Olympiad of Canada Exams
+  finished: true
+  highlighted: false
+- subject: Biology
+  date: April 2024
+  country: Canada
+  name: Canadian Biology Olympiad Competition Exam
+  finished: true
+  highlighted: false
+- subject: Astronomy
+  date: May 2026
+  country: Canada
+  name: Canadian Astronomy and Astrophysics Olympiad Junior Exam
+  finished: false
+  highlighted: false
+- subject: Astronomy
+  date: March 2026
+  country: Canada
+  name: Canadian Astronomy and Astrophysics Olympiad Senior Exam
+  finished: true
+  highlighted: false
+- subject: Astronomy
+  date: February 2026
+  country: United States
+  name: USA Astronomy and Astrophysics Olympiad First Round Exam
+  finished: false
+  highlighted: true
+- subject: Astronomy
+  date: October 2025
+  country: Canada
+  name: International Olympiad on Astronomy and Astrophysics Junior - Invitation
+  finished: false
+  highlighted: true
+- subject: Astronomy
+  date: May 2025
+  country: Canada
+  name: Canadian Astronomy and Astrophysics Olympiad Junior Exam
+  finished: true
+  highlighted: false
+- subject: Astronomy
+  date: March 2025
+  country: Canada
+  name: Canadian Astronomy and Astrophysics Olympiad Senior Exam
+  finished: true
+  highlighted: false
+- subject: Astronomy
+  date: February 2025
+  country: United States
+  name: USA Astronomy and Astrophysics Olympiad First Round Exam
+  finished: true
+  highlighted: false
+- subject: Astronomy
+  date: March 2024
+  country: Canada
+  name: Canadian Astronomy and Astrophysics Olympiad Senior Exam
+  finished: true
+  highlighted: false
+- subject: Astronomy
+  date: February 2024
+  country: United States
+  name: USA Astronomy and Astrophysics Olympiad First Round Exam
+  finished: true
+  highlighted: false
