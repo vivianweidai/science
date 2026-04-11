@@ -10,7 +10,7 @@ order: 11
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>translation</td><td>use RNA to make protein</td><td>at ribosome outside nucleus</td></tr>
+<tr><td>translation</td><td>use RNA to make protein</td><td>at ribosome outside nucleus</td></tr>
 <tr><td>translation</td><td>condon of three nucleotides</td><td>specify which amino acid</td></tr>
 <tr><td>translation</td><td>transfer RNA with anti codon</td><td>brings correct amino acid</td></tr>
 <tr><td>initiation</td><td>ribosome attaches to mRNA</td><td>read start codon AUG</td></tr>

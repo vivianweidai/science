@@ -10,8 +10,8 @@ order: 10
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>reproduction</td><td>asexual no gamete fusion</td><td>budding fission parthenogensis</td></tr>
-<tr class="highlight"><td>reproduction</td><td>sexual fertilized zygote</td><td>external aquatic internal care</td></tr>
+<tr><td>reproduction</td><td>asexual no gamete fusion</td><td>budding fission parthenogensis</td></tr>
+<tr><td>reproduction</td><td>sexual fertilized zygote</td><td>external aquatic internal care</td></tr>
 <tr><td>gametogenesis</td><td>sperm from testes</td><td>coiled seminiferous tubules</td></tr>
 <tr><td>gametogenesis</td><td>egg from ovary follicles</td><td>ovulation to uterus endometrium</td></tr>
 <tr><td>oogenesis</td><td>all eggs at birth</td><td>suspended at prophase I</td></tr>

@@ -10,11 +10,11 @@ order: 1
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>organic chemistry</td><td>\(Z\) 2-chloro pent 2-en 1-ol</td><td></td></tr>
-<tr class="highlight"><td>organic chemistry</td><td>stereoisomerism substituents parent unsaturation functional</td><td></td></tr>
+<tr><td>organic chemistry</td><td>\(Z\) 2-chloro pent 2-en 1-ol</td><td></td></tr>
+<tr><td>organic chemistry</td><td>stereoisomerism substituents parent unsaturation functional</td><td></td></tr>
 <tr><td>organic chemistry</td><td>are all redox reactions</td><td>sterics geometric inhibition</td></tr>
 <tr><td>organic chemistry</td><td>regiochemsitry reaction location</td><td>stereochemistry configurations</td></tr>
-<tr class="highlight"><td>line drawings</td><td>draw formal charges</td><td>do not draw lone pairs</td></tr>
-<tr class="highlight"><td>line drawings</td><td>resonance structures</td><td>lone pair pi bond conversions</td></tr>
-<tr class="highlight"><td>line drawings</td><td>bad tail never break single bond</td><td>bad head never exceed octet</td></tr>
+<tr><td>line drawings</td><td>draw formal charges</td><td>do not draw lone pairs</td></tr>
+<tr><td>line drawings</td><td>resonance structures</td><td>lone pair pi bond conversions</td></tr>
+<tr><td>line drawings</td><td>bad tail never break single bond</td><td>bad head never exceed octet</td></tr>
 </table>

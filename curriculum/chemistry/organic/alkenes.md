@@ -10,8 +10,8 @@ order: 9
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>alkenes</td><td>unsaturated double bonds</td><td>addition reactions</td></tr>
-<tr class="highlight"><td>alkenes</td><td>regiochemistry Markovnikov</td><td>syn or anti with enantiomers</td></tr>
+<tr><td>alkenes</td><td>unsaturated double bonds</td><td>addition reactions</td></tr>
+<tr><td>alkenes</td><td>regiochemistry Markovnikov</td><td>syn or anti with enantiomers</td></tr>
 <tr><td>hydrogenation</td><td>$H_{2}/Pt$</td><td>metal surface catalyst</td></tr>
 <tr><td>hydrogenation</td><td>no regiochemistry</td><td>syn held by catalyst</td></tr>
 <tr><td>hydrohalogenation</td><td>$HX$</td><td>carbocation rearrangement</td></tr>

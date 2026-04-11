@@ -10,7 +10,7 @@ order: 2
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>continuity</td><td>approaches limit</td><td>and actually hits</td></tr>
+<tr><td>continuity</td><td>approaches limit</td><td>and actually hits</td></tr>
 <tr><td>continuity</td><td>does not</td><td>skip jump infinite</td></tr>
 <tr><td>continuous</td><td>polynomials</td><td>and combinations</td></tr>
 <tr><td>continuous</td><td>trigonometric</td><td>exponential</td></tr>

@@ -10,7 +10,7 @@ order: 1
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>stoichiometry</td><td>balanced reactions</td><td>by conservation mass charge</td></tr>
+<tr><td>stoichiometry</td><td>balanced reactions</td><td>by conservation mass charge</td></tr>
 <tr><td>stoichiometry</td><td>atomic mass unit</td><td>$\frac{1}{12}$ of carbon twelve</td></tr>
 <tr><td>stoichiometry</td><td>atomic mass</td><td>isotopes nucleon mass</td></tr>
 <tr><td>stoichiometry</td><td>molar mass</td><td>mass of one mole</td></tr>

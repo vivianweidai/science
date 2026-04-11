@@ -10,8 +10,8 @@ order: 6
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>behaviour</td><td>voltage changes slowly</td><td>requires change in charge</td></tr>
-<tr class="highlight"><td>behaviour</td><td>simplify analysis</td><td>with steady state</td></tr>
+<tr><td>behaviour</td><td>voltage changes slowly</td><td>requires change in charge</td></tr>
+<tr><td>behaviour</td><td>simplify analysis</td><td>with steady state</td></tr>
 <tr><td>steady state</td><td>empty capacitor</td><td>ideal wire no resistance</td></tr>
 <tr><td>steady state</td><td>no charge no voltage</td><td>resistor voltage current</td></tr>
 <tr><td>steady state</td><td>full capacitor</td><td>open circuit infinite resistance</td></tr>

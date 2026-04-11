@@ -10,7 +10,7 @@ order: 11
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>dark</td><td>ATP NADPH make glucose</td><td>at stroma chloroplast interior</td></tr>
+<tr><td>dark</td><td>ATP NADPH make glucose</td><td>at stroma chloroplast interior</td></tr>
 <tr><td>dark</td><td>$CO_{2} + ATP + NADPH + H_{2} \rightarrow C_{6}H_{12}O_{6}$</td><td></td></tr>
 <tr><td>Calvin</td><td>five carbon ribulose</td><td>is used and regenerated</td></tr>
 <tr><td>Calvin</td><td>rubisco enzyme fixes carbon</td><td>$CO_{2} \rightarrow 6C \rightarrow G3P \rightarrow \text{glucose}$</td></tr>

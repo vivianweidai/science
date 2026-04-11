@@ -17,5 +17,5 @@ order: 12
 <tr><td>ratios</td><td>$\frac{a}{b} = \frac{c}{d} = \frac{a + kc}{b + kd}$</td><td>equals same ratio</td></tr>
 <tr><td>ratios</td><td>$\frac{a + kb}{a - kb} = \frac{c + kd}{c - kd}$</td><td>equals different ratio</td></tr>
 <tr><td>induction</td><td>base case identify</td><td>induction compels next</td></tr>
-<tr class="highlight"><td>induction</td><td>binomial theorem</td><td>identity by induction</td></tr>
+<tr><td>induction</td><td>binomial theorem</td><td>identity by induction</td></tr>
 </table>

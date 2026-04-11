@@ -10,7 +10,7 @@ order: 13
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>operons</td><td>activate or disable expression</td><td>inducible or repressible types</td></tr>
+<tr><td>operons</td><td>activate or disable expression</td><td>inducible or repressible types</td></tr>
 <tr><td>operons</td><td>promoter is staging area</td><td>where polymerase attaches</td></tr>
 <tr><td>operons</td><td>operator is part of promotor</td><td>to block or allow access</td></tr>
 <tr><td>regulation</td><td>repressor binds operator</td><td>prevent access and transcription</td></tr>

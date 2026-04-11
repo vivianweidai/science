@@ -16,5 +16,5 @@ order: 6
 <tr><td>kinetic energy</td><td>$K = \frac{1}{2}kA^{2}\sin^{2}\omega t$</td><td>substitution</td></tr>
 <tr><td>mechanical energy</td><td>$E = U + K$</td><td>definition</td></tr>
 <tr><td>mechanical energy</td><td>$E = \frac{1}{2}kA^{2}$</td><td>trigonometry</td></tr>
-<tr class="highlight"><td>velocity</td><td>$v^{2} = \frac{k}{m}\left( A^{2} - x^{2} \right)$</td><td>rearrangement</td></tr>
+<tr><td>velocity</td><td>$v^{2} = \frac{k}{m}\left( A^{2} - x^{2} \right)$</td><td>rearrangement</td></tr>
 </table>

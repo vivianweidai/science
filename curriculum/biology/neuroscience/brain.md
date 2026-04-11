@@ -12,9 +12,9 @@ order: 2
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
 <tr><td>brain</td><td>neural tube</td><td>from infolding ectoderm</td></tr>
 <tr><td>brain</td><td>three bulges</td><td>forebrain midbrain hindbrain</td></tr>
-<tr class="highlight"><td>regions</td><td>forebrain</td><td>cerebrum diencephalon</td></tr>
-<tr class="highlight"><td>regions</td><td>midbrain</td><td>cluster atop brainstem</td></tr>
-<tr class="highlight"><td>regions</td><td>hindbrain</td><td>cerebellum</td></tr>
+<tr><td>regions</td><td>forebrain</td><td>cerebrum diencephalon</td></tr>
+<tr><td>regions</td><td>midbrain</td><td>cluster atop brainstem</td></tr>
+<tr><td>regions</td><td>hindbrain</td><td>cerebellum</td></tr>
 <tr><td>cerebrum</td><td>two hemispheres</td><td>corpus callosum bridge</td></tr>
 <tr><td>cerebrum</td><td>cortex perception learning</td><td>basal nuclei planning</td></tr>
 <tr><td>cerebellum</td><td>small helmet</td><td>in hindbrain</td></tr>

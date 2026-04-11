@@ -10,7 +10,7 @@ order: 2
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>inheritance</td><td>inheritance that follows</td><td>the three Mendelian laws</td></tr>
+<tr><td>inheritance</td><td>inheritance that follows</td><td>the three Mendelian laws</td></tr>
 <tr><td>inheritance</td><td>Punnett square one generation</td><td>pedigree multiple generations</td></tr>
 <tr><td>dominant disease</td><td>parents are affected</td><td>offspring may not be</td></tr>
 <tr><td>dominant disease</td><td>most diseases not dominant</td><td>Huntington dwarfism</td></tr>

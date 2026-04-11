@@ -11,11 +11,11 @@ order: 8
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
 <tr><td>integer</td><td>isolate</td><td>constant term</td></tr>
-<tr class="highlight"><td>integer</td><td>$r\vert a_{0}$</td><td>divisible</td></tr>
+<tr><td>integer</td><td>$r\vert a_{0}$</td><td>divisible</td></tr>
 <tr><td>rational</td><td>isolate terms</td><td>and divide</td></tr>
-<tr class="highlight"><td>rational</td><td>$p\vert a_{0}$ $q\vert a_{n}$</td><td>divisible</td></tr>
+<tr><td>rational</td><td>$p\vert a_{0}$ $q\vert a_{n}$</td><td>divisible</td></tr>
 <tr><td>rational</td><td>boundary integers</td><td>opposite signs</td></tr>
 <tr><td>rational</td><td>search for rational roots</td><td>between integers</td></tr>
-<tr class="highlight"><td>identity theorem</td><td>$n + 1$ roots</td><td>zero polynomial</td></tr>
-<tr class="highlight"><td>identity theorem</td><td>$n + 1$ equal values</td><td>same polynomial</td></tr>
+<tr><td>identity theorem</td><td>$n + 1$ roots</td><td>zero polynomial</td></tr>
+<tr><td>identity theorem</td><td>$n + 1$ equal values</td><td>same polynomial</td></tr>
 </table>

@@ -15,7 +15,7 @@ order: 3
 <tr><td>transfer</td><td>possible heat transfer</td><td>conduction physical contact</td></tr>
 <tr><td>transfer</td><td>convection fluid motion</td><td>radiation electromagnetic waves</td></tr>
 <tr><td>zeroth law</td><td>thermal equilibrium</td><td>equal temperature</td></tr>
-<tr class="highlight"><td>zeroth law</td><td>two object equilibrium</td><td>if equilibrium with third</td></tr>
+<tr><td>zeroth law</td><td>two object equilibrium</td><td>if equilibrium with third</td></tr>
 <tr><td>heat capacity</td><td>amount of heat transfer</td><td>per temperature change</td></tr>
-<tr class="highlight"><td>heat capacity</td><td>$Q = mc\Delta T$</td><td>specific and molar</td></tr>
+<tr><td>heat capacity</td><td>$Q = mc\Delta T$</td><td>specific and molar</td></tr>
 </table>

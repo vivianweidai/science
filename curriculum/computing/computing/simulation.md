@@ -22,6 +22,6 @@ order: 13
 <tr><td>block game</td><td>character cards</td><td>double for-loop</td></tr>
 <tr><td>tic-tac-toe</td><td>alphabet tic-tac-toe</td><td>check all lines</td></tr>
 <tr><td>mowing the field</td><td>re-cutting after re-grows</td><td>each cell track last cut time</td></tr>
-<tr class="highlight"><td>censoring</td><td>remove words repeatedly</td><td>create result letter by letter</td></tr>
+<tr><td>censoring</td><td>remove words repeatedly</td><td>create result letter by letter</td></tr>
 <tr><td>milk measurement</td><td>changes to top cow</td><td>sweep all changes</td></tr>
 </table>

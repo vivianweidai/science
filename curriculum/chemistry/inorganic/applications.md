@@ -10,8 +10,8 @@ order: 6
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>stability</td><td>hard soft acid base</td><td>empirical hard hard soft soft</td></tr>
-<tr class="highlight"><td>stability</td><td>chelate effect stability</td><td>multidentate increasing entropy</td></tr>
+<tr><td>stability</td><td>hard soft acid base</td><td>empirical hard hard soft soft</td></tr>
+<tr><td>stability</td><td>chelate effect stability</td><td>multidentate increasing entropy</td></tr>
 <tr><td>hemoglobin</td><td>four octohedral heme groups</td><td>coordinate transport oxygen</td></tr>
 <tr><td>hemoglobin</td><td>prefer carbon monoxide cyanide</td><td>asphyxiation lack of oxygen</td></tr>
 <tr><td>metals</td><td>soft sulfur atoms</td><td>easily coordinate with metals</td></tr>

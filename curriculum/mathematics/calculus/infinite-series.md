@@ -11,9 +11,9 @@ order: 7
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
 <tr><td>sequence</td><td>discrete function</td><td>values approach limit</td></tr>
-<tr class="highlight"><td>sequence</td><td>convergence of limit</td><td>monotonic and bounded</td></tr>
+<tr><td>sequence</td><td>convergence of limit</td><td>monotonic and bounded</td></tr>
 <tr><td>series</td><td>corresponding sequence</td><td>limit of partial sums</td></tr>
-<tr class="highlight"><td>series</td><td>convergence of limit</td><td>sequence limit is zero</td></tr>
+<tr><td>series</td><td>convergence of limit</td><td>sequence limit is zero</td></tr>
 <tr><td>convergence</td><td>divergence</td><td>sequence limit not zero</td></tr>
 <tr><td>convergence</td><td>comparison</td><td>to known series</td></tr>
 <tr><td>convergence</td><td>integral</td><td>to improper integral</td></tr>

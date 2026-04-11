@@ -10,8 +10,8 @@ order: 10
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>alkene</td><td>create $Br_{2}hv/NaOEt$</td><td>radical bromination elimination</td></tr>
-<tr class="highlight"><td>alkene</td><td>cleave $O_{3}/DMS$</td><td>ozonolysis to $C = O$</td></tr>
+<tr><td>alkene</td><td>create $Br_{2}hv/NaOEt$</td><td>radical bromination elimination</td></tr>
+<tr><td>alkene</td><td>cleave $O_{3}/DMS$</td><td>ozonolysis to $C = O$</td></tr>
 <tr><td>halogenation</td><td>$Br_{2}$ adds $BrBr$</td><td>via bromonium bridge</td></tr>
 <tr><td>halogenation</td><td>none</td><td>anti</td></tr>
 <tr><td>halohydrin</td><td>$Br_{2}/H_{2}O$ adds $BrOH$</td><td>via bromonium bridge</td></tr>

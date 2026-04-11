@@ -10,8 +10,8 @@ order: 4
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>experiments</td><td>deliberately setup</td><td>comparison groups</td></tr>
-<tr class="highlight"><td>experiments</td><td>use comparison of results</td><td>to infer cause and effect</td></tr>
+<tr><td>experiments</td><td>deliberately setup</td><td>comparison groups</td></tr>
+<tr><td>experiments</td><td>use comparison of results</td><td>to infer cause and effect</td></tr>
 <tr><td>experiments</td><td>impose treatments</td><td>on experimental units</td></tr>
 <tr><td>experiments</td><td>treatment specific condition</td><td>single or combo variable values</td></tr>
 <tr><td>experiments</td><td>experimental unit objects</td><td>called subjects if human beings</td></tr>

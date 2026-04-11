@@ -10,8 +10,8 @@ order: 9
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>filtration</td><td>blood to tubules</td><td>filtered in stages</td></tr>
-<tr class="highlight"><td>filtration</td><td>blood pressure pushes filtrate</td><td>glomerulus to Bowman capsule</td></tr>
+<tr><td>filtration</td><td>blood to tubules</td><td>filtered in stages</td></tr>
+<tr><td>filtration</td><td>blood pressure pushes filtrate</td><td>glomerulus to Bowman capsule</td></tr>
 <tr><td>filtration</td><td>selective permeability</td><td>only small molecules pass</td></tr>
 <tr><td>reabsorption</td><td>filtrate through nephron</td><td>proximal loop of Henle distal</td></tr>
 <tr><td>reabsorption</td><td>active sodium reabsorbed</td><td>passive water salts reabsorbed</td></tr>

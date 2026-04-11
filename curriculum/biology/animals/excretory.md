@@ -10,8 +10,8 @@ order: 8
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>excretory</td><td>osmoregulation</td><td>solute homeostasis</td></tr>
-<tr class="highlight"><td>excretory</td><td>waste management</td><td>handle toxic ammonia</td></tr>
+<tr><td>excretory</td><td>osmoregulation</td><td>solute homeostasis</td></tr>
+<tr><td>excretory</td><td>waste management</td><td>handle toxic ammonia</td></tr>
 <tr><td>osmoregulation</td><td>sharks do not regulate</td><td>maintain urea isotonicity</td></tr>
 <tr><td>osmoregulation</td><td>freshwater fishes regulate</td><td>eject lots dilute urine</td></tr>
 <tr><td>osmoregulation</td><td>saltwater fishes regulate</td><td>eject little concentrated urine</td></tr>

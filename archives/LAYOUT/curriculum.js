@@ -1,18 +1,22 @@
 /* Curriculum widget.
  *
- * Loads archives/CONTENT/curriculum_manifest.json (built by
- * archives/LAYOUT/build_curriculum_manifest.py) and renders a 6-column grid of
+ * Loads archives/CONTENT/curriculum.json (built by
+ * archives/LAYOUT/build_curriculum.py) and renders a 6-column grid of
  * subjects -> sections -> topics. Clicking a topic drills into a single
  * view that fetches the raw markdown files for that topic's tables from
  * GitHub raw, renders them with marked + KaTeX, and provides breadcrumb
  * and prev/next navigation within the same section.
+ *
+ * Row highlighting is applied at runtime from each table entry's
+ * `highlighted_rows` array (data-row indices, skipping the header row)
+ * rather than being baked into the curriculum markdown.
  */
 (function () {
   var widget = document.getElementById('curriculum-widget');
   if (!widget) return;
 
   var RAW_BASE = 'https://raw.githubusercontent.com/vivianweidai/science/main/curriculum/';
-  var MANIFEST_URL = '/archives/CONTENT/curriculum_manifest.json';
+  var MANIFEST_URL = '/archives/CONTENT/curriculum.json';
 
   var manifest = null;
   var state = { view: 'grid' };
@@ -99,7 +103,17 @@
 
     Promise.all(fetches).then(function (bodies) {
       var body = widget.querySelector('.curr-topic-body');
-      body.innerHTML = bodies.map(function (md) { return marked.parse(md); }).join('\n');
+      // Render each table's markdown separately into its own container so
+      // we can apply per-table highlight rows before concatenating into
+      // the topic body.
+      body.innerHTML = '';
+      bodies.forEach(function (md, i) {
+        var wrap = document.createElement('div');
+        wrap.className = 'curr-table-wrap';
+        wrap.innerHTML = marked.parse(md);
+        applyHighlights(wrap, topic.tables[i].highlighted_rows || []);
+        body.appendChild(wrap);
+      });
       whenKatexReady(function () {
         window.renderMathInElement(body, {
           delimiters: [
@@ -155,6 +169,26 @@
         if (window.renderMathInElement) cb();
       }
     }, 50);
+  }
+
+  function applyHighlights(container, rowIndices) {
+    if (!rowIndices || !rowIndices.length) return;
+    var set = {};
+    rowIndices.forEach(function (i) { set[i] = true; });
+    // The curriculum markdown uses a single <table> per file. Walk its
+    // data rows (rows with <td>, i.e. skipping <th> header rows) and
+    // add `highlight` to the ones whose data index is in the set.
+    var tables = container.querySelectorAll('table');
+    tables.forEach(function (table) {
+      var rows = table.querySelectorAll('tr');
+      var dataIdx = 0;
+      rows.forEach(function (tr) {
+        if (tr.querySelector('td')) {
+          if (set[dataIdx]) tr.classList.add('highlight');
+          dataIdx += 1;
+        }
+      });
+    });
   }
 
   function stripFrontMatter(text) {

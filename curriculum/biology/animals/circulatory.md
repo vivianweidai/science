@@ -10,7 +10,7 @@ order: 6
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>circulatory</td><td>connect exchange surfaces</td><td>to all cells for nutrients</td></tr>
+<tr><td>circulatory</td><td>connect exchange surfaces</td><td>to all cells for nutrients</td></tr>
 <tr><td>circulatory</td><td>open system interstitial fluid</td><td>closed system dedicated blood</td></tr>
 <tr><td>circulatory</td><td>single circuit body to gill</td><td>double circuit lung and body</td></tr>
 <tr><td>cycle</td><td>pulmonary heart arteries lungs</td><td>systemic heart arteries body</td></tr>

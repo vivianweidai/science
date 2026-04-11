@@ -10,8 +10,8 @@ order: 5
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>equilibrium</td><td>reaction direction</td><td>depends on charge stability</td></tr>
-<tr class="highlight"><td>equilibrium</td><td>ability of the conjugate base</td><td>to absorb negative charge</td></tr>
+<tr><td>equilibrium</td><td>reaction direction</td><td>depends on charge stability</td></tr>
+<tr><td>equilibrium</td><td>ability of the conjugate base</td><td>to absorb negative charge</td></tr>
 <tr><td>charge stability</td><td>atom</td><td>electronegativity polarizability</td></tr>
 <tr><td>charge stability</td><td>resonance</td><td>delocalize the charge</td></tr>
 <tr><td>charge stability</td><td>induction</td><td>delocalize the charge</td></tr>

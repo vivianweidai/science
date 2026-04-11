@@ -10,8 +10,8 @@ order: 3
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr class="highlight"><td>precipitation</td><td>two aqueous solutions</td><td>makes solid precipitate</td></tr>
-<tr class="highlight"><td>precipitation</td><td>competing forces</td><td>larger charge less soluble</td></tr>
+<tr><td>precipitation</td><td>two aqueous solutions</td><td>makes solid precipitate</td></tr>
+<tr><td>precipitation</td><td>competing forces</td><td>larger charge less soluble</td></tr>
 <tr><td>soluble</td><td>alkali metals</td><td>$Na^{+}Li^{+}K^{+}$</td></tr>
 <tr><td>soluble</td><td>ammonium</td><td>$NH_{4}^{+}$</td></tr>
 <tr><td>soluble</td><td>halogens sulfate</td><td>$Cl^{-}Br^{-}I^{-}$</td></tr>
