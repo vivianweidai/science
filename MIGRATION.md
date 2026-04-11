@@ -36,9 +36,14 @@ workflow works.
 - `scripts/build_migration.py` — CSV→SQL converter, no longer needed
 
 **Added:**
-- `.github/workflows/pages.yml` — validates listings JSON is fresh, builds
-  Jekyll, deploys to GitHub Pages.
 - `CNAME` — tells GitHub Pages to serve this repo at `vivianweidai.com`.
+
+**Not added (deliberately):** no GitHub Actions workflow. GitHub Pages builds
+Jekyll natively in "Deploy from a branch" mode — no workflow file needed. The
+tradeoff is no CI check that `archives/CONTENT/*.json` is in sync with the
+corresponding YAML; the editor (you or Claude) is responsible for rerunning
+`python archives/LAYOUT/build_listings.py` before committing. If drift ever
+becomes a problem, a workflow can be added back in a few lines.
 
 ## What you still need to do by hand
 
@@ -46,10 +51,16 @@ These are things I cannot do from the CLI; they all happen in web UIs:
 
 ### 1. Enable GitHub Pages on the repo
 - Go to **Settings → Pages** on https://github.com/vivianweidai/science
-- **Source:** "GitHub Actions" (not "Deploy from a branch")
-- **Custom domain:** `vivianweidai.com` (should auto-populate from the CNAME file)
-- Check **Enforce HTTPS** once GitHub has provisioned the cert (takes a few minutes
+- **Source:** "Deploy from a branch"
+- **Branch:** `main`, folder `/ (root)`, click **Save**
+- **Custom domain:** `vivianweidai.com` (should auto-populate from the CNAME file;
+  a "DNS check unsuccessful" warning is fine until you complete step 2)
+- Check **Enforce HTTPS** once GitHub has provisioned the cert (takes 10-30 minutes
   after DNS is pointed at GitHub).
+
+GitHub Pages runs Jekyll automatically on their servers — no workflow file needed.
+The site will be live at `https://vivianweidai.github.io/` within a minute or two
+of the first successful build.
 
 ### 2. Point DNS at GitHub Pages
 You currently have `vivianweidai.com` pointing at Cloudflare Pages. Change it to
@@ -79,7 +90,8 @@ loads correctly:
 
 - **Cloudflare Pages project:** delete the `science` project in the Cloudflare
   dashboard (it's no longer needed and will keep auto-building from the repo
-  and failing because there's no `wrangler.toml`).
+  and failing because there's no `wrangler.toml`, filling your inbox with build
+  failure notifications).
 - **Cloudflare Access:** delete the policy that used to gate `/api/admin/*`.
   It's no-op now but it's cruft.
 - **D1 database:** delete the `science` D1 database (`682188ef-...`) in the
@@ -120,12 +132,9 @@ any future URL disruption.
    If your edit has a schema violation (typo in subject, missing field, bad
    date format), the script will tell you exactly which entry.
 3. `git add archives/ && git commit && git push`.
-4. GitHub Actions builds Jekyll and deploys to GitHub Pages within about a
-   minute of the push landing.
-
-If you push without rebuilding the JSON, the GitHub Actions workflow will fail
-the `validate-listings` job with a diff showing what's stale, and refuse to
-deploy. No way to accidentally ship an inconsistent site.
+4. GitHub Pages rebuilds Jekyll and redeploys within about a minute of the push
+   landing. No CI check runs, so it's on you (or me) to remember step 2 —
+   otherwise the webapp will render the old tables until the next rebuild.
 
 ## YAML schema
 

@@ -14,8 +14,7 @@ decode it without code changes:
     {"items": [ {id, subject, date, sort_key, country, name, finished, highlighted}, ... ]}
 
 Run this after editing either YAML file, then commit both the YAML and the JSON.
-A GitHub Action (.github/workflows/build-listings.yml) also runs this on push and
-will fail the build if the committed JSON is stale.
+There is no CI validation — the editor is responsible for remembering to rebuild.
 """
 
 from __future__ import annotations
