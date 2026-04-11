@@ -1,0 +1,11 @@
+name = "science"
+compatibility_date = "2026-01-01"
+pages_build_output_dir = "_site"
+
+# D1 database binding. Create the database with:
+#   npx wrangler d1 create science
+# Then copy the database_id below.
+[[d1_databases]]
+binding = "DB"
+database_name = "science"
+database_id = "REPLACE_WITH_DATABASE_ID"
