@@ -1,6 +1,5 @@
 # Olympiad events — source of truth.
 # Each entry: subject, date ("Month YYYY"), country, name, finished, highlighted.
-# Optional: url (link for the name on the webapp).
 # Run `python archives/LAYOUT/build_listings.py` after edits to regenerate archives/CONTENT/olympiads.json.
 
 - subject: Mathematics
