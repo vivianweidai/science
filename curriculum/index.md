@@ -42,7 +42,6 @@ layout: default
       <tr class="highlight"><td>December 2025</td><td>Calculus: Early Transcendentals by James Stewart</td></tr>
       <tr><td><s>May 2025</s></td><td><s>Advanced Placement Calculus BC Exam</s></td></tr>
       <tr><td><s>May 2024</s></td><td><s>Advanced Placement Precalculus Exam</s></td></tr>
-      <tr><td><s>May 2024</s></td><td><s>The Art of Problem Solving by Richard Rusczyk et al</s></td></tr>
       <tr class="highlight"><td>September 2023</td><td>Precalculus Mathematics in a Nutshell by George F. Simmons</td></tr>
     </table>
   </div>
