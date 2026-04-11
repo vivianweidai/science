@@ -1,3 +1,4 @@
+#if os(iOS)
 import SwiftUI
 
 struct CurriculumView: View {
@@ -117,3 +118,4 @@ struct FlashcardView: View {
             .navigationBarTitleDisplayMode(.inline)
     }
 }
+#endif

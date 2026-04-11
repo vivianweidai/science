@@ -14,6 +14,12 @@
   <string>0.1.0</string>
   <key>LSRequiresIPhoneOS</key>
   <true/>
+  <!-- Universal: iPhone (1) + iPad (2) -->
+  <key>UIDeviceFamily</key>
+  <array>
+    <integer>1</integer>
+    <integer>2</integer>
+  </array>
   <key>UIApplicationSceneManifest</key>
   <dict>
     <key>UIApplicationSupportsMultipleScenes</key>
@@ -21,9 +27,17 @@
   </dict>
   <key>UILaunchScreen</key>
   <dict/>
+  <!-- iPhone: portrait only. iPad: all four orientations. -->
   <key>UISupportedInterfaceOrientations</key>
   <array>
     <string>UIInterfaceOrientationPortrait</string>
+  </array>
+  <key>UISupportedInterfaceOrientations~ipad</key>
+  <array>
+    <string>UIInterfaceOrientationPortrait</string>
+    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+    <string>UIInterfaceOrientationLandscapeLeft</string>
+    <string>UIInterfaceOrientationLandscapeRight</string>
   </array>
 </dict>
 </plist>

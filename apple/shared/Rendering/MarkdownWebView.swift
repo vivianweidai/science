@@ -1,8 +1,13 @@
+#if os(iOS)
 import SwiftUI
 import WebKit
 
 /// Renders a markdown string with KaTeX math via a WKWebView hosting the
 /// katex-shell.html bundled with the package.
+///
+/// iOS / iPadOS only. macOS would need `NSViewRepresentable` and watchOS
+/// has no WebKit at all — the watch app uses a plain SwiftUI `Text`-based
+/// renderer instead.
 public struct MarkdownWebView: UIViewRepresentable {
     let markdown: String
 
@@ -54,3 +59,4 @@ public struct MarkdownWebView: UIViewRepresentable {
         }
     }
 }
+#endif

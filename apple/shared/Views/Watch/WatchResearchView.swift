@@ -1,7 +1,10 @@
-#if os(iOS)
+#if os(watchOS)
 import SwiftUI
 
-struct ResearchView: View {
+/// Research project list for watchOS.
+///
+/// Tapping a project fetches the index.md and shows it as plain text.
+struct WatchResearchView: View {
     @State private var projects: [ResearchProject] = []
     @State private var loading = true
     @State private var error: String?
@@ -12,16 +15,16 @@ struct ResearchView: View {
                 if loading {
                     ProgressView()
                 } else if let error {
-                    Text(error).foregroundStyle(.red).padding()
+                    Text(error).foregroundStyle(.red).font(.caption)
                 } else {
                     List(projects) { project in
                         NavigationLink {
-                            ProjectDetailView(project: project)
+                            WatchProjectDetailView(project: project)
                         } label: {
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text(project.title).font(.headline)
+                            VStack(alignment: .leading, spacing: 1) {
+                                Text(project.title).font(.footnote)
                                 Text(project.date)
-                                    .font(.caption)
+                                    .font(.caption2)
                                     .foregroundStyle(.secondary)
                             }
                         }
@@ -30,7 +33,6 @@ struct ResearchView: View {
             }
             .navigationTitle("Research")
             .task { await load() }
-            .refreshable { await load() }
         }
     }
 
@@ -46,7 +48,7 @@ struct ResearchView: View {
     }
 }
 
-struct ProjectDetailView: View {
+struct WatchProjectDetailView: View {
     let project: ResearchProject
     @State private var markdown: String = ""
     @State private var loading = true
@@ -56,17 +58,21 @@ struct ProjectDetailView: View {
             if loading {
                 ProgressView()
             } else {
-                MarkdownWebView(markdown: markdown)
+                ScrollView {
+                    Text(markdown)
+                        .font(.footnote)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal, 4)
+                }
             }
         }
         .navigationTitle(project.title)
-        .navigationBarTitleDisplayMode(.inline)
         .task {
             do {
                 let (data, _) = try await URLSession.shared.data(from: project.indexURL)
                 markdown = String(data: data, encoding: .utf8) ?? ""
             } catch {
-                markdown = "# Error\n\n\(error.localizedDescription)"
+                markdown = "Error: \(error.localizedDescription)"
             }
             loading = false
         }

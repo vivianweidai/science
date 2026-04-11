@@ -1,14 +1,20 @@
-#if os(iOS)
+#if os(watchOS)
 import SwiftUI
 
-struct OlympiadsView: View {
+/// Olympiads + textbooks list for watchOS.
+///
+/// Subject picker → combined contests and textbooks sections. Same
+/// `APIClient` as iPhone.
+struct WatchOlympiadsView: View {
     @State private var olympiads: [Olympiad] = []
     @State private var textbooks: [Textbook] = []
     @State private var subject: String = "Mathematics"
     @State private var loading = true
     @State private var error: String?
 
-    private let subjects = ["Mathematics", "Computing", "Physics", "Chemistry", "Biology", "Astronomy"]
+    private let subjects = [
+        "Mathematics", "Computing", "Physics", "Chemistry", "Biology", "Astronomy"
+    ]
 
     var body: some View {
         NavigationStack {
@@ -16,51 +22,43 @@ struct OlympiadsView: View {
                 if loading {
                     ProgressView()
                 } else if let error {
-                    Text(error).foregroundStyle(.red).padding()
+                    Text(error).foregroundStyle(.red).font(.caption)
                 } else {
                     list
                 }
             }
             .navigationTitle("Olympiads")
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Picker("Subject", selection: $subject) {
-                        ForEach(subjects, id: \.self) { Text($0).tag($0) }
-                    }
-                    .pickerStyle(.menu)
-                }
-            }
             .task { await load() }
-            .refreshable { await load() }
         }
-    }
-
-    private var filteredOlympiads: [Olympiad] {
-        olympiads.filter { $0.subject == subject }
-    }
-
-    private var filteredTextbooks: [Textbook] {
-        textbooks.filter { $0.subject == subject }
     }
 
     private var list: some View {
         List {
+            Section {
+                Picker("Subject", selection: $subject) {
+                    ForEach(subjects, id: \.self) { Text($0).tag($0) }
+                }
+            }
             Section("Contests") {
-                ForEach(filteredOlympiads) { o in
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(o.name).strikethrough(o.finished == 1)
+                ForEach(olympiads.filter { $0.subject == subject }) { o in
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text(o.name)
+                            .font(.footnote)
+                            .strikethrough(o.finished == 1)
                         Text("\(o.date) • \(o.country)")
-                            .font(.caption)
+                            .font(.caption2)
                             .foregroundStyle(.secondary)
                     }
                 }
             }
             Section("Textbooks") {
-                ForEach(filteredTextbooks) { t in
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(t.title).strikethrough(t.finished == 1)
+                ForEach(textbooks.filter { $0.subject == subject }) { t in
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text(t.title)
+                            .font(.footnote)
+                            .strikethrough(t.finished == 1)
                         Text(t.date)
-                            .font(.caption)
+                            .font(.caption2)
                             .foregroundStyle(.secondary)
                     }
                 }
