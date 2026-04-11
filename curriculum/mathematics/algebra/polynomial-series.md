@@ -12,7 +12,7 @@ order: 16
 |-------|-------------------|-------------|
 | polynomial series | recurrence relation | closed formula |
 | polynomial series | telescoping collapses terms | decomposition with zeroes |
-| polynomial series | $$\frac{5 - x}{(x - 2)(3 - x)} = \f | ac{A}{x - 2} + \frac{B}{3 - x}$$ |
+| polynomial series | $\frac{5 - x}{(x - 2)(3 - x)} = \frac{A}{x - 2} + \frac{B}{3 - x}$ |  |
 | arithmetico-geometric | cross product | of all terms |
 | arithmetico-geometric | result approaches | geometric series |
 | finite difference | sequence of | term differences |

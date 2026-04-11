@@ -17,5 +17,5 @@ order: 8
 | Taylor series | $\sum_{n = 0}^{\infty} = c_{n}(x - a)^{n}$ | infinite power series |
 | Taylor series | converges to function | at all values in interval |
 | Taylor series | $R = \lim_{n \rightarrow \infty}\left\vert  \frac{c_{n}}{c_{n + 1}} \right\vert $ | radius of convergence |
-| examples | $$\sin x = x - \frac{x^{3}}{3!} + \frac{x^{5}}{5!} + \ldots = \overset{\in | ty}{\sum_{n = 0}}( - 1)^{n}\frac{x^{2n + 1}}{(2n + 1)!}$$ |
+| examples | $\sin x = x - \frac{x^{3}}{3!} + \frac{x^{5}}{5!} + \ldots = \sum_{n = 0}^{\infty}( - 1)^{n}\frac{x^{2n + 1}}{(2n + 1)!}$ |  |
 | examples | $e^{ix} = \cos x + i\sin x$ | Euler |

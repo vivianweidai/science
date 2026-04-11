@@ -13,7 +13,7 @@ order: 1
 | trigonometry | unit circle projections | periodic sinusoidal |
 | trigonometry | $x(t) = r\sin\omega t$ | general form |
 | identities | $\sin^{2}x + \cos^{2}x = 1$ | Pythagoras |
-| identities | $$\sin(\alpha + \beta) = \sin\alpha\cos\beta | \sin\beta\cos\alpha$$ |
+| identities | $\sin(\alpha + \beta) = \sin\alpha\cos\beta + \sin\beta\cos\alpha$ |  |
 | identities | sum angles | composite triangles |
 | identities | double expand sums | half substitute doubles |
 | identities | product to sum | sum to product |

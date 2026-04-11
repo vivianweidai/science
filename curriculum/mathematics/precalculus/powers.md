@@ -11,7 +11,7 @@ order: 4
 | Label | Formula / Concept | Description |
 |-------|-------------------|-------------|
 | product | multiplication | magnitudes sum |
-| product | $$wz = rs(\cos(\alpha + \beta) + i\sin(\alp | a + \beta))$$ |
+| product | $wz = rs(\cos(\alpha + \beta) + i\sin(\alpha + \beta))$ |  |
 | product | $f(x)f(y) = f(x + y)$ | functional equation |
 | product | $e^{i\theta} = \cos\theta + i\sin\theta$ | exponential relation |
 | powers | angle multiples | de Moivre |
