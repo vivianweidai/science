@@ -177,9 +177,7 @@ layout: default
     <table>
       <tr><th>Date</th><th>Textbook</th></tr>
       <tr><td>January 2027</td><td><a href="https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1093165" target="_blank">Chemistry 342</a> Organic Chemistry B Organic Chemistry by Paula Yurkanis Bruice</td></tr>
-      <tr><td>January 2027</td><td><a href="https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1093168" target="_blank">Chemistry 348</a> Laboratory Techniques for Organic Chemistry B</td></tr>
       <tr><td>September 2026</td><td><a href="https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1093164" target="_blank">Chemistry 341</a> Organic Chemistry A Organic Chemistry by Paula Yurkanis Bruice</td></tr>
-      <tr><td>September 2026</td><td><a href="https://catalog.unr.edu/preview_program.php?catoid=58&poid=243502" target="_blank">Chemistry 347</a> Laboratory Techniques for Organic Chemistry A</td></tr>
       <tr><td>May 2026</td><td>British Columbia Chemistry Olympiad</td></tr>
       <tr><td>May 2026</td><td>Atkins' Physical Chemistry by Peter Atkins, Julio de Paula and James Keeler</td></tr>
       <tr><td>May 2026</td><td>Organic Chemistry by Jonathan Clayden, Nick Greeves and Stuart Warren</td></tr>
