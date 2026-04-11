@@ -4,8 +4,6 @@ layout: default
 
 ## Olympiads
 
-### Contests
-
 <div class="tabs">
   <input type="radio" name="oly" id="oly-math">
   <input type="radio" name="oly" id="oly-comp">
