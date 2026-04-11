@@ -1,6 +1,5 @@
 # Textbook and course tracking — source of truth.
 # Each entry: subject, date ("Month YYYY" or "Future"), title, finished, highlighted.
-# Optional: url (full-title link) or link_text (substring of title to wrap in the url).
 # Run `python archives/LAYOUT/build_listings.py` after edits to regenerate archives/CONTENT/textbooks.json.
 
 - subject: Mathematics
@@ -186,8 +185,6 @@
 - subject: Physics
   date: December 2025
   title: Physics Olympiad Handouts by Kevin Zhou
-  link_text: Physics Olympiad Handouts
-  url: https://knzhou.github.io
   finished: false
   highlighted: true
 - subject: Physics
@@ -248,15 +245,11 @@
 - subject: Chemistry
   date: January 2027
   title: Chemistry 342 Organic Chemistry B Organic Chemistry by Paula Yurkanis Bruice
-  link_text: Chemistry 342
-  url: https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1093165
   finished: false
   highlighted: false
 - subject: Chemistry
   date: September 2026
   title: Chemistry 341 Organic Chemistry A Organic Chemistry by Paula Yurkanis Bruice
-  link_text: Chemistry 341
-  url: https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1093164
   finished: false
   highlighted: false
 - subject: Chemistry
@@ -397,15 +390,11 @@
 - subject: Astronomy
   date: January 2027
   title: Astronomy 410 Astrophysics Astrophysics in a Nutshell by Dan Maoz
-  link_text: Astronomy 410
-  url: https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1092619
   finished: false
   highlighted: false
 - subject: Astronomy
   date: September 2026
   title: Astronomy 310 Astrophysics Measurements To Measure the Sky by Frederick R. Chromey
-  link_text: Astronomy 310
-  url: https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1092618
   finished: false
   highlighted: false
 - subject: Astronomy

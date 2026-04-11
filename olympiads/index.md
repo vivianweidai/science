@@ -75,16 +75,6 @@ layout: default
     });
   }
 
-  function titleHTML(entry) {
-    var title = escapeHTML(entry.title);
-    if (!entry.url) return title;
-    var linkText = entry.link_text ? escapeHTML(entry.link_text) : title;
-    var href = escapeHTML(entry.url);
-    var anchor = '<a href="' + href + '" target="_blank">' + linkText + '</a>';
-    if (!entry.link_text) return anchor;
-    return title.replace(linkText, anchor);
-  }
-
   function cell(html, finished) {
     return finished ? '<td><s>' + html + '</s></td>' : '<td>' + html + '</td>';
   }
@@ -125,7 +115,7 @@ layout: default
         var cls = t.highlighted ? ' class="highlight"' : '';
         return '<tr' + cls + '>'
           + cell(escapeHTML(t.date), t.finished)
-          + cell(titleHTML(t), t.finished)
+          + cell(escapeHTML(t.title), t.finished)
           + '</tr>';
       }).join('');
       target.innerHTML = '<table>'

@@ -95,13 +95,7 @@ def build_textbooks() -> list[dict]:
         validate_common(e, i, "textbook")
         if "title" not in e:
             raise ValueError(f"textbook[{i}] missing required field 'title'")
-        if "link_text" in e and "url" not in e:
-            raise ValueError(f"textbook[{i}] has link_text without url")
-        if "link_text" in e and e["link_text"] not in e["title"]:
-            raise ValueError(
-                f"textbook[{i}] link_text {e['link_text']!r} not a substring of title"
-            )
-        item = {
+        items.append({
             "id": i + 1,
             "subject": e["subject"],
             "date": e["date"],
@@ -109,13 +103,7 @@ def build_textbooks() -> list[dict]:
             "title": e["title"],
             "finished": 1 if e["finished"] else 0,
             "highlighted": 1 if e["highlighted"] else 0,
-        }
-        # Webapp-only fields (iOS ignores unknown keys).
-        if "url" in e:
-            item["url"] = e["url"]
-        if "link_text" in e:
-            item["link_text"] = e["link_text"]
-        items.append(item)
+        })
     return items
 
 

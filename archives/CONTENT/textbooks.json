@@ -331,9 +331,7 @@
       "sort_key": "2025-12",
       "title": "Physics Olympiad Handouts by Kevin Zhou",
       "finished": 0,
-      "highlighted": 1,
-      "url": "https://knzhou.github.io",
-      "link_text": "Physics Olympiad Handouts"
+      "highlighted": 1
     },
     {
       "id": 38,
@@ -441,9 +439,7 @@
       "sort_key": "2027-01",
       "title": "Chemistry 342 Organic Chemistry B Organic Chemistry by Paula Yurkanis Bruice",
       "finished": 0,
-      "highlighted": 0,
-      "url": "https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1093165",
-      "link_text": "Chemistry 342"
+      "highlighted": 0
     },
     {
       "id": 50,
@@ -452,9 +448,7 @@
       "sort_key": "2026-09",
       "title": "Chemistry 341 Organic Chemistry A Organic Chemistry by Paula Yurkanis Bruice",
       "finished": 0,
-      "highlighted": 0,
-      "url": "https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1093164",
-      "link_text": "Chemistry 341"
+      "highlighted": 0
     },
     {
       "id": 51,
@@ -706,9 +700,7 @@
       "sort_key": "2027-01",
       "title": "Astronomy 410 Astrophysics Astrophysics in a Nutshell by Dan Maoz",
       "finished": 0,
-      "highlighted": 0,
-      "url": "https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1092619",
-      "link_text": "Astronomy 410"
+      "highlighted": 0
     },
     {
       "id": 79,
@@ -717,9 +709,7 @@
       "sort_key": "2026-09",
       "title": "Astronomy 310 Astrophysics Measurements To Measure the Sky by Frederick R. Chromey",
       "finished": 0,
-      "highlighted": 0,
-      "url": "https://catalog.unr.edu/preview_course_nopop.php?catoid=58&coid=1092618",
-      "link_text": "Astronomy 310"
+      "highlighted": 0
     },
     {
       "id": 80,
