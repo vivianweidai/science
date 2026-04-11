@@ -56,20 +56,6 @@
         var radio = document.getElementById(prefix + pick);
         if (radio) radio.checked = true;
       });
-
-      present.forEach(function(prefix) {
-        tabs.forEach(function(t) {
-          var radio = document.getElementById(prefix + t);
-          if (!radio) return;
-          radio.addEventListener('change', function() {
-            present.forEach(function(other) {
-              if (other === prefix) return;
-              var target = document.getElementById(other + t);
-              if (target) target.checked = true;
-            });
-          });
-        });
-      });
     })();
 
     /* Fix tab-switching jump: preserve scroll position on label click so
