@@ -3,8 +3,8 @@ description: Mathematics Computing Physics Chemistry Biology Astronomy
 baseurl: ""
 plugins: []
 
-# Keep Jekyll's scan small — the full repo has ~500MB of raw research data
-# and an iOS app sibling tree that don't need to be in _site.
+# DEBUG: temporarily excluding research/ to see if the build succeeds
+# without the 477MB tree. If yes, we know the problem is in there.
 exclude:
   - apple/
   - .wrangler/
@@ -15,6 +15,7 @@ exclude:
   - Gemfile.lock
   - vendor/
   - node_modules/
+  - research/
 
 defaults:
   - scope:
