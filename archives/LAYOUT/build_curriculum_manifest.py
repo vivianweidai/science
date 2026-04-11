@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Regenerate archives/curriculum_manifest.json from curriculum/*.md.
+"""Regenerate archives/CONTENT/curriculum_manifest.json from curriculum/*.md.
 
 Walks the curriculum tree, parses each file's front matter, and emits a
 hierarchical manifest: subject -> sections -> topics -> tables (files).
 
 Run whenever curriculum content is added/renamed/reordered:
-    python3 scripts/build_curriculum_manifest.py
+    python3 archives/LAYOUT/build_curriculum_manifest.py
 """
 import json
 import re
@@ -55,7 +55,7 @@ def slugify(s: str) -> str:
 
 
 def main() -> None:
-    root = Path(__file__).resolve().parent.parent
+    root = Path(__file__).resolve().parent.parent.parent
     curr = root / "curriculum"
 
     manifest = {}
@@ -132,7 +132,7 @@ def main() -> None:
             "sections": ordered_sections,
         }
 
-    out_path = root / "archives" / "curriculum_manifest.json"
+    out_path = root / "archives" / "CONTENT" / "curriculum_manifest.json"
     out_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {out_path} ({out_path.stat().st_size} bytes)")
 

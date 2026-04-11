@@ -2,19 +2,20 @@ import Foundation
 
 /// Read-only client for olympiad and textbook listings.
 ///
-/// The source of truth is YAML in the repo (content/olympiads.yml,
-/// content/textbooks.yml). A Python build script generates static JSON files
-/// (archives/olympiads.json, archives/textbooks.json) which we fetch directly
-/// from GitHub's raw content host. No database, no API layer, no writes.
+/// The source of truth is YAML in the repo (archives/CONTENT/olympiads.yml,
+/// archives/CONTENT/textbooks.yml). A Python build script generates static JSON
+/// files (archives/CONTENT/olympiads.json, archives/CONTENT/textbooks.json)
+/// which we fetch directly from GitHub's raw content host. No database, no API
+/// layer, no writes.
 ///
 /// If we ever want a stabler URL (or to avoid raw.githubusercontent rate limits),
-/// flip `baseURL` to "https://vivianweidai.com/archives" — the GitHub Pages
+/// flip `baseURL` to "https://vivianweidai.com/archives/CONTENT" — the GitHub Pages
 /// build serves the exact same files at that path.
 public actor APIClient {
     public static let shared = APIClient()
 
     public static let baseURL = URL(
-        string: "https://raw.githubusercontent.com/vivianweidai/science/main/archives"
+        string: "https://raw.githubusercontent.com/vivianweidai/science/main/archives/CONTENT"
     )!
 
     private let session: URLSession

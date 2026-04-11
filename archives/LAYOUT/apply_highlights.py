@@ -2,17 +2,17 @@
 """Apply curriculum_highlights.json to all curriculum/*.md tables.
 
 For each markdown file, look up its (subject, section, topic, table) in
-archives/curriculum_highlights.json and rewrite the markdown pipe-table
-as an HTML table, adding `<tr class="highlight">` on rows whose
-description column matches any highlighted entry.
+archives/CONTENT/curriculum_highlights.json and rewrite the markdown
+pipe-table as an HTML table, adding `<tr class="highlight">` on rows
+whose description column matches any highlighted entry.
 
 Rows not marked as highlighted are emitted as plain `<tr>`. Tables with
 no highlighted rows are still converted (so rendering is consistent)
 but can optionally be left as pipe tables.
 
 Run after extract_highlights.py:
-    python3 scripts/extract_highlights.py
-    python3 scripts/apply_highlights.py
+    python3 archives/LAYOUT/extract_highlights.py
+    python3 archives/LAYOUT/apply_highlights.py
 """
 from __future__ import annotations
 
@@ -150,8 +150,8 @@ def process_file(md_path: Path, highlights: dict) -> tuple[bool, int, int]:
 
 
 def main():
-    root = Path(__file__).resolve().parent.parent
-    highlights = json.loads((root / "archives" / "curriculum_highlights.json").read_text())
+    root = Path(__file__).resolve().parent.parent.parent
+    highlights = json.loads((root / "archives" / "CONTENT" / "curriculum_highlights.json").read_text())
 
     stats = {"files": 0, "converted": 0, "highlight_targets": 0, "highlight_matched": 0,
              "unmatched": []}

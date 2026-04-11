@@ -4,7 +4,7 @@ layout: default
 
 ## Curriculum
 
-<link rel="stylesheet" href="/archives/CSS/curriculum.css">
+<link rel="stylesheet" href="/archives/LAYOUT/curriculum.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 
 <div id="curriculum-widget"></div>
@@ -12,7 +12,7 @@ layout: default
 <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
-<script src="/archives/JS/curriculum.js"></script>
+<script src="/archives/LAYOUT/curriculum.js"></script>
 
 ---
 

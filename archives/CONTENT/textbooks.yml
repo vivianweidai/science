@@ -1,7 +1,7 @@
 # Textbook and course tracking — source of truth.
 # Each entry: subject, date ("Month YYYY" or "Future"), title, finished, highlighted.
 # Optional: url (full-title link) or link_text (substring of title to wrap in the url).
-# Run `python scripts/build_listings.py` after edits to regenerate archives/textbooks.json.
+# Run `python archives/LAYOUT/build_listings.py` after edits to regenerate archives/CONTENT/textbooks.json.
 
 - subject: Mathematics
   date: June 2026

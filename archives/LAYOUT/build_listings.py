@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Build archives/olympiads.json and archives/textbooks.json from the YAML source of truth.
+"""Build archives/CONTENT/olympiads.json and textbooks.json from the YAML source of truth.
 
 Source of truth:
-  content/olympiads.yml
-  content/textbooks.yml
+  archives/CONTENT/olympiads.yml
+  archives/CONTENT/textbooks.yml
 
 Outputs (consumed by olympiads/index.md client-side JS and by the iOS app):
-  archives/olympiads.json
-  archives/textbooks.json
+  archives/CONTENT/olympiads.json
+  archives/CONTENT/textbooks.json
 
 Output shape matches the old Cloudflare Pages Function response so the iOS app can
 decode it without code changes:
@@ -29,9 +29,9 @@ try:
 except ImportError:
     sys.exit("PyYAML is required: pip install pyyaml")
 
-ROOT = Path(__file__).resolve().parent.parent
-CONTENT = ROOT / "content"
-ARCHIVES = ROOT / "archives"
+ROOT = Path(__file__).resolve().parent.parent.parent
+CONTENT = ROOT / "archives" / "CONTENT"
+ARCHIVES = ROOT / "archives" / "CONTENT"
 
 SUBJECTS = {"Mathematics", "Computing", "Physics", "Chemistry", "Biology", "Astronomy"}
 MONTHS = {

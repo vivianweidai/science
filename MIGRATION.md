@@ -8,12 +8,12 @@ workflow works.
 ## What changed in the repo
 
 **Source of truth is now YAML:**
-- `content/olympiads.yml` — 49 olympiad events
-- `content/textbooks.yml` — 83 textbooks/courses
+- `archives/CONTENT/olympiads.yml` — 49 olympiad events
+- `archives/CONTENT/textbooks.yml` — 83 textbooks/courses
 
 **Build pipeline:**
-- `scripts/build_listings.py` parses the YAML, validates schema, computes
-  `sort_key`, and emits `archives/olympiads.json` and `archives/textbooks.json`
+- `archives/LAYOUT/build_listings.py` parses the YAML, validates schema, computes
+  `sort_key`, and emits `archives/CONTENT/olympiads.json` and `archives/CONTENT/textbooks.json`
   in the exact shape the iOS app used to get from the old API.
 
 **Webapp (`olympiads/index.md`):**
@@ -23,7 +23,7 @@ workflow works.
 
 **iOS (`apple/shared/API/APIClient.swift`):**
 - Was: hit `https://vivianweidai.com/api/olympiads` (Cloudflare Function → D1)
-- Now: hit `https://raw.githubusercontent.com/vivianweidai/science/main/archives/olympiads.json`
+- Now: hit `https://raw.githubusercontent.com/vivianweidai/science/main/archives/CONTENT/olympiads.json`
 - Write methods (`setOlympiadFinished`, `setTextbookFinished`) were dead code
   and were deleted.
 
@@ -109,17 +109,17 @@ any future URL disruption.
 
 ## Editing workflow (how you update listings from now on)
 
-1. Edit `content/olympiads.yml` or `content/textbooks.yml` in your editor.
-   The schema is enforced by `scripts/build_listings.py` — see that file for
+1. Edit `archives/CONTENT/olympiads.yml` or `archives/CONTENT/textbooks.yml` in your editor.
+   The schema is enforced by `archives/LAYOUT/build_listings.py` — see that file for
    the full list of required and optional fields.
 2. Run:
    ```
-   python scripts/build_listings.py
+   python archives/LAYOUT/build_listings.py
    ```
-   This regenerates `archives/olympiads.json` and `archives/textbooks.json`.
+   This regenerates `archives/CONTENT/olympiads.json` and `archives/CONTENT/textbooks.json`.
    If your edit has a schema violation (typo in subject, missing field, bad
    date format), the script will tell you exactly which entry.
-3. `git add content/ archives/ && git commit && git push`.
+3. `git add archives/ && git commit && git push`.
 4. GitHub Actions builds Jekyll and deploys to GitHub Pages within about a
    minute of the push landing.
 
@@ -129,7 +129,7 @@ deploy. No way to accidentally ship an inconsistent site.
 
 ## YAML schema
 
-**Olympiads (`content/olympiads.yml`):**
+**Olympiads (`archives/CONTENT/olympiads.yml`):**
 ```yaml
 - subject: Mathematics      # one of: Mathematics, Computing, Physics, Chemistry, Biology, Astronomy
   date: November 2025       # "Month YYYY" — any full English month name
@@ -139,7 +139,7 @@ deploy. No way to accidentally ship an inconsistent site.
   highlighted: true         # true = highlighted row background
 ```
 
-**Textbooks (`content/textbooks.yml`):**
+**Textbooks (`archives/CONTENT/textbooks.yml`):**
 ```yaml
 - subject: Physics          # same subject list
   date: December 2025       # "Month YYYY" OR "Future" for unscheduled

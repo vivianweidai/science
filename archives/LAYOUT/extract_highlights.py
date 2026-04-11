@@ -164,8 +164,8 @@ def extract_from_pdf(pdf_path: Path) -> dict:
 
 def main():
     if len(sys.argv) < 2:
-        # Default: extract all six and write archives/curriculum_highlights.json
-        root = Path(__file__).resolve().parent.parent
+        # Default: extract all six and write archives/CONTENT/curriculum_highlights.json
+        root = Path(__file__).resolve().parent.parent.parent
         subjects = ["mathematics", "computing", "physics",
                     "chemistry", "biology", "astronomy"]
         all_data = {}
@@ -175,7 +175,7 @@ def main():
                 continue
             print(f"Extracting {s}.pdf...", file=sys.stderr)
             all_data[s] = extract_from_pdf(pdf)
-        out = root / "archives" / "curriculum_highlights.json"
+        out = root / "archives" / "CONTENT" / "curriculum_highlights.json"
         out.write_text(json.dumps(all_data, indent=2) + "\n")
         print(f"Wrote {out}", file=sys.stderr)
     else:

@@ -1,7 +1,7 @@
 /* Curriculum widget.
  *
- * Loads archives/curriculum_manifest.json (built by
- * scripts/build_curriculum_manifest.py) and renders a 6-column grid of
+ * Loads archives/CONTENT/curriculum_manifest.json (built by
+ * archives/LAYOUT/build_curriculum_manifest.py) and renders a 6-column grid of
  * subjects -> sections -> topics. Clicking a topic drills into a single
  * view that fetches the raw markdown files for that topic's tables from
  * GitHub raw, renders them with marked + KaTeX, and provides breadcrumb
@@ -12,7 +12,7 @@
   if (!widget) return;
 
   var RAW_BASE = 'https://raw.githubusercontent.com/vivianweidai/science/main/curriculum/';
-  var MANIFEST_URL = '/archives/curriculum_manifest.json';
+  var MANIFEST_URL = '/archives/CONTENT/curriculum_manifest.json';
 
   var manifest = null;
   var state = { view: 'grid' };

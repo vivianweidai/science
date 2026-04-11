@@ -28,13 +28,13 @@ jobs:
       - name: Install PyYAML
         run: pip install pyyaml
       - name: Rebuild listings JSON
-        run: python scripts/build_listings.py
+        run: python archives/LAYOUT/build_listings.py
       - name: Fail if committed JSON is stale
         run: |
-          if ! git diff --quiet -- archives/olympiads.json archives/textbooks.json; then
-            echo "::error::archives/*.json is out of sync with content/*.yml."
-            echo "Run 'python scripts/build_listings.py' locally and commit the result."
-            git --no-pager diff -- archives/olympiads.json archives/textbooks.json
+          if ! git diff --quiet -- archives/CONTENT/olympiads.json archives/CONTENT/textbooks.json; then
+            echo "::error::archives/CONTENT/*.json is out of sync with archives/CONTENT/*.yml."
+            echo "Run 'python archives/LAYOUT/build_listings.py' locally and commit the result."
+            git --no-pager diff -- archives/CONTENT/olympiads.json archives/CONTENT/textbooks.json
             exit 1
           fi
 

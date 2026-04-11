@@ -23,7 +23,7 @@ photos:
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
-<script src="/archives/CSS/shuffle.js"></script>
+<script src="/archives/LAYOUT/shuffle.js"></script>
 
 <div class="project-meta">April 1st 2026<br>Thermo Scientific Nicolet 380 FT-IR Spectrometer (ATR mode)</div>
 
@@ -226,7 +226,7 @@ All spectra plots, peak identification, and category overlays were generated fro
   </div>
 </div>
 
-<script src="/archives/CSS/tabs.js"></script>
+<script src="/archives/LAYOUT/tabs.js"></script>
 
 See the <a href="https://github.com/vivianweidai/science/blob/main/research/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">run the reproducible analysis yourself</a>.
 

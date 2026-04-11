@@ -59,9 +59,10 @@ layout: default
 </div>
 
 <script>
-// Olympiads and textbooks are rendered from archives/{olympiads,textbooks}.json,
-// which is built from content/{olympiads,textbooks}.yml by scripts/build_listings.py.
-// Edit the YAML, rerun the script, commit both. No DB, no API.
+// Olympiads and textbooks are rendered from archives/CONTENT/{olympiads,textbooks}.json,
+// built from archives/CONTENT/{olympiads,textbooks}.yml by
+// archives/LAYOUT/build_listings.py. Edit the YAML, rerun the script, commit
+// both. No DB, no API.
 (function () {
   var SUBJECT_SLUGS = {
     Mathematics: 'math', Computing: 'comp', Physics: 'phys',
@@ -140,8 +141,8 @@ layout: default
     });
   }
 
-  fetchJSON('../archives/olympiads.json').then(function (d) { renderOlympiads(d.items); });
-  fetchJSON('../archives/textbooks.json').then(function (d) { renderTextbooks(d.items); });
+  fetchJSON('../archives/CONTENT/olympiads.json').then(function (d) { renderOlympiads(d.items); });
+  fetchJSON('../archives/CONTENT/textbooks.json').then(function (d) { renderTextbooks(d.items); });
 })();
 </script>
 
