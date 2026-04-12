@@ -42,11 +42,11 @@ layout: default
     padding: .35em 0;
     position: relative;
     font-size: .95em;
-    align-items: center;
+    align-items: first baseline;
   }
   .timeline .entry .month { color: #656d76; font-variant-numeric: tabular-nums; }
   .timeline .entry .type-cell { text-align: center; }
-  .timeline .entry .chips-cell { white-space: nowrap; display: flex; gap: 2px; align-self: first baseline; }
+  .timeline .entry .chips-cell { white-space: nowrap; display: flex; gap: 2px; align-items: center; }
   .timeline .entry .name-cell { }
   .invited-badge { display: inline-block; font-size: .65em; font-weight: 700; padding: 1px 6px; border-radius: 4px; vertical-align: baseline; margin-left: 4px; background: #ffd700; color: #5a4500; position: relative; top: -1px; }
   .timeline .entry.hl { position: relative; }
@@ -62,6 +62,7 @@ layout: default
     vertical-align: middle;
     text-align: center;
     white-space: nowrap;
+    line-height: 1.6;
   }
   .chip.math  { background: #c5d9f7; }
   .chip.comp  { background: #d9ccee; }
