@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="/archives/LAYOUT/base.css">
+  <link rel="stylesheet" href="/archives/LAYOUT/tabs.css">
+  <style>
+    /* Nav link cards (default layout only) */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 0.5em;
+      flex-wrap: wrap;
+      margin: 1.5em 0;
+    }
+    .nav-links a {
+      display: inline-block;
+      padding: 0.4em 1em;
+      border: 1px solid #d1d9e0;
+      border-radius: 6px;
+      background: #f6f8fa;
+      color: #1f2328;
+      font-size: 0.9em;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .nav-links a:hover {
+      background: #ddf4ff;
+      border-color: #0969da;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  {{ content }}
+  <script>
+    (function() {
+      var tabs = ['math','comp','phys','chem','bio','astro'];
+      var prefixes = ['tab-', 'oly-'];
+      var present = prefixes.filter(function(p) {
+        return document.getElementById(p + tabs[0]);
+      });
+      if (present.length === 0) return;
+
+      var firstPrefix = present[0];
+      var contentPrefix = firstPrefix === 'oly-' ? 'oly-content-' : 'content-';
+      var active = tabs.filter(function(t) {
+        var el = document.getElementById(contentPrefix + t);
+        return el && !el.querySelector('em');
+      });
+      if (active.length === 0) active = tabs;
+      var pick = active[Math.floor(Math.random() * active.length)];
+
+      present.forEach(function(prefix) {
+        var radio = document.getElementById(prefix + pick);
+        if (radio) radio.checked = true;
+      });
+    })();
+
+    /* Fix tab-switching jump: preserve scroll position on label click so
+       reflow from shorter/taller panels doesn't shift the viewport. */
+    (function() {
+      document.querySelectorAll('.tabs .tab-labels label').forEach(function(label) {
+        label.addEventListener('click', function() {
+          var y = window.scrollY;
+          requestAnimationFrame(function() { window.scrollTo(0, y); });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

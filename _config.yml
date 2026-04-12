@@ -25,3 +25,8 @@ defaults:
       type: pages
     values:
       render_with_liquid: false
+  - scope:
+      path: "chinese/curriculum"
+      type: pages
+    values:
+      render_with_liquid: false
