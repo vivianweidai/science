@@ -47,6 +47,7 @@ layout: default
       <tr><th>Date</th><th>Project</th><th>Description</th></tr>
       <tr><td>April 2026</td><td><a href="20260401%20IR%20Spectroscopy/">IR Spectroscopy</a></td><td>IR spectroscopy of 19 everyday materials — functional group identification</td></tr>
       <tr><td>April 2026</td><td><a href="20260405%20Melting%20Point/">Melting Point</a></td><td>Melting point determination of caffeine and aspirin — on hold pending instrument repair</td></tr>
+      <tr><td>April 2026</td><td><a href="20260411%20Centrifuge/">Centrifuge</a></td><td>Centrifugation and pH measurements of everyday liquids</td></tr>
     </table>
   </div>
 
@@ -69,6 +70,8 @@ layout: default
 
 - **[Chemistry]** <a href="20260401%20IR%20Spectroscopy/">Thermo Scientific Nicolet 380 FT-IR Spectrometer</a> — mid-IR absorption/transmittance spectra
 - **[Chemistry]** <a href="20260405%20Melting%20Point/">OptiMelt Automated Melting Point System</a> — melting point determination
+- **[Chemistry]** <a href="20260411%20Centrifuge/">Thermo Scientific Refrigerated Centrifuge</a> — separation of mixtures by density
+- **[Chemistry]** <a href="20260411%20Centrifuge/">VWR pH 1100 L</a> — benchtop pH measurements
 - **[Physics]** <a href="20260404%20Four%20Point%20Probe/">Jandel RM3 Four-Point Probe</a> — sheet resistance measurements
 - **[Biology]** <a href="20260401%20Genes%20in%20Space/">miniPCR Thermal Cycler</a> — PCR amplification of DNA/RNA targets
 - **[Biology]** <a href="20260401%20Genes%20in%20Space/">P51 Fluorescence Viewer</a> — fluorescence detection and gel imaging
