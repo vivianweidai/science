@@ -99,14 +99,15 @@ Five everyday liquids were loaded into labeled 50 mL centrifuge tubes. Each samp
 
 ## Data
 
-pH readings were recorded from photographs of the VWR pH 1100 L display — raw data photos are in the <a href="https://github.com/vivianweidai/science/tree/main/research/20260411%20Centrifuge/PHOTOS">PHOTOS</a> directory.
+The pH readings were recorded from photographs of the VWR pHenomenal pH 1100 L display. A number of mystery solutions available in the lab were also measured for additional pH practice. Raw data photos are in the <a href="https://github.com/vivianweidai/science/tree/main/research/20260411%20Centrifuge/PHOTOS">PHOTOS</a> directory.
 
-| Sample | pH (observed) | Notes |
-|--------|--------------|-------|
-| Coke | ~2.3 | Strongly acidic, as expected for phosphoric/carbonic acid |
-| Apple cider vinegar | ~4.3 | Acidic — acetic acid |
-| Honey | ~6.6 | Near neutral, slightly acidic |
-| Milk / Yogurt | ~11.9 | Unexpected high reading — possible calibration issue or electrode contamination |
+| Sample | pH (observed) | Photo | Notes |
+|--------|--------------|-------|-------|
+| Apple cider vinegar | 4.335 | <a href="PHOTOS/data1.jpeg">data1</a> | Acidic — acetic acid |
+| Coke | 2.939 | <a href="PHOTOS/data2.jpeg">data2</a> | Strongly acidic, phosphoric/carbonic acid |
+| Vinegar | 2.515 | <a href="PHOTOS/data3.jpeg">data3</a> | Strongly acidic — acetic acid |
+| Milk | 6.566 | <a href="PHOTOS/data6.jpeg">data6</a> | Near neutral, slightly acidic |
+| Mystery solutions | 3.7–12.0 | <a href="PHOTOS/data7.jpeg">data7</a>–<a href="PHOTOS/data15.jpeg">data15</a> | Nine unknown lab solutions ranging from acidic to strongly basic |
 
 ## Results
 
