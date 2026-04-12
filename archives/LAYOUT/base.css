@@ -37,16 +37,12 @@ hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0 0.5em 0; }
   .orcid-full { display: none; }
   .orcid-short { display: inline; }
   .tab-labels {
-    justify-content: flex-start;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    flex-wrap: wrap;
+    gap: 0;
   }
-  .tab-labels::-webkit-scrollbar { display: none; }
   .tab-labels label {
-    padding: 0.6em 0.8em;
-    font-size: 0.82em;
-    flex-shrink: 0;
+    padding: 0.45em 0.6em;
+    font-size: 0.8em;
   }
 }
 
