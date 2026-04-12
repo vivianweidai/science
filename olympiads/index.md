@@ -44,6 +44,9 @@ layout: default
     font-size: .95em;
     align-items: first baseline;
   }
+  .timeline .entry .top-line {
+    display: contents;
+  }
   .timeline .entry .month { color: #656d76; font-variant-numeric: tabular-nums; }
   .timeline .entry .type-cell { text-align: center; }
   .timeline .entry .chips-cell { white-space: nowrap; display: flex; gap: 2px; align-items: center; }
@@ -76,6 +79,25 @@ layout: default
 
   .legend { font-size: .82em; color: #656d76; margin: .3em 0 1em; line-height: 2; }
   .legend .chip { margin-right: .3em; }
+
+  @media (max-width: 600px) {
+    .timeline .entry {
+      display: flex;
+      flex-direction: column;
+      gap: .15em;
+      padding: .5em 0;
+    }
+    .timeline .entry .top-line {
+      display: flex;
+      align-items: center;
+      gap: .35em;
+      flex-wrap: wrap;
+    }
+    .timeline .entry .month { display: inline; font-size: .82em; }
+    .timeline .entry .type-cell { display: inline; text-align: left; margin: 0 .2em; }
+    .timeline .entry .chips-cell { display: inline-flex; }
+    .timeline .entry .name-cell { font-size: .95em; line-height: 1.4; }
+  }
 </style>
 
 <script>
@@ -131,9 +153,11 @@ layout: default
           : '<span class="type-icon">📖</span>';
         var cls = e.highlighted ? ' hl' : '';
         html += '<div class="entry' + cls + '" data-subject="' + SUBJECT_SLUGS[e.subject] + '">'
+          + '<div class="top-line">'
           + '<div class="month">' + month + '</div>'
           + '<div class="type-cell">' + icon + '</div>'
           + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
+          + '</div>'
           + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="invited-badge">INVITED</span>' : '') + '</div>'
           + '</div>';
       });
