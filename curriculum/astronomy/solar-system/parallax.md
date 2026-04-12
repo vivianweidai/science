@@ -4,7 +4,6 @@ section: Solar System
 topic: Earth
 table: Parallax
 order: 34
-render_with_liquid: false
 ---
 
 # Parallax

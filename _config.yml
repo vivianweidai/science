@@ -14,19 +14,14 @@ exclude:
   - Gemfile.lock
   - vendor/
   - node_modules/
-
-# Curriculum markdown contains LaTeX math with `{{...}}` sequences that
-# Jekyll's Liquid parser mis-interprets as variable syntax (fatal error in
-# parallax.md etc.). Skip Liquid rendering for the whole curriculum tree.
-# type: pages is required here — a bare path scope was silently ignored.
-defaults:
-  - scope:
-      path: "curriculum"
-      type: pages
-    values:
-      render_with_liquid: false
-  - scope:
-      path: "archives/CHINESE/curriculum"
-      type: pages
-    values:
-      render_with_liquid: false
+  # Curriculum data files contain LaTeX math with `{{...}}` that fatally
+  # crashes Jekyll's Liquid parser (GitHub Pages uses Jekyll 3.10 which
+  # does not support render_with_liquid: false). These .md files are only
+  # consumed by build_curriculum.py → curriculum.json, not served as pages.
+  - curriculum/astronomy/
+  - curriculum/biology/
+  - curriculum/chemistry/
+  - curriculum/computing/
+  - curriculum/mathematics/
+  - curriculum/physics/
+  - curriculum/archives/
