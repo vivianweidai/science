@@ -1,13 +1,13 @@
 # Science
 
-Personal science portfolio and lab notebook at [vivianweidai.com](https://vivianweidai.com). Built with Jekyll and hosted on GitHub Pages.
+Personal science portfolio and lab notebook — available on [web](https://vivianweidai.com) and iOS.
 
 ## What's Inside
 
 - **Curriculum** — Interactive reference tables across six subjects (Mathematics, Computing, Physics, Chemistry, Biology, Astronomy) with LaTeX-rendered formulas via KaTeX.
 - **Olympiads** — Filterable timeline of academic competitions and study materials.
 - **Research** — Hands-on projects using lab instruments (FT-IR spectrometer, four-point probe, melting point system, centrifuge, miniPCR). Each project includes raw data, photos, Jupyter notebooks, and reproducible analysis pipelines.
-- **iOS App** — A read-only SwiftUI companion app that displays curriculum and olympiad data, fetched directly from the repo's JSON files.
+
 
 ## Structure
 
