@@ -18,7 +18,7 @@ venv/
 .env
 .env.local
 .wrangler/
-apple/.build/
-apple/.swiftpm/
-apple/Science.xcodeproj/
+archives/APPLE/.build/
+archives/APPLE/.swiftpm/
+archives/APPLE/Science.xcodeproj/
 *.DS_Store

@@ -17,7 +17,7 @@ Three tabs:
 ## Layout
 
 ```
-apple/
+archives/APPLE/
 ├── Package.swift             SwiftPM manifest — platform: iOS 17
 ├── project.yml               XcodeGen spec — regenerate with `xcodegen generate`
 ├── shared/                   ScienceCore library
