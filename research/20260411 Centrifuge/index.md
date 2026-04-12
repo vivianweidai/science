@@ -2,53 +2,53 @@
 layout: project
 project: Centrifuge
 photos:
-  - PHOTOS/samples/sample1.jpeg
-  - PHOTOS/samples/sample2.jpeg
-  - PHOTOS/samples/sample3.jpeg
-  - PHOTOS/samples/sample4.jpeg
-  - PHOTOS/samples/sample5.jpeg
-  - PHOTOS/samples/sample6.jpeg
-  - PHOTOS/samples/sample7.jpeg
-  - PHOTOS/samples/sample8.jpeg
-  - PHOTOS/samples/sample9.jpeg
-  - PHOTOS/samples/sample10.jpeg
-  - PHOTOS/samples/sample11.jpeg
-  - PHOTOS/samples/sample12.jpeg
-  - PHOTOS/data/data1.jpeg
-  - PHOTOS/data/data2.jpeg
-  - PHOTOS/data/data3.jpeg
-  - PHOTOS/data/data4.jpeg
-  - PHOTOS/data/data5.jpeg
-  - PHOTOS/data/data6.jpeg
-  - PHOTOS/data/data7.jpeg
-  - PHOTOS/data/data8.jpeg
-  - PHOTOS/data/data9.jpeg
-  - PHOTOS/data/data10.jpeg
-  - PHOTOS/data/data11.jpeg
-  - PHOTOS/data/data12.jpeg
-  - PHOTOS/data/data13.jpeg
-  - PHOTOS/data/data14.jpeg
-  - PHOTOS/data/data15.jpeg
-  - PHOTOS/data/data16.jpeg
-  - PHOTOS/data/data17.jpeg
-  - PHOTOS/data/data18.jpeg
-  - PHOTOS/data/data19.jpeg
-  - PHOTOS/data/data20.jpeg
-  - PHOTOS/data/data21.jpeg
-  - PHOTOS/data/data22.jpeg
-  - PHOTOS/data/data23.jpeg
-  - PHOTOS/data/data24.jpeg
-  - PHOTOS/reagents/reagent1.jpeg
-  - PHOTOS/reagents/reagent2.jpeg
-  - PHOTOS/reagents/reagent3.jpeg
-  - PHOTOS/toys/toy1.jpeg
-  - PHOTOS/toys/toy2.jpeg
-  - PHOTOS/toys/toy3.jpeg
-  - PHOTOS/toys/toy4.jpeg
-  - PHOTOS/toys/toy5.jpeg
-  - PHOTOS/toys/toy6.jpeg
-  - PHOTOS/toys/toy7.jpeg
-  - PHOTOS/toys/toy8.jpeg
+  - PHOTOS/sample1.jpeg
+  - PHOTOS/sample2.jpeg
+  - PHOTOS/sample3.jpeg
+  - PHOTOS/sample4.jpeg
+  - PHOTOS/sample5.jpeg
+  - PHOTOS/sample6.jpeg
+  - PHOTOS/sample7.jpeg
+  - PHOTOS/sample8.jpeg
+  - PHOTOS/sample9.jpeg
+  - PHOTOS/sample10.jpeg
+  - PHOTOS/sample11.jpeg
+  - PHOTOS/sample12.jpeg
+  - PHOTOS/data1.jpeg
+  - PHOTOS/data2.jpeg
+  - PHOTOS/data3.jpeg
+  - PHOTOS/data4.jpeg
+  - PHOTOS/data5.jpeg
+  - PHOTOS/data6.jpeg
+  - PHOTOS/data7.jpeg
+  - PHOTOS/data8.jpeg
+  - PHOTOS/data9.jpeg
+  - PHOTOS/data10.jpeg
+  - PHOTOS/data11.jpeg
+  - PHOTOS/data12.jpeg
+  - PHOTOS/data13.jpeg
+  - PHOTOS/data14.jpeg
+  - PHOTOS/data15.jpeg
+  - PHOTOS/data16.jpeg
+  - PHOTOS/data17.jpeg
+  - PHOTOS/data18.jpeg
+  - PHOTOS/data19.jpeg
+  - PHOTOS/data20.jpeg
+  - PHOTOS/data21.jpeg
+  - PHOTOS/data22.jpeg
+  - PHOTOS/data23.jpeg
+  - PHOTOS/data24.jpeg
+  - PHOTOS/reagent1.jpeg
+  - PHOTOS/reagent2.jpeg
+  - PHOTOS/reagent3.jpeg
+  - PHOTOS/toy1.jpeg
+  - PHOTOS/toy2.jpeg
+  - PHOTOS/toy3.jpeg
+  - PHOTOS/toy4.jpeg
+  - PHOTOS/toy5.jpeg
+  - PHOTOS/toy6.jpeg
+  - PHOTOS/toy7.jpeg
+  - PHOTOS/toy8.jpeg
 ---
 
 # Centrifugation and pH of Everyday Liquids
@@ -83,7 +83,7 @@ Centrifugation separates the components of a mixture by spinning it at high spee
 
 ## Samples
 
-<div class="hero-single"><img src="PHOTOS/samples/sample1.jpeg" alt="Five labeled Sarstedt tubes: Coke, Milk, Yogurt, Apple Cider Vinegar, Honey"></div>
+<div class="hero-single"><img src="PHOTOS/sample1.jpeg" alt="Five labeled Sarstedt tubes: Coke, Milk, Yogurt, Apple Cider Vinegar, Honey"></div>
 
 Five everyday liquids were loaded into labeled 50 mL centrifuge tubes:
 
