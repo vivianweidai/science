@@ -117,7 +117,7 @@ The pH readings were recorded from photographs of the VWR pHenomenal pH 1100 L d
 Four samples were loaded into the Thermo Scientific Sorvall RT3 Centrifuge to balance the rotor (<a href="PHOTOS/data16.jpeg">Data 16</a> and <a href="PHOTOS/data17.jpeg">Data 17</a>). After centrifugation, visible separation was observed:
 
 - **Tube 1 — Milk** — separated into a translucent whey layer and a white fat/casein pellet (<a href="PHOTOS/data24.jpeg">Data 24</a>)
-- **Tube 2 — Yogurt** — similar separation to milk with a denser pellet (<a href="PHOTOS/data19.jpeg">Data 19</a>, <a href="PHOTOS/data20.jpeg">Data 20</a>)
+- **Tube 2 — Yogurt** — similar separation to milk with a denser pellet (<a href="PHOTOS/data19.jpeg">Data 19</a> and <a href="PHOTOS/data20.jpeg">Data 20</a>)
 - **Tube 3 — Apple cider vinegar** — sediment ("mother") pelleted at the bottom, leaving clearer vinegar above (<a href="PHOTOS/data18.jpeg">Data 18</a>)
 - **Tube 4 — Milk + vinegar mixture** — white casein pellet with clear whey above, the acid curdled the milk proteins and centrifugation concentrated them at the bottom (<a href="PHOTOS/data21.jpeg">Data 21</a>, <a href="PHOTOS/data22.jpeg">Data 22</a> and <a href="PHOTOS/data23.jpeg">Data 23</a>)
 
