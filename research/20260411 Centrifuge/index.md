@@ -103,11 +103,12 @@ The pH readings were recorded from photographs of the VWR pHenomenal pH 1100 L d
 
 | Sample | pH (observed) | Photo | Notes |
 |--------|--------------|-------|-------|
-| Apple cider vinegar | 4.335 | <a href="PHOTOS/data1.jpeg">data1</a> | Acidic — acetic acid |
-| Coke | 2.939 | <a href="PHOTOS/data2.jpeg">data2</a> | Strongly acidic, phosphoric/carbonic acid |
-| Vinegar | 2.515 | <a href="PHOTOS/data3.jpeg">data3</a> | Strongly acidic — acetic acid |
-| Milk | 6.566 | <a href="PHOTOS/data6.jpeg">data6</a> | Near neutral, slightly acidic |
-| Mystery solutions | 3.7–12.0 | <a href="PHOTOS/data7.jpeg">data7</a>–<a href="PHOTOS/data15.jpeg">data15</a> | Nine unknown lab solutions ranging from acidic to strongly basic |
+| Yogurt | 4.335 | <a href="PHOTOS/data1.jpeg">Data 1</a> | Acidic — lactic acid |
+| Vinegar | 2.515 | <a href="PHOTOS/data3.jpeg">Data 3</a> | Strongly acidic — acetic acid |
+| Apple cider vinegar | 2.436 | <a href="PHOTOS/data4.jpeg">Data 4</a> | Acidic — acetic acid |
+| Coke | 2.342 | <a href="PHOTOS/data5.jpeg">Data 5</a> | Strongly acidic, phosphoric/carbonic acid |
+| Milk | 6.566 | <a href="PHOTOS/data6.jpeg">Data 6</a> | Near neutral, slightly acidic |
+| Mystery solutions | 3.7–12.0 | <a href="PHOTOS/data7.jpeg">Data 7</a>–<a href="PHOTOS/data15.jpeg">Data 15</a> | Nine unknown lab solutions ranging from acidic to strongly basic |
 
 ## Results
 
