@@ -5,8 +5,6 @@ project: Genes in Space
 
 # Meow to Mars — Will Space Help or Hurt Mi's Heart?
 
-<div class="hero-single"><img src="PHOTOS/mi.png" alt="Mi the astronaut cat" style="object-position: center 70%;"></div>
-
 **Sarcomere Genes in Microgravity**
 
 <div class="project-meta">March 31st 2026<br><a href="https://www.genesinspace.org/">Genes in Space</a> — ISS National Laboratory</div>
