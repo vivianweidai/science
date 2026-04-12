@@ -26,7 +26,16 @@
   margin: -0.9em -0.9em 0.9em;
   border-bottom: 1px solid #d1d9e0;
   font-size: 0.92em;
+  cursor: pointer;
 }
+.curr-col-head:hover { opacity: 0.85; }
+
+.curr-col-head[data-subj="mathematics"] { background: #c5d9f7; }
+.curr-col-head[data-subj="computing"]   { background: #d9ccee; }
+.curr-col-head[data-subj="physics"]     { background: #f9c4a8; }
+.curr-col-head[data-subj="chemistry"]   { background: #cdeaa6; }
+.curr-col-head[data-subj="biology"]     { background: #b8e0c4; }
+.curr-col-head[data-subj="astronomy"]   { background: #f4c2cb; }
 
 .curr-section { margin-bottom: 1em; }
 .curr-section:last-child { margin-bottom: 0; }
@@ -38,6 +47,33 @@
   color: #1f2328;
   border-bottom: 1px solid #57606a;
   margin-bottom: 0.35em;
+  cursor: pointer;
+}
+.curr-section-name:hover {
+  color: #0969da;
+}
+
+/* Subject view (single subject expanded) */
+.curr-subject {
+  border: 1px solid #d1d9e0;
+  border-radius: 8px;
+  background: #fff;
+  padding: 1em 1.4em 1.4em;
+}
+.curr-subject-head {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 0.8em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #eaecef;
+}
+.curr-subject-sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2em;
+}
+@media (max-width: 600px) {
+  .curr-subject-sections { grid-template-columns: repeat(2, 1fr); }
 }
 
 .curr-section ul {

@@ -33,6 +33,7 @@
 
   function render() {
     if (state.view === 'topic') renderTopic();
+    else if (state.view === 'subject') renderSubject();
     else renderGrid();
   }
 
@@ -43,10 +44,10 @@
       var subj = manifest[subjSlug];
       if (!subj) return;
       html += '<div class="curr-col">';
-      html += '<div class="curr-col-head">' + escapeHtml(subj.name) + '</div>';
+      html += '<div class="curr-col-head" data-subj="' + subjSlug + '">' + escapeHtml(subj.name) + '</div>';
       subj.sections.forEach(function (sec, secIdx) {
         html += '<div class="curr-section">';
-        html += '<div class="curr-section-name">' + escapeHtml(sec.name) + '</div>';
+        html += '<div class="curr-section-name" data-subj="' + subjSlug + '" data-sec="' + secIdx + '">' + escapeHtml(sec.name) + '</div>';
         html += '<ul>';
         sec.topics.forEach(function (topic, topicIdx) {
           html += '<li><a href="#" data-subj="' + subjSlug
@@ -75,6 +76,89 @@
         requestAnimationFrame(function () { window.scrollTo(0, y); });
       });
     });
+
+    widget.querySelectorAll('.curr-col-head').forEach(function (h) {
+      h.addEventListener('click', function () {
+        state = { view: 'subject', subject: h.dataset.subj };
+        render();
+        scrollToWidget();
+      });
+    });
+
+    widget.querySelectorAll('.curr-section-name').forEach(function (s) {
+      s.addEventListener('click', function () {
+        state = {
+          view: 'topic',
+          subject: s.dataset.subj,
+          sectionIdx: parseInt(s.dataset.sec, 10),
+          topicIdx: 0,
+        };
+        render();
+        scrollToWidget();
+      });
+    });
+  }
+
+  function scrollToWidget() {
+    widget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function renderSubject() {
+    var subj = manifest[state.subject];
+    var html = '<div class="curr-subject">';
+    html += '<div class="curr-breadcrumb">'
+         + '<a href="#" data-action="grid">All Subjects</a>'
+         + '<span class="sep">/</span><strong>' + escapeHtml(subj.name) + '</strong>'
+         + '</div>';
+    html += '<div class="curr-subject-sections">';
+    subj.sections.forEach(function (sec, secIdx) {
+      html += '<div class="curr-section">';
+      html += '<div class="curr-section-name" data-subj="' + state.subject + '" data-sec="' + secIdx + '">' + escapeHtml(sec.name) + '</div>';
+      html += '<ul>';
+      sec.topics.forEach(function (topic, topicIdx) {
+        html += '<li><a href="#" data-subj="' + state.subject
+             + '" data-sec="' + secIdx
+             + '" data-topic="' + topicIdx + '">'
+             + escapeHtml(topic.name.toLowerCase()) + '</a></li>';
+      });
+      html += '</ul></div>';
+    });
+    html += '</div></div>';
+    widget.innerHTML = html;
+
+    widget.querySelector('[data-action="grid"]').addEventListener('click', function (e) {
+      e.preventDefault();
+      state = { view: 'grid' };
+      render();
+      scrollToWidget();
+    });
+
+    widget.querySelectorAll('.curr-section a').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        state = {
+          view: 'topic',
+          subject: a.dataset.subj,
+          sectionIdx: parseInt(a.dataset.sec, 10),
+          topicIdx: parseInt(a.dataset.topic, 10),
+        };
+        render();
+        scrollToWidget();
+      });
+    });
+
+    widget.querySelectorAll('.curr-section-name').forEach(function (s) {
+      s.addEventListener('click', function () {
+        state = {
+          view: 'topic',
+          subject: s.dataset.subj,
+          sectionIdx: parseInt(s.dataset.sec, 10),
+          topicIdx: 0,
+        };
+        render();
+        scrollToWidget();
+      });
+    });
   }
 
   function renderTopic() {
@@ -85,7 +169,7 @@
     var html = '<div class="curr-topic">';
     html += '<div class="curr-breadcrumb">'
          + '<a href="#" data-action="grid">All Subjects</a>'
-         + '<span class="sep">/</span>' + escapeHtml(subj.name)
+         + '<span class="sep">/</span><a href="#" data-action="subject">' + escapeHtml(subj.name) + '</a>'
          + '<span class="sep">/</span>' + escapeHtml(sec.name)
          + '<span class="sep">/</span><strong>' + escapeHtml(topic.name) + '</strong>'
          + '</div>';
@@ -128,10 +212,16 @@
         '<div class="curr-loading">Failed to load topic: ' + e + '</div>';
     });
 
-    // Breadcrumb click
+    // Breadcrumb clicks
     widget.querySelector('[data-action="grid"]').addEventListener('click', function (e) {
       e.preventDefault();
       state = { view: 'grid' };
+      render();
+      scrollToWidget();
+    });
+    widget.querySelector('[data-action="subject"]').addEventListener('click', function (e) {
+      e.preventDefault();
+      state = { view: 'subject', subject: state.subject };
       render();
       scrollToWidget();
     });
