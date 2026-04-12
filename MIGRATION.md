@@ -8,11 +8,11 @@ workflow works.
 ## What changed in the repo
 
 **Source of truth is now YAML:**
-- `archives/CONTENT/activities.yml` — all olympiad events + textbooks/courses (132 entries)
+- `archives/CONTENT/olympiads.yml` — all olympiad events + textbooks/courses (132 entries)
 
 **Build pipeline:**
 - `archives/LAYOUT/build_listings.py` parses the YAML, validates schema, computes
-  `sort_key`, and emits `archives/CONTENT/activities.json`
+  `sort_key`, and emits `archives/CONTENT/olympiads.json`
   in the exact shape the iOS app needs.
 
 **Webapp (`olympiads/index.md`):**
@@ -22,7 +22,7 @@ workflow works.
 
 **iOS (`apple/shared/API/APIClient.swift`):**
 - Was: hit `https://vivianweidai.com/api/olympiads` (Cloudflare Function → D1)
-- Now: hit `https://raw.githubusercontent.com/vivianweidai/science/main/archives/CONTENT/activities.json`
+- Now: hit `https://raw.githubusercontent.com/vivianweidai/science/main/archives/CONTENT/olympiads.json`
 - Write methods (`setOlympiadFinished`, `setTextbookFinished`) were dead code
   and were deleted.
 
@@ -39,7 +39,7 @@ workflow works.
 
 **Not added (deliberately):** no GitHub Actions workflow. GitHub Pages builds
 Jekyll natively in "Deploy from a branch" mode — no workflow file needed. The
-tradeoff is no CI check that `archives/CONTENT/activities.json` is in sync with
+tradeoff is no CI check that `archives/CONTENT/olympiads.json` is in sync with
 the YAML; the editor (you or Claude) is responsible for rerunning
 `python archives/LAYOUT/build_listings.py` before committing. If drift ever
 becomes a problem, a workflow can be added back in a few lines.
@@ -106,7 +106,7 @@ against the old URL until the domain cuts over (at which point the old URL
 will 404 and the app will show a load error), then stop working entirely until
 users update.
 
-Consider bundling a fallback `activities.json` in the app (copy it into the
+Consider bundling a fallback `olympiads.json` in the app (copy it into the
 Xcode project as a resource) and adding a catch on the fetch so the app falls
 back to bundled data if the network request fails. This is both an App
 Store-review win ("app works offline") and a soft-failure net for any future
@@ -114,14 +114,14 @@ URL disruption.
 
 ## Editing workflow (how you update listings from now on)
 
-1. Edit `archives/CONTENT/activities.yml` in your editor.
+1. Edit `archives/CONTENT/olympiads.yml` in your editor.
    The schema is enforced by `archives/LAYOUT/build_listings.py` — see that file for
    the full list of required fields.
 2. Run:
    ```
    python archives/LAYOUT/build_listings.py
    ```
-   This regenerates `archives/CONTENT/activities.json`.
+   This regenerates `archives/CONTENT/olympiads.json`.
    If your edit has a schema violation (typo in subject, missing field, bad
    date format), the script will tell you exactly which entry.
 3. `git add archives/ && git commit && git push`.
@@ -131,7 +131,7 @@ URL disruption.
 
 ## YAML schema
 
-**Activities (`archives/CONTENT/activities.yml`):**
+**Activities (`archives/CONTENT/olympiads.yml`):**
 ```yaml
 - type: olympiad            # "olympiad" or "textbook"
   subject: Mathematics      # one of: Mathematics, Computing, Physics, Chemistry, Biology, Astronomy

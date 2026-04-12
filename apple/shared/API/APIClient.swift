@@ -2,8 +2,8 @@ import Foundation
 
 /// Read-only client for activity listings (olympiads + textbooks).
 ///
-/// The source of truth is archives/CONTENT/activities.yml. A Python build
-/// script generates archives/CONTENT/activities.json which we fetch directly
+/// The source of truth is archives/CONTENT/olympiads.yml. A Python build
+/// script generates archives/CONTENT/olympiads.json which we fetch directly
 /// from GitHub's raw content host. No database, no API layer, no writes.
 public actor APIClient {
     public static let shared = APIClient()
@@ -21,7 +21,7 @@ public actor APIClient {
     }
 
     public func listActivities() async throws -> [Activity] {
-        try await get(file: "activities.json", as: ActivityList.self).items
+        try await get(file: "olympiads.json", as: ActivityList.self).items
     }
 
     // MARK: - Private

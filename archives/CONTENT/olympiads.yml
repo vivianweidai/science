@@ -1,4 +1,4 @@
-# Science activities — single source of truth.
+# Olympiads and textbooks — single source of truth.
 # Each entry: type (olympiad|textbook), subject, date ("Month YYYY" or "Future"),
 # name, finished, highlighted. Olympiads also have country.
 # Run `python archives/LAYOUT/build_listings.py` after edits to regenerate JSON.

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Build archives/CONTENT/activities.json from the YAML source of truth.
+"""Build archives/CONTENT/olympiads.json from the YAML source of truth.
 
 Source of truth:
-  archives/CONTENT/activities.yml
+  archives/CONTENT/olympiads.yml
 
 Output (consumed by olympiads/index.md client-side JS and by the iOS app):
-  archives/CONTENT/activities.json
+  archives/CONTENT/olympiads.json
 
 Output shape:
     {"items": [ {id, type, subject, date, sort_key, name, country?, finished, highlighted}, ... ]}
@@ -49,9 +49,9 @@ def sort_key(date: str) -> str:
 
 
 def build_activities() -> list[dict]:
-    data = yaml.safe_load((CONTENT / "activities.yml").read_text())
+    data = yaml.safe_load((CONTENT / "olympiads.yml").read_text())
     if not isinstance(data, list):
-        raise ValueError("activities.yml must be a YAML list")
+        raise ValueError("olympiads.yml must be a YAML list")
     items = []
     for i, e in enumerate(data):
         # Validate required fields
@@ -98,7 +98,7 @@ def main() -> int:
         print(f"validation error: {e}", file=sys.stderr)
         return 1
     CONTENT.mkdir(exist_ok=True)
-    write_json(CONTENT / "activities.json", activities)
+    write_json(CONTENT / "olympiads.json", activities)
     return 0
 
 

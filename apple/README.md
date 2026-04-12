@@ -12,8 +12,8 @@ Three tabs:
   GitHub raw URLs and rendered with KaTeX in a `WKWebView` on iOS/iPadOS.
   Watch shows plain text (no WebKit on watchOS).
 - **Olympiads** — contests tracker plus unified textbooks list, read
-  from `archives/CONTENT/activities.json` (built from
-  `activities.yml` via `archives/LAYOUT/build_listings.py`).
+  from `archives/CONTENT/olympiads.json` (built from
+  `olympiads.yml` via `archives/LAYOUT/build_listings.py`).
 - **Research** — experimental data projects under `/research/`.
 
 ## Layout

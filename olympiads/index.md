@@ -83,8 +83,8 @@ layout: default
 </style>
 
 <script>
-// Timeline view — renders archives/CONTENT/activities.json as a vertical
-// chronological timeline grouped by year. Built from archives/CONTENT/activities.yml
+// Timeline view — renders archives/CONTENT/olympiads.json as a vertical
+// chronological timeline grouped by year. Built from archives/CONTENT/olympiads.yml
 // by archives/LAYOUT/build_listings.py.
 (function () {
   var SUBJECT_SLUGS = {
@@ -142,7 +142,7 @@ layout: default
   }
 
   // Fetch data
-  fetch('../archives/CONTENT/activities.json', { cache: 'no-cache' })
+  fetch('../archives/CONTENT/olympiads.json', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (d) {
       var items = d.items;
