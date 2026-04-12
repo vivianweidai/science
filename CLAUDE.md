@@ -95,6 +95,11 @@ YYYYMMDD Project Name/
 - **OptiMelt Automated Melting Point System** — non-functional (touchscreen unresponsive)
 - **Next up: TA Instruments TGA Q50** — thermogravimetric analysis (walk-up guide available)
 
+## GIT WORKFLOW
+
+- **Always work on the `main` branch.** Never create feature branches, worktrees, or PRs. Commit and push directly to `main`.
+- Before starting work, verify you are on `main` with `git branch`. If not, switch with `git checkout main`.
+
 ## GITHUB & VISIBILITY
 
 This repo is synced to GitHub at `vivianweidai/science` and served at `vivianweidai.com`. Everything is publicly viewable. Keep this in mind:
