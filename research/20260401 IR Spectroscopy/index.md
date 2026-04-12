@@ -70,7 +70,7 @@ The instrument (Nicolet 380) applies background correction automatically — eac
 2. **Convert to absorbance** — transmittance was converted using A = −log₁₀(T/100), where T is transmittance in percent. Absorbance is dimensionless and directly proportional to concentration via the Beer-Lambert law.
 3. **Export** — all 23 samples were saved as individual cleaned CSVs with headers (wavenumber, transmittance, absorbance) into a single <a href="https://github.com/vivianweidai/science/tree/main/research/20260401%20IR%20Spectroscopy/OUTPUT/SCRUBBED">SCRUBBED</a> folder.
 
-All spectra plots, peak identification, and category overlays were generated from the cleaned data using Python libraries in the <a href="https://github.com/vivianweidai/science/blob/main/research/20260401%20IR%20Spectroscopy/OUTPUT/clean_data.py">analysis script</a>.
+All spectra plots, peak identification, and category overlays were generated from the cleaned data using Python libraries in the <a href="https://github.com/vivianweidai/science/blob/main/research/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">analysis notebook</a>.
 
 ## Results
 
@@ -227,6 +227,8 @@ All spectra plots, peak identification, and category overlays were generated fro
 </div>
 
 <script src="/archives/LAYOUT/tabs.js"></script>
+
+See the <a href="https://github.com/vivianweidai/science/blob/main/research/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">run the reproducible analysis yourself</a>.
 
 ---
 
