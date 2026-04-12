@@ -1,19 +1,16 @@
 #!/usr/bin/env python3
-"""Build archives/CONTENT/olympiads.json and textbooks.json from the YAML source of truth.
+"""Build archives/CONTENT/activities.json from the YAML source of truth.
 
 Source of truth:
-  archives/CONTENT/olympiads.yml
-  archives/CONTENT/textbooks.yml
+  archives/CONTENT/activities.yml
 
-Outputs (consumed by olympiads/index.md client-side JS and by the iOS app):
-  archives/CONTENT/olympiads.json
-  archives/CONTENT/textbooks.json
+Output (consumed by olympiads/index.md client-side JS and by the iOS app):
+  archives/CONTENT/activities.json
 
-Output shape matches the old Cloudflare Pages Function response so the iOS app can
-decode it without code changes:
-    {"items": [ {id, subject, date, sort_key, country, name, finished, highlighted}, ... ]}
+Output shape:
+    {"items": [ {id, type, subject, date, sort_key, name, country?, finished, highlighted}, ... ]}
 
-Run this after editing either YAML file, then commit both the YAML and the JSON.
+Run this after editing the YAML, then commit both the YAML and the JSON.
 There is no CI validation — the editor is responsible for remembering to rebuild.
 """
 
@@ -30,9 +27,9 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 CONTENT = ROOT / "archives" / "CONTENT"
-ARCHIVES = ROOT / "archives" / "CONTENT"
 
 SUBJECTS = {"Mathematics", "Computing", "Physics", "Chemistry", "Biology", "Astronomy"}
+TYPES = {"olympiad", "textbook"}
 MONTHS = {
     "January": "01", "February": "02", "March": "03", "April": "04",
     "May": "05", "June": "06", "July": "07", "August": "08",
@@ -51,59 +48,40 @@ def sort_key(date: str) -> str:
         raise ValueError(f"invalid date {date!r}: expected 'Month YYYY' or 'Future'") from e
 
 
-def validate_common(entry: dict, idx: int, kind: str) -> None:
-    for field in ("subject", "date", "finished", "highlighted"):
-        if field not in entry:
-            raise ValueError(f"{kind}[{idx}] missing required field {field!r}: {entry}")
-    if entry["subject"] not in SUBJECTS:
-        raise ValueError(f"{kind}[{idx}] invalid subject {entry['subject']!r}")
-    if not isinstance(entry["finished"], bool):
-        raise ValueError(f"{kind}[{idx}] finished must be true/false")
-    if not isinstance(entry["highlighted"], bool):
-        raise ValueError(f"{kind}[{idx}] highlighted must be true/false")
-
-
-def build_olympiads() -> list[dict]:
-    data = yaml.safe_load((CONTENT / "olympiads.yml").read_text())
+def build_activities() -> list[dict]:
+    data = yaml.safe_load((CONTENT / "activities.yml").read_text())
     if not isinstance(data, list):
-        raise ValueError("olympiads.yml must be a YAML list")
+        raise ValueError("activities.yml must be a YAML list")
     items = []
     for i, e in enumerate(data):
-        validate_common(e, i, "olympiad")
-        for field in ("country", "name"):
+        # Validate required fields
+        for field in ("type", "subject", "date", "name", "finished", "highlighted"):
             if field not in e:
-                raise ValueError(f"olympiad[{i}] missing required field {field!r}")
-        items.append({
+                raise ValueError(f"entry[{i}] missing required field {field!r}: {e}")
+        if e["type"] not in TYPES:
+            raise ValueError(f"entry[{i}] invalid type {e['type']!r}")
+        if e["subject"] not in SUBJECTS:
+            raise ValueError(f"entry[{i}] invalid subject {e['subject']!r}")
+        if not isinstance(e["finished"], bool):
+            raise ValueError(f"entry[{i}] finished must be true/false")
+        if not isinstance(e["highlighted"], bool):
+            raise ValueError(f"entry[{i}] highlighted must be true/false")
+        if e["type"] == "olympiad" and "country" not in e:
+            raise ValueError(f"entry[{i}] olympiad missing required field 'country'")
+
+        item: dict = {
             "id": i + 1,
+            "type": e["type"],
             "subject": e["subject"],
             "date": e["date"],
             "sort_key": sort_key(e["date"]),
-            "country": e["country"],
             "name": e["name"],
             "finished": 1 if e["finished"] else 0,
             "highlighted": 1 if e["highlighted"] else 0,
-        })
-    return items
-
-
-def build_textbooks() -> list[dict]:
-    data = yaml.safe_load((CONTENT / "textbooks.yml").read_text())
-    if not isinstance(data, list):
-        raise ValueError("textbooks.yml must be a YAML list")
-    items = []
-    for i, e in enumerate(data):
-        validate_common(e, i, "textbook")
-        if "title" not in e:
-            raise ValueError(f"textbook[{i}] missing required field 'title'")
-        items.append({
-            "id": i + 1,
-            "subject": e["subject"],
-            "date": e["date"],
-            "sort_key": sort_key(e["date"]),
-            "title": e["title"],
-            "finished": 1 if e["finished"] else 0,
-            "highlighted": 1 if e["highlighted"] else 0,
-        })
+        }
+        if e.get("country"):
+            item["country"] = e["country"]
+        items.append(item)
     return items
 
 
@@ -115,14 +93,12 @@ def write_json(path: Path, items: list[dict]) -> None:
 
 def main() -> int:
     try:
-        olympiads = build_olympiads()
-        textbooks = build_textbooks()
+        activities = build_activities()
     except ValueError as e:
         print(f"validation error: {e}", file=sys.stderr)
         return 1
-    ARCHIVES.mkdir(exist_ok=True)
-    write_json(ARCHIVES / "olympiads.json", olympiads)
-    write_json(ARCHIVES / "textbooks.json", textbooks)
+    CONTENT.mkdir(exist_ok=True)
+    write_json(CONTENT / "activities.json", activities)
     return 0
 
 

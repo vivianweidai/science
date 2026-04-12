@@ -1,16 +1,10 @@
 import Foundation
 
-/// Read-only client for olympiad and textbook listings.
+/// Read-only client for activity listings (olympiads + textbooks).
 ///
-/// The source of truth is YAML in the repo (archives/CONTENT/olympiads.yml,
-/// archives/CONTENT/textbooks.yml). A Python build script generates static JSON
-/// files (archives/CONTENT/olympiads.json, archives/CONTENT/textbooks.json)
-/// which we fetch directly from GitHub's raw content host. No database, no API
-/// layer, no writes.
-///
-/// If we ever want a stabler URL (or to avoid raw.githubusercontent rate limits),
-/// flip `baseURL` to "https://vivianweidai.com/archives/CONTENT" — the GitHub Pages
-/// build serves the exact same files at that path.
+/// The source of truth is archives/CONTENT/activities.yml. A Python build
+/// script generates archives/CONTENT/activities.json which we fetch directly
+/// from GitHub's raw content host. No database, no API layer, no writes.
 public actor APIClient {
     public static let shared = APIClient()
 
@@ -26,12 +20,8 @@ public actor APIClient {
         self.decoder = JSONDecoder()
     }
 
-    public func listOlympiads() async throws -> [Olympiad] {
-        try await get(file: "olympiads.json", as: OlympiadList.self).items
-    }
-
-    public func listTextbooks() async throws -> [Textbook] {
-        try await get(file: "textbooks.json", as: TextbookList.self).items
+    public func listActivities() async throws -> [Activity] {
+        try await get(file: "activities.json", as: ActivityList.self).items
     }
 
     // MARK: - Private

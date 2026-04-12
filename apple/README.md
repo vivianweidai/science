@@ -12,8 +12,8 @@ Three tabs:
   GitHub raw URLs and rendered with KaTeX in a `WKWebView` on iOS/iPadOS.
   Watch shows plain text (no WebKit on watchOS).
 - **Olympiads** — contests tracker plus unified textbooks list, read
-  from `archives/CONTENT/olympiads.json` and `textbooks.json` (built
-  from YAML via `archives/LAYOUT/build_listings.py`).
+  from `archives/CONTENT/activities.json` (built from
+  `activities.yml` via `archives/LAYOUT/build_listings.py`).
 - **Research** — experimental data projects under `/research/`.
 
 ## Layout
@@ -22,7 +22,7 @@ Three tabs:
 apple/
 ├── Package.swift             SwiftPM manifest — platforms: iOS 17, watchOS 10
 ├── shared/                   ScienceCore library (shared between all three targets)
-│   ├── Models/               NoteCard, Manifest, Olympiad, Textbook, ResearchProject
+│   ├── Models/               NoteCard, Manifest, Activity, ResearchProject
 │   ├── API/                  APIClient, NotesLoader, ResearchLoader  (Foundation only — compiles on watchOS)
 │   ├── Rendering/            MarkdownWebView + katex-shell.html       (gated #if os(iOS))
 │   └── Views/

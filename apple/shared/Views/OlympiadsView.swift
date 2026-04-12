@@ -2,13 +2,12 @@
 import SwiftUI
 
 struct OlympiadsView: View {
-    @State private var olympiads: [Olympiad] = []
-    @State private var textbooks: [Textbook] = []
-    @State private var subject: String = "Mathematics"
+    @State private var activities: [Activity] = []
+    @State private var subject: String = "All"
     @State private var loading = true
     @State private var error: String?
 
-    private let subjects = ["Mathematics", "Computing", "Physics", "Chemistry", "Biology", "Astronomy"]
+    private let subjects = ["All", "Mathematics", "Computing", "Physics", "Chemistry", "Biology", "Astronomy"]
 
     var body: some View {
         NavigationStack {
@@ -35,31 +34,28 @@ struct OlympiadsView: View {
         }
     }
 
-    private var filteredOlympiads: [Olympiad] {
-        olympiads.filter { $0.subject == subject }
-    }
-
-    private var filteredTextbooks: [Textbook] {
-        textbooks.filter { $0.subject == subject }
+    private var filtered: [Activity] {
+        let items = subject == "All" ? activities : activities.filter { $0.subject == subject }
+        return items.sorted { $0.sortKey > $1.sortKey }
     }
 
     private var list: some View {
         List {
             Section("Contests") {
-                ForEach(filteredOlympiads) { o in
+                ForEach(filtered.filter(\.isOlympiad)) { a in
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(o.name).strikethrough(o.finished == 1)
-                        Text("\(o.date) • \(o.country)")
+                        Text(a.name).strikethrough(a.finished == 1)
+                        Text("\(a.date) \(a.country.map { "• \($0)" } ?? "")")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
                 }
             }
             Section("Textbooks") {
-                ForEach(filteredTextbooks) { t in
+                ForEach(filtered.filter(\.isTextbook)) { a in
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(t.title).strikethrough(t.finished == 1)
-                        Text(t.date)
+                        Text(a.name).strikethrough(a.finished == 1)
+                        Text(a.date)
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
@@ -71,10 +67,7 @@ struct OlympiadsView: View {
     private func load() async {
         loading = true
         do {
-            async let o = APIClient.shared.listOlympiads()
-            async let t = APIClient.shared.listTextbooks()
-            olympiads = try await o
-            textbooks = try await t
+            activities = try await APIClient.shared.listActivities()
             error = nil
         } catch {
             self.error = error.localizedDescription

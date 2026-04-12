@@ -20,22 +20,16 @@
   display: block;
 }
 
-#oly-math:checked ~ .tab-labels label[for="oly-math"],
-#oly-comp:checked ~ .tab-labels label[for="oly-comp"],
-#oly-phys:checked ~ .tab-labels label[for="oly-phys"],
-#oly-chem:checked ~ .tab-labels label[for="oly-chem"],
-#oly-bio:checked ~ .tab-labels label[for="oly-bio"],
-#oly-astro:checked ~ .tab-labels label[for="oly-astro"] {
+/* Olympiads timeline view-filter tabs */
+#view-all:checked ~ .tab-labels label[for="view-all"],
+#view-math:checked ~ .tab-labels label[for="view-math"],
+#view-comp:checked ~ .tab-labels label[for="view-comp"],
+#view-phys:checked ~ .tab-labels label[for="view-phys"],
+#view-chem:checked ~ .tab-labels label[for="view-chem"],
+#view-bio:checked ~ .tab-labels label[for="view-bio"],
+#view-astro:checked ~ .tab-labels label[for="view-astro"] {
   color: #0969da;
   border-bottom-color: #0969da;
-}
-#oly-math:checked ~ #oly-content-math,
-#oly-comp:checked ~ #oly-content-comp,
-#oly-phys:checked ~ #oly-content-phys,
-#oly-chem:checked ~ #oly-content-chem,
-#oly-bio:checked ~ #oly-content-bio,
-#oly-astro:checked ~ #oly-content-astro {
-  display: block;
 }
 
 /* IR Spectroscopy: representative samples */
