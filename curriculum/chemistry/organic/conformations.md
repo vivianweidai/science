@@ -3,7 +3,7 @@ subject: Chemistry
 section: Organic
 topic: Structure
 table: Conformations
-order: 2
+order: 55
 ---
 
 # Conformations

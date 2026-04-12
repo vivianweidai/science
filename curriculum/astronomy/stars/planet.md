@@ -3,7 +3,7 @@ subject: Astronomy
 section: Stars
 topic: Radiation
 table: Planet
-order: 4
+order: 41
 ---
 
 # Planet

@@ -3,7 +3,7 @@ subject: Chemistry
 section: Physical
 topic: Entropy
 table: Second Law
-order: 22
+order: 50
 ---
 
 # Second Law
@@ -17,5 +17,4 @@ order: 22
 <tr><td>surroundings</td><td>heat flow to and from</td><td>by random motion</td></tr>
 <tr><td>surroundings</td><td>$- \frac{Q}{T} = - \frac{\Delta H}{T}$</td><td>impact proportional temperature</td></tr>
 <tr><td>formation</td><td>reversible</td><td>extensible</td></tr>
-<tr><td>formation</td><td>$\Delta S^{\circ}\text{(reaction)} = \Delta S^{\circ}\text{(products)} - \Delta S^{\circ}\text{(reactants)}$</td><td></td></tr>
 </table>

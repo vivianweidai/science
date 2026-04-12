@@ -3,7 +3,7 @@ subject: Computing
 section: Sampling
 topic: Sampling Distribution
 table: Sampling Distribution
-order: 6
+order: 16
 ---
 
 # Sampling Distribution

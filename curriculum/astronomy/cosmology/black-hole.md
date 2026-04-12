@@ -3,7 +3,7 @@ subject: Astronomy
 section: Cosmology
 topic: Remnants
 table: Black Hole
-order: 6
+order: 60
 ---
 
 # Black Hole

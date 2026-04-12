@@ -3,7 +3,7 @@ subject: Physics
 section: Electromagnetism
 topic: Statics
 table: Conductor
-order: 2
+order: 17
 ---
 
 # Conductor

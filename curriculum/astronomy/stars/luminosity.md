@@ -3,7 +3,7 @@ subject: Astronomy
 section: Stars
 topic: Atmosphere
 table: Luminosity
-order: 13
+order: 50
 ---
 
 # Luminosity

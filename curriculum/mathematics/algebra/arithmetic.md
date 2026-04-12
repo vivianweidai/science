@@ -1,9 +1,9 @@
 ---
 subject: Mathematics
 section: Algebra
-topic: Sequences and Series
+topic: Sequences And Series
 table: Arithmetic
-order: 3
+order: 26
 ---
 
 # Arithmetic

@@ -3,7 +3,7 @@ subject: Chemistry
 section: Bonds
 topic: Intermolecular
 table: Intermolecular
-order: 8
+order: 16
 ---
 
 # Intermolecular

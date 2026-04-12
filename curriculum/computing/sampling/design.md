@@ -3,7 +3,7 @@ subject: Computing
 section: Sampling
 topic: Experiments
 table: Design
-order: 5
+order: 15
 ---
 
 # Design

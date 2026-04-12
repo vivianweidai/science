@@ -3,7 +3,7 @@ subject: Chemistry
 section: Stoichiometry
 topic: Gases
 table: Kinetic Molecular Theory
-order: 6
+order: 26
 ---
 
 # Kinetic Molecular Theory

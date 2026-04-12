@@ -3,7 +3,7 @@ subject: Chemistry
 section: Organic
 topic: Aromatics
 table: Reactions
-order: 17
+order: 70
 ---
 
 # Reactions

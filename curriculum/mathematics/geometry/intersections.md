@@ -3,7 +3,7 @@ subject: Mathematics
 section: Geometry
 topic: Circles
 table: Intersections
-order: 6
+order: 21
 ---
 
 # Intersections

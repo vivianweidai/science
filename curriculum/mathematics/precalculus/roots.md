@@ -3,7 +3,7 @@ subject: Mathematics
 section: Precalculus
 topic: Complex
 table: Roots
-order: 5
+order: 46
 ---
 
 # Roots

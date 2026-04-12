@@ -3,7 +3,7 @@ subject: Physics
 section: Electromagnetism
 topic: Magnetism
 table: Field
-order: 8
+order: 23
 ---
 
 # Field

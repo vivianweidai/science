@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Non Mendel
 table: Others
-order: 5
+order: 25
 ---
 
 # Others

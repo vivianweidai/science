@@ -3,7 +3,7 @@ subject: Mathematics
 section: Algebra
 topic: Polynomials
 table: Polynomials
-order: 6
+order: 29
 ---
 
 # Polynomials

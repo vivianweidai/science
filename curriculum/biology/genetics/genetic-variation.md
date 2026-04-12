@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Mutations
 table: Genetic Variation
-order: 15
+order: 35
 ---
 
 # Genetic Variation

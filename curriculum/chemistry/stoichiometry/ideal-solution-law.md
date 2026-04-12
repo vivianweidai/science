@@ -3,7 +3,7 @@ subject: Chemistry
 section: Stoichiometry
 topic: Solutions
 table: Ideal Solution Law
-order: 7
+order: 27
 ---
 
 # Ideal Solution Law

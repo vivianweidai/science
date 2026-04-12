@@ -3,7 +3,7 @@ subject: Chemistry
 section: Inorganic
 topic: Alkali
 table: Reduction Potential
-order: 14
+order: 86
 ---
 
 # Reduction Potential

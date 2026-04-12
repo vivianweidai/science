@@ -11,7 +11,6 @@ order: 4
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
 <tr><td>correlation</td><td>numerical relationship</td><td>between two variables</td></tr>
-<tr><td>correlation</td><td>$r = \frac{1}{n - 1}\sum\left( \frac{x_{i} - \overline{x}}{s_{x}} \right)\left( \frac{y_{i} - \overline{y}}{s_{y}} \right)$</td><td></td></tr>
 <tr><td>correlation</td><td>$r^{2}$</td><td>proportion accounted for</td></tr>
 <tr><td>regression</td><td>how one variable changes</td><td>in response to other change</td></tr>
 <tr><td>regression</td><td>$\widehat{y} = a + bx$</td><td>predicted value</td></tr>

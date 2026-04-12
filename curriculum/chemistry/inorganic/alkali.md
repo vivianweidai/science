@@ -3,7 +3,7 @@ subject: Chemistry
 section: Inorganic
 topic: Alkali
 table: Alkali
-order: 13
+order: 85
 ---
 
 # Alkali

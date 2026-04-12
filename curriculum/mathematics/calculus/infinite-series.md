@@ -3,7 +3,7 @@ subject: Mathematics
 section: Calculus
 topic: Approximation
 table: Infinite Series
-order: 7
+order: 56
 ---
 
 # Infinite Series

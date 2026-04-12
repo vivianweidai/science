@@ -3,7 +3,7 @@ subject: Mathematics
 section: Combinatorics
 topic: Sets
 table: Concepts
-order: 6
+order: 13
 ---
 
 # Concepts

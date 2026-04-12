@@ -3,7 +3,7 @@ subject: Astronomy
 section: Mechanics
 topic: Maneuvers
 table: Oberth
-order: 8
+order: 28
 ---
 
 # Oberth

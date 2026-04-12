@@ -3,7 +3,7 @@ subject: Chemistry
 section: Inorganic
 topic: Coordination
 table: Structure
-order: 1
+order: 73
 ---
 
 # Structure
@@ -13,7 +13,6 @@ order: 1
 <tr><td>structure</td><td>ligands around central metal</td><td>coordinate covalent bond</td></tr>
 <tr><td>structure</td><td>primary valence oxidation state</td><td>secondary valence coordination</td></tr>
 <tr><td>structure</td><td>some partners double duty</td><td>secondary valence not ionizable</td></tr>
-<tr><td>structure</td><td>tetraaminechromium(III)-$\mu$-amido-$\mu$-hydroxobis(en)iron(III) sulfate</td><td></td></tr>
 <tr><td>ligands</td><td>monodentate one bite</td><td>amine $NH_{3}M \longleftarrow \text{:L}$</td></tr>
 <tr><td>ligands</td><td>chelating multi bite claw ring</td><td>enthylenediamine (2) EDTA (6)</td></tr>
 <tr><td>ligands</td><td>ambidentate two donors $\text{:AB:}$</td><td>bridging $M \longleftarrow \text{:L:} \longrightarrow M$</td></tr>

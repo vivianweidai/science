@@ -3,7 +3,7 @@ subject: Astronomy
 section: Mechanics
 topic: Orbits
 table: Energy
-order: 2
+order: 22
 ---
 
 # Energy
@@ -11,7 +11,6 @@ order: 2
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
 <tr><td>energy</td><td>mechanical</td><td>potential kinetic</td></tr>
-<tr><td>energy</td><td>$E = \left( \frac{L^{2}}{2mr^{2}} - \frac{GMm}{r} \right) + \frac{1}{2}mv_{r}^{2}$</td><td></td></tr>
 <tr><td>effective potential</td><td>$\frac{L^{2}}{2mr^{2}} - \frac{GMm}{r}$</td><td>proportional distance</td></tr>
 <tr><td>effective potential</td><td>intersection</td><td>mechanical and potential</td></tr>
 <tr><td>effective potential</td><td>turning points</td><td>radial velocity zero</td></tr>

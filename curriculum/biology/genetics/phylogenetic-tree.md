@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Phylogeny
 table: Phylogenetic Tree
-order: 20
+order: 40
 ---
 
 # Phylogenetic Tree

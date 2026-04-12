@@ -3,7 +3,7 @@ subject: Biology
 section: Neuroscience
 topic: Neurons
 table: Integration
-order: 7
+order: 91
 ---
 
 # Integration

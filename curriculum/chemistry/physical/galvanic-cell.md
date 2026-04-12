@@ -3,7 +3,7 @@ subject: Chemistry
 section: Physical
 topic: Electrochemistry
 table: Galvanic Cell
-order: 24
+order: 52
 ---
 
 # Galvanic Cell
@@ -18,7 +18,6 @@ order: 24
 <tr><td>galvanic cell</td><td>if reactant is not solid</td><td>use surface of inert platinum</td></tr>
 <tr><td>cell potential</td><td>reactants pull electrons</td><td>called electromotive force</td></tr>
 <tr><td>cell potential</td><td>standard reduction potential</td><td>pull strength vs hydrogen gas</td></tr>
-<tr><td>cell potential</td><td>$\varepsilon^{\circ}\text{(cell)} = \varepsilon^{\circ}\text{(cathode)} - \varepsilon^{\circ}\text{(anode)}$</td><td></td></tr>
 <tr><td>cell potential</td><td>reversible but not extensive</td><td>strength not depend on quantity</td></tr>
 <tr><td>free energy</td><td>$\Delta G^{\circ} = - nF\varepsilon^{\circ}$</td><td>from $V = \frac{U}{Q}$</td></tr>
 <tr><td>free energy</td><td>$F = \frac{Q}{n} = 96,485\frac{C}{\text{mol}}$</td><td>charge of $1$ mole of electrons</td></tr>

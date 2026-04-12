@@ -3,7 +3,7 @@ subject: Physics
 section: Electromagnetism
 topic: Maxwell
 table: Fields
-order: 12
+order: 27
 ---
 
 # Fields

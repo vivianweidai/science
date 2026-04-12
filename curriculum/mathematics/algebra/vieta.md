@@ -3,7 +3,7 @@ subject: Mathematics
 section: Algebra
 topic: Roots
 table: Vieta
-order: 10
+order: 33
 ---
 
 # Vieta

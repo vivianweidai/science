@@ -3,7 +3,7 @@ subject: Computing
 section: Sampling
 topic: Methods
 table: Methods
-order: 2
+order: 12
 ---
 
 # Methods
@@ -16,6 +16,6 @@ order: 2
 <tr><td>stratified</td><td>combine SRS from each strata</td><td>well chosen more precise</td></tr>
 <tr><td>cluster</td><td>cluster groups of individuals</td><td>who are near each other</td></tr>
 <tr><td>cluster</td><td>more practical to use</td><td>for large populations</td></tr>
-<tr><td>systematic</td><td>ordered population</td><td>select every $k$th individual</td></tr>
+<tr><td>systematic</td><td>ordered population</td><td>select every $k$ th individual</td></tr>
 <tr><td>systematic</td><td>when SRS impossible</td><td>such as polling station</td></tr>
 </table>

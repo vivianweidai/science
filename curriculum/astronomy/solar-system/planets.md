@@ -3,7 +3,7 @@ subject: Astronomy
 section: Solar System
 topic: Planets
 table: Planets
-order: 2
+order: 31
 ---
 
 # Planets

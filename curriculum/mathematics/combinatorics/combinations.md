@@ -3,7 +3,7 @@ subject: Mathematics
 section: Combinatorics
 topic: Counting
 table: Combinations
-order: 2
+order: 9
 ---
 
 # Combinations
@@ -13,6 +13,6 @@ order: 2
 <tr><td>combinations</td><td>unordered list</td><td>in or out</td></tr>
 <tr><td>combinations</td><td>$\binom{n}{r} = \frac{n!}{(n - r)!r!}$</td><td>remove duplicates</td></tr>
 <tr><td>interpretations</td><td>locations</td><td>stars and bars</td></tr>
-<tr><td>interpretations</td><td>moves</td><td>Pascal\'s triangle</td></tr>
+<tr><td>interpretations</td><td>moves</td><td>Pascal's triangle</td></tr>
 <tr><td>interpretations</td><td>coefficients</td><td>binomial theorem</td></tr>
 </table>

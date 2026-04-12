@@ -3,7 +3,7 @@ subject: Biology
 section: Plants
 topic: Behaviour
 table: Behaviour
-order: 14
+order: 70
 ---
 
 # Behaviour

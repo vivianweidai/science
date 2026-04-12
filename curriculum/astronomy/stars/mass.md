@@ -3,7 +3,7 @@ subject: Astronomy
 section: Stars
 topic: Mass
 table: Mass
-order: 8
+order: 45
 ---
 
 # Mass

@@ -3,7 +3,7 @@ subject: Mathematics
 section: Geometry
 topic: Triangles
 table: Triangles
-order: 1
+order: 16
 ---
 
 # Triangles

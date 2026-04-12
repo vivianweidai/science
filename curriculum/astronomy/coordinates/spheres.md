@@ -3,7 +3,7 @@ subject: Astronomy
 section: Coordinates
 topic: Geometry
 table: Spheres
-order: 1
+order: 8
 ---
 
 # Spheres
@@ -19,6 +19,4 @@ order: 1
 <tr><td>triangle</td><td>$A + B + C > 180^{\circ}$</td><td>sum excess</td></tr>
 <tr><td>triangle</td><td>$Er^{2}$</td><td>area</td></tr>
 <tr><td>trigonometry</td><td>radians</td><td>small angles</td></tr>
-<tr><td>trigonometry</td><td>$\frac{\sin a}{\sin A} = \frac{\sin b}{\sin B} = \frac{\sin c}{\sin C}$</td><td></td></tr>
-<tr><td>trigonometry</td><td>$\cos a = \cos b\cos c + \sin b\sin c\cos A$</td><td></td></tr>
 </table>

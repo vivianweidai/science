@@ -3,7 +3,7 @@ subject: Biology
 section: Ecology
 topic: Prokaryotes
 table: Diversity
-order: 9
+order: 52
 ---
 
 # Diversity

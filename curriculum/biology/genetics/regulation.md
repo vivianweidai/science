@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Regulation
 table: Regulation
-order: 12
+order: 32
 ---
 
 # Regulation

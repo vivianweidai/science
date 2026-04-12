@@ -3,7 +3,7 @@ subject: Chemistry
 section: Inorganic
 topic: Crystal Field
 table: Splitting
-order: 3
+order: 75
 ---
 
 # Splitting

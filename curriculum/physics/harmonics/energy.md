@@ -3,7 +3,7 @@ subject: Physics
 section: Harmonics
 topic: Oscillatory
 table: Energy
-order: 6
+order: 15
 ---
 
 # Energy

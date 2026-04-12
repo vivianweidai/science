@@ -3,7 +3,7 @@ subject: Mathematics
 section: Calculus
 topic: Limits
 table: Limits
-order: 1
+order: 50
 ---
 
 # Limits
@@ -21,5 +21,5 @@ order: 1
 <tr><td>infinity</td><td>zero divide zero</td><td>cancel factors</td></tr>
 <tr><td>infinity</td><td>infinity divide infinity</td><td>horizontal asymptote</td></tr>
 <tr><td>infinity</td><td>constant divide zero</td><td>vertical asymptote</td></tr>
-<tr><td>infinity</td><td>$\lim_{x \rightarrow 0}\frac{\sin x}{x} = 1$</td><td>squeeze theorem</td></tr>
+<tr><td>infinity</td><td>$(g \circ f)' = g'(f)f'$</td><td>squeeze theorem</td></tr>
 </table>

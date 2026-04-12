@@ -3,7 +3,7 @@ subject: Astronomy
 section: Cosmology
 topic: Galaxies
 table: Classification
-order: 9
+order: 63
 ---
 
 # Classification

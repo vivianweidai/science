@@ -3,7 +3,7 @@ subject: Biology
 section: Neuroscience
 topic: Neurons
 table: Signal
-order: 6
+order: 90
 ---
 
 # Signal

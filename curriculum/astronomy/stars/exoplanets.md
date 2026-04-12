@@ -3,7 +3,7 @@ subject: Astronomy
 section: Stars
 topic: Relations
 table: Exoplanets
-order: 10
+order: 47
 ---
 
 # Exoplanets
@@ -17,7 +17,6 @@ order: 10
 <tr><td>radial velocity</td><td>$\frac{\Delta\lambda}{\lambda} = \frac{v_{r}}{c}$</td><td>Doppler</td></tr>
 <tr><td>radial velocity</td><td>lack inclination</td><td>assume small planet</td></tr>
 <tr><td>radial velocity</td><td>$\frac{M_{\text{B}}}{M_{\text{A}}} = \frac{a_{\text{A}}}{a_{\text{B}}}$</td><td>center of mass</td></tr>
-<tr><td>radial velocity</td><td>$M_{\text{B}}\sin i \approx \left( \frac{M_{\text{A}}^{2}P}{2\pi G} \right)^{\frac{1}{3}}v_{\text{A}}\sin i$</td><td></td></tr>
 <tr><td>eclipse</td><td>$i \approx 90^{\circ}$</td><td>transit probability small</td></tr>
 <tr><td>eclipse</td><td>flux blocked</td><td>cross section</td></tr>
 <tr><td>eclipse</td><td>four phases</td><td>star planet diameters</td></tr>

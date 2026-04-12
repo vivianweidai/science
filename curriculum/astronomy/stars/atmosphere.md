@@ -3,7 +3,7 @@ subject: Astronomy
 section: Stars
 topic: Atmosphere
 table: Atmosphere
-order: 11
+order: 48
 ---
 
 # Atmosphere

@@ -3,7 +3,7 @@ subject: Mathematics
 section: Combinatorics
 topic: Counting
 table: Permutations
-order: 1
+order: 8
 ---
 
 # Permutations

@@ -3,7 +3,7 @@ subject: Astronomy
 section: Stars
 topic: Mass
 table: Size
-order: 7
+order: 44
 ---
 
 # Size

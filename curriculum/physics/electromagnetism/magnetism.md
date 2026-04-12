@@ -3,7 +3,7 @@ subject: Physics
 section: Electromagnetism
 topic: Magnetism
 table: Magnetism
-order: 7
+order: 22
 ---
 
 # Magnetism

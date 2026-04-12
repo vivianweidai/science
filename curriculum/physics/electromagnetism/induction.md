@@ -3,7 +3,7 @@ subject: Physics
 section: Electromagnetism
 topic: Inductor
 table: Induction
-order: 10
+order: 25
 ---
 
 # Induction

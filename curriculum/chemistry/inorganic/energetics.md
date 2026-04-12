@@ -3,7 +3,7 @@ subject: Chemistry
 section: Inorganic
 topic: Solids
 table: Energetics
-order: 8
+order: 80
 ---
 
 # Energetics

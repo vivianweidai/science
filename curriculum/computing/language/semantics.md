@@ -3,7 +3,7 @@ subject: Computing
 section: Language
 topic: Structure
 table: Semantics
-order: 12
+order: 33
 ---
 
 # Semantics

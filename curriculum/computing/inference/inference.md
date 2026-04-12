@@ -3,7 +3,7 @@ subject: Computing
 section: Inference
 topic: Confidence Interval
 table: Inference
-order: 1
+order: 18
 ---
 
 # Inference

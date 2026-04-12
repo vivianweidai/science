@@ -3,7 +3,7 @@ subject: Chemistry
 section: Inorganic
 topic: Halogens
 table: Halides
-order: 23
+order: 95
 ---
 
 # Halides
@@ -14,5 +14,4 @@ order: 23
 <tr><td>halides</td><td>direct reaction</td><td>explosive if too strong</td></tr>
 <tr><td>halides</td><td>basic anhydrides</td><td>with hydrogen halides</td></tr>
 <tr><td>halides</td><td>acidic anhydrides</td><td>exchange covalent halides</td></tr>
-<tr><td>halides</td><td>pseudohalides $N_{3}^{-}CN^{-}OCN^{-}SCN^{-}SeCN^{-}TeCN^{-}$</td><td></td></tr>
 </table>

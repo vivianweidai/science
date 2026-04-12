@@ -1,18 +1,17 @@
 ---
 subject: Chemistry
 section: Physical
-topic: Equilibrium
+topic: Electrochemistry
 table: Equilibrium
-order: 5
+order: 53
 ---
 
 # Equilibrium
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr><td>equilibrium</td><td>reversible reactions</td><td>equilibrium equal rates</td></tr>
-<tr><td>equilibrium</td><td>$aA + bB \rightleftharpoons cC + dD$</td><td>equal molecularity rates</td></tr>
-<tr><td>equilibrium</td><td>$K = \frac{\lbrack C\rbrack^{c}\lbrack D\rbrack^{d}}{\lbrack A\rbrack^{a}\lbrack B\rbrack^{b}}$</td><td>law of mass action</td></tr>
-<tr><td>partial pressure</td><td>pressure is proportional</td><td>to concentration</td></tr>
-<tr><td>partial pressure</td><td>$K_{p} = \frac{(P_{A})^{a}(P_{B})^{b}}{(P_{C})^{c}(P_{D})^{d}}$</td><td>various $RT$ factors</td></tr>
+<tr><td>deviation</td><td>concentration but not quantity</td><td>directly affects potential</td></tr>
+<tr><td>deviation</td><td>$\varepsilon = \varepsilon^{\circ} - \frac{RT}{nF}\ln(Q)$</td><td>Nernst</td></tr>
+<tr><td>equilibrium</td><td>as reaction progresses</td><td>concentrations are updated</td></tr>
+<tr><td>equilibrium</td><td>$\varepsilon^{\circ} = \frac{RT}{nF}\ln(K)$</td><td>$Q = K\Delta G = 0\varepsilon = 0$</td></tr>
 </table>

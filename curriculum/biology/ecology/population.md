@@ -3,7 +3,7 @@ subject: Biology
 section: Ecology
 topic: Population
 table: Population
-order: 3
+order: 46
 ---
 
 # Population
@@ -20,6 +20,6 @@ order: 3
 <tr><td>limiting factors</td><td>density dependent</td><td>predation disease competition</td></tr>
 <tr><td>limiting factors</td><td>density independent</td><td>climate disasters humans</td></tr>
 <tr><td>life history</td><td>traits that affect</td><td>reproductive schedule</td></tr>
-<tr><td>life history</td><td>semelparity big bang</td><td>$r$-selected enough resources</td></tr>
-<tr><td>life history</td><td>iteroparity repeated small</td><td>$K$-selected near capacity</td></tr>
+<tr><td>life history</td><td>semelparity big bang</td><td>$r$ -selected enough resources</td></tr>
+<tr><td>life history</td><td>iteroparity repeated small</td><td>$K$ -selected near capacity</td></tr>
 </table>

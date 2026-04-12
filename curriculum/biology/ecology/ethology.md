@@ -3,7 +3,7 @@ subject: Biology
 section: Ecology
 topic: Population
 table: Ethology
-order: 4
+order: 47
 ---
 
 # Ethology

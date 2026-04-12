@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Expression
 table: Translation
-order: 11
+order: 31
 ---
 
 # Translation

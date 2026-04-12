@@ -3,7 +3,7 @@ subject: Astronomy
 section: Stars
 topic: Interior
 table: Generation
-order: 16
+order: 53
 ---
 
 # Generation

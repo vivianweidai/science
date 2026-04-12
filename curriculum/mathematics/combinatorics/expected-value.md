@@ -3,7 +3,7 @@ subject: Mathematics
 section: Combinatorics
 topic: Probability
 table: Expected Value
-order: 5
+order: 12
 ---
 
 # Expected Value

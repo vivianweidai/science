@@ -3,7 +3,7 @@ subject: Chemistry
 section: Organic
 topic: Alkanes
 table: Substitution
-order: 8
+order: 61
 ---
 
 # Substitution

@@ -3,7 +3,7 @@ subject: Chemistry
 section: Stoichiometry
 topic: Reactions
 table: Oxidation Reduction
-order: 4
+order: 24
 ---
 
 # Oxidation Reduction
@@ -18,7 +18,7 @@ order: 4
 <tr><td>oxidation state</td><td>monoatomic ion same as charge</td><td>$H$ $+ 1$ covalent $- 1$ ionic $NaH$</td></tr>
 <tr><td>balance equation</td><td>match electron transfer</td><td>by charge conservation</td></tr>
 <tr><td>balance equation</td><td>create half reactions</td><td>of oxidation reduction</td></tr>
-<tr><td>balance equation</td><td>balance elements except $H$ $O$</td><td>balance oxygen with $H_{2}O$</td></tr>
+<tr><td>balance equation</td><td>balance elements except $H$ $O$</td><td>balance oxyge n with $H_{2}O$</td></tr>
 <tr><td>balance equation</td><td>balance hydrogen with $H^{+}$</td><td>balance charge with electrons</td></tr>
 <tr><td>balance equation</td><td>equalize electron transfer</td><td>multiplication of half reactions</td></tr>
 <tr><td>balance equation</td><td>combine cancel half reactions</td><td>basic add $OH^{-}$ make water</td></tr>

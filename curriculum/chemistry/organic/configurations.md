@@ -3,7 +3,7 @@ subject: Chemistry
 section: Organic
 topic: Structure
 table: Configurations
-order: 3
+order: 56
 ---
 
 # Configurations

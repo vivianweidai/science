@@ -3,7 +3,7 @@ subject: Mathematics
 section: Algebra
 topic: Polynomials
 table: Division
-order: 7
+order: 30
 ---
 
 # Division

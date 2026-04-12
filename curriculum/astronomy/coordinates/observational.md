@@ -3,7 +3,7 @@ subject: Astronomy
 section: Coordinates
 topic: Conversions
 table: Observational
-order: 5
+order: 12
 ---
 
 # Observational
@@ -14,9 +14,9 @@ order: 5
 <tr><td>Earth-horizontal</td><td>North pole altitude</td><td>observer latitude</td></tr>
 <tr><td>Earth-horizontal</td><td>observer latitude</td><td>zenith to equator</td></tr>
 <tr><td>horizontal-local equatorial</td><td>if culminates</td><td>north of zenith</td></tr>
-<tr><td>horizontal-local equatorial</td><td>$a_{max} = 90^{\circ} + \varphi - \delta$</td><td>culmination</td></tr>
+<tr><td>horizontal-local equatorial</td><td>$a_{max} = 90^{\circ} + \phi - \delta$</td><td>culmination</td></tr>
 <tr><td>horizontal-local equatorial</td><td>never set</td><td>horizontal</td></tr>
-<tr><td>horizontal-local equatorial</td><td>$a_{min} = \delta + \varphi - 90^{\circ}$</td><td>circumpolar</td></tr>
+<tr><td>horizontal-local equatorial</td><td>$a_{min} = \delta + \phi - 90^{\circ}$</td><td>circumpolar</td></tr>
 <tr><td>horizontal-local equatorial</td><td>declination</td><td>from observations</td></tr>
 <tr><td>horizontal-local equatorial</td><td>$\delta = \frac{1}{2}\left( a_{min} - a_{max} + 180^{\circ} \right)$</td><td>substitution</td></tr>
 </table>

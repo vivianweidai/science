@@ -1,9 +1,9 @@
 ---
 subject: Mathematics
 section: Algebra
-topic: Sequences and Series
+topic: Sequences And Series
 table: Notation
-order: 5
+order: 28
 ---
 
 # Notation

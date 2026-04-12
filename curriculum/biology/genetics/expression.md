@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Expression
 table: Expression
-order: 9
+order: 29
 ---
 
 # Expression

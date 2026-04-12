@@ -3,7 +3,7 @@ subject: Astronomy
 section: Mechanics
 topic: Kepler
 table: Period
-order: 6
+order: 26
 ---
 
 # Period

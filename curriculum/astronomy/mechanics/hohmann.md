@@ -3,7 +3,7 @@ subject: Astronomy
 section: Mechanics
 topic: Maneuvers
 table: Hohmann
-order: 9
+order: 29
 ---
 
 # Hohmann
@@ -14,6 +14,4 @@ order: 9
 <tr><td>Hohmann</td><td>transfer</td><td>via elliptical</td></tr>
 <tr><td>velocity</td><td>change required</td><td>vis viva</td></tr>
 <tr><td>velocity</td><td>change produced</td><td>rocket impulse</td></tr>
-<tr><td>velocity</td><td>$\Delta v_{1} = \sqrt{\frac{GM}{r_{1}}} \cdot \left( \sqrt{\frac{2r_{2}}{r_{1} + r_{2}}} - 1 \right)$</td><td></td></tr>
-<tr><td>velocity</td><td>$\Delta v_{2} = \sqrt{\frac{GM}{r_{2}}} \cdot \left( 1 - \sqrt{\frac{2r_{1}}{r_{1} + r_{2}}} \right)$</td><td></td></tr>
 </table>

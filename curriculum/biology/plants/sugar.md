@@ -3,7 +3,7 @@ subject: Biology
 section: Plants
 topic: Transport
 table: Sugar
-order: 9
+order: 65
 ---
 
 # Sugar

@@ -3,7 +3,7 @@ subject: Physics
 section: Electromagnetism
 topic: Magnetism
 table: Usage
-order: 9
+order: 24
 ---
 
 # Usage

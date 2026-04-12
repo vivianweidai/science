@@ -3,7 +3,7 @@ subject: Mathematics
 section: Algebra
 topic: Inequalities
 table: Inequalities
-order: 13
+order: 36
 ---
 
 # Inequalities

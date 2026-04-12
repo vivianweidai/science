@@ -3,7 +3,7 @@ subject: Biology
 section: Ecology
 topic: Community
 table: Ecology
-order: 1
+order: 44
 ---
 
 # Ecology
@@ -23,6 +23,6 @@ order: 1
 <tr><td>community</td><td>regulated by keystone engineers</td><td>bottom up or top down</td></tr>
 <tr><td>community</td><td>chemical cycles water nutrients</td><td>toxins accumulated magnified</td></tr>
 <tr><td>community</td><td>change is the norm</td><td>succession after disturbance</td></tr>
-<tr><td>community</td><td>$1 - \sum\left( \frac{n}{N} \right)^{2}$</td><td>Simon\'s diversity index</td></tr>
+<tr><td>community</td><td>$1 - \sum\left( \frac{n}{N} \right)^{2}$</td><td>Simon's diversity index</td></tr>
 <tr><td>community</td><td>some disturbance more diverse</td><td>more adaptive more resistant</td></tr>
 </table>

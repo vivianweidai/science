@@ -3,7 +3,7 @@ subject: Chemistry
 section: Physical
 topic: Rate Laws
 table: Integral
-order: 2
+order: 30
 ---
 
 # Integral

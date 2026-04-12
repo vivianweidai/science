@@ -3,7 +3,7 @@ subject: Chemistry
 section: Inorganic
 topic: Crystal Field
 table: Stabilization
-order: 4
+order: 76
 ---
 
 # Stabilization
@@ -16,6 +16,6 @@ order: 4
 <tr><td>factors</td><td>$\Delta_{t} < P$ tetrahedral</td><td>always weak field high spin</td></tr>
 <tr><td>factors</td><td>metal larger charge or size</td><td>stronger field splitting effects</td></tr>
 <tr><td>factors</td><td>ligand smaller size</td><td>less steric stronger field</td></tr>
-<tr><td>factors</td><td>ligand covalent $\pi$ direction</td><td>$Cl^{-} < H_{2}O < NH_{3} < \text{en} < CN^{-}$</td></tr>
+<tr><td>factors</td><td>ligand covalen t $\pi$ direction</td><td>$Cl^{-} < H_{2}O < NH_{3} < \text{en} < CN^{-}$</td></tr>
 <tr><td>factors</td><td>different cyrstal field splittings</td><td>different absorbed energy colors</td></tr>
 </table>

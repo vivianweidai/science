@@ -3,7 +3,7 @@ subject: Astronomy
 section: Mechanics
 topic: Kepler
 table: Ellipse
-order: 4
+order: 24
 ---
 
 # Ellipse

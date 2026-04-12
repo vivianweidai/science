@@ -3,7 +3,7 @@ subject: Astronomy
 section: Cosmology
 topic: Remnants
 table: Variables
-order: 7
+order: 61
 ---
 
 # Variables
@@ -13,7 +13,6 @@ order: 7
 <tr><td>pulsating</td><td>main sequence stable</td><td>instability strip periodic</td></tr>
 <tr><td>pulsating</td><td>pulsating brightness</td><td>matched opacity cycles</td></tr>
 <tr><td>pulsating</td><td>standing sound wave</td><td>driven acounstic oscillation</td></tr>
-<tr><td>pulsating</td><td>${\overline{M}}_{V} = - 2.76\log(P/10\text{days}) - 4.16$</td><td></td></tr>
 <tr><td>cataclysmic</td><td>recurrent nova</td><td>star gas on white dwarf</td></tr>
 <tr><td>cataclysmic</td><td>short scale height</td><td>hydrogen layer flash</td></tr>
 <tr><td>supernova</td><td>Type Ib II</td><td>core collapse</td></tr>

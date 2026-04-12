@@ -3,7 +3,7 @@ subject: Physics
 section: Electromagnetism
 topic: Statics
 table: Statics
-order: 1
+order: 16
 ---
 
 # Statics

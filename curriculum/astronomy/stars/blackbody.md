@@ -3,7 +3,7 @@ subject: Astronomy
 section: Stars
 topic: Radiation
 table: Blackbody
-order: 3
+order: 40
 ---
 
 # Blackbody
@@ -14,7 +14,6 @@ order: 3
 <tr><td>blackbody</td><td>spectral line broadening</td><td>optical thick all wavelengths</td></tr>
 <tr><td>blackbody</td><td>specific elements irrelevant</td><td>perfect absorber emitter</td></tr>
 <tr><td>Planck</td><td>energy intensity</td><td>function of frequency</td></tr>
-<tr><td>Planck</td><td>$J_{\nu}(T) = \frac{2h\nu^{3}}{c^{2}}\frac{1}{e^{h\nu/kT} - 1}$</td><td></td></tr>
 <tr><td>Planck</td><td>low energy Raleigh-Jeans</td><td>high energy Wien</td></tr>
 <tr><td>Planck</td><td>$\lambda_{max}T = b$</td><td>Wien</td></tr>
 <tr><td>Stefan-Boltzmann</td><td>integrate intensity</td><td>all wavelengths</td></tr>

@@ -1,23 +1,13 @@
 #!/usr/bin/env python3
-"""Regenerate archives/CONTENT/curriculum.json — the single source of
-truth for the curriculum widget.
+"""Regenerate curriculum markdown files and archives/CONTENT/curriculum.json
+from the Word (.docx) source documents in curriculum/archives/.
 
-This script replaces three older scripts in one pass:
+Single source of truth: each subject's .docx file contains the complete
+curriculum with tables, LaTeX formulas (as Office Math), and yellow
+highlighted rows (cell shading #fff056). This script extracts everything
+in one pass — no separate PDF highlight step needed.
 
-    1. build_curriculum_manifest.py — walked curriculum/*.md to build
-       the subject -> section -> topic -> tables nav tree.
-    2. extract_highlights.py         — walked curriculum/archives/*.pdf,
-       detected yellow cells, and emitted which rows were highlighted
-       in each table.
-    3. apply_highlights.py           — baked `<tr class="highlight">`
-       into the curriculum markdown files from the extracted data.
-
-The new design keeps highlight info in the manifest JSON itself
-(`highlighted_rows` on each table) and applies the `highlight` class at
-runtime via archives/LAYOUT/curriculum.js. Curriculum markdown files
-therefore hold plain `<table>` HTML without any hardcoded classes —
-they're pure content, and the JSON is the single source of highlight
-state.
+Dependencies: python-docx, pandoc (for Office Math → LaTeX conversion)
 
 Usage:
     python3 archives/LAYOUT/build_curriculum.py
@@ -26,25 +16,21 @@ from __future__ import annotations
 
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
 try:
-    import pymupdf
-except ImportError:  # pragma: no cover - surface a clear install hint
-    sys.stderr.write(
-        "pymupdf is required to extract highlights from the NOTES PDFs.\n"
-        "Install with:  pip3 install pymupdf\n"
-    )
-    raise
+    from docx import Document
+    from docx.oxml.ns import qn
+except ImportError:
+    sys.exit("python-docx is required: pip3 install python-docx")
 
+WML = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+OMATH = "http://schemas.openxmlformats.org/officeDocument/2006/math"
 
-# --------------------------------------------------------------------------
-# Configuration
-# --------------------------------------------------------------------------
+YELLOW = "fff056"
 
-# Canonical section order per subject (from the curriculum image).
-# Falls back to alphabetical for any section not listed here.
 SECTION_ORDER = {
     "mathematics": ["number-theory", "combinatorics", "geometry",
                     "algebra", "precalculus", "calculus"],
@@ -70,251 +56,341 @@ SUBJECT_NAMES = {
 }
 
 
-# --------------------------------------------------------------------------
-# Markdown front matter parsing
-# --------------------------------------------------------------------------
-
-def parse_frontmatter(text: str) -> dict:
-    m = re.match(r"^---\n(.*?)\n---", text, re.DOTALL)
-    if not m:
-        return {}
-    fm: dict = {}
-    for line in m.group(1).split("\n"):
-        if ":" in line:
-            k, v = line.split(":", 1)
-            fm[k.strip()] = v.strip()
-    return fm
-
-
 def slugify(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 
 # --------------------------------------------------------------------------
-# PDF highlight extraction
+# Formula extraction via pandoc
 # --------------------------------------------------------------------------
 
-def is_yellow(rgb) -> bool:
-    if rgb is None:
-        return False
-    r, g, b = rgb
-    return r > 0.85 and g > 0.85 and b < 0.35
+def extract_formulas_pandoc(docx_path: Path) -> list[str]:
+    """Run pandoc on the docx and return all math expressions in document order.
 
-
-def page_yellow_rects(page) -> list[tuple[float, float, float, float]]:
-    rects = []
-    for d in page.get_drawings():
-        fill = d.get("fill")
-        if not fill or not is_yellow(fill):
-            continue
-        for item in d["items"]:
-            if item[0] == "re":
-                r = item[1]
-                rects.append((r.x0, r.y0, r.x1, r.y1))
-    return rects
-
-
-def rect_overlap_area(a, b) -> float:
-    if a is None or b is None:
-        return 0.0
-    dx = min(a[2], b[2]) - max(a[0], b[0])
-    dy = min(a[3], b[3]) - max(a[1], b[1])
-    if dx <= 0 or dy <= 0:
-        return 0.0
-    return dx * dy
-
-
-def cell_is_yellow(cell_rect, yellows, min_fraction: float = 0.5) -> bool:
-    if cell_rect is None:
-        return False
-    cw = cell_rect[2] - cell_rect[0]
-    ch = cell_rect[3] - cell_rect[1]
-    if cw <= 0 or ch <= 0:
-        return False
-    cell_area = cw * ch
-    covered = sum(rect_overlap_area(cell_rect, y) for y in yellows)
-    return covered / cell_area >= min_fraction
-
-
-def cell_to_rect(cell):
-    if cell is None:
-        return None
-    return (cell[0], cell[1], cell[2], cell[3])
-
-
-def page_headers(page) -> tuple[str, str]:
-    """Return (section, topic) from the top strip of a NOTES page.
-
-    Layout: SECTION (e.g. "NUMBER THEORY") sits on the right edge of the
-    header strip; TOPIC (e.g. "DIVISORS") a few lines below. Both are
-    rendered in uppercase; topic is the first UPPERCASE block after the
-    section line.
+    Captures both display math ($$...$$) and inline math ($...$).
     """
-    top_text = page.get_text("text", clip=(0, 0, page.rect.width, 130))
-    lines = [ln.strip() for ln in top_text.splitlines() if ln.strip()]
-    section = topic = ""
-    for ln in lines:
-        if ln.isupper() and len(ln) >= 2:
-            if not section:
-                section = ln
-            elif not topic:
-                topic = ln
-                break
-    return section.title(), topic.title()
+    result = subprocess.run(
+        ["pandoc", str(docx_path), "-t", "markdown", "--wrap=none"],
+        capture_output=True, text=True)
+    if result.returncode != 0:
+        print(f"  pandoc warning: {result.stderr[:200]}", file=sys.stderr)
+    # Collect display ($$...$$) and inline ($...$) math with positions
+    formulas: list[tuple[int, str]] = []
+    for m in re.finditer(r"[$][$](.+?)[$][$]", result.stdout):
+        formulas.append((m.start(), m.group(1).strip()))
+    for m in re.finditer(r"(?<![$])[$](?![$])(.+?)(?<![$])[$](?![$])", result.stdout):
+        formulas.append((m.start(), m.group(1).strip()))
+    formulas.sort(key=lambda x: x[0])
+    return [f for _, f in formulas]
 
 
-def extract_highlights_from_pdf(pdf_path: Path) -> dict:
-    """Return nested dict: section_title -> topic_title -> table_name -> [row indices]."""
-    doc = pymupdf.open(pdf_path)
-    result: dict = {}
+# --------------------------------------------------------------------------
+# DOCX table parsing
+# --------------------------------------------------------------------------
 
-    for page_num, page in enumerate(doc, start=1):
-        yellows = page_yellow_rects(page)
-        if not yellows:
-            continue
-        section, topic = page_headers(page)
-        if not section or not topic:
-            continue
-        for t in page.find_tables():
-            data = t.extract()
-            if not data:
-                continue
-            header_cell = data[0][0] if data[0] else None
-            if not header_cell:
-                continue
-            table_name = str(header_cell).strip()
-            if not table_name:
-                continue
+def cell_text(cell_elem) -> str:
+    """Extract plain text from a table cell, ignoring oMath."""
+    parts = []
+    for p in cell_elem.findall(f"{{{WML}}}p"):
+        for r in p.findall(f"{{{WML}}}r"):
+            for t in r.findall(f"{{{WML}}}t"):
+                if t.text:
+                    parts.append(t.text)
+    return " ".join(parts).strip()
 
-            highlighted: list[int] = []
-            row_objs = list(t.rows)
-            for data_idx, (row_obj, _row_data) in enumerate(
-                    zip(row_objs[1:], data[1:])):
-                # Only inspect the middle/right cells — the leftmost
-                # column often spans multiple rows with a section label
-                # and would otherwise colour every sub-row.
-                cell_rects = [cell_to_rect(c) for c in row_obj.cells[1:]]
-                cell_rects = [cr for cr in cell_rects if cr is not None]
-                if not cell_rects:
+
+def cell_has_math(cell_elem) -> bool:
+    return len(cell_elem.findall(f".//{{{OMATH}}}oMath")) > 0
+
+
+def count_math(cell_elem) -> int:
+    return len(cell_elem.findall(f".//{{{OMATH}}}oMath"))
+
+
+def _extract_cell(cell_elem, formulas: list[str], idx: int) -> tuple[str, int]:
+    """Extract cell content, substituting oMath with pandoc LaTeX formulas.
+    Returns (text, new_formula_index)."""
+    parts = []
+    for p in cell_elem.findall(f"{{{WML}}}" + "p"):
+        for child in p:
+            tag = child.tag.split("}")[-1]
+            ns_prefix = child.tag.split("}")[0] + "}" if "}" in child.tag else ""
+            if tag == "r":
+                # Regular text run
+                for t in child.findall(f"{{{WML}}}t"):
+                    if t.text:
+                        parts.append(t.text)
+            elif tag == "oMath":
+                # Math element — use pandoc formula
+                if idx < len(formulas):
+                    parts.append(f"${formulas[idx]}$")
+                idx += 1
+            elif tag == "oMathPara":
+                # Math paragraph wrapper — contains oMath children
+                for om in child.findall(f".//{{{OMATH}}}oMath"):
+                    if idx < len(formulas):
+                        parts.append(f"${formulas[idx]}$")
+                    idx += 1
+    text = " ".join(parts).strip()
+    # Collapse multiple spaces (from paragraph boundaries)
+    text = re.sub(r"  +", " ", text)
+    return text, idx
+
+
+def cell_fill(cell_elem) -> str:
+    """Return the fill color of a cell, or '' if none."""
+    shd = cell_elem.find(f".//{{{WML}}}shd")
+    if shd is not None:
+        fill = shd.get(qn("w:fill"))
+        if fill:
+            return fill.lower()
+    return ""
+
+
+def row_is_yellow(row_elem) -> bool:
+    """Check if non-label cells (col 1+) have yellow shading."""
+    cells = row_elem.findall(f"{{{WML}}}tc")
+    for cell in cells[1:]:
+        if cell_fill(cell) == YELLOW:
+            return True
+    return False
+
+
+def para_text(p_elem) -> str:
+    return "".join(t.text or "" for t in p_elem.findall(f".//{{{WML}}}t")).strip()
+
+
+def process_docx(docx_path: Path, formulas: list[str]) -> tuple[list[dict], int]:
+    """Parse a single docx. Returns (tables_data, formula_count_consumed).
+
+    Each entry in tables_data:
+        {section, topic, table_name, rows: [{label, formula, description}],
+         highlighted_rows: [int]}
+    """
+    doc = Document(str(docx_path))
+    body = doc.element.body
+    elements = list(body)
+
+    # Walk body: track section/topic from uppercase paragraphs
+    current_section = ""
+    current_topic = ""
+    tables_data = []
+    formula_idx = 0
+    toc_tables_seen = 0
+
+    for elem in elements:
+        tag = elem.tag.split("}")[-1]
+
+        if tag == "p":
+            text = para_text(elem)
+            if text and text.strip().isupper() and len(text.strip()) >= 2:
+                upper = text.strip()
+                # The subject name appears first (e.g. "MATHEMATICS"),
+                # then alternating section/topic pairs
+                if upper == docx_path.stem.upper():
+                    continue  # skip subject heading
+                if upper.title() == current_section:
+                    # Repeated section heading before a new topic
                     continue
-                if any(cell_is_yellow(cr, yellows) for cr in cell_rects):
-                    highlighted.append(data_idx)
+                if not current_section or upper.title() != current_topic:
+                    # Heuristic: if we've seen this as a section before,
+                    # it's a section repeat; otherwise it's a new heading
+                    slug = slugify(upper)
+                    # Check if this looks like a known section
+                    subj_slug = docx_path.stem.lower()
+                    known_sections = SECTION_ORDER.get(subj_slug, [])
+                    if slug in known_sections:
+                        current_section = upper.title()
+                    elif not current_section:
+                        current_section = upper.title()
+                    else:
+                        current_topic = upper.title()
 
-            if highlighted:
-                result.setdefault(section, {}) \
-                      .setdefault(topic, {}) \
-                      .setdefault(table_name, []) \
-                      .extend(highlighted)
+        elif tag == "tbl":
+            # Skip first 2 tables (TOC tables)
+            toc_tables_seen += 1
+            if toc_tables_seen <= 2:
+                # Still count any formulas in TOC tables
+                for cell in elem.findall(f".//{{{WML}}}tc"):
+                    formula_idx += count_math(cell)
+                continue
 
-    return result
+            rows_elem = elem.findall(f"{{{WML}}}tr")
+            if not rows_elem:
+                continue
+
+            # Header row (row 0) has the table name
+            header_cells = rows_elem[0].findall(f"{{{WML}}}tc")
+            table_name = cell_text(header_cells[0]) if header_cells else "unknown"
+            # Remove bold markers
+            table_name = table_name.strip("*").strip()
+            # Count any formulas in header
+            for cell in header_cells:
+                formula_idx += count_math(cell)
+
+            # Data rows
+            table_rows = []
+            highlighted = []
+            last_label = ""
+            for ri, row in enumerate(rows_elem[1:]):
+                cells = row.findall(f"{{{WML}}}tc")
+                if len(cells) < 3:
+                    # Count formulas in short rows
+                    for cell in cells:
+                        formula_idx += count_math(cell)
+                    continue
+
+                # Process all three columns, consuming pandoc formulas
+                # in document order (col 0, col 1, col 2)
+                raw_label, formula_idx = _extract_cell(
+                    cells[0], formulas, formula_idx)
+                raw_formula, formula_idx = _extract_cell(
+                    cells[1], formulas, formula_idx)
+                description, formula_idx = _extract_cell(
+                    cells[2], formulas, formula_idx)
+
+                label = raw_label if raw_label else last_label
+                last_label = label
+                formula = raw_formula
+                is_latex = count_math(cells[1]) > 0
+
+                if row_is_yellow(row):
+                    highlighted.append(len(table_rows))
+
+                table_rows.append({
+                    "label": label,
+                    "formula": formula,
+                    "description": description,
+                    "is_latex": is_latex,
+                })
+
+            tables_data.append({
+                "section": current_section,
+                "topic": current_topic,
+                "table_name": table_name.title(),
+                "rows": table_rows,
+                "highlighted_rows": highlighted,
+            })
+
+    return tables_data, formula_idx
+
+
+# --------------------------------------------------------------------------
+# Markdown generation
+# --------------------------------------------------------------------------
+
+def escape_html(s: str) -> str:
+    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def write_table_md(path: Path, subject: str, section: str, topic: str,
+                   table_name: str, order: int, rows: list[dict]) -> None:
+    lines = [
+        "---",
+        f"subject: {subject}",
+        f"section: {section}",
+        f"topic: {topic}",
+        f"table: {table_name}",
+        f"order: {order}",
+        "---",
+        "",
+        f"# {table_name}",
+        "",
+        "<table>",
+        "<tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>",
+    ]
+    for row in rows:
+        label = row["label"]
+        desc = row["description"]
+        formula = row["formula"]
+        # Fields from _extract_cell already have $...$ around LaTeX parts
+        # Only escape non-LaTeX text segments
+        if "$" not in label:
+            label = escape_html(label)
+        if "$" not in desc:
+            desc = escape_html(desc)
+        cell = formula if "$" in formula else escape_html(formula)
+        lines.append(f"<tr><td>{label}</td><td>{cell}</td><td>{desc}</td></tr>")
+    lines.append("</table>")
+    lines.append("")
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(lines), encoding="utf-8")
 
 
 # --------------------------------------------------------------------------
 # Manifest assembly
 # --------------------------------------------------------------------------
 
-def load_all_highlights(notes_dir: Path) -> dict:
-    """Return {subject_slug: {section_title: {topic_title: {table_name: [rows]}}}}."""
-    out: dict = {}
-    for subj_slug in SUBJECT_NAMES:
-        pdf = notes_dir / f"{subj_slug}.pdf"
-        if not pdf.exists():
-            continue
-        print(f"Extracting highlights from {pdf.name}...", file=sys.stderr)
-        out[subj_slug] = extract_highlights_from_pdf(pdf)
-    return out
-
-
-def highlighted_rows_for_table(hl_tree: dict,
-                               subj_slug: str,
-                               section_name: str,
-                               topic_name: str,
-                               table_name: str) -> list[int]:
-    """Look up the row list with case-insensitive table matching.
-
-    The manifest uses the display-case names from front matter (e.g.
-    "Number Theory", "Divisors"), and the PDF extractor emits names
-    with the same case via `.title()`. Table names are matched case
-    insensitively because PDF table headers are sometimes lowercased.
-    """
-    subj = hl_tree.get(subj_slug, {})
-    section = subj.get(section_name, {})
-    topic = section.get(topic_name, {})
-    for k, v in topic.items():
-        if k.lower() == table_name.lower():
-            return sorted(set(v))
-    return []
-
-
-def build_manifest(root: Path) -> dict:
+def build_all(root: Path) -> dict:
+    archives = root / "curriculum" / "archives"
     curr = root / "curriculum"
-    hl_tree = load_all_highlights(root / "curriculum" / "archives")
-
     manifest: dict = {}
+
     for subj_slug, subj_name in SUBJECT_NAMES.items():
-        subj_dir = curr / subj_slug
-        if not subj_dir.is_dir():
+        docx_path = archives / f"{subj_slug}.docx"
+        if not docx_path.exists():
+            print(f"  skipping {subj_slug}: no docx found", file=sys.stderr)
             continue
 
+        print(f"Processing {subj_slug}.docx...", file=sys.stderr)
+        formulas = extract_formulas_pandoc(docx_path)
+        print(f"  {len(formulas)} formulas extracted by pandoc", file=sys.stderr)
+
+        tables_data, consumed = process_docx(docx_path, formulas)
+        print(f"  {len(tables_data)} tables, {consumed} formula slots consumed",
+              file=sys.stderr)
+
+        # Group tables by section → topic
         sections: dict[str, dict] = {}
-        for section_dir in subj_dir.iterdir():
-            if not section_dir.is_dir():
-                continue
-            section_slug = section_dir.name
+        order = 0
+        for td in tables_data:
+            section_name = td["section"]
+            topic_name = td["topic"]
+            section_slug = slugify(section_name)
+            topic_slug = slugify(topic_name)
+            table_slug = slugify(td["table_name"])
+            order += 1
 
-            # Gather section display name (first front matter `section`
-            # wins) and all tables in this section.
-            section_display = section_slug.replace("-", " ").title()
-            topics: dict[str, dict] = {}
-            for md_file in section_dir.glob("*.md"):
-                fm = parse_frontmatter(md_file.read_text(encoding="utf-8"))
-                if fm.get("section"):
-                    section_display = fm["section"]
-                topic_name = fm.get(
-                    "topic", md_file.stem.replace("-", " ").title())
-                topic_slug = slugify(topic_name)
-                table_name = fm.get(
-                    "table", md_file.stem.replace("-", " ").title())
-                try:
-                    order = int(fm.get("order", "999"))
-                except ValueError:
-                    order = 999
+            # Write markdown file
+            md_path = curr / subj_slug / section_slug / f"{table_slug}.md"
+            write_table_md(md_path, subj_name, section_name, topic_name,
+                           td["table_name"], order, td["rows"])
 
-                if topic_slug not in topics:
-                    topics[topic_slug] = {
-                        "slug": topic_slug,
-                        "name": topic_name,
-                        "tables": [],
-                    }
-                topics[topic_slug]["tables"].append({
-                    "name": table_name,
-                    "order": order,
-                    "path": f"{subj_slug}/{section_slug}/{md_file.name}",
-                    "highlighted_rows": highlighted_rows_for_table(
-                        hl_tree, subj_slug, section_display,
-                        topic_name, table_name),
-                })
+            # Build manifest entry
+            if section_slug not in sections:
+                sections[section_slug] = {
+                    "slug": section_slug,
+                    "name": section_name,
+                    "topics": {},
+                }
+            topics = sections[section_slug]["topics"]
+            if topic_slug not in topics:
+                topics[topic_slug] = {
+                    "slug": topic_slug,
+                    "name": topic_name,
+                    "tables": [],
+                }
+            topics[topic_slug]["tables"].append({
+                "name": td["table_name"],
+                "order": order,
+                "path": f"{subj_slug}/{section_slug}/{table_slug}.md",
+                "highlighted_rows": td["highlighted_rows"],
+            })
 
-            if not topics:
-                continue
-
-            for t in topics.values():
-                t["tables"].sort(key=lambda x: (x["order"], x["name"]))
-            topics_list = sorted(
-                topics.values(),
-                key=lambda t: (t["tables"][0]["order"], t["name"]),
-            )
-
-            sections[section_slug] = {
-                "slug": section_slug,
-                "name": section_display,
-                "topics": topics_list,
-            }
-
+        # Sort sections and topics
         canonical = SECTION_ORDER.get(subj_slug, [])
         ordered_sections = [sections[s] for s in canonical if s in sections]
         remaining = sorted(s for s in sections if s not in canonical)
         ordered_sections.extend(sections[s] for s in remaining)
+
+        for sec in ordered_sections:
+            topics_dict = sec.pop("topics")
+            sec["topics"] = sorted(
+                [{"slug": t["slug"], "name": t["name"], "tables": t["tables"]}
+                 for t in topics_dict.values()],
+                key=lambda t: (t["tables"][0]["order"], t["name"]),
+            )
 
         manifest[subj_slug] = {
             "slug": subj_slug,
@@ -325,18 +401,13 @@ def build_manifest(root: Path) -> dict:
     return manifest
 
 
-# --------------------------------------------------------------------------
-# Entry point
-# --------------------------------------------------------------------------
-
 def main() -> None:
     root = Path(__file__).resolve().parent.parent.parent
-    manifest = build_manifest(root)
+    manifest = build_all(root)
 
     out_path = root / "archives" / "CONTENT" / "curriculum.json"
     out_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
-    # Summary stats: how many tables got highlight info.
     total_tables = 0
     tables_with_hl = 0
     for subj in manifest.values():

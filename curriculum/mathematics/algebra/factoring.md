@@ -3,7 +3,7 @@ subject: Mathematics
 section: Algebra
 topic: Identities
 table: Factoring
-order: 11
+order: 34
 ---
 
 # Factoring

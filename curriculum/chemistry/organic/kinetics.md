@@ -3,7 +3,7 @@ subject: Chemistry
 section: Organic
 topic: Mechanisms
 table: Kinetics
-order: 6
+order: 59
 ---
 
 # Kinetics

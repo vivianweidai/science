@@ -3,7 +3,7 @@ subject: Biology
 section: Ecology
 topic: Eukaryotes
 table: Fungi
-order: 12
+order: 55
 ---
 
 # Fungi

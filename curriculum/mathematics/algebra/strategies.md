@@ -3,7 +3,7 @@ subject: Mathematics
 section: Algebra
 topic: Relations
 table: Strategies
-order: 18
+order: 41
 ---
 
 # Strategies

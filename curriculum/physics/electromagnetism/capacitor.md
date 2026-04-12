@@ -3,7 +3,7 @@ subject: Physics
 section: Electromagnetism
 topic: Capacitor
 table: Capacitor
-order: 5
+order: 20
 ---
 
 # Capacitor

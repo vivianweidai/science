@@ -3,7 +3,7 @@ subject: Mathematics
 section: Calculus
 topic: Limits
 table: Continuity
-order: 2
+order: 51
 ---
 
 # Continuity

@@ -3,7 +3,7 @@ subject: Chemistry
 section: Bonds
 topic: Intermolecular
 table: Solids
-order: 9
+order: 17
 ---
 
 # Solids

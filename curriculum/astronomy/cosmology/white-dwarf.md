@@ -3,7 +3,7 @@ subject: Astronomy
 section: Cosmology
 topic: Remnants
 table: White Dwarf
-order: 4
+order: 58
 ---
 
 # White Dwarf

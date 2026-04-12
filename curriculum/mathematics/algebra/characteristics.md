@@ -3,7 +3,7 @@ subject: Mathematics
 section: Algebra
 topic: Functions
 table: Characteristics
-order: 2
+order: 25
 ---
 
 # Characteristics

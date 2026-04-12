@@ -1,9 +1,9 @@
 ---
 subject: Chemistry
 section: Stoichiometry
-topic: Stoichiometry
+topic: States
 table: Stoichiometry
-order: 1
+order: 21
 ---
 
 # Stoichiometry

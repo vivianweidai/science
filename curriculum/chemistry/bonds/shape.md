@@ -3,7 +3,7 @@ subject: Chemistry
 section: Bonds
 topic: Localized
 table: Shape
-order: 5
+order: 13
 ---
 
 # Shape

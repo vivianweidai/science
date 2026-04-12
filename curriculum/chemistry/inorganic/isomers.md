@@ -3,7 +3,7 @@ subject: Chemistry
 section: Inorganic
 topic: Coordination
 table: Isomers
-order: 2
+order: 74
 ---
 
 # Isomers

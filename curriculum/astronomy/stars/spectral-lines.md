@@ -3,7 +3,7 @@ subject: Astronomy
 section: Stars
 topic: Radiation
 table: Spectral Lines
-order: 2
+order: 39
 ---
 
 # Spectral Lines

@@ -3,7 +3,7 @@ subject: Mathematics
 section: Precalculus
 topic: Complex
 table: Complex Numbers
-order: 3
+order: 44
 ---
 
 # Complex Numbers

@@ -3,7 +3,7 @@ subject: Mathematics
 section: Algebra
 topic: Inequalities
 table: Optimization
-order: 15
+order: 38
 ---
 
 # Optimization

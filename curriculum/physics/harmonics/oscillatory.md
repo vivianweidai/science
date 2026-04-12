@@ -3,7 +3,7 @@ subject: Physics
 section: Harmonics
 topic: Oscillatory
 table: Oscillatory
-order: 5
+order: 14
 ---
 
 # Oscillatory

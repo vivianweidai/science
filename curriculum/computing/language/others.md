@@ -1,19 +1,20 @@
 ---
 subject: Computing
 section: Language
-topic: Structure
+topic: Algorithms
 table: Others
-order: 13
+order: 46
 ---
 
 # Others
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr><td>numbers</td><td>word order</td><td>bundle marking</td></tr>
-<tr><td>numbers</td><td>overcounting</td><td>subtractive</td></tr>
-<tr><td>orientation</td><td>absolute</td><td>common</td></tr>
-<tr><td>orientation</td><td>relative</td><td>topography</td></tr>
-<tr><td>kinship</td><td>family tree</td><td>six systems</td></tr>
-<tr><td>kinship</td><td>cousins</td><td>parallel cross</td></tr>
+<tr><td>geometry</td><td>location of all cows grazing</td><td>intersection of rectangles</td></tr>
+<tr><td>geometry</td><td>brute force paint</td><td>one fell swoop extreme sides</td></tr>
+<tr><td>geometry</td><td>gradual by recursive</td><td>overlap of rectangle pairs</td></tr>
+<tr><td>geometry</td><td>location of any cows grazing</td><td>union of rectangles</td></tr>
+<tr><td>geometry</td><td>principle of inclusion exclusion</td><td>every subset overlap $O(2^{n})$</td></tr>
+<tr><td>graphs</td><td>shortest path</td><td>breadth first search</td></tr>
+<tr><td>graphs</td><td>complete traversal</td><td>depth first search</td></tr>
 </table>

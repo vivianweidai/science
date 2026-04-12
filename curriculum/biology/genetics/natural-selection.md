@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Natural Selection
 table: Natural Selection
-order: 17
+order: 37
 ---
 
 # Natural Selection

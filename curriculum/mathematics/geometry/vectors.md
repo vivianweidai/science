@@ -3,7 +3,7 @@ subject: Mathematics
 section: Geometry
 topic: Vectors
 table: Vectors
-order: 8
+order: 23
 ---
 
 # Vectors
@@ -17,6 +17,5 @@ order: 8
 <tr><td>transformations</td><td>rotation</td><td>complex exponential</td></tr>
 <tr><td>distance</td><td>$\overrightarrow{A} \cdot \overrightarrow{B} = {AB}^{2}$</td><td>magnitude</td></tr>
 <tr><td>distance</td><td>$ax + by + c = 0$</td><td>standardized formula</td></tr>
-<tr><td>distance</td><td>$\frac{\vert ax_{0} + by_{0} + c\vert }{\sqrt{a^{2} + b^{2}}}$</td><td>point to line</td></tr>
-<tr><td>centroid</td><td>$G = \left( \frac{a_{1} + b_{1} + c_{1}}{3},\frac{a_{2} + b_{2} + c_{2}}{3} \right)$</td><td></td></tr>
+<tr><td>distance</td><td>$\frac{|ax_{0} + by_{0} + c|}{\sqrt{a^{2} + b^{2}}}$</td><td>point to line</td></tr>
 </table>

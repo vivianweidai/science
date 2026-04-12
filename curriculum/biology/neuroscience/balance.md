@@ -3,7 +3,7 @@ subject: Biology
 section: Neuroscience
 topic: Receptors
 table: Balance
-order: 10
+order: 94
 ---
 
 # Balance

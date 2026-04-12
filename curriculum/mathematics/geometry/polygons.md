@@ -3,7 +3,7 @@ subject: Mathematics
 section: Geometry
 topic: Vectors
 table: Polygons
-order: 7
+order: 22
 ---
 
 # Polygons

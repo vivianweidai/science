@@ -3,7 +3,7 @@ subject: Mathematics
 section: Algebra
 topic: Relations
 table: Functional Equations
-order: 17
+order: 40
 ---
 
 # Functional Equations

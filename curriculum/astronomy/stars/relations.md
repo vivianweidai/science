@@ -3,7 +3,7 @@ subject: Astronomy
 section: Stars
 topic: Relations
 table: Relations
-order: 9
+order: 46
 ---
 
 # Relations

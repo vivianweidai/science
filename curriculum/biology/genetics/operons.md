@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Regulation
 table: Operons
-order: 13
+order: 33
 ---
 
 # Operons

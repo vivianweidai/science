@@ -3,7 +3,7 @@ subject: Astronomy
 section: Cosmology
 topic: Universe
 table: Scale Factor
-order: 13
+order: 67
 ---
 
 # Scale Factor

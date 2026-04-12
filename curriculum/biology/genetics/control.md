@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Replication
 table: Control
-order: 8
+order: 28
 ---
 
 # Control

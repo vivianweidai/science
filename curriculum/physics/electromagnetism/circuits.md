@@ -3,7 +3,7 @@ subject: Physics
 section: Electromagnetism
 topic: Dynamics
 table: Circuits
-order: 4
+order: 19
 ---
 
 # Circuits

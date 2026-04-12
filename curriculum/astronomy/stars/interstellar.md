@@ -3,7 +3,7 @@ subject: Astronomy
 section: Stars
 topic: Interior
 table: Interstellar
-order: 17
+order: 54
 ---
 
 # Interstellar

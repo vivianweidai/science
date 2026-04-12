@@ -3,7 +3,7 @@ subject: Biology
 section: Plants
 topic: Reproduction
 table: Asexual
-order: 13
+order: 69
 ---
 
 # Asexual

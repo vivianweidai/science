@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Replication
 table: Replication
-order: 6
+order: 26
 ---
 
 # Replication

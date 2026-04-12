@@ -3,7 +3,7 @@ subject: Chemistry
 section: Inorganic
 topic: Halogens
 table: Halogens
-order: 22
+order: 94
 ---
 
 # Halogens

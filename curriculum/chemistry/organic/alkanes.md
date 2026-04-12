@@ -3,7 +3,7 @@ subject: Chemistry
 section: Organic
 topic: Alkanes
 table: Alkanes
-order: 7
+order: 60
 ---
 
 # Alkanes

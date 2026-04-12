@@ -3,7 +3,7 @@ subject: Computing
 section: Sampling
 topic: Sampling Distribution
 table: Normal Distribution
-order: 7
+order: 17
 ---
 
 # Normal Distribution

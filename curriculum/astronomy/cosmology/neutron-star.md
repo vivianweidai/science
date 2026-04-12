@@ -3,7 +3,7 @@ subject: Astronomy
 section: Cosmology
 topic: Remnants
 table: Neutron Star
-order: 5
+order: 59
 ---
 
 # Neutron Star

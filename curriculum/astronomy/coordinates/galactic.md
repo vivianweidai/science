@@ -3,7 +3,7 @@ subject: Astronomy
 section: Coordinates
 topic: Celestial
 table: Galactic
-order: 9
+order: 16
 ---
 
 # Galactic

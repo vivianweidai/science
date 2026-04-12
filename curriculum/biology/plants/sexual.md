@@ -3,7 +3,7 @@ subject: Biology
 section: Plants
 topic: Reproduction
 table: Sexual
-order: 12
+order: 68
 ---
 
 # Sexual

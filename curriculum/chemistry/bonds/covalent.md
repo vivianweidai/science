@@ -3,7 +3,7 @@ subject: Chemistry
 section: Bonds
 topic: Intramolecular
 table: Covalent
-order: 3
+order: 11
 ---
 
 # Covalent

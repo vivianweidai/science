@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Mutations
 table: Mutations
-order: 14
+order: 34
 ---
 
 # Mutations

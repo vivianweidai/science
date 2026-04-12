@@ -3,7 +3,7 @@ subject: Computing
 section: Sampling
 topic: Methods
 table: Bias
-order: 3
+order: 13
 ---
 
 # Bias

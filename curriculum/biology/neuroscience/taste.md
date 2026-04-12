@@ -3,7 +3,7 @@ subject: Biology
 section: Neuroscience
 topic: Senses
 table: Taste
-order: 12
+order: 96
 ---
 
 # Taste

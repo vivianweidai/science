@@ -3,7 +3,7 @@ subject: Chemistry
 section: Inorganic
 topic: Mechanisms
 table: Merchanisms
-order: 5
+order: 77
 ---
 
 # Merchanisms
@@ -21,5 +21,4 @@ order: 5
 <tr><td>redox</td><td>inner sphere bridging complex</td><td>larger halide more polarizable</td></tr>
 <tr><td>square planar</td><td>association not dissociation</td><td>readily attack above below</td></tr>
 <tr><td>square planar</td><td>kinetic trans effect</td><td>more polarizable trans directing</td></tr>
-<tr><td>square planar</td><td>$CN^{-} > I^{-} > Br^{-} > Cl^{-} > NH_{3} > H_{2}O$</td><td></td></tr>
 </table>

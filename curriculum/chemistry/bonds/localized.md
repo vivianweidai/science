@@ -3,7 +3,7 @@ subject: Chemistry
 section: Bonds
 topic: Localized
 table: Localized
-order: 4
+order: 12
 ---
 
 # Localized

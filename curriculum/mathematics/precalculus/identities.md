@@ -3,7 +3,7 @@ subject: Mathematics
 section: Precalculus
 topic: Trigonometry
 table: Identities
-order: 1
+order: 42
 ---
 
 # Identities
@@ -13,7 +13,6 @@ order: 1
 <tr><td>trigonometry</td><td>unit circle projections</td><td>periodic sinusoidal</td></tr>
 <tr><td>trigonometry</td><td>$x(t) = r\sin\omega t$</td><td>general form</td></tr>
 <tr><td>identities</td><td>$\sin^{2}x + \cos^{2}x = 1$</td><td>Pythagoras</td></tr>
-<tr><td>identities</td><td>$\sin(\alpha + \beta) = \sin\alpha\cos\beta + \sin\beta\cos\alpha$</td><td></td></tr>
 <tr><td>identities</td><td>sum angles</td><td>composite triangles</td></tr>
 <tr><td>identities</td><td>double expand sums</td><td>half substitute doubles</td></tr>
 <tr><td>identities</td><td>product to sum</td><td>sum to product</td></tr>

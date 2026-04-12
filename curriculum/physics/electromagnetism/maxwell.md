@@ -3,7 +3,7 @@ subject: Physics
 section: Electromagnetism
 topic: Maxwell
 table: Maxwell
-order: 13
+order: 28
 ---
 
 # Maxwell

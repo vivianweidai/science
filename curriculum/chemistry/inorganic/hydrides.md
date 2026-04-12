@@ -3,7 +3,7 @@ subject: Chemistry
 section: Inorganic
 topic: Foundation
 table: Hydrides
-order: 11
+order: 83
 ---
 
 # Hydrides

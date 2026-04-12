@@ -3,7 +3,7 @@ subject: Physics
 section: Harmonics
 topic: Rotational
 table: Rotational
-order: 3
+order: 12
 ---
 
 # Rotational

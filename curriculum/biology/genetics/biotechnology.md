@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Mutations
 table: Biotechnology
-order: 16
+order: 36
 ---
 
 # Biotechnology

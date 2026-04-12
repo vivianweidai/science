@@ -3,7 +3,7 @@ subject: Biology
 section: Neuroscience
 topic: Senses
 table: Smell
-order: 13
+order: 97
 ---
 
 # Smell

@@ -3,7 +3,7 @@ subject: Computing
 section: Language
 topic: Sounds
 table: Syllables
-order: 3
+order: 24
 ---
 
 # Syllables

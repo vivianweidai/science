@@ -3,7 +3,7 @@ subject: Biology
 section: Neuroscience
 topic: Receptors
 table: Hearing
-order: 9
+order: 93
 ---
 
 # Hearing

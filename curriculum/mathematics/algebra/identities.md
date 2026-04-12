@@ -3,7 +3,7 @@ subject: Mathematics
 section: Algebra
 topic: Identities
 table: Identities
-order: 12
+order: 35
 ---
 
 # Identities

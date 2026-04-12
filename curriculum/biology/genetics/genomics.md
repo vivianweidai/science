@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Phylogeny
 table: Genomics
-order: 21
+order: 41
 ---
 
 # Genomics

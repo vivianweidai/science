@@ -3,7 +3,7 @@ subject: Astronomy
 section: Solar System
 topic: Planets
 table: History
-order: 1
+order: 30
 ---
 
 # History

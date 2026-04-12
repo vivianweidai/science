@@ -1,19 +1,24 @@
 ---
 subject: Computing
 section: Statistics
-topic: Measurement
+topic: Distributions
 table: Single
-order: 1
+order: 3
 ---
 
 # Single
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr><td>absolute</td><td>$x \pm \Delta x$</td><td>absolute error</td></tr>
-<tr><td>absolute</td><td>$u = 2x$</td><td>$\Delta u = 2\Delta x$ scaling</td></tr>
-<tr><td>relative</td><td>$\frac{\Delta x}{x}$</td><td>relative error</td></tr>
-<tr><td>relative</td><td>$u = 2x$ $\frac{du}{u} = \frac{2dx}{2x} = \frac{dx}{x}$</td><td>$\frac{\Delta 2x}{2x} = \frac{\Delta x}{x}$ scaling</td></tr>
-<tr><td>relative</td><td>$v = \frac{x}{t}$ $\frac{dv}{v} = \frac{- \frac{x}{t^{2}}}{\frac{x}{t}} = - \frac{dt}{t}$</td><td>$\frac{\Delta(1/x)}{\frac{1}{x}} = \frac{\Delta x}{x}$ reciprocal</td></tr>
-<tr><td>relative</td><td>$A = s^{2}$ $\frac{dA}{A} = \frac{2sds}{s^{2}} = 2 \cdot \frac{ds}{s}$</td><td>$\frac{\Delta(x^{2})}{x^{2}} = 2 \cdot \frac{\Delta x}{x}$ power</td></tr>
+<tr><td>statistics</td><td>collect and analyze</td><td>draw conclusions from data</td></tr>
+<tr><td>statistics</td><td>categorical and quantitative</td><td>tabular graphical numerical</td></tr>
+<tr><td>graphical</td><td>data center variation</td><td>shape symmetric skewed</td></tr>
+<tr><td>graphical</td><td>patterns clusters gaps</td><td>outliers $1.5 \times$ inter quartile</td></tr>
+<tr><td>numerical</td><td>$\overline{x} = \frac{\sum x_{i}}{n}$ center</td><td>$s = \sqrt{\frac{\sum(x_{i} - \overline{x})^{2}}{n - 1}}$ variation</td></tr>
+<tr><td>numerical</td><td>$P_{k} = \frac{(n + 1)}{100}k$ percentile</td><td>$IQR = Q_{3} - Q_{1}$ inter quartile</td></tr>
+<tr><td>numerical</td><td>$z\text{-score} = \frac{x - \overline{x}}{s}$</td><td>distance in standard deviations</td></tr>
+<tr><td>normal</td><td>single peak symmetric</td><td>magical for statistics</td></tr>
+<tr><td>normal</td><td>central limit theorem</td><td>sample means always normal</td></tr>
+<tr><td>normal</td><td>completely specified $(\mu,\sigma)$</td><td>interval integrals all known</td></tr>
+<tr><td>normal</td><td>standard normal $(0,1)$</td><td>$z = \frac{x - \mu}{\sigma}$ conversion</td></tr>
 </table>

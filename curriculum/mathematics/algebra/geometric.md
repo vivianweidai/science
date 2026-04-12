@@ -1,9 +1,9 @@
 ---
 subject: Mathematics
 section: Algebra
-topic: Sequences and Series
+topic: Sequences And Series
 table: Geometric
-order: 4
+order: 27
 ---
 
 # Geometric

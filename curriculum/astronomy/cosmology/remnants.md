@@ -3,7 +3,7 @@ subject: Astronomy
 section: Cosmology
 topic: Remnants
 table: Remnants
-order: 3
+order: 57
 ---
 
 # Remnants

@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Mendel
 table: Inheritance
-order: 2
+order: 22
 ---
 
 # Inheritance

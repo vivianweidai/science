@@ -3,7 +3,7 @@ subject: Chemistry
 section: Organic
 topic: Spectroscopy
 table: Nmr
-order: 19
+order: 72
 ---
 
 # Nmr

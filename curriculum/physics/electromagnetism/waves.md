@@ -3,7 +3,7 @@ subject: Physics
 section: Electromagnetism
 topic: Maxwell
 table: Waves
-order: 14
+order: 29
 ---
 
 # Waves

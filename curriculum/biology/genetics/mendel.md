@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Mendel
 table: Mendel
-order: 1
+order: 21
 ---
 
 # Mendel

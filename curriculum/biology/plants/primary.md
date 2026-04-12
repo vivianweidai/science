@@ -3,7 +3,7 @@ subject: Biology
 section: Plants
 topic: Growth
 table: Primary
-order: 3
+order: 59
 ---
 
 # Primary

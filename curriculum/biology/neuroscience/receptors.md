@@ -3,7 +3,7 @@ subject: Biology
 section: Neuroscience
 topic: Receptors
 table: Receptors
-order: 8
+order: 92
 ---
 
 # Receptors

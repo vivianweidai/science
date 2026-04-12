@@ -3,7 +3,7 @@ subject: Chemistry
 section: Bonds
 topic: Intramolecular
 table: Ionic
-order: 2
+order: 10
 ---
 
 # Ionic

@@ -3,7 +3,7 @@ subject: Mathematics
 section: Geometry
 topic: Circles
 table: Inscriptions
-order: 5
+order: 20
 ---
 
 # Inscriptions

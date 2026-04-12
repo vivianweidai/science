@@ -3,7 +3,7 @@ subject: Chemistry
 section: Bonds
 topic: Intramolecular
 table: Intramolecular
-order: 1
+order: 9
 ---
 
 # Intramolecular

@@ -3,7 +3,7 @@ subject: Chemistry
 section: Bonds
 topic: Quantum
 table: Molecular Orbital
-order: 6
+order: 14
 ---
 
 # Molecular Orbital

@@ -3,7 +3,7 @@ subject: Mathematics
 section: Algebra
 topic: Functions
 table: Functions
-order: 1
+order: 24
 ---
 
 # Functions

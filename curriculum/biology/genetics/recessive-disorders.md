@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Mendel
 table: Recessive Disorders
-order: 3
+order: 23
 ---
 
 # Recessive Disorders

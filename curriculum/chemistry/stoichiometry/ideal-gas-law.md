@@ -3,7 +3,7 @@ subject: Chemistry
 section: Stoichiometry
 topic: Gases
 table: Ideal Gas Law
-order: 5
+order: 25
 ---
 
 # Ideal Gas Law

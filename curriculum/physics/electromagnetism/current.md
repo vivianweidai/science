@@ -3,7 +3,7 @@ subject: Physics
 section: Electromagnetism
 topic: Dynamics
 table: Current
-order: 3
+order: 18
 ---
 
 # Current

@@ -3,7 +3,7 @@ subject: Mathematics
 section: Combinatorics
 topic: Probability
 table: Probability
-order: 4
+order: 11
 ---
 
 # Probability
@@ -17,5 +17,5 @@ order: 4
 <tr><td>continuous</td><td>non discrete</td><td>probability</td></tr>
 <tr><td>continuous</td><td>overlapping visits</td><td>geometric representation</td></tr>
 <tr><td>conditional</td><td>reduces events</td><td>success total</td></tr>
-<tr><td>conditional</td><td>$P(A\vert B) = \frac{P(A \cap B)}{P(B)}$</td><td>condition event</td></tr>
+<tr><td>conditional</td><td>$P(A|B) = \frac{P(A \cap B)}{P(B)}$</td><td>condition event</td></tr>
 </table>

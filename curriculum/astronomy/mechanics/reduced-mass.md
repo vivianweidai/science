@@ -3,7 +3,7 @@ subject: Astronomy
 section: Mechanics
 topic: Kepler
 table: Reduced Mass
-order: 3
+order: 23
 ---
 
 # Reduced Mass

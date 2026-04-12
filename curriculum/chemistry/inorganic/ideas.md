@@ -3,7 +3,7 @@ subject: Chemistry
 section: Inorganic
 topic: Ideas
 table: Ideas
-order: 9
+order: 81
 ---
 
 # Ideas

@@ -1,7 +1,7 @@
 ---
 subject: Physics
 section: Mechanics
-topic: System of Particles
+topic: System Of Particles
 table: Collisions
 order: 9
 ---

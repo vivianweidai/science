@@ -1,28 +1,22 @@
 ---
 subject: Biology
 section: Animals
-topic: Digestive
+topic: Excretory
 table: Stages
-order: 5
+order: 80
 ---
 
 # Stages
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr><td>ingestion</td><td>oral cavity takes in</td><td>tongue mixes to bolus</td></tr>
-<tr><td>ingestion</td><td>salivary glands water salts</td><td>amalyase dissolve starch</td></tr>
-<tr><td>ingestion</td><td>pharynx splits path</td><td>esophagus by peristalsis</td></tr>
-<tr><td>digestion</td><td>stomach mix to chyme</td><td>mechanical and chemical</td></tr>
-<tr><td>digestion</td><td>gastric juice acidic</td><td>pepsin dissolve proteins</td></tr>
-<tr><td>digestion</td><td>small intestine duodenum</td><td>with accessory glands</td></tr>
-<tr><td>digestion</td><td>pancreas and liver enzymes</td><td>dissolve all macromolecules</td></tr>
-<tr><td>absorption</td><td>small intestine jejunum</td><td>large surface area lining</td></tr>
-<tr><td>absorption</td><td>passive active transport</td><td>move nutrients into blood</td></tr>
-<tr><td>absorption</td><td>hepatic portal vein</td><td>blood to liver filter toxins</td></tr>
-<tr><td>absorption</td><td>fats broken by bile salts</td><td>lymph to veins to heart</td></tr>
-<tr><td>absorption</td><td>large intestine colon</td><td>recovers water</td></tr>
-<tr><td>adaptations</td><td>carnivores incisor teeth</td><td>herbivore molar teeth</td></tr>
-<tr><td>adaptations</td><td>coprophagy dung eating</td><td>ruminants regurgitate</td></tr>
-<tr><td>adaptations</td><td>large intestine cecum</td><td>herbivores microbiome bacteria</td></tr>
+<tr><td>filtration</td><td>blood to tubules</td><td>filtered in stages</td></tr>
+<tr><td>filtration</td><td>blood pressure pushes filtrate</td><td>glomerulus to Bowman capsule</td></tr>
+<tr><td>filtration</td><td>selective permeability</td><td>only small molecules pass</td></tr>
+<tr><td>reabsorption</td><td>filtrate through nephron</td><td>proximal loop of Henle distal</td></tr>
+<tr><td>reabsorption</td><td>active sodium reabsorbed</td><td>passive water salts reabsorbed</td></tr>
+<tr><td>excretion</td><td>selective secretion</td><td>passive urea ejection</td></tr>
+<tr><td>excretion</td><td>release filtrate as urine</td><td>isoosmotic to inner medulla</td></tr>
+<tr><td>water</td><td>countercurrent exchange</td><td>medulla increasing osmolarity</td></tr>
+<tr><td>water</td><td>countercurrent multiplier</td><td>active maintain gradient</td></tr>
 </table>

@@ -3,7 +3,7 @@ subject: Mathematics
 section: Precalculus
 topic: Trigonometry
 table: Parametric
-order: 2
+order: 43
 ---
 
 # Parametric
@@ -17,5 +17,4 @@ order: 2
 <tr><td>cylindrical</td><td>magnitude angle height</td><td>Pythagoras</td></tr>
 <tr><td>cylindrical</td><td>$(r,\theta,z)$</td><td>height</td></tr>
 <tr><td>spherical</td><td>magnitude angle angle</td><td>Pythagoras</td></tr>
-<tr><td>spherical</td><td>$x = \rho\sin\varphi\cos\theta y = \rho\sin\varphi\sin\theta z = \rho\cos\varphi$</td><td></td></tr>
 </table>

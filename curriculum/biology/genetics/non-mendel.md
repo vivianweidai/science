@@ -3,7 +3,7 @@ subject: Biology
 section: Genetics
 topic: Non Mendel
 table: Non Mendel
-order: 4
+order: 24
 ---
 
 # Non Mendel
@@ -17,7 +17,7 @@ order: 4
 <tr><td>linked</td><td>map units recombine frequency</td><td>proportional to physical distance</td></tr>
 <tr><td>linked</td><td>use $AaBb \times aabb$</td><td>to determine frequency</td></tr>
 <tr><td>sex linked</td><td>genes on sex chromosome</td><td>traits appear in one gender</td></tr>
-<tr><td>sex linked</td><td>X linked three alleles Y X^A^ X^a^</td><td>recessive more likely males</td></tr>
+<tr><td>sex linked</td><td>X linked three alleles Y X A X a</td><td>recessive more likely males</td></tr>
 <tr><td>sex linked</td><td>Bar body only one $X$ is active</td><td>in any one cell tortoiseshell cats</td></tr>
 <tr><td>X linked recessive</td><td>color blindness</td><td>humans for red and gree colors</td></tr>
 <tr><td>X linked recessive</td><td>hemophilia clotting protein</td><td>cannot stop bleeding</td></tr>
