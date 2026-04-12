@@ -64,21 +64,20 @@ photos:
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/LAYOUT/shuffle.js"></script>
 
-<div class="project-meta">April 11th 2026<br>Thermo Scientific Refrigerated Centrifuge, BioRad Mini Centrifuge, VWR pH 1100 L</div>
+<div class="project-meta">April 11th 2026<br>Thermo Scientific Sorvall RT3 Centrifuge, Sartorius CP225D Analytical Balance, VWR pHenomenal pH 1100 L, Scientific Industries Vortex-Genie 2</div>
 
 ## Overview
 
-Centrifugation separates the components of a mixture by spinning it at high speed — denser particles are forced to the bottom of the tube as a pellet, while lighter material stays in the supernatant above. This experiment centrifuged five common household liquids to observe what separates out, and measured the pH of each sample before and after centrifugation using a benchtop pH meter. The session was part of a Basic Lab Training course covering centrifuges, pH meters, analytical balances, and pipettes.
+This experiment centrifuged five common household liquids to observe what separates out. We also practiced basic lab techniques of solution sample preparation with pipettes, analytical balances and pH meters.
 
 ## Setup
 
 | Category | Details |
 |----------|---------|
-| Centrifuge | Thermo Scientific Refrigerated Centrifuge (large format) |
-| Mini centrifuge | BioRad (small format, for microtubes) |
-| pH meter | VWR pH 1100 L, calibrated at 25 °C |
-| Vortex mixer | Scientific Industries Vortex Genie 2 |
-| Balance | Sartorius analytical balance |
+| Centrifuge | Thermo Scientific Sorvall RT3 Centrifuge |
+| pH meter | VWR pHenomenal pH 1100 L, calibrated at 25 °C |
+| Vortex mixer | Scientific Industries Vortex-Genie 2 |
+| Balance | Sartorius CP225D Analytical Balance |
 | Tubes | Sarstedt 50 mL conical centrifuge tubes, Falcon 50 mL tubes |
 
 ## Samples
