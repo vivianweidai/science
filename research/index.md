@@ -25,7 +25,7 @@ layout: default
     <div class="name-cell"><a href="20260404%20Four%20Point%20Probe/">Four-Point Probe</a> — Sheet resistance of conductive materials</div>
   </div>
 
-  <div class="entry">
+  <div class="entry hl">
     <div class="month">April</div>
     <div class="chips-cell"><span class="chip chem">Chemistry</span></div>
     <div class="name-cell"><a href="20260401%20IR%20Spectroscopy/">IR Spectroscopy</a> — Functional group identification of everyday materials</div>
@@ -60,6 +60,8 @@ layout: default
   .timeline .entry .month { color: #656d76; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .timeline .entry .chips-cell { white-space: nowrap; display: flex; gap: 2px; align-items: center; }
   .timeline .entry .name-cell { }
+  .timeline .entry.hl { position: relative; }
+  .timeline .entry.hl::before { content: ''; position: absolute; inset: -.1em -.4em; background: #fff44f; border-radius: 6px; z-index: -1; }
   .timeline .entry .name-cell a { color: #0969da; text-decoration: none; font-weight: 600; }
   .timeline .entry .name-cell a:hover { text-decoration: underline; }
 
