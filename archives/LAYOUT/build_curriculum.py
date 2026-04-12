@@ -248,7 +248,7 @@ def highlighted_rows_for_table(hl_tree: dict,
 
 def build_manifest(root: Path) -> dict:
     curr = root / "curriculum"
-    hl_tree = load_all_highlights(root / "archives" / "NOTES")
+    hl_tree = load_all_highlights(root / "curriculum" / "archives")
 
     manifest: dict = {}
     for subj_slug, subj_name in SUBJECT_NAMES.items():
