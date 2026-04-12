@@ -8,7 +8,7 @@ Output (consumed by olympiads/index.md client-side JS and by the iOS app):
   archives/CONTENT/olympiads.json
 
 Output shape:
-    {"items": [ {id, type, subject, date, sort_key, name, country?, finished, highlighted}, ... ]}
+    {"items": [ {id, type, subject, date, sort_key, name, country?, highlighted}, ... ]}
 
 Run this after editing the YAML, then commit both the YAML and the JSON.
 There is no CI validation — the editor is responsible for remembering to rebuild.
@@ -55,15 +55,13 @@ def build_activities() -> list[dict]:
     items = []
     for i, e in enumerate(data):
         # Validate required fields
-        for field in ("type", "subject", "date", "name", "finished", "highlighted"):
+        for field in ("type", "subject", "date", "name", "highlighted"):
             if field not in e:
                 raise ValueError(f"entry[{i}] missing required field {field!r}: {e}")
         if e["type"] not in TYPES:
             raise ValueError(f"entry[{i}] invalid type {e['type']!r}")
         if e["subject"] not in SUBJECTS:
             raise ValueError(f"entry[{i}] invalid subject {e['subject']!r}")
-        if not isinstance(e["finished"], bool):
-            raise ValueError(f"entry[{i}] finished must be true/false")
         if not isinstance(e["highlighted"], bool):
             raise ValueError(f"entry[{i}] highlighted must be true/false")
         if e["type"] == "olympiad" and "country" not in e:
@@ -76,7 +74,6 @@ def build_activities() -> list[dict]:
             "date": e["date"],
             "sort_key": sort_key(e["date"]),
             "name": e["name"],
-            "finished": 1 if e["finished"] else 0,
             "highlighted": 1 if e["highlighted"] else 0,
         }
         if e.get("country"):

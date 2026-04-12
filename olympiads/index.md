@@ -32,31 +32,19 @@ layout: default
   .timeline { border-left: 2px solid #d1d9e0; margin-left: .8em; padding-left: 1.2em; }
   .timeline .year-marker {
     font-weight: 700; font-size: 1.1em;
-    margin: 1.2em 0 .4em -1.9em;
-    padding-left: .5em;
+    margin: 1.2em 0 .4em 0;
     background: #fff;
     display: inline-block;
     position: relative;
   }
-  .timeline .year-marker::before {
-    content: ""; position: absolute; left: -.5em; top: .35em;
-    width: .8em; height: .8em; border-radius: 50%; background: #1f2328;
-  }
   .timeline .entry {
     display: grid;
-    grid-template-columns: 4.5em 1fr;
+    grid-template-columns: 6.5em 1fr;
     gap: .8em;
     padding: .35em 0;
     position: relative;
     font-size: .95em;
   }
-  .timeline .entry::before {
-    content: ""; position: absolute; left: -1.5em; top: .9em;
-    width: .5em; height: .5em; border-radius: 50%; background: #d1d9e0;
-  }
-  .timeline .entry.hl::before { background: #e5a800; width: .65em; height: .65em; left: -1.57em; top: .85em; }
-  .timeline .entry.done { color: #656d76; }
-  .timeline .entry.done .ename { text-decoration: line-through; }
   .timeline .entry .month { color: #656d76; font-variant-numeric: tabular-nums; }
   .timeline .entry.hl { background: #fffbe0; border-radius: 6px; padding-left: .4em; padding-right: .4em; margin-left: -.4em; margin-right: -.4em; }
 
@@ -77,6 +65,7 @@ layout: default
   .chip.astro { background: #fff3cd; }
 
   .type-icon { font-size: .85em; margin-right: .15em; }
+  .rings-icon { vertical-align: middle; margin-right: .2em; }
 
   .legend { font-size: .82em; color: #656d76; margin: .3em 0 1em; line-height: 2; }
   .legend .chip { margin-right: .3em; }
@@ -91,8 +80,6 @@ layout: default
     Mathematics: 'math', Computing: 'comp', Physics: 'phys',
     Chemistry: 'chem', Biology: 'bio', Astronomy: 'astro'
   };
-  var FLAGS = { 'Canada': '🇨🇦', 'United States': '🇺🇸' };
-
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
@@ -126,13 +113,14 @@ layout: default
     yearOrder.forEach(function (y) {
       html += '<div class="year-marker">' + y + '</div>';
       years[y].forEach(function (e) {
-        var month = e.date === 'Future' ? '' : e.date.split(' ')[0].slice(0, 3);
-        var flag = e.country ? (FLAGS[e.country] || '') + ' ' : '';
-        var icon = e.type === 'olympiad' ? '<span class="type-icon">🏅</span>' : '<span class="type-icon">📖</span>';
-        var cls = (e.highlighted ? ' hl' : '') + (e.finished ? ' done' : '');
+        var month = e.date === 'Future' ? '' : e.date.split(' ')[0];
+        var icon = e.type === 'olympiad'
+          ? '<svg class="rings-icon" viewBox="0 0 50 24" width="20" height="10"><circle cx="8" cy="8" r="6" fill="none" stroke="#0081C8" stroke-width="1.5"/><circle cx="18" cy="8" r="6" fill="none" stroke="#000" stroke-width="1.5"/><circle cx="28" cy="8" r="6" fill="none" stroke="#EE334E" stroke-width="1.5"/><circle cx="13" cy="14" r="6" fill="none" stroke="#FCB131" stroke-width="1.5"/><circle cx="23" cy="14" r="6" fill="none" stroke="#00A651" stroke-width="1.5"/></svg> '
+          : '<span class="type-icon">📖</span>';
+        var cls = e.highlighted ? ' hl' : '';
         html += '<div class="entry' + cls + '" data-subject="' + SUBJECT_SLUGS[e.subject] + '">'
           + '<div class="month">' + month + '</div>'
-          + '<div>' + flag + icon + chip(e.subject) + ' <span class="ename">' + esc(e.name) + '</span></div>'
+          + '<div>' + icon + chip(e.subject) + ' <span class="ename">' + esc(e.name) + '</span></div>'
           + '</div>';
       });
     });

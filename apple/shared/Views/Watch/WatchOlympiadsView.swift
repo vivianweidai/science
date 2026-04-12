@@ -44,9 +44,7 @@ struct WatchOlympiadsView: View {
                 ForEach(filtered.filter(\.isOlympiad)) { a in
                     VStack(alignment: .leading, spacing: 1) {
                         Text(a.name)
-                            .font(.footnote)
-                            .strikethrough(a.finished == 1)
-                        Text("\(a.date) \(a.country.map { "• \($0)" } ?? "")")
+                            .font(.footnote)                        Text("\(a.date) \(a.country.map { "• \($0)" } ?? "")")
                             .font(.caption2)
                             .foregroundStyle(.secondary)
                     }
@@ -56,9 +54,7 @@ struct WatchOlympiadsView: View {
                 ForEach(filtered.filter(\.isTextbook)) { a in
                     VStack(alignment: .leading, spacing: 1) {
                         Text(a.name)
-                            .font(.footnote)
-                            .strikethrough(a.finished == 1)
-                        Text(a.date)
+                            .font(.footnote)                        Text(a.date)
                             .font(.caption2)
                             .foregroundStyle(.secondary)
                     }

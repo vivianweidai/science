@@ -7,7 +7,6 @@
       "date": "Future",
       "sort_key": "9999-12",
       "name": "Differential Equations with Applications and Historical Notes by George F. Simmons",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -17,7 +16,6 @@
       "date": "Future",
       "sort_key": "9999-12",
       "name": "Linear Algebra Done Right by Sheldon Axler",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -27,7 +25,6 @@
       "date": "Future",
       "sort_key": "9999-12",
       "name": "Olympiad Training for Individual Study by Evan Chen",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -37,7 +34,6 @@
       "date": "Future",
       "sort_key": "9999-12",
       "name": "The Art of Problem Solving Math Worldwide Online Olympiad Training A",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -47,7 +43,6 @@
       "date": "Future",
       "sort_key": "9999-12",
       "name": "The Art of Problem Solving Math Worldwide Online Olympiad Training B",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -57,7 +52,6 @@
       "date": "June 2026",
       "sort_key": "2026-06",
       "name": "Euclidean Geometry in Mathematical Olympiads by Evan Chen",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -67,7 +61,6 @@
       "date": "June 2026",
       "sort_key": "2026-06",
       "name": "AwesomeMath Summer Program",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -77,7 +70,6 @@
       "date": "December 2025",
       "sort_key": "2025-12",
       "name": "Calculus: Early Transcendentals by James Stewart",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -87,7 +79,6 @@
       "date": "November 2025",
       "sort_key": "2025-11",
       "name": "American Mathematics Competition 12",
-      "finished": 0,
       "highlighted": 1,
       "country": "United States"
     },
@@ -98,7 +89,6 @@
       "date": "November 2025",
       "sort_key": "2025-11",
       "name": "Athemath Women in Math Online Social Network",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -108,7 +98,6 @@
       "date": "October 2025",
       "sort_key": "2025-10",
       "name": "Canadian Open Mathematics Challenge",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -119,7 +108,6 @@
       "date": "September 2025",
       "sort_key": "2025-09",
       "name": "The Art of Problem Solving American Mathematics Competition 12 Series",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -129,7 +117,6 @@
       "date": "July 2025",
       "sort_key": "2025-07",
       "name": "MathPath Summer Camp at Mount Holyoke College",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -139,7 +126,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Advanced Placement Calculus BC Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -149,7 +135,6 @@
       "date": "November 2024",
       "sort_key": "2024-11",
       "name": "American Mathematics Competition 12",
-      "finished": 1,
       "highlighted": 0,
       "country": "United States"
     },
@@ -160,7 +145,6 @@
       "date": "October 2024",
       "sort_key": "2024-10",
       "name": "Canadian Open Mathematics Challenge",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -171,7 +155,6 @@
       "date": "July 2024",
       "sort_key": "2024-07",
       "name": "MathPath Summer Camp at Rockhurst University",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -181,7 +164,6 @@
       "date": "May 2024",
       "sort_key": "2024-05",
       "name": "Advanced Placement Precalculus Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -191,7 +173,6 @@
       "date": "May 2024",
       "sort_key": "2024-05",
       "name": "The Art of Problem Solving by Richard Rusczyk et al",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -201,7 +182,6 @@
       "date": "May 2024",
       "sort_key": "2024-05",
       "name": "The Art of Problem Solving Book Series by Richard Rusczyk et al",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -211,7 +191,6 @@
       "date": "September 2023",
       "sort_key": "2023-09",
       "name": "Precalculus Mathematics in a Nutshell by George F. Simmons",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -221,7 +200,6 @@
       "date": "Future",
       "sort_key": "9999-12",
       "name": "The Art of Problem Solving Code Worldwide Online Olympiad Training",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -231,7 +209,6 @@
       "date": "December 2026",
       "sort_key": "2026-12",
       "name": "USA North America Artificial Intelligence Olympiad",
-      "finished": 0,
       "highlighted": 0,
       "country": "United States"
     },
@@ -242,7 +219,6 @@
       "date": "November 2026",
       "sort_key": "2026-11",
       "name": "Canada Artificial Intelligence National Challenge",
-      "finished": 0,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -253,7 +229,6 @@
       "date": "June 2026",
       "sort_key": "2026-06",
       "name": "Introduction to Machine Learning by Etienne Bernard",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -263,7 +238,6 @@
       "date": "June 2026",
       "sort_key": "2026-06",
       "name": "Introduction to Machine Learning with Python by Andreas Müller and Sarah Guido",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -273,7 +247,6 @@
       "date": "June 2026",
       "sort_key": "2026-06",
       "name": "Deep Learning for Coders with fastai and PyTorch by Jeremy Howard and Sylvain Gugger",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -283,7 +256,6 @@
       "date": "June 2026",
       "sort_key": "2026-06",
       "name": "Machine Learning with PyTorch and Scikit-Learn by Sebastian Raschka",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -293,7 +265,6 @@
       "date": "June 2026",
       "sort_key": "2026-06",
       "name": "Grokking Machine Learning by Luis Serrano",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -303,7 +274,6 @@
       "date": "May 2026",
       "sort_key": "2026-05",
       "name": "Advanced Placement Statistics Exam",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -313,7 +283,6 @@
       "date": "January 2026",
       "sort_key": "2026-01",
       "name": "North American Computational Linguistics Open Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "United States"
     },
@@ -324,7 +293,6 @@
       "date": "January 2026",
       "sort_key": "2026-01",
       "name": "Puzzles in Logic, Languages and Computation: the Red book by Dragomir Radev",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -334,7 +302,6 @@
       "date": "January 2026",
       "sort_key": "2026-01",
       "name": "Puzzles in Logic, Languages and Computation: the Green book by Dragomir Radev",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -344,7 +311,6 @@
       "date": "December 2025",
       "sort_key": "2025-12",
       "name": "Linguistics Olympiad: Training Guide - the Yellow book by Vlad A. Neacșu",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -354,7 +320,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Advanced Placement Statistics Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -364,7 +329,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Advanced Placement Computer Science A Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -374,7 +338,6 @@
       "date": "March 2025",
       "sort_key": "2025-03",
       "name": "Canadian Computing Competition Senior Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -385,7 +348,6 @@
       "date": "January 2025",
       "sort_key": "2025-01",
       "name": "North American Computational Linguistics Open Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -396,7 +358,6 @@
       "date": "January 2025",
       "sort_key": "2025-01",
       "name": "USA Computing Olympiad Bronze Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "United States"
     },
@@ -407,7 +368,6 @@
       "date": "January 2025",
       "sort_key": "2025-01",
       "name": "The Art of Problem Solving USACO Bronze Series",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -417,7 +377,6 @@
       "date": "May 2024",
       "sort_key": "2024-05",
       "name": "Advanced Placement Computer Science A Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -427,7 +386,6 @@
       "date": "May 2024",
       "sort_key": "2024-05",
       "name": "Advanced Placement Computer Science Principles Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -437,7 +395,6 @@
       "date": "March 2024",
       "sort_key": "2024-03",
       "name": "Canadian Computing Competition Senior Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -448,7 +405,6 @@
       "date": "January 2024",
       "sort_key": "2024-01",
       "name": "USA Computing Olympiad Bronze Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "United States"
     },
@@ -459,7 +415,6 @@
       "date": "Future",
       "sort_key": "9999-12",
       "name": "The Feynman Lectures on Physics by Richard Feynman",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -469,7 +424,6 @@
       "date": "Future",
       "sort_key": "9999-12",
       "name": "The Art of Problem Solving Physics Worldwide Online Olympiad Training A",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -479,7 +433,6 @@
       "date": "Future",
       "sort_key": "9999-12",
       "name": "The Art of Problem Solving Physics Worldwide Online Olympiad Training B",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -489,7 +442,6 @@
       "date": "May 2026",
       "sort_key": "2026-05",
       "name": "Advanced Placement Physics 2 Exam",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -499,7 +451,6 @@
       "date": "May 2026",
       "sort_key": "2026-05",
       "name": "Advanced Placement Physics C: Electricity and Magnetism Exam",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -509,7 +460,6 @@
       "date": "April 2026",
       "sort_key": "2026-04",
       "name": "Canadian Association of Physicists High School Prize Exam",
-      "finished": 0,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -520,7 +470,6 @@
       "date": "March 2026",
       "sort_key": "2026-03",
       "name": "Junior Science Olympiad of Canada Exam",
-      "finished": 0,
       "highlighted": 1,
       "country": "Canada"
     },
@@ -531,7 +480,6 @@
       "date": "February 2026",
       "sort_key": "2026-02",
       "name": "USA Physics Olympiad F=ma Qualifying Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "United States"
     },
@@ -542,7 +490,6 @@
       "date": "December 2025",
       "sort_key": "2025-12",
       "name": "Physics: Principles with Applications by Douglas C. Giancoli",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -552,7 +499,6 @@
       "date": "December 2025",
       "sort_key": "2025-12",
       "name": "Physics by Halliday, Resnick and Krane",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -562,7 +508,6 @@
       "date": "December 2025",
       "sort_key": "2025-12",
       "name": "Physics Olympiad Handouts by Kevin Zhou",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -572,7 +517,6 @@
       "date": "November 2025",
       "sort_key": "2025-11",
       "name": "Junior Science Olympiad of Canada National Camp - Invitation",
-      "finished": 0,
       "highlighted": 1,
       "country": "Canada"
     },
@@ -583,7 +527,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Junior Science Olympiad of Canada Exams",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -594,7 +537,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Advanced Placement Physics 1 Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -604,7 +546,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Advanced Placement Physics 2 Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -614,7 +555,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Advanced Placement Physics C: Mechanics Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -624,7 +564,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Advanced Placement Physics C: Electricity and Magnetism Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -634,7 +573,6 @@
       "date": "April 2025",
       "sort_key": "2025-04",
       "name": "Canadian Association of Physicists High School Prize Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -645,7 +583,6 @@
       "date": "March 2025",
       "sort_key": "2025-03",
       "name": "The Art of Problem Solving Physics F=ma Series",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -655,7 +592,6 @@
       "date": "February 2025",
       "sort_key": "2025-02",
       "name": "USA Physics Olympiad F=ma Qualifying Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "United States"
     },
@@ -666,7 +602,6 @@
       "date": "May 2024",
       "sort_key": "2024-05",
       "name": "Junior Science Olympiad of Canada Exams",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -677,7 +612,6 @@
       "date": "May 2024",
       "sort_key": "2024-05",
       "name": "University Physics by Richard Wolfson",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -687,7 +621,6 @@
       "date": "May 2024",
       "sort_key": "2024-05",
       "name": "Advanced Placement Physics 1 Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -697,7 +630,6 @@
       "date": "April 2024",
       "sort_key": "2024-04",
       "name": "Canadian Association of Physicists High School Prize Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -708,7 +640,6 @@
       "date": "March 2024",
       "sort_key": "2024-03",
       "name": "Johns Hopkins University Center for Talented Youth AP Physics 1",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -718,7 +649,6 @@
       "date": "February 2024",
       "sort_key": "2024-02",
       "name": "USA Physics Olympiad F=ma Qualifying Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "United States"
     },
@@ -729,7 +659,6 @@
       "date": "January 2027",
       "sort_key": "2027-01",
       "name": "Chemistry 342 Organic Chemistry B Organic Chemistry by Paula Yurkanis Bruice",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -739,7 +668,6 @@
       "date": "September 2026",
       "sort_key": "2026-09",
       "name": "Chemistry 341 Organic Chemistry A Organic Chemistry by Paula Yurkanis Bruice",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -749,7 +677,6 @@
       "date": "May 2026",
       "sort_key": "2026-05",
       "name": "Advanced Placement Chemistry Exam",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -759,7 +686,6 @@
       "date": "May 2026",
       "sort_key": "2026-05",
       "name": "British Columbia Chemistry Olympiad",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -769,7 +695,6 @@
       "date": "May 2026",
       "sort_key": "2026-05",
       "name": "Atkins' Physical Chemistry by Peter Atkins, Julio de Paula and James Keeler",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -779,7 +704,6 @@
       "date": "May 2026",
       "sort_key": "2026-05",
       "name": "Organic Chemistry by Jonathan Clayden, Nick Greeves and Stuart Warren",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -789,7 +713,6 @@
       "date": "May 2026",
       "sort_key": "2026-05",
       "name": "Inorganic Chemistry by Mark Weller, Jonathan Rourke, Fraser Armstrong and Tina Overton",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -799,7 +722,6 @@
       "date": "April 2026",
       "sort_key": "2026-04",
       "name": "Canadian Chemistry Olympiad Exams",
-      "finished": 0,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -810,7 +732,6 @@
       "date": "April 2026",
       "sort_key": "2026-04",
       "name": "Canadian Chemistry Olympiad Training Course by Ivan Shershnev",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -820,7 +741,6 @@
       "date": "March 2026",
       "sort_key": "2026-03",
       "name": "United States National Chemistry Olympiad Local Exam",
-      "finished": 0,
       "highlighted": 1,
       "country": "United States"
     },
@@ -831,7 +751,6 @@
       "date": "March 2026",
       "sort_key": "2026-03",
       "name": "Junior Science Olympiad of Canada Exam",
-      "finished": 0,
       "highlighted": 1,
       "country": "Canada"
     },
@@ -842,7 +761,6 @@
       "date": "March 2026",
       "sort_key": "2026-03",
       "name": "Descriptive Inorganic, Coordination, and Solid State Chemistry by Glen E. Rodgers",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -852,7 +770,6 @@
       "date": "February 2026",
       "sort_key": "2026-02",
       "name": "Organic Chemistry as a Second Language by David Klein",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -862,7 +779,6 @@
       "date": "January 2026",
       "sort_key": "2026-01",
       "name": "The Art of Problem Solving Chemistry Worldwide Online Olympiad Training B",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -872,7 +788,6 @@
       "date": "January 2026",
       "sort_key": "2026-01",
       "name": "The Art of Problem Solving Chemistry Worldwide Online Olympiad Training A",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -882,7 +797,6 @@
       "date": "December 2025",
       "sort_key": "2025-12",
       "name": "Chemical Principles: The Quest for Insight by Peter Atkins",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -892,7 +806,6 @@
       "date": "November 2025",
       "sort_key": "2025-11",
       "name": "Junior Science Olympiad of Canada National Camp - Invitation",
-      "finished": 0,
       "highlighted": 1,
       "country": "Canada"
     },
@@ -903,7 +816,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Junior Science Olympiad of Canada Exams",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -914,7 +826,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Advanced Placement Chemistry Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -924,7 +835,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "British Columbia Chemistry Olympiad",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -934,7 +844,6 @@
       "date": "April 2025",
       "sort_key": "2025-04",
       "name": "Canadian Chemistry Olympiad Exams",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -945,7 +854,6 @@
       "date": "April 2025",
       "sort_key": "2025-04",
       "name": "United States National Chemistry Olympiad National Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "United States"
     },
@@ -956,7 +864,6 @@
       "date": "April 2025",
       "sort_key": "2025-04",
       "name": "Chemistry by Zumdahl and Zumdahl",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -966,7 +873,6 @@
       "date": "April 2025",
       "sort_key": "2025-04",
       "name": "Washington University Chemistry Tournament",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -976,7 +882,6 @@
       "date": "March 2025",
       "sort_key": "2025-03",
       "name": "United States National Chemistry Olympiad Local Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "United States"
     },
@@ -987,7 +892,6 @@
       "date": "March 2025",
       "sort_key": "2025-03",
       "name": "University of California Berkeley Chemistry Tournament",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -997,7 +901,6 @@
       "date": "May 2024",
       "sort_key": "2024-05",
       "name": "Junior Science Olympiad of Canada Exams",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -1008,7 +911,6 @@
       "date": "May 2024",
       "sort_key": "2024-05",
       "name": "Advanced Placement Chemistry Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -1018,7 +920,6 @@
       "date": "May 2024",
       "sort_key": "2024-05",
       "name": "British Columbia Chemistry Olympiad",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -1028,7 +929,6 @@
       "date": "April 2024",
       "sort_key": "2024-04",
       "name": "Canadian Chemistry Olympiad Exams",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -1039,7 +939,6 @@
       "date": "March 2024",
       "sort_key": "2024-03",
       "name": "Johns Hopkins University Center for Talented Youth AP Chemistry",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -1049,7 +948,6 @@
       "date": "Future",
       "sort_key": "9999-12",
       "name": "The USA Biology Olympiad Semifinal Exams Worked Solutions by Martyna Petrulyte",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -1059,7 +957,6 @@
       "date": "May 2026",
       "sort_key": "2026-05",
       "name": "Advanced Placement Biology Exam",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -1069,7 +966,6 @@
       "date": "April 2026",
       "sort_key": "2026-04",
       "name": "Canadian Biology Olympiad Competition Exam",
-      "finished": 0,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -1080,7 +976,6 @@
       "date": "March 2026",
       "sort_key": "2026-03",
       "name": "Junior Science Olympiad of Canada Exam",
-      "finished": 0,
       "highlighted": 1,
       "country": "Canada"
     },
@@ -1091,7 +986,6 @@
       "date": "February 2026",
       "sort_key": "2026-02",
       "name": "USA Biology Olympiad Open Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "United States"
     },
@@ -1102,7 +996,6 @@
       "date": "November 2025",
       "sort_key": "2025-11",
       "name": "Junior Science Olympiad of Canada National Camp - Invitation",
-      "finished": 0,
       "highlighted": 1,
       "country": "Canada"
     },
@@ -1113,7 +1006,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Junior Science Olympiad of Canada Exams",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -1124,7 +1016,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Biology: A Global Approach by Neil A. Campbell",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -1134,7 +1025,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Advanced Placement Psychology Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -1144,7 +1034,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Advanced Placement Biology Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -1154,7 +1043,6 @@
       "date": "February 2025",
       "sort_key": "2025-02",
       "name": "USA Biology Olympiad Open Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "United States"
     },
@@ -1165,7 +1053,6 @@
       "date": "May 2024",
       "sort_key": "2024-05",
       "name": "Junior Science Olympiad of Canada Exams",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -1176,7 +1063,6 @@
       "date": "May 2024",
       "sort_key": "2024-05",
       "name": "Advanced Placement Biology Exam",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -1186,7 +1072,6 @@
       "date": "April 2024",
       "sort_key": "2024-04",
       "name": "Canadian Biology Olympiad Competition Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -1197,7 +1082,6 @@
       "date": "March 2024",
       "sort_key": "2024-03",
       "name": "Johns Hopkins University Center for Talented Youth AP Biology",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -1207,7 +1091,6 @@
       "date": "March 2024",
       "sort_key": "2024-03",
       "name": "The USA Biology Olympiad Open Exam Exams Worked Solutions by Martyna Petrulyte",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -1217,7 +1100,6 @@
       "date": "January 2027",
       "sort_key": "2027-01",
       "name": "Astronomy 410 Astrophysics Astrophysics in a Nutshell by Dan Maoz",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -1227,7 +1109,6 @@
       "date": "September 2026",
       "sort_key": "2026-09",
       "name": "Astronomy 310 Astrophysics Measurements To Measure the Sky by Frederick R. Chromey",
-      "finished": 0,
       "highlighted": 0
     },
     {
@@ -1237,7 +1118,6 @@
       "date": "May 2026",
       "sort_key": "2026-05",
       "name": "Canadian Astronomy and Astrophysics Olympiad Junior Exam",
-      "finished": 0,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -1248,7 +1128,6 @@
       "date": "March 2026",
       "sort_key": "2026-03",
       "name": "Canadian Astronomy and Astrophysics Olympiad Senior Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -1259,7 +1138,6 @@
       "date": "March 2026",
       "sort_key": "2026-03",
       "name": "Foundations of Astrophysics by Barbara Ryden and Bradley Peterson",
-      "finished": 0,
       "highlighted": 1
     },
     {
@@ -1269,7 +1147,6 @@
       "date": "February 2026",
       "sort_key": "2026-02",
       "name": "USA Astronomy and Astrophysics Olympiad First Round Exam",
-      "finished": 0,
       "highlighted": 1,
       "country": "United States"
     },
@@ -1280,7 +1157,6 @@
       "date": "October 2025",
       "sort_key": "2025-10",
       "name": "International Olympiad on Astronomy and Astrophysics Junior - Invitation",
-      "finished": 0,
       "highlighted": 1,
       "country": "Canada"
     },
@@ -1291,7 +1167,6 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Canadian Astronomy and Astrophysics Olympiad Junior Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -1302,7 +1177,6 @@
       "date": "March 2025",
       "sort_key": "2025-03",
       "name": "Canadian Astronomy and Astrophysics Olympiad Senior Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -1313,7 +1187,6 @@
       "date": "February 2025",
       "sort_key": "2025-02",
       "name": "USA Astronomy and Astrophysics Olympiad First Round Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "United States"
     },
@@ -1324,7 +1197,6 @@
       "date": "August 2024",
       "sort_key": "2024-08",
       "name": "Fundamental Astronomy by Hannu Karttunen et al",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -1334,7 +1206,6 @@
       "date": "July 2024",
       "sort_key": "2024-07",
       "name": "Everaise Academy: Astronomy by Je Qin Chooi and Gregory Pylypovych",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -1344,7 +1215,6 @@
       "date": "June 2024",
       "sort_key": "2024-06",
       "name": "Fundamentals of Astronomy: A Guide for Olympiads by Flavio Salvati",
-      "finished": 1,
       "highlighted": 0
     },
     {
@@ -1354,7 +1224,6 @@
       "date": "March 2024",
       "sort_key": "2024-03",
       "name": "Canadian Astronomy and Astrophysics Olympiad Senior Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "Canada"
     },
@@ -1365,7 +1234,6 @@
       "date": "February 2024",
       "sort_key": "2024-02",
       "name": "USA Astronomy and Astrophysics Olympiad First Round Exam",
-      "finished": 1,
       "highlighted": 0,
       "country": "United States"
     }

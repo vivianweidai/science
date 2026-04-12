@@ -44,8 +44,7 @@ struct OlympiadsView: View {
             Section("Contests") {
                 ForEach(filtered.filter(\.isOlympiad)) { a in
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(a.name).strikethrough(a.finished == 1)
-                        Text("\(a.date) \(a.country.map { "• \($0)" } ?? "")")
+                        Text(a.name)                        Text("\(a.date) \(a.country.map { "• \($0)" } ?? "")")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
@@ -54,8 +53,7 @@ struct OlympiadsView: View {
             Section("Textbooks") {
                 ForEach(filtered.filter(\.isTextbook)) { a in
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(a.name).strikethrough(a.finished == 1)
-                        Text(a.date)
+                        Text(a.name)                        Text(a.date)
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }

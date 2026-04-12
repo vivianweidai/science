@@ -8,11 +8,10 @@ public struct Activity: Identifiable, Hashable, Codable, Sendable {
     public let sortKey: String
     public let name: String
     public let country: String?
-    public let finished: Int
     public let highlighted: Int
 
     enum CodingKeys: String, CodingKey {
-        case id, type, subject, date, name, country, finished, highlighted
+        case id, type, subject, date, name, country, highlighted
         case sortKey = "sort_key"
     }
 
