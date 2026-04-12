@@ -52,7 +52,6 @@ science/
     │   ├── curriculum.js / shuffle.js / tabs.js
     │   ├── build_olympiads.py            # CONTENT/*.yml → CONTENT/*.json
     │   └── build_curriculum.py          # curriculum/*.md + NOTES/*.pdf → CONTENT/curriculum.json
-    └── NOTES/              # Curriculum PDFs
 ```
 
 **Activities workflow:** `archives/CONTENT/olympiads.yml` is the single source of truth for all olympiads and textbooks. After editing, run `python archives/LAYOUT/build_olympiads.py` to regenerate `archives/CONTENT/olympiads.json`, then commit both the YAML and the JSON. GitHub Pages builds Jekyll natively in "Deploy from a branch" mode and redeploys within ~1 minute of a push — no CI workflow, so it's on the editor to remember the rebuild step. Both the webapp (`olympiads/index.md` via client-side JS) and the iOS app (`apple/shared/API/APIClient.swift`) fetch the JSON directly — there is no database, no API, no admin endpoint.

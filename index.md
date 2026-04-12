@@ -16,12 +16,12 @@ title: Vivian Dai
 <a href="curriculum/"><img src="archives/CONTENT/curriculum.png" alt="Curriculum" width="100%"></a>
 
 <div class="nav-links">
-  <a href="archives/NOTES/mathematics.pdf">Mathematics</a>
-  <a href="archives/NOTES/computing.pdf">Computing</a>
-  <a href="archives/NOTES/physics.pdf">Physics</a>
-  <a href="archives/NOTES/chemistry.pdf">Chemistry</a>
-  <a href="archives/NOTES/biology.pdf">Biology</a>
-  <a href="archives/NOTES/astronomy.pdf">Astronomy</a>
+  <a href="curriculum/archives/mathematics.pdf">Mathematics</a>
+  <a href="curriculum/archives/computing.pdf">Computing</a>
+  <a href="curriculum/archives/physics.pdf">Physics</a>
+  <a href="curriculum/archives/chemistry.pdf">Chemistry</a>
+  <a href="curriculum/archives/biology.pdf">Biology</a>
+  <a href="curriculum/archives/astronomy.pdf">Astronomy</a>
 </div>
 
 ---

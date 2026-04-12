@@ -6,7 +6,7 @@ This script replaces three older scripts in one pass:
 
     1. build_curriculum_manifest.py — walked curriculum/*.md to build
        the subject -> section -> topic -> tables nav tree.
-    2. extract_highlights.py         — walked archives/NOTES/*.pdf,
+    2. extract_highlights.py         — walked curriculum/archives/*.pdf,
        detected yellow cells, and emitted which rows were highlighted
        in each table.
     3. apply_highlights.py           — baked `<tr class="highlight">`
