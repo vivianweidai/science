@@ -350,10 +350,11 @@ def build_all(root: Path) -> dict:
             section_slug = slugify(section_name)
             topic_slug = slugify(topic_name)
             table_slug = slugify(td["table_name"])
+            topic_table_slug = f"{topic_slug}-{table_slug}" if topic_slug else table_slug
             order += 1
 
             # Write markdown file
-            md_path = curr / subj_slug / section_slug / f"{table_slug}.md"
+            md_path = curr / subj_slug / section_slug / f"{topic_table_slug}.md"
             write_table_md(md_path, subj_name, section_name, topic_name,
                            td["table_name"], order, td["rows"])
 
@@ -374,7 +375,7 @@ def build_all(root: Path) -> dict:
             topics[topic_slug]["tables"].append({
                 "name": td["table_name"],
                 "order": order,
-                "path": f"{subj_slug}/{section_slug}/{table_slug}.md",
+                "path": f"{subj_slug}/{section_slug}/{topic_table_slug}.md",
                 "highlighted_rows": td["highlighted_rows"],
             })
 

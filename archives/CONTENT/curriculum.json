@@ -14,7 +14,7 @@
               {
                 "name": "Divisors",
                 "order": 1,
-                "path": "mathematics/number-theory/divisors.md",
+                "path": "mathematics/number-theory/divisors-divisors.md",
                 "highlighted_rows": [
                   1,
                   2
@@ -23,7 +23,7 @@
               {
                 "name": "Factorization",
                 "order": 2,
-                "path": "mathematics/number-theory/factorization.md",
+                "path": "mathematics/number-theory/divisors-factorization.md",
                 "highlighted_rows": [
                   5
                 ]
@@ -31,7 +31,7 @@
               {
                 "name": "Bases",
                 "order": 3,
-                "path": "mathematics/number-theory/bases.md",
+                "path": "mathematics/number-theory/divisors-bases.md",
                 "highlighted_rows": []
               }
             ]
@@ -43,7 +43,7 @@
               {
                 "name": "Congruence",
                 "order": 4,
-                "path": "mathematics/number-theory/congruence.md",
+                "path": "mathematics/number-theory/modular-arithmetic-congruence.md",
                 "highlighted_rows": [
                   0,
                   1,
@@ -61,7 +61,7 @@
               {
                 "name": "Divisibility",
                 "order": 5,
-                "path": "mathematics/number-theory/divisibility.md",
+                "path": "mathematics/number-theory/modular-arithmetic-divisibility.md",
                 "highlighted_rows": [
                   0
                 ]
@@ -75,7 +75,7 @@
               {
                 "name": "Linear Congruence",
                 "order": 6,
-                "path": "mathematics/number-theory/linear-congruence.md",
+                "path": "mathematics/number-theory/linear-congruence-linear-congruence.md",
                 "highlighted_rows": [
                   3,
                   5,
@@ -85,7 +85,7 @@
               {
                 "name": "Theorems",
                 "order": 7,
-                "path": "mathematics/number-theory/theorems.md",
+                "path": "mathematics/number-theory/linear-congruence-theorems.md",
                 "highlighted_rows": [
                   2,
                   3
@@ -106,7 +106,7 @@
               {
                 "name": "Permutations",
                 "order": 8,
-                "path": "mathematics/combinatorics/permutations.md",
+                "path": "mathematics/combinatorics/counting-permutations.md",
                 "highlighted_rows": [
                   1
                 ]
@@ -114,7 +114,7 @@
               {
                 "name": "Combinations",
                 "order": 9,
-                "path": "mathematics/combinatorics/combinations.md",
+                "path": "mathematics/combinatorics/counting-combinations.md",
                 "highlighted_rows": [
                   1
                 ]
@@ -122,7 +122,7 @@
               {
                 "name": "Identities",
                 "order": 10,
-                "path": "mathematics/combinatorics/identities.md",
+                "path": "mathematics/combinatorics/counting-identities.md",
                 "highlighted_rows": [
                   3,
                   4,
@@ -139,7 +139,7 @@
               {
                 "name": "Probability",
                 "order": 11,
-                "path": "mathematics/combinatorics/probability.md",
+                "path": "mathematics/combinatorics/probability-probability.md",
                 "highlighted_rows": [
                   0,
                   6,
@@ -149,7 +149,7 @@
               {
                 "name": "Expected Value",
                 "order": 12,
-                "path": "mathematics/combinatorics/expected-value.md",
+                "path": "mathematics/combinatorics/probability-expected-value.md",
                 "highlighted_rows": [
                   0,
                   2,
@@ -165,7 +165,7 @@
               {
                 "name": "Concepts",
                 "order": 13,
-                "path": "mathematics/combinatorics/concepts.md",
+                "path": "mathematics/combinatorics/sets-concepts.md",
                 "highlighted_rows": [
                   0,
                   1,
@@ -178,7 +178,7 @@
               {
                 "name": "Recursion",
                 "order": 14,
-                "path": "mathematics/combinatorics/recursion.md",
+                "path": "mathematics/combinatorics/sets-recursion.md",
                 "highlighted_rows": [
                   1,
                   2,
@@ -188,7 +188,7 @@
               {
                 "name": "Generating Functions",
                 "order": 15,
-                "path": "mathematics/combinatorics/generating-functions.md",
+                "path": "mathematics/combinatorics/sets-generating-functions.md",
                 "highlighted_rows": [
                   0,
                   1
@@ -209,7 +209,7 @@
               {
                 "name": "Triangles",
                 "order": 16,
-                "path": "mathematics/geometry/triangles.md",
+                "path": "mathematics/geometry/triangles-triangles.md",
                 "highlighted_rows": [
                   1,
                   4,
@@ -222,7 +222,7 @@
               {
                 "name": "Relations",
                 "order": 17,
-                "path": "mathematics/geometry/relations.md",
+                "path": "mathematics/geometry/triangles-relations.md",
                 "highlighted_rows": [
                   1,
                   2,
@@ -240,7 +240,7 @@
               {
                 "name": "Centers",
                 "order": 18,
-                "path": "mathematics/geometry/centers.md",
+                "path": "mathematics/geometry/centers-centers.md",
                 "highlighted_rows": [
                   0,
                   3,
@@ -252,7 +252,7 @@
               {
                 "name": "Relations",
                 "order": 19,
-                "path": "mathematics/geometry/relations.md",
+                "path": "mathematics/geometry/centers-relations.md",
                 "highlighted_rows": []
               }
             ]
@@ -264,7 +264,7 @@
               {
                 "name": "Inscriptions",
                 "order": 20,
-                "path": "mathematics/geometry/inscriptions.md",
+                "path": "mathematics/geometry/circles-inscriptions.md",
                 "highlighted_rows": [
                   4,
                   6,
@@ -274,7 +274,7 @@
               {
                 "name": "Intersections",
                 "order": 21,
-                "path": "mathematics/geometry/intersections.md",
+                "path": "mathematics/geometry/circles-intersections.md",
                 "highlighted_rows": [
                   3,
                   9
@@ -289,7 +289,7 @@
               {
                 "name": "Polygons",
                 "order": 22,
-                "path": "mathematics/geometry/polygons.md",
+                "path": "mathematics/geometry/vectors-polygons.md",
                 "highlighted_rows": [
                   3,
                   6,
@@ -299,7 +299,7 @@
               {
                 "name": "Vectors",
                 "order": 23,
-                "path": "mathematics/geometry/vectors.md",
+                "path": "mathematics/geometry/vectors-vectors.md",
                 "highlighted_rows": [
                   0,
                   1,
@@ -323,7 +323,7 @@
               {
                 "name": "Functions",
                 "order": 24,
-                "path": "mathematics/algebra/functions.md",
+                "path": "mathematics/algebra/functions-functions.md",
                 "highlighted_rows": [
                   1,
                   2,
@@ -337,7 +337,7 @@
               {
                 "name": "Characteristics",
                 "order": 25,
-                "path": "mathematics/algebra/characteristics.md",
+                "path": "mathematics/algebra/functions-characteristics.md",
                 "highlighted_rows": [
                   1
                 ]
@@ -351,7 +351,7 @@
               {
                 "name": "Arithmetic",
                 "order": 26,
-                "path": "mathematics/algebra/arithmetic.md",
+                "path": "mathematics/algebra/sequences-and-series-arithmetic.md",
                 "highlighted_rows": [
                   2
                 ]
@@ -359,7 +359,7 @@
               {
                 "name": "Geometric",
                 "order": 27,
-                "path": "mathematics/algebra/geometric.md",
+                "path": "mathematics/algebra/sequences-and-series-geometric.md",
                 "highlighted_rows": [
                   2,
                   4
@@ -368,7 +368,7 @@
               {
                 "name": "Notation",
                 "order": 28,
-                "path": "mathematics/algebra/notation.md",
+                "path": "mathematics/algebra/sequences-and-series-notation.md",
                 "highlighted_rows": [
                   0,
                   2,
@@ -384,7 +384,7 @@
               {
                 "name": "Polynomials",
                 "order": 29,
-                "path": "mathematics/algebra/polynomials.md",
+                "path": "mathematics/algebra/polynomials-polynomials.md",
                 "highlighted_rows": [
                   4
                 ]
@@ -392,7 +392,7 @@
               {
                 "name": "Division",
                 "order": 30,
-                "path": "mathematics/algebra/division.md",
+                "path": "mathematics/algebra/polynomials-division.md",
                 "highlighted_rows": [
                   1,
                   3,
@@ -408,7 +408,7 @@
               {
                 "name": "Rational",
                 "order": 31,
-                "path": "mathematics/algebra/rational.md",
+                "path": "mathematics/algebra/roots-rational.md",
                 "highlighted_rows": [
                   1,
                   3,
@@ -419,7 +419,7 @@
               {
                 "name": "Non-Rational",
                 "order": 32,
-                "path": "mathematics/algebra/non-rational.md",
+                "path": "mathematics/algebra/roots-non-rational.md",
                 "highlighted_rows": [
                   1
                 ]
@@ -427,7 +427,7 @@
               {
                 "name": "Vieta",
                 "order": 33,
-                "path": "mathematics/algebra/vieta.md",
+                "path": "mathematics/algebra/roots-vieta.md",
                 "highlighted_rows": [
                   1,
                   4,
@@ -443,7 +443,7 @@
               {
                 "name": "Factoring",
                 "order": 34,
-                "path": "mathematics/algebra/factoring.md",
+                "path": "mathematics/algebra/identities-factoring.md",
                 "highlighted_rows": [
                   1,
                   2,
@@ -456,7 +456,7 @@
               {
                 "name": "Identities",
                 "order": 35,
-                "path": "mathematics/algebra/identities.md",
+                "path": "mathematics/algebra/identities-identities.md",
                 "highlighted_rows": [
                   7
                 ]
@@ -470,7 +470,7 @@
               {
                 "name": "Inequalities",
                 "order": 36,
-                "path": "mathematics/algebra/inequalities.md",
+                "path": "mathematics/algebra/inequalities-inequalities.md",
                 "highlighted_rows": [
                   2
                 ]
@@ -478,7 +478,7 @@
               {
                 "name": "Toolkit",
                 "order": 37,
-                "path": "mathematics/algebra/toolkit.md",
+                "path": "mathematics/algebra/inequalities-toolkit.md",
                 "highlighted_rows": [
                   0,
                   3
@@ -487,7 +487,7 @@
               {
                 "name": "Optimization",
                 "order": 38,
-                "path": "mathematics/algebra/optimization.md",
+                "path": "mathematics/algebra/inequalities-optimization.md",
                 "highlighted_rows": [
                   2,
                   3
@@ -502,13 +502,13 @@
               {
                 "name": "Polynomial Series",
                 "order": 39,
-                "path": "mathematics/algebra/polynomial-series.md",
+                "path": "mathematics/algebra/relations-polynomial-series.md",
                 "highlighted_rows": []
               },
               {
                 "name": "Functional Equations",
                 "order": 40,
-                "path": "mathematics/algebra/functional-equations.md",
+                "path": "mathematics/algebra/relations-functional-equations.md",
                 "highlighted_rows": [
                   1,
                   2,
@@ -518,7 +518,7 @@
               {
                 "name": "Strategies",
                 "order": 41,
-                "path": "mathematics/algebra/strategies.md",
+                "path": "mathematics/algebra/relations-strategies.md",
                 "highlighted_rows": []
               }
             ]
@@ -536,7 +536,7 @@
               {
                 "name": "Identities",
                 "order": 42,
-                "path": "mathematics/precalculus/identities.md",
+                "path": "mathematics/precalculus/trigonometry-identities.md",
                 "highlighted_rows": [
                   1,
                   2,
@@ -548,7 +548,7 @@
               {
                 "name": "Parametric",
                 "order": 43,
-                "path": "mathematics/precalculus/parametric.md",
+                "path": "mathematics/precalculus/trigonometry-parametric.md",
                 "highlighted_rows": [
                   1,
                   3,
@@ -564,7 +564,7 @@
               {
                 "name": "Complex Numbers",
                 "order": 44,
-                "path": "mathematics/precalculus/complex-numbers.md",
+                "path": "mathematics/precalculus/complex-complex-numbers.md",
                 "highlighted_rows": [
                   0,
                   2,
@@ -574,7 +574,7 @@
               {
                 "name": "Powers",
                 "order": 45,
-                "path": "mathematics/precalculus/powers.md",
+                "path": "mathematics/precalculus/complex-powers.md",
                 "highlighted_rows": [
                   0,
                   1,
@@ -585,7 +585,7 @@
               {
                 "name": "Roots",
                 "order": 46,
-                "path": "mathematics/precalculus/roots.md",
+                "path": "mathematics/precalculus/complex-roots.md",
                 "highlighted_rows": [
                   0,
                   2
@@ -600,7 +600,7 @@
               {
                 "name": "Dot Product",
                 "order": 47,
-                "path": "mathematics/precalculus/dot-product.md",
+                "path": "mathematics/precalculus/vectors-dot-product.md",
                 "highlighted_rows": [
                   0
                 ]
@@ -608,7 +608,7 @@
               {
                 "name": "Cross Product",
                 "order": 48,
-                "path": "mathematics/precalculus/cross-product.md",
+                "path": "mathematics/precalculus/vectors-cross-product.md",
                 "highlighted_rows": [
                   0
                 ]
@@ -616,7 +616,7 @@
               {
                 "name": "Matrices",
                 "order": 49,
-                "path": "mathematics/precalculus/matrices.md",
+                "path": "mathematics/precalculus/vectors-matrices.md",
                 "highlighted_rows": [
                   0
                 ]
@@ -636,7 +636,7 @@
               {
                 "name": "Limits",
                 "order": 50,
-                "path": "mathematics/calculus/limits.md",
+                "path": "mathematics/calculus/limits-limits.md",
                 "highlighted_rows": [
                   1,
                   5,
@@ -648,7 +648,7 @@
               {
                 "name": "Continuity",
                 "order": 51,
-                "path": "mathematics/calculus/continuity.md",
+                "path": "mathematics/calculus/limits-continuity.md",
                 "highlighted_rows": [
                   0
                 ]
@@ -662,7 +662,7 @@
               {
                 "name": "Differentiation",
                 "order": 52,
-                "path": "mathematics/calculus/differentiation.md",
+                "path": "mathematics/calculus/differentiation-differentiation.md",
                 "highlighted_rows": [
                   1,
                   3
@@ -671,7 +671,7 @@
               {
                 "name": "Rules",
                 "order": 53,
-                "path": "mathematics/calculus/rules.md",
+                "path": "mathematics/calculus/differentiation-rules.md",
                 "highlighted_rows": [
                   0,
                   1,
@@ -696,7 +696,7 @@
               {
                 "name": "Integration",
                 "order": 54,
-                "path": "mathematics/calculus/integration.md",
+                "path": "mathematics/calculus/integration-integration.md",
                 "highlighted_rows": [
                   2,
                   3,
@@ -706,7 +706,7 @@
               {
                 "name": "Rules",
                 "order": 55,
-                "path": "mathematics/calculus/rules.md",
+                "path": "mathematics/calculus/integration-rules.md",
                 "highlighted_rows": [
                   0,
                   1,
@@ -728,7 +728,7 @@
               {
                 "name": "Infinite Series",
                 "order": 56,
-                "path": "mathematics/calculus/infinite-series.md",
+                "path": "mathematics/calculus/approximation-infinite-series.md",
                 "highlighted_rows": [
                   1,
                   3
@@ -737,7 +737,7 @@
               {
                 "name": "Approximation",
                 "order": 57,
-                "path": "mathematics/calculus/approximation.md",
+                "path": "mathematics/calculus/approximation-approximation.md",
                 "highlighted_rows": [
                   3,
                   5,
@@ -753,7 +753,7 @@
               {
                 "name": "Surfaces",
                 "order": 58,
-                "path": "mathematics/calculus/surfaces.md",
+                "path": "mathematics/calculus/vectors-surfaces.md",
                 "highlighted_rows": [
                   0,
                   2,
@@ -763,7 +763,7 @@
               {
                 "name": "Functions",
                 "order": 59,
-                "path": "mathematics/calculus/functions.md",
+                "path": "mathematics/calculus/vectors-functions.md",
                 "highlighted_rows": [
                   0,
                   2
@@ -772,7 +772,7 @@
               {
                 "name": "Multivariable",
                 "order": 60,
-                "path": "mathematics/calculus/multivariable.md",
+                "path": "mathematics/calculus/vectors-multivariable.md",
                 "highlighted_rows": [
                   0,
                   4
@@ -787,7 +787,7 @@
               {
                 "name": "Fields",
                 "order": 61,
-                "path": "mathematics/calculus/fields.md",
+                "path": "mathematics/calculus/fields-fields.md",
                 "highlighted_rows": [
                   0,
                   2
@@ -796,7 +796,7 @@
               {
                 "name": "Theorems",
                 "order": 62,
-                "path": "mathematics/calculus/theorems.md",
+                "path": "mathematics/calculus/fields-theorems.md",
                 "highlighted_rows": [
                   0,
                   2,
@@ -814,7 +814,7 @@
               {
                 "name": "Differentials",
                 "order": 63,
-                "path": "mathematics/calculus/differentials.md",
+                "path": "mathematics/calculus/differentials-differentials.md",
                 "highlighted_rows": [
                   0,
                   2
@@ -823,7 +823,7 @@
               {
                 "name": "First Order",
                 "order": 64,
-                "path": "mathematics/calculus/first-order.md",
+                "path": "mathematics/calculus/differentials-first-order.md",
                 "highlighted_rows": [
                   1,
                   3
@@ -832,7 +832,7 @@
               {
                 "name": "Second Order",
                 "order": 65,
-                "path": "mathematics/calculus/second-order.md",
+                "path": "mathematics/calculus/differentials-second-order.md",
                 "highlighted_rows": [
                   3,
                   4

@@ -3,7 +3,7 @@ subject: Mathematics
 section: Geometry
 topic: Centers
 table: Relations
-order: 4
+order: 19
 ---
 
 # Relations

@@ -19,6 +19,6 @@ order: 4
 <tr><td>multiplication</td><td>$a^{m} \equiv r_{a}^{m}(modm)$</td><td>exponential</td></tr>
 <tr><td>division</td><td>$ak \equiv bk(modmk)$</td><td>common divisor</td></tr>
 <tr><td>division</td><td>$a \equiv b(mod\frac{m}{\gcd(k,m)})$</td><td>division</td></tr>
-<tr><td>factors</td><td>$n|mmodm \Longrightarrow modn$</td><td>divisor</td></tr>
-<tr><td>factors</td><td>$modm,n \Longrightarrow modmn$</td><td>multiple</td></tr>
+<tr><td>factors</td><td>$n|m(modm) \Longrightarrow (modn)$</td><td>divisor</td></tr>
+<tr><td>factors</td><td>$(modm,n) \Longrightarrow (modmn)$</td><td>multiple</td></tr>
 </table>
