@@ -112,15 +112,16 @@ The pH readings were recorded from photographs of the VWR pHenomenal pH 1100 L d
 
 ## Results
 
-After centrifugation, visible separation was observed in several samples:
+<div class="hero-single"><img src="PHOTOS/sample8.jpeg" alt="Four labeled Sarstedt tubes before centrifugation: 1 Milk, 2 Yogurt, 3 Apple Cider Vinegar, 4 Milk + Vinegar"></div>
 
-- **Milk** — separated into a translucent whey layer and a white fat/casein pellet
-- **Yogurt** — similar separation to milk with a denser pellet
-- **Honey** — appeared largely homogeneous after spinning, with slight clarification
-- **Apple cider vinegar** — sediment ("mother") pelleted at the bottom, leaving clearer vinegar above
-- **Coke** — minimal visible separation; some degassing occurred during spinning
+Four samples were loaded into the Thermo Scientific Sorvall RT3 Centrifuge to balance the rotor (<a href="PHOTOS/data16.jpeg">Data 16</a>, <a href="PHOTOS/data17.jpeg">Data 17</a>). After centrifugation, visible separation was observed:
 
-The experiment demonstrated that centrifugation is most effective on emulsions and suspensions (milk, yogurt, unfiltered vinegar) where particles of different densities are physically mixed but not dissolved. True solutions (honey dissolved in water, Coke) show little to no separation because the solute is dispersed at the molecular level.
+- **Tube 1 — Milk** — separated into a translucent whey layer and a white fat/casein pellet (<a href="PHOTOS/data24.jpeg">Data 24</a>)
+- **Tube 2 — Yogurt** — similar separation to milk with a denser pellet (<a href="PHOTOS/data19.jpeg">Data 19</a>, <a href="PHOTOS/data20.jpeg">Data 20</a>)
+- **Tube 3 — Apple cider vinegar** — sediment ("mother") pelleted at the bottom, leaving clearer vinegar above (<a href="PHOTOS/data18.jpeg">Data 18</a>)
+- **Tube 4 — Milk + vinegar mixture** — white casein pellet with clear whey above, the acid curdled the milk proteins and centrifugation concentrated them at the bottom (<a href="PHOTOS/data21.jpeg">Data 21</a>, <a href="PHOTOS/data22.jpeg">Data 22</a>, <a href="PHOTOS/data23.jpeg">Data 23</a>)
+
+The experiment demonstrated that centrifugation is most effective on emulsions and suspensions (milk, yogurt, unfiltered vinegar) where particles of different densities are physically mixed but not dissolved.
 
 ---
 
