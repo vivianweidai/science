@@ -16,10 +16,13 @@ public actor ResearchLoader {
     }
 
     public func projects() async throws -> [ResearchProject] {
-        let url = URL(string: "https://api.github.com/repos/\(Self.owner)/\(Self.repo)/contents/research?ref=\(Self.branch)")!
+        guard let url = URL(string: "https://api.github.com/repos/\(Self.owner)/\(Self.repo)/contents/research?ref=\(Self.branch)") else {
+            throw URLError(.badURL)
+        }
         var request = URLRequest(url: url)
         request.setValue("application/vnd.github+json", forHTTPHeaderField: "accept")
-        let (data, _) = try await session.data(for: request)
+        let (data, response) = try await session.data(for: request)
+        try Self.checkHTTP(response)
         let entries = try JSONDecoder().decode([GitHubEntry].self, from: data)
 
         return entries.compactMap { entry in
@@ -27,9 +30,19 @@ public actor ResearchLoader {
             let parts = entry.name.split(separator: " ", maxSplits: 1).map(String.init)
             guard parts.count == 2 else { return nil }
             let (date, title) = (parts[0], parts[1])
-            let indexURL = URL(string: "https://raw.githubusercontent.com/\(Self.owner)/\(Self.repo)/\(Self.branch)/\(entry.path)/index.md")!
+            guard let encodedPath = entry.path.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed),
+                  let indexURL = URL(string: "https://raw.githubusercontent.com/\(Self.owner)/\(Self.repo)/\(Self.branch)/\(encodedPath)/index.md") else {
+                return nil
+            }
             return ResearchProject(folder: entry.name, date: date, title: title, indexURL: indexURL)
         }
         .sorted { $0.date > $1.date }
+    }
+
+    private static func checkHTTP(_ response: URLResponse) throws {
+        guard let http = response as? HTTPURLResponse,
+              (200..<300).contains(http.statusCode) else {
+            throw URLError(.badServerResponse)
+        }
     }
 }

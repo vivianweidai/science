@@ -1,4 +1,3 @@
-#if os(iOS)
 import SwiftUI
 
 struct CurriculumView: View {
@@ -51,6 +50,10 @@ struct SubjectNotesView: View {
         }
         .navigationTitle(subject.capitalized)
         .task { await load() }
+        .refreshable {
+            await NotesLoader.shared.invalidateCache(for: subject)
+            await load()
+        }
     }
 
     private var content: some View {
@@ -118,4 +121,3 @@ struct FlashcardView: View {
             .navigationBarTitleDisplayMode(.inline)
     }
 }
-#endif

@@ -10,7 +10,7 @@ public actor NotesLoader {
     private static let branch = "main"
 
     private let session: URLSession
-    private var cache: [String: [NoteCard]] = [:]  // keyed by subject slug
+    private var cache: [String: [NoteCard]] = [:]
 
     public init(session: URLSession = .shared) {
         self.session = session
@@ -36,23 +36,43 @@ public actor NotesLoader {
         return all
     }
 
+    /// Clear cached data so the next fetch pulls fresh content.
+    public func invalidateCache(for subject: String? = nil) {
+        if let subject { cache.removeValue(forKey: subject) }
+        else { cache.removeAll() }
+    }
+
     // MARK: - Private
 
     private func listDir(_ path: String) async throws -> [GitHubEntry] {
-        let url = URL(string: "https://api.github.com/repos/\(Self.owner)/\(Self.repo)/contents/\(path)?ref=\(Self.branch)")!
+        guard let encoded = path.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed),
+              let url = URL(string: "https://api.github.com/repos/\(Self.owner)/\(Self.repo)/contents/\(encoded)?ref=\(Self.branch)") else {
+            throw URLError(.badURL)
+        }
         var request = URLRequest(url: url)
         request.setValue("application/vnd.github+json", forHTTPHeaderField: "accept")
-        let (data, _) = try await session.data(for: request)
+        let (data, response) = try await session.data(for: request)
+        try Self.checkHTTP(response)
         return try JSONDecoder().decode([GitHubEntry].self, from: data)
     }
 
     private func fetchText(_ url: URL) async throws -> String {
-        let (data, _) = try await session.data(from: url)
-        return String(data: data, encoding: .utf8) ?? ""
+        let (data, response) = try await session.data(from: url)
+        try Self.checkHTTP(response)
+        guard let text = String(data: data, encoding: .utf8) else {
+            throw URLError(.cannotDecodeContentData)
+        }
+        return text
+    }
+
+    private static func checkHTTP(_ response: URLResponse) throws {
+        guard let http = response as? HTTPURLResponse,
+              (200..<300).contains(http.statusCode) else {
+            throw URLError(.badServerResponse)
+        }
     }
 
     private func parseNote(path: String, raw: String) -> NoteCard? {
-        // Front matter: --- ... --- then body.
         guard raw.hasPrefix("---") else { return nil }
         let afterFirst = raw.dropFirst(3)
         guard let closeRange = afterFirst.range(of: "\n---") else { return nil }

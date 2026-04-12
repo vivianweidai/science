@@ -1,4 +1,3 @@
-#if os(iOS)
 import SwiftUI
 
 struct ResearchView: View {
@@ -64,12 +63,18 @@ struct ProjectDetailView: View {
         .task {
             do {
                 let (data, _) = try await URLSession.shared.data(from: project.indexURL)
-                markdown = String(data: data, encoding: .utf8) ?? ""
+                var md = String(data: data, encoding: .utf8) ?? ""
+                let photos = MarkdownHelper.extractPhotos(from: md)
+                md = MarkdownHelper.stripFrontMatter(md)
+                md = MarkdownHelper.injectPhotos(md, photos: photos)
+                md = MarkdownHelper.stripJekyllSyntax(md)
+                md = MarkdownHelper.resolveRelativeURLs(in: md, folder: project.folder)
+                markdown = md
             } catch {
                 markdown = "# Error\n\n\(error.localizedDescription)"
             }
             loading = false
         }
     }
+
 }
-#endif

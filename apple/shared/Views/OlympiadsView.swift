@@ -1,4 +1,3 @@
-#if os(iOS)
 import SwiftUI
 
 struct OlympiadsView: View {
@@ -22,11 +21,22 @@ struct OlympiadsView: View {
             }
             .navigationTitle("Olympiads")
             .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Picker("Subject", selection: $subject) {
-                        ForEach(subjects, id: \.self) { Text($0).tag($0) }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu {
+                        ForEach(subjects, id: \.self) { s in
+                            Button {
+                                subject = s
+                            } label: {
+                                if s == subject {
+                                    Label(s, systemImage: "checkmark")
+                                } else {
+                                    Text(s)
+                                }
+                            }
+                        }
+                    } label: {
+                        Label(subject, systemImage: "line.3.horizontal.decrease.circle")
                     }
-                    .pickerStyle(.menu)
                 }
             }
             .task { await load() }
@@ -44,7 +54,8 @@ struct OlympiadsView: View {
             Section("Contests") {
                 ForEach(filtered.filter(\.isOlympiad)) { a in
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(a.name)                        Text("\(a.date) \(a.country.map { "• \($0)" } ?? "")")
+                        Text(a.name)
+                        Text("\(a.date) • \(a.subject)")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
@@ -53,7 +64,8 @@ struct OlympiadsView: View {
             Section("Textbooks") {
                 ForEach(filtered.filter(\.isTextbook)) { a in
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(a.name)                        Text(a.date)
+                        Text(a.name)
+                        Text(a.date)
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
@@ -73,4 +85,3 @@ struct OlympiadsView: View {
         loading = false
     }
 }
-#endif
