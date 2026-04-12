@@ -8,31 +8,31 @@ layout: default
   <div class="year-marker">2026</div>
 
   <div class="entry">
-    <div class="month">April 11th</div>
+    <div class="month">April</div>
     <div class="chips-cell"><span class="chip chem">Chemistry</span></div>
     <div class="name-cell"><a href="20260411%20Centrifuge/">Centrifuge</a> — Centrifugation and pH measurements of everyday liquids</div>
   </div>
 
   <div class="entry">
-    <div class="month">April 5th</div>
+    <div class="month">April</div>
     <div class="chips-cell"><span class="chip chem">Chemistry</span></div>
     <div class="name-cell"><a href="20260405%20Melting%20Point/">Melting Point</a> — Melting point determination of caffeine and aspirin</div>
   </div>
 
   <div class="entry">
-    <div class="month">April 4th</div>
+    <div class="month">April</div>
     <div class="chips-cell"><span class="chip phys">Physics</span></div>
     <div class="name-cell"><a href="20260404%20Four%20Point%20Probe/">Four-Point Probe</a> — Sheet resistance of conductive materials</div>
   </div>
 
   <div class="entry">
-    <div class="month">April 1st</div>
+    <div class="month">April</div>
     <div class="chips-cell"><span class="chip chem">Chemistry</span></div>
     <div class="name-cell"><a href="20260401%20IR%20Spectroscopy/">IR Spectroscopy</a> — Functional group identification of everyday materials</div>
   </div>
 
   <div class="entry">
-    <div class="month">April 1st</div>
+    <div class="month">April</div>
     <div class="chips-cell"><span class="chip bio">Biology</span></div>
     <div class="name-cell"><a href="20260401%20Genes%20in%20Space/">Genes in Space</a> — Gene expression changes in microgravity</div>
   </div>
@@ -40,7 +40,7 @@ layout: default
   <div class="year-marker">2025</div>
 
   <div class="entry">
-    <div class="month">February 25th</div>
+    <div class="month">February</div>
     <div class="chips-cell"><span class="chip comp">Computing</span></div>
     <div class="name-cell"><a href="20250225%20Catfood/">Cat Food Color Preference</a> — Red vs green food preference</div>
   </div>
@@ -51,7 +51,7 @@ layout: default
   .timeline .year-marker { font-weight: 700; font-size: 1.1em; margin: 1.2em 0 .4em 0; }
   .timeline .entry {
     display: grid;
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: 6.5em auto 1fr;
     gap: 0 .5em;
     padding: .35em 0;
     font-size: .95em;
