@@ -4,67 +4,84 @@ layout: default
 
 <div class="page-header"><h2>Research</h2><a class="back-link" href="/">Science</a></div>
 
-<div class="tabs">
-  <input type="radio" name="tab" id="tab-math">
-  <input type="radio" name="tab" id="tab-comp">
-  <input type="radio" name="tab" id="tab-phys">
-  <input type="radio" name="tab" id="tab-chem">
-  <input type="radio" name="tab" id="tab-bio">
-  <input type="radio" name="tab" id="tab-astro">
+<div class="timeline">
+  <div class="year-marker">2026</div>
 
-  <div class="tab-labels">
-    <label for="tab-math">Mathematics</label>
-    <label for="tab-comp">Computing</label>
-    <label for="tab-phys">Physics</label>
-    <label for="tab-chem">Chemistry</label>
-    <label for="tab-bio">Biology</label>
-    <label for="tab-astro">Astronomy</label>
+  <div class="entry">
+    <div class="month">April</div>
+    <div class="chips-cell"><span class="chip chem">Chemistry</span></div>
+    <div class="name-cell"><a href="20260411%20Centrifuge/">Centrifuge</a></div>
+    <div class="desc-cell">Centrifugation and pH measurements of everyday liquids</div>
   </div>
 
-  <div class="tab-content" id="content-math">
-    <table>
-      <tr><th>Date</th><th>Project</th><th>Description</th></tr>
-      <tr><td colspan="3"><em>No projects yet</em></td></tr>
-    </table>
+  <div class="entry">
+    <div class="month">April</div>
+    <div class="chips-cell"><span class="chip chem">Chemistry</span></div>
+    <div class="name-cell"><a href="20260405%20Melting%20Point/">Melting Point</a></div>
+    <div class="desc-cell">Melting point determination of caffeine and aspirin — on hold pending instrument repair</div>
   </div>
 
-  <div class="tab-content" id="content-comp">
-    <table>
-      <tr><th>Date</th><th>Project</th><th>Description</th></tr>
-      <tr><td>February 2025</td><td><a href="20250225%20Catfood/">Cat Food Color Preference</a></td><td>Chi-squared analysis of red vs. green food color preference in a domestic cat</td></tr>
-    </table>
+  <div class="entry">
+    <div class="month">April</div>
+    <div class="chips-cell"><span class="chip phys">Physics</span></div>
+    <div class="name-cell"><a href="20260404%20Four%20Point%20Probe/">Four-Point Probe</a></div>
+    <div class="desc-cell">Sheet resistance measurements of conductive materials</div>
   </div>
 
-  <div class="tab-content" id="content-phys">
-    <table>
-      <tr><th>Date</th><th>Project</th><th>Description</th></tr>
-      <tr><td>April 2026</td><td><a href="20260404%20Four%20Point%20Probe/">Four-Point Probe</a></td><td>Sheet resistance measurements of conductive materials</td></tr>
-    </table>
+  <div class="entry">
+    <div class="month">April</div>
+    <div class="chips-cell"><span class="chip chem">Chemistry</span></div>
+    <div class="name-cell"><a href="20260401%20IR%20Spectroscopy/">IR Spectroscopy</a></div>
+    <div class="desc-cell">IR spectroscopy of 19 everyday materials — functional group identification</div>
   </div>
 
-  <div class="tab-content" id="content-chem">
-    <table>
-      <tr><th>Date</th><th>Project</th><th>Description</th></tr>
-      <tr><td>April 2026</td><td><a href="20260401%20IR%20Spectroscopy/">IR Spectroscopy</a></td><td>IR spectroscopy of 19 everyday materials — functional group identification</td></tr>
-      <tr><td>April 2026</td><td><a href="20260405%20Melting%20Point/">Melting Point</a></td><td>Melting point determination of caffeine and aspirin — on hold pending instrument repair</td></tr>
-      <tr><td>April 2026</td><td><a href="20260411%20Centrifuge/">Centrifuge</a></td><td>Centrifugation and pH measurements of everyday liquids</td></tr>
-    </table>
+  <div class="entry">
+    <div class="month">April</div>
+    <div class="chips-cell"><span class="chip bio">Biology</span></div>
+    <div class="name-cell"><a href="20260401%20Genes%20in%20Space/">Genes in Space</a></div>
+    <div class="desc-cell">Investigating gene expression changes under simulated microgravity conditions</div>
   </div>
 
-  <div class="tab-content" id="content-bio">
-    <table>
-      <tr><th>Date</th><th>Project</th><th>Description</th></tr>
-      <tr><td>April 2026</td><td><a href="20260401%20Genes%20in%20Space/">Genes in Space</a></td><td>Investigating gene expression changes under simulated microgravity conditions</td></tr>
-    </table>
-  </div>
+  <div class="year-marker">2025</div>
 
-  <div class="tab-content" id="content-astro">
-    <table>
-      <tr><th>Date</th><th>Project</th><th>Description</th></tr>
-      <tr><td colspan="3"><em>No projects yet</em></td></tr>
-    </table>
+  <div class="entry">
+    <div class="month">February</div>
+    <div class="chips-cell"><span class="chip comp">Computing</span></div>
+    <div class="name-cell"><a href="20250225%20Catfood/">Cat Food Color Preference</a></div>
+    <div class="desc-cell">Chi-squared analysis of red vs. green food color preference in a domestic cat</div>
   </div>
 </div>
+
+<style>
+  .timeline { border-left: 2px solid #d1d9e0; margin-left: .8em; padding-left: 1.2em; }
+  .timeline .year-marker { font-weight: 700; font-size: 1.1em; margin: 1.2em 0 .4em 0; }
+  .timeline .entry {
+    display: grid;
+    grid-template-columns: 6.5em auto 1fr;
+    gap: 0 .5em;
+    padding: .35em 0;
+    font-size: .95em;
+    align-items: first baseline;
+  }
+  .timeline .entry .month { color: #656d76; font-variant-numeric: tabular-nums; }
+  .timeline .entry .chips-cell { white-space: nowrap; display: flex; gap: 2px; align-items: center; }
+  .timeline .entry .name-cell { font-weight: 600; }
+  .timeline .entry .name-cell a { color: #1f2328; text-decoration: none; }
+  .timeline .entry .name-cell a:hover { text-decoration: underline; }
+  .timeline .entry .desc-cell { grid-column: 3; color: #656d76; font-size: .88em; }
+
+  .chip {
+    display: inline-block; padding: 1px 7px; border-radius: 999px;
+    font-size: .72em; font-weight: 600; color: #1f2328;
+    text-align: center; white-space: nowrap; line-height: 1.6;
+  }
+  .chip.math  { background: #c5d9f7; }
+  .chip.comp  { background: #d9ccee; }
+  .chip.phys  { background: #f9c4a8; }
+  .chip.chem  { background: #cdeaa6; }
+  .chip.bio   { background: #b8e0c4; }
+  .chip.astro { background: #f4c2cb; }
+</style>
 
 ## Instruments
 
