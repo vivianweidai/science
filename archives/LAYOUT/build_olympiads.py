@@ -78,6 +78,8 @@ def build_activities() -> list[dict]:
         }
         if e.get("country"):
             item["country"] = e["country"]
+        if e.get("invited"):
+            item["invited"] = 1
         items.append(item)
     return items
 

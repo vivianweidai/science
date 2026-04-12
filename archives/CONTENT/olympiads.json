@@ -6,8 +6,8 @@
       "subject": "Mathematics",
       "date": "Future",
       "sort_key": "9999-12",
-      "name": "Differential Equations with Applications and Historical Notes by George F. Simmons",
-      "highlighted": 0
+      "name": "Olympiad Training for Individual Study by Evan Chen",
+      "highlighted": 1
     },
     {
       "id": 2,
@@ -24,8 +24,8 @@
       "subject": "Mathematics",
       "date": "Future",
       "sort_key": "9999-12",
-      "name": "Olympiad Training for Individual Study by Evan Chen",
-      "highlighted": 1
+      "name": "Differential Equations with Applications and Historical Notes by George F. Simmons",
+      "highlighted": 0
     },
     {
       "id": 4,
@@ -172,20 +172,11 @@
       "subject": "Mathematics",
       "date": "May 2024",
       "sort_key": "2024-05",
-      "name": "The Art of Problem Solving by Richard Rusczyk et al",
-      "highlighted": 0
-    },
-    {
-      "id": 20,
-      "type": "textbook",
-      "subject": "Mathematics",
-      "date": "May 2024",
-      "sort_key": "2024-05",
       "name": "The Art of Problem Solving Book Series by Richard Rusczyk et al",
       "highlighted": 1
     },
     {
-      "id": 21,
+      "id": 20,
       "type": "textbook",
       "subject": "Mathematics",
       "date": "September 2023",
@@ -194,7 +185,7 @@
       "highlighted": 1
     },
     {
-      "id": 22,
+      "id": 21,
       "type": "textbook",
       "subject": "Computing",
       "date": "Future",
@@ -203,72 +194,16 @@
       "highlighted": 0
     },
     {
-      "id": 23,
-      "type": "olympiad",
-      "subject": "Computing",
-      "date": "December 2026",
-      "sort_key": "2026-12",
-      "name": "USA North America Artificial Intelligence Olympiad",
-      "highlighted": 0,
-      "country": "United States"
-    },
-    {
-      "id": 24,
-      "type": "olympiad",
-      "subject": "Computing",
-      "date": "November 2026",
-      "sort_key": "2026-11",
-      "name": "Canada Artificial Intelligence National Challenge",
-      "highlighted": 0,
-      "country": "Canada"
-    },
-    {
-      "id": 25,
+      "id": 22,
       "type": "textbook",
       "subject": "Computing",
-      "date": "June 2026",
-      "sort_key": "2026-06",
-      "name": "Introduction to Machine Learning by Etienne Bernard",
-      "highlighted": 0
-    },
-    {
-      "id": 26,
-      "type": "textbook",
-      "subject": "Computing",
-      "date": "June 2026",
-      "sort_key": "2026-06",
-      "name": "Introduction to Machine Learning with Python by Andreas Müller and Sarah Guido",
-      "highlighted": 0
-    },
-    {
-      "id": 27,
-      "type": "textbook",
-      "subject": "Computing",
-      "date": "June 2026",
-      "sort_key": "2026-06",
-      "name": "Deep Learning for Coders with fastai and PyTorch by Jeremy Howard and Sylvain Gugger",
-      "highlighted": 0
-    },
-    {
-      "id": 28,
-      "type": "textbook",
-      "subject": "Computing",
-      "date": "June 2026",
-      "sort_key": "2026-06",
-      "name": "Machine Learning with PyTorch and Scikit-Learn by Sebastian Raschka",
-      "highlighted": 0
-    },
-    {
-      "id": 29,
-      "type": "textbook",
-      "subject": "Computing",
-      "date": "June 2026",
-      "sort_key": "2026-06",
+      "date": "Future",
+      "sort_key": "9999-12",
       "name": "Grokking Machine Learning by Luis Serrano",
       "highlighted": 1
     },
     {
-      "id": 30,
+      "id": 23,
       "type": "textbook",
       "subject": "Computing",
       "date": "May 2026",
@@ -277,7 +212,7 @@
       "highlighted": 0
     },
     {
-      "id": 31,
+      "id": 24,
       "type": "olympiad",
       "subject": "Computing",
       "date": "January 2026",
@@ -287,7 +222,7 @@
       "country": "United States"
     },
     {
-      "id": 32,
+      "id": 25,
       "type": "textbook",
       "subject": "Computing",
       "date": "January 2026",
@@ -296,7 +231,7 @@
       "highlighted": 0
     },
     {
-      "id": 33,
+      "id": 26,
       "type": "textbook",
       "subject": "Computing",
       "date": "January 2026",
@@ -305,7 +240,7 @@
       "highlighted": 0
     },
     {
-      "id": 34,
+      "id": 27,
       "type": "textbook",
       "subject": "Computing",
       "date": "December 2025",
@@ -314,7 +249,7 @@
       "highlighted": 1
     },
     {
-      "id": 35,
+      "id": 28,
       "type": "textbook",
       "subject": "Computing",
       "date": "May 2025",
@@ -323,7 +258,7 @@
       "highlighted": 0
     },
     {
-      "id": 36,
+      "id": 29,
       "type": "textbook",
       "subject": "Computing",
       "date": "May 2025",
@@ -332,7 +267,7 @@
       "highlighted": 0
     },
     {
-      "id": 37,
+      "id": 30,
       "type": "olympiad",
       "subject": "Computing",
       "date": "March 2025",
@@ -342,7 +277,7 @@
       "country": "Canada"
     },
     {
-      "id": 38,
+      "id": 31,
       "type": "olympiad",
       "subject": "Computing",
       "date": "January 2025",
@@ -352,7 +287,7 @@
       "country": "Canada"
     },
     {
-      "id": 39,
+      "id": 32,
       "type": "olympiad",
       "subject": "Computing",
       "date": "January 2025",
@@ -362,7 +297,7 @@
       "country": "United States"
     },
     {
-      "id": 40,
+      "id": 33,
       "type": "textbook",
       "subject": "Computing",
       "date": "January 2025",
@@ -371,7 +306,7 @@
       "highlighted": 0
     },
     {
-      "id": 41,
+      "id": 34,
       "type": "textbook",
       "subject": "Computing",
       "date": "May 2024",
@@ -380,7 +315,7 @@
       "highlighted": 0
     },
     {
-      "id": 42,
+      "id": 35,
       "type": "textbook",
       "subject": "Computing",
       "date": "May 2024",
@@ -389,7 +324,7 @@
       "highlighted": 0
     },
     {
-      "id": 43,
+      "id": 36,
       "type": "olympiad",
       "subject": "Computing",
       "date": "March 2024",
@@ -399,17 +334,17 @@
       "country": "Canada"
     },
     {
-      "id": 44,
+      "id": 37,
       "type": "olympiad",
       "subject": "Computing",
-      "date": "January 2024",
-      "sort_key": "2024-01",
+      "date": "December 2023",
+      "sort_key": "2023-12",
       "name": "USA Computing Olympiad Bronze Exam",
       "highlighted": 0,
       "country": "United States"
     },
     {
-      "id": 45,
+      "id": 38,
       "type": "textbook",
       "subject": "Physics",
       "date": "Future",
@@ -418,7 +353,7 @@
       "highlighted": 0
     },
     {
-      "id": 46,
+      "id": 39,
       "type": "textbook",
       "subject": "Physics",
       "date": "Future",
@@ -427,7 +362,7 @@
       "highlighted": 0
     },
     {
-      "id": 47,
+      "id": 40,
       "type": "textbook",
       "subject": "Physics",
       "date": "Future",
@@ -436,7 +371,7 @@
       "highlighted": 0
     },
     {
-      "id": 48,
+      "id": 41,
       "type": "textbook",
       "subject": "Physics",
       "date": "May 2026",
@@ -445,7 +380,7 @@
       "highlighted": 0
     },
     {
-      "id": 49,
+      "id": 42,
       "type": "textbook",
       "subject": "Physics",
       "date": "May 2026",
@@ -454,7 +389,7 @@
       "highlighted": 0
     },
     {
-      "id": 50,
+      "id": 43,
       "type": "olympiad",
       "subject": "Physics",
       "date": "April 2026",
@@ -464,7 +399,7 @@
       "country": "Canada"
     },
     {
-      "id": 51,
+      "id": 44,
       "type": "olympiad",
       "subject": "Physics",
       "date": "March 2026",
@@ -474,7 +409,7 @@
       "country": "Canada"
     },
     {
-      "id": 52,
+      "id": 45,
       "type": "olympiad",
       "subject": "Physics",
       "date": "February 2026",
@@ -484,7 +419,7 @@
       "country": "United States"
     },
     {
-      "id": 53,
+      "id": 46,
       "type": "textbook",
       "subject": "Physics",
       "date": "December 2025",
@@ -493,7 +428,7 @@
       "highlighted": 0
     },
     {
-      "id": 54,
+      "id": 47,
       "type": "textbook",
       "subject": "Physics",
       "date": "December 2025",
@@ -502,26 +437,27 @@
       "highlighted": 0
     },
     {
-      "id": 55,
+      "id": 48,
       "type": "textbook",
       "subject": "Physics",
-      "date": "December 2025",
-      "sort_key": "2025-12",
+      "date": "Future",
+      "sort_key": "9999-12",
       "name": "Physics Olympiad Handouts by Kevin Zhou",
       "highlighted": 1
     },
     {
-      "id": 56,
+      "id": 49,
       "type": "olympiad",
       "subject": "Physics",
       "date": "November 2025",
       "sort_key": "2025-11",
-      "name": "Junior Science Olympiad of Canada National Camp - Invitation",
-      "highlighted": 1,
-      "country": "Canada"
+      "name": "Junior Science Olympiad of Canada National Camp",
+      "highlighted": 0,
+      "country": "Canada",
+      "invited": 1
     },
     {
-      "id": 57,
+      "id": 50,
       "type": "olympiad",
       "subject": "Physics",
       "date": "May 2025",
@@ -531,7 +467,7 @@
       "country": "Canada"
     },
     {
-      "id": 58,
+      "id": 51,
       "type": "textbook",
       "subject": "Physics",
       "date": "May 2025",
@@ -540,7 +476,7 @@
       "highlighted": 0
     },
     {
-      "id": 59,
+      "id": 52,
       "type": "textbook",
       "subject": "Physics",
       "date": "May 2025",
@@ -549,7 +485,7 @@
       "highlighted": 0
     },
     {
-      "id": 60,
+      "id": 53,
       "type": "textbook",
       "subject": "Physics",
       "date": "May 2025",
@@ -558,7 +494,7 @@
       "highlighted": 0
     },
     {
-      "id": 61,
+      "id": 54,
       "type": "textbook",
       "subject": "Physics",
       "date": "May 2025",
@@ -567,7 +503,7 @@
       "highlighted": 0
     },
     {
-      "id": 62,
+      "id": 55,
       "type": "olympiad",
       "subject": "Physics",
       "date": "April 2025",
@@ -577,7 +513,7 @@
       "country": "Canada"
     },
     {
-      "id": 63,
+      "id": 56,
       "type": "textbook",
       "subject": "Physics",
       "date": "March 2025",
@@ -586,7 +522,7 @@
       "highlighted": 0
     },
     {
-      "id": 64,
+      "id": 57,
       "type": "olympiad",
       "subject": "Physics",
       "date": "February 2025",
@@ -596,7 +532,7 @@
       "country": "United States"
     },
     {
-      "id": 65,
+      "id": 58,
       "type": "olympiad",
       "subject": "Physics",
       "date": "May 2024",
@@ -606,7 +542,7 @@
       "country": "Canada"
     },
     {
-      "id": 66,
+      "id": 59,
       "type": "textbook",
       "subject": "Physics",
       "date": "May 2024",
@@ -615,7 +551,7 @@
       "highlighted": 1
     },
     {
-      "id": 67,
+      "id": 60,
       "type": "textbook",
       "subject": "Physics",
       "date": "May 2024",
@@ -624,7 +560,7 @@
       "highlighted": 0
     },
     {
-      "id": 68,
+      "id": 61,
       "type": "olympiad",
       "subject": "Physics",
       "date": "April 2024",
@@ -634,7 +570,7 @@
       "country": "Canada"
     },
     {
-      "id": 69,
+      "id": 62,
       "type": "textbook",
       "subject": "Physics",
       "date": "March 2024",
@@ -643,7 +579,7 @@
       "highlighted": 0
     },
     {
-      "id": 70,
+      "id": 63,
       "type": "olympiad",
       "subject": "Physics",
       "date": "February 2024",
@@ -653,25 +589,16 @@
       "country": "United States"
     },
     {
-      "id": 71,
-      "type": "textbook",
-      "subject": "Chemistry",
-      "date": "January 2027",
-      "sort_key": "2027-01",
-      "name": "Chemistry 342 Organic Chemistry B Organic Chemistry by Paula Yurkanis Bruice",
-      "highlighted": 0
-    },
-    {
-      "id": 72,
+      "id": 64,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "September 2026",
       "sort_key": "2026-09",
-      "name": "Chemistry 341 Organic Chemistry A Organic Chemistry by Paula Yurkanis Bruice",
+      "name": "UNR 341 Organic Chemistry by Paula Yurkanis Bruice",
       "highlighted": 0
     },
     {
-      "id": 73,
+      "id": 65,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "May 2026",
@@ -680,7 +607,7 @@
       "highlighted": 0
     },
     {
-      "id": 74,
+      "id": 66,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "May 2026",
@@ -689,34 +616,34 @@
       "highlighted": 0
     },
     {
-      "id": 75,
+      "id": 67,
       "type": "textbook",
       "subject": "Chemistry",
-      "date": "May 2026",
-      "sort_key": "2026-05",
+      "date": "Future",
+      "sort_key": "9999-12",
       "name": "Atkins' Physical Chemistry by Peter Atkins, Julio de Paula and James Keeler",
       "highlighted": 0
     },
     {
-      "id": 76,
+      "id": 68,
       "type": "textbook",
       "subject": "Chemistry",
-      "date": "May 2026",
-      "sort_key": "2026-05",
+      "date": "Future",
+      "sort_key": "9999-12",
       "name": "Organic Chemistry by Jonathan Clayden, Nick Greeves and Stuart Warren",
       "highlighted": 0
     },
     {
-      "id": 77,
+      "id": 69,
       "type": "textbook",
       "subject": "Chemistry",
-      "date": "May 2026",
-      "sort_key": "2026-05",
+      "date": "Future",
+      "sort_key": "9999-12",
       "name": "Inorganic Chemistry by Mark Weller, Jonathan Rourke, Fraser Armstrong and Tina Overton",
       "highlighted": 0
     },
     {
-      "id": 78,
+      "id": 70,
       "type": "olympiad",
       "subject": "Chemistry",
       "date": "April 2026",
@@ -726,7 +653,7 @@
       "country": "Canada"
     },
     {
-      "id": 79,
+      "id": 71,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "April 2026",
@@ -735,7 +662,7 @@
       "highlighted": 1
     },
     {
-      "id": 80,
+      "id": 72,
       "type": "olympiad",
       "subject": "Chemistry",
       "date": "March 2026",
@@ -745,17 +672,7 @@
       "country": "United States"
     },
     {
-      "id": 81,
-      "type": "olympiad",
-      "subject": "Chemistry",
-      "date": "March 2026",
-      "sort_key": "2026-03",
-      "name": "Junior Science Olympiad of Canada Exam",
-      "highlighted": 1,
-      "country": "Canada"
-    },
-    {
-      "id": 82,
+      "id": 73,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "March 2026",
@@ -764,7 +681,7 @@
       "highlighted": 1
     },
     {
-      "id": 83,
+      "id": 74,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "February 2026",
@@ -773,16 +690,7 @@
       "highlighted": 1
     },
     {
-      "id": 84,
-      "type": "textbook",
-      "subject": "Chemistry",
-      "date": "January 2026",
-      "sort_key": "2026-01",
-      "name": "The Art of Problem Solving Chemistry Worldwide Online Olympiad Training B",
-      "highlighted": 0
-    },
-    {
-      "id": 85,
+      "id": 75,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "January 2026",
@@ -791,7 +699,16 @@
       "highlighted": 0
     },
     {
-      "id": 86,
+      "id": 76,
+      "type": "textbook",
+      "subject": "Chemistry",
+      "date": "January 2026",
+      "sort_key": "2026-01",
+      "name": "The Art of Problem Solving Chemistry Worldwide Online Olympiad Training B",
+      "highlighted": 0
+    },
+    {
+      "id": 77,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "December 2025",
@@ -800,27 +717,7 @@
       "highlighted": 0
     },
     {
-      "id": 87,
-      "type": "olympiad",
-      "subject": "Chemistry",
-      "date": "November 2025",
-      "sort_key": "2025-11",
-      "name": "Junior Science Olympiad of Canada National Camp - Invitation",
-      "highlighted": 1,
-      "country": "Canada"
-    },
-    {
-      "id": 88,
-      "type": "olympiad",
-      "subject": "Chemistry",
-      "date": "May 2025",
-      "sort_key": "2025-05",
-      "name": "Junior Science Olympiad of Canada Exams",
-      "highlighted": 0,
-      "country": "Canada"
-    },
-    {
-      "id": 89,
+      "id": 78,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "May 2025",
@@ -829,7 +726,7 @@
       "highlighted": 0
     },
     {
-      "id": 90,
+      "id": 79,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "May 2025",
@@ -838,7 +735,7 @@
       "highlighted": 0
     },
     {
-      "id": 91,
+      "id": 80,
       "type": "olympiad",
       "subject": "Chemistry",
       "date": "April 2025",
@@ -848,17 +745,18 @@
       "country": "Canada"
     },
     {
-      "id": 92,
+      "id": 81,
       "type": "olympiad",
       "subject": "Chemistry",
       "date": "April 2025",
       "sort_key": "2025-04",
       "name": "United States National Chemistry Olympiad National Exam",
       "highlighted": 0,
-      "country": "United States"
+      "country": "United States",
+      "invited": 1
     },
     {
-      "id": 93,
+      "id": 82,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "April 2025",
@@ -867,7 +765,7 @@
       "highlighted": 1
     },
     {
-      "id": 94,
+      "id": 83,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "April 2025",
@@ -876,7 +774,7 @@
       "highlighted": 0
     },
     {
-      "id": 95,
+      "id": 84,
       "type": "olympiad",
       "subject": "Chemistry",
       "date": "March 2025",
@@ -886,7 +784,7 @@
       "country": "United States"
     },
     {
-      "id": 96,
+      "id": 85,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "March 2025",
@@ -895,17 +793,7 @@
       "highlighted": 0
     },
     {
-      "id": 97,
-      "type": "olympiad",
-      "subject": "Chemistry",
-      "date": "May 2024",
-      "sort_key": "2024-05",
-      "name": "Junior Science Olympiad of Canada Exams",
-      "highlighted": 0,
-      "country": "Canada"
-    },
-    {
-      "id": 98,
+      "id": 86,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "May 2024",
@@ -914,7 +802,7 @@
       "highlighted": 0
     },
     {
-      "id": 99,
+      "id": 87,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "May 2024",
@@ -923,7 +811,7 @@
       "highlighted": 0
     },
     {
-      "id": 100,
+      "id": 88,
       "type": "olympiad",
       "subject": "Chemistry",
       "date": "April 2024",
@@ -933,7 +821,7 @@
       "country": "Canada"
     },
     {
-      "id": 101,
+      "id": 89,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "March 2024",
@@ -942,7 +830,7 @@
       "highlighted": 0
     },
     {
-      "id": 102,
+      "id": 90,
       "type": "textbook",
       "subject": "Biology",
       "date": "Future",
@@ -951,7 +839,7 @@
       "highlighted": 0
     },
     {
-      "id": 103,
+      "id": 91,
       "type": "textbook",
       "subject": "Biology",
       "date": "May 2026",
@@ -960,7 +848,7 @@
       "highlighted": 0
     },
     {
-      "id": 104,
+      "id": 92,
       "type": "olympiad",
       "subject": "Biology",
       "date": "April 2026",
@@ -970,17 +858,7 @@
       "country": "Canada"
     },
     {
-      "id": 105,
-      "type": "olympiad",
-      "subject": "Biology",
-      "date": "March 2026",
-      "sort_key": "2026-03",
-      "name": "Junior Science Olympiad of Canada Exam",
-      "highlighted": 1,
-      "country": "Canada"
-    },
-    {
-      "id": 106,
+      "id": 93,
       "type": "olympiad",
       "subject": "Biology",
       "date": "February 2026",
@@ -990,27 +868,7 @@
       "country": "United States"
     },
     {
-      "id": 107,
-      "type": "olympiad",
-      "subject": "Biology",
-      "date": "November 2025",
-      "sort_key": "2025-11",
-      "name": "Junior Science Olympiad of Canada National Camp - Invitation",
-      "highlighted": 1,
-      "country": "Canada"
-    },
-    {
-      "id": 108,
-      "type": "olympiad",
-      "subject": "Biology",
-      "date": "May 2025",
-      "sort_key": "2025-05",
-      "name": "Junior Science Olympiad of Canada Exams",
-      "highlighted": 0,
-      "country": "Canada"
-    },
-    {
-      "id": 109,
+      "id": 94,
       "type": "textbook",
       "subject": "Biology",
       "date": "May 2025",
@@ -1019,7 +877,7 @@
       "highlighted": 1
     },
     {
-      "id": 110,
+      "id": 95,
       "type": "textbook",
       "subject": "Biology",
       "date": "May 2025",
@@ -1028,7 +886,7 @@
       "highlighted": 0
     },
     {
-      "id": 111,
+      "id": 96,
       "type": "textbook",
       "subject": "Biology",
       "date": "May 2025",
@@ -1037,7 +895,7 @@
       "highlighted": 0
     },
     {
-      "id": 112,
+      "id": 97,
       "type": "olympiad",
       "subject": "Biology",
       "date": "February 2025",
@@ -1047,17 +905,7 @@
       "country": "United States"
     },
     {
-      "id": 113,
-      "type": "olympiad",
-      "subject": "Biology",
-      "date": "May 2024",
-      "sort_key": "2024-05",
-      "name": "Junior Science Olympiad of Canada Exams",
-      "highlighted": 0,
-      "country": "Canada"
-    },
-    {
-      "id": 114,
+      "id": 98,
       "type": "textbook",
       "subject": "Biology",
       "date": "May 2024",
@@ -1066,7 +914,16 @@
       "highlighted": 0
     },
     {
-      "id": 115,
+      "id": 99,
+      "type": "textbook",
+      "subject": "Biology",
+      "date": "May 2024",
+      "sort_key": "2024-05",
+      "name": "The USA Biology Olympiad Open Exam Exams Worked Solutions by Martyna Petrulyte",
+      "highlighted": 1
+    },
+    {
+      "id": 100,
       "type": "olympiad",
       "subject": "Biology",
       "date": "April 2024",
@@ -1076,7 +933,7 @@
       "country": "Canada"
     },
     {
-      "id": 116,
+      "id": 101,
       "type": "textbook",
       "subject": "Biology",
       "date": "March 2024",
@@ -1085,34 +942,16 @@
       "highlighted": 0
     },
     {
-      "id": 117,
-      "type": "textbook",
-      "subject": "Biology",
-      "date": "March 2024",
-      "sort_key": "2024-03",
-      "name": "The USA Biology Olympiad Open Exam Exams Worked Solutions by Martyna Petrulyte",
-      "highlighted": 1
-    },
-    {
-      "id": 118,
-      "type": "textbook",
-      "subject": "Astronomy",
-      "date": "January 2027",
-      "sort_key": "2027-01",
-      "name": "Astronomy 410 Astrophysics Astrophysics in a Nutshell by Dan Maoz",
-      "highlighted": 0
-    },
-    {
-      "id": 119,
+      "id": 102,
       "type": "textbook",
       "subject": "Astronomy",
       "date": "September 2026",
       "sort_key": "2026-09",
-      "name": "Astronomy 310 Astrophysics Measurements To Measure the Sky by Frederick R. Chromey",
+      "name": "UNR AST 310 To Measure the Sky by Frederick R. Chromey",
       "highlighted": 0
     },
     {
-      "id": 120,
+      "id": 103,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "May 2026",
@@ -1122,7 +961,7 @@
       "country": "Canada"
     },
     {
-      "id": 121,
+      "id": 104,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "March 2026",
@@ -1132,7 +971,7 @@
       "country": "Canada"
     },
     {
-      "id": 122,
+      "id": 105,
       "type": "textbook",
       "subject": "Astronomy",
       "date": "March 2026",
@@ -1141,7 +980,7 @@
       "highlighted": 1
     },
     {
-      "id": 123,
+      "id": 106,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "February 2026",
@@ -1151,17 +990,18 @@
       "country": "United States"
     },
     {
-      "id": 124,
+      "id": 107,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "October 2025",
       "sort_key": "2025-10",
-      "name": "International Olympiad on Astronomy and Astrophysics Junior - Invitation",
-      "highlighted": 1,
-      "country": "Canada"
+      "name": "International Olympiad on Astronomy and Astrophysics Junior",
+      "highlighted": 0,
+      "country": "Canada",
+      "invited": 1
     },
     {
-      "id": 125,
+      "id": 108,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "May 2025",
@@ -1171,7 +1011,7 @@
       "country": "Canada"
     },
     {
-      "id": 126,
+      "id": 109,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "March 2025",
@@ -1181,7 +1021,7 @@
       "country": "Canada"
     },
     {
-      "id": 127,
+      "id": 110,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "February 2025",
@@ -1191,7 +1031,7 @@
       "country": "United States"
     },
     {
-      "id": 128,
+      "id": 111,
       "type": "textbook",
       "subject": "Astronomy",
       "date": "August 2024",
@@ -1200,7 +1040,7 @@
       "highlighted": 0
     },
     {
-      "id": 129,
+      "id": 112,
       "type": "textbook",
       "subject": "Astronomy",
       "date": "July 2024",
@@ -1209,7 +1049,7 @@
       "highlighted": 0
     },
     {
-      "id": 130,
+      "id": 113,
       "type": "textbook",
       "subject": "Astronomy",
       "date": "June 2024",
@@ -1218,7 +1058,7 @@
       "highlighted": 0
     },
     {
-      "id": 131,
+      "id": 114,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "March 2024",
@@ -1228,7 +1068,7 @@
       "country": "Canada"
     },
     {
-      "id": 132,
+      "id": 115,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "February 2024",

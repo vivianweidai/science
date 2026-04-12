@@ -5,8 +5,8 @@
 - type: textbook
   subject: Mathematics
   date: Future
-  name: Differential Equations with Applications and Historical Notes by George F. Simmons
-  highlighted: false
+  name: Olympiad Training for Individual Study by Evan Chen
+  highlighted: true
 - type: textbook
   subject: Mathematics
   date: Future
@@ -15,8 +15,8 @@
 - type: textbook
   subject: Mathematics
   date: Future
-  name: Olympiad Training for Individual Study by Evan Chen
-  highlighted: true
+  name: Differential Equations with Applications and Historical Notes by George F. Simmons
+  highlighted: false
 - type: textbook
   subject: Mathematics
   date: Future
@@ -99,11 +99,6 @@
 - type: textbook
   subject: Mathematics
   date: May 2024
-  name: The Art of Problem Solving by Richard Rusczyk et al
-  highlighted: false
-- type: textbook
-  subject: Mathematics
-  date: May 2024
   name: The Art of Problem Solving Book Series by Richard Rusczyk et al
   highlighted: true
 - type: textbook
@@ -116,41 +111,9 @@
   date: Future
   name: The Art of Problem Solving Code Worldwide Online Olympiad Training
   highlighted: false
-- type: olympiad
-  subject: Computing
-  date: December 2026
-  name: USA North America Artificial Intelligence Olympiad
-  country: United States
-  highlighted: false
-- type: olympiad
-  subject: Computing
-  date: November 2026
-  name: Canada Artificial Intelligence National Challenge
-  country: Canada
-  highlighted: false
 - type: textbook
   subject: Computing
-  date: June 2026
-  name: Introduction to Machine Learning by Etienne Bernard
-  highlighted: false
-- type: textbook
-  subject: Computing
-  date: June 2026
-  name: Introduction to Machine Learning with Python by Andreas Müller and Sarah Guido
-  highlighted: false
-- type: textbook
-  subject: Computing
-  date: June 2026
-  name: Deep Learning for Coders with fastai and PyTorch by Jeremy Howard and Sylvain Gugger
-  highlighted: false
-- type: textbook
-  subject: Computing
-  date: June 2026
-  name: Machine Learning with PyTorch and Scikit-Learn by Sebastian Raschka
-  highlighted: false
-- type: textbook
-  subject: Computing
-  date: June 2026
+  date: Future
   name: Grokking Machine Learning by Luis Serrano
   highlighted: true
 - type: textbook
@@ -230,7 +193,7 @@
   highlighted: false
 - type: olympiad
   subject: Computing
-  date: January 2024
+  date: December 2023
   name: USA Computing Olympiad Bronze Exam
   country: United States
   highlighted: false
@@ -289,15 +252,16 @@
   highlighted: false
 - type: textbook
   subject: Physics
-  date: December 2025
+  date: Future
   name: Physics Olympiad Handouts by Kevin Zhou
   highlighted: true
 - type: olympiad
   subject: Physics
   date: November 2025
-  name: Junior Science Olympiad of Canada National Camp - Invitation
+  name: Junior Science Olympiad of Canada National Camp
   country: Canada
-  highlighted: true
+  highlighted: false
+  invited: true
 - type: olympiad
   subject: Physics
   date: May 2025
@@ -376,13 +340,8 @@
   highlighted: false
 - type: textbook
   subject: Chemistry
-  date: January 2027
-  name: Chemistry 342 Organic Chemistry B Organic Chemistry by Paula Yurkanis Bruice
-  highlighted: false
-- type: textbook
-  subject: Chemistry
   date: September 2026
-  name: Chemistry 341 Organic Chemistry A Organic Chemistry by Paula Yurkanis Bruice
+  name: UNR 341 Organic Chemistry by Paula Yurkanis Bruice
   highlighted: false
 - type: textbook
   subject: Chemistry
@@ -396,17 +355,17 @@
   highlighted: false
 - type: textbook
   subject: Chemistry
-  date: May 2026
+  date: Future
   name: Atkins' Physical Chemistry by Peter Atkins, Julio de Paula and James Keeler
   highlighted: false
 - type: textbook
   subject: Chemistry
-  date: May 2026
+  date: Future
   name: Organic Chemistry by Jonathan Clayden, Nick Greeves and Stuart Warren
   highlighted: false
 - type: textbook
   subject: Chemistry
-  date: May 2026
+  date: Future
   name: Inorganic Chemistry by Mark Weller, Jonathan Rourke, Fraser Armstrong and Tina Overton
   highlighted: false
 - type: olympiad
@@ -426,12 +385,6 @@
   name: United States National Chemistry Olympiad Local Exam
   country: United States
   highlighted: true
-- type: olympiad
-  subject: Chemistry
-  date: March 2026
-  name: Junior Science Olympiad of Canada Exam
-  country: Canada
-  highlighted: true
 - type: textbook
   subject: Chemistry
   date: March 2026
@@ -445,29 +398,17 @@
 - type: textbook
   subject: Chemistry
   date: January 2026
-  name: The Art of Problem Solving Chemistry Worldwide Online Olympiad Training B
+  name: The Art of Problem Solving Chemistry Worldwide Online Olympiad Training A
   highlighted: false
 - type: textbook
   subject: Chemistry
   date: January 2026
-  name: The Art of Problem Solving Chemistry Worldwide Online Olympiad Training A
+  name: The Art of Problem Solving Chemistry Worldwide Online Olympiad Training B
   highlighted: false
 - type: textbook
   subject: Chemistry
   date: December 2025
   name: 'Chemical Principles: The Quest for Insight by Peter Atkins'
-  highlighted: false
-- type: olympiad
-  subject: Chemistry
-  date: November 2025
-  name: Junior Science Olympiad of Canada National Camp - Invitation
-  country: Canada
-  highlighted: true
-- type: olympiad
-  subject: Chemistry
-  date: May 2025
-  name: Junior Science Olympiad of Canada Exams
-  country: Canada
   highlighted: false
 - type: textbook
   subject: Chemistry
@@ -491,6 +432,7 @@
   name: United States National Chemistry Olympiad National Exam
   country: United States
   highlighted: false
+  invited: true
 - type: textbook
   subject: Chemistry
   date: April 2025
@@ -511,12 +453,6 @@
   subject: Chemistry
   date: March 2025
   name: University of California Berkeley Chemistry Tournament
-  highlighted: false
-- type: olympiad
-  subject: Chemistry
-  date: May 2024
-  name: Junior Science Olympiad of Canada Exams
-  country: Canada
   highlighted: false
 - type: textbook
   subject: Chemistry
@@ -557,27 +493,9 @@
   highlighted: false
 - type: olympiad
   subject: Biology
-  date: March 2026
-  name: Junior Science Olympiad of Canada Exam
-  country: Canada
-  highlighted: true
-- type: olympiad
-  subject: Biology
   date: February 2026
   name: USA Biology Olympiad Open Exam
   country: United States
-  highlighted: false
-- type: olympiad
-  subject: Biology
-  date: November 2025
-  name: Junior Science Olympiad of Canada National Camp - Invitation
-  country: Canada
-  highlighted: true
-- type: olympiad
-  subject: Biology
-  date: May 2025
-  name: Junior Science Olympiad of Canada Exams
-  country: Canada
   highlighted: false
 - type: textbook
   subject: Biology
@@ -600,17 +518,16 @@
   name: USA Biology Olympiad Open Exam
   country: United States
   highlighted: false
-- type: olympiad
-  subject: Biology
-  date: May 2024
-  name: Junior Science Olympiad of Canada Exams
-  country: Canada
-  highlighted: false
 - type: textbook
   subject: Biology
   date: May 2024
   name: Advanced Placement Biology Exam
   highlighted: false
+- type: textbook
+  subject: Biology
+  date: May 2024
+  name: The USA Biology Olympiad Open Exam Exams Worked Solutions by Martyna Petrulyte
+  highlighted: true
 - type: olympiad
   subject: Biology
   date: April 2024
@@ -623,19 +540,9 @@
   name: Johns Hopkins University Center for Talented Youth AP Biology
   highlighted: false
 - type: textbook
-  subject: Biology
-  date: March 2024
-  name: The USA Biology Olympiad Open Exam Exams Worked Solutions by Martyna Petrulyte
-  highlighted: true
-- type: textbook
-  subject: Astronomy
-  date: January 2027
-  name: Astronomy 410 Astrophysics Astrophysics in a Nutshell by Dan Maoz
-  highlighted: false
-- type: textbook
   subject: Astronomy
   date: September 2026
-  name: Astronomy 310 Astrophysics Measurements To Measure the Sky by Frederick R. Chromey
+  name: UNR AST 310 To Measure the Sky by Frederick R. Chromey
   highlighted: false
 - type: olympiad
   subject: Astronomy
@@ -663,9 +570,10 @@
 - type: olympiad
   subject: Astronomy
   date: October 2025
-  name: International Olympiad on Astronomy and Astrophysics Junior - Invitation
+  name: International Olympiad on Astronomy and Astrophysics Junior
   country: Canada
-  highlighted: true
+  highlighted: false
+  invited: true
 - type: olympiad
   subject: Astronomy
   date: May 2025

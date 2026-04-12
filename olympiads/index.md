@@ -39,14 +39,20 @@ layout: default
   }
   .timeline .entry {
     display: grid;
-    grid-template-columns: 6.5em 1fr;
-    gap: .8em;
+    grid-template-columns: 6.5em 1.8em auto 1fr;
+    gap: 0 .5em;
     padding: .35em 0;
     position: relative;
     font-size: .95em;
+    align-items: center;
   }
   .timeline .entry .month { color: #656d76; font-variant-numeric: tabular-nums; }
-  .timeline .entry.hl { background: #fffbe0; border-radius: 6px; padding-left: .4em; padding-right: .4em; margin-left: -.4em; margin-right: -.4em; }
+  .timeline .entry .type-cell { text-align: center; }
+  .timeline .entry .chips-cell { white-space: nowrap; display: flex; gap: 2px; align-self: first baseline; }
+  .timeline .entry .name-cell { }
+  .invited-badge { display: inline-block; font-size: .65em; font-weight: 700; padding: 1px 6px; border-radius: 4px; vertical-align: baseline; margin-left: 4px; background: #ffd700; color: #5a4500; position: relative; top: -1px; }
+  .timeline .entry.hl { position: relative; }
+  .timeline .entry.hl::before { content: ''; position: absolute; inset: -.1em -.4em; background: #fff44f; border-radius: 6px; z-index: -1; }
 
   .chip {
     display: inline-block;
@@ -56,16 +62,18 @@ layout: default
     font-weight: 600;
     color: #1f2328;
     vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
   }
-  .chip.math  { background: #e2d9f3; }
-  .chip.comp  { background: #cce5ff; }
-  .chip.phys  { background: #fce4b8; }
-  .chip.chem  { background: #d4edda; }
-  .chip.bio   { background: #f8d7da; }
-  .chip.astro { background: #fff3cd; }
+  .chip.math  { background: #c5d9f7; }
+  .chip.comp  { background: #d9ccee; }
+  .chip.phys  { background: #f9c4a8; }
+  .chip.chem  { background: #cdeaa6; }
+  .chip.bio   { background: #b8e0c4; }
+  .chip.astro { background: #f4c2cb; }
 
-  .type-icon { font-size: .85em; margin-right: .15em; }
-  .rings-icon { vertical-align: middle; margin-right: .2em; }
+  .type-icon { font-size: .85em; }
+  .rings-icon { vertical-align: middle; }
 
   .legend { font-size: .82em; color: #656d76; margin: .3em 0 1em; line-height: 2; }
   .legend .chip { margin-right: .3em; }
@@ -80,6 +88,9 @@ layout: default
     Mathematics: 'math', Computing: 'comp', Physics: 'phys',
     Chemistry: 'chem', Biology: 'bio', Astronomy: 'astro'
   };
+  var MULTI_SUBJECT = {
+    'Junior Science Olympiad of Canada': ['Physics', 'Chemistry', 'Biology']
+  };
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
@@ -91,19 +102,34 @@ layout: default
     return '<span class="chip ' + slug + '">' + subj + '</span>';
   }
 
+  function chipsForEntry(e) {
+    for (var key in MULTI_SUBJECT) {
+      if (e.name.indexOf(key) === 0) return MULTI_SUBJECT[key].map(chip).join('');
+    }
+    return chip(e.subject);
+  }
+
   function renderTimeline(items, filter) {
-    // Filter by subject if not "all"
     var filtered = filter === 'all'
       ? items
       : items.filter(function (e) { return SUBJECT_SLUGS[e.subject] === filter; });
 
-    // Sort newest first
-    filtered.sort(function (a, b) { return b.sort_key.localeCompare(a.sort_key); });
+    // Deduplicate multi-subject entries (e.g. JSOC)
+    var seen = {}, deduped = [];
+    filtered.forEach(function (e) {
+      var isMulti = false;
+      for (var key in MULTI_SUBJECT) { if (e.name.indexOf(key) === 0) { isMulti = true; break; } }
+      if (isMulti) {
+        var dk = e.date + '|' + e.name;
+        if (!seen[dk]) { seen[dk] = true; deduped.push(e); }
+      } else { deduped.push(e); }
+    });
 
-    // Group by year
+    deduped.sort(function (a, b) { return b.sort_key.localeCompare(a.sort_key); });
+
     var years = {};
     var yearOrder = [];
-    filtered.forEach(function (e) {
+    deduped.forEach(function (e) {
       var y = e.sort_key === '9999-12' ? 'Future' : e.sort_key.slice(0, 4);
       if (!years[y]) { years[y] = []; yearOrder.push(y); }
       years[y].push(e);
@@ -115,12 +141,14 @@ layout: default
       years[y].forEach(function (e) {
         var month = e.date === 'Future' ? '' : e.date.split(' ')[0];
         var icon = e.type === 'olympiad'
-          ? '<svg class="rings-icon" viewBox="0 0 50 24" width="20" height="10"><circle cx="8" cy="8" r="6" fill="none" stroke="#0081C8" stroke-width="1.5"/><circle cx="18" cy="8" r="6" fill="none" stroke="#000" stroke-width="1.5"/><circle cx="28" cy="8" r="6" fill="none" stroke="#EE334E" stroke-width="1.5"/><circle cx="13" cy="14" r="6" fill="none" stroke="#FCB131" stroke-width="1.5"/><circle cx="23" cy="14" r="6" fill="none" stroke="#00A651" stroke-width="1.5"/></svg> '
+          ? '<svg class="rings-icon" viewBox="0 0 50 24" width="20" height="10"><circle cx="8" cy="8" r="6" fill="none" stroke="#0081C8" stroke-width="1.5"/><circle cx="18" cy="8" r="6" fill="none" stroke="#000" stroke-width="1.5"/><circle cx="28" cy="8" r="6" fill="none" stroke="#EE334E" stroke-width="1.5"/><circle cx="13" cy="14" r="6" fill="none" stroke="#FCB131" stroke-width="1.5"/><circle cx="23" cy="14" r="6" fill="none" stroke="#00A651" stroke-width="1.5"/></svg>'
           : '<span class="type-icon">📖</span>';
         var cls = e.highlighted ? ' hl' : '';
         html += '<div class="entry' + cls + '" data-subject="' + SUBJECT_SLUGS[e.subject] + '">'
           + '<div class="month">' + month + '</div>'
-          + '<div>' + icon + chip(e.subject) + ' <span class="ename">' + esc(e.name) + '</span></div>'
+          + '<div class="type-cell">' + icon + '</div>'
+          + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
+          + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="invited-badge">INVITED</span>' : '') + '</div>'
           + '</div>';
       });
     });
