@@ -87,19 +87,19 @@ Centrifugation separates the components of a mixture by spinning it at high spee
 
 Five everyday liquids were loaded into labeled 50 mL centrifuge tubes:
 
-| # | Sample | Description |
-|--:|--------|-------------|
-| 1 | Coke | Carbonated cola soft drink |
-| 2 | Milk | Whole milk |
-| 3 | Yogurt | Plain yogurt (liquid consistency) |
-| 4 | Apple cider vinegar | Unfiltered apple cider vinegar |
-| 5 | Honey | Liquid honey |
+| Sample | Description |
+|--------|-------------|
+| Coke | Carbonated cola soft drink |
+| Milk | Whole milk |
+| Yogurt | Plain yogurt (liquid consistency) |
+| Apple cider vinegar | Unfiltered apple cider vinegar |
+| Honey | Liquid honey |
 
 Each sample was vortexed to ensure homogeneity, then centrifuged. pH was measured before and after centrifugation by inserting the VWR electrode directly into the sample or the supernatant.
 
 ## Data
 
-pH readings were recorded from photographs of the VWR pH 1100 L display. Representative readings observed during the session:
+pH readings were recorded from photographs of the VWR pH 1100 L display — raw data photos are in the <a href="https://github.com/vivianweidai/science/tree/main/research/20260411%20Centrifuge/PHOTOS">PHOTOS</a> directory.
 
 | Sample | pH (observed) | Notes |
 |--------|--------------|-------|
@@ -107,8 +107,6 @@ pH readings were recorded from photographs of the VWR pH 1100 L display. Represe
 | Apple cider vinegar | ~4.3 | Acidic — acetic acid |
 | Honey | ~6.6 | Near neutral, slightly acidic |
 | Milk / Yogurt | ~11.9 | Unexpected high reading — possible calibration issue or electrode contamination |
-
-Raw data photos are in the <a href="https://github.com/vivianweidai/science/tree/main/research/20260411%20Centrifuge/PHOTOS/data">PHOTOS/data</a> directory.
 
 ## Results
 
