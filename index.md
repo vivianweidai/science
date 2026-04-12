@@ -5,7 +5,7 @@ title: Vivian Dai
 
 ## Science
 
-<img src="archives/IMAGES/science.png" alt="Science" width="100%">
+<img src="archives/CONTENT/science.png" alt="Science" width="100%">
 
 <div class="nav-links">
   <a href="curriculum/">Curriculum</a>
@@ -13,7 +13,7 @@ title: Vivian Dai
   <a href="research/">Research</a>
 </div>
 
-<a href="curriculum/"><img src="archives/IMAGES/curriculum.png" alt="Curriculum" width="100%"></a>
+<a href="curriculum/"><img src="archives/CONTENT/curriculum.png" alt="Curriculum" width="100%"></a>
 
 <div class="nav-links">
   <a href="archives/NOTES/mathematics.pdf">Mathematics</a>

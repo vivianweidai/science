@@ -52,7 +52,6 @@ science/
     │   ├── curriculum.js / shuffle.js / tabs.js
     │   ├── build_olympiads.py            # CONTENT/*.yml → CONTENT/*.json
     │   └── build_curriculum.py          # curriculum/*.md + NOTES/*.pdf → CONTENT/curriculum.json
-    ├── IMAGES/             # Consolidated images
     └── NOTES/              # Curriculum PDFs
 ```
 
