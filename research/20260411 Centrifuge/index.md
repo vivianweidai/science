@@ -87,7 +87,7 @@ This experiment centrifuged five common household liquids to observe what separa
 
 <div class="hero-single"><img src="PHOTOS/sample1.jpeg" alt="Five labeled Sarstedt tubes: Coke, Milk, Yogurt, Apple Cider Vinegar, Honey"></div>
 
-Five everyday liquids were loaded into labeled 50 mL centrifuge tubes:
+Five everyday liquids were loaded into labeled 50 mL centrifuge tubes. Each sample was vortexed to ensure homogeneity, then centrifuged. The pH was measured once before centrifugation by inserting the VWR electrode directly into the sample.
 
 | Sample | Description |
 |--------|-------------|
@@ -96,8 +96,6 @@ Five everyday liquids were loaded into labeled 50 mL centrifuge tubes:
 | Yogurt | Plain yogurt (liquid consistency) |
 | Apple cider vinegar | Unfiltered apple cider vinegar |
 | Vinegar | White distilled vinegar |
-
-Each sample was vortexed to ensure homogeneity, then centrifuged. pH was measured before and after centrifugation by inserting the VWR electrode directly into the sample or the supernatant.
 
 ## Data
 
