@@ -4,6 +4,7 @@ section: Sampling
 topic: Sampling Distribution
 table: Normal Distribution
 order: 17
+render_with_liquid: false
 ---
 
 # Normal Distribution
