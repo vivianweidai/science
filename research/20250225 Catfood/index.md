@@ -65,6 +65,8 @@ Colored cat food was prepared by mixing regular dry food with red and green food
 
 Raw data was recorded on handwritten data sheets and photographed. Variables tracked per trial include: date, serving number, pieces served and remaining, bowl position (left/right), serving time, and food dye drops used.
 
+The original handwritten data sheets are photographed and available in the <a href="https://github.com/vivianweidai/science/tree/main/research/20250225%20Catfood/DATA">DATA folder</a>. The preference tallies were transcribed from these handwritten records into <a href="https://github.com/vivianweidai/science/blob/main/research/20250225%20Catfood/OUTPUT/catfood_summary.csv">catfood_summary.csv</a>.
+
 <div class="photo-grid three-col" id="data-grid">
   <img id="data-0" alt="Data sheet">
   <img id="data-1" alt="Data sheet">
