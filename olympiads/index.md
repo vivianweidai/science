@@ -4,8 +4,6 @@ layout: default
 
 <div class="page-header"><h2>Olympiads</h2><a class="back-link" href="/">Science</a></div>
 
-<img src="../archives/CONTENT/olympiads.jpeg" alt="Olympiads" width="100%">
-
 <div class="tabs">
   <input type="radio" name="view" id="view-all" checked>
   <input type="radio" name="view" id="view-math">
@@ -167,4 +165,4 @@ layout: default
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/content">View on GitHub</a></div>
+<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/olympiads">View on GitHub</a></div>
