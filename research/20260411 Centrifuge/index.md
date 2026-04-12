@@ -64,7 +64,7 @@ photos:
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/LAYOUT/shuffle.js"></script>
 
-<div class="project-meta">April 11th 2026<br>Thermo Scientific Sorvall RT3 Centrifuge, Sartorius CP225D Analytical Balance, VWR pHenomenal pH 1100 L, Scientific Industries Vortex-Genie 2</div>
+<div class="project-meta">April 11th 2026<br>Thermo Scientific Sorvall RT3 Centrifuge, DiaMed ID-Centrifuge, Sartorius CP225D Analytical Balance, VWR pHenomenal pH 1100 L, Scientific Industries Vortex-Genie 2, Canlab Magnetic Stirrer, Gilson Pipetman Pipettes</div>
 
 ## Overview
 
@@ -77,7 +77,10 @@ This experiment centrifuged five common household liquids to observe what separa
 | Centrifuge | Thermo Scientific Sorvall RT3 Centrifuge |
 | pH meter | VWR pHenomenal pH 1100 L, calibrated at 25 °C |
 | Vortex mixer | Scientific Industries Vortex-Genie 2 |
+| Mini centrifuge | DiaMed ID-Centrifuge |
+| Magnetic stirrer | Canlab Magnetic Stirrer |
 | Balance | Sartorius CP225D Analytical Balance |
+| Pipettes | Gilson Pipetman Pipettes |
 | Tubes | Sarstedt 50 mL conical centrifuge tubes, Falcon 50 mL tubes |
 
 ## Samples
@@ -92,7 +95,7 @@ Five everyday liquids were loaded into labeled 50 mL centrifuge tubes:
 | Milk | Whole milk |
 | Yogurt | Plain yogurt (liquid consistency) |
 | Apple cider vinegar | Unfiltered apple cider vinegar |
-| Honey | Liquid honey |
+| Vinegar | White distilled vinegar |
 
 Each sample was vortexed to ensure homogeneity, then centrifuged. pH was measured before and after centrifugation by inserting the VWR electrode directly into the sample or the supernatant.
 
