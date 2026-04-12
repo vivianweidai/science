@@ -8,7 +8,7 @@ Output (consumed by olympiads/index.md client-side JS and by the iOS app):
   archives/CONTENT/olympiads.json
 
 Output shape:
-    {"items": [ {id, type, subject, date, sort_key, name, country?, highlighted,
+    {"items": [ {id, type, subject, date, sort_key, name, highlighted,
                  subjects?[], invited?}, ... ]}
 
 Run this after editing the YAML, then commit both the YAML and the JSON.
@@ -67,8 +67,6 @@ def build_activities() -> list[dict]:
             for s in e["subjects"]:
                 if s not in SUBJECTS:
                     raise ValueError(f"entry[{i}] invalid subject {s!r} in subjects list")
-        if e["type"] == "olympiad" and "country" not in e:
-            raise ValueError(f"entry[{i}] olympiad missing required field 'country'")
 
         item: dict = {
             "id": i + 1,
@@ -79,8 +77,6 @@ def build_activities() -> list[dict]:
             "name": e["name"],
             "highlighted": 1 if e.get("highlighted") else 0,
         }
-        if e.get("country"):
-            item["country"] = e["country"]
         if e.get("subjects"):
             item["subjects"] = e["subjects"]
         if e.get("invited"):

@@ -7,13 +7,12 @@ public struct Activity: Identifiable, Hashable, Codable, Sendable {
     public let date: String
     public let sortKey: String
     public let name: String
-    public let country: String?
     public let highlighted: Int
     public let subjects: [String]?
     public let invited: Int?
 
     enum CodingKeys: String, CodingKey {
-        case id, type, subject, date, name, country, highlighted, subjects, invited
+        case id, type, subject, date, name, highlighted, subjects, invited
         case sortKey = "sort_key"
     }
 

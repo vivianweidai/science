@@ -79,8 +79,7 @@
       "date": "November 2025",
       "sort_key": "2025-11",
       "name": "American Mathematics Competition 12",
-      "highlighted": 1,
-      "country": "United States"
+      "highlighted": 1
     },
     {
       "id": 10,
@@ -98,8 +97,7 @@
       "date": "October 2025",
       "sort_key": "2025-10",
       "name": "Canadian Open Mathematics Challenge",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 12,
@@ -135,8 +133,7 @@
       "date": "November 2024",
       "sort_key": "2024-11",
       "name": "American Mathematics Competition 12",
-      "highlighted": 0,
-      "country": "United States"
+      "highlighted": 0
     },
     {
       "id": 16,
@@ -145,8 +142,7 @@
       "date": "October 2024",
       "sort_key": "2024-10",
       "name": "Canadian Open Mathematics Challenge",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 17,
@@ -218,8 +214,7 @@
       "date": "January 2026",
       "sort_key": "2026-01",
       "name": "North American Computational Linguistics Open Exam",
-      "highlighted": 0,
-      "country": "United States"
+      "highlighted": 0
     },
     {
       "id": 25,
@@ -273,8 +268,7 @@
       "date": "March 2025",
       "sort_key": "2025-03",
       "name": "Canadian Computing Competition Senior Exam",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 31,
@@ -283,8 +277,7 @@
       "date": "January 2025",
       "sort_key": "2025-01",
       "name": "North American Computational Linguistics Open Exam",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 32,
@@ -293,8 +286,7 @@
       "date": "January 2025",
       "sort_key": "2025-01",
       "name": "USA Computing Olympiad Bronze Exam",
-      "highlighted": 0,
-      "country": "United States"
+      "highlighted": 0
     },
     {
       "id": 33,
@@ -330,8 +322,7 @@
       "date": "March 2024",
       "sort_key": "2024-03",
       "name": "Canadian Computing Competition Senior Exam",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 37,
@@ -340,8 +331,7 @@
       "date": "December 2023",
       "sort_key": "2023-12",
       "name": "USA Computing Olympiad Bronze Exam",
-      "highlighted": 0,
-      "country": "United States"
+      "highlighted": 0
     },
     {
       "id": 38,
@@ -395,8 +385,7 @@
       "date": "April 2026",
       "sort_key": "2026-04",
       "name": "Canadian Association of Physicists High School Prize Exam",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 44,
@@ -406,7 +395,6 @@
       "sort_key": "2026-03",
       "name": "Junior Science Olympiad of Canada Exam",
       "highlighted": 1,
-      "country": "Canada",
       "subjects": [
         "Physics",
         "Chemistry",
@@ -420,8 +408,7 @@
       "date": "February 2026",
       "sort_key": "2026-02",
       "name": "USA Physics Olympiad F=ma Qualifying Exam",
-      "highlighted": 0,
-      "country": "United States"
+      "highlighted": 0
     },
     {
       "id": 46,
@@ -458,7 +445,6 @@
       "sort_key": "2025-11",
       "name": "Junior Science Olympiad of Canada National Camp",
       "highlighted": 0,
-      "country": "Canada",
       "subjects": [
         "Physics",
         "Chemistry",
@@ -474,7 +460,6 @@
       "sort_key": "2025-05",
       "name": "Junior Science Olympiad of Canada Exams",
       "highlighted": 0,
-      "country": "Canada",
       "subjects": [
         "Physics",
         "Chemistry",
@@ -524,8 +509,7 @@
       "date": "April 2025",
       "sort_key": "2025-04",
       "name": "Canadian Association of Physicists High School Prize Exam",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 56,
@@ -543,8 +527,7 @@
       "date": "February 2025",
       "sort_key": "2025-02",
       "name": "USA Physics Olympiad F=ma Qualifying Exam",
-      "highlighted": 0,
-      "country": "United States"
+      "highlighted": 0
     },
     {
       "id": 58,
@@ -554,7 +537,6 @@
       "sort_key": "2024-05",
       "name": "Junior Science Olympiad of Canada Exams",
       "highlighted": 0,
-      "country": "Canada",
       "subjects": [
         "Physics",
         "Chemistry",
@@ -586,8 +568,7 @@
       "date": "April 2024",
       "sort_key": "2024-04",
       "name": "Canadian Association of Physicists High School Prize Exam",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 62,
@@ -605,8 +586,7 @@
       "date": "February 2024",
       "sort_key": "2024-02",
       "name": "USA Physics Olympiad F=ma Qualifying Exam",
-      "highlighted": 0,
-      "country": "United States"
+      "highlighted": 0
     },
     {
       "id": 64,
@@ -669,8 +649,7 @@
       "date": "April 2026",
       "sort_key": "2026-04",
       "name": "Canadian Chemistry Olympiad Exams",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 71,
@@ -688,8 +667,7 @@
       "date": "March 2026",
       "sort_key": "2026-03",
       "name": "United States National Chemistry Olympiad Local Exam",
-      "highlighted": 1,
-      "country": "United States"
+      "highlighted": 1
     },
     {
       "id": 73,
@@ -761,8 +739,7 @@
       "date": "April 2025",
       "sort_key": "2025-04",
       "name": "Canadian Chemistry Olympiad Exams",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 81,
@@ -772,7 +749,6 @@
       "sort_key": "2025-04",
       "name": "United States National Chemistry Olympiad National Exam",
       "highlighted": 0,
-      "country": "United States",
       "invited": 1
     },
     {
@@ -800,8 +776,7 @@
       "date": "March 2025",
       "sort_key": "2025-03",
       "name": "United States National Chemistry Olympiad Local Exam",
-      "highlighted": 0,
-      "country": "United States"
+      "highlighted": 0
     },
     {
       "id": 85,
@@ -837,8 +812,7 @@
       "date": "April 2024",
       "sort_key": "2024-04",
       "name": "Canadian Chemistry Olympiad Exams",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 89,
@@ -874,8 +848,7 @@
       "date": "April 2026",
       "sort_key": "2026-04",
       "name": "Canadian Biology Olympiad Competition Exam",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 93,
@@ -884,8 +857,7 @@
       "date": "February 2026",
       "sort_key": "2026-02",
       "name": "USA Biology Olympiad Open Exam",
-      "highlighted": 0,
-      "country": "United States"
+      "highlighted": 0
     },
     {
       "id": 94,
@@ -921,8 +893,7 @@
       "date": "February 2025",
       "sort_key": "2025-02",
       "name": "USA Biology Olympiad Open Exam",
-      "highlighted": 0,
-      "country": "United States"
+      "highlighted": 0
     },
     {
       "id": 98,
@@ -949,8 +920,7 @@
       "date": "April 2024",
       "sort_key": "2024-04",
       "name": "Canadian Biology Olympiad Competition Exam",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 101,
@@ -977,8 +947,7 @@
       "date": "May 2026",
       "sort_key": "2026-05",
       "name": "Canadian Astronomy and Astrophysics Olympiad Junior Exam",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 104,
@@ -987,8 +956,7 @@
       "date": "March 2026",
       "sort_key": "2026-03",
       "name": "Canadian Astronomy and Astrophysics Olympiad Senior Exam",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 105,
@@ -1006,8 +974,7 @@
       "date": "February 2026",
       "sort_key": "2026-02",
       "name": "USA Astronomy and Astrophysics Olympiad First Round Exam",
-      "highlighted": 1,
-      "country": "United States"
+      "highlighted": 1
     },
     {
       "id": 107,
@@ -1017,7 +984,6 @@
       "sort_key": "2025-10",
       "name": "International Olympiad on Astronomy and Astrophysics Junior",
       "highlighted": 0,
-      "country": "Canada",
       "invited": 1
     },
     {
@@ -1027,8 +993,7 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "Canadian Astronomy and Astrophysics Olympiad Junior Exam",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 109,
@@ -1037,8 +1002,7 @@
       "date": "March 2025",
       "sort_key": "2025-03",
       "name": "Canadian Astronomy and Astrophysics Olympiad Senior Exam",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 110,
@@ -1047,8 +1011,7 @@
       "date": "February 2025",
       "sort_key": "2025-02",
       "name": "USA Astronomy and Astrophysics Olympiad First Round Exam",
-      "highlighted": 0,
-      "country": "United States"
+      "highlighted": 0
     },
     {
       "id": 111,
@@ -1084,8 +1047,7 @@
       "date": "March 2024",
       "sort_key": "2024-03",
       "name": "Canadian Astronomy and Astrophysics Olympiad Senior Exam",
-      "highlighted": 0,
-      "country": "Canada"
+      "highlighted": 0
     },
     {
       "id": 115,
@@ -1094,8 +1056,7 @@
       "date": "February 2024",
       "sort_key": "2024-02",
       "name": "USA Astronomy and Astrophysics Olympiad First Round Exam",
-      "highlighted": 0,
-      "country": "United States"
+      "highlighted": 0
     }
   ]
 }

@@ -8,7 +8,7 @@
 #   subjects:    [Physics, Chemistry, Biology]                (optional — multi-subject override, e.g. JSOC)
 #   date:        "Month YYYY" | "Future"                      (required)
 #   name:        string                                       (required)
-#   country:     string                                       (required for olympiad)
+
 #   highlighted: true                                         (optional — omit when false)
 #   invited:     true                                         (optional — omit when false)
 - type: textbook
@@ -51,7 +51,6 @@
   subject: Mathematics
   date: November 2025
   name: American Mathematics Competition 12
-  country: United States
   highlighted: true
 - type: textbook
   subject: Mathematics
@@ -61,7 +60,6 @@
   subject: Mathematics
   date: October 2025
   name: Canadian Open Mathematics Challenge
-  country: Canada
 - type: textbook
   subject: Mathematics
   date: September 2025
@@ -78,12 +76,10 @@
   subject: Mathematics
   date: November 2024
   name: American Mathematics Competition 12
-  country: United States
 - type: olympiad
   subject: Mathematics
   date: October 2024
   name: Canadian Open Mathematics Challenge
-  country: Canada
 - type: textbook
   subject: Mathematics
   date: July 2024
@@ -119,7 +115,6 @@
   subject: Computing
   date: January 2026
   name: North American Computational Linguistics Open Exam
-  country: United States
 - type: textbook
   subject: Computing
   date: January 2026
@@ -145,17 +140,14 @@
   subject: Computing
   date: March 2025
   name: Canadian Computing Competition Senior Exam
-  country: Canada
 - type: olympiad
   subject: Computing
   date: January 2025
   name: North American Computational Linguistics Open Exam
-  country: Canada
 - type: olympiad
   subject: Computing
   date: January 2025
   name: USA Computing Olympiad Bronze Exam
-  country: United States
 - type: textbook
   subject: Computing
   date: January 2025
@@ -172,12 +164,10 @@
   subject: Computing
   date: March 2024
   name: Canadian Computing Competition Senior Exam
-  country: Canada
 - type: olympiad
   subject: Computing
   date: December 2023
   name: USA Computing Olympiad Bronze Exam
-  country: United States
 - type: textbook
   subject: Physics
   date: Future
@@ -202,19 +192,16 @@
   subject: Physics
   date: April 2026
   name: Canadian Association of Physicists High School Prize Exam
-  country: Canada
 - type: olympiad
   subject: Physics
   subjects: [Physics, Chemistry, Biology]
   date: March 2026
   name: Junior Science Olympiad of Canada Exam
-  country: Canada
   highlighted: true
 - type: olympiad
   subject: Physics
   date: February 2026
   name: USA Physics Olympiad F=ma Qualifying Exam
-  country: United States
 - type: textbook
   subject: Physics
   date: December 2025
@@ -233,14 +220,12 @@
   subjects: [Physics, Chemistry, Biology]
   date: November 2025
   name: Junior Science Olympiad of Canada National Camp
-  country: Canada
   invited: true
 - type: olympiad
   subject: Physics
   subjects: [Physics, Chemistry, Biology]
   date: May 2025
   name: Junior Science Olympiad of Canada Exams
-  country: Canada
 - type: textbook
   subject: Physics
   date: May 2025
@@ -261,7 +246,6 @@
   subject: Physics
   date: April 2025
   name: Canadian Association of Physicists High School Prize Exam
-  country: Canada
 - type: textbook
   subject: Physics
   date: March 2025
@@ -270,13 +254,11 @@
   subject: Physics
   date: February 2025
   name: USA Physics Olympiad F=ma Qualifying Exam
-  country: United States
 - type: olympiad
   subject: Physics
   subjects: [Physics, Chemistry, Biology]
   date: May 2024
   name: Junior Science Olympiad of Canada Exams
-  country: Canada
 - type: textbook
   subject: Physics
   date: May 2024
@@ -290,7 +272,6 @@
   subject: Physics
   date: April 2024
   name: Canadian Association of Physicists High School Prize Exam
-  country: Canada
 - type: textbook
   subject: Physics
   date: March 2024
@@ -299,7 +280,6 @@
   subject: Physics
   date: February 2024
   name: USA Physics Olympiad F=ma Qualifying Exam
-  country: United States
 - type: textbook
   subject: Chemistry
   date: September 2026
@@ -328,7 +308,6 @@
   subject: Chemistry
   date: April 2026
   name: Canadian Chemistry Olympiad Exams
-  country: Canada
 - type: textbook
   subject: Chemistry
   date: April 2026
@@ -338,7 +317,6 @@
   subject: Chemistry
   date: March 2026
   name: United States National Chemistry Olympiad Local Exam
-  country: United States
   highlighted: true
 - type: textbook
   subject: Chemistry
@@ -374,12 +352,10 @@
   subject: Chemistry
   date: April 2025
   name: Canadian Chemistry Olympiad Exams
-  country: Canada
 - type: olympiad
   subject: Chemistry
   date: April 2025
   name: United States National Chemistry Olympiad National Exam
-  country: United States
   invited: true
 - type: textbook
   subject: Chemistry
@@ -394,7 +370,6 @@
   subject: Chemistry
   date: March 2025
   name: United States National Chemistry Olympiad Local Exam
-  country: United States
 - type: textbook
   subject: Chemistry
   date: March 2025
@@ -411,7 +386,6 @@
   subject: Chemistry
   date: April 2024
   name: Canadian Chemistry Olympiad Exams
-  country: Canada
 - type: textbook
   subject: Chemistry
   date: March 2024
@@ -428,12 +402,10 @@
   subject: Biology
   date: April 2026
   name: Canadian Biology Olympiad Competition Exam
-  country: Canada
 - type: olympiad
   subject: Biology
   date: February 2026
   name: USA Biology Olympiad Open Exam
-  country: United States
 - type: textbook
   subject: Biology
   date: May 2025
@@ -451,7 +423,6 @@
   subject: Biology
   date: February 2025
   name: USA Biology Olympiad Open Exam
-  country: United States
 - type: textbook
   subject: Biology
   date: May 2024
@@ -465,7 +436,6 @@
   subject: Biology
   date: April 2024
   name: Canadian Biology Olympiad Competition Exam
-  country: Canada
 - type: textbook
   subject: Biology
   date: March 2024
@@ -478,12 +448,10 @@
   subject: Astronomy
   date: May 2026
   name: Canadian Astronomy and Astrophysics Olympiad Junior Exam
-  country: Canada
 - type: olympiad
   subject: Astronomy
   date: March 2026
   name: Canadian Astronomy and Astrophysics Olympiad Senior Exam
-  country: Canada
 - type: textbook
   subject: Astronomy
   date: March 2026
@@ -493,29 +461,24 @@
   subject: Astronomy
   date: February 2026
   name: USA Astronomy and Astrophysics Olympiad First Round Exam
-  country: United States
   highlighted: true
 - type: olympiad
   subject: Astronomy
   date: October 2025
   name: International Olympiad on Astronomy and Astrophysics Junior
-  country: Canada
   invited: true
 - type: olympiad
   subject: Astronomy
   date: May 2025
   name: Canadian Astronomy and Astrophysics Olympiad Junior Exam
-  country: Canada
 - type: olympiad
   subject: Astronomy
   date: March 2025
   name: Canadian Astronomy and Astrophysics Olympiad Senior Exam
-  country: Canada
 - type: olympiad
   subject: Astronomy
   date: February 2025
   name: USA Astronomy and Astrophysics Olympiad First Round Exam
-  country: United States
 - type: textbook
   subject: Astronomy
   date: August 2024
@@ -532,9 +495,7 @@
   subject: Astronomy
   date: March 2024
   name: Canadian Astronomy and Astrophysics Olympiad Senior Exam
-  country: Canada
 - type: olympiad
   subject: Astronomy
   date: February 2024
   name: USA Astronomy and Astrophysics Olympiad First Round Exam
-  country: United States
