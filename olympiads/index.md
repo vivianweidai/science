@@ -4,6 +4,8 @@ layout: default
 
 ## Olympiads
 
+<img src="../archives/IMAGES/olympiads.jpeg" alt="Olympiads" width="100%">
+
 <div class="tabs">
   <input type="radio" name="view" id="view-all" checked>
   <input type="radio" name="view" id="view-math">
@@ -25,8 +27,6 @@ layout: default
 </div>
 
 <div id="timeline"></div>
-
-<img src="../archives/IMAGES/olympiads.jpeg" alt="Olympiads" width="100%">
 
 <style>
   .timeline { border-left: 2px solid #d1d9e0; margin-left: .8em; padding-left: 1.2em; }
