@@ -9,9 +9,11 @@ public struct Activity: Identifiable, Hashable, Codable, Sendable {
     public let name: String
     public let country: String?
     public let highlighted: Int
+    public let subjects: [String]?
+    public let invited: Int?
 
     enum CodingKeys: String, CodingKey {
-        case id, type, subject, date, name, country, highlighted
+        case id, type, subject, date, name, country, highlighted, subjects, invited
         case sortKey = "sort_key"
     }
 

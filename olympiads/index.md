@@ -88,9 +88,6 @@ layout: default
     Mathematics: 'math', Computing: 'comp', Physics: 'phys',
     Chemistry: 'chem', Biology: 'bio', Astronomy: 'astro'
   };
-  var MULTI_SUBJECT = {
-    'Junior Science Olympiad of Canada': ['Physics', 'Chemistry', 'Biology']
-  };
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
@@ -103,33 +100,23 @@ layout: default
   }
 
   function chipsForEntry(e) {
-    for (var key in MULTI_SUBJECT) {
-      if (e.name.indexOf(key) === 0) return MULTI_SUBJECT[key].map(chip).join('');
-    }
-    return chip(e.subject);
+    var subjects = e.subjects || [e.subject];
+    return subjects.map(chip).join('');
   }
 
   function renderTimeline(items, filter) {
     var filtered = filter === 'all'
       ? items
-      : items.filter(function (e) { return SUBJECT_SLUGS[e.subject] === filter; });
+      : items.filter(function (e) {
+          var subjects = e.subjects || [e.subject];
+          return subjects.some(function (s) { return SUBJECT_SLUGS[s] === filter; });
+        });
 
-    // Deduplicate multi-subject entries (e.g. JSOC)
-    var seen = {}, deduped = [];
-    filtered.forEach(function (e) {
-      var isMulti = false;
-      for (var key in MULTI_SUBJECT) { if (e.name.indexOf(key) === 0) { isMulti = true; break; } }
-      if (isMulti) {
-        var dk = e.date + '|' + e.name;
-        if (!seen[dk]) { seen[dk] = true; deduped.push(e); }
-      } else { deduped.push(e); }
-    });
-
-    deduped.sort(function (a, b) { return b.sort_key.localeCompare(a.sort_key); });
+    filtered.sort(function (a, b) { return b.sort_key.localeCompare(a.sort_key); });
 
     var years = {};
     var yearOrder = [];
-    deduped.forEach(function (e) {
+    filtered.forEach(function (e) {
       var y = e.sort_key === '9999-12' ? 'Future' : e.sort_key.slice(0, 4);
       if (!years[y]) { years[y] = []; yearOrder.push(y); }
       years[y].push(e);

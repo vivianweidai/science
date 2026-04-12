@@ -8,7 +8,8 @@ Output (consumed by olympiads/index.md client-side JS and by the iOS app):
   archives/CONTENT/olympiads.json
 
 Output shape:
-    {"items": [ {id, type, subject, date, sort_key, name, country?, highlighted}, ... ]}
+    {"items": [ {id, type, subject, date, sort_key, name, country?, highlighted,
+                 subjects?[], invited?}, ... ]}
 
 Run this after editing the YAML, then commit both the YAML and the JSON.
 There is no CI validation — the editor is responsible for remembering to rebuild.
@@ -55,15 +56,17 @@ def build_activities() -> list[dict]:
     items = []
     for i, e in enumerate(data):
         # Validate required fields
-        for field in ("type", "subject", "date", "name", "highlighted"):
+        for field in ("type", "subject", "date", "name"):
             if field not in e:
                 raise ValueError(f"entry[{i}] missing required field {field!r}: {e}")
         if e["type"] not in TYPES:
             raise ValueError(f"entry[{i}] invalid type {e['type']!r}")
         if e["subject"] not in SUBJECTS:
             raise ValueError(f"entry[{i}] invalid subject {e['subject']!r}")
-        if not isinstance(e["highlighted"], bool):
-            raise ValueError(f"entry[{i}] highlighted must be true/false")
+        if "subjects" in e:
+            for s in e["subjects"]:
+                if s not in SUBJECTS:
+                    raise ValueError(f"entry[{i}] invalid subject {s!r} in subjects list")
         if e["type"] == "olympiad" and "country" not in e:
             raise ValueError(f"entry[{i}] olympiad missing required field 'country'")
 
@@ -74,10 +77,12 @@ def build_activities() -> list[dict]:
             "date": e["date"],
             "sort_key": sort_key(e["date"]),
             "name": e["name"],
-            "highlighted": 1 if e["highlighted"] else 0,
+            "highlighted": 1 if e.get("highlighted") else 0,
         }
         if e.get("country"):
             item["country"] = e["country"]
+        if e.get("subjects"):
+            item["subjects"] = e["subjects"]
         if e.get("invited"):
             item["invited"] = 1
         items.append(item)
