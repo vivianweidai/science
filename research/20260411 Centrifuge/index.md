@@ -101,8 +101,8 @@ Five everyday liquids were loaded into labeled 50 mL centrifuge tubes. Each samp
 
 The pH readings were recorded from photographs of the VWR pHenomenal pH 1100 L display. A number of mystery solutions available in the lab were also measured for additional pH practice. Raw data photos are in the <a href="https://github.com/vivianweidai/science/tree/main/research/20260411%20Centrifuge/PHOTOS">PHOTOS</a> directory.
 
-| Sample | pH (observed) | Photo | Notes |
-|--------|--------------|-------|-------|
+| Sample | pH | Photo | Notes |
+|--------|:--:|:-----:|-------|
 | Yogurt | 4.335 | <a href="PHOTOS/data1.jpeg">Data 1</a> | Acidic — lactic acid |
 | Vinegar | 2.515 | <a href="PHOTOS/data3.jpeg">Data 3</a> | Strongly acidic — acetic acid |
 | Apple cider vinegar | 2.436 | <a href="PHOTOS/data4.jpeg">Data 4</a> | Acidic — acetic acid |
