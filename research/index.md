@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Research
+<div class="page-header"><h2>Research</h2><a class="back-link" href="/">Science</a></div>
 
 <div class="tabs">
   <input type="radio" name="tab" id="tab-math">

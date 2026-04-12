@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Olympiads
+<div class="page-header"><h2>Olympiads</h2><a class="back-link" href="/">Science</a></div>
 
 <img src="../archives/IMAGES/olympiads.jpeg" alt="Olympiads" width="100%">
 

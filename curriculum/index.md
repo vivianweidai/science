@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Curriculum
+<div class="page-header"><h2>Curriculum</h2><a class="back-link" href="/">Science</a></div>
 
 <link rel="stylesheet" href="/archives/LAYOUT/curriculum.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">

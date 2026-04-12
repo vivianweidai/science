@@ -38,6 +38,26 @@ hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0 0.5em 0; }
   .orcid-short { display: inline; }
 }
 
+/* Page heading with back-link */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid #d1d9e0;
+  padding-bottom: 0.3em;
+  margin-top: 0;
+}
+.page-header h2 {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin: 0;
+}
+.page-header .back-link {
+  font-size: 0.9em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 /* CSS-only tabs */
 .tabs { margin: 1em 0; }
 .tabs input[type="radio"] { display: none; }
