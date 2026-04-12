@@ -19,3 +19,4 @@ venv/
 .env.local
 .wrangler/
 apple/.build/
+*.DS_Store
