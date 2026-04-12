@@ -90,4 +90,4 @@ var allData = {{ page.data_photos | jsonify }};
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="/chinese/curriculum/">课程</a><a href="/chinese/olympiads/">竞赛</a><a href="/chinese/research/">研究</a></div><a class="footer-github" href="/research/20250225%20Catfood/">English</a></div>
+<div class="footer"><div class="footer-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a href="/archives/CHINESE/research/">研究</a></div><a class="footer-github" href="/research/20250225%20Catfood/">English</a></div>

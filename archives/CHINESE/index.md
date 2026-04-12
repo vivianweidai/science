@@ -8,12 +8,12 @@ title: Vivian Dai
 <img src="/archives/CONTENT/science.png" alt="科学" width="100%">
 
 <div class="nav-links">
-  <a href="/chinese/curriculum/">课程</a>
-  <a href="/chinese/olympiads/">竞赛</a>
-  <a href="/chinese/research/">研究</a>
+  <a href="/archives/CHINESE/curriculum/">课程</a>
+  <a href="/archives/CHINESE/olympiads/">竞赛</a>
+  <a href="/archives/CHINESE/research/">研究</a>
 </div>
 
-<a href="/chinese/curriculum/"><img src="/archives/CONTENT/curriculum.png" alt="课程" width="100%"></a>
+<a href="/archives/CHINESE/curriculum/"><img src="/archives/CONTENT/curriculum.png" alt="课程" width="100%"></a>
 
 <div class="nav-links">
   <a href="/curriculum/archives/mathematics.pdf">数学</a>
@@ -26,4 +26,4 @@ title: Vivian Dai
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="/chinese/curriculum/">课程</a><a href="/chinese/olympiads/">竞赛</a><a href="/chinese/research/">研究</a></div><a class="footer-github" href="/">English</a></div>
+<div class="footer"><div class="footer-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a href="/archives/CHINESE/research/">研究</a></div><a class="footer-github" href="/">English</a></div>
