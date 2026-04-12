@@ -13,7 +13,7 @@ Three tabs:
   Watch shows plain text (no WebKit on watchOS).
 - **Olympiads** — contests tracker plus unified textbooks list, read
   from `archives/CONTENT/olympiads.json` (built from
-  `olympiads.yml` via `archives/LAYOUT/build_listings.py`).
+  `olympiads.yml` via `archives/LAYOUT/build_olympiads.py`).
 - **Research** — experimental data projects under `/research/`.
 
 ## Layout

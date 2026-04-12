@@ -85,7 +85,7 @@ layout: default
 <script>
 // Timeline view — renders archives/CONTENT/olympiads.json as a vertical
 // chronological timeline grouped by year. Built from archives/CONTENT/olympiads.yml
-// by archives/LAYOUT/build_listings.py.
+// by archives/LAYOUT/build_olympiads.py.
 (function () {
   var SUBJECT_SLUGS = {
     Mathematics: 'math', Computing: 'comp', Physics: 'phys',

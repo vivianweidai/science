@@ -1,7 +1,7 @@
 # Olympiads and textbooks — single source of truth.
 # Each entry: type (olympiad|textbook), subject, date ("Month YYYY" or "Future"),
 # name, finished, highlighted. Olympiads also have country.
-# Run `python archives/LAYOUT/build_listings.py` after edits to regenerate JSON.
+# Run `python archives/LAYOUT/build_olympiads.py` after edits to regenerate JSON.
 - type: textbook
   subject: Mathematics
   date: Future

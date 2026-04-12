@@ -11,7 +11,7 @@ workflow works.
 - `archives/CONTENT/olympiads.yml` — all olympiad events + textbooks/courses (132 entries)
 
 **Build pipeline:**
-- `archives/LAYOUT/build_listings.py` parses the YAML, validates schema, computes
+- `archives/LAYOUT/build_olympiads.py` parses the YAML, validates schema, computes
   `sort_key`, and emits `archives/CONTENT/olympiads.json`
   in the exact shape the iOS app needs.
 
@@ -41,7 +41,7 @@ workflow works.
 Jekyll natively in "Deploy from a branch" mode — no workflow file needed. The
 tradeoff is no CI check that `archives/CONTENT/olympiads.json` is in sync with
 the YAML; the editor (you or Claude) is responsible for rerunning
-`python archives/LAYOUT/build_listings.py` before committing. If drift ever
+`python archives/LAYOUT/build_olympiads.py` before committing. If drift ever
 becomes a problem, a workflow can be added back in a few lines.
 
 ## What you still need to do by hand
@@ -115,11 +115,11 @@ URL disruption.
 ## Editing workflow (how you update listings from now on)
 
 1. Edit `archives/CONTENT/olympiads.yml` in your editor.
-   The schema is enforced by `archives/LAYOUT/build_listings.py` — see that file for
+   The schema is enforced by `archives/LAYOUT/build_olympiads.py` — see that file for
    the full list of required fields.
 2. Run:
    ```
-   python archives/LAYOUT/build_listings.py
+   python archives/LAYOUT/build_olympiads.py
    ```
    This regenerates `archives/CONTENT/olympiads.json`.
    If your edit has a schema violation (typo in subject, missing field, bad
