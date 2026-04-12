@@ -76,6 +76,8 @@ layout: default
   .chip.astro { background: #f4c2cb; }
 </style>
 
+---
+
 ### Instruments
 
 - <span class="chip chem">Chemistry</span> <a href="20260401%20IR%20Spectroscopy/">Thermo Scientific Nicolet 380 FT-IR Spectrometer</a> — mid-IR absorption/transmittance spectra
@@ -87,6 +89,8 @@ layout: default
 - <span class="chip bio">Biology</span> <a href="20260401%20Genes%20in%20Space/">P51 Fluorescence Viewer</a> — fluorescence detection and gel imaging
 - <span class="chip bio">Biology</span> <a href="20260401%20Genes%20in%20Space/">BioBits Cell Free System</a> — in vitro protein expression from DNA templates
 - <span class="chip comp">Computing</span> GitHub, Python and Jupyter Notebooks — statistical analysis and reproducible research pipelines
+
+---
 
 ### Repository Structure
 
