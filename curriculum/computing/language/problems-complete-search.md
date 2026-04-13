@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Problems
-table: Complete Search
+table: complete search
 order: 48
 ---
 
-# Complete Search
+# complete search
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

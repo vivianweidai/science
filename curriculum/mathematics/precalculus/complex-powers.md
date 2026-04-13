@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Precalculus
 topic: Complex
-table: Powers
+table: powers
 order: 45
 ---
 
-# Powers
+# powers
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Computing
 section: Sampling
 topic: Methods
-table: Bias
+table: bias
 order: 13
 ---
 
-# Bias
+# bias
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Calculus
 topic: Differentiation
-table: Rules
+table: rules
 order: 53
 ---
 
-# Rules
+# rules
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

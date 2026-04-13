@@ -2,11 +2,11 @@
 subject: Physics
 section: Electromagnetism
 topic: Maxwell
-table: Waves
+table: waves
 order: 29
 ---
 
-# Waves
+# waves
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

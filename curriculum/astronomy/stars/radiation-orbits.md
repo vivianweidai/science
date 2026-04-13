@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Radiation
-table: Orbits
+table: orbits
 order: 38
 ---
 
-# Orbits
+# orbits
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

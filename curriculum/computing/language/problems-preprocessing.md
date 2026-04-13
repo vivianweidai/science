@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Problems
-table: Preprocessing
+table: preprocessing
 order: 49
 ---
 
-# Preprocessing
+# preprocessing
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

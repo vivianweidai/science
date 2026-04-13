@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Alkenes
-table: Synthesis
+table: synthesis
 order: 63
 ---
 
-# Synthesis
+# synthesis
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

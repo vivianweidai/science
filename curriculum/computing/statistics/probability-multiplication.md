@@ -2,11 +2,11 @@
 subject: Computing
 section: Statistics
 topic: Probability
-table: Multiplication
+table: multiplication
 order: 7
 ---
 
-# Multiplication
+# multiplication
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

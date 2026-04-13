@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Bonds
 topic: Quantum
-table: Molecular Orbital
+table: molecular orbital
 order: 14
 ---
 
-# Molecular Orbital
+# molecular orbital
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

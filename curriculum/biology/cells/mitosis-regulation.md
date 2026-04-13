@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Mitosis
-table: Regulation
+table: regulation
 order: 17
 ---
 
-# Regulation
+# regulation
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

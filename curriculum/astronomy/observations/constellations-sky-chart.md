@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Observations
 topic: Constellations
-table: Sky Chart
+table: sky chart
 order: 2
 ---
 
-# Sky Chart
+# sky chart
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

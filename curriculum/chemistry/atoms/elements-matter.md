@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Atoms
 topic: Elements
-table: Matter
+table: matter
 order: 1
 ---
 
-# Matter
+# matter
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Coordinates
 topic: Celestial
-table: Ecliptical
+table: ecliptical
 order: 15
 ---
 
-# Ecliptical
+# ecliptical
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

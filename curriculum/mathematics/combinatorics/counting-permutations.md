@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Combinatorics
 topic: Counting
-table: Permutations
+table: permutations
 order: 8
 ---
 
-# Permutations
+# permutations
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

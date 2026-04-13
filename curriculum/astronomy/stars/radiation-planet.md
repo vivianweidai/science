@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Radiation
-table: Planet
+table: planet
 order: 41
 ---
 
-# Planet
+# planet
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

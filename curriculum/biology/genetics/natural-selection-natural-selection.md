@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Natural Selection
-table: Natural Selection
+table: natural selection
 order: 37
 ---
 
-# Natural Selection
+# natural selection
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Bonds
 topic: States
-table: Phase Diagram
+table: phase diagram
 order: 20
 ---
 
-# Phase Diagram
+# phase diagram
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

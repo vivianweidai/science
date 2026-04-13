@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Natural Selection
-table: Evidence
+table: evidence
 order: 38
 ---
 
-# Evidence
+# evidence
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

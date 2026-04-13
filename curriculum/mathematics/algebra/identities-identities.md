@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Identities
-table: Identities
+table: identities
 order: 35
 ---
 
-# Identities
+# identities
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

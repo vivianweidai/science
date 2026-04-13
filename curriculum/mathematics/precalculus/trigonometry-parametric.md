@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Precalculus
 topic: Trigonometry
-table: Parametric
+table: parametric
 order: 43
 ---
 
-# Parametric
+# parametric
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

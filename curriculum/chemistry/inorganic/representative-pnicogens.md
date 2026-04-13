@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Representative
-table: Pnicogens
+table: pnicogens
 order: 91
 ---
 
-# Pnicogens
+# pnicogens
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

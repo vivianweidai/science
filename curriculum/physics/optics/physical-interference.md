@@ -2,11 +2,11 @@
 subject: Physics
 section: Optics
 topic: Physical
-table: Interference
+table: interference
 order: 45
 ---
 
-# Interference
+# interference
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

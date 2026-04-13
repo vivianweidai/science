@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Calculus
 topic: Fields
-table: Theorems
+table: theorems
 order: 62
 ---
 
-# Theorems
+# theorems
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

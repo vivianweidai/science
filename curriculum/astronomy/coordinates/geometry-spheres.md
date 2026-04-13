@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Coordinates
 topic: Geometry
-table: Spheres
+table: spheres
 order: 8
 ---
 
-# Spheres
+# spheres
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

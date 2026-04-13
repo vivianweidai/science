@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Mechanics
 topic: Kepler
-table: Ellipse
+table: ellipse
 order: 24
 ---
 
-# Ellipse
+# ellipse
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

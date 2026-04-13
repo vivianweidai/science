@@ -2,11 +2,11 @@
 subject: Biology
 section: Plants
 topic: Growth
-table: Layers
+table: layers
 order: 61
 ---
 
-# Layers
+# layers
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

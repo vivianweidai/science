@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Calculus
 topic: Fields
-table: Fields
+table: fields
 order: 61
 ---
 
-# Fields
+# fields
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

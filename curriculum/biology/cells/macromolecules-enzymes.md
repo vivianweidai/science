@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Macromolecules
-table: Enzymes
+table: enzymes
 order: 2
 ---
 
-# Enzymes
+# enzymes
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

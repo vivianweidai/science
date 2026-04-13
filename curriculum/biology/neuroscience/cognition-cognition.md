@@ -2,11 +2,11 @@
 subject: Biology
 section: Neuroscience
 topic: Cognition
-table: Cognition
+table: cognition
 order: 88
 ---
 
-# Cognition
+# cognition
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

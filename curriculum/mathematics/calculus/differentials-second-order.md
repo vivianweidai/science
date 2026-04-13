@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Calculus
 topic: Differentials
-table: Second Order
+table: second order
 order: 65
 ---
 
-# Second Order
+# second order
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

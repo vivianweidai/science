@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Cosmology
 topic: Active Nucleus
-table: Active Galaxies
+table: active galaxies
 order: 64
 ---
 
-# Active Galaxies
+# active galaxies
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

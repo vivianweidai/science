@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Number Theory
 topic: Modular Arithmetic
-table: Divisibility
+table: divisibility
 order: 5
 ---
 
-# Divisibility
+# divisibility
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

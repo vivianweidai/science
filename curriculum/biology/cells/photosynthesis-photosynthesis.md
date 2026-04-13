@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Photosynthesis
-table: Photosynthesis
+table: photosynthesis
 order: 9
 ---
 
-# Photosynthesis
+# photosynthesis
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

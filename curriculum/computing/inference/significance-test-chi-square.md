@@ -2,11 +2,11 @@
 subject: Computing
 section: Inference
 topic: Significance Test
-table: Chi Square
+table: chi square
 order: 21
 ---
 
-# Chi Square
+# chi square
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Biology
 section: Neuroscience
 topic: Receptors
-table: Hearing
+table: hearing
 order: 93
 ---
 
-# Hearing
+# hearing
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

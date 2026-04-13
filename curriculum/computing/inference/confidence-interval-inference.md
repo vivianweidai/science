@@ -2,11 +2,11 @@
 subject: Computing
 section: Inference
 topic: Confidence Interval
-table: Inference
+table: inference
 order: 18
 ---
 
-# Inference
+# inference
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

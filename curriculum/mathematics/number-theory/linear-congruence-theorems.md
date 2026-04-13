@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Number Theory
 topic: Linear Congruence
-table: Theorems
+table: theorems
 order: 7
 ---
 
-# Theorems
+# theorems
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

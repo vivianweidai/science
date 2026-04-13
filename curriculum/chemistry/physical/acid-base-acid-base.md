@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Acid Base
-table: Acid Base
+table: acid base
 order: 36
 ---
 
-# Acid Base
+# acid base
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

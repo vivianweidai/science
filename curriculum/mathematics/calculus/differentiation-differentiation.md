@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Calculus
 topic: Differentiation
-table: Differentiation
+table: differentiation
 order: 52
 ---
 
-# Differentiation
+# differentiation
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

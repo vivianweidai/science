@@ -2,11 +2,11 @@
 subject: Physics
 section: Mechanics
 topic: Dynamics
-table: Problems
+table: problems
 order: 4
 ---
 
-# Problems
+# problems
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

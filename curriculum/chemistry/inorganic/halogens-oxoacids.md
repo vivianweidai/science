@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Halogens
-table: Oxoacids
+table: oxoacids
 order: 96
 ---
 
-# Oxoacids
+# oxoacids
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

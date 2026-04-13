@@ -2,11 +2,11 @@
 subject: Physics
 section: Electromagnetism
 topic: Magnetism
-table: Field
+table: field
 order: 23
 ---
 
-# Field
+# field
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

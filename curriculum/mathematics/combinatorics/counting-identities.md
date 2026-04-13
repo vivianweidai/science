@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Combinatorics
 topic: Counting
-table: Identities
+table: identities
 order: 10
 ---
 
-# Identities
+# identities
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

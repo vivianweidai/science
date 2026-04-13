@@ -2,11 +2,11 @@
 subject: Physics
 section: Mechanics
 topic: Energy
-table: Problems
+table: problems
 order: 6
 ---
 
-# Problems
+# problems
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

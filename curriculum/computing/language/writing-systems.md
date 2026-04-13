@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Writing
-table: Systems
+table: systems
 order: 23
 ---
 
-# Systems
+# systems
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

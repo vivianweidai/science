@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Replication
-table: Replication
+table: replication
 order: 26
 ---
 
-# Replication
+# replication
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

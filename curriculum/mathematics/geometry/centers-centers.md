@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Geometry
 topic: Centers
-table: Centers
+table: centers
 order: 18
 ---
 
-# Centers
+# centers
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

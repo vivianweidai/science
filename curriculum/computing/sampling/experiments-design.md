@@ -2,11 +2,11 @@
 subject: Computing
 section: Sampling
 topic: Experiments
-table: Design
+table: design
 order: 15
 ---
 
-# Design
+# design
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

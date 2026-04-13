@@ -2,11 +2,11 @@
 subject: Computing
 section: Sampling
 topic: Methods
-table: Methods
+table: methods
 order: 12
 ---
 
-# Methods
+# methods
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

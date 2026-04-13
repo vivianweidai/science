@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Ideas
-table: Ideas
+table: ideas
 order: 81
 ---
 
-# Ideas
+# ideas
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

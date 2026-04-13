@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Calculus
 topic: Vectors
-table: Multivariable
+table: multivariable
 order: 60
 ---
 
-# Multivariable
+# multivariable
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

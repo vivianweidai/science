@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Alkanes
-table: Substitution
+table: substitution
 order: 61
 ---
 
-# Substitution
+# substitution
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

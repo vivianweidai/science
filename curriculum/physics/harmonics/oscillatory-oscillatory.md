@@ -2,11 +2,11 @@
 subject: Physics
 section: Harmonics
 topic: Oscillatory
-table: Oscillatory
+table: oscillatory
 order: 14
 ---
 
-# Oscillatory
+# oscillatory
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Stoichiometry
 topic: Reactions
-table: Precipitation
+table: precipitation
 order: 23
 ---
 
-# Precipitation
+# precipitation
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

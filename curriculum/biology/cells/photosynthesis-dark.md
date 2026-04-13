@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Photosynthesis
-table: Dark
+table: dark
 order: 11
 ---
 
-# Dark
+# dark
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

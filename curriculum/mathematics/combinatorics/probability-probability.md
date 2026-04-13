@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Combinatorics
 topic: Probability
-table: Probability
+table: probability
 order: 11
 ---
 
-# Probability
+# probability
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

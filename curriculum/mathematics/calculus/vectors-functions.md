@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Calculus
 topic: Vectors
-table: Functions
+table: functions
 order: 59
 ---
 
-# Functions
+# functions
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

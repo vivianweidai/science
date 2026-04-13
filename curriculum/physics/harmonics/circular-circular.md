@@ -2,11 +2,11 @@
 subject: Physics
 section: Harmonics
 topic: Circular
-table: Circular
+table: circular
 order: 10
 ---
 
-# Circular
+# circular
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

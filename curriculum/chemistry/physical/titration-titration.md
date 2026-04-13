@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Titration
-table: Titration
+table: titration
 order: 42
 ---
 
-# Titration
+# titration
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Foundation
-table: Hydrides
+table: hydrides
 order: 83
 ---
 
-# Hydrides
+# hydrides
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

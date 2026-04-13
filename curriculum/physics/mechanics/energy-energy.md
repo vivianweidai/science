@@ -2,11 +2,11 @@
 subject: Physics
 section: Mechanics
 topic: Energy
-table: Energy
+table: energy
 order: 5
 ---
 
-# Energy
+# energy
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

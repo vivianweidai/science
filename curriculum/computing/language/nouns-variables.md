@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Nouns
-table: Variables
+table: variables
 order: 28
 ---
 
-# Variables
+# variables
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

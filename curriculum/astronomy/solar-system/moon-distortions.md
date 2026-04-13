@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Solar System
 topic: Moon
-table: Distortions
+table: distortions
 order: 35
 ---
 
-# Distortions
+# distortions
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

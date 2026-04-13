@@ -2,11 +2,11 @@
 subject: Biology
 section: Ecology
 topic: Viruses
-table: Hosts
+table: hosts
 order: 50
 ---
 
-# Hosts
+# hosts
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

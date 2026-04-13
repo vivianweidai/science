@@ -2,11 +2,11 @@
 subject: Physics
 section: Modern
 topic: Physical
-table: Relativity
+table: relativity
 order: 46
 ---
 
-# Relativity
+# relativity
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

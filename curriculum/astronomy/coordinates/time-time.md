@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Coordinates
 topic: Time
-table: Time
+table: time
 order: 17
 ---
 
-# Time
+# time
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

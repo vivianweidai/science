@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Enthalpy
-table: Enthalpy
+table: enthalpy
 order: 49
 ---
 
-# Enthalpy
+# enthalpy
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

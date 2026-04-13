@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Interior
-table: Generation
+table: generation
 order: 53
 ---
 
-# Generation
+# generation
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

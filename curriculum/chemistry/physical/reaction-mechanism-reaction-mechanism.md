@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Reaction Mechanism
-table: Reaction Mechanism
+table: reaction mechanism
 order: 31
 ---
 
-# Reaction Mechanism
+# reaction mechanism
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

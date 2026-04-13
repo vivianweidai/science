@@ -2,11 +2,11 @@
 subject: Biology
 section: Animals
 topic: Immune
-table: Immune
+table: immune
 order: 83
 ---
 
-# Immune
+# immune
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

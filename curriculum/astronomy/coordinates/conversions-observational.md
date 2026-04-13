@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Coordinates
 topic: Conversions
-table: Observational
+table: observational
 order: 12
 ---
 
-# Observational
+# observational
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

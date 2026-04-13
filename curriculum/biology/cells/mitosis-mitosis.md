@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Mitosis
-table: Mitosis
+table: mitosis
 order: 15
 ---
 
-# Mitosis
+# mitosis
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Efficiency
-table: Order
+table: order
 order: 36
 ---
 
-# Order
+# order
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

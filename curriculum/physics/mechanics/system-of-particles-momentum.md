@@ -2,11 +2,11 @@
 subject: Physics
 section: Mechanics
 topic: System Of Particles
-table: Momentum
+table: momentum
 order: 8
 ---
 
-# Momentum
+# momentum
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

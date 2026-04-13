@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Calculus
 topic: Limits
-table: Limits
+table: limits
 order: 50
 ---
 
-# Limits
+# limits
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Atmosphere
-table: Atmosphere
+table: atmosphere
 order: 48
 ---
 
-# Atmosphere
+# atmosphere
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

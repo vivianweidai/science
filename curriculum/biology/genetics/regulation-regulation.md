@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Regulation
-table: Regulation
+table: regulation
 order: 32
 ---
 
-# Regulation
+# regulation
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

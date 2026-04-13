@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Bonds
 topic: Alkali
-table: Alkaline
+table: alkaline
 order: 88
 ---
 
-# Alkaline
+# alkaline
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

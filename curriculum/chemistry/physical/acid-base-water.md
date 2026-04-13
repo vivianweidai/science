@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Acid Base
-table: Water
+table: water
 order: 37
 ---
 
-# Water
+# water
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Atoms
 topic: Electrons
-table: Relations
+table: relations
 order: 3
 ---
 
-# Relations
+# relations
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

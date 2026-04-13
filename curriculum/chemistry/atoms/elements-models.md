@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Atoms
 topic: Elements
-table: Models
+table: models
 order: 2
 ---
 
-# Models
+# models
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

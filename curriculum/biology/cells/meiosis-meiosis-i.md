@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Meiosis
-table: Meiosis I
+table: meiosis I
 order: 19
 ---
 
-# Meiosis I
+# meiosis I
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

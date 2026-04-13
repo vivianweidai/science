@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Halogens
-table: Halogens
+table: halogens
 order: 94
 ---
 
-# Halogens
+# halogens
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

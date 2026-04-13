@@ -2,11 +2,11 @@
 subject: Computing
 section: Learning
 topic: Methods
-table: Regression
+table: regression
 order: 53
 ---
 
-# Regression
+# regression
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

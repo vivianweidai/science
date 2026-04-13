@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Combinatorics
 topic: Sets
-table: Concepts
+table: concepts
 order: 13
 ---
 
-# Concepts
+# concepts
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Phylogeny
-table: Tree Of Life
+table: tree of life
 order: 39
 ---
 
-# Tree Of Life
+# tree of life
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

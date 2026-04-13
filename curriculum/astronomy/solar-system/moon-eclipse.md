@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Solar System
 topic: Moon
-table: Eclipse
+table: eclipse
 order: 37
 ---
 
-# Eclipse
+# eclipse
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Number Theory
 topic: Divisors
-table: Divisors
+table: divisors
 order: 1
 ---
 
-# Divisors
+# divisors
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

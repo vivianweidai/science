@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Structure
-table: Conformations
+table: conformations
 order: 55
 ---
 
-# Conformations
+# conformations
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

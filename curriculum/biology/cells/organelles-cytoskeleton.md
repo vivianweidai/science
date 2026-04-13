@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Organelles
-table: Cytoskeleton
+table: cytoskeleton
 order: 5
 ---
 
-# Cytoskeleton
+# cytoskeleton
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

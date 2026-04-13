@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Number Theory
 topic: Divisors
-table: Bases
+table: bases
 order: 3
 ---
 
-# Bases
+# bases
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

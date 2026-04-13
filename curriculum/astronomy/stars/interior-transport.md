@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Interior
-table: Transport
+table: transport
 order: 52
 ---
 
-# Transport
+# transport
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

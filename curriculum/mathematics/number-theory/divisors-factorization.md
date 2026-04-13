@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Number Theory
 topic: Divisors
-table: Factorization
+table: factorization
 order: 2
 ---
 
-# Factorization
+# factorization
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Respiration
-table: Aerobic
+table: aerobic
 order: 14
 ---
 
-# Aerobic
+# aerobic
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

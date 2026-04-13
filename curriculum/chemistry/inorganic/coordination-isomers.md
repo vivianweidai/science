@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Coordination
-table: Isomers
+table: isomers
 order: 74
 ---
 
-# Isomers
+# isomers
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

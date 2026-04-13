@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Bonds
 topic: Intermolecular
-table: Solids
+table: solids
 order: 17
 ---
 
-# Solids
+# solids
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

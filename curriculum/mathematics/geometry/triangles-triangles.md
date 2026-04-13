@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Geometry
 topic: Triangles
-table: Triangles
+table: triangles
 order: 16
 ---
 
-# Triangles
+# triangles
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

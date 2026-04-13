@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Combinatorics
 topic: Sets
-table: Recursion
+table: recursion
 order: 14
 ---
 
-# Recursion
+# recursion
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

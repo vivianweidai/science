@@ -2,11 +2,11 @@
 subject: Computing
 section: Sampling
 topic: Sampling Distribution
-table: Sampling Distribution
+table: sampling distribution
 order: 16
 ---
 
-# Sampling Distribution
+# sampling distribution
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Solids
-table: Unit Cells
+table: unit cells
 order: 79
 ---
 
-# Unit Cells
+# unit cells
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

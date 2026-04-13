@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Precalculus
 topic: Complex
-table: Roots
+table: roots
 order: 46
 ---
 
-# Roots
+# roots
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Physics
 section: Thermodynamics
 topic: Second Law
-table: Second Law
+table: second law
 order: 39
 ---
 
-# Second Law
+# second law
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

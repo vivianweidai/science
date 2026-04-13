@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Sequences And Series
-table: Geometric
+table: geometric
 order: 27
 ---
 
-# Geometric
+# geometric
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

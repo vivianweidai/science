@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Atoms
 topic: Nomenclature
-table: Oxoacids
+table: oxoacids
 order: 8
 ---
 
-# Oxoacids
+# oxoacids
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

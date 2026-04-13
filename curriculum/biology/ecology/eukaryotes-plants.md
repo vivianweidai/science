@@ -2,11 +2,11 @@
 subject: Biology
 section: Ecology
 topic: Eukaryotes
-table: Plants
+table: plants
 order: 54
 ---
 
-# Plants
+# plants
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

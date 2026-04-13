@@ -2,11 +2,11 @@
 subject: Biology
 section: Animals
 topic: Endocrine
-table: Homeostasis
+table: homeostasis
 order: 73
 ---
 
-# Homeostasis
+# homeostasis
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

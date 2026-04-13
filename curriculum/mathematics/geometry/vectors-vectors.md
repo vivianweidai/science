@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Geometry
 topic: Vectors
-table: Vectors
+table: vectors
 order: 23
 ---
 
-# Vectors
+# vectors
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

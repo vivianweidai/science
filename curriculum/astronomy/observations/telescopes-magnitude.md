@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Observations
 topic: Telescopes
-table: Magnitude
+table: magnitude
 order: 6
 ---
 
-# Magnitude
+# magnitude
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

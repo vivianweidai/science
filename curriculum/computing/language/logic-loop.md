@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Logic
-table: Loop
+table: loop
 order: 42
 ---
 
-# Loop
+# loop
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

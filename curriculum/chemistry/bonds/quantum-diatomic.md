@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Bonds
 topic: Quantum
-table: Diatomic
+table: diatomic
 order: 15
 ---
 
-# Diatomic
+# diatomic
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

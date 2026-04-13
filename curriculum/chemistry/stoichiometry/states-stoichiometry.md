@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Stoichiometry
 topic: States
-table: Stoichiometry
+table: stoichiometry
 order: 21
 ---
 
-# Stoichiometry
+# stoichiometry
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

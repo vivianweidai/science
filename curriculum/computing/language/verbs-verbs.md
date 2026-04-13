@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Verbs
-table: Verbs
+table: verbs
 order: 29
 ---
 
-# Verbs
+# verbs
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

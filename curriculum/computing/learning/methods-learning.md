@@ -2,11 +2,11 @@
 subject: Computing
 section: Learning
 topic: Methods
-table: Learning
+table: learning
 order: 52
 ---
 
-# Learning
+# learning
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

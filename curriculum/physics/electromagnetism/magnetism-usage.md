@@ -2,11 +2,11 @@
 subject: Physics
 section: Electromagnetism
 topic: Magnetism
-table: Usage
+table: usage
 order: 24
 ---
 
-# Usage
+# usage
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

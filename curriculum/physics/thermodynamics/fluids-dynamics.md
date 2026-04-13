@@ -2,11 +2,11 @@
 subject: Physics
 section: Thermodynamics
 topic: Fluids
-table: Dynamics
+table: dynamics
 order: 31
 ---
 
-# Dynamics
+# dynamics
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Biology
 section: Ecology
 topic: Population
-table: Ethology
+table: ethology
 order: 47
 ---
 
-# Ethology
+# ethology
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

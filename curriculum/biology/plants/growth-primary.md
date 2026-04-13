@@ -2,11 +2,11 @@
 subject: Biology
 section: Plants
 topic: Growth
-table: Primary
+table: primary
 order: 59
 ---
 
-# Primary
+# primary
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

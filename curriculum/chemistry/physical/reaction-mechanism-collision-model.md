@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Reaction Mechanism
-table: Collision Model
+table: collision model
 order: 32
 ---
 
-# Collision Model
+# collision model
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

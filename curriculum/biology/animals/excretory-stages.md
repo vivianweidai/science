@@ -2,11 +2,11 @@
 subject: Biology
 section: Animals
 topic: Excretory
-table: Stages
+table: stages
 order: 80
 ---
 
-# Stages
+# stages
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Mechanics
 topic: Kepler
-table: Sweep
+table: sweep
 order: 25
 ---
 
-# Sweep
+# sweep
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

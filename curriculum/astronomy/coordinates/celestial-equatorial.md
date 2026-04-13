@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Coordinates
 topic: Celestial
-table: Equatorial
+table: equatorial
 order: 14
 ---
 
-# Equatorial
+# equatorial
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Alkenes
-table: Alkenes
+table: alkenes
 order: 62
 ---
 
-# Alkenes
+# alkenes
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

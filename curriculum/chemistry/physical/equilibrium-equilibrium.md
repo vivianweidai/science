@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Equilibrium
-table: Equilibrium
+table: equilibrium
 order: 33
 ---
 
-# Equilibrium
+# equilibrium
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

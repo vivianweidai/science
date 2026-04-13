@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Atoms
 topic: Electrons
-table: Configuration
+table: configuration
 order: 4
 ---
 
-# Configuration
+# configuration
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

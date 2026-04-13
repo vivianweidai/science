@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Calculus
 topic: Vectors
-table: Surfaces
+table: surfaces
 order: 58
 ---
 
-# Surfaces
+# surfaces
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

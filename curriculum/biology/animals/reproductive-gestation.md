@@ -2,11 +2,11 @@
 subject: Biology
 section: Animals
 topic: Reproductive
-table: Gestation
+table: gestation
 order: 81
 ---
 
-# Gestation
+# gestation
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

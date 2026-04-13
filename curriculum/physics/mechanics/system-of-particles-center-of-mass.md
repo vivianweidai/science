@@ -2,11 +2,11 @@
 subject: Physics
 section: Mechanics
 topic: System Of Particles
-table: Center Of Mass
+table: center of mass
 order: 7
 ---
 
-# Center Of Mass
+# center of mass
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

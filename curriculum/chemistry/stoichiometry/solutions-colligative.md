@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Stoichiometry
 topic: Solutions
-table: Colligative
+table: colligative
 order: 28
 ---
 
-# Colligative
+# colligative
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

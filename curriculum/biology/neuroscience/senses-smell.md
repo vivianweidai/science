@@ -2,11 +2,11 @@
 subject: Biology
 section: Neuroscience
 topic: Senses
-table: Smell
+table: smell
 order: 97
 ---
 
-# Smell
+# smell
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

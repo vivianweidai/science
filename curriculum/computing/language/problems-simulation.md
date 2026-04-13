@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Problems
-table: Simulation
+table: simulation
 order: 47
 ---
 
-# Simulation
+# simulation
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

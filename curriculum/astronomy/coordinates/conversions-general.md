@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Coordinates
 topic: Conversions
-table: General
+table: general
 order: 13
 ---
 
-# General
+# general
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

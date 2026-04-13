@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Cosmology
 topic: Universe
-table: Universe
+table: universe
 order: 66
 ---
 
-# Universe
+# universe
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

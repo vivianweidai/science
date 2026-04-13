@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Functions
-table: Characteristics
+table: characteristics
 order: 25
 ---
 
-# Characteristics
+# characteristics
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

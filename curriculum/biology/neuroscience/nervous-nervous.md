@@ -2,11 +2,11 @@
 subject: Biology
 section: Neuroscience
 topic: Nervous
-table: Nervous
+table: nervous
 order: 85
 ---
 
-# Nervous
+# nervous
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

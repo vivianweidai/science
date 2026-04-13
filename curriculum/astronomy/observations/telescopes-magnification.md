@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Observations
 topic: Telescopes
-table: Magnification
+table: magnification
 order: 7
 ---
 
-# Magnification
+# magnification
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

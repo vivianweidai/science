@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Sequences And Series
-table: Arithmetic
+table: arithmetic
 order: 26
 ---
 
-# Arithmetic
+# arithmetic
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Physics
 section: Electromagnetism
 topic: Dynamics
-table: Circuits
+table: circuits
 order: 19
 ---
 
-# Circuits
+# circuits
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Membranes
-table: Communication
+table: communication
 order: 8
 ---
 
-# Communication
+# communication
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Physics
 section: Harmonics
 topic: Rotational
-table: Rotational
+table: rotational
 order: 12
 ---
 
-# Rotational
+# rotational
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

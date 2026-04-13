@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Polynomials
-table: Polynomials
+table: polynomials
 order: 29
 ---
 
-# Polynomials
+# polynomials
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

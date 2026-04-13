@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Representative
-table: Chalcogens
+table: chalcogens
 order: 92
 ---
 
-# Chalcogens
+# chalcogens
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

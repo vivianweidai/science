@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Inequalities
-table: Optimization
+table: optimization
 order: 38
 ---
 
-# Optimization
+# optimization
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

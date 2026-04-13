@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Combinations
-table: Combinations
+table: combinations
 order: 43
 ---
 
-# Combinations
+# combinations
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

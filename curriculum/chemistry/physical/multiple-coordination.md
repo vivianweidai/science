@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Multiple
-table: Coordination
+table: coordination
 order: 47
 ---
 
-# Coordination
+# coordination
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

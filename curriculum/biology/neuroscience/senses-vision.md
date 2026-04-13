@@ -2,11 +2,11 @@
 subject: Biology
 section: Neuroscience
 topic: Senses
-table: Vision
+table: vision
 order: 95
 ---
 
-# Vision
+# vision
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

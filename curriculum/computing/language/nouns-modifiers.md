@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Nouns
-table: Modifiers
+table: modifiers
 order: 27
 ---
 
-# Modifiers
+# modifiers
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Relations
-table: Relations
+table: relations
 order: 46
 ---
 
-# Relations
+# relations
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

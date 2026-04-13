@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Relations
-table: Functional Equations
+table: functional equations
 order: 40
 ---
 
-# Functional Equations
+# functional equations
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

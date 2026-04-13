@@ -2,11 +2,11 @@
 subject: Biology
 section: Neuroscience
 topic: Receptors
-table: Balance
+table: balance
 order: 94
 ---
 
-# Balance
+# balance
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Biology
 section: Animals
 topic: Immune
-table: Adaptive
+table: adaptive
 order: 84
 ---
 
-# Adaptive
+# adaptive
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

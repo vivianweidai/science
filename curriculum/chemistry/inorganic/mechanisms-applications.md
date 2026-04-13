@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Mechanisms
-table: Applications
+table: applications
 order: 78
 ---
 
-# Applications
+# applications
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

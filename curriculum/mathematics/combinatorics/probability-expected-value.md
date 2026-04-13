@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Combinatorics
 topic: Probability
-table: Expected Value
+table: expected value
 order: 12
 ---
 
-# Expected Value
+# expected value
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

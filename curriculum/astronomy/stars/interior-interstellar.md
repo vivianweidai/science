@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Interior
-table: Interstellar
+table: interstellar
 order: 54
 ---
 
-# Interstellar
+# interstellar
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

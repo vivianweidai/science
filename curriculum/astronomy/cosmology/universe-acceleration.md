@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Cosmology
 topic: Universe
-table: Acceleration
+table: acceleration
 order: 70
 ---
 
-# Acceleration
+# acceleration
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

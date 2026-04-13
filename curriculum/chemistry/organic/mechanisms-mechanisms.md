@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Mechanisms
-table: Mechanisms
+table: mechanisms
 order: 57
 ---
 
-# Mechanisms
+# mechanisms
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

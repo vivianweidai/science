@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Membranes
-table: Transport
+table: transport
 order: 7
 ---
 
-# Transport
+# transport
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

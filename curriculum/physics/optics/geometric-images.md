@@ -2,11 +2,11 @@
 subject: Physics
 section: Optics
 topic: Geometric
-table: Images
+table: images
 order: 43
 ---
 
-# Images
+# images
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

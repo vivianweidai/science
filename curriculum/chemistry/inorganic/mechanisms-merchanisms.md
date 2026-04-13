@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Mechanisms
-table: Merchanisms
+table: merchanisms
 order: 77
 ---
 
-# Merchanisms
+# merchanisms
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

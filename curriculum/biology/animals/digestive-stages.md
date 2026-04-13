@@ -2,11 +2,11 @@
 subject: Biology
 section: Animals
 topic: Digestive
-table: Stages
+table: stages
 order: 76
 ---
 
-# Stages
+# stages
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

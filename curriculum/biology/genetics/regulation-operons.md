@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Regulation
-table: Operons
+table: operons
 order: 33
 ---
 
-# Operons
+# operons
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

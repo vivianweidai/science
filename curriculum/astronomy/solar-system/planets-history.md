@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Solar System
 topic: Planets
-table: History
+table: history
 order: 30
 ---
 
-# History
+# history
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

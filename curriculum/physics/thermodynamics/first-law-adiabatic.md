@@ -2,11 +2,11 @@
 subject: Physics
 section: Thermodynamics
 topic: First Law
-table: Adiabatic
+table: adiabatic
 order: 38
 ---
 
-# Adiabatic
+# adiabatic
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

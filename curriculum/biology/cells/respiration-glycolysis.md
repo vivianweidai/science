@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Respiration
-table: Glycolysis
+table: glycolysis
 order: 13
 ---
 
-# Glycolysis
+# glycolysis
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Verbs
-table: Modifiers
+table: modifiers
 order: 30
 ---
 
-# Modifiers
+# modifiers
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

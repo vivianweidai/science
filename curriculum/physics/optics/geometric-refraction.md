@@ -2,11 +2,11 @@
 subject: Physics
 section: Optics
 topic: Geometric
-table: Refraction
+table: refraction
 order: 42
 ---
 
-# Refraction
+# refraction
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

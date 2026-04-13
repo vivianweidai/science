@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Speciation
-table: Microevolution
+table: microevolution
 order: 42
 ---
 
-# Microevolution
+# microevolution
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

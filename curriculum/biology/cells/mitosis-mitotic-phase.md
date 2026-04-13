@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Mitosis
-table: Mitotic Phase
+table: mitotic phase
 order: 16
 ---
 
-# Mitotic Phase
+# mitotic phase
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

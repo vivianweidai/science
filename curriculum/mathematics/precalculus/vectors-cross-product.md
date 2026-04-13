@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Precalculus
 topic: Vectors
-table: Cross Product
+table: cross product
 order: 48
 ---
 
-# Cross Product
+# cross product
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

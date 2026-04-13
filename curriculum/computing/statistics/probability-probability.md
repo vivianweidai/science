@@ -2,11 +2,11 @@
 subject: Computing
 section: Statistics
 topic: Probability
-table: Probability
+table: probability
 order: 5
 ---
 
-# Probability
+# probability
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Calculus
 topic: Integration
-table: Rules
+table: rules
 order: 55
 ---
 
-# Rules
+# rules
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

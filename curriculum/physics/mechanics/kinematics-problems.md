@@ -2,11 +2,11 @@
 subject: Physics
 section: Mechanics
 topic: Kinematics
-table: Problems
+table: problems
 order: 2
 ---
 
-# Problems
+# problems
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

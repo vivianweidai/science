@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Stoichiometry
 topic: States
-table: Solutions
+table: solutions
 order: 22
 ---
 
-# Solutions
+# solutions
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

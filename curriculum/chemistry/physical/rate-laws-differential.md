@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Rate Laws
-table: Differential
+table: differential
 order: 29
 ---
 
-# Differential
+# differential
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

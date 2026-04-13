@@ -2,11 +2,11 @@
 subject: Computing
 section: Learning
 topic: Methods
-table: Ai
+table: ai
 order: 51
 ---
 
-# Ai
+# ai
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

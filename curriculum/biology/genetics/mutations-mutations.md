@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Mutations
-table: Mutations
+table: mutations
 order: 34
 ---
 
-# Mutations
+# mutations
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Mechanics
 topic: Kepler
-table: Period
+table: period
 order: 26
 ---
 
-# Period
+# period
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

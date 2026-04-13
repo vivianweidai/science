@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Synthesis
-table: Ethers
+table: ethers
 order: 67
 ---
 
-# Ethers
+# ethers
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

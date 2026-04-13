@@ -2,11 +2,11 @@
 subject: Biology
 section: Animals
 topic: Excretory
-table: Excretory
+table: excretory
 order: 79
 ---
 
-# Excretory
+# excretory
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

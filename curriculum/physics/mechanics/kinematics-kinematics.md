@@ -2,11 +2,11 @@
 subject: Physics
 section: Mechanics
 topic: Kinematics
-table: Kinematics
+table: kinematics
 order: 1
 ---
 
-# Kinematics
+# kinematics
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

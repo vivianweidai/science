@@ -2,11 +2,11 @@
 subject: Biology
 section: Animals
 topic: Endocrine
-table: Endocrine
+table: endocrine
 order: 74
 ---
 
-# Endocrine
+# endocrine
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

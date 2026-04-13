@@ -2,11 +2,11 @@
 subject: Computing
 section: Learning
 topic: Algorithms
-table: Perceptrons
+table: perceptrons
 order: 54
 ---
 
-# Perceptrons
+# perceptrons
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

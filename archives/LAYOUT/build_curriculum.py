@@ -294,7 +294,7 @@ def process_docx(docx_path: Path, formulas: list[str]) -> tuple[list[dict], int]
             tables_data.append({
                 "section": current_section,
                 "topic": current_topic,
-                "table_name": table_name.title(),
+                "table_name": table_name,
                 "rows": table_rows,
                 "highlighted_rows": highlighted,
             })

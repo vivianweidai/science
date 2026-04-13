@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Combinations
-table: Recursion
+table: recursion
 order: 44
 ---
 
-# Recursion
+# recursion
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

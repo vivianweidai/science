@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Bonds
 topic: Localized
-table: Shape
+table: shape
 order: 13
 ---
 
-# Shape
+# shape
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

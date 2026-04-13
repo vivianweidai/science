@@ -2,11 +2,11 @@
 subject: Biology
 section: Neuroscience
 topic: Nervous
-table: Brain
+table: brain
 order: 86
 ---
 
-# Brain
+# brain
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

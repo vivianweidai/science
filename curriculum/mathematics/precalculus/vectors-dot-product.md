@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Precalculus
 topic: Vectors
-table: Dot Product
+table: dot product
 order: 47
 ---
 
-# Dot Product
+# dot product
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

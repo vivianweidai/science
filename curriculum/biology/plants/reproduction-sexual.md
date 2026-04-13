@@ -2,11 +2,11 @@
 subject: Biology
 section: Plants
 topic: Reproduction
-table: Sexual
+table: sexual
 order: 68
 ---
 
-# Sexual
+# sexual
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

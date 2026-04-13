@@ -2,11 +2,11 @@
 subject: Biology
 section: Plants
 topic: Transport
-table: Water
+table: water
 order: 64
 ---
 
-# Water
+# water
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Relations
-table: Strategies
+table: strategies
 order: 41
 ---
 
-# Strategies
+# strategies
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

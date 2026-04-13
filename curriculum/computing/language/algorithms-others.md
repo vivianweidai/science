@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Algorithms
-table: Others
+table: others
 order: 46
 ---
 
-# Others
+# others
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

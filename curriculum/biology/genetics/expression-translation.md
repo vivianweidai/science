@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Expression
-table: Translation
+table: translation
 order: 31
 ---
 
-# Translation
+# translation
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

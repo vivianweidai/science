@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Mass
-table: Mass
+table: mass
 order: 45
 ---
 
-# Mass
+# mass
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

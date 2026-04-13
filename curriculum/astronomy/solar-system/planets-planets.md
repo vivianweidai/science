@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Solar System
 topic: Planets
-table: Planets
+table: planets
 order: 31
 ---
 
-# Planets
+# planets
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Electrochemistry
-table: Galvanic Cell
+table: galvanic cell
 order: 52
 ---
 
-# Galvanic Cell
+# galvanic cell
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

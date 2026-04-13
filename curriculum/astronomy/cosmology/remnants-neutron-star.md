@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Cosmology
 topic: Remnants
-table: Neutron Star
+table: neutron star
 order: 59
 ---
 
-# Neutron Star
+# neutron star
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

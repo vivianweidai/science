@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Stoichiometry
 topic: Gases
-table: Kinetic Molecular Theory
+table: kinetic molecular theory
 order: 26
 ---
 
-# Kinetic Molecular Theory
+# kinetic molecular theory
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

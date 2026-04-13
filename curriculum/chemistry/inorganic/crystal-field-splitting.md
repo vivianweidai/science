@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Crystal Field
-table: Splitting
+table: splitting
 order: 75
 ---
 
-# Splitting
+# splitting
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

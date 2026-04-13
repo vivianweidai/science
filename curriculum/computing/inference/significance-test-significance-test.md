@@ -2,11 +2,11 @@
 subject: Computing
 section: Inference
 topic: Significance Test
-table: Significance Test
+table: significance test
 order: 20
 ---
 
-# Significance Test
+# significance test
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

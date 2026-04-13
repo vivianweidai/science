@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Coordinates
 topic: Time
-table: Year
+table: year
 order: 20
 ---
 
-# Year
+# year
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

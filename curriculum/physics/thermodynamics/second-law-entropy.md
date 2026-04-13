@@ -2,11 +2,11 @@
 subject: Physics
 section: Thermodynamics
 topic: Second Law
-table: Entropy
+table: entropy
 order: 40
 ---
 
-# Entropy
+# entropy
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

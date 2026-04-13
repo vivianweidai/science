@@ -2,11 +2,11 @@
 subject: Biology
 section: Ecology
 topic: Population
-table: Population
+table: population
 order: 46
 ---
 
-# Population
+# population
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Biology
 section: Plants
 topic: Reproduction
-table: Asexual
+table: asexual
 order: 69
 ---
 
-# Asexual
+# asexual
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

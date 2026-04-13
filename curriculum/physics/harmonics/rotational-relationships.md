@@ -2,11 +2,11 @@
 subject: Physics
 section: Harmonics
 topic: Rotational
-table: Relationships
+table: relationships
 order: 13
 ---
 
-# Relationships
+# relationships
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

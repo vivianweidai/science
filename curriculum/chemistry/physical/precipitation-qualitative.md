@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Precipitation
-table: Qualitative
+table: qualitative
 order: 45
 ---
 
-# Qualitative
+# qualitative
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

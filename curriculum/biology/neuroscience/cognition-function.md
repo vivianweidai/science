@@ -2,11 +2,11 @@
 subject: Biology
 section: Neuroscience
 topic: Cognition
-table: Function
+table: function
 order: 89
 ---
 
-# Function
+# function
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

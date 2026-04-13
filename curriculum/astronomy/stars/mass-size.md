@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Mass
-table: Size
+table: size
 order: 44
 ---
 
-# Size
+# size
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

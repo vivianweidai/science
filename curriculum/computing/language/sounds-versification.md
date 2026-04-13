@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Sounds
-table: Versification
+table: versification
 order: 25
 ---
 
-# Versification
+# versification
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Coordinates
 topic: Time
-table: Day
+table: day
 order: 18
 ---
 
-# Day
+# day
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

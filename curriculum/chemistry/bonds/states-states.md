@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Bonds
 topic: States
-table: States
+table: states
 order: 19
 ---
 
-# States
+# states
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

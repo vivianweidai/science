@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Mechanics
 topic: Orbits
-table: Energy
+table: energy
 order: 22
 ---
 
-# Energy
+# energy
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

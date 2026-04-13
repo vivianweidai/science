@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Solar System
 topic: Earth
-table: Parallax
+table: parallax
 order: 34
 ---
 
-# Parallax
+# parallax
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

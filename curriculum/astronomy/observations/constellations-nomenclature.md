@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Observations
 topic: Constellations
-table: Nomenclature
+table: nomenclature
 order: 3
 ---
 
-# Nomenclature
+# nomenclature
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

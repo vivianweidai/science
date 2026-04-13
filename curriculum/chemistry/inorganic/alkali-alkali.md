@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Alkali
-table: Alkali
+table: alkali
 order: 85
 ---
 
-# Alkali
+# alkali
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Bonds
 topic: Localized
-table: Localized
+table: localized
 order: 12
 ---
 
-# Localized
+# localized
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Data
-table: Data
+table: data
 order: 38
 ---
 
-# Data
+# data
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

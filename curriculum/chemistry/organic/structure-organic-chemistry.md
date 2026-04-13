@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Structure
-table: Organic Chemistry
+table: organic chemistry
 order: 54
 ---
 
-# Organic Chemistry
+# organic chemistry
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

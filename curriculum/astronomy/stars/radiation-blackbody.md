@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Radiation
-table: Blackbody
+table: blackbody
 order: 40
 ---
 
-# Blackbody
+# blackbody
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

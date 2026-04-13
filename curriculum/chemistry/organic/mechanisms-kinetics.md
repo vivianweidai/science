@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Mechanisms
-table: Kinetics
+table: kinetics
 order: 59
 ---
 
-# Kinetics
+# kinetics
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

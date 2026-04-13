@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Bonds
 topic: Intramolecular
-table: Intramolecular
+table: intramolecular
 order: 9
 ---
 
-# Intramolecular
+# intramolecular
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Biology
 section: Neuroscience
 topic: Motor
-table: Muscles
+table: muscles
 order: 98
 ---
 
-# Muscles
+# muscles
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Calculus
 topic: Approximation
-table: Infinite Series
+table: infinite series
 order: 56
 ---
 
-# Infinite Series
+# infinite series
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

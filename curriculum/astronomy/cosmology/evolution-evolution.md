@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Cosmology
 topic: Evolution
-table: Evolution
+table: evolution
 order: 56
 ---
 
-# Evolution
+# evolution
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

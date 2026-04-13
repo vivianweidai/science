@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Combinatorics
 topic: Sets
-table: Generating Functions
+table: generating functions
 order: 15
 ---
 
-# Generating Functions
+# generating functions
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

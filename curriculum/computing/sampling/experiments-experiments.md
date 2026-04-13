@@ -2,11 +2,11 @@
 subject: Computing
 section: Sampling
 topic: Experiments
-table: Experiments
+table: experiments
 order: 14
 ---
 
-# Experiments
+# experiments
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

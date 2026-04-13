@@ -2,11 +2,11 @@
 subject: Physics
 section: Electromagnetism
 topic: Maxwell
-table: Fields
+table: fields
 order: 27
 ---
 
-# Fields
+# fields
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

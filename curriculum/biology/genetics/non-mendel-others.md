@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Non Mendel
-table: Others
+table: others
 order: 25
 ---
 
-# Others
+# others
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

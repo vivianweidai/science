@@ -2,11 +2,11 @@
 subject: Physics
 section: Harmonics
 topic: Oscillatory
-table: Energy
+table: energy
 order: 15
 ---
 
-# Energy
+# energy
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

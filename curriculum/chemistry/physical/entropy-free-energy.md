@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Entropy
-table: Free Energy
+table: free energy
 order: 51
 ---
 
-# Free Energy
+# free energy
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

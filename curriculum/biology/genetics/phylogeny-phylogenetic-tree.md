@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Phylogeny
-table: Phylogenetic Tree
+table: phylogenetic tree
 order: 40
 ---
 
-# Phylogenetic Tree
+# phylogenetic tree
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

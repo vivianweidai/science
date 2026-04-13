@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Relations
-table: Exoplanets
+table: exoplanets
 order: 47
 ---
 
-# Exoplanets
+# exoplanets
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

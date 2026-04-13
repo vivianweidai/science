@@ -2,11 +2,11 @@
 subject: Computing
 section: Statistics
 topic: Measurement
-table: Single
+table: single
 order: 1
 ---
 
-# Single
+# single
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

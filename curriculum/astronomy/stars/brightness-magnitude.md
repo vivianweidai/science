@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Brightness
-table: Magnitude
+table: magnitude
 order: 42
 ---
 
-# Magnitude
+# magnitude
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

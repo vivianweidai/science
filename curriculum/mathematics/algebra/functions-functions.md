@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Functions
-table: Functions
+table: functions
 order: 24
 ---
 
-# Functions
+# functions
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

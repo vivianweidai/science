@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Precalculus
 topic: Vectors
-table: Matrices
+table: matrices
 order: 49
 ---
 
-# Matrices
+# matrices
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

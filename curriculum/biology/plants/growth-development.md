@@ -2,11 +2,11 @@
 subject: Biology
 section: Plants
 topic: Growth
-table: Development
+table: development
 order: 62
 ---
 
-# Development
+# development
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

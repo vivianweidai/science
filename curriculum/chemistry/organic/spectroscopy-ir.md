@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Spectroscopy
-table: Ir
+table: IR
 order: 71
 ---
 
-# Ir
+# IR
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

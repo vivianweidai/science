@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Roots
-table: Rational
+table: rational
 order: 31
 ---
 
-# Rational
+# rational
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

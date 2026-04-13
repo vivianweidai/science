@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Logic
-table: Logic
+table: logic
 order: 40
 ---
 
-# Logic
+# logic
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

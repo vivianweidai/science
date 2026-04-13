@@ -2,11 +2,11 @@
 subject: Biology
 section: Animals
 topic: Endocrine
-table: Structure
+table: structure
 order: 72
 ---
 
-# Structure
+# structure
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

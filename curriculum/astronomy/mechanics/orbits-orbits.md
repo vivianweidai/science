@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Mechanics
 topic: Orbits
-table: Orbits
+table: orbits
 order: 21
 ---
 
-# Orbits
+# orbits
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

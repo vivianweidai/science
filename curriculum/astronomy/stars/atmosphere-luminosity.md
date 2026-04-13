@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Atmosphere
-table: Luminosity
+table: luminosity
 order: 50
 ---
 
-# Luminosity
+# luminosity
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

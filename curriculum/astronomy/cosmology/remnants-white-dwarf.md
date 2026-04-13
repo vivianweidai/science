@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Cosmology
 topic: Remnants
-table: White Dwarf
+table: white dwarf
 order: 58
 ---
 
-# White Dwarf
+# white dwarf
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

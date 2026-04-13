@@ -2,11 +2,11 @@
 subject: Physics
 section: Electromagnetism
 topic: Statics
-table: Statics
+table: statics
 order: 16
 ---
 
-# Statics
+# statics
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

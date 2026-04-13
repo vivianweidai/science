@@ -2,11 +2,11 @@
 subject: Biology
 section: Ecology
 topic: Community
-table: Ecology
+table: ecology
 order: 44
 ---
 
-# Ecology
+# ecology
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

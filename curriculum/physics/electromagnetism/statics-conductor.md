@@ -2,11 +2,11 @@
 subject: Physics
 section: Electromagnetism
 topic: Statics
-table: Conductor
+table: conductor
 order: 17
 ---
 
-# Conductor
+# conductor
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

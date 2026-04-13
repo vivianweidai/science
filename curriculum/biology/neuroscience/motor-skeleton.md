@@ -2,11 +2,11 @@
 subject: Biology
 section: Neuroscience
 topic: Motor
-table: Skeleton
+table: skeleton
 order: 99
 ---
 
-# Skeleton
+# skeleton
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

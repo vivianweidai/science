@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Precalculus
 topic: Trigonometry
-table: Identities
+table: identities
 order: 42
 ---
 
-# Identities
+# identities
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

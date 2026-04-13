@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Atoms
 topic: Nomenclature
-table: Compounds
+table: compounds
 order: 7
 ---
 
-# Compounds
+# compounds
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

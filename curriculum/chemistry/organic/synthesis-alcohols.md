@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Synthesis
-table: Alcohols
+table: alcohols
 order: 66
 ---
 
-# Alcohols
+# alcohols
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Mendel
-table: Recessive Disorders
+table: recessive disorders
 order: 23
 ---
 
-# Recessive Disorders
+# recessive disorders
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Biology
 section: Neuroscience
 topic: Cognition
-table: Cerebral Cortex
+table: cerebral cortex
 order: 87
 ---
 
-# Cerebral Cortex
+# cerebral cortex
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

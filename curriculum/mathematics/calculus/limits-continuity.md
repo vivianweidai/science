@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Calculus
 topic: Limits
-table: Continuity
+table: continuity
 order: 51
 ---
 
-# Continuity
+# continuity
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

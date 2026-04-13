@@ -2,11 +2,11 @@
 subject: Physics
 section: Electromagnetism
 topic: Capacitor
-table: Capacitor
+table: capacitor
 order: 20
 ---
 
-# Capacitor
+# capacitor
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

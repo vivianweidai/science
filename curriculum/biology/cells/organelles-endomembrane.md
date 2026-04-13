@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Organelles
-table: Endomembrane
+table: endomembrane
 order: 4
 ---
 
-# Endomembrane
+# endomembrane
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

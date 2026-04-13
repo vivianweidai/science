@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Bonds
 topic: Intermolecular
-table: Intermolecular
+table: intermolecular
 order: 16
 ---
 
-# Intermolecular
+# intermolecular
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

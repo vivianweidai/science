@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Observations
 topic: Telescopes
-table: Telescope
+table: telescope
 order: 5
 ---
 
-# Telescope
+# telescope
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

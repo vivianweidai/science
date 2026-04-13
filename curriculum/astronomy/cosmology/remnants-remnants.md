@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Cosmology
 topic: Remnants
-table: Remnants
+table: remnants
 order: 57
 ---
 
-# Remnants
+# remnants
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

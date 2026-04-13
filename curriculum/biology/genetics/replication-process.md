@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Replication
-table: Process
+table: process
 order: 27
 ---
 
-# Process
+# process
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

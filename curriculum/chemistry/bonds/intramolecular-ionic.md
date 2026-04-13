@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Bonds
 topic: Intramolecular
-table: Ionic
+table: ionic
 order: 10
 ---
 
-# Ionic
+# ionic
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Alkanes
-table: Alkanes
+table: alkanes
 order: 60
 ---
 
-# Alkanes
+# alkanes
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

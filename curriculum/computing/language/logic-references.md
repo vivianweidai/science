@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Logic
-table: References
+table: references
 order: 41
 ---
 
-# References
+# references
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

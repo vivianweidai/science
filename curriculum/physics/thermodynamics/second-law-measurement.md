@@ -2,11 +2,11 @@
 subject: Physics
 section: Thermodynamics
 topic: Second Law
-table: Measurement
+table: measurement
 order: 41
 ---
 
-# Measurement
+# measurement
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

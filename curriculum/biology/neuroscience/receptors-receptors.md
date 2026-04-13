@@ -2,11 +2,11 @@
 subject: Biology
 section: Neuroscience
 topic: Receptors
-table: Receptors
+table: receptors
 order: 92
 ---
 
-# Receptors
+# receptors
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

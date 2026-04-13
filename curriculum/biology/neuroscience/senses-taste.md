@@ -2,11 +2,11 @@
 subject: Biology
 section: Neuroscience
 topic: Senses
-table: Taste
+table: taste
 order: 96
 ---
 
-# Taste
+# taste
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

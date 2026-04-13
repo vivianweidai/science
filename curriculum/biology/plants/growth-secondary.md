@@ -2,11 +2,11 @@
 subject: Biology
 section: Plants
 topic: Growth
-table: Secondary
+table: secondary
 order: 60
 ---
 
-# Secondary
+# secondary
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

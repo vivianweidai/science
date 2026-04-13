@@ -12,7 +12,7 @@
             "name": "Divisors",
             "tables": [
               {
-                "name": "Divisors",
+                "name": "divisors",
                 "order": 1,
                 "path": "mathematics/number-theory/divisors-divisors.md",
                 "highlighted_rows": [
@@ -21,7 +21,7 @@
                 ]
               },
               {
-                "name": "Factorization",
+                "name": "factorization",
                 "order": 2,
                 "path": "mathematics/number-theory/divisors-factorization.md",
                 "highlighted_rows": [
@@ -29,7 +29,7 @@
                 ]
               },
               {
-                "name": "Bases",
+                "name": "bases",
                 "order": 3,
                 "path": "mathematics/number-theory/divisors-bases.md",
                 "highlighted_rows": []
@@ -41,7 +41,7 @@
             "name": "Modular Arithmetic",
             "tables": [
               {
-                "name": "Congruence",
+                "name": "congruence",
                 "order": 4,
                 "path": "mathematics/number-theory/modular-arithmetic-congruence.md",
                 "highlighted_rows": [
@@ -59,7 +59,7 @@
                 ]
               },
               {
-                "name": "Divisibility",
+                "name": "divisibility",
                 "order": 5,
                 "path": "mathematics/number-theory/modular-arithmetic-divisibility.md",
                 "highlighted_rows": [
@@ -73,7 +73,7 @@
             "name": "Linear Congruence",
             "tables": [
               {
-                "name": "Linear Congruence",
+                "name": "linear congruence",
                 "order": 6,
                 "path": "mathematics/number-theory/linear-congruence-linear-congruence.md",
                 "highlighted_rows": [
@@ -83,7 +83,7 @@
                 ]
               },
               {
-                "name": "Theorems",
+                "name": "theorems",
                 "order": 7,
                 "path": "mathematics/number-theory/linear-congruence-theorems.md",
                 "highlighted_rows": [
@@ -104,7 +104,7 @@
             "name": "Counting",
             "tables": [
               {
-                "name": "Permutations",
+                "name": "permutations",
                 "order": 8,
                 "path": "mathematics/combinatorics/counting-permutations.md",
                 "highlighted_rows": [
@@ -112,7 +112,7 @@
                 ]
               },
               {
-                "name": "Combinations",
+                "name": "combinations",
                 "order": 9,
                 "path": "mathematics/combinatorics/counting-combinations.md",
                 "highlighted_rows": [
@@ -120,7 +120,7 @@
                 ]
               },
               {
-                "name": "Identities",
+                "name": "identities",
                 "order": 10,
                 "path": "mathematics/combinatorics/counting-identities.md",
                 "highlighted_rows": [
@@ -137,7 +137,7 @@
             "name": "Probability",
             "tables": [
               {
-                "name": "Probability",
+                "name": "probability",
                 "order": 11,
                 "path": "mathematics/combinatorics/probability-probability.md",
                 "highlighted_rows": [
@@ -147,7 +147,7 @@
                 ]
               },
               {
-                "name": "Expected Value",
+                "name": "expected value",
                 "order": 12,
                 "path": "mathematics/combinatorics/probability-expected-value.md",
                 "highlighted_rows": [
@@ -163,7 +163,7 @@
             "name": "Sets",
             "tables": [
               {
-                "name": "Concepts",
+                "name": "concepts",
                 "order": 13,
                 "path": "mathematics/combinatorics/sets-concepts.md",
                 "highlighted_rows": [
@@ -176,7 +176,7 @@
                 ]
               },
               {
-                "name": "Recursion",
+                "name": "recursion",
                 "order": 14,
                 "path": "mathematics/combinatorics/sets-recursion.md",
                 "highlighted_rows": [
@@ -186,7 +186,7 @@
                 ]
               },
               {
-                "name": "Generating Functions",
+                "name": "generating functions",
                 "order": 15,
                 "path": "mathematics/combinatorics/sets-generating-functions.md",
                 "highlighted_rows": [
@@ -209,7 +209,7 @@
             "name": "Triangles",
             "tables": [
               {
-                "name": "Triangles",
+                "name": "triangles",
                 "order": 16,
                 "path": "mathematics/geometry/triangles-triangles.md",
                 "highlighted_rows": [
@@ -222,7 +222,7 @@
                 ]
               },
               {
-                "name": "Relations",
+                "name": "relations",
                 "order": 17,
                 "path": "mathematics/geometry/triangles-relations.md",
                 "highlighted_rows": [
@@ -240,7 +240,7 @@
             "name": "Centers",
             "tables": [
               {
-                "name": "Centers",
+                "name": "centers",
                 "order": 18,
                 "path": "mathematics/geometry/centers-centers.md",
                 "highlighted_rows": [
@@ -252,7 +252,7 @@
                 ]
               },
               {
-                "name": "Relations",
+                "name": "relations",
                 "order": 19,
                 "path": "mathematics/geometry/centers-relations.md",
                 "highlighted_rows": []
@@ -264,7 +264,7 @@
             "name": "Circles",
             "tables": [
               {
-                "name": "Inscriptions",
+                "name": "inscriptions",
                 "order": 20,
                 "path": "mathematics/geometry/circles-inscriptions.md",
                 "highlighted_rows": [
@@ -274,7 +274,7 @@
                 ]
               },
               {
-                "name": "Intersections",
+                "name": "intersections",
                 "order": 21,
                 "path": "mathematics/geometry/circles-intersections.md",
                 "highlighted_rows": [
@@ -289,7 +289,7 @@
             "name": "Vectors",
             "tables": [
               {
-                "name": "Polygons",
+                "name": "polygons",
                 "order": 22,
                 "path": "mathematics/geometry/vectors-polygons.md",
                 "highlighted_rows": [
@@ -299,7 +299,7 @@
                 ]
               },
               {
-                "name": "Vectors",
+                "name": "vectors",
                 "order": 23,
                 "path": "mathematics/geometry/vectors-vectors.md",
                 "highlighted_rows": [
@@ -323,7 +323,7 @@
             "name": "Functions",
             "tables": [
               {
-                "name": "Functions",
+                "name": "functions",
                 "order": 24,
                 "path": "mathematics/algebra/functions-functions.md",
                 "highlighted_rows": [
@@ -337,7 +337,7 @@
                 ]
               },
               {
-                "name": "Characteristics",
+                "name": "characteristics",
                 "order": 25,
                 "path": "mathematics/algebra/functions-characteristics.md",
                 "highlighted_rows": [
@@ -351,7 +351,7 @@
             "name": "Sequences And Series",
             "tables": [
               {
-                "name": "Arithmetic",
+                "name": "arithmetic",
                 "order": 26,
                 "path": "mathematics/algebra/sequences-and-series-arithmetic.md",
                 "highlighted_rows": [
@@ -359,7 +359,7 @@
                 ]
               },
               {
-                "name": "Geometric",
+                "name": "geometric",
                 "order": 27,
                 "path": "mathematics/algebra/sequences-and-series-geometric.md",
                 "highlighted_rows": [
@@ -368,7 +368,7 @@
                 ]
               },
               {
-                "name": "Notation",
+                "name": "notation",
                 "order": 28,
                 "path": "mathematics/algebra/sequences-and-series-notation.md",
                 "highlighted_rows": [
@@ -384,7 +384,7 @@
             "name": "Polynomials",
             "tables": [
               {
-                "name": "Polynomials",
+                "name": "polynomials",
                 "order": 29,
                 "path": "mathematics/algebra/polynomials-polynomials.md",
                 "highlighted_rows": [
@@ -392,7 +392,7 @@
                 ]
               },
               {
-                "name": "Division",
+                "name": "division",
                 "order": 30,
                 "path": "mathematics/algebra/polynomials-division.md",
                 "highlighted_rows": [
@@ -408,7 +408,7 @@
             "name": "Roots",
             "tables": [
               {
-                "name": "Rational",
+                "name": "rational",
                 "order": 31,
                 "path": "mathematics/algebra/roots-rational.md",
                 "highlighted_rows": [
@@ -419,7 +419,7 @@
                 ]
               },
               {
-                "name": "Non-Rational",
+                "name": "non-rational",
                 "order": 32,
                 "path": "mathematics/algebra/roots-non-rational.md",
                 "highlighted_rows": [
@@ -443,7 +443,7 @@
             "name": "Identities",
             "tables": [
               {
-                "name": "Factoring",
+                "name": "factoring",
                 "order": 34,
                 "path": "mathematics/algebra/identities-factoring.md",
                 "highlighted_rows": [
@@ -456,7 +456,7 @@
                 ]
               },
               {
-                "name": "Identities",
+                "name": "identities",
                 "order": 35,
                 "path": "mathematics/algebra/identities-identities.md",
                 "highlighted_rows": [
@@ -470,7 +470,7 @@
             "name": "Inequalities",
             "tables": [
               {
-                "name": "Inequalities",
+                "name": "inequalities",
                 "order": 36,
                 "path": "mathematics/algebra/inequalities-inequalities.md",
                 "highlighted_rows": [
@@ -478,7 +478,7 @@
                 ]
               },
               {
-                "name": "Toolkit",
+                "name": "toolkit",
                 "order": 37,
                 "path": "mathematics/algebra/inequalities-toolkit.md",
                 "highlighted_rows": [
@@ -488,7 +488,7 @@
                 ]
               },
               {
-                "name": "Optimization",
+                "name": "optimization",
                 "order": 38,
                 "path": "mathematics/algebra/inequalities-optimization.md",
                 "highlighted_rows": [
@@ -503,7 +503,7 @@
             "name": "Relations",
             "tables": [
               {
-                "name": "Polynomial Series",
+                "name": "polynomial series",
                 "order": 39,
                 "path": "mathematics/algebra/relations-polynomial-series.md",
                 "highlighted_rows": [
@@ -511,7 +511,7 @@
                 ]
               },
               {
-                "name": "Functional Equations",
+                "name": "functional equations",
                 "order": 40,
                 "path": "mathematics/algebra/relations-functional-equations.md",
                 "highlighted_rows": [
@@ -521,7 +521,7 @@
                 ]
               },
               {
-                "name": "Strategies",
+                "name": "strategies",
                 "order": 41,
                 "path": "mathematics/algebra/relations-strategies.md",
                 "highlighted_rows": []
@@ -539,7 +539,7 @@
             "name": "Trigonometry",
             "tables": [
               {
-                "name": "Identities",
+                "name": "identities",
                 "order": 42,
                 "path": "mathematics/precalculus/trigonometry-identities.md",
                 "highlighted_rows": [
@@ -552,7 +552,7 @@
                 ]
               },
               {
-                "name": "Parametric",
+                "name": "parametric",
                 "order": 43,
                 "path": "mathematics/precalculus/trigonometry-parametric.md",
                 "highlighted_rows": [
@@ -569,7 +569,7 @@
             "name": "Complex",
             "tables": [
               {
-                "name": "Complex Numbers",
+                "name": "complex numbers",
                 "order": 44,
                 "path": "mathematics/precalculus/complex-complex-numbers.md",
                 "highlighted_rows": [
@@ -579,7 +579,7 @@
                 ]
               },
               {
-                "name": "Powers",
+                "name": "powers",
                 "order": 45,
                 "path": "mathematics/precalculus/complex-powers.md",
                 "highlighted_rows": [
@@ -592,7 +592,7 @@
                 ]
               },
               {
-                "name": "Roots",
+                "name": "roots",
                 "order": 46,
                 "path": "mathematics/precalculus/complex-roots.md",
                 "highlighted_rows": [
@@ -607,7 +607,7 @@
             "name": "Vectors",
             "tables": [
               {
-                "name": "Dot Product",
+                "name": "dot product",
                 "order": 47,
                 "path": "mathematics/precalculus/vectors-dot-product.md",
                 "highlighted_rows": [
@@ -615,7 +615,7 @@
                 ]
               },
               {
-                "name": "Cross Product",
+                "name": "cross product",
                 "order": 48,
                 "path": "mathematics/precalculus/vectors-cross-product.md",
                 "highlighted_rows": [
@@ -623,7 +623,7 @@
                 ]
               },
               {
-                "name": "Matrices",
+                "name": "matrices",
                 "order": 49,
                 "path": "mathematics/precalculus/vectors-matrices.md",
                 "highlighted_rows": [
@@ -643,7 +643,7 @@
             "name": "Limits",
             "tables": [
               {
-                "name": "Limits",
+                "name": "limits",
                 "order": 50,
                 "path": "mathematics/calculus/limits-limits.md",
                 "highlighted_rows": [
@@ -655,7 +655,7 @@
                 ]
               },
               {
-                "name": "Continuity",
+                "name": "continuity",
                 "order": 51,
                 "path": "mathematics/calculus/limits-continuity.md",
                 "highlighted_rows": [
@@ -669,7 +669,7 @@
             "name": "Differentiation",
             "tables": [
               {
-                "name": "Differentiation",
+                "name": "differentiation",
                 "order": 52,
                 "path": "mathematics/calculus/differentiation-differentiation.md",
                 "highlighted_rows": [
@@ -678,7 +678,7 @@
                 ]
               },
               {
-                "name": "Rules",
+                "name": "rules",
                 "order": 53,
                 "path": "mathematics/calculus/differentiation-rules.md",
                 "highlighted_rows": [
@@ -703,7 +703,7 @@
             "name": "Integration",
             "tables": [
               {
-                "name": "Integration",
+                "name": "integration",
                 "order": 54,
                 "path": "mathematics/calculus/integration-integration.md",
                 "highlighted_rows": [
@@ -713,7 +713,7 @@
                 ]
               },
               {
-                "name": "Rules",
+                "name": "rules",
                 "order": 55,
                 "path": "mathematics/calculus/integration-rules.md",
                 "highlighted_rows": [
@@ -735,7 +735,7 @@
             "name": "Approximation",
             "tables": [
               {
-                "name": "Infinite Series",
+                "name": "infinite series",
                 "order": 56,
                 "path": "mathematics/calculus/approximation-infinite-series.md",
                 "highlighted_rows": [
@@ -744,7 +744,7 @@
                 ]
               },
               {
-                "name": "Approximation",
+                "name": "approximation",
                 "order": 57,
                 "path": "mathematics/calculus/approximation-approximation.md",
                 "highlighted_rows": [
@@ -762,7 +762,7 @@
             "name": "Vectors",
             "tables": [
               {
-                "name": "Surfaces",
+                "name": "surfaces",
                 "order": 58,
                 "path": "mathematics/calculus/vectors-surfaces.md",
                 "highlighted_rows": [
@@ -772,7 +772,7 @@
                 ]
               },
               {
-                "name": "Functions",
+                "name": "functions",
                 "order": 59,
                 "path": "mathematics/calculus/vectors-functions.md",
                 "highlighted_rows": [
@@ -781,7 +781,7 @@
                 ]
               },
               {
-                "name": "Multivariable",
+                "name": "multivariable",
                 "order": 60,
                 "path": "mathematics/calculus/vectors-multivariable.md",
                 "highlighted_rows": [
@@ -796,7 +796,7 @@
             "name": "Fields",
             "tables": [
               {
-                "name": "Fields",
+                "name": "fields",
                 "order": 61,
                 "path": "mathematics/calculus/fields-fields.md",
                 "highlighted_rows": [
@@ -805,7 +805,7 @@
                 ]
               },
               {
-                "name": "Theorems",
+                "name": "theorems",
                 "order": 62,
                 "path": "mathematics/calculus/fields-theorems.md",
                 "highlighted_rows": [
@@ -823,7 +823,7 @@
             "name": "Differentials",
             "tables": [
               {
-                "name": "Differentials",
+                "name": "differentials",
                 "order": 63,
                 "path": "mathematics/calculus/differentials-differentials.md",
                 "highlighted_rows": [
@@ -832,7 +832,7 @@
                 ]
               },
               {
-                "name": "First Order",
+                "name": "first order",
                 "order": 64,
                 "path": "mathematics/calculus/differentials-first-order.md",
                 "highlighted_rows": [
@@ -841,7 +841,7 @@
                 ]
               },
               {
-                "name": "Second Order",
+                "name": "second order",
                 "order": 65,
                 "path": "mathematics/calculus/differentials-second-order.md",
                 "highlighted_rows": [
@@ -868,7 +868,7 @@
             "name": "Measurement",
             "tables": [
               {
-                "name": "Single",
+                "name": "single",
                 "order": 1,
                 "path": "computing/statistics/measurement-single.md",
                 "highlighted_rows": [
@@ -879,7 +879,7 @@
                 ]
               },
               {
-                "name": "Compound",
+                "name": "compound",
                 "order": 2,
                 "path": "computing/statistics/measurement-compound.md",
                 "highlighted_rows": [
@@ -898,7 +898,7 @@
             "name": "Distributions",
             "tables": [
               {
-                "name": "Single",
+                "name": "single",
                 "order": 3,
                 "path": "computing/statistics/distributions-single.md",
                 "highlighted_rows": [
@@ -911,7 +911,7 @@
                 ]
               },
               {
-                "name": "Dual",
+                "name": "dual",
                 "order": 4,
                 "path": "computing/statistics/distributions-dual.md",
                 "highlighted_rows": [
@@ -928,7 +928,7 @@
             "name": "Probability",
             "tables": [
               {
-                "name": "Probability",
+                "name": "probability",
                 "order": 5,
                 "path": "computing/statistics/probability-probability.md",
                 "highlighted_rows": [
@@ -939,7 +939,7 @@
                 ]
               },
               {
-                "name": "Addition",
+                "name": "addition",
                 "order": 6,
                 "path": "computing/statistics/probability-addition.md",
                 "highlighted_rows": [
@@ -949,7 +949,7 @@
                 ]
               },
               {
-                "name": "Multiplication",
+                "name": "multiplication",
                 "order": 7,
                 "path": "computing/statistics/probability-multiplication.md",
                 "highlighted_rows": [
@@ -967,7 +967,7 @@
             "name": "Variables",
             "tables": [
               {
-                "name": "Random Variable",
+                "name": "random variable",
                 "order": 8,
                 "path": "computing/statistics/variables-random-variable.md",
                 "highlighted_rows": [
@@ -982,7 +982,7 @@
                 ]
               },
               {
-                "name": "Repeated",
+                "name": "repeated",
                 "order": 9,
                 "path": "computing/statistics/variables-repeated.md",
                 "highlighted_rows": [
@@ -991,7 +991,7 @@
                 ]
               },
               {
-                "name": "Continuous",
+                "name": "continuous",
                 "order": 10,
                 "path": "computing/statistics/variables-continuous.md",
                 "highlighted_rows": [
@@ -1013,7 +1013,7 @@
             "name": "Confidence Interval",
             "tables": [
               {
-                "name": "Inference",
+                "name": "inference",
                 "order": 18,
                 "path": "computing/inference/confidence-interval-inference.md",
                 "highlighted_rows": [
@@ -1021,7 +1021,7 @@
                 ]
               },
               {
-                "name": "Confidence Interval",
+                "name": "confidence interval",
                 "order": 19,
                 "path": "computing/inference/confidence-interval-confidence-interval.md",
                 "highlighted_rows": [
@@ -1037,7 +1037,7 @@
             "name": "Significance Test",
             "tables": [
               {
-                "name": "Significance Test",
+                "name": "significance test",
                 "order": 20,
                 "path": "computing/inference/significance-test-significance-test.md",
                 "highlighted_rows": [
@@ -1048,7 +1048,7 @@
                 ]
               },
               {
-                "name": "Chi Square",
+                "name": "chi square",
                 "order": 21,
                 "path": "computing/inference/significance-test-chi-square.md",
                 "highlighted_rows": [
@@ -1070,13 +1070,13 @@
             "name": "Writing",
             "tables": [
               {
-                "name": "Structure",
+                "name": "structure",
                 "order": 22,
                 "path": "computing/language/writing-structure.md",
                 "highlighted_rows": []
               },
               {
-                "name": "Systems",
+                "name": "systems",
                 "order": 23,
                 "path": "computing/language/writing-systems.md",
                 "highlighted_rows": [
@@ -1091,7 +1091,7 @@
             "name": "Sounds",
             "tables": [
               {
-                "name": "Syllables",
+                "name": "syllables",
                 "order": 24,
                 "path": "computing/language/sounds-syllables.md",
                 "highlighted_rows": [
@@ -1104,7 +1104,7 @@
                 ]
               },
               {
-                "name": "Versification",
+                "name": "versification",
                 "order": 25,
                 "path": "computing/language/sounds-versification.md",
                 "highlighted_rows": [
@@ -1121,7 +1121,7 @@
             "name": "Nouns",
             "tables": [
               {
-                "name": "Nouns",
+                "name": "nouns",
                 "order": 26,
                 "path": "computing/language/nouns-nouns.md",
                 "highlighted_rows": [
@@ -1129,7 +1129,7 @@
                 ]
               },
               {
-                "name": "Modifiers",
+                "name": "modifiers",
                 "order": 27,
                 "path": "computing/language/nouns-modifiers.md",
                 "highlighted_rows": [
@@ -1137,7 +1137,7 @@
                 ]
               },
               {
-                "name": "Variables",
+                "name": "variables",
                 "order": 28,
                 "path": "computing/language/nouns-variables.md",
                 "highlighted_rows": [
@@ -1155,7 +1155,7 @@
             "name": "Verbs",
             "tables": [
               {
-                "name": "Verbs",
+                "name": "verbs",
                 "order": 29,
                 "path": "computing/language/verbs-verbs.md",
                 "highlighted_rows": [
@@ -1164,7 +1164,7 @@
                 ]
               },
               {
-                "name": "Modifiers",
+                "name": "modifiers",
                 "order": 30,
                 "path": "computing/language/verbs-modifiers.md",
                 "highlighted_rows": [
@@ -1172,7 +1172,7 @@
                 ]
               },
               {
-                "name": "Variables",
+                "name": "variables",
                 "order": 31,
                 "path": "computing/language/verbs-variables.md",
                 "highlighted_rows": [
@@ -1190,7 +1190,7 @@
             "name": "Structure",
             "tables": [
               {
-                "name": "Syntax",
+                "name": "syntax",
                 "order": 32,
                 "path": "computing/language/structure-syntax.md",
                 "highlighted_rows": [
@@ -1201,7 +1201,7 @@
                 ]
               },
               {
-                "name": "Semantics",
+                "name": "semantics",
                 "order": 33,
                 "path": "computing/language/structure-semantics.md",
                 "highlighted_rows": [
@@ -1210,7 +1210,7 @@
                 ]
               },
               {
-                "name": "Others",
+                "name": "others",
                 "order": 34,
                 "path": "computing/language/structure-others.md",
                 "highlighted_rows": [
@@ -1225,7 +1225,7 @@
             "name": "Efficiency",
             "tables": [
               {
-                "name": "Efficiency",
+                "name": "efficiency",
                 "order": 35,
                 "path": "computing/language/efficiency-efficiency.md",
                 "highlighted_rows": [
@@ -1234,7 +1234,7 @@
                 ]
               },
               {
-                "name": "Order",
+                "name": "order",
                 "order": 36,
                 "path": "computing/language/efficiency-order.md",
                 "highlighted_rows": [
@@ -1242,7 +1242,7 @@
                 ]
               },
               {
-                "name": "Sub Array Sum",
+                "name": "sub array sum",
                 "order": 37,
                 "path": "computing/language/efficiency-sub-array-sum.md",
                 "highlighted_rows": []
@@ -1254,7 +1254,7 @@
             "name": "Data",
             "tables": [
               {
-                "name": "Data",
+                "name": "data",
                 "order": 38,
                 "path": "computing/language/data-data.md",
                 "highlighted_rows": [
@@ -1265,7 +1265,7 @@
                 ]
               },
               {
-                "name": "Syntax",
+                "name": "syntax",
                 "order": 39,
                 "path": "computing/language/data-syntax.md",
                 "highlighted_rows": [
@@ -1280,13 +1280,13 @@
             "name": "Logic",
             "tables": [
               {
-                "name": "Logic",
+                "name": "logic",
                 "order": 40,
                 "path": "computing/language/logic-logic.md",
                 "highlighted_rows": []
               },
               {
-                "name": "References",
+                "name": "references",
                 "order": 41,
                 "path": "computing/language/logic-references.md",
                 "highlighted_rows": [
@@ -1294,7 +1294,7 @@
                 ]
               },
               {
-                "name": "Loop",
+                "name": "loop",
                 "order": 42,
                 "path": "computing/language/logic-loop.md",
                 "highlighted_rows": []
@@ -1306,7 +1306,7 @@
             "name": "Combinations",
             "tables": [
               {
-                "name": "Combinations",
+                "name": "combinations",
                 "order": 43,
                 "path": "computing/language/combinations-combinations.md",
                 "highlighted_rows": [
@@ -1316,7 +1316,7 @@
                 ]
               },
               {
-                "name": "Recursion",
+                "name": "recursion",
                 "order": 44,
                 "path": "computing/language/combinations-recursion.md",
                 "highlighted_rows": [
@@ -1330,7 +1330,7 @@
             "name": "Algorithms",
             "tables": [
               {
-                "name": "Algorithms",
+                "name": "algorithms",
                 "order": 45,
                 "path": "computing/language/algorithms-algorithms.md",
                 "highlighted_rows": [
@@ -1343,7 +1343,7 @@
                 ]
               },
               {
-                "name": "Others",
+                "name": "others",
                 "order": 46,
                 "path": "computing/language/algorithms-others.md",
                 "highlighted_rows": [
@@ -1358,7 +1358,7 @@
             "name": "Problems",
             "tables": [
               {
-                "name": "Simulation",
+                "name": "simulation",
                 "order": 47,
                 "path": "computing/language/problems-simulation.md",
                 "highlighted_rows": [
@@ -1366,7 +1366,7 @@
                 ]
               },
               {
-                "name": "Complete Search",
+                "name": "complete search",
                 "order": 48,
                 "path": "computing/language/problems-complete-search.md",
                 "highlighted_rows": [
@@ -1374,7 +1374,7 @@
                 ]
               },
               {
-                "name": "Preprocessing",
+                "name": "preprocessing",
                 "order": 49,
                 "path": "computing/language/problems-preprocessing.md",
                 "highlighted_rows": [
@@ -1382,7 +1382,7 @@
                 ]
               },
               {
-                "name": "Greedy",
+                "name": "greedy",
                 "order": 50,
                 "path": "computing/language/problems-greedy.md",
                 "highlighted_rows": []
@@ -1400,7 +1400,7 @@
             "name": "Methods",
             "tables": [
               {
-                "name": "Ai",
+                "name": "ai",
                 "order": 51,
                 "path": "computing/learning/methods-ai.md",
                 "highlighted_rows": [
@@ -1411,7 +1411,7 @@
                 ]
               },
               {
-                "name": "Learning",
+                "name": "learning",
                 "order": 52,
                 "path": "computing/learning/methods-learning.md",
                 "highlighted_rows": [
@@ -1420,7 +1420,7 @@
                 ]
               },
               {
-                "name": "Regression",
+                "name": "regression",
                 "order": 53,
                 "path": "computing/learning/methods-regression.md",
                 "highlighted_rows": [
@@ -1434,7 +1434,7 @@
             "name": "Algorithms",
             "tables": [
               {
-                "name": "Perceptrons",
+                "name": "perceptrons",
                 "order": 54,
                 "path": "computing/learning/algorithms-perceptrons.md",
                 "highlighted_rows": []
@@ -1452,7 +1452,7 @@
             "name": "Methods",
             "tables": [
               {
-                "name": "Experiment",
+                "name": "experiment",
                 "order": 11,
                 "path": "computing/sampling/methods-experiment.md",
                 "highlighted_rows": [
@@ -1463,7 +1463,7 @@
                 ]
               },
               {
-                "name": "Methods",
+                "name": "methods",
                 "order": 12,
                 "path": "computing/sampling/methods-methods.md",
                 "highlighted_rows": [
@@ -1472,7 +1472,7 @@
                 ]
               },
               {
-                "name": "Bias",
+                "name": "bias",
                 "order": 13,
                 "path": "computing/sampling/methods-bias.md",
                 "highlighted_rows": []
@@ -1484,7 +1484,7 @@
             "name": "Experiments",
             "tables": [
               {
-                "name": "Experiments",
+                "name": "experiments",
                 "order": 14,
                 "path": "computing/sampling/experiments-experiments.md",
                 "highlighted_rows": [
@@ -1493,7 +1493,7 @@
                 ]
               },
               {
-                "name": "Design",
+                "name": "design",
                 "order": 15,
                 "path": "computing/sampling/experiments-design.md",
                 "highlighted_rows": [
@@ -1508,7 +1508,7 @@
             "name": "Sampling Distribution",
             "tables": [
               {
-                "name": "Sampling Distribution",
+                "name": "sampling distribution",
                 "order": 16,
                 "path": "computing/sampling/sampling-distribution-sampling-distribution.md",
                 "highlighted_rows": [
@@ -1518,7 +1518,7 @@
                 ]
               },
               {
-                "name": "Normal Distribution",
+                "name": "normal distribution",
                 "order": 17,
                 "path": "computing/sampling/sampling-distribution-normal-distribution.md",
                 "highlighted_rows": [
@@ -1546,7 +1546,7 @@
             "name": "Kinematics",
             "tables": [
               {
-                "name": "Kinematics",
+                "name": "kinematics",
                 "order": 1,
                 "path": "physics/mechanics/kinematics-kinematics.md",
                 "highlighted_rows": [
@@ -1557,7 +1557,7 @@
                 ]
               },
               {
-                "name": "Problems",
+                "name": "problems",
                 "order": 2,
                 "path": "physics/mechanics/kinematics-problems.md",
                 "highlighted_rows": [
@@ -1574,7 +1574,7 @@
             "name": "Dynamics",
             "tables": [
               {
-                "name": "Dynamics",
+                "name": "dynamics",
                 "order": 3,
                 "path": "physics/mechanics/dynamics-dynamics.md",
                 "highlighted_rows": [
@@ -1586,7 +1586,7 @@
                 ]
               },
               {
-                "name": "Problems",
+                "name": "problems",
                 "order": 4,
                 "path": "physics/mechanics/dynamics-problems.md",
                 "highlighted_rows": [
@@ -1603,7 +1603,7 @@
             "name": "Energy",
             "tables": [
               {
-                "name": "Energy",
+                "name": "energy",
                 "order": 5,
                 "path": "physics/mechanics/energy-energy.md",
                 "highlighted_rows": [
@@ -1618,7 +1618,7 @@
                 ]
               },
               {
-                "name": "Problems",
+                "name": "problems",
                 "order": 6,
                 "path": "physics/mechanics/energy-problems.md",
                 "highlighted_rows": [
@@ -1633,7 +1633,7 @@
             "name": "System Of Particles",
             "tables": [
               {
-                "name": "Center Of Mass",
+                "name": "center of mass",
                 "order": 7,
                 "path": "physics/mechanics/system-of-particles-center-of-mass.md",
                 "highlighted_rows": [
@@ -1646,7 +1646,7 @@
                 ]
               },
               {
-                "name": "Momentum",
+                "name": "momentum",
                 "order": 8,
                 "path": "physics/mechanics/system-of-particles-momentum.md",
                 "highlighted_rows": [
@@ -1657,7 +1657,7 @@
                 ]
               },
               {
-                "name": "Collisions",
+                "name": "collisions",
                 "order": 9,
                 "path": "physics/mechanics/system-of-particles-collisions.md",
                 "highlighted_rows": [
@@ -1679,7 +1679,7 @@
             "name": "Circular",
             "tables": [
               {
-                "name": "Circular",
+                "name": "circular",
                 "order": 10,
                 "path": "physics/harmonics/circular-circular.md",
                 "highlighted_rows": [
@@ -1712,7 +1712,7 @@
             "name": "Rotational",
             "tables": [
               {
-                "name": "Rotational",
+                "name": "rotational",
                 "order": 12,
                 "path": "physics/harmonics/rotational-rotational.md",
                 "highlighted_rows": [
@@ -1727,7 +1727,7 @@
                 ]
               },
               {
-                "name": "Relationships",
+                "name": "relationships",
                 "order": 13,
                 "path": "physics/harmonics/rotational-relationships.md",
                 "highlighted_rows": [
@@ -1743,7 +1743,7 @@
             "name": "Oscillatory",
             "tables": [
               {
-                "name": "Oscillatory",
+                "name": "oscillatory",
                 "order": 14,
                 "path": "physics/harmonics/oscillatory-oscillatory.md",
                 "highlighted_rows": [
@@ -1755,7 +1755,7 @@
                 ]
               },
               {
-                "name": "Energy",
+                "name": "energy",
                 "order": 15,
                 "path": "physics/harmonics/oscillatory-energy.md",
                 "highlighted_rows": [
@@ -1775,7 +1775,7 @@
             "name": "Statics",
             "tables": [
               {
-                "name": "Statics",
+                "name": "statics",
                 "order": 16,
                 "path": "physics/electromagnetism/statics-statics.md",
                 "highlighted_rows": [
@@ -1789,7 +1789,7 @@
                 ]
               },
               {
-                "name": "Conductor",
+                "name": "conductor",
                 "order": 17,
                 "path": "physics/electromagnetism/statics-conductor.md",
                 "highlighted_rows": [
@@ -1804,7 +1804,7 @@
             "name": "Dynamics",
             "tables": [
               {
-                "name": "Current",
+                "name": "current",
                 "order": 18,
                 "path": "physics/electromagnetism/dynamics-current.md",
                 "highlighted_rows": [
@@ -1816,7 +1816,7 @@
                 ]
               },
               {
-                "name": "Circuits",
+                "name": "circuits",
                 "order": 19,
                 "path": "physics/electromagnetism/dynamics-circuits.md",
                 "highlighted_rows": [
@@ -1835,7 +1835,7 @@
             "name": "Capacitor",
             "tables": [
               {
-                "name": "Capacitor",
+                "name": "capacitor",
                 "order": 20,
                 "path": "physics/electromagnetism/capacitor-capacitor.md",
                 "highlighted_rows": [
@@ -1849,7 +1849,7 @@
                 ]
               },
               {
-                "name": "Behaviour",
+                "name": "behaviour",
                 "order": 21,
                 "path": "physics/electromagnetism/capacitor-behaviour.md",
                 "highlighted_rows": [
@@ -1864,7 +1864,7 @@
             "name": "Magnetism",
             "tables": [
               {
-                "name": "Magnetism",
+                "name": "magnetism",
                 "order": 22,
                 "path": "physics/electromagnetism/magnetism-magnetism.md",
                 "highlighted_rows": [
@@ -1875,7 +1875,7 @@
                 ]
               },
               {
-                "name": "Field",
+                "name": "field",
                 "order": 23,
                 "path": "physics/electromagnetism/magnetism-field.md",
                 "highlighted_rows": [
@@ -1887,7 +1887,7 @@
                 ]
               },
               {
-                "name": "Usage",
+                "name": "usage",
                 "order": 24,
                 "path": "physics/electromagnetism/magnetism-usage.md",
                 "highlighted_rows": [
@@ -1905,7 +1905,7 @@
             "name": "Inductor",
             "tables": [
               {
-                "name": "Induction",
+                "name": "induction",
                 "order": 25,
                 "path": "physics/electromagnetism/inductor-induction.md",
                 "highlighted_rows": [
@@ -1921,7 +1921,7 @@
                 ]
               },
               {
-                "name": "Behaviour",
+                "name": "behaviour",
                 "order": 26,
                 "path": "physics/electromagnetism/inductor-behaviour.md",
                 "highlighted_rows": [
@@ -1935,7 +1935,7 @@
             "name": "Maxwell",
             "tables": [
               {
-                "name": "Fields",
+                "name": "fields",
                 "order": 27,
                 "path": "physics/electromagnetism/maxwell-fields.md",
                 "highlighted_rows": [
@@ -1957,7 +1957,7 @@
                 ]
               },
               {
-                "name": "Waves",
+                "name": "waves",
                 "order": 29,
                 "path": "physics/electromagnetism/maxwell-waves.md",
                 "highlighted_rows": [
@@ -1978,7 +1978,7 @@
             "name": "Fluids",
             "tables": [
               {
-                "name": "Statics",
+                "name": "statics",
                 "order": 30,
                 "path": "physics/thermodynamics/fluids-statics.md",
                 "highlighted_rows": [
@@ -1992,7 +1992,7 @@
                 ]
               },
               {
-                "name": "Dynamics",
+                "name": "dynamics",
                 "order": 31,
                 "path": "physics/thermodynamics/fluids-dynamics.md",
                 "highlighted_rows": [
@@ -2008,7 +2008,7 @@
             "name": "Zeroth Law",
             "tables": [
               {
-                "name": "Thermodynamics",
+                "name": "thermodynamics",
                 "order": 32,
                 "path": "physics/thermodynamics/zeroth-law-thermodynamics.md",
                 "highlighted_rows": [
@@ -2017,7 +2017,7 @@
                 ]
               },
               {
-                "name": "Temperature",
+                "name": "temperature",
                 "order": 33,
                 "path": "physics/thermodynamics/zeroth-law-temperature.md",
                 "highlighted_rows": [
@@ -2033,7 +2033,7 @@
             "name": "First Law",
             "tables": [
               {
-                "name": "First Law",
+                "name": "first law",
                 "order": 34,
                 "path": "physics/thermodynamics/first-law-first-law.md",
                 "highlighted_rows": [
@@ -2044,7 +2044,7 @@
                 ]
               },
               {
-                "name": "Isothermal",
+                "name": "isothermal",
                 "order": 35,
                 "path": "physics/thermodynamics/first-law-isothermal.md",
                 "highlighted_rows": [
@@ -2055,7 +2055,7 @@
                 ]
               },
               {
-                "name": "Isometric",
+                "name": "isometric",
                 "order": 36,
                 "path": "physics/thermodynamics/first-law-isometric.md",
                 "highlighted_rows": [
@@ -2066,7 +2066,7 @@
                 ]
               },
               {
-                "name": "Isobaric",
+                "name": "isobaric",
                 "order": 37,
                 "path": "physics/thermodynamics/first-law-isobaric.md",
                 "highlighted_rows": [
@@ -2077,7 +2077,7 @@
                 ]
               },
               {
-                "name": "Adiabatic",
+                "name": "adiabatic",
                 "order": 38,
                 "path": "physics/thermodynamics/first-law-adiabatic.md",
                 "highlighted_rows": [
@@ -2097,7 +2097,7 @@
             "name": "Second Law",
             "tables": [
               {
-                "name": "Second Law",
+                "name": "second law",
                 "order": 39,
                 "path": "physics/thermodynamics/second-law-second-law.md",
                 "highlighted_rows": [
@@ -2107,7 +2107,7 @@
                 ]
               },
               {
-                "name": "Entropy",
+                "name": "entropy",
                 "order": 40,
                 "path": "physics/thermodynamics/second-law-entropy.md",
                 "highlighted_rows": [
@@ -2116,7 +2116,7 @@
                 ]
               },
               {
-                "name": "Measurement",
+                "name": "measurement",
                 "order": 41,
                 "path": "physics/thermodynamics/second-law-measurement.md",
                 "highlighted_rows": [
@@ -2138,7 +2138,7 @@
             "name": "Geometric",
             "tables": [
               {
-                "name": "Refraction",
+                "name": "refraction",
                 "order": 42,
                 "path": "physics/optics/geometric-refraction.md",
                 "highlighted_rows": [
@@ -2149,7 +2149,7 @@
                 ]
               },
               {
-                "name": "Images",
+                "name": "images",
                 "order": 43,
                 "path": "physics/optics/geometric-images.md",
                 "highlighted_rows": [
@@ -2167,7 +2167,7 @@
             "name": "Physical",
             "tables": [
               {
-                "name": "Physical",
+                "name": "physical",
                 "order": 44,
                 "path": "physics/optics/physical-physical.md",
                 "highlighted_rows": [
@@ -2177,7 +2177,7 @@
                 ]
               },
               {
-                "name": "Interference",
+                "name": "interference",
                 "order": 45,
                 "path": "physics/optics/physical-interference.md",
                 "highlighted_rows": [
@@ -2205,7 +2205,7 @@
             "name": "Physical",
             "tables": [
               {
-                "name": "Relativity",
+                "name": "relativity",
                 "order": 46,
                 "path": "physics/modern/physical-relativity.md",
                 "highlighted_rows": [
@@ -2214,7 +2214,7 @@
                 ]
               },
               {
-                "name": "Quantum",
+                "name": "quantum",
                 "order": 47,
                 "path": "physics/modern/physical-quantum.md",
                 "highlighted_rows": [
@@ -2242,7 +2242,7 @@
             "name": "Elements",
             "tables": [
               {
-                "name": "Matter",
+                "name": "matter",
                 "order": 1,
                 "path": "chemistry/atoms/elements-matter.md",
                 "highlighted_rows": [
@@ -2251,7 +2251,7 @@
                 ]
               },
               {
-                "name": "Models",
+                "name": "models",
                 "order": 2,
                 "path": "chemistry/atoms/elements-models.md",
                 "highlighted_rows": [
@@ -2268,7 +2268,7 @@
             "name": "Electrons",
             "tables": [
               {
-                "name": "Relations",
+                "name": "relations",
                 "order": 3,
                 "path": "chemistry/atoms/electrons-relations.md",
                 "highlighted_rows": [
@@ -2281,7 +2281,7 @@
                 ]
               },
               {
-                "name": "Configuration",
+                "name": "configuration",
                 "order": 4,
                 "path": "chemistry/atoms/electrons-configuration.md",
                 "highlighted_rows": [
@@ -2298,7 +2298,7 @@
             "name": "Radioactivity",
             "tables": [
               {
-                "name": "Radioactivity",
+                "name": "radioactivity",
                 "order": 5,
                 "path": "chemistry/atoms/radioactivity-radioactivity.md",
                 "highlighted_rows": [
@@ -2308,7 +2308,7 @@
                 ]
               },
               {
-                "name": "Half Life",
+                "name": "half life",
                 "order": 6,
                 "path": "chemistry/atoms/radioactivity-half-life.md",
                 "highlighted_rows": [
@@ -2324,13 +2324,13 @@
             "name": "Nomenclature",
             "tables": [
               {
-                "name": "Compounds",
+                "name": "compounds",
                 "order": 7,
                 "path": "chemistry/atoms/nomenclature-compounds.md",
                 "highlighted_rows": []
               },
               {
-                "name": "Oxoacids",
+                "name": "oxoacids",
                 "order": 8,
                 "path": "chemistry/atoms/nomenclature-oxoacids.md",
                 "highlighted_rows": [
@@ -2353,7 +2353,7 @@
             "name": "Intramolecular",
             "tables": [
               {
-                "name": "Intramolecular",
+                "name": "intramolecular",
                 "order": 9,
                 "path": "chemistry/bonds/intramolecular-intramolecular.md",
                 "highlighted_rows": [
@@ -2362,7 +2362,7 @@
                 ]
               },
               {
-                "name": "Ionic",
+                "name": "ionic",
                 "order": 10,
                 "path": "chemistry/bonds/intramolecular-ionic.md",
                 "highlighted_rows": [
@@ -2372,7 +2372,7 @@
                 ]
               },
               {
-                "name": "Covalent",
+                "name": "covalent",
                 "order": 11,
                 "path": "chemistry/bonds/intramolecular-covalent.md",
                 "highlighted_rows": [
@@ -2387,7 +2387,7 @@
             "name": "Localized",
             "tables": [
               {
-                "name": "Localized",
+                "name": "localized",
                 "order": 12,
                 "path": "chemistry/bonds/localized-localized.md",
                 "highlighted_rows": [
@@ -2397,7 +2397,7 @@
                 ]
               },
               {
-                "name": "Shape",
+                "name": "shape",
                 "order": 13,
                 "path": "chemistry/bonds/localized-shape.md",
                 "highlighted_rows": [
@@ -2415,7 +2415,7 @@
             "name": "Quantum",
             "tables": [
               {
-                "name": "Molecular Orbital",
+                "name": "molecular orbital",
                 "order": 14,
                 "path": "chemistry/bonds/quantum-molecular-orbital.md",
                 "highlighted_rows": [
@@ -2425,7 +2425,7 @@
                 ]
               },
               {
-                "name": "Diatomic",
+                "name": "diatomic",
                 "order": 15,
                 "path": "chemistry/bonds/quantum-diatomic.md",
                 "highlighted_rows": [
@@ -2442,7 +2442,7 @@
             "name": "Intermolecular",
             "tables": [
               {
-                "name": "Intermolecular",
+                "name": "intermolecular",
                 "order": 16,
                 "path": "chemistry/bonds/intermolecular-intermolecular.md",
                 "highlighted_rows": [
@@ -2455,7 +2455,7 @@
                 ]
               },
               {
-                "name": "Solids",
+                "name": "solids",
                 "order": 17,
                 "path": "chemistry/bonds/intermolecular-solids.md",
                 "highlighted_rows": [
@@ -2470,7 +2470,7 @@
             "name": "States",
             "tables": [
               {
-                "name": "Vapor Pressure",
+                "name": "vapor pressure",
                 "order": 18,
                 "path": "chemistry/bonds/states-vapor-pressure.md",
                 "highlighted_rows": [
@@ -2479,7 +2479,7 @@
                 ]
               },
               {
-                "name": "States",
+                "name": "states",
                 "order": 19,
                 "path": "chemistry/bonds/states-states.md",
                 "highlighted_rows": [
@@ -2489,7 +2489,7 @@
                 ]
               },
               {
-                "name": "Phase Diagram",
+                "name": "phase diagram",
                 "order": 20,
                 "path": "chemistry/bonds/states-phase-diagram.md",
                 "highlighted_rows": [
@@ -2508,7 +2508,7 @@
             "name": "Alkali",
             "tables": [
               {
-                "name": "Alkaline",
+                "name": "alkaline",
                 "order": 88,
                 "path": "chemistry/bonds/alkali-alkaline.md",
                 "highlighted_rows": [
@@ -2549,7 +2549,7 @@
             "name": "States",
             "tables": [
               {
-                "name": "Stoichiometry",
+                "name": "stoichiometry",
                 "order": 21,
                 "path": "chemistry/stoichiometry/states-stoichiometry.md",
                 "highlighted_rows": [
@@ -2557,7 +2557,7 @@
                 ]
               },
               {
-                "name": "Solutions",
+                "name": "solutions",
                 "order": 22,
                 "path": "chemistry/stoichiometry/states-solutions.md",
                 "highlighted_rows": [
@@ -2575,7 +2575,7 @@
             "name": "Reactions",
             "tables": [
               {
-                "name": "Precipitation",
+                "name": "precipitation",
                 "order": 23,
                 "path": "chemistry/stoichiometry/reactions-precipitation.md",
                 "highlighted_rows": [
@@ -2584,7 +2584,7 @@
                 ]
               },
               {
-                "name": "Oxidation Reduction",
+                "name": "oxidation reduction",
                 "order": 24,
                 "path": "chemistry/stoichiometry/reactions-oxidation-reduction.md",
                 "highlighted_rows": [
@@ -2601,7 +2601,7 @@
             "name": "Gases",
             "tables": [
               {
-                "name": "Ideal Gas Law",
+                "name": "ideal gas law",
                 "order": 25,
                 "path": "chemistry/stoichiometry/gases-ideal-gas-law.md",
                 "highlighted_rows": [
@@ -2611,7 +2611,7 @@
                 ]
               },
               {
-                "name": "Kinetic Molecular Theory",
+                "name": "kinetic molecular theory",
                 "order": 26,
                 "path": "chemistry/stoichiometry/gases-kinetic-molecular-theory.md",
                 "highlighted_rows": [
@@ -2626,7 +2626,7 @@
             "name": "Solutions",
             "tables": [
               {
-                "name": "Ideal Solution Law",
+                "name": "ideal solution law",
                 "order": 27,
                 "path": "chemistry/stoichiometry/solutions-ideal-solution-law.md",
                 "highlighted_rows": [
@@ -2636,7 +2636,7 @@
                 ]
               },
               {
-                "name": "Colligative",
+                "name": "colligative",
                 "order": 28,
                 "path": "chemistry/stoichiometry/solutions-colligative.md",
                 "highlighted_rows": [
@@ -2658,7 +2658,7 @@
             "name": "Rate Laws",
             "tables": [
               {
-                "name": "Differential",
+                "name": "differential",
                 "order": 29,
                 "path": "chemistry/physical/rate-laws-differential.md",
                 "highlighted_rows": [
@@ -2670,7 +2670,7 @@
                 ]
               },
               {
-                "name": "Integral",
+                "name": "integral",
                 "order": 30,
                 "path": "chemistry/physical/rate-laws-integral.md",
                 "highlighted_rows": [
@@ -2691,7 +2691,7 @@
             "name": "Reaction Mechanism",
             "tables": [
               {
-                "name": "Reaction Mechanism",
+                "name": "reaction mechanism",
                 "order": 31,
                 "path": "chemistry/physical/reaction-mechanism-reaction-mechanism.md",
                 "highlighted_rows": [
@@ -2705,7 +2705,7 @@
                 ]
               },
               {
-                "name": "Collision Model",
+                "name": "collision model",
                 "order": 32,
                 "path": "chemistry/physical/reaction-mechanism-collision-model.md",
                 "highlighted_rows": [
@@ -2721,7 +2721,7 @@
             "name": "Equilibrium",
             "tables": [
               {
-                "name": "Equilibrium",
+                "name": "equilibrium",
                 "order": 33,
                 "path": "chemistry/physical/equilibrium-equilibrium.md",
                 "highlighted_rows": [
@@ -2742,7 +2742,7 @@
                 ]
               },
               {
-                "name": "Multiple Equilibria",
+                "name": "multiple equilibria",
                 "order": 35,
                 "path": "chemistry/physical/equilibrium-multiple-equilibria.md",
                 "highlighted_rows": [
@@ -2758,7 +2758,7 @@
             "name": "Acid Base",
             "tables": [
               {
-                "name": "Acid Base",
+                "name": "acid base",
                 "order": 36,
                 "path": "chemistry/physical/acid-base-acid-base.md",
                 "highlighted_rows": [
@@ -2770,7 +2770,7 @@
                 ]
               },
               {
-                "name": "Water",
+                "name": "water",
                 "order": 37,
                 "path": "chemistry/physical/acid-base-water.md",
                 "highlighted_rows": [
@@ -2789,7 +2789,7 @@
             "name": "Weak Acid",
             "tables": [
               {
-                "name": "Weak Acid",
+                "name": "weak acid",
                 "order": 38,
                 "path": "chemistry/physical/weak-acid-weak-acid.md",
                 "highlighted_rows": [
@@ -2799,7 +2799,7 @@
                 ]
               },
               {
-                "name": "Characteristics",
+                "name": "characteristics",
                 "order": 39,
                 "path": "chemistry/physical/weak-acid-characteristics.md",
                 "highlighted_rows": [
@@ -2817,7 +2817,7 @@
             "name": "Buffers",
             "tables": [
               {
-                "name": "Common Ions",
+                "name": "common ions",
                 "order": 40,
                 "path": "chemistry/physical/buffers-common-ions.md",
                 "highlighted_rows": [
@@ -2825,7 +2825,7 @@
                 ]
               },
               {
-                "name": "Buffer",
+                "name": "buffer",
                 "order": 41,
                 "path": "chemistry/physical/buffers-buffer.md",
                 "highlighted_rows": [
@@ -2840,7 +2840,7 @@
             "name": "Titration",
             "tables": [
               {
-                "name": "Titration",
+                "name": "titration",
                 "order": 42,
                 "path": "chemistry/physical/titration-titration.md",
                 "highlighted_rows": [
@@ -2851,7 +2851,7 @@
                 ]
               },
               {
-                "name": "Weak Acid Strong Base",
+                "name": "weak acid strong base",
                 "order": 43,
                 "path": "chemistry/physical/titration-weak-acid-strong-base.md",
                 "highlighted_rows": [
@@ -2867,7 +2867,7 @@
             "name": "Precipitation",
             "tables": [
               {
-                "name": "Solubility",
+                "name": "solubility",
                 "order": 44,
                 "path": "chemistry/physical/precipitation-solubility.md",
                 "highlighted_rows": [
@@ -2881,7 +2881,7 @@
                 ]
               },
               {
-                "name": "Qualitative",
+                "name": "qualitative",
                 "order": 45,
                 "path": "chemistry/physical/precipitation-qualitative.md",
                 "highlighted_rows": []
@@ -2893,7 +2893,7 @@
             "name": "Multiple",
             "tables": [
               {
-                "name": "Acid Base",
+                "name": "acid base",
                 "order": 46,
                 "path": "chemistry/physical/multiple-acid-base.md",
                 "highlighted_rows": [
@@ -2904,7 +2904,7 @@
                 ]
               },
               {
-                "name": "Coordination",
+                "name": "coordination",
                 "order": 47,
                 "path": "chemistry/physical/multiple-coordination.md",
                 "highlighted_rows": [
@@ -2921,7 +2921,7 @@
             "name": "Enthalpy",
             "tables": [
               {
-                "name": "First Law",
+                "name": "first law",
                 "order": 48,
                 "path": "chemistry/physical/enthalpy-first-law.md",
                 "highlighted_rows": [
@@ -2931,7 +2931,7 @@
                 ]
               },
               {
-                "name": "Enthalpy",
+                "name": "enthalpy",
                 "order": 49,
                 "path": "chemistry/physical/enthalpy-enthalpy.md",
                 "highlighted_rows": [
@@ -2951,7 +2951,7 @@
             "name": "Entropy",
             "tables": [
               {
-                "name": "Second Law",
+                "name": "second law",
                 "order": 50,
                 "path": "chemistry/physical/entropy-second-law.md",
                 "highlighted_rows": [
@@ -2963,7 +2963,7 @@
                 ]
               },
               {
-                "name": "Free Energy",
+                "name": "free energy",
                 "order": 51,
                 "path": "chemistry/physical/entropy-free-energy.md",
                 "highlighted_rows": [
@@ -2982,7 +2982,7 @@
             "name": "Electrochemistry",
             "tables": [
               {
-                "name": "Galvanic Cell",
+                "name": "galvanic cell",
                 "order": 52,
                 "path": "chemistry/physical/electrochemistry-galvanic-cell.md",
                 "highlighted_rows": [
@@ -2997,7 +2997,7 @@
                 ]
               },
               {
-                "name": "Equilibrium",
+                "name": "equilibrium",
                 "order": 53,
                 "path": "chemistry/physical/electrochemistry-equilibrium.md",
                 "highlighted_rows": [
@@ -3019,7 +3019,7 @@
             "name": "Structure",
             "tables": [
               {
-                "name": "Organic Chemistry",
+                "name": "organic chemistry",
                 "order": 54,
                 "path": "chemistry/organic/structure-organic-chemistry.md",
                 "highlighted_rows": [
@@ -3031,7 +3031,7 @@
                 ]
               },
               {
-                "name": "Conformations",
+                "name": "conformations",
                 "order": 55,
                 "path": "chemistry/organic/structure-conformations.md",
                 "highlighted_rows": [
@@ -3040,7 +3040,7 @@
                 ]
               },
               {
-                "name": "Configurations",
+                "name": "configurations",
                 "order": 56,
                 "path": "chemistry/organic/structure-configurations.md",
                 "highlighted_rows": [
@@ -3057,7 +3057,7 @@
             "name": "Mechanisms",
             "tables": [
               {
-                "name": "Mechanisms",
+                "name": "mechanisms",
                 "order": 57,
                 "path": "chemistry/organic/mechanisms-mechanisms.md",
                 "highlighted_rows": [
@@ -3069,7 +3069,7 @@
                 ]
               },
               {
-                "name": "Thermodynamics",
+                "name": "thermodynamics",
                 "order": 58,
                 "path": "chemistry/organic/mechanisms-thermodynamics.md",
                 "highlighted_rows": [
@@ -3078,7 +3078,7 @@
                 ]
               },
               {
-                "name": "Kinetics",
+                "name": "kinetics",
                 "order": 59,
                 "path": "chemistry/organic/mechanisms-kinetics.md",
                 "highlighted_rows": [
@@ -3095,7 +3095,7 @@
             "name": "Alkanes",
             "tables": [
               {
-                "name": "Alkanes",
+                "name": "alkanes",
                 "order": 60,
                 "path": "chemistry/organic/alkanes-alkanes.md",
                 "highlighted_rows": [
@@ -3110,7 +3110,7 @@
                 ]
               },
               {
-                "name": "Substitution",
+                "name": "substitution",
                 "order": 61,
                 "path": "chemistry/organic/alkanes-substitution.md",
                 "highlighted_rows": [
@@ -3127,7 +3127,7 @@
             "name": "Alkenes",
             "tables": [
               {
-                "name": "Alkenes",
+                "name": "alkenes",
                 "order": 62,
                 "path": "chemistry/organic/alkenes-alkenes.md",
                 "highlighted_rows": [
@@ -3136,7 +3136,7 @@
                 ]
               },
               {
-                "name": "Synthesis",
+                "name": "synthesis",
                 "order": 63,
                 "path": "chemistry/organic/alkenes-synthesis.md",
                 "highlighted_rows": [
@@ -3151,7 +3151,7 @@
             "name": "Alkynes",
             "tables": [
               {
-                "name": "Alkynes",
+                "name": "alkynes",
                 "order": 64,
                 "path": "chemistry/organic/alkynes-alkynes.md",
                 "highlighted_rows": [
@@ -3161,7 +3161,7 @@
                 ]
               },
               {
-                "name": "Synthesis",
+                "name": "synthesis",
                 "order": 65,
                 "path": "chemistry/organic/alkynes-synthesis.md",
                 "highlighted_rows": [
@@ -3178,7 +3178,7 @@
             "name": "Synthesis",
             "tables": [
               {
-                "name": "Alcohols",
+                "name": "alcohols",
                 "order": 66,
                 "path": "chemistry/organic/synthesis-alcohols.md",
                 "highlighted_rows": [
@@ -3191,7 +3191,7 @@
                 ]
               },
               {
-                "name": "Ethers",
+                "name": "ethers",
                 "order": 67,
                 "path": "chemistry/organic/synthesis-ethers.md",
                 "highlighted_rows": [
@@ -3202,7 +3202,7 @@
                 ]
               },
               {
-                "name": "Synthesis",
+                "name": "synthesis",
                 "order": 68,
                 "path": "chemistry/organic/synthesis-synthesis.md",
                 "highlighted_rows": [
@@ -3218,7 +3218,7 @@
             "name": "Aromatics",
             "tables": [
               {
-                "name": "Aromatics",
+                "name": "aromatics",
                 "order": 69,
                 "path": "chemistry/organic/aromatics-aromatics.md",
                 "highlighted_rows": [
@@ -3230,7 +3230,7 @@
                 ]
               },
               {
-                "name": "Reactions",
+                "name": "reactions",
                 "order": 70,
                 "path": "chemistry/organic/aromatics-reactions.md",
                 "highlighted_rows": [
@@ -3250,7 +3250,7 @@
             "name": "Spectroscopy",
             "tables": [
               {
-                "name": "Ir",
+                "name": "IR",
                 "order": 71,
                 "path": "chemistry/organic/spectroscopy-ir.md",
                 "highlighted_rows": [
@@ -3261,7 +3261,7 @@
                 ]
               },
               {
-                "name": "Nmr",
+                "name": "NMR",
                 "order": 72,
                 "path": "chemistry/organic/spectroscopy-nmr.md",
                 "highlighted_rows": [
@@ -3282,7 +3282,7 @@
             "name": "Coordination",
             "tables": [
               {
-                "name": "Structure",
+                "name": "structure",
                 "order": 73,
                 "path": "chemistry/inorganic/coordination-structure.md",
                 "highlighted_rows": [
@@ -3296,7 +3296,7 @@
                 ]
               },
               {
-                "name": "Isomers",
+                "name": "isomers",
                 "order": 74,
                 "path": "chemistry/inorganic/coordination-isomers.md",
                 "highlighted_rows": [
@@ -3311,7 +3311,7 @@
             "name": "Crystal Field",
             "tables": [
               {
-                "name": "Splitting",
+                "name": "splitting",
                 "order": 75,
                 "path": "chemistry/inorganic/crystal-field-splitting.md",
                 "highlighted_rows": [
@@ -3326,7 +3326,7 @@
                 ]
               },
               {
-                "name": "Stabilization",
+                "name": "stabilization",
                 "order": 76,
                 "path": "chemistry/inorganic/crystal-field-stabilization.md",
                 "highlighted_rows": [
@@ -3342,7 +3342,7 @@
             "name": "Mechanisms",
             "tables": [
               {
-                "name": "Merchanisms",
+                "name": "merchanisms",
                 "order": 77,
                 "path": "chemistry/inorganic/mechanisms-merchanisms.md",
                 "highlighted_rows": [
@@ -3354,7 +3354,7 @@
                 ]
               },
               {
-                "name": "Applications",
+                "name": "applications",
                 "order": 78,
                 "path": "chemistry/inorganic/mechanisms-applications.md",
                 "highlighted_rows": [
@@ -3369,7 +3369,7 @@
             "name": "Solids",
             "tables": [
               {
-                "name": "Unit Cells",
+                "name": "unit cells",
                 "order": 79,
                 "path": "chemistry/inorganic/solids-unit-cells.md",
                 "highlighted_rows": [
@@ -3379,7 +3379,7 @@
                 ]
               },
               {
-                "name": "Energetics",
+                "name": "energetics",
                 "order": 80,
                 "path": "chemistry/inorganic/solids-energetics.md",
                 "highlighted_rows": [
@@ -3395,7 +3395,7 @@
             "name": "Ideas",
             "tables": [
               {
-                "name": "Ideas",
+                "name": "ideas",
                 "order": 81,
                 "path": "chemistry/inorganic/ideas-ideas.md",
                 "highlighted_rows": [
@@ -3407,7 +3407,7 @@
                 ]
               },
               {
-                "name": "Additional",
+                "name": "additional",
                 "order": 82,
                 "path": "chemistry/inorganic/ideas-additional.md",
                 "highlighted_rows": [
@@ -3425,7 +3425,7 @@
             "name": "Foundation",
             "tables": [
               {
-                "name": "Hydrides",
+                "name": "hydrides",
                 "order": 83,
                 "path": "chemistry/inorganic/foundation-hydrides.md",
                 "highlighted_rows": [
@@ -3437,7 +3437,7 @@
                 ]
               },
               {
-                "name": "Anhydrides",
+                "name": "anhydrides",
                 "order": 84,
                 "path": "chemistry/inorganic/foundation-anhydrides.md",
                 "highlighted_rows": [
@@ -3456,7 +3456,7 @@
             "name": "Alkali",
             "tables": [
               {
-                "name": "Alkali",
+                "name": "alkali",
                 "order": 85,
                 "path": "chemistry/inorganic/alkali-alkali.md",
                 "highlighted_rows": [
@@ -3464,7 +3464,7 @@
                 ]
               },
               {
-                "name": "Reduction Potential",
+                "name": "reduction potential",
                 "order": 86,
                 "path": "chemistry/inorganic/alkali-reduction-potential.md",
                 "highlighted_rows": [
@@ -3474,7 +3474,7 @@
                 ]
               },
               {
-                "name": "Peroxides",
+                "name": "peroxides",
                 "order": 87,
                 "path": "chemistry/inorganic/alkali-peroxides.md",
                 "highlighted_rows": [
@@ -3488,7 +3488,7 @@
             "name": "Representative",
             "tables": [
               {
-                "name": "Pnicogens",
+                "name": "pnicogens",
                 "order": 91,
                 "path": "chemistry/inorganic/representative-pnicogens.md",
                 "highlighted_rows": [
@@ -3496,7 +3496,7 @@
                 ]
               },
               {
-                "name": "Chalcogens",
+                "name": "chalcogens",
                 "order": 92,
                 "path": "chemistry/inorganic/representative-chalcogens.md",
                 "highlighted_rows": [
@@ -3504,7 +3504,7 @@
                 ]
               },
               {
-                "name": "Noble",
+                "name": "noble",
                 "order": 93,
                 "path": "chemistry/inorganic/representative-noble.md",
                 "highlighted_rows": [
@@ -3518,7 +3518,7 @@
             "name": "Halogens",
             "tables": [
               {
-                "name": "Halogens",
+                "name": "halogens",
                 "order": 94,
                 "path": "chemistry/inorganic/halogens-halogens.md",
                 "highlighted_rows": [
@@ -3528,7 +3528,7 @@
                 ]
               },
               {
-                "name": "Halides",
+                "name": "halides",
                 "order": 95,
                 "path": "chemistry/inorganic/halogens-halides.md",
                 "highlighted_rows": [
@@ -3536,7 +3536,7 @@
                 ]
               },
               {
-                "name": "Oxoacids",
+                "name": "oxoacids",
                 "order": 96,
                 "path": "chemistry/inorganic/halogens-oxoacids.md",
                 "highlighted_rows": [
@@ -3563,7 +3563,7 @@
             "name": "Macromolecules",
             "tables": [
               {
-                "name": "Macromolecules",
+                "name": "macromolecules",
                 "order": 1,
                 "path": "biology/cells/macromolecules-macromolecules.md",
                 "highlighted_rows": [
@@ -3579,7 +3579,7 @@
                 ]
               },
               {
-                "name": "Enzymes",
+                "name": "enzymes",
                 "order": 2,
                 "path": "biology/cells/macromolecules-enzymes.md",
                 "highlighted_rows": [
@@ -3595,7 +3595,7 @@
             "name": "Organelles",
             "tables": [
               {
-                "name": "Cells",
+                "name": "cells",
                 "order": 3,
                 "path": "biology/cells/organelles-cells.md",
                 "highlighted_rows": [
@@ -3604,7 +3604,7 @@
                 ]
               },
               {
-                "name": "Endomembrane",
+                "name": "endomembrane",
                 "order": 4,
                 "path": "biology/cells/organelles-endomembrane.md",
                 "highlighted_rows": [
@@ -3613,7 +3613,7 @@
                 ]
               },
               {
-                "name": "Cytoskeleton",
+                "name": "cytoskeleton",
                 "order": 5,
                 "path": "biology/cells/organelles-cytoskeleton.md",
                 "highlighted_rows": [
@@ -3627,7 +3627,7 @@
             "name": "Membranes",
             "tables": [
               {
-                "name": "Plasma Membrane",
+                "name": "plasma membrane",
                 "order": 6,
                 "path": "biology/cells/membranes-plasma-membrane.md",
                 "highlighted_rows": [
@@ -3638,7 +3638,7 @@
                 ]
               },
               {
-                "name": "Transport",
+                "name": "transport",
                 "order": 7,
                 "path": "biology/cells/membranes-transport.md",
                 "highlighted_rows": [
@@ -3651,7 +3651,7 @@
                 ]
               },
               {
-                "name": "Communication",
+                "name": "communication",
                 "order": 8,
                 "path": "biology/cells/membranes-communication.md",
                 "highlighted_rows": []
@@ -3663,7 +3663,7 @@
             "name": "Photosynthesis",
             "tables": [
               {
-                "name": "Photosynthesis",
+                "name": "photosynthesis",
                 "order": 9,
                 "path": "biology/cells/photosynthesis-photosynthesis.md",
                 "highlighted_rows": [
@@ -3672,7 +3672,7 @@
                 ]
               },
               {
-                "name": "Light",
+                "name": "light",
                 "order": 10,
                 "path": "biology/cells/photosynthesis-light.md",
                 "highlighted_rows": [
@@ -3682,7 +3682,7 @@
                 ]
               },
               {
-                "name": "Dark",
+                "name": "dark",
                 "order": 11,
                 "path": "biology/cells/photosynthesis-dark.md",
                 "highlighted_rows": [
@@ -3696,7 +3696,7 @@
             "name": "Respiration",
             "tables": [
               {
-                "name": "Respiration",
+                "name": "respiration",
                 "order": 12,
                 "path": "biology/cells/respiration-respiration.md",
                 "highlighted_rows": [
@@ -3705,7 +3705,7 @@
                 ]
               },
               {
-                "name": "Glycolysis",
+                "name": "glycolysis",
                 "order": 13,
                 "path": "biology/cells/respiration-glycolysis.md",
                 "highlighted_rows": [
@@ -3714,7 +3714,7 @@
                 ]
               },
               {
-                "name": "Aerobic",
+                "name": "aerobic",
                 "order": 14,
                 "path": "biology/cells/respiration-aerobic.md",
                 "highlighted_rows": [
@@ -3728,7 +3728,7 @@
             "name": "Mitosis",
             "tables": [
               {
-                "name": "Mitosis",
+                "name": "mitosis",
                 "order": 15,
                 "path": "biology/cells/mitosis-mitosis.md",
                 "highlighted_rows": [
@@ -3736,7 +3736,7 @@
                 ]
               },
               {
-                "name": "Mitotic Phase",
+                "name": "mitotic phase",
                 "order": 16,
                 "path": "biology/cells/mitosis-mitotic-phase.md",
                 "highlighted_rows": [
@@ -3744,7 +3744,7 @@
                 ]
               },
               {
-                "name": "Regulation",
+                "name": "regulation",
                 "order": 17,
                 "path": "biology/cells/mitosis-regulation.md",
                 "highlighted_rows": [
@@ -3760,7 +3760,7 @@
             "name": "Meiosis",
             "tables": [
               {
-                "name": "Meiosis",
+                "name": "meiosis",
                 "order": 18,
                 "path": "biology/cells/meiosis-meiosis.md",
                 "highlighted_rows": [
@@ -3769,7 +3769,7 @@
                 ]
               },
               {
-                "name": "Meiosis I",
+                "name": "meiosis I",
                 "order": 19,
                 "path": "biology/cells/meiosis-meiosis-i.md",
                 "highlighted_rows": [
@@ -3781,7 +3781,7 @@
                 ]
               },
               {
-                "name": "Disorders",
+                "name": "disorders",
                 "order": 20,
                 "path": "biology/cells/meiosis-disorders.md",
                 "highlighted_rows": []
@@ -3810,7 +3810,7 @@
                 ]
               },
               {
-                "name": "Inheritance",
+                "name": "inheritance",
                 "order": 22,
                 "path": "biology/genetics/mendel-inheritance.md",
                 "highlighted_rows": [
@@ -3818,7 +3818,7 @@
                 ]
               },
               {
-                "name": "Recessive Disorders",
+                "name": "recessive disorders",
                 "order": 23,
                 "path": "biology/genetics/mendel-recessive-disorders.md",
                 "highlighted_rows": []
@@ -3830,7 +3830,7 @@
             "name": "Non Mendel",
             "tables": [
               {
-                "name": "Non Mendel",
+                "name": "non Mendel",
                 "order": 24,
                 "path": "biology/genetics/non-mendel-non-mendel.md",
                 "highlighted_rows": [
@@ -3841,7 +3841,7 @@
                 ]
               },
               {
-                "name": "Others",
+                "name": "others",
                 "order": 25,
                 "path": "biology/genetics/non-mendel-others.md",
                 "highlighted_rows": []
@@ -3853,7 +3853,7 @@
             "name": "Replication",
             "tables": [
               {
-                "name": "Replication",
+                "name": "replication",
                 "order": 26,
                 "path": "biology/genetics/replication-replication.md",
                 "highlighted_rows": [
@@ -3862,7 +3862,7 @@
                 ]
               },
               {
-                "name": "Process",
+                "name": "process",
                 "order": 27,
                 "path": "biology/genetics/replication-process.md",
                 "highlighted_rows": [
@@ -3870,7 +3870,7 @@
                 ]
               },
               {
-                "name": "Control",
+                "name": "control",
                 "order": 28,
                 "path": "biology/genetics/replication-control.md",
                 "highlighted_rows": [
@@ -3885,7 +3885,7 @@
             "name": "Expression",
             "tables": [
               {
-                "name": "Expression",
+                "name": "expression",
                 "order": 29,
                 "path": "biology/genetics/expression-expression.md",
                 "highlighted_rows": [
@@ -3894,7 +3894,7 @@
                 ]
               },
               {
-                "name": "Transcription",
+                "name": "transcription",
                 "order": 30,
                 "path": "biology/genetics/expression-transcription.md",
                 "highlighted_rows": [
@@ -3902,7 +3902,7 @@
                 ]
               },
               {
-                "name": "Translation",
+                "name": "translation",
                 "order": 31,
                 "path": "biology/genetics/expression-translation.md",
                 "highlighted_rows": [
@@ -3916,7 +3916,7 @@
             "name": "Regulation",
             "tables": [
               {
-                "name": "Regulation",
+                "name": "regulation",
                 "order": 32,
                 "path": "biology/genetics/regulation-regulation.md",
                 "highlighted_rows": [
@@ -3925,7 +3925,7 @@
                 ]
               },
               {
-                "name": "Operons",
+                "name": "operons",
                 "order": 33,
                 "path": "biology/genetics/regulation-operons.md",
                 "highlighted_rows": [
@@ -3939,7 +3939,7 @@
             "name": "Mutations",
             "tables": [
               {
-                "name": "Mutations",
+                "name": "mutations",
                 "order": 34,
                 "path": "biology/genetics/mutations-mutations.md",
                 "highlighted_rows": [
@@ -3948,7 +3948,7 @@
                 ]
               },
               {
-                "name": "Genetic Variation",
+                "name": "genetic variation",
                 "order": 35,
                 "path": "biology/genetics/mutations-genetic-variation.md",
                 "highlighted_rows": [
@@ -3959,7 +3959,7 @@
                 ]
               },
               {
-                "name": "Biotechnology",
+                "name": "biotechnology",
                 "order": 36,
                 "path": "biology/genetics/mutations-biotechnology.md",
                 "highlighted_rows": [
@@ -3975,7 +3975,7 @@
             "name": "Natural Selection",
             "tables": [
               {
-                "name": "Natural Selection",
+                "name": "natural selection",
                 "order": 37,
                 "path": "biology/genetics/natural-selection-natural-selection.md",
                 "highlighted_rows": [
@@ -3987,7 +3987,7 @@
                 ]
               },
               {
-                "name": "Evidence",
+                "name": "evidence",
                 "order": 38,
                 "path": "biology/genetics/natural-selection-evidence.md",
                 "highlighted_rows": [
@@ -4002,7 +4002,7 @@
             "name": "Phylogeny",
             "tables": [
               {
-                "name": "Tree Of Life",
+                "name": "tree of life",
                 "order": 39,
                 "path": "biology/genetics/phylogeny-tree-of-life.md",
                 "highlighted_rows": [
@@ -4013,7 +4013,7 @@
                 ]
               },
               {
-                "name": "Phylogenetic Tree",
+                "name": "phylogenetic tree",
                 "order": 40,
                 "path": "biology/genetics/phylogeny-phylogenetic-tree.md",
                 "highlighted_rows": [
@@ -4024,7 +4024,7 @@
                 ]
               },
               {
-                "name": "Genomics",
+                "name": "genomics",
                 "order": 41,
                 "path": "biology/genetics/phylogeny-genomics.md",
                 "highlighted_rows": [
@@ -4040,7 +4040,7 @@
             "name": "Speciation",
             "tables": [
               {
-                "name": "Microevolution",
+                "name": "microevolution",
                 "order": 42,
                 "path": "biology/genetics/speciation-microevolution.md",
                 "highlighted_rows": [
@@ -4050,7 +4050,7 @@
                 ]
               },
               {
-                "name": "Speciation",
+                "name": "speciation",
                 "order": 43,
                 "path": "biology/genetics/speciation-speciation.md",
                 "highlighted_rows": [
@@ -4071,7 +4071,7 @@
             "name": "Community",
             "tables": [
               {
-                "name": "Ecology",
+                "name": "ecology",
                 "order": 44,
                 "path": "biology/ecology/community-ecology.md",
                 "highlighted_rows": [
@@ -4085,7 +4085,7 @@
                 ]
               },
               {
-                "name": "Interactions",
+                "name": "interactions",
                 "order": 45,
                 "path": "biology/ecology/community-interactions.md",
                 "highlighted_rows": [
@@ -4104,7 +4104,7 @@
             "name": "Population",
             "tables": [
               {
-                "name": "Population",
+                "name": "population",
                 "order": 46,
                 "path": "biology/ecology/population-population.md",
                 "highlighted_rows": [
@@ -4114,7 +4114,7 @@
                 ]
               },
               {
-                "name": "Ethology",
+                "name": "ethology",
                 "order": 47,
                 "path": "biology/ecology/population-ethology.md",
                 "highlighted_rows": [
@@ -4129,7 +4129,7 @@
             "name": "Viruses",
             "tables": [
               {
-                "name": "Systematics",
+                "name": "systematics",
                 "order": 48,
                 "path": "biology/ecology/viruses-systematics.md",
                 "highlighted_rows": [
@@ -4140,7 +4140,7 @@
                 ]
               },
               {
-                "name": "Viruses",
+                "name": "viruses",
                 "order": 49,
                 "path": "biology/ecology/viruses-viruses.md",
                 "highlighted_rows": [
@@ -4149,7 +4149,7 @@
                 ]
               },
               {
-                "name": "Hosts",
+                "name": "hosts",
                 "order": 50,
                 "path": "biology/ecology/viruses-hosts.md",
                 "highlighted_rows": []
@@ -4161,7 +4161,7 @@
             "name": "Prokaryotes",
             "tables": [
               {
-                "name": "Prokaryotes",
+                "name": "prokaryotes",
                 "order": 51,
                 "path": "biology/ecology/prokaryotes-prokaryotes.md",
                 "highlighted_rows": [
@@ -4171,7 +4171,7 @@
                 ]
               },
               {
-                "name": "Diversity",
+                "name": "diversity",
                 "order": 52,
                 "path": "biology/ecology/prokaryotes-diversity.md",
                 "highlighted_rows": [
@@ -4188,7 +4188,7 @@
             "name": "Eukaryotes",
             "tables": [
               {
-                "name": "Eukaryotes",
+                "name": "eukaryotes",
                 "order": 53,
                 "path": "biology/ecology/eukaryotes-eukaryotes.md",
                 "highlighted_rows": [
@@ -4199,7 +4199,7 @@
                 ]
               },
               {
-                "name": "Plants",
+                "name": "plants",
                 "order": 54,
                 "path": "biology/ecology/eukaryotes-plants.md",
                 "highlighted_rows": [
@@ -4212,7 +4212,7 @@
                 ]
               },
               {
-                "name": "Fungi",
+                "name": "fungi",
                 "order": 55,
                 "path": "biology/ecology/eukaryotes-fungi.md",
                 "highlighted_rows": [
@@ -4225,7 +4225,7 @@
                 ]
               },
               {
-                "name": "Animals",
+                "name": "animals",
                 "order": 56,
                 "path": "biology/ecology/eukaryotes-animals.md",
                 "highlighted_rows": [
@@ -4247,7 +4247,7 @@
             "name": "Growth",
             "tables": [
               {
-                "name": "Structure",
+                "name": "structure",
                 "order": 57,
                 "path": "biology/plants/growth-structure.md",
                 "highlighted_rows": [
@@ -4257,7 +4257,7 @@
                 ]
               },
               {
-                "name": "Growth",
+                "name": "growth",
                 "order": 58,
                 "path": "biology/plants/growth-growth.md",
                 "highlighted_rows": [
@@ -4266,7 +4266,7 @@
                 ]
               },
               {
-                "name": "Primary",
+                "name": "primary",
                 "order": 59,
                 "path": "biology/plants/growth-primary.md",
                 "highlighted_rows": [
@@ -4275,7 +4275,7 @@
                 ]
               },
               {
-                "name": "Secondary",
+                "name": "secondary",
                 "order": 60,
                 "path": "biology/plants/growth-secondary.md",
                 "highlighted_rows": [
@@ -4286,13 +4286,13 @@
                 ]
               },
               {
-                "name": "Layers",
+                "name": "layers",
                 "order": 61,
                 "path": "biology/plants/growth-layers.md",
                 "highlighted_rows": []
               },
               {
-                "name": "Development",
+                "name": "development",
                 "order": 62,
                 "path": "biology/plants/growth-development.md",
                 "highlighted_rows": [
@@ -4311,7 +4311,7 @@
             "name": "Transport",
             "tables": [
               {
-                "name": "Transport",
+                "name": "transport",
                 "order": 63,
                 "path": "biology/plants/transport-transport.md",
                 "highlighted_rows": [
@@ -4322,7 +4322,7 @@
                 ]
               },
               {
-                "name": "Water",
+                "name": "water",
                 "order": 64,
                 "path": "biology/plants/transport-water.md",
                 "highlighted_rows": [
@@ -4334,7 +4334,7 @@
                 ]
               },
               {
-                "name": "Sugar",
+                "name": "sugar",
                 "order": 65,
                 "path": "biology/plants/transport-sugar.md",
                 "highlighted_rows": [
@@ -4349,7 +4349,7 @@
             "name": "Nutrition",
             "tables": [
               {
-                "name": "Nutrition",
+                "name": "nutrition",
                 "order": 66,
                 "path": "biology/plants/nutrition-nutrition.md",
                 "highlighted_rows": [
@@ -4360,7 +4360,7 @@
                 ]
               },
               {
-                "name": "Adaptations",
+                "name": "adaptations",
                 "order": 67,
                 "path": "biology/plants/nutrition-adaptations.md",
                 "highlighted_rows": [
@@ -4377,7 +4377,7 @@
             "name": "Reproduction",
             "tables": [
               {
-                "name": "Sexual",
+                "name": "sexual",
                 "order": 68,
                 "path": "biology/plants/reproduction-sexual.md",
                 "highlighted_rows": [
@@ -4391,7 +4391,7 @@
                 ]
               },
               {
-                "name": "Asexual",
+                "name": "asexual",
                 "order": 69,
                 "path": "biology/plants/reproduction-asexual.md",
                 "highlighted_rows": [
@@ -4408,7 +4408,7 @@
             "name": "Behaviour",
             "tables": [
               {
-                "name": "Behaviour",
+                "name": "behaviour",
                 "order": 70,
                 "path": "biology/plants/behaviour-behaviour.md",
                 "highlighted_rows": [
@@ -4418,7 +4418,7 @@
                 ]
               },
               {
-                "name": "Stimuli",
+                "name": "stimuli",
                 "order": 71,
                 "path": "biology/plants/behaviour-stimuli.md",
                 "highlighted_rows": [
@@ -4444,7 +4444,7 @@
             "name": "Endocrine",
             "tables": [
               {
-                "name": "Structure",
+                "name": "structure",
                 "order": 72,
                 "path": "biology/animals/endocrine-structure.md",
                 "highlighted_rows": [
@@ -4453,7 +4453,7 @@
                 ]
               },
               {
-                "name": "Homeostasis",
+                "name": "homeostasis",
                 "order": 73,
                 "path": "biology/animals/endocrine-homeostasis.md",
                 "highlighted_rows": [
@@ -4462,7 +4462,7 @@
                 ]
               },
               {
-                "name": "Endocrine",
+                "name": "endocrine",
                 "order": 74,
                 "path": "biology/animals/endocrine-endocrine.md",
                 "highlighted_rows": [
@@ -4478,7 +4478,7 @@
             "name": "Digestive",
             "tables": [
               {
-                "name": "Digestive",
+                "name": "digestive",
                 "order": 75,
                 "path": "biology/animals/digestive-digestive.md",
                 "highlighted_rows": [
@@ -4488,7 +4488,7 @@
                 ]
               },
               {
-                "name": "Stages",
+                "name": "stages",
                 "order": 76,
                 "path": "biology/animals/digestive-stages.md",
                 "highlighted_rows": [
@@ -4508,7 +4508,7 @@
             "name": "Transport",
             "tables": [
               {
-                "name": "Circulatory",
+                "name": "circulatory",
                 "order": 77,
                 "path": "biology/animals/transport-circulatory.md",
                 "highlighted_rows": [
@@ -4516,7 +4516,7 @@
                 ]
               },
               {
-                "name": "Respiratory",
+                "name": "respiratory",
                 "order": 78,
                 "path": "biology/animals/transport-respiratory.md",
                 "highlighted_rows": [
@@ -4533,7 +4533,7 @@
             "name": "Excretory",
             "tables": [
               {
-                "name": "Excretory",
+                "name": "excretory",
                 "order": 79,
                 "path": "biology/animals/excretory-excretory.md",
                 "highlighted_rows": [
@@ -4542,7 +4542,7 @@
                 ]
               },
               {
-                "name": "Stages",
+                "name": "stages",
                 "order": 80,
                 "path": "biology/animals/excretory-stages.md",
                 "highlighted_rows": [
@@ -4557,7 +4557,7 @@
             "name": "Reproductive",
             "tables": [
               {
-                "name": "Gestation",
+                "name": "gestation",
                 "order": 81,
                 "path": "biology/animals/reproductive-gestation.md",
                 "highlighted_rows": [
@@ -4566,7 +4566,7 @@
                 ]
               },
               {
-                "name": "Development",
+                "name": "development",
                 "order": 82,
                 "path": "biology/animals/reproductive-development.md",
                 "highlighted_rows": []
@@ -4578,7 +4578,7 @@
             "name": "Immune",
             "tables": [
               {
-                "name": "Immune",
+                "name": "immune",
                 "order": 83,
                 "path": "biology/animals/immune-immune.md",
                 "highlighted_rows": [
@@ -4589,7 +4589,7 @@
                 ]
               },
               {
-                "name": "Adaptive",
+                "name": "adaptive",
                 "order": 84,
                 "path": "biology/animals/immune-adaptive.md",
                 "highlighted_rows": [
@@ -4614,7 +4614,7 @@
             "name": "Nervous",
             "tables": [
               {
-                "name": "Nervous",
+                "name": "nervous",
                 "order": 85,
                 "path": "biology/neuroscience/nervous-nervous.md",
                 "highlighted_rows": [
@@ -4625,7 +4625,7 @@
                 ]
               },
               {
-                "name": "Brain",
+                "name": "brain",
                 "order": 86,
                 "path": "biology/neuroscience/nervous-brain.md",
                 "highlighted_rows": [
@@ -4641,7 +4641,7 @@
             "name": "Cognition",
             "tables": [
               {
-                "name": "Cerebral Cortex",
+                "name": "cerebral cortex",
                 "order": 87,
                 "path": "biology/neuroscience/cognition-cerebral-cortex.md",
                 "highlighted_rows": [
@@ -4650,7 +4650,7 @@
                 ]
               },
               {
-                "name": "Cognition",
+                "name": "cognition",
                 "order": 88,
                 "path": "biology/neuroscience/cognition-cognition.md",
                 "highlighted_rows": [
@@ -4661,7 +4661,7 @@
                 ]
               },
               {
-                "name": "Function",
+                "name": "function",
                 "order": 89,
                 "path": "biology/neuroscience/cognition-function.md",
                 "highlighted_rows": [
@@ -4677,7 +4677,7 @@
             "name": "Neurons",
             "tables": [
               {
-                "name": "Signal",
+                "name": "signal",
                 "order": 90,
                 "path": "biology/neuroscience/neurons-signal.md",
                 "highlighted_rows": [
@@ -4688,7 +4688,7 @@
                 ]
               },
               {
-                "name": "Integration",
+                "name": "integration",
                 "order": 91,
                 "path": "biology/neuroscience/neurons-integration.md",
                 "highlighted_rows": [
@@ -4706,7 +4706,7 @@
             "name": "Receptors",
             "tables": [
               {
-                "name": "Receptors",
+                "name": "receptors",
                 "order": 92,
                 "path": "biology/neuroscience/receptors-receptors.md",
                 "highlighted_rows": [
@@ -4717,7 +4717,7 @@
                 ]
               },
               {
-                "name": "Hearing",
+                "name": "hearing",
                 "order": 93,
                 "path": "biology/neuroscience/receptors-hearing.md",
                 "highlighted_rows": [
@@ -4725,7 +4725,7 @@
                 ]
               },
               {
-                "name": "Balance",
+                "name": "balance",
                 "order": 94,
                 "path": "biology/neuroscience/receptors-balance.md",
                 "highlighted_rows": [
@@ -4740,7 +4740,7 @@
             "name": "Senses",
             "tables": [
               {
-                "name": "Vision",
+                "name": "vision",
                 "order": 95,
                 "path": "biology/neuroscience/senses-vision.md",
                 "highlighted_rows": [
@@ -4749,7 +4749,7 @@
                 ]
               },
               {
-                "name": "Taste",
+                "name": "taste",
                 "order": 96,
                 "path": "biology/neuroscience/senses-taste.md",
                 "highlighted_rows": [
@@ -4757,7 +4757,7 @@
                 ]
               },
               {
-                "name": "Smell",
+                "name": "smell",
                 "order": 97,
                 "path": "biology/neuroscience/senses-smell.md",
                 "highlighted_rows": [
@@ -4772,7 +4772,7 @@
             "name": "Motor",
             "tables": [
               {
-                "name": "Muscles",
+                "name": "muscles",
                 "order": 98,
                 "path": "biology/neuroscience/motor-muscles.md",
                 "highlighted_rows": [
@@ -4783,7 +4783,7 @@
                 ]
               },
               {
-                "name": "Skeleton",
+                "name": "skeleton",
                 "order": 99,
                 "path": "biology/neuroscience/motor-skeleton.md",
                 "highlighted_rows": [
@@ -4812,7 +4812,7 @@
             "name": "Constellations",
             "tables": [
               {
-                "name": "Location",
+                "name": "location",
                 "order": 1,
                 "path": "astronomy/observations/constellations-location.md",
                 "highlighted_rows": [
@@ -4821,13 +4821,13 @@
                 ]
               },
               {
-                "name": "Sky Chart",
+                "name": "sky chart",
                 "order": 2,
                 "path": "astronomy/observations/constellations-sky-chart.md",
                 "highlighted_rows": []
               },
               {
-                "name": "Nomenclature",
+                "name": "nomenclature",
                 "order": 3,
                 "path": "astronomy/observations/constellations-nomenclature.md",
                 "highlighted_rows": [
@@ -4842,7 +4842,7 @@
             "name": "Telescopes",
             "tables": [
               {
-                "name": "Camera",
+                "name": "camera",
                 "order": 4,
                 "path": "astronomy/observations/telescopes-camera.md",
                 "highlighted_rows": [
@@ -4855,13 +4855,13 @@
                 ]
               },
               {
-                "name": "Telescope",
+                "name": "telescope",
                 "order": 5,
                 "path": "astronomy/observations/telescopes-telescope.md",
                 "highlighted_rows": []
               },
               {
-                "name": "Magnitude",
+                "name": "magnitude",
                 "order": 6,
                 "path": "astronomy/observations/telescopes-magnitude.md",
                 "highlighted_rows": [
@@ -4870,7 +4870,7 @@
                 ]
               },
               {
-                "name": "Magnification",
+                "name": "magnification",
                 "order": 7,
                 "path": "astronomy/observations/telescopes-magnification.md",
                 "highlighted_rows": [
@@ -4892,7 +4892,7 @@
             "name": "Geometry",
             "tables": [
               {
-                "name": "Spheres",
+                "name": "spheres",
                 "order": 8,
                 "path": "astronomy/coordinates/geometry-spheres.md",
                 "highlighted_rows": [
@@ -4922,7 +4922,7 @@
             "name": "Local",
             "tables": [
               {
-                "name": "Horizontal",
+                "name": "horizontal",
                 "order": 10,
                 "path": "astronomy/coordinates/local-horizontal.md",
                 "highlighted_rows": [
@@ -4933,7 +4933,7 @@
                 ]
               },
               {
-                "name": "Local Equatorial",
+                "name": "local equatorial",
                 "order": 11,
                 "path": "astronomy/coordinates/local-local-equatorial.md",
                 "highlighted_rows": [
@@ -4952,7 +4952,7 @@
             "name": "Conversions",
             "tables": [
               {
-                "name": "Observational",
+                "name": "observational",
                 "order": 12,
                 "path": "astronomy/coordinates/conversions-observational.md",
                 "highlighted_rows": [
@@ -4963,7 +4963,7 @@
                 ]
               },
               {
-                "name": "General",
+                "name": "general",
                 "order": 13,
                 "path": "astronomy/coordinates/conversions-general.md",
                 "highlighted_rows": [
@@ -4979,7 +4979,7 @@
             "name": "Celestial",
             "tables": [
               {
-                "name": "Equatorial",
+                "name": "equatorial",
                 "order": 14,
                 "path": "astronomy/coordinates/celestial-equatorial.md",
                 "highlighted_rows": [
@@ -4989,7 +4989,7 @@
                 ]
               },
               {
-                "name": "Ecliptical",
+                "name": "ecliptical",
                 "order": 15,
                 "path": "astronomy/coordinates/celestial-ecliptical.md",
                 "highlighted_rows": [
@@ -4998,7 +4998,7 @@
                 ]
               },
               {
-                "name": "Galactic",
+                "name": "galactic",
                 "order": 16,
                 "path": "astronomy/coordinates/celestial-galactic.md",
                 "highlighted_rows": [
@@ -5013,7 +5013,7 @@
             "name": "Time",
             "tables": [
               {
-                "name": "Time",
+                "name": "time",
                 "order": 17,
                 "path": "astronomy/coordinates/time-time.md",
                 "highlighted_rows": [
@@ -5023,7 +5023,7 @@
                 ]
               },
               {
-                "name": "Day",
+                "name": "day",
                 "order": 18,
                 "path": "astronomy/coordinates/time-day.md",
                 "highlighted_rows": [
@@ -5032,7 +5032,7 @@
                 ]
               },
               {
-                "name": "Month",
+                "name": "month",
                 "order": 19,
                 "path": "astronomy/coordinates/time-month.md",
                 "highlighted_rows": [
@@ -5041,7 +5041,7 @@
                 ]
               },
               {
-                "name": "Year",
+                "name": "year",
                 "order": 20,
                 "path": "astronomy/coordinates/time-year.md",
                 "highlighted_rows": [
@@ -5061,7 +5061,7 @@
             "name": "Orbits",
             "tables": [
               {
-                "name": "Orbits",
+                "name": "orbits",
                 "order": 21,
                 "path": "astronomy/mechanics/orbits-orbits.md",
                 "highlighted_rows": [
@@ -5070,7 +5070,7 @@
                 ]
               },
               {
-                "name": "Energy",
+                "name": "energy",
                 "order": 22,
                 "path": "astronomy/mechanics/orbits-energy.md",
                 "highlighted_rows": [
@@ -5089,7 +5089,7 @@
             "name": "Kepler",
             "tables": [
               {
-                "name": "Reduced Mass",
+                "name": "reduced mass",
                 "order": 23,
                 "path": "astronomy/mechanics/kepler-reduced-mass.md",
                 "highlighted_rows": [
@@ -5098,7 +5098,7 @@
                 ]
               },
               {
-                "name": "Ellipse",
+                "name": "ellipse",
                 "order": 24,
                 "path": "astronomy/mechanics/kepler-ellipse.md",
                 "highlighted_rows": [
@@ -5111,7 +5111,7 @@
                 ]
               },
               {
-                "name": "Sweep",
+                "name": "sweep",
                 "order": 25,
                 "path": "astronomy/mechanics/kepler-sweep.md",
                 "highlighted_rows": [
@@ -5121,7 +5121,7 @@
                 ]
               },
               {
-                "name": "Period",
+                "name": "period",
                 "order": 26,
                 "path": "astronomy/mechanics/kepler-period.md",
                 "highlighted_rows": [
@@ -5136,7 +5136,7 @@
             "name": "Maneuvers",
             "tables": [
               {
-                "name": "Rocket",
+                "name": "rocket",
                 "order": 27,
                 "path": "astronomy/mechanics/maneuvers-rocket.md",
                 "highlighted_rows": [
@@ -5173,7 +5173,7 @@
             "name": "Planets",
             "tables": [
               {
-                "name": "History",
+                "name": "history",
                 "order": 30,
                 "path": "astronomy/solar-system/planets-history.md",
                 "highlighted_rows": [
@@ -5181,7 +5181,7 @@
                 ]
               },
               {
-                "name": "Planets",
+                "name": "planets",
                 "order": 31,
                 "path": "astronomy/solar-system/planets-planets.md",
                 "highlighted_rows": [
@@ -5210,7 +5210,7 @@
                 ]
               },
               {
-                "name": "Aberration",
+                "name": "aberration",
                 "order": 33,
                 "path": "astronomy/solar-system/earth-aberration.md",
                 "highlighted_rows": [
@@ -5218,7 +5218,7 @@
                 ]
               },
               {
-                "name": "Parallax",
+                "name": "parallax",
                 "order": 34,
                 "path": "astronomy/solar-system/earth-parallax.md",
                 "highlighted_rows": [
@@ -5233,7 +5233,7 @@
             "name": "Moon",
             "tables": [
               {
-                "name": "Distortions",
+                "name": "distortions",
                 "order": 35,
                 "path": "astronomy/solar-system/moon-distortions.md",
                 "highlighted_rows": [
@@ -5244,7 +5244,7 @@
                 ]
               },
               {
-                "name": "Orbit",
+                "name": "orbit",
                 "order": 36,
                 "path": "astronomy/solar-system/moon-orbit.md",
                 "highlighted_rows": [
@@ -5254,7 +5254,7 @@
                 ]
               },
               {
-                "name": "Eclipse",
+                "name": "eclipse",
                 "order": 37,
                 "path": "astronomy/solar-system/moon-eclipse.md",
                 "highlighted_rows": [
@@ -5275,7 +5275,7 @@
             "name": "Radiation",
             "tables": [
               {
-                "name": "Orbits",
+                "name": "orbits",
                 "order": 38,
                 "path": "astronomy/stars/radiation-orbits.md",
                 "highlighted_rows": [
@@ -5287,7 +5287,7 @@
                 ]
               },
               {
-                "name": "Spectral Lines",
+                "name": "spectral lines",
                 "order": 39,
                 "path": "astronomy/stars/radiation-spectral-lines.md",
                 "highlighted_rows": [
@@ -5299,7 +5299,7 @@
                 ]
               },
               {
-                "name": "Blackbody",
+                "name": "blackbody",
                 "order": 40,
                 "path": "astronomy/stars/radiation-blackbody.md",
                 "highlighted_rows": [
@@ -5311,7 +5311,7 @@
                 ]
               },
               {
-                "name": "Planet",
+                "name": "planet",
                 "order": 41,
                 "path": "astronomy/stars/radiation-planet.md",
                 "highlighted_rows": [
@@ -5328,7 +5328,7 @@
             "name": "Brightness",
             "tables": [
               {
-                "name": "Magnitude",
+                "name": "magnitude",
                 "order": 42,
                 "path": "astronomy/stars/brightness-magnitude.md",
                 "highlighted_rows": [
@@ -5340,7 +5340,7 @@
                 ]
               },
               {
-                "name": "Temperature",
+                "name": "temperature",
                 "order": 43,
                 "path": "astronomy/stars/brightness-temperature.md",
                 "highlighted_rows": [
@@ -5358,7 +5358,7 @@
             "name": "Mass",
             "tables": [
               {
-                "name": "Size",
+                "name": "size",
                 "order": 44,
                 "path": "astronomy/stars/mass-size.md",
                 "highlighted_rows": [
@@ -5368,7 +5368,7 @@
                 ]
               },
               {
-                "name": "Mass",
+                "name": "mass",
                 "order": 45,
                 "path": "astronomy/stars/mass-mass.md",
                 "highlighted_rows": [
@@ -5386,7 +5386,7 @@
             "name": "Relations",
             "tables": [
               {
-                "name": "Relations",
+                "name": "relations",
                 "order": 46,
                 "path": "astronomy/stars/relations-relations.md",
                 "highlighted_rows": [
@@ -5398,7 +5398,7 @@
                 ]
               },
               {
-                "name": "Exoplanets",
+                "name": "exoplanets",
                 "order": 47,
                 "path": "astronomy/stars/relations-exoplanets.md",
                 "highlighted_rows": [
@@ -5416,7 +5416,7 @@
             "name": "Atmosphere",
             "tables": [
               {
-                "name": "Atmosphere",
+                "name": "atmosphere",
                 "order": 48,
                 "path": "astronomy/stars/atmosphere-atmosphere.md",
                 "highlighted_rows": [
@@ -5427,7 +5427,7 @@
                 ]
               },
               {
-                "name": "Temperature",
+                "name": "temperature",
                 "order": 49,
                 "path": "astronomy/stars/atmosphere-temperature.md",
                 "highlighted_rows": [
@@ -5437,7 +5437,7 @@
                 ]
               },
               {
-                "name": "Luminosity",
+                "name": "luminosity",
                 "order": 50,
                 "path": "astronomy/stars/atmosphere-luminosity.md",
                 "highlighted_rows": [
@@ -5452,7 +5452,7 @@
             "name": "Interior",
             "tables": [
               {
-                "name": "Temperature",
+                "name": "temperature",
                 "order": 51,
                 "path": "astronomy/stars/interior-temperature.md",
                 "highlighted_rows": [
@@ -5463,7 +5463,7 @@
                 ]
               },
               {
-                "name": "Transport",
+                "name": "transport",
                 "order": 52,
                 "path": "astronomy/stars/interior-transport.md",
                 "highlighted_rows": [
@@ -5476,7 +5476,7 @@
                 ]
               },
               {
-                "name": "Generation",
+                "name": "generation",
                 "order": 53,
                 "path": "astronomy/stars/interior-generation.md",
                 "highlighted_rows": [
@@ -5488,7 +5488,7 @@
                 ]
               },
               {
-                "name": "Interstellar",
+                "name": "interstellar",
                 "order": 54,
                 "path": "astronomy/stars/interior-interstellar.md",
                 "highlighted_rows": [
@@ -5510,7 +5510,7 @@
             "name": "Evolution",
             "tables": [
               {
-                "name": "Formation",
+                "name": "formation",
                 "order": 55,
                 "path": "astronomy/cosmology/evolution-formation.md",
                 "highlighted_rows": [
@@ -5521,7 +5521,7 @@
                 ]
               },
               {
-                "name": "Evolution",
+                "name": "evolution",
                 "order": 56,
                 "path": "astronomy/cosmology/evolution-evolution.md",
                 "highlighted_rows": [
@@ -5542,7 +5542,7 @@
             "name": "Remnants",
             "tables": [
               {
-                "name": "Remnants",
+                "name": "remnants",
                 "order": 57,
                 "path": "astronomy/cosmology/remnants-remnants.md",
                 "highlighted_rows": [
@@ -5551,7 +5551,7 @@
                 ]
               },
               {
-                "name": "White Dwarf",
+                "name": "white dwarf",
                 "order": 58,
                 "path": "astronomy/cosmology/remnants-white-dwarf.md",
                 "highlighted_rows": [
@@ -5562,7 +5562,7 @@
                 ]
               },
               {
-                "name": "Neutron Star",
+                "name": "neutron star",
                 "order": 59,
                 "path": "astronomy/cosmology/remnants-neutron-star.md",
                 "highlighted_rows": [
@@ -5574,7 +5574,7 @@
                 ]
               },
               {
-                "name": "Black Hole",
+                "name": "black hole",
                 "order": 60,
                 "path": "astronomy/cosmology/remnants-black-hole.md",
                 "highlighted_rows": [
@@ -5582,7 +5582,7 @@
                 ]
               },
               {
-                "name": "Variables",
+                "name": "variables",
                 "order": 61,
                 "path": "astronomy/cosmology/remnants-variables.md",
                 "highlighted_rows": [
@@ -5610,7 +5610,7 @@
                 ]
               },
               {
-                "name": "Classification",
+                "name": "classification",
                 "order": 63,
                 "path": "astronomy/cosmology/galaxies-classification.md",
                 "highlighted_rows": [
@@ -5626,7 +5626,7 @@
             "name": "Active Nucleus",
             "tables": [
               {
-                "name": "Active Galaxies",
+                "name": "active galaxies",
                 "order": 64,
                 "path": "astronomy/cosmology/active-nucleus-active-galaxies.md",
                 "highlighted_rows": [
@@ -5638,7 +5638,7 @@
                 ]
               },
               {
-                "name": "Clusters",
+                "name": "clusters",
                 "order": 65,
                 "path": "astronomy/cosmology/active-nucleus-clusters.md",
                 "highlighted_rows": [
@@ -5652,7 +5652,7 @@
             "name": "Universe",
             "tables": [
               {
-                "name": "Universe",
+                "name": "universe",
                 "order": 66,
                 "path": "astronomy/cosmology/universe-universe.md",
                 "highlighted_rows": [
@@ -5662,7 +5662,7 @@
                 ]
               },
               {
-                "name": "Scale Factor",
+                "name": "scale factor",
                 "order": 67,
                 "path": "astronomy/cosmology/universe-scale-factor.md",
                 "highlighted_rows": [
@@ -5684,7 +5684,7 @@
                 ]
               },
               {
-                "name": "History",
+                "name": "history",
                 "order": 69,
                 "path": "astronomy/cosmology/universe-history.md",
                 "highlighted_rows": [
@@ -5694,7 +5694,7 @@
                 ]
               },
               {
-                "name": "Acceleration",
+                "name": "acceleration",
                 "order": 70,
                 "path": "astronomy/cosmology/universe-acceleration.md",
                 "highlighted_rows": [

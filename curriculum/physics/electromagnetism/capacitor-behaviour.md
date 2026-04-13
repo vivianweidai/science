@@ -2,11 +2,11 @@
 subject: Physics
 section: Electromagnetism
 topic: Capacitor
-table: Behaviour
+table: behaviour
 order: 21
 ---
 
-# Behaviour
+# behaviour
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

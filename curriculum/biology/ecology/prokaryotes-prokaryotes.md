@@ -2,11 +2,11 @@
 subject: Biology
 section: Ecology
 topic: Prokaryotes
-table: Prokaryotes
+table: prokaryotes
 order: 51
 ---
 
-# Prokaryotes
+# prokaryotes
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

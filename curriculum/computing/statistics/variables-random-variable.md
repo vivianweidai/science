@@ -2,11 +2,11 @@
 subject: Computing
 section: Statistics
 topic: Variables
-table: Random Variable
+table: random variable
 order: 8
 ---
 
-# Random Variable
+# random variable
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

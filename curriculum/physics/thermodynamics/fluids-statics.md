@@ -2,11 +2,11 @@
 subject: Physics
 section: Thermodynamics
 topic: Fluids
-table: Statics
+table: statics
 order: 30
 ---
 
-# Statics
+# statics
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

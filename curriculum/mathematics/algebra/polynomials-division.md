@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Polynomials
-table: Division
+table: division
 order: 30
 ---
 
-# Division
+# division
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

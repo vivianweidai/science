@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Structure
-table: Syntax
+table: syntax
 order: 32
 ---
 
-# Syntax
+# syntax
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

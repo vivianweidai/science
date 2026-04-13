@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Writing
-table: Structure
+table: structure
 order: 22
 ---
 
-# Structure
+# structure
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Biology
 section: Ecology
 topic: Community
-table: Interactions
+table: interactions
 order: 45
 ---
 
-# Interactions
+# interactions
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

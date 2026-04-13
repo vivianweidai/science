@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Organelles
-table: Cells
+table: cells
 order: 3
 ---
 
-# Cells
+# cells
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

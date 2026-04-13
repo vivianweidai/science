@@ -2,11 +2,11 @@
 subject: Biology
 section: Neuroscience
 topic: Neurons
-table: Integration
+table: integration
 order: 91
 ---
 
-# Integration
+# integration
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

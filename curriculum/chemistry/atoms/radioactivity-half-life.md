@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Atoms
 topic: Radioactivity
-table: Half Life
+table: half life
 order: 6
 ---
 
-# Half Life
+# half life
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

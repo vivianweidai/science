@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Respiration
-table: Respiration
+table: respiration
 order: 12
 ---
 
-# Respiration
+# respiration
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

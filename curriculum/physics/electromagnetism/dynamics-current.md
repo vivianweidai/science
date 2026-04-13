@@ -2,11 +2,11 @@
 subject: Physics
 section: Electromagnetism
 topic: Dynamics
-table: Current
+table: current
 order: 18
 ---
 
-# Current
+# current
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Physics
 section: Optics
 topic: Physical
-table: Physical
+table: physical
 order: 44
 ---
 
-# Physical
+# physical
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

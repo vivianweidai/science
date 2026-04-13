@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Expression
-table: Transcription
+table: transcription
 order: 30
 ---
 
-# Transcription
+# transcription
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

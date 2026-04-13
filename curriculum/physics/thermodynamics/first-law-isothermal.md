@@ -2,11 +2,11 @@
 subject: Physics
 section: Thermodynamics
 topic: First Law
-table: Isothermal
+table: isothermal
 order: 35
 ---
 
-# Isothermal
+# isothermal
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

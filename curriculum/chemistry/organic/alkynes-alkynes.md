@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Alkynes
-table: Alkynes
+table: alkynes
 order: 64
 ---
 
-# Alkynes
+# alkynes
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Foundation
-table: Anhydrides
+table: anhydrides
 order: 84
 ---
 
-# Anhydrides
+# anhydrides
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

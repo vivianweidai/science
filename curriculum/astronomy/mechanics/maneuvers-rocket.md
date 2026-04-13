@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Mechanics
 topic: Maneuvers
-table: Rocket
+table: rocket
 order: 27
 ---
 
-# Rocket
+# rocket
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

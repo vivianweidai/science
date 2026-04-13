@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Mechanisms
-table: Thermodynamics
+table: thermodynamics
 order: 58
 ---
 
-# Thermodynamics
+# thermodynamics
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

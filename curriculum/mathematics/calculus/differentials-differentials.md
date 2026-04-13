@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Calculus
 topic: Differentials
-table: Differentials
+table: differentials
 order: 63
 ---
 
-# Differentials
+# differentials
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

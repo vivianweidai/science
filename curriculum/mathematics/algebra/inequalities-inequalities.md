@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Inequalities
-table: Inequalities
+table: inequalities
 order: 36
 ---
 
-# Inequalities
+# inequalities
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Physics
 section: Thermodynamics
 topic: First Law
-table: First Law
+table: first law
 order: 34
 ---
 
-# First Law
+# first law
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

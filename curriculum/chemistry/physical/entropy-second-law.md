@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Entropy
-table: Second Law
+table: second law
 order: 50
 ---
 
-# Second Law
+# second law
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Calculus
 topic: Approximation
-table: Approximation
+table: approximation
 order: 57
 ---
 
-# Approximation
+# approximation
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

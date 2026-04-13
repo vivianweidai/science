@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Meiosis
-table: Disorders
+table: disorders
 order: 20
 ---
 
-# Disorders
+# disorders
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

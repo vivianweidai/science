@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Atoms
 topic: Radioactivity
-table: Radioactivity
+table: radioactivity
 order: 5
 ---
 
-# Radioactivity
+# radioactivity
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

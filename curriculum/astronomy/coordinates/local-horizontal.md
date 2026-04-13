@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Coordinates
 topic: Local
-table: Horizontal
+table: horizontal
 order: 10
 ---
 
-# Horizontal
+# horizontal
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

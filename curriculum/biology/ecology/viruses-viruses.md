@@ -2,11 +2,11 @@
 subject: Biology
 section: Ecology
 topic: Viruses
-table: Viruses
+table: viruses
 order: 49
 ---
 
-# Viruses
+# viruses
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Geometry
 topic: Circles
-table: Intersections
+table: intersections
 order: 21
 ---
 
-# Intersections
+# intersections
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

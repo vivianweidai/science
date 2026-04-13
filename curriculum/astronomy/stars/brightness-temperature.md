@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Brightness
-table: Temperature
+table: temperature
 order: 43
 ---
 
-# Temperature
+# temperature
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

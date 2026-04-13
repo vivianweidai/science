@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Speciation
-table: Speciation
+table: speciation
 order: 43
 ---
 
-# Speciation
+# speciation
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

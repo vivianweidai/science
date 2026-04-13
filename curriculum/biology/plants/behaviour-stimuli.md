@@ -2,11 +2,11 @@
 subject: Biology
 section: Plants
 topic: Behaviour
-table: Stimuli
+table: stimuli
 order: 71
 ---
 
-# Stimuli
+# stimuli
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

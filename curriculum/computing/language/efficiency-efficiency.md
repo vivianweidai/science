@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Efficiency
-table: Efficiency
+table: efficiency
 order: 35
 ---
 
-# Efficiency
+# efficiency
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

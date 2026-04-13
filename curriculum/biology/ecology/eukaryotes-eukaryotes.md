@@ -2,11 +2,11 @@
 subject: Biology
 section: Ecology
 topic: Eukaryotes
-table: Eukaryotes
+table: eukaryotes
 order: 53
 ---
 
-# Eukaryotes
+# eukaryotes
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Buffers
-table: Buffer
+table: buffer
 order: 41
 ---
 
-# Buffer
+# buffer
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

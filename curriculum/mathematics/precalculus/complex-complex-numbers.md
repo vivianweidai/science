@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Precalculus
 topic: Complex
-table: Complex Numbers
+table: complex numbers
 order: 44
 ---
 
-# Complex Numbers
+# complex numbers
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

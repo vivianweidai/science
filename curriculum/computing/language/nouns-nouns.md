@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Nouns
-table: Nouns
+table: nouns
 order: 26
 ---
 
-# Nouns
+# nouns
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

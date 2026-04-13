@@ -2,11 +2,11 @@
 subject: Physics
 section: Electromagnetism
 topic: Magnetism
-table: Magnetism
+table: magnetism
 order: 22
 ---
 
-# Magnetism
+# magnetism
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

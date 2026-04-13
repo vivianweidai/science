@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Aromatics
-table: Aromatics
+table: aromatics
 order: 69
 ---
 
-# Aromatics
+# aromatics
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

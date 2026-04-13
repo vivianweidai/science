@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Mutations
-table: Genetic Variation
+table: genetic variation
 order: 35
 ---
 
-# Genetic Variation
+# genetic variation
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

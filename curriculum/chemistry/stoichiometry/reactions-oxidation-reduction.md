@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Stoichiometry
 topic: Reactions
-table: Oxidation Reduction
+table: oxidation reduction
 order: 24
 ---
 
-# Oxidation Reduction
+# oxidation reduction
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

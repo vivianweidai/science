@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Geometry
 topic: Triangles
-table: Relations
+table: relations
 order: 17
 ---
 
-# Relations
+# relations
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

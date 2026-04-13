@@ -2,11 +2,11 @@
 subject: Biology
 section: Plants
 topic: Transport
-table: Transport
+table: transport
 order: 63
 ---
 
-# Transport
+# transport
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

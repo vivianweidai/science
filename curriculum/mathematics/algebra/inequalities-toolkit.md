@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Inequalities
-table: Toolkit
+table: toolkit
 order: 37
 ---
 
-# Toolkit
+# toolkit
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

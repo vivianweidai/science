@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Cosmology
 topic: Active Nucleus
-table: Clusters
+table: clusters
 order: 65
 ---
 
-# Clusters
+# clusters
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

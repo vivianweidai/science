@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Coordinates
 topic: Time
-table: Month
+table: month
 order: 19
 ---
 
-# Month
+# month
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

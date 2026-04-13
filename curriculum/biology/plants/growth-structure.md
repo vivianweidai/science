@@ -2,11 +2,11 @@
 subject: Biology
 section: Plants
 topic: Growth
-table: Structure
+table: structure
 order: 57
 ---
 
-# Structure
+# structure
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

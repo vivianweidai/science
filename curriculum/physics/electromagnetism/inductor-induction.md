@@ -2,11 +2,11 @@
 subject: Physics
 section: Electromagnetism
 topic: Inductor
-table: Induction
+table: induction
 order: 25
 ---
 
-# Induction
+# induction
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

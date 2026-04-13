@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Alkali
-table: Reduction Potential
+table: reduction potential
 order: 86
 ---
 
-# Reduction Potential
+# reduction potential
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

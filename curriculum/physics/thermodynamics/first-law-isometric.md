@@ -2,11 +2,11 @@
 subject: Physics
 section: Thermodynamics
 topic: First Law
-table: Isometric
+table: isometric
 order: 36
 ---
 
-# Isometric
+# isometric
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Coordination
-table: Structure
+table: structure
 order: 73
 ---
 
-# Structure
+# structure
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

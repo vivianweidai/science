@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Cosmology
 topic: Universe
-table: Scale Factor
+table: scale factor
 order: 67
 ---
 
-# Scale Factor
+# scale factor
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

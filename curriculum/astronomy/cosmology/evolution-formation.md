@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Cosmology
 topic: Evolution
-table: Formation
+table: formation
 order: 55
 ---
 
-# Formation
+# formation
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

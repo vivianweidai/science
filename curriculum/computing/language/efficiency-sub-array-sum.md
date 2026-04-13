@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Efficiency
-table: Sub Array Sum
+table: sub array sum
 order: 37
 ---
 
-# Sub Array Sum
+# sub array sum
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

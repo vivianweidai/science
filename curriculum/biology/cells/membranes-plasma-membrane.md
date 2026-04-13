@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Membranes
-table: Plasma Membrane
+table: plasma membrane
 order: 6
 ---
 
-# Plasma Membrane
+# plasma membrane
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Observations
 topic: Telescopes
-table: Camera
+table: camera
 order: 4
 ---
 
-# Camera
+# camera
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

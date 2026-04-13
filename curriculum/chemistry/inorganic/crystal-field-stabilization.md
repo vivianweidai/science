@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Crystal Field
-table: Stabilization
+table: stabilization
 order: 76
 ---
 
-# Stabilization
+# stabilization
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

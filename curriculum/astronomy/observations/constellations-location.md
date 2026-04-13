@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Observations
 topic: Constellations
-table: Location
+table: location
 order: 1
 ---
 
-# Location
+# location
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

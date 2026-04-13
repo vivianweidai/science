@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Bonds
 topic: States
-table: Vapor Pressure
+table: vapor pressure
 order: 18
 ---
 
-# Vapor Pressure
+# vapor pressure
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

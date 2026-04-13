@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Mutations
-table: Biotechnology
+table: biotechnology
 order: 36
 ---
 
-# Biotechnology
+# biotechnology
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

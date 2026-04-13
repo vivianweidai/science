@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Aromatics
-table: Reactions
+table: reactions
 order: 70
 ---
 
-# Reactions
+# reactions
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

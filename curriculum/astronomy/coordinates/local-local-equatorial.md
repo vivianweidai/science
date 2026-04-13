@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Coordinates
 topic: Local
-table: Local Equatorial
+table: local equatorial
 order: 11
 ---
 
-# Local Equatorial
+# local equatorial
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Physics
 section: Thermodynamics
 topic: Zeroth Law
-table: Thermodynamics
+table: thermodynamics
 order: 32
 ---
 
-# Thermodynamics
+# thermodynamics
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

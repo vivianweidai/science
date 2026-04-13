@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Macromolecules
-table: Macromolecules
+table: macromolecules
 order: 1
 ---
 
-# Macromolecules
+# macromolecules
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

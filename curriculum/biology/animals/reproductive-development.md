@@ -2,11 +2,11 @@
 subject: Biology
 section: Animals
 topic: Reproductive
-table: Development
+table: development
 order: 82
 ---
 
-# Development
+# development
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

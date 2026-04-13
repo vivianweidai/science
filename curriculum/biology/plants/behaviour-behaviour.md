@@ -2,11 +2,11 @@
 subject: Biology
 section: Plants
 topic: Behaviour
-table: Behaviour
+table: behaviour
 order: 70
 ---
 
-# Behaviour
+# behaviour
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

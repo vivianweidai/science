@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Buffers
-table: Common Ions
+table: common ions
 order: 40
 ---
 
-# Common Ions
+# common ions
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

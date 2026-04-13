@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Stoichiometry
 topic: Solutions
-table: Ideal Solution Law
+table: ideal solution law
 order: 27
 ---
 
-# Ideal Solution Law
+# ideal solution law
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

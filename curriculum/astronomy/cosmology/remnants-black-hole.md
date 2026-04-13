@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Cosmology
 topic: Remnants
-table: Black Hole
+table: black hole
 order: 60
 ---
 
-# Black Hole
+# black hole
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

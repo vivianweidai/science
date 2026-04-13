@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Stoichiometry
 topic: Gases
-table: Ideal Gas Law
+table: ideal gas law
 order: 25
 ---
 
-# Ideal Gas Law
+# ideal gas law
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

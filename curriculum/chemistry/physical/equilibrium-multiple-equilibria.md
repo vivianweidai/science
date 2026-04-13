@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Equilibrium
-table: Multiple Equilibria
+table: multiple equilibria
 order: 35
 ---
 
-# Multiple Equilibria
+# multiple equilibria
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

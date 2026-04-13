@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Sounds
-table: Syllables
+table: syllables
 order: 24
 ---
 
-# Syllables
+# syllables
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

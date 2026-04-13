@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Weak Acid
-table: Weak Acid
+table: weak acid
 order: 38
 ---
 
-# Weak Acid
+# weak acid
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Problems
-table: Greedy
+table: greedy
 order: 50
 ---
 
-# Greedy
+# greedy
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

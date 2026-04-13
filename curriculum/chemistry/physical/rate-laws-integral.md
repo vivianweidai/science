@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Physical
 topic: Rate Laws
-table: Integral
+table: integral
 order: 30
 ---
 
-# Integral
+# integral
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

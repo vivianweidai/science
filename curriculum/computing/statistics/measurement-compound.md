@@ -2,11 +2,11 @@
 subject: Computing
 section: Statistics
 topic: Measurement
-table: Compound
+table: compound
 order: 2
 ---
 
-# Compound
+# compound
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

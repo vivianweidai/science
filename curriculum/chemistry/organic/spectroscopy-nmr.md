@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Organic
 topic: Spectroscopy
-table: Nmr
+table: NMR
 order: 72
 ---
 
-# Nmr
+# NMR
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Replication
-table: Control
+table: control
 order: 28
 ---
 
-# Control
+# control
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

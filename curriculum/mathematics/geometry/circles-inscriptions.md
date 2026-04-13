@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Geometry
 topic: Circles
-table: Inscriptions
+table: inscriptions
 order: 20
 ---
 
-# Inscriptions
+# inscriptions
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

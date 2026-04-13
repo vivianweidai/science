@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Roots
-table: Non-Rational
+table: non-rational
 order: 32
 ---
 
-# Non-Rational
+# non-rational
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

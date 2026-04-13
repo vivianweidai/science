@@ -2,11 +2,11 @@
 subject: Computing
 section: Language
 topic: Structure
-table: Semantics
+table: semantics
 order: 33
 ---
 
-# Semantics
+# semantics
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

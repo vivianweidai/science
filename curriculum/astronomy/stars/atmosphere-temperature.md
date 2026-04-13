@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Atmosphere
-table: Temperature
+table: temperature
 order: 49
 ---
 
-# Temperature
+# temperature
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

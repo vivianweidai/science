@@ -2,11 +2,11 @@
 subject: Biology
 section: Ecology
 topic: Prokaryotes
-table: Diversity
+table: diversity
 order: 52
 ---
 
-# Diversity
+# diversity
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

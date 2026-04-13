@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Non Mendel
-table: Non Mendel
+table: non Mendel
 order: 24
 ---
 
-# Non Mendel
+# non Mendel
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

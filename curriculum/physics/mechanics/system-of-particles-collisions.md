@@ -2,11 +2,11 @@
 subject: Physics
 section: Mechanics
 topic: System Of Particles
-table: Collisions
+table: collisions
 order: 9
 ---
 
-# Collisions
+# collisions
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Computing
 section: Statistics
 topic: Distributions
-table: Dual
+table: dual
 order: 4
 ---
 
-# Dual
+# dual
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

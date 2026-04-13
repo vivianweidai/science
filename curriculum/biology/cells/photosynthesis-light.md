@@ -2,11 +2,11 @@
 subject: Biology
 section: Cells
 topic: Photosynthesis
-table: Light
+table: light
 order: 10
 ---
 
-# Light
+# light
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

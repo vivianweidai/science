@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Cosmology
 topic: Galaxies
-table: Classification
+table: classification
 order: 63
 ---
 
-# Classification
+# classification
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

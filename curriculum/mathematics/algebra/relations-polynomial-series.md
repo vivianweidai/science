@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Relations
-table: Polynomial Series
+table: polynomial series
 order: 39
 ---
 
-# Polynomial Series
+# polynomial series
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

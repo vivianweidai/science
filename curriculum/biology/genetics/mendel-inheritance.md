@@ -2,11 +2,11 @@
 subject: Biology
 section: Genetics
 topic: Mendel
-table: Inheritance
+table: inheritance
 order: 22
 ---
 
-# Inheritance
+# inheritance
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

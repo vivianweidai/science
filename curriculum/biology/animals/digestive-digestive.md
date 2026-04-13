@@ -2,11 +2,11 @@
 subject: Biology
 section: Animals
 topic: Digestive
-table: Digestive
+table: digestive
 order: 75
 ---
 
-# Digestive
+# digestive
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

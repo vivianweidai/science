@@ -2,11 +2,11 @@
 subject: Biology
 section: Animals
 topic: Transport
-table: Respiratory
+table: respiratory
 order: 78
 ---
 
-# Respiratory
+# respiratory
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

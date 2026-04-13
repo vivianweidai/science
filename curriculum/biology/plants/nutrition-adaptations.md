@@ -2,11 +2,11 @@
 subject: Biology
 section: Plants
 topic: Nutrition
-table: Adaptations
+table: adaptations
 order: 67
 ---
 
-# Adaptations
+# adaptations
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

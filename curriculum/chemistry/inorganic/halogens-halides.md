@@ -2,11 +2,11 @@
 subject: Chemistry
 section: Inorganic
 topic: Halogens
-table: Halides
+table: halides
 order: 95
 ---
 
-# Halides
+# halides
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

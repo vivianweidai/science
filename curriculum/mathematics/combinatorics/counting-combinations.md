@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Combinatorics
 topic: Counting
-table: Combinations
+table: combinations
 order: 9
 ---
 
-# Combinations
+# combinations
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

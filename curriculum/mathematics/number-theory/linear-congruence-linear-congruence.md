@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Number Theory
 topic: Linear Congruence
-table: Linear Congruence
+table: linear congruence
 order: 6
 ---
 
-# Linear Congruence
+# linear congruence
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

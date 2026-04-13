@@ -2,11 +2,11 @@
 subject: Mathematics
 section: Algebra
 topic: Sequences And Series
-table: Notation
+table: notation
 order: 28
 ---
 
-# Notation
+# notation
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

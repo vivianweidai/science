@@ -2,11 +2,11 @@
 subject: Computing
 section: Statistics
 topic: Distributions
-table: Single
+table: single
 order: 3
 ---
 
-# Single
+# single
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

@@ -2,11 +2,11 @@
 subject: Biology
 section: Plants
 topic: Nutrition
-table: Nutrition
+table: nutrition
 order: 66
 ---
 
-# Nutrition
+# nutrition
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

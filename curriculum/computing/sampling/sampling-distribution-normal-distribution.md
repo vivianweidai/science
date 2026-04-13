@@ -2,11 +2,11 @@
 subject: Computing
 section: Sampling
 topic: Sampling Distribution
-table: Normal Distribution
+table: normal distribution
 order: 17
 ---
 
-# Normal Distribution
+# normal distribution
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

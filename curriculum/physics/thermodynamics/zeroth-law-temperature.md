@@ -2,11 +2,11 @@
 subject: Physics
 section: Thermodynamics
 topic: Zeroth Law
-table: Temperature
+table: temperature
 order: 33
 ---
 
-# Temperature
+# temperature
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

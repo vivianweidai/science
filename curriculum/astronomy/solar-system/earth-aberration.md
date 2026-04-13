@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Solar System
 topic: Earth
-table: Aberration
+table: aberration
 order: 33
 ---
 
-# Aberration
+# aberration
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>

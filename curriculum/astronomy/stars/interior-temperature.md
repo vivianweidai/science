@@ -2,11 +2,11 @@
 subject: Astronomy
 section: Stars
 topic: Interior
-table: Temperature
+table: temperature
 order: 51
 ---
 
-# Temperature
+# temperature
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
