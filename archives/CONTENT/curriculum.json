@@ -1005,6 +1005,94 @@
         ]
       },
       {
+        "slug": "sampling",
+        "name": "Sampling",
+        "topics": [
+          {
+            "slug": "methods",
+            "name": "Methods",
+            "tables": [
+              {
+                "name": "experiment",
+                "order": 11,
+                "path": "computing/sampling/methods-experiment.md",
+                "highlighted_rows": [
+                  0,
+                  1,
+                  2,
+                  6
+                ]
+              },
+              {
+                "name": "methods",
+                "order": 12,
+                "path": "computing/sampling/methods-methods.md",
+                "highlighted_rows": [
+                  0,
+                  3
+                ]
+              },
+              {
+                "name": "bias",
+                "order": 13,
+                "path": "computing/sampling/methods-bias.md",
+                "highlighted_rows": []
+              }
+            ]
+          },
+          {
+            "slug": "experiments",
+            "name": "Experiments",
+            "tables": [
+              {
+                "name": "experiments",
+                "order": 14,
+                "path": "computing/sampling/experiments-experiments.md",
+                "highlighted_rows": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "design",
+                "order": 15,
+                "path": "computing/sampling/experiments-design.md",
+                "highlighted_rows": [
+                  0,
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "sampling-distribution",
+            "name": "Sampling Distribution",
+            "tables": [
+              {
+                "name": "sampling distribution",
+                "order": 16,
+                "path": "computing/sampling/sampling-distribution-sampling-distribution.md",
+                "highlighted_rows": [
+                  0,
+                  3,
+                  6
+                ]
+              },
+              {
+                "name": "normal distribution",
+                "order": 17,
+                "path": "computing/sampling/sampling-distribution-normal-distribution.md",
+                "highlighted_rows": [
+                  2,
+                  3,
+                  4
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
         "slug": "inference",
         "name": "Inference",
         "topics": [
@@ -1438,94 +1526,6 @@
                 "order": 54,
                 "path": "computing/learning/algorithms-perceptrons.md",
                 "highlighted_rows": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "slug": "sampling",
-        "name": "Sampling",
-        "topics": [
-          {
-            "slug": "methods",
-            "name": "Methods",
-            "tables": [
-              {
-                "name": "experiment",
-                "order": 11,
-                "path": "computing/sampling/methods-experiment.md",
-                "highlighted_rows": [
-                  0,
-                  1,
-                  2,
-                  6
-                ]
-              },
-              {
-                "name": "methods",
-                "order": 12,
-                "path": "computing/sampling/methods-methods.md",
-                "highlighted_rows": [
-                  0,
-                  3
-                ]
-              },
-              {
-                "name": "bias",
-                "order": 13,
-                "path": "computing/sampling/methods-bias.md",
-                "highlighted_rows": []
-              }
-            ]
-          },
-          {
-            "slug": "experiments",
-            "name": "Experiments",
-            "tables": [
-              {
-                "name": "experiments",
-                "order": 14,
-                "path": "computing/sampling/experiments-experiments.md",
-                "highlighted_rows": [
-                  0,
-                  1
-                ]
-              },
-              {
-                "name": "design",
-                "order": 15,
-                "path": "computing/sampling/experiments-design.md",
-                "highlighted_rows": [
-                  0,
-                  4
-                ]
-              }
-            ]
-          },
-          {
-            "slug": "sampling-distribution",
-            "name": "Sampling Distribution",
-            "tables": [
-              {
-                "name": "sampling distribution",
-                "order": 16,
-                "path": "computing/sampling/sampling-distribution-sampling-distribution.md",
-                "highlighted_rows": [
-                  0,
-                  3,
-                  6
-                ]
-              },
-              {
-                "name": "normal distribution",
-                "order": 17,
-                "path": "computing/sampling/sampling-distribution-normal-distribution.md",
-                "highlighted_rows": [
-                  2,
-                  3,
-                  4
-                ]
               }
             ]
           }

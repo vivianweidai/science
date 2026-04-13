@@ -34,8 +34,8 @@ YELLOW = "fff056"
 SECTION_ORDER = {
     "mathematics": ["number-theory", "combinatorics", "geometry",
                     "algebra", "precalculus", "calculus"],
-    "computing":   ["statistics", "inference", "language",
-                    "computing", "learning", "sampling"],
+    "computing":   ["statistics", "sampling", "inference",
+                    "language", "computing", "learning"],
     "physics":     ["mechanics", "harmonics", "electromagnetism",
                     "thermodynamics", "optics", "modern"],
     "chemistry":   ["atoms", "bonds", "stoichiometry",
