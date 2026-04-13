@@ -28,26 +28,32 @@
 #view-math:checked ~ .tab-labels label[for="view-math"] {
   color: #2563eb;
   border-bottom-color: #2563eb;
+  background: #c5d9f7;
 }
 #view-comp:checked ~ .tab-labels label[for="view-comp"] {
   color: #7c3aed;
   border-bottom-color: #7c3aed;
+  background: #d9ccee;
 }
 #view-phys:checked ~ .tab-labels label[for="view-phys"] {
   color: #ea580c;
   border-bottom-color: #ea580c;
+  background: #f9c4a8;
 }
 #view-chem:checked ~ .tab-labels label[for="view-chem"] {
-  color: #4d7c0f;
-  border-bottom-color: #4d7c0f;
+  color: #5c7a10;
+  border-bottom-color: #5c7a10;
+  background: #d4e8a0;
 }
 #view-bio:checked ~ .tab-labels label[for="view-bio"] {
-  color: #16a34a;
-  border-bottom-color: #16a34a;
+  color: #0e8577;
+  border-bottom-color: #0e8577;
+  background: #a8ddd4;
 }
 #view-astro:checked ~ .tab-labels label[for="view-astro"] {
   color: #e11d48;
   border-bottom-color: #e11d48;
+  background: #f4c2cb;
 }
 
 /* IR Spectroscopy: representative samples */
