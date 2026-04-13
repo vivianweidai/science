@@ -14,7 +14,7 @@ photos:
   - PHOTOS/20260405 Samples C.jpeg
 ---
 
-<div class="page-header"><h1>Melting Point of Everyday Compounds</h1><a class="back-link" href="/">Science</a></div>
+<div class="page-header"><h1>Melting Point of Everyday Compounds</h1><a class="back-link" href="/research/">Research</a></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">

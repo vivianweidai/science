@@ -51,7 +51,7 @@ photos:
   - PHOTOS/toy8.jpeg
 ---
 
-<div class="page-header"><h1>Centrifugation and pH of Everyday Liquids</h1><a class="back-link" href="/">Science</a></div>
+<div class="page-header"><h1>Centrifugation and pH of Everyday Liquids</h1><a class="back-link" href="/research/">Research</a></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">

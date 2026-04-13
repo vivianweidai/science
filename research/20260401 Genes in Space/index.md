@@ -3,7 +3,7 @@ layout: project
 project: Genes in Space
 ---
 
-<div class="page-header"><h1>Meow to Mars — Will Space Help or Hurt Mi's Heart?</h1><a class="back-link" href="/">Science</a></div>
+<div class="page-header"><h1>Meow to Mars — Will Space Help or Hurt Mi's Heart?</h1><a class="back-link" href="/research/">Research</a></div>
 
 <div class="hero-single"><img src="PHOTOS/mi.png" alt="Mi the astronaut cat" style="object-position: center 70%;"></div>
 

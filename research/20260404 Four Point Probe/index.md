@@ -109,7 +109,7 @@ photos:
   - PHOTOS/20260404 Setup 102.jpeg
 ---
 
-<div class="page-header"><h1>Four-Point Probe Sheet Resistance Measurements</h1><a class="back-link" href="/">Science</a></div>
+<div class="page-header"><h1>Four-Point Probe Sheet Resistance Measurements</h1><a class="back-link" href="/research/">Research</a></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
