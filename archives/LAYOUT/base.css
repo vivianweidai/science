@@ -1,4 +1,5 @@
 /* Shared base styles */
+html { scrollbar-gutter: stable; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   max-width: 900px;
