@@ -146,6 +146,9 @@
 .curr-topic-body tr:nth-child(even) td:not(:first-child) {
   background: #f6f8fa;
 }
+.curr-topic-body tr.curr-group-last td {
+  border-bottom: 2px solid #b0b4b8;
+}
 .curr-topic-body .katex { font-size: 1em; }
 
 .curr-prevnext {

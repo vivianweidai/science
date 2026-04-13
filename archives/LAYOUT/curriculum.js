@@ -371,8 +371,11 @@
           cell.rowSpan = span;
           cell.style.verticalAlign = 'middle';
           for (var k = i + 1; k < i + span; k++) {
-            dataRows[k].querySelector('td').style.display = 'none';
+            var hidden = dataRows[k].querySelector('td');
+            hidden.style.display = 'none';
           }
+          // Add a separator class to the last row of each group
+          dataRows[i + span - 1].classList.add('curr-group-last');
         }
         i += span;
       }
