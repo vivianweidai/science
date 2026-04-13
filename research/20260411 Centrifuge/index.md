@@ -64,7 +64,7 @@ photos:
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/LAYOUT/shuffle.js"></script>
 
-<div class="project-meta">April 11th 2026<br>Thermo Scientific Sorvall RT3 Centrifuge, DiaMed ID-Centrifuge, Sartorius CP225D Analytical Balance, VWR pHenomenal pH 1100 L, Scientific Industries Vortex-Genie 2, Canlab Magnetic Stirrer, Gilson Pipetman Pipettes</div>
+<div class="project-meta"><span class="chip chem">Chemistry</span><br>April 11th 2026<br>Thermo Scientific Sorvall RT3 Centrifuge, DiaMed ID-Centrifuge, Sartorius CP225D Analytical Balance, VWR pHenomenal pH 1100 L, Scientific Industries Vortex-Genie 2, Canlab Magnetic Stirrer, Gilson Pipetman Pipettes</div>
 
 ## Overview
 

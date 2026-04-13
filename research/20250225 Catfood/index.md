@@ -43,7 +43,7 @@ data_photos:
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/LAYOUT/shuffle.js"></script>
 
-<div class="project-meta">February 25th 2025</div>
+<div class="project-meta"><span class="chip comp">Computing</span><br>February 25th 2025</div>
 
 ## Overview
 

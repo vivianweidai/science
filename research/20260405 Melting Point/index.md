@@ -27,7 +27,7 @@ photos:
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/LAYOUT/shuffle.js"></script>
 
-<div class="project-meta">April 5th 2026<br>OptiMelt Automated Melting Point System</div>
+<div class="project-meta"><span class="chip chem">Chemistry</span><br>April 5th 2026<br>OptiMelt Automated Melting Point System</div>
 
 ## Overview
 

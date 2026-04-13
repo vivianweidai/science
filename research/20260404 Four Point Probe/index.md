@@ -122,7 +122,7 @@ photos:
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/LAYOUT/shuffle.js"></script>
 
-<div class="project-meta">April 4th 2026<br>Jandel RM3 Four-Point Probe</div>
+<div class="project-meta"><span class="chip phys">Physics</span><br>April 4th 2026<br>Jandel RM3 Four-Point Probe</div>
 
 ## Overview
 

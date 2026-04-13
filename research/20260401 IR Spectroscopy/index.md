@@ -25,7 +25,7 @@ photos:
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/LAYOUT/shuffle.js"></script>
 
-<div class="project-meta">April 1st 2026<br>Thermo Scientific Nicolet 380 FT-IR Spectrometer (ATR mode)</div>
+<div class="project-meta"><span class="chip chem">Chemistry</span><br>April 1st 2026<br>Thermo Scientific Nicolet 380 FT-IR Spectrometer (ATR mode)</div>
 
 ## Overview
 

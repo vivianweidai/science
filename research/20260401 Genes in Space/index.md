@@ -9,7 +9,7 @@ project: Genes in Space
 
 **Sarcomere Genes in Microgravity**
 
-<div class="project-meta">March 31st 2026<br><a href="https://www.genesinspace.org/">Genes in Space</a> — ISS National Laboratory</div>
+<div class="project-meta"><span class="chip bio">Biology</span><br>March 31st 2026<br><a href="https://www.genesinspace.org/">Genes in Space</a> — ISS National Laboratory</div>
 
 ## Overview
 
