@@ -189,6 +189,7 @@ def process_docx(docx_path: Path, formulas: list[str]) -> tuple[list[dict], int]
     formula_idx = 0
     toc_tables_seen = 0
     subject_heading_skipped = False
+    expect_topic = False  # after a repeated section heading, next is a topic
 
     for elem in elements:
         tag = elem.tag.split("}")[-1]
@@ -203,16 +204,21 @@ def process_docx(docx_path: Path, formulas: list[str]) -> tuple[list[dict], int]
                     subject_heading_skipped = True
                     continue  # skip subject heading
                 if upper.title() == current_section:
-                    # Could be a repeated section heading or a topic
-                    # with the same name — set as topic either way;
-                    # a real topic heading will overwrite if it follows.
+                    # Repeated section heading before a topic.
+                    # Also handles topic with same name as section.
                     current_topic = upper.title()
+                    expect_topic = True
+                    continue
+                if expect_topic:
+                    # After a repeated section heading, the next
+                    # heading is always a topic (even if its name
+                    # matches a known section, e.g. "BONDS" topic
+                    # inside the Inorganic section).
+                    current_topic = upper.title()
+                    expect_topic = False
                     continue
                 if not current_section or upper.title() != current_topic:
-                    # Heuristic: if we've seen this as a section before,
-                    # it's a section repeat; otherwise it's a new heading
                     slug = slugify(upper)
-                    # Check if this looks like a known section
                     subj_slug = docx_path.stem.lower()
                     known_sections = SECTION_ORDER.get(subj_slug, [])
                     if slug in known_sections:

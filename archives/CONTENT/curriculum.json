@@ -2508,71 +2508,6 @@
                 ]
               }
             ]
-          },
-          {
-            "slug": "inorganic",
-            "name": "Inorganic",
-            "tables": [
-              {
-                "name": "alkaline",
-                "order": 88,
-                "path": "chemistry/bonds/inorganic-alkaline.md",
-                "highlighted_rows": [
-                  0,
-                  2
-                ]
-              },
-              {
-                "name": "3A",
-                "order": 89,
-                "path": "chemistry/bonds/inorganic-3a.md",
-                "highlighted_rows": [
-                  0,
-                  2,
-                  3
-                ]
-              },
-              {
-                "name": "4A",
-                "order": 90,
-                "path": "chemistry/bonds/inorganic-4a.md",
-                "highlighted_rows": [
-                  0,
-                  2,
-                  3
-                ]
-              }
-            ]
-          },
-          {
-            "slug": "representative",
-            "name": "Representative",
-            "tables": [
-              {
-                "name": "pnicogens",
-                "order": 91,
-                "path": "chemistry/bonds/representative-pnicogens.md",
-                "highlighted_rows": [
-                  0
-                ]
-              },
-              {
-                "name": "chalcogens",
-                "order": 92,
-                "path": "chemistry/bonds/representative-chalcogens.md",
-                "highlighted_rows": [
-                  0
-                ]
-              },
-              {
-                "name": "noble",
-                "order": 93,
-                "path": "chemistry/bonds/representative-noble.md",
-                "highlighted_rows": [
-                  0
-                ]
-              }
-            ]
           }
         ]
       },
@@ -3513,6 +3448,71 @@
                 "name": "peroxides",
                 "order": 87,
                 "path": "chemistry/inorganic/alkali-peroxides.md",
+                "highlighted_rows": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "bonds",
+            "name": "Bonds",
+            "tables": [
+              {
+                "name": "alkaline",
+                "order": 88,
+                "path": "chemistry/inorganic/bonds-alkaline.md",
+                "highlighted_rows": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "name": "3A",
+                "order": 89,
+                "path": "chemistry/inorganic/bonds-3a.md",
+                "highlighted_rows": [
+                  0,
+                  2,
+                  3
+                ]
+              },
+              {
+                "name": "4A",
+                "order": 90,
+                "path": "chemistry/inorganic/bonds-4a.md",
+                "highlighted_rows": [
+                  0,
+                  2,
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "representative",
+            "name": "Representative",
+            "tables": [
+              {
+                "name": "pnicogens",
+                "order": 91,
+                "path": "chemistry/inorganic/representative-pnicogens.md",
+                "highlighted_rows": [
+                  0
+                ]
+              },
+              {
+                "name": "chalcogens",
+                "order": 92,
+                "path": "chemistry/inorganic/representative-chalcogens.md",
+                "highlighted_rows": [
+                  0
+                ]
+              },
+              {
+                "name": "noble",
+                "order": 93,
+                "path": "chemistry/inorganic/representative-noble.md",
                 "highlighted_rows": [
                   0
                 ]
