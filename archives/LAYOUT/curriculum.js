@@ -89,10 +89,9 @@
     widget.querySelectorAll('.curr-section-name').forEach(function (s) {
       s.addEventListener('click', function () {
         state = {
-          view: 'topic',
+          view: 'section',
           subject: s.dataset.subj,
           sectionIdx: parseInt(s.dataset.sec, 10),
-          topicIdx: 0,
         };
         render();
         scrollToWidget();
@@ -151,10 +150,9 @@
     widget.querySelectorAll('.curr-section-name').forEach(function (s) {
       s.addEventListener('click', function () {
         state = {
-          view: 'topic',
+          view: 'section',
           subject: s.dataset.subj,
           sectionIdx: parseInt(s.dataset.sec, 10),
-          topicIdx: 0,
         };
         render();
         scrollToWidget();
