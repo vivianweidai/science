@@ -177,8 +177,10 @@ layout: default
     .then(function (d) {
       var items = d.items;
 
-      // Initial render
-      renderTimeline(items, 'all');
+      // Initial render — respect the randomly preselected tab
+      var checked = document.querySelector('input[name="view"]:checked');
+      var filter = checked ? checked.id.replace('view-', '') : 'all';
+      renderTimeline(items, filter);
 
       // Wire up tab filtering
       var radios = document.querySelectorAll('input[name="view"]');
