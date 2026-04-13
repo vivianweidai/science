@@ -67,21 +67,32 @@ def slugify(s: str) -> str:
 def extract_formulas_pandoc(docx_path: Path) -> list[str]:
     """Run pandoc on the docx and return all math expressions in document order.
 
-    Captures both display math ($$...$$) and inline math ($...$).
+    Uses pandoc's JSON AST output to cleanly extract math elements,
+    avoiding issues with multiline formulas (matrices) in markdown tables.
     """
     result = subprocess.run(
-        ["pandoc", str(docx_path), "-t", "markdown", "--wrap=none"],
+        ["pandoc", str(docx_path), "-t", "json"],
         capture_output=True, text=True)
     if result.returncode != 0:
         print(f"  pandoc warning: {result.stderr[:200]}", file=sys.stderr)
-    # Collect display ($$...$$) and inline ($...$) math with positions
-    formulas: list[tuple[int, str]] = []
-    for m in re.finditer(r"[$][$](.+?)[$][$]", result.stdout):
-        formulas.append((m.start(), m.group(1).strip()))
-    for m in re.finditer(r"(?<![$])[$](?![$])(.+?)(?<![$])[$](?![$])", result.stdout):
-        formulas.append((m.start(), m.group(1).strip()))
-    formulas.sort(key=lambda x: x[0])
-    return [f for _, f in formulas]
+    ast = json.loads(result.stdout)
+
+    formulas: list[str] = []
+
+    def walk(obj):
+        if isinstance(obj, dict):
+            if obj.get("t") == "Math":
+                # Collapse multiline formulas (e.g. matrices) to single line
+                tex = re.sub(r"\s*\n\s*", " ", obj["c"][1]).strip()
+                formulas.append(tex)
+            for v in obj.values():
+                walk(v)
+        elif isinstance(obj, list):
+            for item in obj:
+                walk(item)
+
+    walk(ast)
+    return formulas
 
 
 # --------------------------------------------------------------------------
