@@ -30,7 +30,7 @@ data_photos:
   - DATA/20240920 Catfood N.jpeg
 ---
 
-# Red or Green, What Colored Cat Food does Mi Prefer?
+<div class="page-header"><h1>Red or Green, What Colored Cat Food does Mi Prefer?</h1><a class="back-link" href="/">Science</a></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
