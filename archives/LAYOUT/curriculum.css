@@ -116,7 +116,12 @@
 .curr-breadcrumb .sep { color: #8c959f; margin: 0 0.35em; }
 .curr-breadcrumb strong { color: #1f2328; }
 
-.curr-topic-body h1 { font-size: 1.3em; margin: 1.2em 0 0.5em; }
+.curr-topic-body h1 {
+  font-size: 0.95em;
+  margin: 1.2em 0 0.4em;
+  border-bottom: none;
+  padding-bottom: 0;
+}
 .curr-topic-body h1:first-child { margin-top: 0; }
 .curr-topic-body table {
   border-collapse: collapse;
@@ -131,7 +136,8 @@
   text-align: center;
   vertical-align: middle;
 }
-.curr-topic-body th { background: #f6f8fa; }
+.curr-topic-body thead,
+.curr-topic-body tr:has(th) { display: none; }
 .curr-topic-body .katex { font-size: 1em; }
 
 .curr-prevnext {
