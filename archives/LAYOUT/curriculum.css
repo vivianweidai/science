@@ -1,10 +1,10 @@
 /* Curriculum widget: 6-column grid that drills into topic content in place. */
 
-.curr-widget { margin: 1.5em 0; width: 100%; box-sizing: border-box; }
+.curr-widget { margin: 1.5em 0; width: 100%; box-sizing: border-box; overflow: hidden; }
 
 .curr-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   border: 1px solid #d1d9e0;
   border-radius: 8px;
   overflow: hidden;

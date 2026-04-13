@@ -56,9 +56,6 @@
   }
 
   function render() {
-    // Lock the widget width before replacing content so the layout
-    // doesn't shift when switching between views with different content.
-    widget.style.minWidth = widget.offsetWidth + 'px';
     pushState();
     if (state.view === 'topic') renderTopic();
     else if (state.view === 'section') renderSection();
