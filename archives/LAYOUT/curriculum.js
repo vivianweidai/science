@@ -33,6 +33,7 @@
 
   function render() {
     if (state.view === 'topic') renderTopic();
+    else if (state.view === 'section') renderSection();
     else if (state.view === 'subject') renderSubject();
     else renderGrid();
   }
@@ -161,6 +162,52 @@
     });
   }
 
+  function renderSection() {
+    var subj = manifest[state.subject];
+    var sec = subj.sections[state.sectionIdx];
+    var html = '<div class="curr-subject">';
+    html += '<div class="curr-breadcrumb">'
+         + '<a href="#" data-action="grid">Science</a>'
+         + '<span class="sep">/</span><a href="#" data-action="subject">' + escapeHtml(subj.name) + '</a>'
+         + '<span class="sep">/</span><strong>' + escapeHtml(sec.name) + '</strong>'
+         + '</div>';
+    html += '<div class="curr-section"><ul>';
+    sec.topics.forEach(function (topic, topicIdx) {
+      html += '<li><a href="#" data-subj="' + state.subject
+           + '" data-sec="' + state.sectionIdx
+           + '" data-topic="' + topicIdx + '">'
+           + escapeHtml(topic.name.toLowerCase()) + '</a></li>';
+    });
+    html += '</ul></div></div>';
+    widget.innerHTML = html;
+
+    widget.querySelector('[data-action="grid"]').addEventListener('click', function (e) {
+      e.preventDefault();
+      state = { view: 'grid' };
+      render();
+      window.scrollTo(0, 0);
+    });
+    widget.querySelector('[data-action="subject"]').addEventListener('click', function (e) {
+      e.preventDefault();
+      state = { view: 'subject', subject: state.subject };
+      render();
+      scrollToWidget();
+    });
+    widget.querySelectorAll('.curr-section a').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        state = {
+          view: 'topic',
+          subject: a.dataset.subj,
+          sectionIdx: parseInt(a.dataset.sec, 10),
+          topicIdx: parseInt(a.dataset.topic, 10),
+        };
+        render();
+        scrollToWidget();
+      });
+    });
+  }
+
   function renderTopic() {
     var subj = manifest[state.subject];
     var sec = subj.sections[state.sectionIdx];
@@ -170,11 +217,12 @@
     html += '<div class="curr-breadcrumb">'
          + '<a href="#" data-action="grid">Science</a>'
          + '<span class="sep">/</span><a href="#" data-action="subject">' + escapeHtml(subj.name) + '</a>'
-         + '<span class="sep">/</span><a href="#" data-action="section">' + escapeHtml(sec.name) + '</a>'
+         + '<span class="sep">/</span><a href="#" data-action="section-view">' + escapeHtml(sec.name) + '</a>'
          + '<span class="sep">/</span><strong>' + escapeHtml(topic.name) + '</strong>'
          + '</div>';
+    html += '<div class="curr-prevnext curr-prevnext-top"></div>';
     html += '<div class="curr-topic-body"><div class="curr-loading">Loading…</div></div>';
-    html += '<div class="curr-prevnext"></div>';
+    html += '<div class="curr-prevnext curr-prevnext-bottom"></div>';
     html += '</div>';
     widget.innerHTML = html;
 
@@ -226,37 +274,33 @@
       render();
       scrollToWidget();
     });
-    widget.querySelector('[data-action="section"]').addEventListener('click', function (e) {
+    widget.querySelector('[data-action="section-view"]').addEventListener('click', function (e) {
       e.preventDefault();
-      state = {
-        view: 'topic',
-        subject: state.subject,
-        sectionIdx: state.sectionIdx,
-        topicIdx: 0,
-      };
+      state = { view: 'section', subject: state.subject, sectionIdx: state.sectionIdx };
       render();
       scrollToWidget();
     });
 
     // Prev/next within the section (flat topic list).
-    var nav = widget.querySelector('.curr-prevnext');
     var prevTopic = state.topicIdx > 0 ? sec.topics[state.topicIdx - 1] : null;
     var nextTopic = state.topicIdx < sec.topics.length - 1 ? sec.topics[state.topicIdx + 1] : null;
-    nav.innerHTML =
+    var navHtml =
       (prevTopic
         ? '<a href="#" data-action="prev">← ' + escapeHtml(prevTopic.name) + '</a>'
         : '<span class="spacer">·</span>')
       + (nextTopic
         ? '<a href="#" data-action="next">' + escapeHtml(nextTopic.name) + ' →</a>'
         : '<span class="spacer">·</span>');
-    nav.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function (e) {
-        e.preventDefault();
-        if (a.dataset.action === 'prev') state.topicIdx -= 1;
-        else if (a.dataset.action === 'next') state.topicIdx += 1;
-        var y = window.scrollY;
-        render();
-        requestAnimationFrame(function () { window.scrollTo(0, y); });
+    widget.querySelectorAll('.curr-prevnext').forEach(function (nav) {
+      nav.innerHTML = navHtml;
+      nav.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (a.dataset.action === 'prev') state.topicIdx -= 1;
+          else if (a.dataset.action === 'next') state.topicIdx += 1;
+          render();
+          scrollToWidget();
+        });
       });
     });
   }
