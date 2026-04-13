@@ -5,13 +5,17 @@ layout: default
 <div class="page-header"><h2>Olympiads</h2><a class="back-link" href="/">Science</a></div>
 
 <div class="tabs">
-  <input type="radio" name="view" id="view-all" checked>
+  <input type="radio" name="view" id="view-all">
   <input type="radio" name="view" id="view-math">
   <input type="radio" name="view" id="view-comp">
   <input type="radio" name="view" id="view-phys">
   <input type="radio" name="view" id="view-chem">
   <input type="radio" name="view" id="view-bio">
   <input type="radio" name="view" id="view-astro">
+  <script>
+    var tabs = ['view-math','view-comp','view-phys','view-chem','view-bio','view-astro'];
+    document.getElementById(tabs[Math.floor(Math.random() * tabs.length)]).checked = true;
+  </script>
 
   <div class="tab-labels">
     <label for="view-all">All</label>
