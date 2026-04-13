@@ -3,7 +3,7 @@ subject: Astronomy
 section: Stars
 topic: Interior
 table: Temperature
-order: 14
+order: 51
 ---
 
 # Temperature

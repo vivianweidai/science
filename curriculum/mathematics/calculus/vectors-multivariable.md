@@ -15,4 +15,5 @@ order: 60
 <tr><td>differentiation</td><td>$\mathbf{F} = \nabla f$</td><td>gradient</td></tr>
 <tr><td>differentiation</td><td>$\nabla$</td><td>Lagrange</td></tr>
 <tr><td>integration</td><td>nested integration</td><td>keep other constant</td></tr>
+<tr><td>integration</td><td colspan="2">$\text{div}\mathbf{F} = \nabla \cdot \mathbf{F}$</td></tr>
 </table>

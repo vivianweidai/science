@@ -3,7 +3,7 @@ subject: Physics
 section: Electromagnetism
 topic: Inductor
 table: Behaviour
-order: 11
+order: 26
 ---
 
 # Behaviour

@@ -17,4 +17,5 @@ order: 43
 <tr><td>cylindrical</td><td>magnitude angle height</td><td>Pythagoras</td></tr>
 <tr><td>cylindrical</td><td>$(r,\theta,z)$</td><td>height</td></tr>
 <tr><td>spherical</td><td>magnitude angle angle</td><td>Pythagoras</td></tr>
+<tr><td>spherical</td><td colspan="2">$x = \rho\sin\phi\cos\theta y = \rho\sin\phi\sin\theta z = \rho\cos\phi$</td></tr>
 </table>

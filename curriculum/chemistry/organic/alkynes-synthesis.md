@@ -3,7 +3,7 @@ subject: Chemistry
 section: Organic
 topic: Alkynes
 table: Synthesis
-order: 12
+order: 65
 ---
 
 # Synthesis

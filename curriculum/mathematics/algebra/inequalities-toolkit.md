@@ -16,6 +16,7 @@ order: 37
 <tr><td>arithmetic-geometric</td><td>$\frac{a + b}{2} \geq \sqrt{ab}$</td><td>by trivial inequality</td></tr>
 <tr><td>arithmetic-geometric</td><td>$a = b$</td><td>equality case</td></tr>
 <tr><td>arithmetic-geometric</td><td>hint for use</td><td>sum product</td></tr>
-<tr><td>arithmetic-geometric</td><td>$ad = bc$</td><td>equality case</td></tr>
-<tr><td>arithmetic-geometric</td><td>hint for use</td><td>sum squares square sums</td></tr>
+<tr><td>Cauchy-Schwarz</td><td colspan="2">$(a^{2} + b^{2})(c^{2} + d^{2}) \geq (ac + bd)^{2}$</td></tr>
+<tr><td>Cauchy-Schwarz</td><td>$ad = bc$</td><td>equality case</td></tr>
+<tr><td>Cauchy-Schwarz</td><td>hint for use</td><td>sum squares square sums</td></tr>
 </table>

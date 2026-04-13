@@ -234,8 +234,35 @@ def process_docx(docx_path: Path, formulas: list[str]) -> tuple[list[dict], int]
             last_label = ""
             for ri, row in enumerate(rows_elem[1:]):
                 cells = row.findall(f"{{{WML}}}tc")
-                if len(cells) < 3:
-                    # Count formulas in short rows
+
+                # Handle rows where columns 2-3 are merged (gridSpan=2)
+                if len(cells) == 2:
+                    gs = cells[1].find(f".//{{{WML}}}gridSpan")
+                    if gs is not None and gs.get(qn("w:val")) == "2":
+                        raw_label, formula_idx = _extract_cell(
+                            cells[0], formulas, formula_idx)
+                        raw_span, formula_idx = _extract_cell(
+                            cells[1], formulas, formula_idx)
+                        label = raw_label if raw_label else last_label
+                        last_label = label
+                        is_yellow = cell_fill(cells[1]) == YELLOW
+                        if is_yellow:
+                            highlighted.append(len(table_rows))
+                        table_rows.append({
+                            "label": label,
+                            "formula": raw_span,
+                            "description": "",
+                            "is_latex": count_math(cells[1]) > 0,
+                            "colspan": True,
+                        })
+                        continue
+                    else:
+                        # Unknown 2-cell layout, count formulas and skip
+                        for cell in cells:
+                            formula_idx += count_math(cell)
+                        continue
+
+                if len(cells) < 2:
                     for cell in cells:
                         formula_idx += count_math(cell)
                     continue
@@ -301,16 +328,19 @@ def write_table_md(path: Path, subject: str, section: str, topic: str,
     ]
     for row in rows:
         label = row["label"]
-        desc = row["description"]
         formula = row["formula"]
         # Fields from _extract_cell already have $...$ around LaTeX parts
         # Only escape non-LaTeX text segments
         if "$" not in label:
             label = escape_html(label)
-        if "$" not in desc:
-            desc = escape_html(desc)
         cell = formula if "$" in formula else escape_html(formula)
-        lines.append(f"<tr><td>{label}</td><td>{cell}</td><td>{desc}</td></tr>")
+        if row.get("colspan"):
+            lines.append(f"<tr><td>{label}</td><td colspan=\"2\">{cell}</td></tr>")
+        else:
+            desc = row["description"]
+            if "$" not in desc:
+                desc = escape_html(desc)
+            lines.append(f"<tr><td>{label}</td><td>{cell}</td><td>{desc}</td></tr>")
     lines.append("</table>")
     lines.append("")
 

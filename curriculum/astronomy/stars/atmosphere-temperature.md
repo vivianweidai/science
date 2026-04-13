@@ -3,7 +3,7 @@ subject: Astronomy
 section: Stars
 topic: Atmosphere
 table: Temperature
-order: 12
+order: 49
 ---
 
 # Temperature
