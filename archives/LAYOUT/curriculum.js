@@ -72,9 +72,7 @@
           sectionIdx: parseInt(a.dataset.sec, 10),
           topicIdx: parseInt(a.dataset.topic, 10),
         };
-        var y = window.scrollY;
         render();
-        requestAnimationFrame(function () { window.scrollTo(0, y); });
       });
     });
 
@@ -82,7 +80,6 @@
       h.addEventListener('click', function () {
         state = { view: 'subject', subject: h.dataset.subj };
         render();
-        scrollToWidget();
       });
     });
 
@@ -94,14 +91,10 @@
           sectionIdx: parseInt(s.dataset.sec, 10),
         };
         render();
-        scrollToWidget();
       });
     });
   }
 
-  function scrollToWidget() {
-    widget.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
 
   function renderSubject() {
     var subj = manifest[state.subject];
@@ -130,7 +123,6 @@
       e.preventDefault();
       state = { view: 'grid' };
       render();
-      window.scrollTo(0, 0);
     });
 
     widget.querySelectorAll('.curr-section a').forEach(function (a) {
@@ -143,7 +135,6 @@
           topicIdx: parseInt(a.dataset.topic, 10),
         };
         render();
-        scrollToWidget();
       });
     });
 
@@ -155,7 +146,6 @@
           sectionIdx: parseInt(s.dataset.sec, 10),
         };
         render();
-        scrollToWidget();
       });
     });
   }
@@ -183,7 +173,6 @@
       e.preventDefault();
       state = { view: 'grid' };
       render();
-      window.scrollTo(0, 0);
     });
     widget.querySelector('[data-action="subject"]').addEventListener('click', function (e) {
       e.preventDefault();
@@ -201,7 +190,6 @@
           topicIdx: parseInt(a.dataset.topic, 10),
         };
         render();
-        scrollToWidget();
       });
     });
   }
@@ -265,7 +253,6 @@
       e.preventDefault();
       state = { view: 'grid' };
       render();
-      window.scrollTo(0, 0);
     });
     widget.querySelector('[data-action="subject"]').addEventListener('click', function (e) {
       e.preventDefault();
