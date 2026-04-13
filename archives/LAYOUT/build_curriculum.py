@@ -203,7 +203,10 @@ def process_docx(docx_path: Path, formulas: list[str]) -> tuple[list[dict], int]
                     subject_heading_skipped = True
                     continue  # skip subject heading
                 if upper.title() == current_section:
-                    # Repeated section heading before a new topic
+                    # Could be a repeated section heading or a topic
+                    # with the same name — set as topic either way;
+                    # a real topic heading will overwrite if it follows.
+                    current_topic = upper.title()
                     continue
                 if not current_section or upper.title() != current_topic:
                     # Heuristic: if we've seen this as a section before,

@@ -2207,13 +2207,13 @@
         "name": "Modern",
         "topics": [
           {
-            "slug": "physical",
-            "name": "Physical",
+            "slug": "modern",
+            "name": "Modern",
             "tables": [
               {
                 "name": "relativity",
                 "order": 46,
-                "path": "physics/modern/physical-relativity.md",
+                "path": "physics/modern/modern-relativity.md",
                 "highlighted_rows": [
                   0,
                   1
@@ -2222,7 +2222,7 @@
               {
                 "name": "quantum",
                 "order": 47,
-                "path": "physics/modern/physical-quantum.md",
+                "path": "physics/modern/modern-quantum.md",
                 "highlighted_rows": [
                   0,
                   1,
@@ -2510,13 +2510,13 @@
             ]
           },
           {
-            "slug": "alkali",
-            "name": "Alkali",
+            "slug": "inorganic",
+            "name": "Inorganic",
             "tables": [
               {
                 "name": "alkaline",
                 "order": 88,
-                "path": "chemistry/bonds/alkali-alkaline.md",
+                "path": "chemistry/bonds/inorganic-alkaline.md",
                 "highlighted_rows": [
                   0,
                   2
@@ -2525,7 +2525,7 @@
               {
                 "name": "3A",
                 "order": 89,
-                "path": "chemistry/bonds/alkali-3a.md",
+                "path": "chemistry/bonds/inorganic-3a.md",
                 "highlighted_rows": [
                   0,
                   2,
@@ -2535,11 +2535,41 @@
               {
                 "name": "4A",
                 "order": 90,
-                "path": "chemistry/bonds/alkali-4a.md",
+                "path": "chemistry/bonds/inorganic-4a.md",
                 "highlighted_rows": [
                   0,
                   2,
                   3
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "representative",
+            "name": "Representative",
+            "tables": [
+              {
+                "name": "pnicogens",
+                "order": 91,
+                "path": "chemistry/bonds/representative-pnicogens.md",
+                "highlighted_rows": [
+                  0
+                ]
+              },
+              {
+                "name": "chalcogens",
+                "order": 92,
+                "path": "chemistry/bonds/representative-chalcogens.md",
+                "highlighted_rows": [
+                  0
+                ]
+              },
+              {
+                "name": "noble",
+                "order": 93,
+                "path": "chemistry/bonds/representative-noble.md",
+                "highlighted_rows": [
+                  0
                 ]
               }
             ]
@@ -2551,13 +2581,13 @@
         "name": "Stoichiometry",
         "topics": [
           {
-            "slug": "states",
-            "name": "States",
+            "slug": "stoichiometry",
+            "name": "Stoichiometry",
             "tables": [
               {
                 "name": "stoichiometry",
                 "order": 21,
-                "path": "chemistry/stoichiometry/states-stoichiometry.md",
+                "path": "chemistry/stoichiometry/stoichiometry-stoichiometry.md",
                 "highlighted_rows": [
                   0
                 ]
@@ -2565,7 +2595,7 @@
               {
                 "name": "solutions",
                 "order": 22,
-                "path": "chemistry/stoichiometry/states-solutions.md",
+                "path": "chemistry/stoichiometry/stoichiometry-solutions.md",
                 "highlighted_rows": [
                   0,
                   1,
@@ -3483,36 +3513,6 @@
                 "name": "peroxides",
                 "order": 87,
                 "path": "chemistry/inorganic/alkali-peroxides.md",
-                "highlighted_rows": [
-                  0
-                ]
-              }
-            ]
-          },
-          {
-            "slug": "representative",
-            "name": "Representative",
-            "tables": [
-              {
-                "name": "pnicogens",
-                "order": 91,
-                "path": "chemistry/inorganic/representative-pnicogens.md",
-                "highlighted_rows": [
-                  0
-                ]
-              },
-              {
-                "name": "chalcogens",
-                "order": 92,
-                "path": "chemistry/inorganic/representative-chalcogens.md",
-                "highlighted_rows": [
-                  0
-                ]
-              },
-              {
-                "name": "noble",
-                "order": 93,
-                "path": "chemistry/inorganic/representative-noble.md",
                 "highlighted_rows": [
                   0
                 ]
