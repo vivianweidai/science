@@ -32,10 +32,7 @@ hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0 0.5em 0; }
 }
 .footer .footer-nav { display: flex; gap: 0.5em; }
 .footer .footer-github { margin-left: auto; }
-.orcid-short { display: none; }
 @media (max-width: 600px) {
-  .orcid-full { display: none; }
-  .orcid-short { display: inline; }
   .tab-labels {
     flex-wrap: wrap;
     gap: 0;
@@ -88,10 +85,6 @@ hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0 0.5em 0; }
 }
 .tab-labels label:hover { color: #1f2328; }
 .tab-content { display: none; padding: 1em 0; }
-
-/* Generic tab activation — works for any tab system using :checked */
-.tabs input[type="radio"]:checked + .tab-content,
-.tabs input[type="radio"]:checked ~ .tab-content { display: none; }
 
 /* Result images (used in project pages) */
 .result-img { width: 100%; border-radius: 6px; }
