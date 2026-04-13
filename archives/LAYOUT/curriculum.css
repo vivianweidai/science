@@ -33,8 +33,8 @@
 .curr-col-head[data-subj="mathematics"] { background: #c5d9f7; }
 .curr-col-head[data-subj="computing"]   { background: #d9ccee; }
 .curr-col-head[data-subj="physics"]     { background: #f9c4a8; }
-.curr-col-head[data-subj="chemistry"]   { background: #cdeaa6; }
-.curr-col-head[data-subj="biology"]     { background: #b8e0c4; }
+.curr-col-head[data-subj="chemistry"]   { background: #d4e8a0; }
+.curr-col-head[data-subj="biology"]     { background: #a8ddd4; }
 .curr-col-head[data-subj="astronomy"]   { background: #f4c2cb; }
 
 .curr-section { margin-bottom: 1em; }

@@ -76,8 +76,8 @@ layout: chinese-default
   .chip.math  { background: #c5d9f7; }
   .chip.comp  { background: #d9ccee; }
   .chip.phys  { background: #f9c4a8; }
-  .chip.chem  { background: #cdeaa6; }
-  .chip.bio   { background: #b8e0c4; }
+  .chip.chem  { background: #d4e8a0; }
+  .chip.bio   { background: #a8ddd4; }
   .chip.astro { background: #f4c2cb; }
 
   @media (max-width: 600px) {
