@@ -147,7 +147,7 @@
   background: #f6f8fa;
 }
 .curr-topic-body td.curr-group-cell {
-  border-bottom: 2px solid #b0b4b8;
+  border-bottom: 1px solid #d1d9e0;
 }
 .curr-topic-body .katex { font-size: 1em; }
 
