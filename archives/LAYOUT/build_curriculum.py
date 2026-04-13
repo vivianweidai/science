@@ -188,6 +188,7 @@ def process_docx(docx_path: Path, formulas: list[str]) -> tuple[list[dict], int]
     tables_data = []
     formula_idx = 0
     toc_tables_seen = 0
+    subject_heading_skipped = False
 
     for elem in elements:
         tag = elem.tag.split("}")[-1]
@@ -198,7 +199,8 @@ def process_docx(docx_path: Path, formulas: list[str]) -> tuple[list[dict], int]
                 upper = text.strip()
                 # The subject name appears first (e.g. "MATHEMATICS"),
                 # then alternating section/topic pairs
-                if upper == docx_path.stem.upper():
+                if upper == docx_path.stem.upper() and not subject_heading_skipped:
+                    subject_heading_skipped = True
                     continue  # skip subject heading
                 if upper.title() == current_section:
                     # Repeated section heading before a new topic

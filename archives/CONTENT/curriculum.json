@@ -1307,7 +1307,13 @@
                 ]
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "slug": "computing",
+        "name": "Computing",
+        "topics": [
           {
             "slug": "efficiency",
             "name": "Efficiency",
@@ -1315,7 +1321,7 @@
               {
                 "name": "efficiency",
                 "order": 35,
-                "path": "computing/language/efficiency-efficiency.md",
+                "path": "computing/computing/efficiency-efficiency.md",
                 "highlighted_rows": [
                   0,
                   1
@@ -1324,7 +1330,7 @@
               {
                 "name": "order",
                 "order": 36,
-                "path": "computing/language/efficiency-order.md",
+                "path": "computing/computing/efficiency-order.md",
                 "highlighted_rows": [
                   2
                 ]
@@ -1332,7 +1338,7 @@
               {
                 "name": "sub array sum",
                 "order": 37,
-                "path": "computing/language/efficiency-sub-array-sum.md",
+                "path": "computing/computing/efficiency-sub-array-sum.md",
                 "highlighted_rows": []
               }
             ]
@@ -1344,7 +1350,7 @@
               {
                 "name": "data",
                 "order": 38,
-                "path": "computing/language/data-data.md",
+                "path": "computing/computing/data-data.md",
                 "highlighted_rows": [
                   0,
                   1,
@@ -1355,7 +1361,7 @@
               {
                 "name": "syntax",
                 "order": 39,
-                "path": "computing/language/data-syntax.md",
+                "path": "computing/computing/data-syntax.md",
                 "highlighted_rows": [
                   5,
                   8
@@ -1370,13 +1376,13 @@
               {
                 "name": "logic",
                 "order": 40,
-                "path": "computing/language/logic-logic.md",
+                "path": "computing/computing/logic-logic.md",
                 "highlighted_rows": []
               },
               {
                 "name": "references",
                 "order": 41,
-                "path": "computing/language/logic-references.md",
+                "path": "computing/computing/logic-references.md",
                 "highlighted_rows": [
                   0
                 ]
@@ -1384,7 +1390,7 @@
               {
                 "name": "loop",
                 "order": 42,
-                "path": "computing/language/logic-loop.md",
+                "path": "computing/computing/logic-loop.md",
                 "highlighted_rows": []
               }
             ]
@@ -1396,7 +1402,7 @@
               {
                 "name": "combinations",
                 "order": 43,
-                "path": "computing/language/combinations-combinations.md",
+                "path": "computing/computing/combinations-combinations.md",
                 "highlighted_rows": [
                   0,
                   1,
@@ -1406,7 +1412,7 @@
               {
                 "name": "recursion",
                 "order": 44,
-                "path": "computing/language/combinations-recursion.md",
+                "path": "computing/computing/combinations-recursion.md",
                 "highlighted_rows": [
                   0
                 ]
@@ -1420,7 +1426,7 @@
               {
                 "name": "algorithms",
                 "order": 45,
-                "path": "computing/language/algorithms-algorithms.md",
+                "path": "computing/computing/algorithms-algorithms.md",
                 "highlighted_rows": [
                   0,
                   1,
@@ -1433,7 +1439,7 @@
               {
                 "name": "others",
                 "order": 46,
-                "path": "computing/language/algorithms-others.md",
+                "path": "computing/computing/algorithms-others.md",
                 "highlighted_rows": [
                   0,
                   3
@@ -1448,7 +1454,7 @@
               {
                 "name": "simulation",
                 "order": 47,
-                "path": "computing/language/problems-simulation.md",
+                "path": "computing/computing/problems-simulation.md",
                 "highlighted_rows": [
                   12
                 ]
@@ -1456,7 +1462,7 @@
               {
                 "name": "complete search",
                 "order": 48,
-                "path": "computing/language/problems-complete-search.md",
+                "path": "computing/computing/problems-complete-search.md",
                 "highlighted_rows": [
                   7
                 ]
@@ -1464,7 +1470,7 @@
               {
                 "name": "preprocessing",
                 "order": 49,
-                "path": "computing/language/problems-preprocessing.md",
+                "path": "computing/computing/problems-preprocessing.md",
                 "highlighted_rows": [
                   4
                 ]
@@ -1472,7 +1478,7 @@
               {
                 "name": "greedy",
                 "order": 50,
-                "path": "computing/language/problems-greedy.md",
+                "path": "computing/computing/problems-greedy.md",
                 "highlighted_rows": []
               }
             ]
