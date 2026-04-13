@@ -106,7 +106,7 @@
   function renderSubject() {
     var subj = manifest[state.subject];
     var html = '<div class="curr-subject">';
-    html += '<div class="curr-breadcrumb">'
+    html += '<div class="curr-breadcrumb" data-subj="' + state.subject + '">'
          + '<a href="#" data-action="grid">Science</a>'
          + '<span class="sep">/</span><strong>' + escapeHtml(subj.name) + '</strong>'
          + '</div>';
@@ -164,7 +164,7 @@
     var subj = manifest[state.subject];
     var sec = subj.sections[state.sectionIdx];
     var html = '<div class="curr-subject">';
-    html += '<div class="curr-breadcrumb">'
+    html += '<div class="curr-breadcrumb" data-subj="' + state.subject + '">'
          + '<a href="#" data-action="grid">Science</a>'
          + '<span class="sep">/</span><a href="#" data-action="subject">' + escapeHtml(subj.name) + '</a>'
          + '<span class="sep">/</span><strong>' + escapeHtml(sec.name) + '</strong>'
@@ -212,7 +212,7 @@
     var topic = sec.topics[state.topicIdx];
 
     var html = '<div class="curr-topic">';
-    html += '<div class="curr-breadcrumb">'
+    html += '<div class="curr-breadcrumb" data-subj="' + state.subject + '">'
          + '<a href="#" data-action="grid">Science</a>'
          + '<span class="sep">/</span><a href="#" data-action="subject">' + escapeHtml(subj.name) + '</a>'
          + '<span class="sep">/</span><a href="#" data-action="section-view">' + escapeHtml(sec.name) + '</a>'

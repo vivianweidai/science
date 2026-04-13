@@ -104,10 +104,17 @@
 .curr-breadcrumb {
   font-size: 0.88em;
   color: #57606a;
-  padding-bottom: 0.6em;
+  padding: 0.55em 0.7em;
   border-bottom: 1px solid #eaecef;
-  margin-bottom: 1em;
+  margin: -1em -1.4em 1em;
+  border-radius: 7px 7px 0 0;
 }
+.curr-breadcrumb[data-subj="mathematics"] { background: #c5d9f7; }
+.curr-breadcrumb[data-subj="computing"]   { background: #d9ccee; }
+.curr-breadcrumb[data-subj="physics"]     { background: #f9c4a8; }
+.curr-breadcrumb[data-subj="chemistry"]   { background: #d4e8a0; }
+.curr-breadcrumb[data-subj="biology"]     { background: #a8ddd4; }
+.curr-breadcrumb[data-subj="astronomy"]   { background: #f4c2cb; }
 .curr-breadcrumb a {
   color: #0969da;
   text-decoration: none;
