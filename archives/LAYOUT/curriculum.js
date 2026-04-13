@@ -130,7 +130,7 @@
       e.preventDefault();
       state = { view: 'grid' };
       render();
-      scrollToWidget();
+      window.scrollTo(0, 0);
     });
 
     widget.querySelectorAll('.curr-section a').forEach(function (a) {
@@ -218,7 +218,7 @@
       e.preventDefault();
       state = { view: 'grid' };
       render();
-      scrollToWidget();
+      window.scrollTo(0, 0);
     });
     widget.querySelector('[data-action="subject"]').addEventListener('click', function (e) {
       e.preventDefault();
