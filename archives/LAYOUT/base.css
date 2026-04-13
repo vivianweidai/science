@@ -4,6 +4,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding: 30px 1rem;
+  overflow-x: hidden;
   color: #1f2328;
   line-height: 1.6;
 }
