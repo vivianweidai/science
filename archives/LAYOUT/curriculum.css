@@ -138,6 +138,11 @@
 }
 .curr-topic-body thead,
 .curr-topic-body tr:has(th) { display: none; }
+
+.curr-topic-body td:first-child {
+  background: #f0f2f4 !important;
+  font-weight: 600;
+}
 .curr-topic-body .katex { font-size: 1em; }
 
 .curr-prevnext {
