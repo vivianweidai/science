@@ -19,7 +19,7 @@
   var MANIFEST_URL = '/archives/CONTENT/curriculum.json';
 
   var manifest = null;
-  var state = { view: 'grid' };
+  var state = parseHash() || { view: 'grid' };
 
   widget.classList.add('curr-widget');
   widget.innerHTML = '<div class="curr-loading">Loading curriculum…</div>';
@@ -31,7 +31,32 @@
       widget.innerHTML = '<div class="curr-loading">Failed to load curriculum: ' + e + '</div>';
     });
 
+  window.addEventListener('popstate', function () {
+    state = parseHash() || { view: 'grid' };
+    if (manifest) render();
+  });
+
+  function pushState() {
+    var hash = '#';
+    if (state.view === 'subject') hash += state.subject;
+    else if (state.view === 'section') hash += state.subject + '/' + state.sectionIdx;
+    else if (state.view === 'topic') hash += state.subject + '/' + state.sectionIdx + '/' + state.topicIdx;
+    else hash = '#';
+    if (location.hash !== hash) history.pushState(null, '', hash);
+  }
+
+  function parseHash() {
+    var h = location.hash.replace(/^#/, '');
+    if (!h) return null;
+    var parts = h.split('/');
+    if (parts.length === 1) return { view: 'subject', subject: parts[0] };
+    if (parts.length === 2) return { view: 'section', subject: parts[0], sectionIdx: parseInt(parts[1], 10) };
+    if (parts.length === 3) return { view: 'topic', subject: parts[0], sectionIdx: parseInt(parts[1], 10), topicIdx: parseInt(parts[2], 10) };
+    return null;
+  }
+
   function render() {
+    pushState();
     if (state.view === 'topic') renderTopic();
     else if (state.view === 'section') renderSection();
     else if (state.view === 'subject') renderSubject();
