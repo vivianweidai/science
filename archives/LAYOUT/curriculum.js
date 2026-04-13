@@ -242,6 +242,7 @@
         wrap.className = 'curr-table-wrap';
         wrap.innerHTML = marked.parse(md);
         applyHighlights(wrap, topic.tables[i].highlighted_rows || []);
+        mergeHeaders(wrap);
         mergeFirstColumn(wrap);
         body.appendChild(wrap);
       });
@@ -333,6 +334,19 @@
         }
       });
     });
+  }
+
+  function mergeHeaders(container) {
+    // Replace the 3-column header row with a single merged cell
+    // using the table name from the h1 above the table.
+    var h1 = container.querySelector('h1');
+    var table = container.querySelector('table');
+    if (!h1 || !table) return;
+    var name = h1.textContent.trim();
+    var headerRow = table.querySelector('tr');
+    if (headerRow && headerRow.querySelector('th')) {
+      headerRow.innerHTML = '<th colspan="3">' + escapeHtml(name) + '</th>';
+    }
   }
 
   function mergeFirstColumn(container) {

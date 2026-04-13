@@ -116,13 +116,7 @@
 .curr-breadcrumb .sep { color: #8c959f; margin: 0 0.35em; }
 .curr-breadcrumb strong { color: #1f2328; }
 
-.curr-topic-body h1 {
-  font-size: 0.95em;
-  margin: 1.2em 0 0.4em;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-.curr-topic-body h1:first-child { margin-top: 0; }
+.curr-topic-body h1 { display: none; }
 .curr-topic-body table {
   border-collapse: collapse;
   width: 100%;
@@ -136,8 +130,11 @@
   text-align: center;
   vertical-align: middle;
 }
-.curr-topic-body thead,
-.curr-topic-body tr:has(th) { display: none; }
+.curr-topic-body th {
+  background: #c0c4c8;
+  font-weight: 700;
+  font-size: 0.95em;
+}
 
 .curr-topic-body td:first-child {
   background: #d5d8dc !important;
