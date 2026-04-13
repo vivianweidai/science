@@ -359,7 +359,7 @@
           cell.rowSpan = span;
           cell.style.verticalAlign = 'middle';
           for (var k = i + 1; k < i + span; k++) {
-            dataRows[k].querySelector('td').remove();
+            dataRows[k].querySelector('td').style.display = 'none';
           }
         }
         i += span;
