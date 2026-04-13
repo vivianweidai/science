@@ -24,6 +24,7 @@
 #view-all:checked ~ .tab-labels label[for="view-all"] {
   color: #656d76;
   border-bottom-color: #656d76;
+  background: #e8e8e8;
 }
 #view-math:checked ~ .tab-labels label[for="view-math"] {
   color: #2563eb;
