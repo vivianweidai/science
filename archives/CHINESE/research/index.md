@@ -10,31 +10,31 @@ layout: chinese-default
   <div class="entry">
     <div class="top-line"><div class="month">四月</div>
     <div class="chips-cell"><span class="chip chem">化学</span></div></div>
-    <div class="name-cell"><a href="20260411%20Centrifuge/">离心分离</a> — 日常液体的离心分离与pH测量</div>
+    <div class="name-cell"><a href="projects/20260411%20Centrifuge/">离心分离</a> — 日常液体的离心分离与pH测量</div>
   </div>
 
   <div class="entry">
     <div class="top-line"><div class="month">四月</div>
     <div class="chips-cell"><span class="chip chem">化学</span></div></div>
-    <div class="name-cell"><a href="20260405%20Melting%20Point/">熔点测定</a> — 咖啡因与阿司匹林的熔点测定</div>
+    <div class="name-cell"><a href="projects/20260405%20Melting%20Point/">熔点测定</a> — 咖啡因与阿司匹林的熔点测定</div>
   </div>
 
   <div class="entry">
     <div class="top-line"><div class="month">四月</div>
     <div class="chips-cell"><span class="chip phys">物理</span></div></div>
-    <div class="name-cell"><a href="20260404%20Four%20Point%20Probe/">四探针法</a> — 导电材料的薄层电阻测量</div>
+    <div class="name-cell"><a href="projects/20260404%20Four%20Point%20Probe/">四探针法</a> — 导电材料的薄层电阻测量</div>
   </div>
 
   <div class="entry hl">
     <div class="top-line"><div class="month">四月</div>
     <div class="chips-cell"><span class="chip chem">化学</span></div></div>
-    <div class="name-cell"><a href="20260401%20IR%20Spectroscopy/">红外光谱</a> — 日常材料的官能团鉴定</div>
+    <div class="name-cell"><a href="projects/20260401%20IR%20Spectroscopy/">红外光谱</a> — 日常材料的官能团鉴定</div>
   </div>
 
   <div class="entry">
     <div class="top-line"><div class="month">四月</div>
     <div class="chips-cell"><span class="chip bio">生物</span></div></div>
-    <div class="name-cell"><a href="20260401%20Genes%20in%20Space/">太空基因</a> — 微重力环境下的基因表达变化</div>
+    <div class="name-cell"><a href="projects/20260401%20Genes%20in%20Space/">太空基因</a> — 微重力环境下的基因表达变化</div>
   </div>
 
   <div class="year-marker">2025</div>
@@ -42,7 +42,7 @@ layout: chinese-default
   <div class="entry">
     <div class="top-line"><div class="month">二月</div>
     <div class="chips-cell"><span class="chip comp">计算</span></div></div>
-    <div class="name-cell"><a href="20250225%20Catfood/">猫粮颜色偏好</a> — 红色与绿色食物偏好实验</div>
+    <div class="name-cell"><a href="projects/20250225%20Catfood/">猫粮颜色偏好</a> — 红色与绿色食物偏好实验</div>
   </div>
 </div>
 
@@ -103,14 +103,14 @@ layout: chinese-default
 
 ### 仪器设备
 
-- <span class="chip chem">化学</span> <a href="20260401%20IR%20Spectroscopy/">Thermo Scientific Nicolet 380 FT-IR Spectrometer</a> — 中红外吸收/透射光谱
-- <span class="chip chem">化学</span> <a href="20260405%20Melting%20Point/">OptiMelt Automated Melting Point System</a> — 熔点测定
-- <span class="chip chem">化学</span> <a href="20260411%20Centrifuge/">Thermo Scientific Refrigerated Centrifuge</a> — 按密度分离混合物
-- <span class="chip chem">化学</span> <a href="20260411%20Centrifuge/">VWR pH 1100 L</a> — 台式pH测量
-- <span class="chip phys">物理</span> <a href="20260404%20Four%20Point%20Probe/">Jandel RM3 Four-Point Probe</a> — 薄层电阻测量
-- <span class="chip bio">生物</span> <a href="20260401%20Genes%20in%20Space/">miniPCR Thermal Cycler</a> — DNA/RNA靶标的PCR扩增
-- <span class="chip bio">生物</span> <a href="20260401%20Genes%20in%20Space/">P51 Fluorescence Viewer</a> — 荧光检测与凝胶成像
-- <span class="chip bio">生物</span> <a href="20260401%20Genes%20in%20Space/">BioBits Cell Free System</a> — DNA模板的体外蛋白表达
+- <span class="chip chem">化学</span> <a href="projects/20260401%20IR%20Spectroscopy/">Thermo Scientific Nicolet 380 FT-IR Spectrometer</a> — 中红外吸收/透射光谱
+- <span class="chip chem">化学</span> <a href="projects/20260405%20Melting%20Point/">OptiMelt Automated Melting Point System</a> — 熔点测定
+- <span class="chip chem">化学</span> <a href="projects/20260411%20Centrifuge/">Thermo Scientific Refrigerated Centrifuge</a> — 按密度分离混合物
+- <span class="chip chem">化学</span> <a href="projects/20260411%20Centrifuge/">VWR pH 1100 L</a> — 台式pH测量
+- <span class="chip phys">物理</span> <a href="projects/20260404%20Four%20Point%20Probe/">Jandel RM3 Four-Point Probe</a> — 薄层电阻测量
+- <span class="chip bio">生物</span> <a href="projects/20260401%20Genes%20in%20Space/">miniPCR Thermal Cycler</a> — DNA/RNA靶标的PCR扩增
+- <span class="chip bio">生物</span> <a href="projects/20260401%20Genes%20in%20Space/">P51 Fluorescence Viewer</a> — 荧光检测与凝胶成像
+- <span class="chip bio">生物</span> <a href="projects/20260401%20Genes%20in%20Space/">BioBits Cell Free System</a> — DNA模板的体外蛋白表达
 - <span class="chip comp">计算</span> GitHub、Python与Jupyter Notebooks — 统计分析与可重复研究流程
 
 ---

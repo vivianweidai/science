@@ -2,111 +2,111 @@
 layout: chinese-project
 project: 四探针法
 photos:
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Samples A.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Samples B.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Samples C.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 1.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 2.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 3.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 4.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 5.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 6.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 7.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 8.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 9.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 10.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 11.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 12.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 13.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 14.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 15.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 16.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 17.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 18.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 19.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 20.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 21.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 22.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 23.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 24.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 25.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 26.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 27.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 28.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 29.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 30.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 31.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 32.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 33.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 34.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 35.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 36.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 37.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 38.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 39.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 40.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 41.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 42.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 43.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 44.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 45.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 46.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 47.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 48.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 49.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 50.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 51.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 52.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 53.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 54.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 55.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 56.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 57.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 58.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 59.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 60.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 61.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 62.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 63.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 64.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 65.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 66.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 67.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 68.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 69.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 70.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 71.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 72.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 73.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 74.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 75.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 76.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 77.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 78.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 79.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 80.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 81.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 82.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 83.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 84.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 85.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 86.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 87.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 88.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 89.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 90.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 91.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 92.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 93.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 94.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 95.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 96.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 97.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 98.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 99.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 100.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 101.jpeg
-  - /research/20260404 Four Point Probe/PHOTOS/20260404 Setup 102.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Samples A.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Samples B.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Samples C.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 1.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 2.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 3.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 4.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 5.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 6.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 7.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 8.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 9.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 10.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 11.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 12.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 13.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 14.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 15.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 16.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 17.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 18.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 19.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 20.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 21.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 22.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 23.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 24.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 25.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 26.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 27.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 28.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 29.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 30.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 31.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 32.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 33.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 34.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 35.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 36.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 37.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 38.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 39.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 40.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 41.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 42.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 43.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 44.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 45.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 46.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 47.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 48.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 49.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 50.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 51.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 52.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 53.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 54.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 55.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 56.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 57.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 58.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 59.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 60.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 61.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 62.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 63.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 64.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 65.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 66.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 67.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 68.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 69.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 70.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 71.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 72.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 73.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 74.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 75.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 76.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 77.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 78.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 79.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 80.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 81.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 82.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 83.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 84.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 85.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 86.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 87.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 88.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 89.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 90.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 91.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 92.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 93.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 94.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 95.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 96.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 97.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 98.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 99.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 100.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 101.jpeg
+  - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 102.jpeg
 ---
 
 # 四探针法薄层电阻测量
@@ -142,7 +142,7 @@ photos:
 
 ## 样品
 
-<div class="hero-single"><img src="/research/20260404 Four Point Probe/PHOTOS/20260404 Setup 39.jpeg" alt="四探针下的三色带硬币"></div>
+<div class="hero-single"><img src="/research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 39.jpeg" alt="四探针下的三色带硬币"></div>
 
 | 类别 | 样品 |
 |------|------|
@@ -155,11 +155,11 @@ photos:
 
 ## 数据
 
-原始数据为每次测量后拍摄的仪器显示屏照片，手动转录为CSV文件。原始照片在<a href="https://github.com/vivianweidai/science/tree/main/research/20260404%20Four%20Point%20Probe/PHOTOS">PHOTOS</a>目录中，清洗后的<a href="https://github.com/vivianweidai/science/blob/main/research/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_readings.csv">CSV</a>在<a href="https://github.com/vivianweidai/science/tree/main/research/20260404%20Four%20Point%20Probe/OUTPUT">OUTPUT</a>目录中。
+原始数据为每次测量后拍摄的仪器显示屏照片，手动转录为CSV文件。原始照片在<a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260404%20Four%20Point%20Probe/PHOTOS">PHOTOS</a>目录中，清洗后的<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_readings.csv">CSV</a>在<a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260404%20Four%20Point%20Probe/OUTPUT">OUTPUT</a>目录中。
 
 ## 结果
 
-共在9 µA下收集了56个有效薄层电阻读数。三个非导电样品（树叶、DVD、纸板）在所有电流设置下均返回接触限，一个金属垫圈读数因<a href="https://github.com/vivianweidai/science/blob/main/research/20260404%20Four%20Point%20Probe/PHOTOS/20260404%20Setup%2089.jpeg">电流量程错误（20 nA）</a>被排除——测试绝缘体样品时为了查看不同电流能否产生检测而改变了电流设置，测量垫圈前未重置。
+共在9 µA下收集了56个有效薄层电阻读数。三个非导电样品（树叶、DVD、纸板）在所有电流设置下均返回接触限，一个金属垫圈读数因<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/PHOTOS/20260404%20Setup%2089.jpeg">电流量程错误（20 nA）</a>被排除——测试绝缘体样品时为了查看不同电流能否产生检测而改变了电流设置，测量垫圈前未重置。
 
 | 样品 | 材料 | n | 平均值（Ω/□） | 范围 |
 |------|------|--:|---------------|------|
@@ -175,14 +175,14 @@ photos:
 
 25美分硬币和勺子是导电性最好的样品，黄铜钥匙最差——所有非金属均无法测量。两个结果引人注目：将1美分硬币从铜面打磨至锌面*增加了*薄层电阻（47.3 → 50.1 Ω/□），翻转铝箔也增加了电阻（48.1 → 54.7 Ω/□），表明哑光面和光亮面具有可测量的不同表面导电性。
 
-<img src="/research/20260404 Four Point Probe/OUTPUT/mean_sheet_resistance.png" alt="各样品平均薄层电阻" class="result-img">
+<img src="/research/projects/20260404 Four Point Probe/OUTPUT/mean_sheet_resistance.png" alt="各样品平均薄层电阻" class="result-img">
 
 ### 局限性
 
 测量过程中读数波动显著——显示值持续漂移，即使在同一样品上不移动探针也无法完全稳定。同一物品的重复测量产生了较大的值分布，难以得出确切的定量结论。上表中的宽范围反映的是这种不稳定性而非测量点之间的真正差异。四探针法设计用于具有可控接触压力的平坦均匀样品，因此家用物品的不规则和弯曲表面可能是导致变异的原因。
 
-查看<a href="https://github.com/vivianweidai/science/blob/main/research/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_analysis.ipynb">静态笔记本</a>或<a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_analysis.ipynb">自行运行可重复分析</a>。
+查看<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_analysis.ipynb">静态笔记本</a>或<a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_analysis.ipynb">自行运行可重复分析</a>。
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a href="/archives/CHINESE/research/">研究</a></div><a class="footer-github" href="/research/20260404%20Four%20Point%20Probe/">English</a></div>
+<div class="footer"><div class="footer-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a href="/archives/CHINESE/research/">研究</a></div><a class="footer-github" href="/research/projects/20260404%20Four%20Point%20Probe/">English</a></div>

@@ -40,7 +40,8 @@ science/
 ├── olympiads/              # Olympiads page (renders from archives/CONTENT/*.json)
 ├── research/               # Research projects
 │   ├── index.md            # Research landing with tabbed project table
-│   └── YYYYMMDD Project/   # Individual projects (see below)
+│   └── projects/           # Individual projects
+│       └── YYYYMMDD Project/   # (see below)
 └── archives/               # Shared assets
     ├── APPLE/              # iOS app (read-only consumer of archives/CONTENT/*.json)
     ├── CONTENT/            # All data: YAML source + generated JSON
@@ -56,7 +57,7 @@ science/
 
 **Activities workflow:** `archives/CONTENT/olympiads.yml` is the single source of truth for all olympiads and textbooks. After editing, run `python archives/LAYOUT/build_olympiads.py` to regenerate `archives/CONTENT/olympiads.json`, then commit both the YAML and the JSON. GitHub Pages builds Jekyll natively in "Deploy from a branch" mode and redeploys within ~1 minute of a push — no CI workflow, so it's on the editor to remember the rebuild step. Both the webapp (`olympiads/index.md` via client-side JS) and the iOS app (`archives/APPLE/shared/API/APIClient.swift`) fetch the JSON directly — there is no database, no API, no admin endpoint.
 
-Each research project lives in a date-prefixed folder under `research/`:
+Each research project lives in a date-prefixed folder under `research/projects/`:
 
 ```
 YYYYMMDD Project Name/

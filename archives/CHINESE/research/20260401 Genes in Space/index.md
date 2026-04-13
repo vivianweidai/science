@@ -5,7 +5,7 @@ project: 太空基因
 
 # 喵向火星 — 太空会帮助还是伤害Mi的心脏？
 
-<div class="hero-single"><img src="/research/20260401 Genes in Space/PHOTOS/mi.png" alt="宇航员猫Mi" style="object-position: center 70%;"></div>
+<div class="hero-single"><img src="/research/projects/20260401 Genes in Space/PHOTOS/mi.png" alt="宇航员猫Mi" style="object-position: center 70%;"></div>
 
 **微重力环境下的肌节基因**
 
@@ -40,8 +40,8 @@ project: 太空基因
 
 ## 数据
 
-查看<a href="https://github.com/vivianweidai/science/blob/main/research/20260401%20Genes%20in%20Space/OUTPUT/20260331%20Genes%20in%20Space.pdf">提案文件</a>和<a href="https://github.com/vivianweidai/science/tree/main/research/20260401%20Genes%20in%20Space/PAPERS">参考文献</a>。
+查看<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260401%20Genes%20in%20Space/OUTPUT/20260331%20Genes%20in%20Space.pdf">提案文件</a>和<a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260401%20Genes%20in%20Space/PAPERS">参考文献</a>。
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a href="/archives/CHINESE/research/">研究</a></div><a class="footer-github" href="/research/20260401%20Genes%20in%20Space/">English</a></div>
+<div class="footer"><div class="footer-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a href="/archives/CHINESE/research/">研究</a></div><a class="footer-github" href="/research/projects/20260401%20Genes%20in%20Space/">English</a></div>

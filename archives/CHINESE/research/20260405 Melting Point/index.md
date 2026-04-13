@@ -2,16 +2,16 @@
 layout: chinese-project
 project: 熔点测定
 photos:
-  - /research/20260405 Melting Point/PHOTOS/20260405 Setup A.jpeg
-  - /research/20260405 Melting Point/PHOTOS/20260405 Setup B.jpeg
-  - /research/20260405 Melting Point/PHOTOS/20260405 Setup C.jpeg
-  - /research/20260405 Melting Point/PHOTOS/20260405 Setup D.jpeg
-  - /research/20260405 Melting Point/PHOTOS/20260405 Setup E.jpeg
-  - /research/20260405 Melting Point/PHOTOS/20260405 Setup F.jpeg
-  - /research/20260405 Melting Point/PHOTOS/20260405 Setup G.jpeg
-  - /research/20260405 Melting Point/PHOTOS/20260405 Samples A.jpeg
-  - /research/20260405 Melting Point/PHOTOS/20260405 Samples B.jpeg
-  - /research/20260405 Melting Point/PHOTOS/20260405 Samples C.jpeg
+  - /research/projects/20260405 Melting Point/PHOTOS/20260405 Setup A.jpeg
+  - /research/projects/20260405 Melting Point/PHOTOS/20260405 Setup B.jpeg
+  - /research/projects/20260405 Melting Point/PHOTOS/20260405 Setup C.jpeg
+  - /research/projects/20260405 Melting Point/PHOTOS/20260405 Setup D.jpeg
+  - /research/projects/20260405 Melting Point/PHOTOS/20260405 Setup E.jpeg
+  - /research/projects/20260405 Melting Point/PHOTOS/20260405 Setup F.jpeg
+  - /research/projects/20260405 Melting Point/PHOTOS/20260405 Setup G.jpeg
+  - /research/projects/20260405 Melting Point/PHOTOS/20260405 Samples A.jpeg
+  - /research/projects/20260405 Melting Point/PHOTOS/20260405 Samples B.jpeg
+  - /research/projects/20260405 Melting Point/PHOTOS/20260405 Samples C.jpeg
 ---
 
 # 日常化合物的熔点测定
@@ -47,7 +47,7 @@ photos:
 
 ## 样品
 
-<div class="hero-single"><img src="/research/20260405 Melting Point/PHOTOS/20260405 Samples A.jpeg" alt="标记为CAF1–3和MP1–3的毛细管"></div>
+<div class="hero-single"><img src="/research/projects/20260405 Melting Point/PHOTOS/20260405 Samples A.jpeg" alt="标记为CAF1–3和MP1–3的毛细管"></div>
 
 样品被研磨成细粉并装入玻璃毛细管中（约2–3 mm填充高度）。每种化合物制备三个平行样（CAF 1–3, ASP 1–3）以便取平均值并评估重复性。毛细管标记后插入OptiMelt样品室。
 
@@ -68,4 +68,4 @@ photos:
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a href="/archives/CHINESE/research/">研究</a></div><a class="footer-github" href="/research/20260405%20Melting%20Point/">English</a></div>
+<div class="footer"><div class="footer-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a href="/archives/CHINESE/research/">研究</a></div><a class="footer-github" href="/research/projects/20260405%20Melting%20Point/">English</a></div>

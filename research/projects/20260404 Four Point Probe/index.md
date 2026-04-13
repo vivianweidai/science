@@ -155,11 +155,11 @@ Conductive samples (coins, household metals) produced measurable sheet resistanc
 
 ## Data
 
-Raw data were photographs of the instrument display taken after each measurement. These were manually transcribed into a CSV file. The raw photos are in the <a href="https://github.com/vivianweidai/science/tree/main/research/20260404%20Four%20Point%20Probe/PHOTOS">PHOTOS</a> directory and the scrubbed <a href="https://github.com/vivianweidai/science/blob/main/research/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_readings.csv">CSV</a> is in the <a href="https://github.com/vivianweidai/science/tree/main/research/20260404%20Four%20Point%20Probe/OUTPUT">OUTPUT</a> directory.
+Raw data were photographs of the instrument display taken after each measurement. These were manually transcribed into a CSV file. The raw photos are in the <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260404%20Four%20Point%20Probe/PHOTOS">PHOTOS</a> directory and the scrubbed <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_readings.csv">CSV</a> is in the <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260404%20Four%20Point%20Probe/OUTPUT">OUTPUT</a> directory.
 
 ## Results
 
-In total 56 valid sheet resistance readings were collected at 9 µA. Three non-conductive samples (leaf, DVD, paper cardboard) returned Contact Limit at all current settings, and one metal washer reading was excluded due to an <a href="https://github.com/vivianweidai/science/blob/main/research/20260404%20Four%20Point%20Probe/PHOTOS/20260404%20Setup%2089.jpeg">incorrect current range (20 nA)</a> — the current had been changed while testing insulator samples to see if a different current could produce a detection, and was not reset before measuring the washer.
+In total 56 valid sheet resistance readings were collected at 9 µA. Three non-conductive samples (leaf, DVD, paper cardboard) returned Contact Limit at all current settings, and one metal washer reading was excluded due to an <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/PHOTOS/20260404%20Setup%2089.jpeg">incorrect current range (20 nA)</a> — the current had been changed while testing insulator samples to see if a different current could produce a detection, and was not reset before measuring the washer.
 
 | Sample | Material | n | Mean (Ω/□) | Range |
 |--------|----------|--:|------------|-------|
@@ -181,8 +181,8 @@ The quarter and spoon were the most conductive samples, while the brass house ke
 
 Readings fluctuated significantly during measurement — the display value drifted continuously and never fully stabilized, even on the same sample without moving the probes. Repeated measurements of the same item produced a wide spread of values, making it difficult to draw firm quantitative conclusions. The broad ranges in the table above reflect this instability rather than true differences between measurement points. Four-point probes are designed for flat, uniform samples with controlled contact pressure, so the irregular and curved surfaces of household objects likely contributed to the variability.
 
-See the <a href="https://github.com/vivianweidai/science/blob/main/research/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_analysis.ipynb">run the reproducible analysis yourself</a>.
+See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/OUTPUT/four_point_probe_analysis.ipynb">run the reproducible analysis yourself</a>.
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/research/20260404%20Four%20Point%20Probe">View on GitHub</a></div>
+<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/research/projects/20260404%20Four%20Point%20Probe">View on GitHub</a></div>

@@ -10,31 +10,31 @@ layout: default
   <div class="entry">
     <div class="top-line"><div class="month">April</div>
     <div class="chips-cell"><span class="chip chem">Chemistry</span></div></div>
-    <div class="name-cell"><a href="20260411%20Centrifuge/">Centrifuge</a> — Centrifugation and pH measurements of everyday liquids</div>
+    <div class="name-cell"><a href="projects/20260411%20Centrifuge/">Centrifuge</a> — Centrifugation and pH measurements of everyday liquids</div>
   </div>
 
   <div class="entry">
     <div class="top-line"><div class="month">April</div>
     <div class="chips-cell"><span class="chip chem">Chemistry</span></div></div>
-    <div class="name-cell"><a href="20260405%20Melting%20Point/">Melting Point</a> — Melting point determination of caffeine and aspirin</div>
+    <div class="name-cell"><a href="projects/20260405%20Melting%20Point/">Melting Point</a> — Melting point determination of caffeine and aspirin</div>
   </div>
 
   <div class="entry">
     <div class="top-line"><div class="month">April</div>
     <div class="chips-cell"><span class="chip phys">Physics</span></div></div>
-    <div class="name-cell"><a href="20260404%20Four%20Point%20Probe/">Four-Point Probe</a> — Sheet resistance of conductive materials</div>
+    <div class="name-cell"><a href="projects/20260404%20Four%20Point%20Probe/">Four-Point Probe</a> — Sheet resistance of conductive materials</div>
   </div>
 
   <div class="entry hl">
     <div class="top-line"><div class="month">April</div>
     <div class="chips-cell"><span class="chip chem">Chemistry</span></div></div>
-    <div class="name-cell"><a href="20260401%20IR%20Spectroscopy/">IR Spectroscopy</a> — Functional group identification of everyday materials</div>
+    <div class="name-cell"><a href="projects/20260401%20IR%20Spectroscopy/">IR Spectroscopy</a> — Functional group identification of everyday materials</div>
   </div>
 
   <div class="entry">
     <div class="top-line"><div class="month">April</div>
     <div class="chips-cell"><span class="chip bio">Biology</span></div></div>
-    <div class="name-cell"><a href="20260401%20Genes%20in%20Space/">Genes in Space</a> — Gene expression changes in microgravity</div>
+    <div class="name-cell"><a href="projects/20260401%20Genes%20in%20Space/">Genes in Space</a> — Gene expression changes in microgravity</div>
   </div>
 
   <div class="year-marker">2025</div>
@@ -42,7 +42,7 @@ layout: default
   <div class="entry">
     <div class="top-line"><div class="month">February</div>
     <div class="chips-cell"><span class="chip comp">Computing</span></div></div>
-    <div class="name-cell"><a href="20250225%20Catfood/">Cat Food Color Preference</a> — Red vs green food preference</div>
+    <div class="name-cell"><a href="projects/20250225%20Catfood/">Cat Food Color Preference</a> — Red vs green food preference</div>
   </div>
 </div>
 
@@ -103,14 +103,14 @@ layout: default
 
 ### Instruments
 
-- <span class="chip chem">Chemistry</span> <a href="20260401%20IR%20Spectroscopy/">Thermo Scientific Nicolet 380 FT-IR Spectrometer</a> — mid-IR absorption/transmittance spectra
-- <span class="chip chem">Chemistry</span> <a href="20260405%20Melting%20Point/">OptiMelt Automated Melting Point System</a> — melting point determination
-- <span class="chip chem">Chemistry</span> <a href="20260411%20Centrifuge/">Thermo Scientific Refrigerated Centrifuge</a> — separation of mixtures by density
-- <span class="chip chem">Chemistry</span> <a href="20260411%20Centrifuge/">VWR pH 1100 L</a> — benchtop pH measurements
-- <span class="chip phys">Physics</span> <a href="20260404%20Four%20Point%20Probe/">Jandel RM3 Four-Point Probe</a> — sheet resistance measurements
-- <span class="chip bio">Biology</span> <a href="20260401%20Genes%20in%20Space/">miniPCR Thermal Cycler</a> — PCR amplification of DNA/RNA targets
-- <span class="chip bio">Biology</span> <a href="20260401%20Genes%20in%20Space/">P51 Fluorescence Viewer</a> — fluorescence detection and gel imaging
-- <span class="chip bio">Biology</span> <a href="20260401%20Genes%20in%20Space/">BioBits Cell Free System</a> — in vitro protein expression from DNA templates
+- <span class="chip chem">Chemistry</span> <a href="projects/20260401%20IR%20Spectroscopy/">Thermo Scientific Nicolet 380 FT-IR Spectrometer</a> — mid-IR absorption/transmittance spectra
+- <span class="chip chem">Chemistry</span> <a href="projects/20260405%20Melting%20Point/">OptiMelt Automated Melting Point System</a> — melting point determination
+- <span class="chip chem">Chemistry</span> <a href="projects/20260411%20Centrifuge/">Thermo Scientific Refrigerated Centrifuge</a> — separation of mixtures by density
+- <span class="chip chem">Chemistry</span> <a href="projects/20260411%20Centrifuge/">VWR pH 1100 L</a> — benchtop pH measurements
+- <span class="chip phys">Physics</span> <a href="projects/20260404%20Four%20Point%20Probe/">Jandel RM3 Four-Point Probe</a> — sheet resistance measurements
+- <span class="chip bio">Biology</span> <a href="projects/20260401%20Genes%20in%20Space/">miniPCR Thermal Cycler</a> — PCR amplification of DNA/RNA targets
+- <span class="chip bio">Biology</span> <a href="projects/20260401%20Genes%20in%20Space/">P51 Fluorescence Viewer</a> — fluorescence detection and gel imaging
+- <span class="chip bio">Biology</span> <a href="projects/20260401%20Genes%20in%20Space/">BioBits Cell Free System</a> — in vitro protein expression from DNA templates
 - <span class="chip comp">Computing</span> GitHub, Python and Jupyter Notebooks — statistical analysis and reproducible research pipelines
 
 ---

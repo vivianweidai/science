@@ -2,32 +2,32 @@
 layout: chinese-project
 project: 猫粮颜色偏好
 photos:
-  - /research/20250225 Catfood/PHOTOS/20240901 Catfood A.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240901 Catfood B.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240901 Catfood C.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240901 Catfood D.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240906 Catfood.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240907 Catfood A.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240907 Catfood B.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240920 Catfood A.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240920 Catfood B.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240920 Catfood C.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240920 Catfood D.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240920 Catfood E.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240920 Catfood F.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240920 Catfood G.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240920 Catfood H.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240920 Catfood I.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240920 Catfood J.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240920 Catfood K.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240920 Catfood L.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240920 Catfood M.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240923 Catfood A.jpeg
-  - /research/20250225 Catfood/PHOTOS/20240923 Catfood B.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240901 Catfood A.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240901 Catfood B.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240901 Catfood C.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240901 Catfood D.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240906 Catfood.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240907 Catfood A.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240907 Catfood B.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240920 Catfood A.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240920 Catfood B.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240920 Catfood C.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240920 Catfood D.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240920 Catfood E.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240920 Catfood F.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240920 Catfood G.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240920 Catfood H.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240920 Catfood I.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240920 Catfood J.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240920 Catfood K.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240920 Catfood L.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240920 Catfood M.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240923 Catfood A.jpeg
+  - /research/projects/20250225 Catfood/PHOTOS/20240923 Catfood B.jpeg
 data_photos:
-  - /research/20250225 Catfood/DATA/20240901 Catfood B.jpeg
-  - /research/20250225 Catfood/DATA/20240907 Catfood B.jpeg
-  - /research/20250225 Catfood/DATA/20240920 Catfood N.jpeg
+  - /research/projects/20250225 Catfood/DATA/20240901 Catfood B.jpeg
+  - /research/projects/20250225 Catfood/DATA/20240907 Catfood B.jpeg
+  - /research/projects/20250225 Catfood/DATA/20240920 Catfood N.jpeg
 ---
 
 # 红色还是绿色，Mi更喜欢什么颜色的猫粮？
@@ -63,7 +63,7 @@ data_photos:
 
 ## 数据
 
-原始数据记录在手写数据表上并拍照。每次实验追踪的变量包括：日期、份数、投放和剩余粒数、碗的位置（左/右）、进食时间和色素滴数。原始手写数据表的照片可在<a href="https://github.com/vivianweidai/science/tree/main/research/20250225%20Catfood/DATA">DATA</a>中查看。偏好计数从手写记录转录到<a href="https://github.com/vivianweidai/science/blob/main/research/20250225%20Catfood/OUTPUT/catfood_summary.csv">catfood_summary.csv</a>。
+原始数据记录在手写数据表上并拍照。每次实验追踪的变量包括：日期、份数、投放和剩余粒数、碗的位置（左/右）、进食时间和色素滴数。原始手写数据表的照片可在<a href="https://github.com/vivianweidai/science/tree/main/research/projects/20250225%20Catfood/DATA">DATA</a>中查看。偏好计数从手写记录转录到<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/OUTPUT/catfood_summary.csv">catfood_summary.csv</a>。
 
 <div class="photo-grid three-col" id="data-grid">
   <img id="data-0" alt="数据表">
@@ -86,8 +86,8 @@ var allData = {{ page.data_photos | jsonify }};
 
 **注意 — 书面报告的更正：** Claude发现了原始PDF报告中的算术错误。报告将每个 (O − E)² 项除以30（观察总数）计算出 χ² = 0.266。正确的卡方公式应将每项除以该类别的期望计数（15），而非总数N。修正值为 χ² = (13 − 15)² / 15 + (17 − 15)² / 15 = 0.267 + 0.267 = **0.533**，如可重复笔记本中的计算所示。结论不变——两个值都远低于临界值3.841——但0.533是正确的检验统计量。
 
-查看<a href="https://github.com/vivianweidai/science/blob/main/research/20250225%20Catfood/OUTPUT/20250225%20Catfood.pdf">书面报告</a>、<a href="https://github.com/vivianweidai/science/blob/main/research/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">静态笔记本</a>或<a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">自行运行可重复分析</a>。
+查看<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/OUTPUT/20250225%20Catfood.pdf">书面报告</a>、<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">静态笔记本</a>或<a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">自行运行可重复分析</a>。
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a href="/archives/CHINESE/research/">研究</a></div><a class="footer-github" href="/research/20250225%20Catfood/">English</a></div>
+<div class="footer"><div class="footer-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a href="/archives/CHINESE/research/">研究</a></div><a class="footer-github" href="/research/projects/20250225%20Catfood/">English</a></div>

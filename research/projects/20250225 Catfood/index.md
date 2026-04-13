@@ -63,7 +63,7 @@ Colored cat food was prepared by mixing regular dry food with red and green food
 
 ## Data
 
-Raw data was recorded on handwritten data sheets and photographed. Variables tracked per trial include: date, serving number, pieces served and remaining, bowl position (left/right), serving time, and food dye drops used. The original handwritten data sheets are photographed and available in <a href="https://github.com/vivianweidai/science/tree/main/research/20250225%20Catfood/DATA">DATA</a>. The preference tallies were transcribed from these handwritten records into <a href="https://github.com/vivianweidai/science/blob/main/research/20250225%20Catfood/OUTPUT/catfood_summary.csv">catfood_summary.csv</a>.
+Raw data was recorded on handwritten data sheets and photographed. Variables tracked per trial include: date, serving number, pieces served and remaining, bowl position (left/right), serving time, and food dye drops used. The original handwritten data sheets are photographed and available in <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20250225%20Catfood/DATA">DATA</a>. The preference tallies were transcribed from these handwritten records into <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/OUTPUT/catfood_summary.csv">catfood_summary.csv</a>.
 
 <div class="photo-grid three-col" id="data-grid">
   <img id="data-0" alt="Data sheet">
@@ -86,8 +86,8 @@ Over 30 days, Mi chose red on 13 days and green on 17 days. A chi-squared goodne
 
 **Note — correction to written report:** Claude identified an arithmetic error in the original PDF report. The report calculates χ² = 0.266 by dividing each (O − E)² term by 30 (the total number of observations). The correct chi-squared formula divides each term by the expected count for that category (15), not the total N. The corrected value is χ² = (13 − 15)² / 15 + (17 − 15)² / 15 = 0.267 + 0.267 = **0.533**, as computed in the reproducible notebook. The conclusion is unchanged — both values fall well below the critical value of 3.841 — but 0.533 is the correct test statistic.
 
-See the <a href="https://github.com/vivianweidai/science/blob/main/research/20250225%20Catfood/OUTPUT/20250225%20Catfood.pdf">written report</a>, the <a href="https://github.com/vivianweidai/science/blob/main/research/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">run the reproducible analysis yourself</a>.
+See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/OUTPUT/20250225%20Catfood.pdf">written report</a>, the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">run the reproducible analysis yourself</a>.
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/research/20250225%20Catfood">View on GitHub</a></div>
+<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/research/projects/20250225%20Catfood">View on GitHub</a></div>
