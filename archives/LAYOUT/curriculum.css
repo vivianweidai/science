@@ -1,6 +1,6 @@
 /* Curriculum widget: 6-column grid that drills into topic content in place. */
 
-.curr-widget { margin: 1.5em 0; }
+.curr-widget { margin: 1.5em 0; width: 100%; box-sizing: border-box; }
 
 .curr-grid {
   display: grid;
@@ -9,6 +9,8 @@
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .curr-col {
