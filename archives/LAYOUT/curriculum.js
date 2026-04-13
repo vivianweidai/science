@@ -107,7 +107,7 @@
     var subj = manifest[state.subject];
     var html = '<div class="curr-subject">';
     html += '<div class="curr-breadcrumb">'
-         + '<a href="#" data-action="grid">All Subjects</a>'
+         + '<a href="#" data-action="grid">Science</a>'
          + '<span class="sep">/</span><strong>' + escapeHtml(subj.name) + '</strong>'
          + '</div>';
     html += '<div class="curr-subject-sections">';
@@ -168,9 +168,9 @@
 
     var html = '<div class="curr-topic">';
     html += '<div class="curr-breadcrumb">'
-         + '<a href="#" data-action="grid">All Subjects</a>'
+         + '<a href="#" data-action="grid">Science</a>'
          + '<span class="sep">/</span><a href="#" data-action="subject">' + escapeHtml(subj.name) + '</a>'
-         + '<span class="sep">/</span>' + escapeHtml(sec.name)
+         + '<span class="sep">/</span><a href="#" data-action="section">' + escapeHtml(sec.name) + '</a>'
          + '<span class="sep">/</span><strong>' + escapeHtml(topic.name) + '</strong>'
          + '</div>';
     html += '<div class="curr-topic-body"><div class="curr-loading">Loading…</div></div>';
@@ -196,6 +196,7 @@
         wrap.className = 'curr-table-wrap';
         wrap.innerHTML = marked.parse(md);
         applyHighlights(wrap, topic.tables[i].highlighted_rows || []);
+        mergeFirstColumn(wrap);
         body.appendChild(wrap);
       });
       whenKatexReady(function () {
@@ -222,6 +223,17 @@
     widget.querySelector('[data-action="subject"]').addEventListener('click', function (e) {
       e.preventDefault();
       state = { view: 'subject', subject: state.subject };
+      render();
+      scrollToWidget();
+    });
+    widget.querySelector('[data-action="section"]').addEventListener('click', function (e) {
+      e.preventDefault();
+      state = {
+        view: 'topic',
+        subject: state.subject,
+        sectionIdx: state.sectionIdx,
+        topicIdx: 0,
+      };
       render();
       scrollToWidget();
     });
@@ -278,6 +290,36 @@
           dataIdx += 1;
         }
       });
+    });
+  }
+
+  function mergeFirstColumn(container) {
+    var tables = container.querySelectorAll('table');
+    tables.forEach(function (table) {
+      var rows = table.querySelectorAll('tr');
+      var dataRows = [];
+      rows.forEach(function (tr) {
+        if (tr.querySelector('td')) dataRows.push(tr);
+      });
+      var i = 0;
+      while (i < dataRows.length) {
+        var cell = dataRows[i].querySelector('td');
+        var label = cell.textContent.trim();
+        var span = 1;
+        for (var j = i + 1; j < dataRows.length; j++) {
+          var next = dataRows[j].querySelector('td');
+          if (next.textContent.trim() === label) span++;
+          else break;
+        }
+        if (span > 1) {
+          cell.rowSpan = span;
+          cell.style.verticalAlign = 'middle';
+          for (var k = i + 1; k < i + span; k++) {
+            dataRows[k].querySelector('td').remove();
+          }
+        }
+        i += span;
+      }
     });
   }
 

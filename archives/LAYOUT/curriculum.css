@@ -128,8 +128,8 @@
 .curr-topic-body td {
   border: 1px solid #d1d9e0;
   padding: 0.45em 0.7em;
-  text-align: left;
-  vertical-align: top;
+  text-align: center;
+  vertical-align: middle;
 }
 .curr-topic-body th { background: #f6f8fa; }
 .curr-topic-body .katex { font-size: 1em; }
