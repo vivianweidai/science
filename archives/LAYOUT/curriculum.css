@@ -59,6 +59,8 @@
   border-radius: 8px;
   background: #fff;
   padding: 1em 1.4em 1.4em;
+  box-sizing: border-box;
+  width: 100%;
 }
 .curr-subject-head {
   font-size: 1.3em;
@@ -99,6 +101,8 @@
   border-radius: 8px;
   background: #fff;
   padding: 1em 1.4em 1.4em;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .curr-breadcrumb {
