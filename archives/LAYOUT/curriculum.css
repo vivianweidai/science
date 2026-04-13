@@ -1,16 +1,14 @@
 /* Curriculum widget: 6-column grid that drills into topic content in place. */
 
-.curr-widget { margin: 1.5em 0; width: 100%; box-sizing: border-box; overflow: hidden; }
+.curr-widget { margin: 1.5em 0; }
 
 .curr-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   border: 1px solid #d1d9e0;
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
-  box-sizing: border-box;
-  width: 100%;
 }
 
 .curr-col {
@@ -61,8 +59,6 @@
   border-radius: 8px;
   background: #fff;
   padding: 1em 1.4em 1.4em;
-  box-sizing: border-box;
-  width: 100%;
 }
 .curr-subject-head {
   font-size: 1.3em;
@@ -103,8 +99,6 @@
   border-radius: 8px;
   background: #fff;
   padding: 1em 1.4em 1.4em;
-  box-sizing: border-box;
-  width: 100%;
 }
 
 .curr-breadcrumb {
@@ -199,12 +193,12 @@
 }
 
 @media (max-width: 1000px) {
-  .curr-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .curr-grid { grid-template-columns: repeat(3, 1fr); }
   .curr-col:nth-child(3) { border-right: none; }
   .curr-col:nth-child(n+4) { border-top: 1px solid #d1d9e0; }
 }
 @media (max-width: 600px) {
-  .curr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .curr-grid { grid-template-columns: repeat(2, 1fr); }
   .curr-col { border-right: 1px solid #d1d9e0; }
   .curr-col:nth-child(2n) { border-right: none; }
   .curr-col:nth-child(n+3) { border-top: 1px solid #d1d9e0; }
