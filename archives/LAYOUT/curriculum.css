@@ -146,6 +146,9 @@
 .curr-topic-body tr:nth-child(even) td:not(:first-child) {
   background: #f6f8fa;
 }
+.curr-topic-body tr.highlight td:not(:first-child) {
+  background: #fff056 !important;
+}
 .curr-topic-body td.curr-group-cell {
   border-bottom: 1px solid #b0b4b8;
 }
