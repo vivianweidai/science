@@ -118,7 +118,13 @@ struct ProjectDetailView: View {
             if loading {
                 ProgressView()
             } else {
-                MarkdownWebView(markdown: markdown)
+                // MarkdownWebView's internal WKWebView scrolling is
+                // disabled (it now sizes its frame to content height),
+                // so the outer ScrollView here provides the scroll
+                // gesture for long project pages.
+                ScrollView {
+                    MarkdownWebView(markdown: markdown)
+                }
             }
         }
         .navigationTitle(project.title)
