@@ -135,9 +135,14 @@ struct ProjectDetailView: View {
             do {
                 let (data, _) = try await URLSession.shared.data(from: project.indexURL)
                 var md = String(data: data, encoding: .utf8) ?? ""
-                let photos = MarkdownHelper.extractPhotos(from: md)
+                // Extract both grids independently — the top photo grid
+                // (`photos:`) and the optional data-sheet grid
+                // (`data_photos:`, used by e.g. the Catfood project).
+                let photos = MarkdownHelper.extractPhotos(from: md, key: "photos")
+                let dataPhotos = MarkdownHelper.extractPhotos(from: md, key: "data_photos")
                 md = MarkdownHelper.stripFrontMatter(md)
                 md = MarkdownHelper.injectPhotos(md, photos: photos)
+                md = MarkdownHelper.injectDataPhotos(md, photos: dataPhotos)
                 md = MarkdownHelper.stripJekyllSyntax(md)
                 // Relative paths in the project's index.md resolve against
                 // the folder that contains index.md — derive that URL rather

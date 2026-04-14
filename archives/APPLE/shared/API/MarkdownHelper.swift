@@ -22,23 +22,35 @@ enum MarkdownHelper {
         return String(afterFrontMatter).trimmingCharacters(in: .newlines)
     }
 
-    /// Extract photo paths from YAML front matter.
-    static func extractPhotos(from md: String) -> [String] {
+    /// Extract photo paths from a specific YAML front-matter key.
+    /// Defaults to `"photos"` so existing call sites keep working; pass
+    /// `"data_photos"` to get the data-sheet grid entries instead.
+    ///
+    /// Projects like `20250225 Catfood` declare BOTH keys — `photos`
+    /// for the top experiment-photo grid and `data_photos` for a
+    /// separate data-sheet grid with `<img id="data-0">` slots. They
+    /// need to be extracted independently so each grid gets its own
+    /// list of sources.
+    static func extractPhotos(from md: String, key: String = "photos") -> [String] {
         let trimmed = md.trimmingCharacters(in: .whitespacesAndNewlines)
         guard trimmed.hasPrefix("---") else { return [] }
         let afterFirst = trimmed.dropFirst(3)
         guard let endRange = afterFirst.range(of: "\n---") else { return [] }
         let frontMatter = String(afterFirst[..<endRange.lowerBound])
         var photos: [String] = []
-        var inPhotos = false
+        var capturing = false
         for line in frontMatter.components(separatedBy: "\n") {
             let t = line.trimmingCharacters(in: .whitespaces)
-            if t.hasPrefix("photos:") || t.hasPrefix("data_photos:") { inPhotos = true; continue }
-            if inPhotos {
+            if t.hasPrefix("\(key):") {
+                capturing = true
+                continue
+            }
+            if capturing {
                 if t.hasPrefix("- ") {
                     photos.append(String(t.dropFirst(2)))
-                } else {
-                    inPhotos = false
+                } else if !t.isEmpty {
+                    // A new top-level key ended this list.
+                    capturing = false
                 }
             }
         }
@@ -47,13 +59,39 @@ enum MarkdownHelper {
 
     // MARK: - Photo injection
 
-    /// Replace empty photo-grid img tags with actual src from front matter.
+    /// Replace empty `<img id="photo-N">` tags in the experiment-photo
+    /// grid with actual src from the `photos:` front-matter array.
     static func injectPhotos(_ md: String, photos: [String]) -> String {
+        injectImageSources(
+            md, photos: photos,
+            idPrefix: "photo-", altText: "Experiment photo"
+        )
+    }
+
+    /// Replace empty `<img id="data-N">` tags in the data-sheet grid
+    /// (e.g. on the Catfood project) with actual src from the
+    /// `data_photos:` front-matter array. The webapp fills these via an
+    /// inline Jekyll script that our `stripJekyllSyntax` removes, so we
+    /// have to rewrite the sources statically before handing the
+    /// markdown to marked.js.
+    static func injectDataPhotos(_ md: String, photos: [String]) -> String {
+        injectImageSources(
+            md, photos: photos,
+            idPrefix: "data-", altText: "Data sheet"
+        )
+    }
+
+    private static func injectImageSources(
+        _ md: String,
+        photos: [String],
+        idPrefix: String,
+        altText: String
+    ) -> String {
         guard !photos.isEmpty else { return md }
         var result = md
-        for (i, photo) in photos.prefix(4).enumerated() {
-            let pattern = "<img id=\"photo-\(i)\" alt=\"Experiment photo\">"
-            let replacement = "<img id=\"photo-\(i)\" src=\"\(photo)\" alt=\"Experiment photo\">"
+        for (i, photo) in photos.enumerated() {
+            let pattern = "<img id=\"\(idPrefix)\(i)\" alt=\"\(altText)\">"
+            let replacement = "<img id=\"\(idPrefix)\(i)\" src=\"\(photo)\" alt=\"\(altText)\">"
             result = result.replacingOccurrences(of: pattern, with: replacement)
         }
         return result
