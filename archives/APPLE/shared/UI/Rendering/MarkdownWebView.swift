@@ -16,14 +16,17 @@ import SwiftUI
 /// multiple tables on one screen flow naturally inside an outer
 /// ScrollView without competing scroll gestures.
 ///
-/// On hosts without WebKit (watchOS, and `swift build` running on
-/// macOS host-only for type-checking) this falls back to a plain
-/// SwiftUI stub so call sites can embed it from shared code. The
-/// real rendering path is iOS-only. The guard is `canImport(WebKit)`
-/// rather than `canImport(UIKit)` because watchOS has UIKit but NOT
-/// WebKit — the narrower check is what lets `ScienceCoreUI` compile
-/// cleanly for the watchOS slice of the package.
-#if canImport(WebKit)
+/// On hosts missing UIKit or WebKit (macOS host-only `swift build`
+/// type-checking; watchOS, which has UIKit but not WebKit) this falls
+/// back to a plain SwiftUI stub so call sites can embed it from
+/// shared code. The real rendering path is iOS/iPadOS only.
+///
+/// Both conditions have to hold: watchOS has UIKit but no WebKit, so
+/// `canImport(UIKit)` alone leaks to watchOS and breaks the
+/// `import WebKit` line. macOS has WebKit but no UIKit, so
+/// `canImport(WebKit)` alone breaks the `import UIKit` line. The
+/// intersection is iOS/iPadOS/tvOS, which is exactly what we want.
+#if canImport(UIKit) && canImport(WebKit)
 
 import UIKit
 import WebKit
