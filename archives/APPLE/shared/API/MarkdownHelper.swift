@@ -79,9 +79,19 @@ enum MarkdownHelper {
     // MARK: - URL resolution
 
     /// Rewrite relative image/link paths to absolute GitHub raw URLs.
-    static func resolveRelativeURLs(in markdown: String, folder: String) -> String {
-        let encoded = folder.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? folder
-        let base = "https://raw.githubusercontent.com/vivianweidai/science/main/research/\(encoded)/"
+    ///
+    /// `baseURL` must be the raw.githubusercontent.com URL of the folder
+    /// that contains the markdown file (i.e. `indexURL.deletingLastPathComponent()`).
+    /// Callers pass this through rather than hardcoding the repo layout so
+    /// that reorganizations like `research/` → `research/projects/` do not
+    /// silently break photo resolution here.
+    static func resolveRelativeURLs(in markdown: String, baseURL: URL) -> String {
+        // AbsoluteString on a URL produced by deletingLastPathComponent is
+        // already percent-encoded, and we guarantee it ends with a slash so
+        // simple concatenation with an encoded relative path yields a valid
+        // absolute URL.
+        var base = baseURL.absoluteString
+        if !base.hasSuffix("/") { base += "/" }
 
         var result = markdown
 

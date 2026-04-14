@@ -1,13 +1,20 @@
 import Foundation
 
-/// Lists research project folders under /research/ by querying the GitHub
-/// contents API. Each folder is named `YYYYMMDD Project Name`.
+/// Lists research project folders under /research/projects/ by querying the
+/// GitHub contents API. Each folder is named `YYYYMMDD Project Name`.
+///
+/// Note: projects used to live directly under /research/, but that folder
+/// now also holds `archives/` (reference PDFs and instrument manuals) and
+/// `index.md` (the Jekyll landing page). The loader targets the
+/// `research/projects/` subfolder so only real project directories are
+/// enumerated.
 public actor ResearchLoader {
     public static let shared = ResearchLoader()
 
     private static let owner = "vivianweidai"
     private static let repo = "science"
     private static let branch = "main"
+    private static let projectsPath = "research/projects"
 
     private let session: URLSession
 
@@ -16,7 +23,7 @@ public actor ResearchLoader {
     }
 
     public func projects() async throws -> [ResearchProject] {
-        guard let url = URL(string: "https://api.github.com/repos/\(Self.owner)/\(Self.repo)/contents/research?ref=\(Self.branch)") else {
+        guard let url = URL(string: "https://api.github.com/repos/\(Self.owner)/\(Self.repo)/contents/\(Self.projectsPath)?ref=\(Self.branch)") else {
             throw URLError(.badURL)
         }
         var request = URLRequest(url: url)

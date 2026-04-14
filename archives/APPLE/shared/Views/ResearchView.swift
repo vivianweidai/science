@@ -68,7 +68,11 @@ struct ProjectDetailView: View {
                 md = MarkdownHelper.stripFrontMatter(md)
                 md = MarkdownHelper.injectPhotos(md, photos: photos)
                 md = MarkdownHelper.stripJekyllSyntax(md)
-                md = MarkdownHelper.resolveRelativeURLs(in: md, folder: project.folder)
+                // Relative paths in the project's index.md resolve against
+                // the folder that contains index.md — derive that URL rather
+                // than hardcoding the repo layout in MarkdownHelper.
+                let folderURL = project.indexURL.deletingLastPathComponent()
+                md = MarkdownHelper.resolveRelativeURLs(in: md, baseURL: folderURL)
                 markdown = md
             } catch {
                 markdown = "# Error\n\n\(error.localizedDescription)"

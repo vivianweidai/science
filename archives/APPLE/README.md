@@ -12,7 +12,9 @@ Three tabs:
 - **Olympiads** — contests tracker plus unified textbooks list, read
   from `archives/CONTENT/olympiads.json` (built from
   `olympiads.yml` via `archives/LAYOUT/build_olympiads.py`).
-- **Research** — experimental data projects under `/research/`.
+- **Research** — experimental data projects under `/research/projects/`
+  (the `/research/` folder itself also holds `archives/` reference PDFs
+  and `index.md`, which the app ignores).
 
 ## Layout
 
