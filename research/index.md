@@ -73,12 +73,12 @@ layout: default
     font-size: .72em; font-weight: 600; color: #1f2328;
     text-align: center; white-space: nowrap; line-height: 1.6;
   }
-  .chip.math  { background: #c5d9f7; }
-  .chip.comp  { background: #d9ccee; }
-  .chip.phys  { background: #f9c4a8; }
-  .chip.chem  { background: #d4e8a0; }
-  .chip.bio   { background: #a8ddd4; }
-  .chip.astro { background: #f4c2cb; }
+  .chip.math  { background: var(--subj-math); }
+  .chip.comp  { background: var(--subj-comp); }
+  .chip.phys  { background: var(--subj-phys); }
+  .chip.chem  { background: var(--subj-chem); }
+  .chip.bio   { background: var(--subj-bio); }
+  .chip.astro { background: var(--subj-astro); }
 
   @media (max-width: 600px) {
     .timeline .entry {
