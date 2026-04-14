@@ -3,6 +3,8 @@ layout: default
 title: Vivian Dai
 ---
 
+<a class="ios-badge" href="https://apps.apple.com/app/id6762091743">iOS app</a>
+
 ## Science
 
 <img src="archives/CONTENT/science.png" alt="Science" width="100%">
