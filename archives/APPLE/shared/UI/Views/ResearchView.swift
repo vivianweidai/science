@@ -1,4 +1,5 @@
 import SwiftUI
+import ScienceCore
 
 struct ResearchView: View {
     @State private var projects: [ResearchProject] = []

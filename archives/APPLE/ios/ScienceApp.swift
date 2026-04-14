@@ -1,5 +1,5 @@
 import SwiftUI
-import ScienceCore
+import ScienceCoreUI
 
 @main
 struct ScienceApp: App {

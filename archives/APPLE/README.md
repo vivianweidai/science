@@ -1,8 +1,20 @@
 # Science — Apple App
 
-Universal SwiftUI app that mirrors vivianweidai.com on iPhone and iPad.
-One SwiftPM package (`ScienceCore`) holds all shared Models, API clients,
-and Views; the `ios/` folder is a thin `@main` entry point.
+Universal SwiftUI app that mirrors vivianweidai.com on iPhone and iPad,
+with an embedded watchOS companion focused on the olympiads timeline.
+
+The SwiftPM package is split in two so the watch target can share data
+and grouping logic without dragging in WebKit:
+
+- **`ScienceCore`** — platform-neutral Models, API clients, and the
+  `ActivityGrouping` / `SubjectPaletteRGB` helpers. Builds on iOS,
+  watchOS, and macOS.
+- **`ScienceCoreUI`** — iOS-only SwiftUI views (`RootTabView`,
+  `CurriculumView`, `OlympiadsView`, `ResearchView`) and the KaTeX
+  `MarkdownWebView`. Depends on `ScienceCore`.
+
+The iPhone/iPad target imports `ScienceCoreUI`; the watch target
+imports only `ScienceCore` and owns its own views under `watch/`.
 
 Three tabs:
 
@@ -22,20 +34,31 @@ Three tabs:
 
 ```
 archives/APPLE/
-├── Package.swift             SwiftPM manifest — platform: iOS 17
+├── Package.swift             SwiftPM manifest — iOS 17 + watchOS 10
 ├── project.yml               XcodeGen spec — regenerate with `xcodegen generate`
-├── shared/                   ScienceCore library
-│   ├── Models/               Activity, ResearchProject, CurriculumManifest, Manifest
-│   ├── API/                  APIClient, CurriculumLoader, ResearchLoader, MarkdownHelper
-│   ├── Rendering/            MarkdownWebView + katex-shell.html
-│   └── Views/
-│       ├── RootTabView.swift          Root (3-tab TabView)
-│       ├── CurriculumView.swift       Flashcard browser
-│       ├── OlympiadsView.swift        Contests + textbooks
-│       └── ResearchView.swift         Research projects
+├── shared/
+│   ├── Core/                 ScienceCore library (platform-neutral)
+│   │   ├── Models/           Activity, ResearchProject, CurriculumManifest, Manifest
+│   │   ├── API/              APIClient, CurriculumLoader, ResearchLoader, MarkdownHelper
+│   │   └── Grouping/         ActivityGrouping, SubjectPaletteRGB
+│   └── UI/                   ScienceCoreUI library (iOS-only)
+│       ├── Rendering/        MarkdownWebView + katex-shell.html
+│       └── Views/
+│           ├── RootTabView.swift          Root (3-tab TabView)
+│           ├── CurriculumView.swift       Flashcard browser
+│           ├── OlympiadsView.swift        Contests + textbooks
+│           └── ResearchView.swift         Research projects
 ├── ios/                      iPhone + iPad target
 │   ├── ScienceApp.swift      @main → RootTabView
 │   └── Assets.xcassets/
+└── watch/                    watchOS companion target
+    ├── ScienceWatchApp.swift      @main → OlympiadsRootView
+    ├── OlympiadsRootView.swift    Load/refresh + filter state
+    ├── OlympiadsListView.swift    Year-grouped List
+    ├── ActivityRowView.swift      Compact watch-sized row
+    ├── SubjectFilterSheet.swift   Subject picker
+    ├── SubjectColor.swift         SwiftUI Color bridge
+    └── Assets.xcassets/
 ```
 
 ## Building
@@ -43,9 +66,11 @@ archives/APPLE/
 Run `xcodegen generate` from this directory to create `Science.xcodeproj`,
 then open in Xcode.
 
-- **Deployment target:** iOS 17
-- **Supported destinations:** iPhone, iPad
-- **Bundle ID:** `com.vivianweidai.science`
-- **Dependency:** the local `ScienceCore` library from `Package.swift`
+- **Deployment targets:** iOS 17, watchOS 10
+- **Supported destinations:** iPhone, iPad, Apple Watch
+- **Bundle IDs:** `com.vivianweidai.science`, `com.vivianweidai.science.watchkitapp`
+- **Watch app is embedded in the iOS app bundle** — installing Science
+  on the iPhone auto-installs the olympiads companion on a paired watch.
+- **Dependencies:** iOS target → `ScienceCoreUI`, watch target → `ScienceCore`.
 
 All data comes from public GitHub raw URLs — no auth, no backend, no writes.

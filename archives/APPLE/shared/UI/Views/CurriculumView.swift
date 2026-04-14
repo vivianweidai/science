@@ -1,4 +1,5 @@
 import SwiftUI
+import ScienceCore
 
 /// Curriculum landing page. Mirrors the webapp at /curriculum/ with a
 /// vertical list of the six subjects in canonical order (Mathematics first,

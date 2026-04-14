@@ -2,7 +2,7 @@ import Foundation
 
 /// Markdown processing utilities for transforming GitHub-hosted project
 /// pages into content suitable for the iOS WKWebView renderer.
-enum MarkdownHelper {
+public enum MarkdownHelper {
 
     // MARK: - Cached regex patterns
 
@@ -13,7 +13,7 @@ enum MarkdownHelper {
     // MARK: - Front matter
 
     /// Strip YAML front matter (--- ... ---) from the top of markdown.
-    static func stripFrontMatter(_ md: String) -> String {
+    public static func stripFrontMatter(_ md: String) -> String {
         let trimmed = md.trimmingCharacters(in: .whitespacesAndNewlines)
         guard trimmed.hasPrefix("---") else { return md }
         let afterFirst = trimmed.dropFirst(3)
@@ -31,7 +31,7 @@ enum MarkdownHelper {
     /// separate data-sheet grid with `<img id="data-0">` slots. They
     /// need to be extracted independently so each grid gets its own
     /// list of sources.
-    static func extractPhotos(from md: String, key: String = "photos") -> [String] {
+    public static func extractPhotos(from md: String, key: String = "photos") -> [String] {
         let trimmed = md.trimmingCharacters(in: .whitespacesAndNewlines)
         guard trimmed.hasPrefix("---") else { return [] }
         let afterFirst = trimmed.dropFirst(3)
@@ -61,7 +61,7 @@ enum MarkdownHelper {
 
     /// Replace empty `<img id="photo-N">` tags in the experiment-photo
     /// grid with actual src from the `photos:` front-matter array.
-    static func injectPhotos(_ md: String, photos: [String]) -> String {
+    public static func injectPhotos(_ md: String, photos: [String]) -> String {
         injectImageSources(
             md, photos: photos,
             idPrefix: "photo-", altText: "Experiment photo"
@@ -74,7 +74,7 @@ enum MarkdownHelper {
     /// inline Jekyll script that our `stripJekyllSyntax` removes, so we
     /// have to rewrite the sources statically before handing the
     /// markdown to marked.js.
-    static func injectDataPhotos(_ md: String, photos: [String]) -> String {
+    public static func injectDataPhotos(_ md: String, photos: [String]) -> String {
         injectImageSources(
             md, photos: photos,
             idPrefix: "data-", altText: "Data sheet"
@@ -100,7 +100,7 @@ enum MarkdownHelper {
     // MARK: - Jekyll cleanup
 
     /// Remove Jekyll/Liquid template syntax that won't render in the app.
-    static func stripJekyllSyntax(_ md: String) -> String {
+    public static func stripJekyllSyntax(_ md: String) -> String {
         var result = md
         let ns = result as NSString
         result = scriptRegex.stringByReplacingMatches(
@@ -123,7 +123,7 @@ enum MarkdownHelper {
     /// Callers pass this through rather than hardcoding the repo layout so
     /// that reorganizations like `research/` → `research/projects/` do not
     /// silently break photo resolution here.
-    static func resolveRelativeURLs(in markdown: String, baseURL: URL) -> String {
+    public static func resolveRelativeURLs(in markdown: String, baseURL: URL) -> String {
         // AbsoluteString on a URL produced by deletingLastPathComponent is
         // already percent-encoded, and we guarantee it ends with a slash so
         // simple concatenation with an encoded relative path yields a valid

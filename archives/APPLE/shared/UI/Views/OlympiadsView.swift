@@ -1,4 +1,5 @@
 import SwiftUI
+import ScienceCore
 
 /// Unified chronological timeline of olympiads + textbooks, visually matching
 /// the webapp at /olympiads/. Groups entries by year (newest first, Future
@@ -49,45 +50,18 @@ struct OlympiadsView: View {
     }
 
     // MARK: - Grouping
+    //
+    // The filter + year bucketing logic lives in `ScienceCore` so the
+    // watchOS companion app shares identical semantics. This view just
+    // maps its enum filter onto the shared helpers.
 
-    private var filtered: [Activity] {
-        let items: [Activity]
-        switch subject {
-        case .all:
-            items = activities
-        case .named(let name):
-            items = activities.filter { activity in
-                if let all = activity.subjects, !all.isEmpty {
-                    return all.contains(name)
-                }
-                return activity.subject == name
-            }
-        }
-        return items.sorted { $0.sortKey > $1.sortKey }
-    }
-
-    private var yearGroups: [YearGroup] {
-        var order: [String] = []
-        var buckets: [String: [Activity]] = [:]
-        for entry in filtered {
-            let year: String
-            if entry.sortKey == "9999-12" {
-                year = "Future"
-            } else {
-                year = String(entry.sortKey.prefix(4))
-            }
-            if buckets[year] == nil {
-                order.append(year)
-                buckets[year] = []
-            }
-            buckets[year]?.append(entry)
-        }
-        return order.map { YearGroup(year: $0, entries: buckets[$0] ?? []) }
-    }
-
-    private struct YearGroup {
-        let year: String
-        let entries: [Activity]
+    private var yearGroups: [ActivityGrouping.YearGroup] {
+        let subjectName: String? = {
+            if case .named(let name) = subject { return name }
+            return nil
+        }()
+        let filtered = ActivityGrouping.filtered(activities, subject: subjectName)
+        return ActivityGrouping.groupedByYear(filtered)
     }
 
     // MARK: - Loading
@@ -413,16 +387,12 @@ private struct OlympicRings: View {
 
 // MARK: - Subject palette
 
+/// Thin SwiftUI wrapper over `ScienceCore.SubjectPaletteRGB`. The raw
+/// (r,g,b) tuples live in Core so the watchOS companion can share them
+/// without dragging SwiftUI into the platform-neutral target.
 enum SubjectPalette {
     static func color(for subject: String) -> Color {
-        switch subject {
-        case "Mathematics": return Color(red: 0.773, green: 0.851, blue: 0.969) // #c5d9f7
-        case "Computing":   return Color(red: 0.851, green: 0.800, blue: 0.933) // #d9ccee
-        case "Physics":     return Color(red: 0.976, green: 0.769, blue: 0.659) // #f9c4a8
-        case "Chemistry":   return Color(red: 0.831, green: 0.910, blue: 0.627) // #d4e8a0
-        case "Biology":     return Color(red: 0.659, green: 0.867, blue: 0.831) // #a8ddd4
-        case "Astronomy":   return Color(red: 0.957, green: 0.761, blue: 0.796) // #f4c2cb
-        default:            return Color(red: 0.82, green: 0.82, blue: 0.84)    // neutral gray fallback
-        }
+        let rgb = SubjectPaletteRGB.rgb(for: subject)
+        return Color(red: rgb.red, green: rgb.green, blue: rgb.blue)
     }
 }
