@@ -66,8 +66,8 @@ struct ActivityDetailView: View {
     }
 
     /// Every subject the activity participates in — not just the
-    /// primary like the list row shows. Wraps to new lines when
-    /// multiple disciplines don't fit on one.
+    /// primary like the list row shows. One chip per line so the
+    /// narrow watch canvas never has to squeeze a chip's text.
     private var subjectChips: some View {
         let all: [String]
         if let subjects = activity.subjects, !subjects.isEmpty {
@@ -75,7 +75,11 @@ struct ActivityDetailView: View {
         } else {
             all = [activity.subject]
         }
-        return FlowingChips(labels: all)
+        return VStack(alignment: .leading, spacing: 4) {
+            ForEach(all, id: \.self) { label in
+                SubjectPillDetail(subject: label)
+            }
+        }
     }
 
     /// One chip per badge state. Kept as short strings so the flow
@@ -104,52 +108,15 @@ private struct BadgeView: View {
     }
 }
 
-/// Simple wrapping chip row. Watch SwiftUI doesn't have a built-in
-/// flow layout and `Layout` conformances on older watchOS were
-/// finicky — this is a hand-rolled GeometryReader-free approach that
-/// works for our small N (at most three or four subjects).
-private struct FlowingChips: View {
-    let labels: [String]
-
-    var body: some View {
-        // Two-row layout works for up to six chips; the olympiads
-        // dataset currently has at most three subjects on any single
-        // activity so rows almost always collapse to one.
-        let rows = split(labels, perRow: 3)
-        VStack(alignment: .leading, spacing: 4) {
-            ForEach(Array(rows.enumerated()), id: \.offset) { _, row in
-                HStack(spacing: 4) {
-                    ForEach(row, id: \.self) { label in
-                        SubjectPillDetail(subject: label)
-                    }
-                }
-            }
-        }
-    }
-
-    private func split(_ items: [String], perRow: Int) -> [[String]] {
-        guard !items.isEmpty else { return [] }
-        var out: [[String]] = []
-        var current: [String] = []
-        for item in items {
-            current.append(item)
-            if current.count == perRow {
-                out.append(current)
-                current = []
-            }
-        }
-        if !current.isEmpty { out.append(current) }
-        return out
-    }
-}
-
 private struct SubjectPillDetail: View {
     let subject: String
 
     var body: some View {
         Text(subject)
-            .font(.system(size: 10, weight: .semibold))
-            .padding(.horizontal, 6)
+            .font(.system(size: 11, weight: .semibold))
+            .lineLimit(1)
+            .fixedSize(horizontal: true, vertical: false)
+            .padding(.horizontal, 7)
             .padding(.vertical, 2)
             .background(Capsule().fill(SubjectColor.color(for: subject)))
             .foregroundStyle(Color.black.opacity(0.82))
