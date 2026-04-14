@@ -59,7 +59,9 @@ struct ProjectDetailView: View {
             }
         }
         .navigationTitle(project.title)
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
         .task {
             do {
                 let (data, _) = try await URLSession.shared.data(from: project.indexURL)

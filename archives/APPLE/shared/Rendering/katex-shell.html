@@ -12,25 +12,81 @@
   ], throwOnError: false });"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
 <style>
-  :root { color-scheme: light dark; }
+  /* Table styling mirrors archives/LAYOUT/curriculum.css .curr-topic-body
+     so iOS curriculum tables feel like the webapp: gray headers, bordered
+     cells, centered text, zebra stripes, and a highlighted first column.
+     Colors use CSS variables so dark mode tones down rather than inverts. */
+
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1f2328;
+    --muted: #656d76;
+    --border: #d1d9e0;
+    --th-bg: #c0c4c8;
+    --td-first-bg: #d5d8dc;
+    --zebra-bg: #f6f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1c1c1e;
+      --fg: #e6edf3;
+      --muted: #8b949e;
+      --border: #30363d;
+      --th-bg: #2d333b;
+      --td-first-bg: #22272e;
+      --zebra-bg: #1a1d21;
+    }
+  }
+
   body {
     font-family: -apple-system, system-ui, sans-serif;
     font-size: 16px;
     line-height: 1.5;
     margin: 0;
     padding: 16px;
+    background: var(--bg);
+    color: var(--fg);
   }
-  table { border-collapse: collapse; width: 100%; margin: 12px 0; }
-  th, td { border: 1px solid #8886; padding: 6px 10px; text-align: left; vertical-align: top; }
-  th { background: #8881; }
+
   h1 { font-size: 1.4em; margin: 0 0 12px; }
+  h2 { font-size: 1.15em; margin: 16px 0 8px; }
+  h3 { font-size: 1.02em; margin: 14px 0 6px; }
+
+  /* Curriculum-style tables: gray header, bordered cells, centered,
+     zebra-striped (even rows), first-column highlight. */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0 16px;
+    font-size: 0.93em;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 6px 10px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  th {
+    background: var(--th-bg);
+    font-weight: 700;
+    font-size: 0.98em;
+  }
+  td:first-child {
+    background: var(--td-first-bg);
+    font-weight: 600;
+  }
+  tr:nth-child(even) td:not(:first-child) {
+    background: var(--zebra-bg);
+  }
+
   .katex { font-size: 1em; }
   img { max-width: 100%; height: auto; border-radius: 8px; margin: 4px 0; }
   .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 12px 0; }
   .photo-grid img { width: 100%; height: auto; object-fit: cover; border-radius: 6px; }
   .hero-single img { max-width: 100%; height: auto; max-height: 300px; object-fit: cover; border-radius: 8px; }
   .shuffle-btn { display: none; }
-  .project-meta { text-align: right; color: #888; font-size: 0.9em; margin: 8px 0 16px; }
+  .project-meta { text-align: right; color: var(--muted); font-size: 0.9em; margin: 8px 0 16px; }
   .footer { display: none; }
 </style>
 </head>
