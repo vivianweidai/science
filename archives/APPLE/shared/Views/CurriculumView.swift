@@ -96,7 +96,9 @@ private struct SubjectRow: View {
 
 /// Level 2: one subject expanded into its sections. The webapp uses a
 /// 3-col section grid; iOS collapses this into a simple list in the same
-/// canonical order (`build_curriculum.py:SECTION_ORDER`).
+/// canonical order (`build_curriculum.py:SECTION_ORDER`). The navigation
+/// bar is tinted with the subject's canonical color so the user always
+/// knows which subject branch they're in.
 struct CurriculumSubjectView: View {
     let subject: CurriculumSubject
 
@@ -115,6 +117,8 @@ struct CurriculumSubjectView: View {
         .navigationTitle(subject.name)
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(SubjectPalette.color(for: subject.name), for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
         #endif
     }
 }
@@ -124,7 +128,8 @@ struct CurriculumSubjectView: View {
 /// Level 3: a single section expanded into its topics. One row per topic;
 /// the subtitle lists the actual table names belonging to that topic
 /// (in source-of-truth order) so the user sees concrete content, not
-/// just a count.
+/// just a count. The navigation bar carries the subject's canonical
+/// color through from the parent subject view.
 struct CurriculumSectionView: View {
     let subject: CurriculumSubject
     let section: CurriculumSection
@@ -151,6 +156,8 @@ struct CurriculumSectionView: View {
         .navigationTitle(section.name)
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(SubjectPalette.color(for: subject.name), for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
         #endif
     }
 }
@@ -180,6 +187,8 @@ struct CurriculumTopicView: View {
         .navigationTitle(topic.name)
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(SubjectPalette.color(for: subject.name), for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
         #endif
     }
 
