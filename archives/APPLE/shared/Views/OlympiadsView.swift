@@ -9,7 +9,7 @@ import SwiftUI
 /// in sync with the timeline JS there when the design changes.
 struct OlympiadsView: View {
     @State private var activities: [Activity] = []
-    @State private var subject: SubjectFilter = .all
+    @State private var subject: SubjectFilter = SubjectFilter.randomSubject()
     @State private var initialLoading = true
     @State private var errorMessage: String?
 
@@ -134,6 +134,17 @@ private enum SubjectFilter: Hashable {
         .named("Astronomy"),
     ]
 
+    /// Pick a random non-"All" subject for the initial filter on launch,
+    /// matching the webapp which randomly preselects one of the six subject
+    /// tabs each page load (see olympiads/index.md line 16-18).
+    static func randomSubject() -> SubjectFilter {
+        let subjects: [SubjectFilter] = allCases.filter {
+            if case .all = $0 { return false }
+            return true
+        }
+        return subjects.randomElement() ?? .all
+    }
+
     var label: String {
         switch self {
         case .all: return "All"
@@ -257,9 +268,14 @@ private struct YearSection: View {
 private struct ActivityRow: View {
     let activity: Activity
 
+    /// The month label shown in the timeline column. The source-of-truth
+    /// dates are full month names ("December 2025"); we abbreviate to three
+    /// letters here so longer names don't wrap in the narrow fixed-width
+    /// column. Source data is untouched.
     private var month: String {
         guard activity.date != "Future" else { return "" }
-        return activity.date.split(separator: " ").first.map(String.init) ?? ""
+        let full = activity.date.split(separator: " ").first.map(String.init) ?? ""
+        return String(full.prefix(3))
     }
 
     private var chips: [String] {

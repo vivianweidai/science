@@ -1,159 +1,51 @@
 import SwiftUI
 
-/// Curriculum landing page. Visually mirrors the webapp's 6-column subject
-/// grid at /curriculum/ — a color-coded card for each of the six subjects,
-/// tapping into a sectioned list of topics with markdown-table content.
+/// Curriculum landing page. Mirrors the webapp at /curriculum/ with a
+/// vertical list of the six subjects in canonical order (Mathematics first,
+/// Astronomy last). Tapping a subject cascades into sections → topics →
+/// tables, each level preserving the order that `build_curriculum.py`
+/// writes into `archives/CONTENT/curriculum.json`.
 struct CurriculumView: View {
-    private let subjects = [
-        "mathematics", "computing", "physics",
-        "chemistry", "biology", "astronomy",
-    ]
+    @State private var manifest: CurriculumManifest?
+    @State private var initialLoading = true
+    @State private var errorMessage: String?
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVGrid(
-                    columns: [GridItem(.adaptive(minimum: 150), spacing: 12)],
-                    spacing: 12
-                ) {
-                    ForEach(subjects, id: \.self) { subject in
-                        NavigationLink {
-                            SubjectNotesView(subject: subject)
-                        } label: {
-                            SubjectCard(subject: subject)
-                        }
-                        .buttonStyle(.plain)
-                    }
+            Group {
+                if initialLoading {
+                    ProgressView()
+                } else if manifest == nil, let errorMessage {
+                    ErrorState(message: errorMessage)
+                } else if let manifest {
+                    subjectList(manifest)
                 }
-                .padding()
             }
             .navigationTitle("Curriculum")
-        }
-    }
-}
-
-/// Large colored card for a subject on the curriculum grid.
-private struct SubjectCard: View {
-    let subject: String
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text(subject.capitalized)
-                .font(.system(size: 18, weight: .bold))
-                .foregroundStyle(Color.black.opacity(0.82))
-            Text("Tables & formulas")
-                .font(.system(size: 11, weight: .regular))
-                .foregroundStyle(Color.black.opacity(0.55))
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.horizontal, 14)
-        .padding(.vertical, 18)
-        .background(
-            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(SubjectPalette.color(for: subject.capitalized))
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .stroke(Color.black.opacity(0.08), lineWidth: 1)
-        )
-    }
-}
-
-/// Section/topic list for one subject. Groups cards by section, matching the
-/// webapp drill-down (subject → section → topic → table). Each row opens a
-/// `FlashcardView` that renders the markdown table with KaTeX.
-struct SubjectNotesView: View {
-    let subject: String
-
-    @State private var cards: [NoteCard] = []
-    @State private var initialLoading = true
-    @State private var errorMessage: String?
-    @State private var search = ""
-
-    private var sectionGroups: [SectionGroup] {
-        let filtered: [NoteCard]
-        if search.isEmpty {
-            filtered = cards
-        } else {
-            filtered = cards.filter {
-                $0.table.localizedCaseInsensitiveContains(search) ||
-                $0.topic.localizedCaseInsensitiveContains(search) ||
-                $0.body.localizedCaseInsensitiveContains(search)
-            }
-        }
-
-        var order: [String] = []
-        var buckets: [String: [NoteCard]] = [:]
-        for card in filtered {
-            if buckets[card.section] == nil {
-                order.append(card.section)
-                buckets[card.section] = []
-            }
-            buckets[card.section]?.append(card)
-        }
-        return order.map { name in
-            SectionGroup(
-                name: name,
-                cards: buckets[name]?.sorted { ($0.topic, $0.order) < ($1.topic, $1.order) } ?? []
-            )
+            .task { await load() }
+            .refreshable { await refresh() }
         }
     }
 
-    private struct SectionGroup: Identifiable {
-        var id: String { name }
-        let name: String
-        let cards: [NoteCard]
-    }
-
-    var body: some View {
-        Group {
-            if initialLoading {
-                ProgressView()
-            } else if cards.isEmpty, let errorMessage {
-                ErrorState(message: errorMessage)
-            } else {
-                content
-            }
-        }
-        .navigationTitle(subject.capitalized)
-        #if os(iOS)
-        .navigationBarTitleDisplayMode(.inline)
-        #endif
-        .task { await load() }
-        .refreshable { await refresh() }
-    }
-
-    private var content: some View {
-        List {
-            ForEach(sectionGroups) { group in
-                Section {
-                    ForEach(group.cards) { card in
-                        NavigationLink {
-                            FlashcardView(card: card)
-                        } label: {
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text(card.table)
-                                    .font(.system(size: 15, weight: .semibold))
-                                Text(card.topic)
-                                    .font(.system(size: 12))
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
+    private func subjectList(_ manifest: CurriculumManifest) -> some View {
+        ScrollView {
+            LazyVStack(spacing: 12) {
+                ForEach(manifest.subjects) { subject in
+                    NavigationLink {
+                        CurriculumSubjectView(subject: subject)
+                    } label: {
+                        SubjectRow(subject: subject)
                     }
-                } header: {
-                    Text(group.name)
-                        .font(.system(size: 12, weight: .semibold))
-                        .foregroundStyle(.secondary)
+                    .buttonStyle(.plain)
                 }
             }
+            .padding()
         }
-        .searchable(text: $search)
     }
 
     private func load() async {
-        guard cards.isEmpty else { return }
         do {
-            cards = try await NotesLoader.shared.cards(forSubject: subject)
+            manifest = try await CurriculumLoader.shared.manifest()
             errorMessage = nil
         } catch {
             errorMessage = error.localizedDescription
@@ -162,47 +54,141 @@ struct SubjectNotesView: View {
     }
 
     private func refresh() async {
-        await NotesLoader.shared.invalidateCache(for: subject)
+        await CurriculumLoader.shared.invalidate()
         do {
-            cards = try await NotesLoader.shared.cards(forSubject: subject)
+            manifest = try await CurriculumLoader.shared.manifest()
             errorMessage = nil
         } catch {
-            // Keep stale cards on failure — the user just sees no change.
+            // keep stale manifest
         }
     }
 }
 
-/// One curriculum table page — colored breadcrumb header matching the
-/// webapp's `.curr-breadcrumb[data-subj=...]`, then the markdown table
-/// rendered via KaTeX.
-struct FlashcardView: View {
-    let card: NoteCard
+/// Single colored row on the curriculum landing page.
+private struct SubjectRow: View {
+    let subject: CurriculumSubject
 
     var body: some View {
-        VStack(spacing: 0) {
-            BreadcrumbBar(card: card)
-            MarkdownWebView(markdown: card.body)
+        HStack {
+            Text(subject.name)
+                .font(.system(size: 20, weight: .bold))
+                .foregroundStyle(Color.black.opacity(0.82))
+            Spacer()
+            Image(systemName: "chevron.right")
+                .font(.system(size: 13, weight: .semibold))
+                .foregroundStyle(Color.black.opacity(0.4))
         }
-        .navigationTitle(card.table)
+        .padding(.horizontal, 16)
+        .padding(.vertical, 22)
+        .frame(maxWidth: .infinity)
+        .background(
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .fill(SubjectPalette.color(for: subject.name))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .stroke(Color.black.opacity(0.08), lineWidth: 1)
+        )
+    }
+}
+
+// MARK: - Subject → Sections
+
+/// Level 2: one subject expanded into its sections. The webapp uses a
+/// 3-col section grid; iOS collapses this into a simple list in the same
+/// canonical order (`build_curriculum.py:SECTION_ORDER`).
+struct CurriculumSubjectView: View {
+    let subject: CurriculumSubject
+
+    var body: some View {
+        List {
+            ForEach(subject.sections) { section in
+                NavigationLink {
+                    CurriculumSectionView(subject: subject, section: section)
+                } label: {
+                    Text(section.name)
+                        .font(.system(size: 16, weight: .semibold))
+                        .padding(.vertical, 4)
+                }
+            }
+        }
+        .navigationTitle(subject.name)
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
     }
 }
 
-private struct BreadcrumbBar: View {
-    let card: NoteCard
+// MARK: - Section → Topics
+
+/// Level 3: a single section expanded into its topics. One row per topic;
+/// tapping a topic shows every table for that topic in sequence.
+struct CurriculumSectionView: View {
+    let subject: CurriculumSubject
+    let section: CurriculumSection
 
     var body: some View {
+        List {
+            ForEach(section.topics) { topic in
+                NavigationLink {
+                    CurriculumTopicView(subject: subject, section: section, topic: topic)
+                } label: {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(topic.name)
+                            .font(.system(size: 16, weight: .semibold))
+                        Text("\(topic.tables.count) \(topic.tables.count == 1 ? "table" : "tables")")
+                            .font(.system(size: 12))
+                            .foregroundStyle(.secondary)
+                    }
+                    .padding(.vertical, 4)
+                }
+            }
+        }
+        .navigationTitle(section.name)
+        #if os(iOS)
+        .navigationBarTitleDisplayMode(.inline)
+        #endif
+    }
+}
+
+// MARK: - Topic → Tables
+
+/// Level 4: render every table belonging to this topic, stacked in the
+/// order that `build_curriculum.py` emits them. The colored breadcrumb
+/// at the top mirrors `.curr-breadcrumb[data-subj=...]` on the webapp.
+struct CurriculumTopicView: View {
+    let subject: CurriculumSubject
+    let section: CurriculumSection
+    let topic: CurriculumTopic
+
+    var body: some View {
+        VStack(spacing: 0) {
+            breadcrumb
+            ScrollView {
+                LazyVStack(alignment: .leading, spacing: 24) {
+                    ForEach(topic.tables) { table in
+                        CurriculumTableCard(table: table)
+                    }
+                }
+                .padding(.vertical, 16)
+            }
+        }
+        .navigationTitle(topic.name)
+        #if os(iOS)
+        .navigationBarTitleDisplayMode(.inline)
+        #endif
+    }
+
+    private var breadcrumb: some View {
         HStack(alignment: .firstTextBaseline, spacing: 6) {
-            Text(card.subject.capitalized)
+            Text(subject.name)
                 .fontWeight(.semibold)
             Text("/")
                 .foregroundStyle(.secondary)
-            Text(card.section)
+            Text(section.name)
             Text("/")
                 .foregroundStyle(.secondary)
-            Text(card.topic)
+            Text(topic.name)
                 .fontWeight(.semibold)
                 .lineLimit(1)
                 .truncationMode(.tail)
@@ -211,7 +197,54 @@ private struct BreadcrumbBar: View {
         .font(.system(size: 12))
         .foregroundStyle(Color.black.opacity(0.82))
         .padding(.horizontal, 14)
-        .padding(.vertical, 8)
-        .background(SubjectPalette.color(for: card.subject.capitalized))
+        .padding(.vertical, 10)
+        .background(SubjectPalette.color(for: subject.name))
+    }
+}
+
+/// One rendered table — fetches its markdown body lazily and hands it to
+/// MarkdownWebView along with the table name (for the prepended header row)
+/// and highlighted row indices from the manifest.
+struct CurriculumTableCard: View {
+    let table: CurriculumTable
+
+    @State private var markdownBody: String = ""
+    @State private var loading = true
+    @State private var failed = false
+
+    var body: some View {
+        Group {
+            if loading {
+                ProgressView()
+                    .frame(maxWidth: .infinity, minHeight: 80)
+            } else if failed {
+                VStack(spacing: 6) {
+                    Image(systemName: "exclamationmark.triangle")
+                    Text("Failed to load \(table.name)")
+                        .font(.caption)
+                }
+                .foregroundStyle(.secondary)
+                .frame(maxWidth: .infinity, minHeight: 80)
+            } else {
+                MarkdownWebView(
+                    markdown: markdownBody,
+                    tableName: table.name,
+                    highlightedRows: table.highlightedRows
+                )
+                .frame(minHeight: 200)
+            }
+        }
+        .task { await load() }
+    }
+
+    private func load() async {
+        guard markdownBody.isEmpty else { return }
+        do {
+            markdownBody = try await CurriculumLoader.shared.body(for: table)
+            loading = false
+        } catch {
+            failed = true
+            loading = false
+        }
     }
 }

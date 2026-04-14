@@ -80,6 +80,23 @@
     background: var(--zebra-bg);
   }
 
+  /* Full-width table-name header row injected at render time for
+     curriculum tables — matches the webapp's mergeHeaders() behaviour. */
+  tr.curr-table-name th {
+    font-size: 1.05em;
+    padding: 8px 10px;
+  }
+
+  /* Highlighted rows from curriculum.json `highlighted_rows` — mirror
+     .curr-topic-body tr.highlight from archives/LAYOUT/curriculum.css. */
+  :root { --highlight-bg: #fff056; }
+  @media (prefers-color-scheme: dark) {
+    :root { --highlight-bg: #7a6b00; }
+  }
+  tr.highlight td:not(:first-child) {
+    background: var(--highlight-bg) !important;
+  }
+
   .katex { font-size: 1em; }
   img { max-width: 100%; height: auto; border-radius: 8px; margin: 4px 0; }
   .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 12px 0; }
@@ -93,8 +110,71 @@
 <body>
 <div id="content"></div>
 <script>
-  window.renderMarkdown = function(md) {
-    document.getElementById('content').innerHTML = marked.parse(md);
+  /// Render a markdown document into #content.
+  ///
+  /// Accepts either a raw string (legacy call sites like ResearchView's
+  /// project markdown) or an options object of shape:
+  ///   { markdown: string, tableName?: string, highlightedRows?: [int] }
+  ///
+  /// When `tableName` is given, we hide any leading <h1> (which already
+  /// contains the table name in curriculum markdown files) and prepend a
+  /// full-width "curr-table-name" header row to the first <table>.
+  ///
+  /// When `highlightedRows` is given, we apply a `.highlight` class to
+  /// the matching data rows (0-indexed, skipping the original column
+  /// header row the markdown file ships with).
+  window.renderMarkdown = function(arg) {
+    var md = typeof arg === 'string' ? arg : (arg && arg.markdown) || '';
+    var tableName = (typeof arg === 'object' && arg && arg.tableName) || null;
+    var highlightedRows = (typeof arg === 'object' && arg && arg.highlightedRows) || [];
+
+    var content = document.getElementById('content');
+    content.innerHTML = marked.parse(md);
+
+    if (tableName) {
+      // Hide the <h1> already present in the markdown file since we render
+      // the table name inside the table itself.
+      var h1 = content.querySelector('h1');
+      if (h1) h1.style.display = 'none';
+
+      var table = content.querySelector('table');
+      if (table) {
+        var originalFirstRow = table.rows[0];
+        var colspan = originalFirstRow ? originalFirstRow.cells.length : 3;
+        var header = document.createElement('tr');
+        header.className = 'curr-table-name';
+        var th = document.createElement('th');
+        th.setAttribute('colspan', colspan);
+        th.textContent = tableName;
+        header.appendChild(th);
+
+        // Insert before the existing first row (whether it's in <thead>
+        // or <tbody> — marked may emit either depending on input).
+        if (originalFirstRow && originalFirstRow.parentNode) {
+          originalFirstRow.parentNode.insertBefore(header, originalFirstRow);
+        } else {
+          table.appendChild(header);
+        }
+      }
+    }
+
+    if (highlightedRows && highlightedRows.length) {
+      var table = content.querySelector('table');
+      if (table) {
+        // Data rows start after the name header (if present) and the
+        // column header row. The index in `highlighted_rows` is a
+        // *data-row* index (0-based). curr-table-name gets row 0 if
+        // present; column-header row follows; data rows follow that.
+        var allRows = Array.prototype.slice.call(table.rows);
+        var hasNameRow = allRows[0] && allRows[0].className === 'curr-table-name';
+        var dataRowStart = hasNameRow ? 2 : 1;
+        highlightedRows.forEach(function (i) {
+          var row = allRows[dataRowStart + i];
+          if (row) row.classList.add('highlight');
+        });
+      }
+    }
+
     if (window.renderMathInElement) {
       renderMathInElement(document.body, {
         delimiters: [

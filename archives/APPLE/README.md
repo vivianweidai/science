@@ -6,9 +6,11 @@ and Views; the `ios/` folder is a thin `@main` entry point.
 
 Three tabs:
 
-- **Curriculum** — flashcard browser for the notes markdown files under
-  `/curriculum/{subject}/{section}/{table}.md`. Content is fetched from
-  GitHub raw URLs and rendered with KaTeX in a `WKWebView`.
+- **Curriculum** — cascading subject → section → topic → table browser
+  driven by `archives/CONTENT/curriculum.json` (the same manifest the
+  webapp uses). Individual tables are fetched from GitHub raw URLs and
+  rendered with KaTeX in a `WKWebView`, including highlighted rows from
+  the manifest.
 - **Olympiads** — contests tracker plus unified textbooks list, read
   from `archives/CONTENT/olympiads.json` (built from
   `olympiads.yml` via `archives/LAYOUT/build_olympiads.py`).
@@ -23,8 +25,8 @@ archives/APPLE/
 ├── Package.swift             SwiftPM manifest — platform: iOS 17
 ├── project.yml               XcodeGen spec — regenerate with `xcodegen generate`
 ├── shared/                   ScienceCore library
-│   ├── Models/               NoteCard, Manifest, Activity, ResearchProject
-│   ├── API/                  APIClient, NotesLoader, ResearchLoader, MarkdownHelper
+│   ├── Models/               Activity, ResearchProject, CurriculumManifest, Manifest
+│   ├── API/                  APIClient, CurriculumLoader, ResearchLoader, MarkdownHelper
 │   ├── Rendering/            MarkdownWebView + katex-shell.html
 │   └── Views/
 │       ├── RootTabView.swift          Root (3-tab TabView)
