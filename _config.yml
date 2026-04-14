@@ -3,17 +3,11 @@ description: Mathematics Computing Physics Chemistry Biology Astronomy
 baseurl: ""
 plugins: []
 
-# Keep Jekyll's scan small — archives/APPLE/ is iOS source, the rest is dev cruft.
+# Keep Jekyll's scan small — archives/APPLE/ is iOS/watchOS source.
 exclude:
   - archives/APPLE/
-  - .wrangler/
   - CLAUDE.md
-  - MIGRATION.md
   - README.md
-  - Gemfile
-  - Gemfile.lock
-  - vendor/
-  - node_modules/
   # Curriculum data files contain LaTeX math with `{{...}}` that fatally
   # crashes Jekyll's Liquid parser (GitHub Pages uses Jekyll 3.10 which
   # does not support render_with_liquid: false). These .md files are only

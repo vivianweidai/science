@@ -51,11 +51,13 @@ archives/APPLE/
 ├── ios/                      iPhone + iPad target
 │   ├── ScienceApp.swift      @main → RootTabView
 │   └── Assets.xcassets/
-└── watch/                    watchOS companion target
+└── watch/                    watchOS companion target (olympiads-only)
     ├── ScienceWatchApp.swift      @main → OlympiadsRootView
-    ├── OlympiadsRootView.swift    Load/refresh + filter state
-    ├── OlympiadsListView.swift    Year-grouped List
+    ├── OlympiadsRootView.swift    Load/refresh + @AppStorage sticky filter
+    ├── OlympiadsListView.swift    Year-grouped List with NavigationLink rows
     ├── ActivityRowView.swift      Compact watch-sized row
+    ├── ActivityDetailView.swift   Full-record push view (tapped from list)
+    ├── ActivityCache.swift        Offline-first Caches/olympiads_cache.json
     ├── SubjectFilterSheet.swift   Subject picker
     ├── SubjectColor.swift         SwiftUI Color bridge
     └── Assets.xcassets/
