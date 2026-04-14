@@ -22,4 +22,8 @@ public struct Activity: Identifiable, Hashable, Codable, Sendable {
 
 public struct ActivityList: Codable, Sendable {
     public let items: [Activity]
+
+    public init(items: [Activity]) {
+        self.items = items
+    }
 }
