@@ -1,5 +1,6 @@
 ---
-layout: chinese-project
+layout: project
+html_lang: zh
 project: 熔点测定
 photos:
   - /research/projects/20260405 Melting Point/PHOTOS/20260405 Setup A.jpeg

@@ -1,5 +1,6 @@
 ---
-layout: chinese-project
+layout: project
+html_lang: zh
 project: 红外光谱
 photos:
   - /research/projects/20260401 IR Spectroscopy/PHOTOS/20260404 Setup A.jpeg

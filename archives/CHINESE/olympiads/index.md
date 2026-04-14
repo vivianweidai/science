@@ -1,5 +1,6 @@
 ---
-layout: chinese-default
+layout: default
+html_lang: zh
 ---
 
 <div class="page-header"><h2>竞赛</h2><a class="back-link" href="/archives/CHINESE/">科学</a></div>

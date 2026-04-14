@@ -1,5 +1,6 @@
 ---
-layout: chinese-default
+layout: default
+html_lang: zh
 title: Vivian Dai
 ---
 

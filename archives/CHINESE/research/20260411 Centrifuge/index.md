@@ -1,5 +1,6 @@
 ---
-layout: chinese-project
+layout: project
+html_lang: zh
 project: 离心分离
 photos:
   - /research/projects/20260411 Centrifuge/PHOTOS/sample1.jpeg

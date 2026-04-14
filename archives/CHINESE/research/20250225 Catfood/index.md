@@ -1,5 +1,6 @@
 ---
-layout: chinese-project
+layout: project
+html_lang: zh
 project: 猫粮颜色偏好
 photos:
   - /research/projects/20250225 Catfood/PHOTOS/20240901 Catfood A.jpeg

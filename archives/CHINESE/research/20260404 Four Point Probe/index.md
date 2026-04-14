@@ -1,5 +1,6 @@
 ---
-layout: chinese-project
+layout: project
+html_lang: zh
 project: 四探针法
 photos:
   - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Samples A.jpeg
