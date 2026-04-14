@@ -20,7 +20,11 @@ struct OlympiadsListView: View {
             ForEach(yearGroups) { group in
                 Section {
                     ForEach(group.entries) { entry in
-                        ActivityRowView(activity: entry)
+                        NavigationLink {
+                            ActivityDetailView(activity: entry)
+                        } label: {
+                            ActivityRowView(activity: entry)
+                        }
                     }
                 } header: {
                     Text(group.year)
