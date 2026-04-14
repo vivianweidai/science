@@ -39,23 +39,55 @@ struct ResearchView: View {
         loading = false
     }
 
-    /// Project title + date with a subject chip trailing the title (matches
-    /// the webapp chip markup at `<span class="chip {slug}">{Subject}</span>`
-    /// in research/index.md).
+    /// Project title on top, with the formatted date and subject chip
+    /// sharing the second line. Subject mapping comes from the webapp
+    /// chip markup in research/index.md.
     @ViewBuilder
     private func projectRow(_ project: ResearchProject) -> some View {
         VStack(alignment: .leading, spacing: 4) {
-            HStack(alignment: .firstTextBaseline, spacing: 6) {
-                Text(project.title)
-                    .font(.headline)
-                    .fixedSize(horizontal: false, vertical: true)
+            Text(project.title)
+                .font(.headline)
+                .fixedSize(horizontal: false, vertical: true)
+            HStack(alignment: .firstTextBaseline, spacing: 8) {
+                Text(formatProjectDate(project.date))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
                 if let subject = project.subject {
                     SubjectChip(subject: subject)
                 }
             }
-            Text(project.date)
-                .font(.caption)
-                .foregroundStyle(.secondary)
+        }
+    }
+
+    /// Convert the raw `YYYYMMDD` folder-date prefix into a readable
+    /// `Month Day{st,nd,rd,th} Year` string (e.g. "April 4th 2026").
+    /// Falls back to the raw string if parsing fails so nothing ever
+    /// disappears from the UI.
+    private func formatProjectDate(_ raw: String) -> String {
+        guard raw.count == 8,
+              let year = Int(raw.prefix(4)),
+              let month = Int(raw.dropFirst(4).prefix(2)),
+              let day = Int(raw.suffix(2)),
+              (1...12).contains(month) else {
+            return raw
+        }
+        let monthNames = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December",
+        ]
+        return "\(monthNames[month - 1]) \(day)\(ordinalSuffix(for: day)) \(year)"
+    }
+
+    /// English ordinal suffix: 1st, 2nd, 3rd, 4th … with the 11/12/13
+    /// exception (11th, 12th, 13th — not 11st, 12nd, 13rd).
+    private func ordinalSuffix(for day: Int) -> String {
+        let lastTwo = day % 100
+        if (11...13).contains(lastTwo) { return "th" }
+        switch day % 10 {
+        case 1:  return "st"
+        case 2:  return "nd"
+        case 3:  return "rd"
+        default: return "th"
         }
     }
 }
