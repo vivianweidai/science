@@ -97,29 +97,36 @@ private struct SubjectRow: View {
 
 /// Level 2: one subject expanded into its sections. The webapp uses a
 /// 3-col section grid; iOS collapses this into a simple list in the same
-/// canonical order (`build_curriculum.py:SECTION_ORDER`). The navigation
-/// bar is tinted with the subject's canonical color so the user always
-/// knows which subject branch they're in.
+/// canonical order (`build_curriculum.py:SECTION_ORDER`).
+///
+/// The subject color appears as a breadcrumb strip directly below the
+/// navigation bar — matching `CurriculumTopicView` at level 4 — rather
+/// than tinting the navigation bar itself. Tinting the nav bar with
+/// `.toolbarBackground` caused the bar color to bleed onto the first
+/// `List` row during the push transition and flash away once the
+/// animation settled; the manual strip sidesteps that bug and keeps
+/// all three curriculum levels visually consistent.
 struct CurriculumSubjectView: View {
     let subject: CurriculumSubject
 
     var body: some View {
-        List {
-            ForEach(subject.sections) { section in
-                NavigationLink {
-                    CurriculumSectionView(subject: subject, section: section)
-                } label: {
-                    Text(section.name)
-                        .font(.system(size: 16, weight: .semibold))
-                        .padding(.vertical, 4)
+        VStack(spacing: 0) {
+            SubjectBreadcrumb(subject: subject, trail: [])
+            List {
+                ForEach(subject.sections) { section in
+                    NavigationLink {
+                        CurriculumSectionView(subject: subject, section: section)
+                    } label: {
+                        Text(section.name)
+                            .font(.system(size: 16, weight: .semibold))
+                            .padding(.vertical, 4)
+                    }
                 }
             }
         }
         .navigationTitle(subject.name)
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(SubjectPalette.color(for: subject.name), for: .navigationBar)
-        .toolbarBackground(.visible, for: .navigationBar)
         #endif
     }
 }
@@ -129,37 +136,71 @@ struct CurriculumSubjectView: View {
 /// Level 3: a single section expanded into its topics. One row per topic;
 /// the subtitle lists the actual table names belonging to that topic
 /// (in source-of-truth order) so the user sees concrete content, not
-/// just a count. The navigation bar carries the subject's canonical
-/// color through from the parent subject view.
+/// just a count.
+///
+/// Like `CurriculumSubjectView`, this carries the subject color through
+/// a manual breadcrumb strip below the navigation bar rather than
+/// `.toolbarBackground`.
 struct CurriculumSectionView: View {
     let subject: CurriculumSubject
     let section: CurriculumSection
 
     var body: some View {
-        List {
-            ForEach(section.topics) { topic in
-                NavigationLink {
-                    CurriculumTopicView(subject: subject, section: section, topic: topic)
-                } label: {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(topic.name)
-                            .font(.system(size: 16, weight: .semibold))
-                        Text(topic.tables.map(\.name).joined(separator: ", "))
-                            .font(.system(size: 12))
-                            .foregroundStyle(.secondary)
-                            .lineLimit(2)
-                            .truncationMode(.tail)
+        VStack(spacing: 0) {
+            SubjectBreadcrumb(subject: subject, trail: [section.name])
+            List {
+                ForEach(section.topics) { topic in
+                    NavigationLink {
+                        CurriculumTopicView(subject: subject, section: section, topic: topic)
+                    } label: {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(topic.name)
+                                .font(.system(size: 16, weight: .semibold))
+                            Text(topic.tables.map(\.name).joined(separator: ", "))
+                                .font(.system(size: 12))
+                                .foregroundStyle(.secondary)
+                                .lineLimit(2)
+                                .truncationMode(.tail)
+                        }
+                        .padding(.vertical, 4)
                     }
-                    .padding(.vertical, 4)
                 }
             }
         }
         .navigationTitle(section.name)
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(SubjectPalette.color(for: subject.name), for: .navigationBar)
-        .toolbarBackground(.visible, for: .navigationBar)
         #endif
+    }
+}
+
+/// Colored banner placed immediately below the navigation bar showing
+/// the active subject (and optional trail). Mirrors the `breadcrumb`
+/// inside `CurriculumTopicView` so levels 2, 3, and 4 all look alike.
+private struct SubjectBreadcrumb: View {
+    let subject: CurriculumSubject
+    /// Extra path segments after the subject name. Empty on the
+    /// subject landing view, `[section.name]` on the section view.
+    let trail: [String]
+
+    var body: some View {
+        HStack(alignment: .firstTextBaseline, spacing: 6) {
+            Text(subject.name)
+                .fontWeight(.semibold)
+            ForEach(trail, id: \.self) { piece in
+                Text("/")
+                    .foregroundStyle(.secondary)
+                Text(piece)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+            }
+            Spacer(minLength: 0)
+        }
+        .font(.system(size: 12))
+        .foregroundStyle(Color.black.opacity(0.82))
+        .padding(.horizontal, 14)
+        .padding(.vertical, 10)
+        .background(SubjectPalette.color(for: subject.name))
     }
 }
 
