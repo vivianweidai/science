@@ -1,6 +1,6 @@
 # Science
 
-Personal science portfolio and lab notebook — available on [web](https://vivianweidai.com) and iOS.
+Personal science portfolio and lab notebook — available on [web](https://vivianweidai.com) and on the [App Store](https://apps.apple.com/app/id6762091743) for iPhone and iPad.
 
 ## What's Inside
 
