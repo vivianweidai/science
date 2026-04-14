@@ -1,3 +1,21 @@
+/* Canonical subject palette.
+ *
+ * Six pastel tones used everywhere we distinguish the six disciplines:
+ * curriculum column headers, olympiad tab pills, olympiad chips on
+ * research project cards, and the chinese mirror of the same pages.
+ * Defined once here so a future tweak only lands in one file. The
+ * Swift apps under archives/APPLE/ have their own copy in
+ * SubjectPaletteRGB (different language — unavoidable duplication).
+ */
+:root {
+  --subj-math:  #c5d9f7;
+  --subj-comp:  #d9ccee;
+  --subj-phys:  #f9c4a8;
+  --subj-chem:  #d4e8a0;
+  --subj-bio:   #a8ddd4;
+  --subj-astro: #f4c2cb;
+}
+
 /* Shared base styles */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;

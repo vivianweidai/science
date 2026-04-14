@@ -30,12 +30,12 @@
 }
 .curr-col-head:hover { opacity: 0.85; }
 
-.curr-col-head[data-subj="mathematics"] { background: #c5d9f7; }
-.curr-col-head[data-subj="computing"]   { background: #d9ccee; }
-.curr-col-head[data-subj="physics"]     { background: #f9c4a8; }
-.curr-col-head[data-subj="chemistry"]   { background: #d4e8a0; }
-.curr-col-head[data-subj="biology"]     { background: #a8ddd4; }
-.curr-col-head[data-subj="astronomy"]   { background: #f4c2cb; }
+.curr-col-head[data-subj="mathematics"] { background: var(--subj-math); }
+.curr-col-head[data-subj="computing"]   { background: var(--subj-comp); }
+.curr-col-head[data-subj="physics"]     { background: var(--subj-phys); }
+.curr-col-head[data-subj="chemistry"]   { background: var(--subj-chem); }
+.curr-col-head[data-subj="biology"]     { background: var(--subj-bio); }
+.curr-col-head[data-subj="astronomy"]   { background: var(--subj-astro); }
 
 .curr-section { margin-bottom: 1em; }
 .curr-section:last-child { margin-bottom: 0; }
@@ -109,12 +109,12 @@
   margin: -1em -1.4em 1em;
   border-radius: 7px 7px 0 0;
 }
-.curr-breadcrumb[data-subj="mathematics"] { background: #c5d9f7; }
-.curr-breadcrumb[data-subj="computing"]   { background: #d9ccee; }
-.curr-breadcrumb[data-subj="physics"]     { background: #f9c4a8; }
-.curr-breadcrumb[data-subj="chemistry"]   { background: #d4e8a0; }
-.curr-breadcrumb[data-subj="biology"]     { background: #a8ddd4; }
-.curr-breadcrumb[data-subj="astronomy"]   { background: #f4c2cb; }
+.curr-breadcrumb[data-subj="mathematics"] { background: var(--subj-math); }
+.curr-breadcrumb[data-subj="computing"]   { background: var(--subj-comp); }
+.curr-breadcrumb[data-subj="physics"]     { background: var(--subj-phys); }
+.curr-breadcrumb[data-subj="chemistry"]   { background: var(--subj-chem); }
+.curr-breadcrumb[data-subj="biology"]     { background: var(--subj-bio); }
+.curr-breadcrumb[data-subj="astronomy"]   { background: var(--subj-astro); }
 .curr-breadcrumb a {
   color: #0969da;
   text-decoration: none;
