@@ -23,6 +23,7 @@
     --fg: #1f2328;
     --muted: #656d76;
     --border: #d1d9e0;
+    --group-border: #b0b4b8; /* darker than --border so group-cell seams show up against the gray first column */
     --th-bg: #c0c4c8;
     --td-first-bg: #d5d8dc;
     --zebra-bg: #f6f8fa;
@@ -33,6 +34,7 @@
       --fg: #e6edf3;
       --muted: #8b949e;
       --border: #30363d;
+      --group-border: #4a515b;
       --th-bg: #2d333b;
       --td-first-bg: #22272e;
       --zebra-bg: #1a1d21;
@@ -78,10 +80,15 @@
 
   /* Group-label cell (class added at render time to every first cell
      before rowspan merging). Kept as its own class so zebra striping
-     and highlight rules can exclude it via :not(.curr-group-cell). */
+     and highlight rules can exclude it via :not(.curr-group-cell).
+     The bottom border is a shade darker than the normal cell border
+     so the seam between adjacent rowspan-merged group cells stays
+     visible against the gray background — matches the webapp's
+     `.curr-topic-body td.curr-group-cell` rule in curriculum.css. */
   td.curr-group-cell {
     background: var(--td-first-bg);
     font-weight: 600;
+    border-bottom-color: var(--group-border);
   }
 
   /* Zebra stripe data cells on even rows only. */
