@@ -39,9 +39,9 @@ struct ResearchView: View {
         loading = false
     }
 
-    /// Project title on top, with the formatted date and subject chip
-    /// sharing the second line. Subject mapping comes from the webapp
-    /// chip markup in research/index.md.
+    /// Project title on top, with the subject chip leading the second
+    /// line followed by the formatted date. Subject mapping comes from
+    /// the webapp chip markup in research/index.md.
     @ViewBuilder
     private func projectRow(_ project: ResearchProject) -> some View {
         VStack(alignment: .leading, spacing: 4) {
@@ -49,12 +49,12 @@ struct ResearchView: View {
                 .font(.headline)
                 .fixedSize(horizontal: false, vertical: true)
             HStack(alignment: .firstTextBaseline, spacing: 8) {
-                Text(formatProjectDate(project.date))
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
                 if let subject = project.subject {
                     SubjectChip(subject: subject)
                 }
+                Text(formatProjectDate(project.date))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
             }
         }
     }

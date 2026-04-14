@@ -54,7 +54,10 @@
   h3 { font-size: 1.02em; margin: 14px 0 6px; }
 
   /* Curriculum-style tables: gray header, bordered cells, centered,
-     zebra-striped (even rows), first-column highlight. */
+     zebra-striped data rows, highlighted rows, and group-label cells
+     that may span multiple rows via rowspan. Avoids `:first-child`
+     because rowspan-merged rows remove their first cell from the DOM,
+     which would promote the A column into `:first-child` position. */
   table {
     border-collapse: collapse;
     width: 100%;
@@ -72,11 +75,17 @@
     font-weight: 700;
     font-size: 0.98em;
   }
-  td:first-child {
+
+  /* Group-label cell (class added at render time to every first cell
+     before rowspan merging). Kept as its own class so zebra striping
+     and highlight rules can exclude it via :not(.curr-group-cell). */
+  td.curr-group-cell {
     background: var(--td-first-bg);
     font-weight: 600;
   }
-  tr:nth-child(even) td:not(:first-child) {
+
+  /* Zebra stripe data cells on even rows only. */
+  tr:nth-child(even) td:not(.curr-group-cell) {
     background: var(--zebra-bg);
   }
 
@@ -93,7 +102,7 @@
   @media (prefers-color-scheme: dark) {
     :root { --highlight-bg: #7a6b00; }
   }
-  tr.highlight td:not(:first-child) {
+  tr.highlight td:not(.curr-group-cell) {
     background: var(--highlight-bg) !important;
   }
 
@@ -116,44 +125,92 @@
   /// project markdown) or an options object of shape:
   ///   { markdown: string, tableName?: string, highlightedRows?: [int] }
   ///
-  /// When `tableName` is given, we hide any leading <h1> (which already
-  /// contains the table name in curriculum markdown files) and prepend a
-  /// full-width "curr-table-name" header row to the first <table>.
-  ///
-  /// When `highlightedRows` is given, we apply a `.highlight` class to
-  /// the matching data rows (0-indexed, skipping the original column
-  /// header row the markdown file ships with).
+  /// For curriculum tables (tableName given) we:
+  ///   1. Strip the Jekyll YAML front matter (`---\n...\n---`) so it
+  ///      doesn't render as prose above the table.
+  ///   2. Hide the leading <h1> that duplicates the table name.
+  ///   3. Remove the original column-header row (Label / Formula / Description).
+  ///   4. Prepend a full-width "curr-table-name" row containing the
+  ///      table name.
+  ///   5. Mark every first-column data cell with `curr-group-cell` and
+  ///      merge consecutive cells with identical values into a single
+  ///      rowspan cell, matching the webapp's group merging.
+  ///   6. Apply a `.highlight` class to data rows listed in
+  ///      `highlightedRows` (0-indexed over data rows).
   window.renderMarkdown = function(arg) {
     var md = typeof arg === 'string' ? arg : (arg && arg.markdown) || '';
     var tableName = (typeof arg === 'object' && arg && arg.tableName) || null;
     var highlightedRows = (typeof arg === 'object' && arg && arg.highlightedRows) || [];
 
+    // Strip YAML front matter. The webapp's Jekyll layer does this; iOS
+    // fetches raw markdown directly so we have to do it here.
+    md = md.replace(/^---\s*\n[\s\S]*?\n---\s*\n?/, '');
+
     var content = document.getElementById('content');
     content.innerHTML = marked.parse(md);
 
     if (tableName) {
-      // Hide the <h1> already present in the markdown file since we render
-      // the table name inside the table itself.
       var h1 = content.querySelector('h1');
       if (h1) h1.style.display = 'none';
 
       var table = content.querySelector('table');
       if (table) {
-        var originalFirstRow = table.rows[0];
-        var colspan = originalFirstRow ? originalFirstRow.cells.length : 3;
-        var header = document.createElement('tr');
-        header.className = 'curr-table-name';
+        // Step 1: remove the column-header row. Markdown tables parsed
+        // by marked.js always emit the first row as <tr> with <th>
+        // cells (wrapped in a <thead>).
+        var firstRow = table.rows[0];
+        if (firstRow && firstRow.cells[0] &&
+            firstRow.cells[0].tagName.toUpperCase() === 'TH') {
+          firstRow.parentNode.removeChild(firstRow);
+        }
+
+        // Step 2: compute colspan from the first remaining data row.
+        var sampleRow = table.rows[0];
+        var colspan = sampleRow ? sampleRow.cells.length : 3;
+
+        // Step 3: tag first-column cells with curr-group-cell so the
+        // CSS rules for gray background and zebra-stripe exclusion
+        // apply correctly even after rowspan merging.
+        for (var r = 0; r < table.rows.length; r++) {
+          var firstCell = table.rows[r].cells[0];
+          if (firstCell) firstCell.classList.add('curr-group-cell');
+        }
+
+        // Step 4: merge consecutive rows with identical first-cell
+        // text into rowspans.
+        var dataRows = Array.prototype.slice.call(table.rows);
+        var i = 0;
+        while (i < dataRows.length) {
+          var firstCell = dataRows[i].cells[0];
+          if (!firstCell) { i++; continue; }
+          var groupText = firstCell.textContent.trim();
+          var j = i + 1;
+          while (j < dataRows.length) {
+            var nextFirst = dataRows[j].cells[0];
+            if (!nextFirst || nextFirst.textContent.trim() !== groupText) break;
+            nextFirst.parentNode.removeChild(nextFirst);
+            j++;
+          }
+          if (j > i + 1) {
+            firstCell.rowSpan = j - i;
+          }
+          i = j;
+        }
+
+        // Step 5: prepend the table-name header row (above all data
+        // rows). We do this after the rowspan merge so the merging
+        // logic doesn't need to skip it.
+        var headerRow = document.createElement('tr');
+        headerRow.className = 'curr-table-name';
         var th = document.createElement('th');
         th.setAttribute('colspan', colspan);
         th.textContent = tableName;
-        header.appendChild(th);
-
-        // Insert before the existing first row (whether it's in <thead>
-        // or <tbody> — marked may emit either depending on input).
-        if (originalFirstRow && originalFirstRow.parentNode) {
-          originalFirstRow.parentNode.insertBefore(header, originalFirstRow);
+        headerRow.appendChild(th);
+        var insertionTarget = table.rows[0];
+        if (insertionTarget && insertionTarget.parentNode) {
+          insertionTarget.parentNode.insertBefore(headerRow, insertionTarget);
         } else {
-          table.appendChild(header);
+          table.appendChild(headerRow);
         }
       }
     }
@@ -161,13 +218,11 @@
     if (highlightedRows && highlightedRows.length) {
       var table = content.querySelector('table');
       if (table) {
-        // Data rows start after the name header (if present) and the
-        // column header row. The index in `highlighted_rows` is a
-        // *data-row* index (0-based). curr-table-name gets row 0 if
-        // present; column-header row follows; data rows follow that.
+        // After our transformations: row 0 is the curr-table-name row,
+        // rows 1..N are the data rows in their manifest order.
         var allRows = Array.prototype.slice.call(table.rows);
         var hasNameRow = allRows[0] && allRows[0].className === 'curr-table-name';
-        var dataRowStart = hasNameRow ? 2 : 1;
+        var dataRowStart = hasNameRow ? 1 : 0;
         highlightedRows.forEach(function (i) {
           var row = allRows[dataRowStart + i];
           if (row) row.classList.add('highlight');
@@ -183,6 +238,16 @@
         ],
         throwOnError: false
       });
+    }
+
+    // Let Swift know the final content height so MarkdownWebView can
+    // size its frame (see MarkdownWebView.render's evaluateJavaScript
+    // completion handler, which reads this).
+    if (window.webkit && window.webkit.messageHandlers &&
+        window.webkit.messageHandlers.contentHeight) {
+      window.webkit.messageHandlers.contentHeight.postMessage(
+        document.body.scrollHeight
+      );
     }
   };
 </script>

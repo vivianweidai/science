@@ -164,19 +164,40 @@ private struct SubjectTabStrip: View {
     @Binding var selected: SubjectFilter
 
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 8) {
-                ForEach(SubjectFilter.allCases, id: \.self) { filter in
-                    Button {
-                        selected = filter
-                    } label: {
-                        TabChipLabel(
-                            label: filter.label,
-                            isSelected: selected == filter,
-                            selectedColor: filter.color
-                        )
+        ScrollViewReader { proxy in
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 8) {
+                    ForEach(SubjectFilter.allCases, id: \.self) { filter in
+                        Button {
+                            withAnimation(.easeInOut(duration: 0.25)) {
+                                selected = filter
+                                proxy.scrollTo(filter, anchor: .center)
+                            }
+                        } label: {
+                            TabChipLabel(
+                                label: filter.label,
+                                isSelected: selected == filter,
+                                selectedColor: filter.color
+                            )
+                        }
+                        .buttonStyle(.plain)
+                        .id(filter)
                     }
-                    .buttonStyle(.plain)
+                }
+            }
+            .onAppear {
+                // The initial subject is a random non-"All" filter (to
+                // match the webapp's random tab preselect). On narrow
+                // screens the selected chip can be offscreen to the
+                // right — scroll it into view so users know which
+                // subject they're looking at.
+                DispatchQueue.main.async {
+                    proxy.scrollTo(selected, anchor: .center)
+                }
+            }
+            .onChange(of: selected) { _, newValue in
+                withAnimation(.easeInOut(duration: 0.25)) {
+                    proxy.scrollTo(newValue, anchor: .center)
                 }
             }
         }

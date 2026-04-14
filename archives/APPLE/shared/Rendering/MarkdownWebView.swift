@@ -5,21 +5,31 @@ import SwiftUI
 ///
 /// Optional `tableName` + `highlightedRows` enable curriculum-specific
 /// table rendering: the JS shell will prepend a full-width header row
-/// with the table name (matching `.curr-topic-body` on the webapp) and
-/// apply a `.highlight` class to the data rows at the given indices.
+/// with the table name, remove the original column-header row, merge
+/// identical first-column cells into rowspans, and apply `.highlight` to
+/// data rows by index.
 ///
-/// On non-UIKit hosts (e.g. `swift build` running on macOS for type-checking)
-/// this falls back to a plain SwiftUI stub so call sites can embed it from
-/// shared code. The real rendering path is iOS-only.
+/// The view sizes itself to the rendered content via a WKScriptMessage
+/// channel (`contentHeight`) — katex-shell.html posts
+/// `document.body.scrollHeight` after each render and SwiftUI frames the
+/// outer view to that height. Internal WebKit scrolling is disabled so
+/// multiple tables on one screen flow naturally inside an outer
+/// ScrollView without competing scroll gestures.
+///
+/// On non-UIKit hosts (e.g. `swift build` running on macOS for type-
+/// checking) this falls back to a plain SwiftUI stub so call sites can
+/// embed it from shared code. The real rendering path is iOS-only.
 #if canImport(UIKit)
 
 import UIKit
 import WebKit
 
-public struct MarkdownWebView: UIViewRepresentable {
+public struct MarkdownWebView: View {
     let markdown: String
     let tableName: String?
     let highlightedRows: [Int]
+
+    @State private var contentHeight: CGFloat = 80
 
     public init(markdown: String, tableName: String? = nil, highlightedRows: [Int] = []) {
         self.markdown = markdown
@@ -27,11 +37,45 @@ public struct MarkdownWebView: UIViewRepresentable {
         self.highlightedRows = highlightedRows
     }
 
-    public func makeUIView(context: Context) -> WKWebView {
-        let view = WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
+    public var body: some View {
+        MarkdownWebViewRep(
+            markdown: markdown,
+            tableName: tableName,
+            highlightedRows: highlightedRows,
+            contentHeight: $contentHeight
+        )
+        .frame(height: contentHeight)
+    }
+}
+
+private struct MarkdownWebViewRep: UIViewRepresentable {
+    let markdown: String
+    let tableName: String?
+    let highlightedRows: [Int]
+    @Binding var contentHeight: CGFloat
+
+    struct RenderOptions {
+        let markdown: String
+        let tableName: String?
+        let highlightedRows: [Int]
+    }
+
+    func makeUIView(context: Context) -> WKWebView {
+        let config = WKWebViewConfiguration()
+        // JS → Swift bridge: katex-shell.html posts scrollHeight here
+        // after each render so we can size the outer SwiftUI frame.
+        config.userContentController.add(context.coordinator, name: "contentHeight")
+
+        let view = WKWebView(frame: .zero, configuration: config)
         view.isOpaque = false
         view.backgroundColor = .clear
         view.scrollView.backgroundColor = .clear
+        // Disable internal scrolling — the SwiftUI parent ScrollView owns
+        // the scroll gesture, and the webview sizes itself to the
+        // contentHeight binding so nothing is clipped.
+        view.scrollView.isScrollEnabled = false
+        view.scrollView.bounces = false
+
         if let url = Bundle.module.url(forResource: "katex-shell", withExtension: "html") {
             view.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
         }
@@ -45,7 +89,7 @@ public struct MarkdownWebView: UIViewRepresentable {
         return view
     }
 
-    public func updateUIView(_ uiView: WKWebView, context: Context) {
+    func updateUIView(_ uiView: WKWebView, context: Context) {
         context.coordinator.render(
             RenderOptions(
                 markdown: markdown,
@@ -55,23 +99,43 @@ public struct MarkdownWebView: UIViewRepresentable {
         )
     }
 
-    public func makeCoordinator() -> Coordinator { Coordinator() }
-
-    struct RenderOptions {
-        let markdown: String
-        let tableName: String?
-        let highlightedRows: [Int]
+    func makeCoordinator() -> Coordinator {
+        Coordinator(contentHeight: $contentHeight)
     }
 
-    public final class Coordinator: NSObject, WKNavigationDelegate {
+    final class Coordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler {
         weak var webView: WKWebView?
         var pendingOptions: RenderOptions?
         var loaded = false
+        var contentHeight: Binding<CGFloat>
 
-        public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        init(contentHeight: Binding<CGFloat>) {
+            self.contentHeight = contentHeight
+        }
+
+        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             loaded = true
             if let pending = pendingOptions {
                 render(pending)
+            }
+        }
+
+        /// Called by katex-shell.html via
+        /// `window.webkit.messageHandlers.contentHeight.postMessage(...)`
+        /// at the end of every render. Pushes the new height into the
+        /// SwiftUI @State binding so the view frame updates.
+        func userContentController(
+            _ userContentController: WKUserContentController,
+            didReceive message: WKScriptMessage
+        ) {
+            guard message.name == "contentHeight" else { return }
+            if let number = message.body as? NSNumber {
+                let height = CGFloat(truncating: number)
+                if height > 0 {
+                    DispatchQueue.main.async {
+                        self.contentHeight.wrappedValue = height
+                    }
+                }
             }
         }
 

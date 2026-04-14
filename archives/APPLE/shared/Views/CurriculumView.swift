@@ -122,7 +122,9 @@ struct CurriculumSubjectView: View {
 // MARK: - Section → Topics
 
 /// Level 3: a single section expanded into its topics. One row per topic;
-/// tapping a topic shows every table for that topic in sequence.
+/// the subtitle lists the actual table names belonging to that topic
+/// (in source-of-truth order) so the user sees concrete content, not
+/// just a count.
 struct CurriculumSectionView: View {
     let subject: CurriculumSubject
     let section: CurriculumSection
@@ -136,9 +138,11 @@ struct CurriculumSectionView: View {
                     VStack(alignment: .leading, spacing: 2) {
                         Text(topic.name)
                             .font(.system(size: 16, weight: .semibold))
-                        Text("\(topic.tables.count) \(topic.tables.count == 1 ? "table" : "tables")")
+                        Text(topic.tables.map(\.name).joined(separator: ", "))
                             .font(.system(size: 12))
                             .foregroundStyle(.secondary)
+                            .lineLimit(2)
+                            .truncationMode(.tail)
                     }
                     .padding(.vertical, 4)
                 }
@@ -226,12 +230,14 @@ struct CurriculumTableCard: View {
                 .foregroundStyle(.secondary)
                 .frame(maxWidth: .infinity, minHeight: 80)
             } else {
+                // No explicit frame — MarkdownWebView sizes itself to its
+                // content via a contentHeight binding, and the outer
+                // LazyVStack + ScrollView owns the actual scroll gesture.
                 MarkdownWebView(
                     markdown: markdownBody,
                     tableName: table.name,
                     highlightedRows: table.highlightedRows
                 )
-                .frame(minHeight: 200)
             }
         }
         .task { await load() }

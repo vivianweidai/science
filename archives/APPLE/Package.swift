@@ -5,7 +5,7 @@ let package = Package(
     name: "Science",
     platforms: [
         .iOS(.v17),      // iPhone + iPad (universal)
-        .macOS(.v13)     // Host-only floor so `swift build` type-checks the package
+        .macOS(.v14)     // Host-only floor so `swift build` type-checks the package
     ],
     products: [
         .library(name: "ScienceCore", targets: ["ScienceCore"])
