@@ -117,7 +117,7 @@ layout: default
 
 ### Repository Structure
 
-All projects are documented with the folder structure:
+All projects are hosted on [GitHub](https://github.com/vivianweidai/science/tree/main/research/projects) with the folder structure:
 
 ```
 YYYYMMDD Project Name/
@@ -127,6 +127,8 @@ YYYYMMDD Project Name/
 ├── OUTPUT/     # Analysis and reports
 └── index.md    # Project summary page
 ```
+
+Also available on the [Apple App Store](https://apps.apple.com/app/id6762091743) while key works are tracked on <a href="https://orcid.org/0009-0003-0301-4061" target="_blank" rel="noopener noreferrer"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID iD icon" style="height:1em; vertical-align:text-bottom; margin-right:0.2em;"/>https://orcid.org/0009-0003-0301-4061</a>.
 
 ---
 
