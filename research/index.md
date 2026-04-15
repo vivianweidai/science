@@ -115,7 +115,7 @@ layout: default
 
 ---
 
-### Repository Structure
+### Documentation
 
 All projects are hosted on [GitHub](https://github.com/vivianweidai/science/tree/main/research/projects) with the folder structure:
 
