@@ -200,20 +200,17 @@ layout: default
     .toys-table { table-layout: auto; }
     .toys-table colgroup { display: none; }
     .toys-table td { display: block; padding: .2em .7em; }
-    .toys-tech-row td { display: block; }
-    .toys-tech-desc { display: none; }
+    .toys-tech-row td { display: block; padding-left: .7em !important; }
+    .toys-tech-desc { display: none !important; }
     .toys-toy-row td:first-child {
-      padding-top: .4em;
-      padding-left: 1.2em;
-      padding-bottom: 0;
+      padding: .4em .7em 0 .7em !important;
     }
     .toys-toy-specs {
-      padding-left: 1.2em;
-      padding-bottom: .4em;
+      padding: 0 .7em .4em .7em;
       font-size: .88em;
       color: #656d76;
     }
-    .toys-toy-access { display: inline; padding: 0; }
+    .toys-toy-access { display: none !important; height: 0; padding: 0 !important; margin: 0; overflow: hidden; }
     tr.toys-toy-row { border-bottom: 1px solid #f0f0f0; }
     tr.toys-toy-row:last-child { border-bottom: none; }
   }

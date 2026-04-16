@@ -137,7 +137,7 @@
       toys:
         - toy: Oscilloscope
           specs: Capture waveforms in time and frequency domains
-        - toy: Jandel RM3 Four-Point Probe
+        - toy: Four-Point Probe
           specs: Sheet resistance of conductive thin films
           highlighted: true
           available: true
@@ -175,232 +175,210 @@
 # ═══════════════════════════════════════════════════════════════
 
 - science: Chemistry
-  topic: Vibrational Spectroscopy
+  topic: Spectroscopy
   technologies:
     - technology: Infrared
-      description: Identify polar bonds and functional groups by mid-IR absorption
+      description: Identify polar bonds and functional groups from mid-IR absorption
       toys:
-        - toy: Thermo Nicolet 380 FT-IR
+        - toy: FT-IR Spectrometer
           specs: 4000–400 cm⁻¹, ATR diamond crystal, transmission mode
+          highlighted: true
           available: true
           completed: "20260401 IR Spectroscopy"
-        - toy: Bruker Tensor 27 / Hyperion
-          specs: FT-IR microscope, spatially resolved micro-IR spectra
+        - toy: FT-IR Microscope
+          specs: Spatially resolved micro-IR spectra of tiny samples
           available: true
     - technology: Raman
-      description: Identify nonpolar bonds and breathing modes via inelastic scattering
+      description: Identify nonpolar bonds and ring breathing modes via inelastic light scattering
       toys:
-        - toy: Renishaw inVia Raman Microscope
+        - toy: Raman Microscope
           specs: Confocal, 785 nm laser, mineral and polymer identification
           available: true
-
-- science: Chemistry
-  topic: Electronic Spectroscopy
-  technologies:
-    - technology: UV-Vis Absorption
-      description: Measure electronic transitions, concentration, and color
+    - technology: UV-Vis
+      description: Measure electronic transitions, concentration, and color in solution
       toys:
-        - toy: PerkinElmer Lambda 750
-          specs: 190–3300 nm UV-Vis-NIR, double beam
-          available: true
-        - toy: Shimadzu UV-2550
-          specs: 190–900 nm UV-Vis, high resolution
+        - toy: UV-Vis-NIR Spectrophotometer
+          specs: 190–3300 nm range, double beam, absorbance and transmittance
           available: true
     - technology: Fluorescence
-      description: Detect excited-state emission and molecular environment
+      description: Detect excited-state emission and probe molecular environment
       toys:
-        - toy: Horiba FluoroMax-3
-          specs: Steady-state and time-resolved, excitation-emission matrices
+        - toy: Spectrofluorometer
+          specs: Steady-state and time-resolved excitation-emission matrices
           available: true
-    - technology: Chiroptical
-      description: Probe molecular handedness and secondary structure
+    - technology: Circular Dichroism
+      description: Measure differential absorption of left and right circularly polarized light to reveal secondary structure
       toys:
-        - toy: Jasco J-1500 CD
-          specs: Circular dichroism — helix, sheet, coil content
+        - toy: CD Spectrometer
+          specs: Protein folding — helix, sheet, and coil content
           available: true
-        - toy: Jasco P-2000 Polarimeter
-          specs: Optical rotation, enantiomeric excess
+    - technology: Polarimetry
+      description: Measure optical rotation to determine enantiomeric purity
+      toys:
+        - toy: Polarimeter
+          specs: Specific rotation and enantiomeric excess of chiral molecules
           available: true
 
 - science: Chemistry
   topic: Magnetic Resonance
   technologies:
-    - technology: NMR (Liquid-State)
-      description: Determine molecular connectivity from nuclear spin in magnetic fields
+    - technology: NMR
+      description: Determine molecular connectivity and dynamics from nuclear spin in a magnetic field
       toys:
-        - toy: Bruker 400 MHz NMR
-          specs: 1H, 13C, routine structure elucidation
+        - toy: Liquid-State NMR
+          specs: 400, 500, and 700 MHz spectrometers for 1H, 13C, and 2D experiments
           available: true
-        - toy: Bruker 500 MHz NMR
-          specs: Higher resolution, 2D experiments, natural abundance 13C
-          available: true
-        - toy: Bruker 700 MHz NMR
-          specs: Cryoprobe, highest sensitivity, biomolecular NMR
-          available: true
-    - technology: NMR (Solid-State)
-      description: Probe insoluble materials — polymers, minerals, catalysts
-      toys:
-        - toy: Tecmag 400 MHz Solid-State NMR
-          specs: CP/MAS, crystalline and amorphous phase analysis
+        - toy: Solid-State NMR
+          specs: CP/MAS for crystalline and amorphous phase analysis of insoluble materials
           available: true
     - technology: EPR
-      description: Detect unpaired electrons — radicals, metal centers, defects
+      description: Detect unpaired electrons in radicals, metal centers, and defects
       toys:
-        - toy: Bruker EMXPlus EPR
-          specs: X-band, variable temperature to 4 K with He cryostat
+        - toy: EPR Spectrometer
+          specs: X-band with variable temperature down to 4 K via helium cryostat
           available: true
 
 - science: Chemistry
   topic: Mass Spectrometry
   technologies:
     - technology: GC-MS
-      description: Identify volatile compounds by fragmentation pattern
+      description: Identify volatile compounds by vaporizing, separating, and fragmenting them
       toys:
-        - toy: Agilent 7890A / 5975C GC-MS
-          specs: Electron ionization, NIST library, quadrupole
+        - toy: GC-MS
+          specs: Electron ionization, NIST library search, quadrupole mass analyzer
           available: true
     - technology: LC-MS
-      description: Identify nonvolatile compounds by molecular weight
+      description: Identify nonvolatile compounds in solution by molecular weight
       toys:
-        - toy: Waters ZQ ESCi LC-MS
-          specs: Electrospray, atmospheric pressure, nominal mass
+        - toy: LC-MS
+          specs: Electrospray ionization, nominal and high-resolution accurate mass
           available: true
-        - toy: Agilent 6230 TOF LC-MS
-          specs: High-resolution accurate mass, molecular formula
-          available: true
-    - technology: MALDI-TOF
-      description: Weigh intact polymers and biomolecules from solid matrix
+    - technology: MALDI
+      description: Weigh intact polymers and biomolecules by laser desorption from a solid matrix
       toys:
-        - toy: Shimadzu MALDI-8020
-          specs: Benchtop MALDI-TOF, polymer and peptide analysis
+        - toy: MALDI-TOF
+          specs: Benchtop matrix-assisted laser desorption, polymer and peptide analysis
           available: true
 
 - science: Chemistry
   topic: Chromatography
   technologies:
-    - technology: HPLC
-      description: Separate and quantify components in liquid mixtures
+    - technology: Liquid
+      description: Separate and quantify components dissolved in a liquid mixture
       toys:
-        - toy: Agilent 1200 Series HPLC
-          specs: Dual stacks, analytical and preparative, UV/RI detection
+        - toy: HPLC
+          specs: Analytical and preparative dual stacks with UV and refractive index detection
           available: true
-    - technology: GC
-      description: Separate and quantify volatile compounds in gas phase
+    - technology: Gas
+      description: Separate and quantify volatile compounds carried through a column by inert gas
       toys:
-        - toy: Agilent 7890A GC-FID
-          specs: Standalone GC, flame ionization, chiral column available
+        - toy: GC-FID
+          specs: Flame ionization detection, standalone or coupled to MS, chiral column available
           available: true
 
 - science: Chemistry
   topic: Thermal Analysis
   technologies:
     - technology: Melting Point
-      description: Determine melting temperature and assess sample purity
+      description: Determine when a solid melts to assess identity and purity
       toys:
-        - toy: OptiMelt Automated Melting Point
-          specs: Visual detection, capillary method, digital readout
+        - toy: Melting Point Apparatus
+          specs: Visual capillary method with digital temperature readout
           available: true
           completed: "20260405 Melting Point"
-    - technology: TGA
-      description: Measure mass loss as a function of temperature
+    - technology: Thermogravimetry
+      description: Measure mass loss as temperature rises to reveal decomposition and moisture content
       toys:
-        - toy: TA Instruments TGA Q50
-          specs: Decomposition temperature, moisture, residual ash
+        - toy: TGA
+          specs: Ramp to 1000 °C under nitrogen or air, milligram sensitivity
           available: true
-    - technology: DSC
-      description: Measure heat flow — glass transitions, crystallization, melting
+    - technology: Calorimetry
+      description: Measure heat flow to detect glass transitions, crystallization, and phase changes
       toys:
-        - toy: TA Instruments DSC Q20
-          specs: Modulated DSC, Tg, crystallinity, heat capacity
+        - toy: DSC
+          specs: Modulated differential scanning calorimetry, heat capacity measurement
           available: true
 
 - science: Chemistry
-  topic: Structural & Surface Analysis
+  topic: Structural Analysis
   technologies:
     - technology: X-Ray Diffraction
-      description: Identify crystal phases and determine atomic coordinates
+      description: Bounce X-rays off crystals to identify phases or solve full 3D atomic structures
       toys:
-        - toy: Bruker D8 Advance Powder XRD
-          specs: Phase identification, lattice parameters, Rietveld
+        - toy: Powder XRD
+          specs: Phase identification, lattice parameters, and Rietveld refinement
           available: true
-        - toy: Bruker D8 Venture SC-XRD
-          specs: Full 3D structure from single crystals, Cu + Mo sources
+        - toy: Single-Crystal XRD
+          specs: Complete 3D atomic coordinates from individual crystals
           available: true
     - technology: Scanning Probe
-      description: Image surface topography and electronic states at atomic scale
+      description: Drag a sharp tip across a surface to map topography and electronic states at atomic scale
       toys:
-        - toy: Nanosurf EasyScan 2 AFM
-          specs: Contact and tapping mode, nm-resolution topography
+        - toy: AFM
+          specs: Contact and tapping mode, nanometer-resolution height maps
           available: true
-        - toy: Nanosurf EasyScan 2 STM
-          specs: Atomic-resolution conductance maps
+        - toy: STM
+          specs: Atomic-resolution conductance maps of conductive surfaces
           available: true
 
 - science: Chemistry
   topic: Electron Microscopy
   technologies:
-    - technology: SEM
-      description: Image surfaces and map elemental composition with focused electrons
+    - technology: Scanning Electron
+      description: Scan a focused electron beam across a surface to image morphology and map elements
       toys:
-        - toy: FEI Talos F200s S/TEM
-          specs: STEM mode, EDS mapping, sub-nm resolution
-        - toy: Thermo Scios 2 FIB/SEM
-          specs: Focused ion beam cross-section, site-specific TEM prep
-    - technology: TEM
-      description: Transmit electrons through thin specimens to image internal nanostructure
+        - toy: SEM
+          specs: Secondary and backscatter imaging, EDS elemental mapping
+        - toy: FIB-SEM
+          specs: Focused ion beam for cross-sectioning and site-specific TEM sample prep
+    - technology: Transmission Electron
+      description: Transmit electrons through an ultra-thin specimen to reveal internal nanostructure
       toys:
-        - toy: JEOL JEM 2100F TEM
-          specs: 200 kV, lattice imaging, EDS, diffraction
-    - technology: Cryo-EM
-      description: Image biological structures in native frozen-hydrated state
-      toys:
-        - toy: Titan Krios (UBC/MIT)
-          specs: 300 kV, K3 detector, near-atomic resolution
+        - toy: TEM
+          specs: 200 kV, lattice imaging, electron diffraction, and EDS analysis
 
 - science: Chemistry
-  topic: Synthesis
+  topic: Synthesis and Preparation
   technologies:
-    - technology: Microwave Synthesis
-      description: Rapid reaction acceleration under sealed-vessel pressure
+    - technology: Microwave Reactor
+      description: Accelerate chemical reactions with rapid sealed-vessel heating under pressure
       toys:
-        - toy: CEM Discover Microwave Reactor
+        - toy: Microwave Reactor
           specs: 300 W, 300 °C, 20 bar, single-mode cavity
           available: true
-    - technology: Ozonolysis
-      description: Oxidative cleavage of carbon-carbon double bonds
+    - technology: Ozone Generator
+      description: Cleave carbon-carbon double bonds by oxidation with ozone gas
       toys:
-        - toy: Orec Ozone Generator
-          specs: Bench-scale O₃ production for organic synthesis
+        - toy: Ozone Generator
+          specs: Bench-scale ozone production for organic synthesis
           available: true
-
-- science: Chemistry
-  topic: General Lab
-  technologies:
-    - technology: Separation
-      description: Separate mixtures by density via centrifugal force
+    - technology: Centrifuge
+      description: Separate mixtures by spinning them at high speed so denser components sink
       toys:
-        - toy: Thermo Refrigerated Centrifuge
-          specs: 500–15,000 rpm, temperature control, various rotors
+        - toy: Centrifuge
+          specs: 500–15,000 rpm, refrigerated, temperature-controlled
+          highlighted: true
           available: true
           completed: "20260411 Centrifuge"
     - technology: pH Measurement
-      description: Measure acidity and basicity of aqueous solutions
+      description: Measure how acidic or basic a solution is
       toys:
-        - toy: VWR pH 1100 L
-          specs: Benchtop pH meter, 3-point buffer calibration
+        - toy: pH Meter
+          specs: Benchtop electrode with 3-point buffer calibration
+          highlighted: true
           available: true
           completed: "20260411 Centrifuge"
     - technology: Ultrapure Water
-      description: Reagent-grade water for sensitive experiments
+      description: Produce contaminant-free water for sensitive experiments
       toys:
-        - toy: Smart2Pure Water System
-          specs: 18.2 MΩ·cm Type 1 water, UV oxidation
+        - toy: Water Purification System
+          specs: 18.2 MΩ·cm Type 1 reagent-grade water with UV oxidation
           available: true
-    - technology: Mass Measurement
-      description: Precision weighing for quantitative sample preparation
+    - technology: Analytical Balance
+      description: Weigh samples with precision down to hundredths of a milligram
       toys:
-        - toy: Mettler AE 100 Analytical Balance
-          specs: 0.01 mg readability, internal calibration
+        - toy: Analytical Balance
+          specs: 0.01 mg readability with internal calibration
           available: true
 
 # ═══════════════════════════════════════════════════════════════
