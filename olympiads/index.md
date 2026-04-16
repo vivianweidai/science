@@ -13,8 +13,14 @@ layout: default
   <input type="radio" name="view" id="view-bio">
   <input type="radio" name="view" id="view-astro">
   <script>
-    var tabs = ['view-math','view-comp','view-phys','view-chem','view-bio','view-astro'];
-    document.getElementById(tabs[Math.floor(Math.random() * tabs.length)]).checked = true;
+    (function(){
+      var tabs = ['view-math','view-comp','view-phys','view-chem','view-bio','view-astro'];
+      var saved = sessionStorage.getItem('oly-tab');
+      var pick = saved && document.getElementById('view-' + saved) ? 'view-' + saved
+        : tabs[Math.floor(Math.random() * tabs.length)];
+      document.getElementById(pick).checked = true;
+      sessionStorage.setItem('oly-tab', pick.replace('view-', ''));
+    })();
   </script>
 
   <div class="tab-labels">
@@ -187,6 +193,7 @@ layout: default
       radios.forEach(function (radio) {
         radio.addEventListener('change', function () {
           var filter = this.id.replace('view-', '');
+          sessionStorage.setItem('oly-tab', filter);
           renderTimeline(items, filter);
         });
       });

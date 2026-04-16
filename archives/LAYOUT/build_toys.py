@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 """Build archives/CONTENT/toys.json from the YAML source of truth.
 
-Source of truth:
-  archives/CONTENT/toys.yml
+Source of truth:  archives/CONTENT/toys.yml
+Output:           archives/CONTENT/toys.json
 
-Output (consumed by research/index.md client-side JS and by the iOS app):
-  archives/CONTENT/toys.json
+Three-level schema:
+  topics[] → technologies[] → toys[]
 
 Output shape:
-    {"items": [ {id, science, technology, principle, question, answer, state,
-                 highlighted, available, completed?, project_url?}, ... ]}
-
-Run this after editing the YAML, then commit both the YAML and the JSON.
-There is no CI validation — the editor is responsible for remembering to rebuild.
+  {"topics": [{id, science, science_slug, topic,
+    technologies: [{id, technology, description,
+      toys: [{id, toy, specs, highlighted, available, completed?, project_url?}]
+    }]
+  }]}
 """
 
 from __future__ import annotations
@@ -23,7 +23,7 @@ import urllib.parse
 from pathlib import Path
 
 try:
-    import yaml  # PyYAML
+    import yaml
 except ImportError:
     sys.exit("PyYAML is required: pip install pyyaml")
 
@@ -33,94 +33,95 @@ PROJECTS = ROOT / "research" / "projects"
 
 SCIENCES = {"Biology", "Chemistry", "Physics", "Computing", "Mathematics", "Astronomy"}
 SCIENCE_SLUGS = {
-    "Biology": "bio",
-    "Chemistry": "chem",
-    "Physics": "phys",
-    "Computing": "comp",
-    "Mathematics": "math",
-    "Astronomy": "astro",
+    "Biology": "bio", "Chemistry": "chem", "Physics": "phys",
+    "Computing": "comp", "Mathematics": "math", "Astronomy": "astro",
 }
 
 
-def build_toys() -> list[dict]:
+def build() -> list[dict]:
     data = yaml.safe_load((CONTENT / "toys.yml").read_text())
     if not isinstance(data, list):
         raise ValueError("toys.yml must be a YAML list")
-    items = []
+    topics = []
+    tech_id = toy_id = 0
     for i, e in enumerate(data):
-        # Validate required fields
-        for field in ("science", "technology", "principle", "question", "answer", "state"):
-            if field not in e:
-                raise ValueError(f"entry[{i}] missing required field {field!r}: {e}")
+        for f in ("science", "topic", "technologies"):
+            if f not in e:
+                raise ValueError(f"topic[{i}] missing {f!r}")
         if e["science"] not in SCIENCES:
-            raise ValueError(f"entry[{i}] invalid science {e['science']!r}")
+            raise ValueError(f"topic[{i}] invalid science {e['science']!r}")
 
-        item: dict = {
+        techs_out = []
+        for j, tech in enumerate(e["technologies"]):
+            for f in ("technology", "description"):
+                if f not in tech:
+                    raise ValueError(f"topic[{i}].tech[{j}] missing {f!r}")
+            tech_id += 1
+            toys_out = []
+            for k, toy in enumerate(tech.get("toys") or []):
+                for f in ("toy", "specs"):
+                    if f not in toy:
+                        raise ValueError(f"topic[{i}].tech[{j}].toy[{k}] missing {f!r}")
+                toy_id += 1
+                t: dict = {
+                    "id": toy_id,
+                    "toy": toy["toy"],
+                    "specs": toy["specs"],
+                    "highlighted": 1 if toy.get("highlighted") else 0,
+                    "available": 1 if toy.get("available") else 0,
+                }
+                if toy.get("url"):
+                    t["url"] = toy["url"]
+                if toy.get("completed"):
+                    folder = toy["completed"]
+                    t["completed"] = folder
+                    t["project_url"] = f"/research/projects/{urllib.parse.quote(folder)}/"
+                    if not (PROJECTS / folder).is_dir():
+                        print(f"  warn: topic[{i}].tech[{j}].toy[{k}] → "
+                              f"{folder!r} not found", file=sys.stderr)
+                toys_out.append(t)
+            techs_out.append({
+                "id": tech_id,
+                "technology": tech["technology"],
+                "description": tech["description"],
+                "toys": toys_out,
+            })
+        topics.append({
             "id": i + 1,
             "science": e["science"],
             "science_slug": SCIENCE_SLUGS[e["science"]],
-            "technology": e["technology"],
-            "principle": e["principle"],
-            "question": e["question"],
-            "answer": e["answer"],
-            "state": e["state"],
-            "highlighted": 1 if e.get("highlighted") else 0,
-            "available": 1 if e.get("available") else 0,
-        }
-
-        # Cross-link completed projects
-        if e.get("completed"):
-            folder = e["completed"]
-            item["completed"] = folder
-            # URL-encode the folder name for the project link
-            encoded = urllib.parse.quote(folder)
-            item["project_url"] = f"/research/projects/{encoded}/"
-            # Validate that the project folder exists
-            project_path = PROJECTS / folder
-            if not project_path.is_dir():
-                print(f"  warning: entry[{i}] references project folder "
-                      f"{folder!r} but {project_path} does not exist",
-                      file=sys.stderr)
-
-        items.append(item)
-    return items
-
-
-def write_json(path: Path, items: list[dict]) -> None:
-    payload = {"items": items}
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
-    print(f"wrote {path.relative_to(ROOT)} ({len(items)} items)")
-
-
-def summary(items: list[dict]) -> None:
-    """Print a quick summary of the build."""
-    by_science: dict[str, int] = {}
-    available = 0
-    completed = 0
-    highlighted = 0
-    for it in items:
-        by_science[it["science"]] = by_science.get(it["science"], 0) + 1
-        if it["available"]:
-            available += 1
-        if it.get("completed"):
-            completed += 1
-        if it["highlighted"]:
-            highlighted += 1
-    print(f"  total: {len(items)} toys")
-    for s in sorted(by_science):
-        print(f"    {s}: {by_science[s]}")
-    print(f"  available: {available}  highlighted: {highlighted}  completed: {completed}")
+            "topic": e["topic"],
+            "technologies": techs_out,
+        })
+    return topics
 
 
 def main() -> int:
     try:
-        toys = build_toys()
+        topics = build()
     except ValueError as e:
-        print(f"validation error: {e}", file=sys.stderr)
+        print(f"error: {e}", file=sys.stderr)
         return 1
-    CONTENT.mkdir(exist_ok=True)
-    write_json(CONTENT / "toys.json", toys)
-    summary(toys)
+    payload = {"topics": topics}
+    out = CONTENT / "toys.json"
+    out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
+    n_tech = sum(len(t["technologies"]) for t in topics)
+    n_toys = sum(len(tech["toys"]) for t in topics for tech in t["technologies"])
+    avail = sum(1 for t in topics for tech in t["technologies"]
+                for toy in tech["toys"] if toy["available"])
+    done = sum(1 for t in topics for tech in t["technologies"]
+               for toy in tech["toys"] if toy.get("completed"))
+    print(f"wrote {out.relative_to(ROOT)}")
+    print(f"  {len(topics)} topics, {n_tech} technologies, {n_toys} toys")
+    by = {}
+    for t in topics:
+        by.setdefault(t["science"], [0, 0, 0])
+        by[t["science"]][0] += 1
+        by[t["science"]][1] += len(t["technologies"])
+        by[t["science"]][2] += sum(len(tech["toys"]) for tech in t["technologies"])
+    for s in sorted(by):
+        print(f"    {s}: {by[s][0]} topics, {by[s][1]} techs, {by[s][2]} toys")
+    print(f"  available: {avail}  completed: {done}")
     return 0
 
 
