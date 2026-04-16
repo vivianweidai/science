@@ -2,71 +2,165 @@
 layout: default
 ---
 
-<div class="page-header"><h2>Research</h2><a class="back-link" href="/">Science</a></div>
+<div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a class="active" href="/research/">Research</a></div></div>
 
-<div class="timeline">
-  <div class="year-marker">2026</div>
+<div class="tabs" id="toys-tabs">
+  <input type="radio" name="toys-view" id="toys-all">
+  <input type="radio" name="toys-view" id="toys-math">
+  <input type="radio" name="toys-view" id="toys-comp">
+  <input type="radio" name="toys-view" id="toys-phys">
+  <input type="radio" name="toys-view" id="toys-chem">
+  <input type="radio" name="toys-view" id="toys-bio">
+  <input type="radio" name="toys-view" id="toys-astro">
+  <script>
+    (function(){
+      var picks = ['toys-chem','toys-bio','toys-phys','toys-comp'];
+      document.getElementById(picks[Math.floor(Math.random() * picks.length)]).checked = true;
+    })();
+  </script>
 
-  <div class="entry">
-    <div class="top-line"><div class="month">April</div>
-    <div class="chips-cell"><span class="chip chem">Chemistry</span></div></div>
-    <div class="name-cell"><a href="projects/20260411%20Centrifuge/">Centrifuge</a> — Centrifugation and pH measurements of everyday liquids</div>
-  </div>
-
-  <div class="entry">
-    <div class="top-line"><div class="month">April</div>
-    <div class="chips-cell"><span class="chip chem">Chemistry</span></div></div>
-    <div class="name-cell"><a href="projects/20260405%20Melting%20Point/">Melting Point</a> — Melting point determination of caffeine and aspirin</div>
-  </div>
-
-  <div class="entry">
-    <div class="top-line"><div class="month">April</div>
-    <div class="chips-cell"><span class="chip phys">Physics</span></div></div>
-    <div class="name-cell"><a href="projects/20260404%20Four%20Point%20Probe/">Four-Point Probe</a> — Sheet resistance of conductive materials</div>
-  </div>
-
-  <div class="entry hl">
-    <div class="top-line"><div class="month">April</div>
-    <div class="chips-cell"><span class="chip chem">Chemistry</span></div></div>
-    <div class="name-cell"><a href="projects/20260401%20IR%20Spectroscopy/">IR Spectroscopy</a> — Functional group identification of everyday materials</div>
-  </div>
-
-  <div class="entry">
-    <div class="top-line"><div class="month">April</div>
-    <div class="chips-cell"><span class="chip bio">Biology</span></div></div>
-    <div class="name-cell"><a href="projects/20260401%20Genes%20in%20Space/">Genes in Space</a> — Gene expression changes in microgravity</div>
-  </div>
-
-  <div class="year-marker">2025</div>
-
-  <div class="entry">
-    <div class="top-line"><div class="month">February</div>
-    <div class="chips-cell"><span class="chip comp">Computing</span></div></div>
-    <div class="name-cell"><a href="projects/20250225%20Catfood/">Cat Food Color Preference</a> — Red vs green food preference</div>
+  <div class="tab-labels">
+    <label for="toys-all">All</label>
+    <label for="toys-math">Mathematics</label>
+    <label for="toys-comp">Computing</label>
+    <label for="toys-phys">Physics</label>
+    <label for="toys-chem">Chemistry</label>
+    <label for="toys-bio">Biology</label>
+    <label for="toys-astro">Astronomy</label>
   </div>
 </div>
 
+<div class="toys-section" id="toys-content"></div>
+
+<script>
+(function () {
+  var SLUG_MAP = {
+    Biology: 'bio', Chemistry: 'chem', Physics: 'phys',
+    Computing: 'comp', Mathematics: 'math', Astronomy: 'astro'
+  };
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function renderToys(items, filter) {
+    var filtered = filter === 'all'
+      ? items
+      : items.filter(function (t) { return t.science_slug === filter; });
+
+    // Group by technology, preserving source order
+    var groups = [];
+    var groupMap = {};
+    filtered.forEach(function (t) {
+      var key = t.science + '|' + t.technology;
+      if (!groupMap[key]) {
+        groupMap[key] = { science: t.science, slug: t.science_slug, technology: t.technology, items: [] };
+        groups.push(groupMap[key]);
+      }
+      groupMap[key].items.push(t);
+    });
+
+    var html = '';
+    groups.forEach(function (g) {
+      html += '<div class="toys-block">';
+      html += '<h4 class="toys-group">' + esc(g.technology) + '</h4>';
+      html += '<table class="toys-table"><thead><tr>'
+        + '<th></th><th>Principle</th><th>Question</th><th>Answer</th><th>State</th>'
+        + '</tr></thead><tbody>';
+      g.items.forEach(function (t) {
+        var cls = t.highlighted ? ' class="toys-hl"' : '';
+        var principle = esc(t.principle);
+        // If completed, wrap principle in a link to the project page
+        if (t.project_url) {
+          principle = '<a href="' + t.project_url + '">' + principle + '</a>';
+        }
+        // Status indicators
+        var badges = '';
+        if (t.available) badges += ' <span class="toys-badge avail" title="Available">&#10003;</span>';
+        if (t.completed) badges += ' <span class="toys-badge done" title="Completed">&#9733;</span>';
+        html += '<tr' + cls + '>'
+          + '<td><span class="chip ' + t.science_slug + '">' + t.science + '</span></td>'
+          + '<td>' + principle + badges + '</td>'
+          + '<td>' + esc(t.question) + '</td>'
+          + '<td>' + esc(t.answer) + '</td>'
+          + '<td>' + esc(t.state) + '</td>'
+          + '</tr>';
+      });
+      html += '</tbody></table></div>';
+    });
+
+    if (groups.length === 0) {
+      html = '<p style="color:#656d76;font-style:italic;margin:1em 0;">No toys in this discipline yet.</p>';
+    }
+
+    document.getElementById('toys-content').innerHTML = html;
+  }
+
+  fetch('../archives/CONTENT/toys.json', { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      var items = d.items;
+
+      // Initial render — respect the randomly preselected tab
+      var checked = document.querySelector('input[name="toys-view"]:checked');
+      var filter = checked ? checked.id.replace('toys-', '') : 'all';
+      renderToys(items, filter);
+
+      // Wire up tab filtering
+      document.querySelectorAll('input[name="toys-view"]').forEach(function (radio) {
+        radio.addEventListener('change', function () {
+          renderToys(items, this.id.replace('toys-', ''));
+        });
+      });
+    });
+})();
+</script>
+
 <style>
-  .timeline { border-left: 2px solid #d1d9e0; margin-left: .8em; padding-left: 1.2em; }
-  .timeline .year-marker { font-weight: 700; font-size: 1.1em; margin: 1.2em 0 .4em 0; }
-  .timeline .entry {
-    display: grid;
-    grid-template-columns: 6.5em auto 1fr;
-    gap: 0 .5em;
-    padding: .35em 0;
+  .toys-section { margin: 1em 0; }
+  .toys-group {
+    margin: 1.2em 0 .3em 0;
     font-size: .95em;
-    align-items: first baseline;
+    font-weight: 700;
+    color: #1f2328;
+    border-bottom: 1px solid #d1d9e0;
+    padding-bottom: .2em;
   }
-  .timeline .entry .top-line {
-    display: contents;
+  .toys-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .85em;
+    margin-bottom: .5em;
   }
-  .timeline .entry .month { color: #656d76; font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .timeline .entry .chips-cell { white-space: nowrap; display: flex; gap: 2px; align-items: center; }
-  .timeline .entry .name-cell { }
-  .timeline .entry.hl { position: relative; }
-  .timeline .entry.hl::before { content: ''; position: absolute; inset: -.1em -.4em; background: #fff44f; border-radius: 6px; z-index: -1; }
-  .timeline .entry .name-cell a { color: #0969da; text-decoration: none; font-weight: 600; }
-  .timeline .entry .name-cell a:hover { text-decoration: underline; }
+  .toys-table thead th {
+    text-align: left;
+    font-weight: 600;
+    color: #656d76;
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    padding: .3em .5em;
+    border-bottom: 1px solid #d1d9e0;
+  }
+  .toys-table thead th:first-child { width: 6.5em; }
+  .toys-table tbody td {
+    padding: .35em .5em;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+    color: #1f2328;
+  }
+  .toys-table tbody td a { color: #0969da; text-decoration: none; font-weight: 600; }
+  .toys-table tbody td a:hover { text-decoration: underline; }
+  .toys-table tbody tr:last-child td { border-bottom: none; }
+  .toys-table tbody tr.toys-hl td { background: #fffde7; }
+  .toys-badge {
+    display: inline-block; font-size: .7em; vertical-align: middle;
+    margin-left: 3px; line-height: 1;
+  }
+  .toys-badge.avail { color: #1a7f37; }
+  .toys-badge.done { color: #d4a017; }
 
   .chip {
     display: inline-block; padding: 1px 7px; border-radius: 999px;
@@ -81,55 +175,34 @@ layout: default
   .chip.astro { background: var(--subj-astro); }
 
   @media (max-width: 600px) {
-    .timeline .entry {
-      display: flex;
-      flex-direction: column;
-      gap: .15em;
-      padding: .5em 0;
-    }
-    .timeline .entry .top-line {
-      display: flex;
-      align-items: center;
-      gap: .35em;
-      flex-wrap: wrap;
-    }
-    .timeline .entry .month { display: inline; font-size: .82em; }
-    .timeline .entry .chips-cell { display: inline-flex; }
-    .timeline .entry .name-cell { font-size: .95em; line-height: 1.4; }
+    .toys-table { font-size: .78em; }
+    .toys-table thead th:first-child { width: 5em; }
+  }
+
+  /* Toys tab styling — match olympiads colour scheme */
+  #toys-all:checked ~ .tab-labels label[for="toys-all"] {
+    color: #656d76; border-bottom-color: #656d76; background: #e8e8e8;
+  }
+  #toys-math:checked ~ .tab-labels label[for="toys-math"] {
+    color: #2563eb; border-bottom-color: #2563eb; background: var(--subj-math);
+  }
+  #toys-comp:checked ~ .tab-labels label[for="toys-comp"] {
+    color: #7c3aed; border-bottom-color: #7c3aed; background: var(--subj-comp);
+  }
+  #toys-phys:checked ~ .tab-labels label[for="toys-phys"] {
+    color: #ea580c; border-bottom-color: #ea580c; background: var(--subj-phys);
+  }
+  #toys-chem:checked ~ .tab-labels label[for="toys-chem"] {
+    color: #5c7a10; border-bottom-color: #5c7a10; background: var(--subj-chem);
+  }
+  #toys-bio:checked ~ .tab-labels label[for="toys-bio"] {
+    color: #0e8577; border-bottom-color: #0e8577; background: var(--subj-bio);
+  }
+  #toys-astro:checked ~ .tab-labels label[for="toys-astro"] {
+    color: #e11d48; border-bottom-color: #e11d48; background: var(--subj-astro);
   }
 </style>
 
 ---
 
-### Instruments
-
-- <span class="chip chem">Chemistry</span> <a href="projects/20260401%20IR%20Spectroscopy/">Thermo Scientific Nicolet 380 FT-IR Spectrometer</a> — mid-IR absorption/transmittance spectra
-- <span class="chip chem">Chemistry</span> <a href="projects/20260405%20Melting%20Point/">OptiMelt Automated Melting Point System</a> — melting point determination
-- <span class="chip chem">Chemistry</span> <a href="projects/20260411%20Centrifuge/">Thermo Scientific Refrigerated Centrifuge</a> — separation of mixtures by density
-- <span class="chip chem">Chemistry</span> <a href="projects/20260411%20Centrifuge/">VWR pH 1100 L</a> — benchtop pH measurements
-- <span class="chip phys">Physics</span> <a href="projects/20260404%20Four%20Point%20Probe/">Jandel RM3 Four-Point Probe</a> — sheet resistance measurements
-- <span class="chip bio">Biology</span> <a href="projects/20260401%20Genes%20in%20Space/">miniPCR Thermal Cycler</a> — PCR amplification of DNA/RNA targets
-- <span class="chip bio">Biology</span> <a href="projects/20260401%20Genes%20in%20Space/">P51 Fluorescence Viewer</a> — fluorescence detection and gel imaging
-- <span class="chip bio">Biology</span> <a href="projects/20260401%20Genes%20in%20Space/">BioBits Cell Free System</a> — in vitro protein expression from DNA templates
-- <span class="chip comp">Computing</span> GitHub, Python and Jupyter Notebooks — statistical analysis and reproducible research pipelines
-
----
-
-### Documentation
-
-All projects are hosted on [GitHub](https://github.com/vivianweidai/science/tree/main/research/projects) with the folder structure:
-
-```
-YYYYMMDD Project Name/
-├── DATA/       # Raw instrument data
-├── PHOTOS/     # Experiment photos
-├── PAPERS/     # Background papers
-├── OUTPUT/     # Analysis and reports
-└── index.md    # Project summary page
-```
-
-Also available on the [Apple App Store](https://apps.apple.com/app/id6762091743) while key works are tracked on <a href="https://orcid.org/0009-0003-0301-4061" target="_blank" rel="noopener noreferrer"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID iD icon" style="height:1em; vertical-align:text-bottom; margin-right:0.2em;"/>https://orcid.org/0009-0003-0301-4061</a>.
-
----
-
-<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/research">View on GitHub</a></div>
+<div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a class="active" href="/research/">Research</a></div></div>

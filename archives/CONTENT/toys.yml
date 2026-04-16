@@ -1,0 +1,1003 @@
+# Toys (scientific instruments & technologies) — single source of truth.
+# Run `python archives/LAYOUT/build_toys.py` after edits to regenerate JSON.
+#
+# Schema:
+#   science:      Biology | Chemistry | Physics | Computing |     (required)
+#                 Mathematics | Astronomy
+#   technology:   string — technology group name                  (required)
+#   principle:    string — operating principle / technique name    (required)
+#   question:     string — what question does it answer           (required)
+#   answer:       string — what information you get               (required)
+#   state:        string — sample state required                  (required)
+#   highlighted:  true                                            (optional — marks rows with yellow highlight)
+#   available:    true                                            (optional — instrument is accessible at SIL)
+#   completed:    "YYYYMMDD Project Name"                         (optional — folder name under research/projects/)
+
+# ═══════════════════════════════════════════════════════════════
+# BIOLOGY
+# ═══════════════════════════════════════════════════════════════
+
+# ── Molecular Biology ──
+- science: Biology
+  technology: Molecular Biology
+  principle: Amplify
+  question: How to amplify DNA
+  answer: Cloning, gene detection
+  state: DNA in buffer
+
+- science: Biology
+  technology: Molecular Biology
+  principle: Express
+  question: How to express protein
+  answer: Proteins, fluorescence
+  state: Reagents
+
+- science: Biology
+  technology: Molecular Biology
+  principle: Detect
+  question: Is the gene expressed
+  answer: Presence, absence, relative
+  state: Gel, tube, plate
+
+# ── Genomics & Sequencing ──
+- science: Biology
+  technology: Genomics & Sequencing
+  principle: Short-Read Sequencing
+  question: What genes are present or expressed
+  answer: Genome assembly, transcriptome profiling
+  state: DNA/RNA in buffer
+
+- science: Biology
+  technology: Genomics & Sequencing
+  principle: Long-Read Sequencing
+  question: What is the full-length sequence
+  answer: Structural variants, full transcripts
+  state: High-MW DNA/RNA
+
+- science: Biology
+  technology: Genomics & Sequencing
+  principle: Sanger Sequencing
+  question: What is this specific sequence
+  answer: Confirmed base-by-base readout
+  state: PCR product, plasmid
+
+- science: Biology
+  technology: Genomics & Sequencing
+  principle: Single-Cell Genomics
+  question: What does each cell express
+  answer: Cell-type clusters, rare populations
+  state: Dissociated cells
+
+- science: Biology
+  technology: Genomics & Sequencing
+  principle: qPCR / Fragment Analysis
+  question: How much of this target is there
+  answer: Quantitative copy number, fragment sizes
+  state: DNA/RNA in buffer
+
+# ── Proteomics & Metabolomics ──
+- science: Biology
+  technology: Proteomics & Metabolomics
+  principle: LC-MS/MS Proteomics
+  question: What proteins are present
+  answer: Protein identification, quantitation
+  state: Digested protein mixture
+
+- science: Biology
+  technology: Proteomics & Metabolomics
+  principle: Metabolite Profiling
+  question: What small molecules are present
+  answer: Metabolite identification, pathways
+  state: Cell extract, biofluid
+
+- science: Biology
+  technology: Proteomics & Metabolomics
+  principle: Protein Crystallography
+  question: What is the 3D structure of this protein
+  answer: Atomic-resolution structure
+  state: Protein crystal
+
+# ── Flow Cytometry & Cell Analysis ──
+- science: Biology
+  technology: Flow Cytometry & Cell Analysis
+  principle: Flow Cytometry
+  question: What populations are in this mixture
+  answer: Cell counts, surface markers, scatter profiles
+  state: Cells in suspension
+
+- science: Biology
+  technology: Flow Cytometry & Cell Analysis
+  principle: Cell Sorting (FACS)
+  question: How to isolate specific cell populations
+  answer: Purified live cell fractions
+  state: Cells in suspension
+
+- science: Biology
+  technology: Flow Cytometry & Cell Analysis
+  principle: Mass Cytometry (CyTOF)
+  question: What are many markers simultaneously
+  answer: High-dimensional immune profiling
+  state: Cells in suspension
+
+- science: Biology
+  technology: Flow Cytometry & Cell Analysis
+  principle: Metabolic Analysis
+  question: How does the cell respire
+  answer: Oxygen consumption, glycolysis rates
+  state: Adherent or suspension cells
+
+# ── Optical & Fluorescence Microscopy ──
+- science: Biology
+  technology: Optical & Fluorescence Microscopy
+  principle: Confocal Laser Scanning
+  question: What is the 3D fluorescence distribution
+  answer: Optical sections, co-localization
+  state: Fixed or live cells/tissue
+
+- science: Biology
+  technology: Optical & Fluorescence Microscopy
+  principle: Two-Photon / Multiphoton
+  question: What is deep inside thick tissue
+  answer: Deep-tissue fluorescence imaging
+  state: Thick tissue, live animal
+
+- science: Biology
+  technology: Optical & Fluorescence Microscopy
+  principle: Light Sheet (SPIM)
+  question: What does the whole organism look like
+  answer: Rapid volumetric imaging, low bleaching
+  state: Cleared tissue, embryo
+
+- science: Biology
+  technology: Optical & Fluorescence Microscopy
+  principle: Super-Resolution (STED/PALM/SIM)
+  question: What is below the diffraction limit
+  answer: Sub-100 nm structures
+  state: Fixed cells, special fluorophores
+
+- science: Biology
+  technology: Optical & Fluorescence Microscopy
+  principle: Spinning Disk Confocal
+  question: What are fast live-cell dynamics
+  answer: High-speed optical sections
+  state: Live cells
+
+- science: Biology
+  technology: Optical & Fluorescence Microscopy
+  principle: FLIM (Fluorescence Lifetime)
+  question: What is the local chemical environment
+  answer: Lifetime maps, FRET efficiency
+  state: Fluorescent sample
+
+# ── Biological Model Systems ──
+- science: Biology
+  technology: Biological Model Systems
+  principle: Transgenic Mouse Facility
+  question: How does this gene affect the organism
+  answer: Knockout/knock-in phenotypes
+  state: Mouse models
+
+- science: Biology
+  technology: Biological Model Systems
+  principle: Zebrafish / Aquatic Models
+  question: How does development proceed
+  answer: Developmental imaging, gene function
+  state: Zebrafish, aquatic organisms
+
+- science: Biology
+  technology: Biological Model Systems
+  principle: BSL-3 Containment
+  question: How to study dangerous pathogens
+  answer: Pathogen behavior, drug testing
+  state: Infectious agents
+
+- science: Biology
+  technology: Biological Model Systems
+  principle: Greenhouse / Field Research
+  question: How do plants grow under conditions
+  answer: Growth rates, tissue culture
+  state: Living plants
+
+# ═══════════════════════════════════════════════════════════════
+# CHEMISTRY
+# ═══════════════════════════════════════════════════════════════
+
+# ── Magnetic Resonance ──
+- science: Chemistry
+  technology: Magnetic Resonance
+  principle: Radio
+  question: What nuclear connections
+  answer: H-C categories
+  state: Deuterated solution
+  available: true
+
+- science: Chemistry
+  technology: Magnetic Resonance
+  principle: Microwave
+  question: What unpaired electrons
+  answer: Radicals, metal centers
+  state: Solid or solution
+  available: true
+
+# ── Vibrational Spectroscopy ──
+- science: Chemistry
+  technology: Vibrational Spectroscopy
+  principle: Infrared
+  question: What polar bonds
+  answer: Polar bonds
+  state: Any but no water
+  highlighted: true
+  available: true
+  completed: "20260401 IR Spectroscopy"
+
+- science: Chemistry
+  technology: Vibrational Spectroscopy
+  principle: Visible
+  question: What nonpolar bonds
+  answer: Nonpolar breathing rings
+  state: Any including water
+  available: true
+
+- science: Chemistry
+  technology: Vibrational Spectroscopy
+  principle: IR Microscopy (Micro-FTIR)
+  question: What polar bonds at microscale
+  answer: Spatially resolved IR spectra
+  state: Thin section, particle
+  available: true
+
+- science: Chemistry
+  technology: Vibrational Spectroscopy
+  principle: ATR
+  question: What surface functional groups
+  answer: Surface IR spectrum without prep
+  state: Any solid or liquid
+  highlighted: true
+  available: true
+  completed: "20260401 IR Spectroscopy"
+
+# ── Electronic Spectroscopy ──
+- science: Chemistry
+  technology: Electronic Spectroscopy
+  principle: UV Visible
+  question: What transitions
+  answer: Conjugation, color, concentration
+  state: Solution
+  highlighted: true
+  available: true
+
+- science: Chemistry
+  technology: Electronic Spectroscopy
+  principle: UV Visible
+  question: What fluoresces
+  answer: Excited state dynamics
+  state: Solution
+  highlighted: true
+  available: true
+
+- science: Chemistry
+  technology: Electronic Spectroscopy
+  principle: UV-Vis-NIR (extended range)
+  question: What absorbs across the full spectrum
+  answer: Band gaps, d-d transitions
+  state: Solution or solid
+  available: true
+
+# ── Chiroptical Spectroscopy ──
+- science: Chemistry
+  technology: Chiroptical Spectroscopy
+  principle: Rotation
+  question: What handedness, how pure
+  answer: Rotation purity
+  state: Solution
+  highlighted: true
+  available: true
+
+- science: Chemistry
+  technology: Chiroptical Spectroscopy
+  principle: Circular
+  question: What secondary structure
+  answer: Helix, sheet, coil folding
+  state: Solution
+  highlighted: true
+  available: true
+
+# ── Mass Spectrometry ──
+- science: Chemistry
+  technology: Mass Spectrometry
+  principle: Plasma
+  question: What atoms
+  answer: Element identity, quantity
+  state: Solution
+
+- science: Chemistry
+  technology: Mass Spectrometry
+  principle: Electron
+  question: What volatiles
+  answer: Fragment fingerprints
+  state: Gas, volatile liquid
+  highlighted: true
+  available: true
+
+- science: Chemistry
+  technology: Mass Spectrometry
+  principle: Spray
+  question: What nonvolatiles
+  answer: Molecular weights, monitoring
+  state: Solution
+  highlighted: true
+  available: true
+
+- science: Chemistry
+  technology: Mass Spectrometry
+  principle: Laser
+  question: How heavy intact
+  answer: Molecular weights, polymers
+  state: Solid in matrix
+  highlighted: true
+  available: true
+
+- science: Chemistry
+  technology: Mass Spectrometry
+  principle: LC-TOF (High-Res Accurate Mass)
+  question: What is the exact mass
+  answer: Molecular formula, accurate mass
+  state: Solution
+  available: true
+
+- science: Chemistry
+  technology: Mass Spectrometry
+  principle: LC-MS/MS (Triple Quad/Orbitrap)
+  question: What fragments confirm the structure
+  answer: Tandem MS identification, quantitation
+  state: Solution
+
+- science: Chemistry
+  technology: Mass Spectrometry
+  principle: ICP-MS
+  question: What trace elements are present
+  answer: Elemental quantitation at ppb level
+  state: Digested solution
+
+- science: Chemistry
+  technology: Mass Spectrometry
+  principle: SIMS / NanoSIMS
+  question: What isotopes at nanoscale
+  answer: Sub-50 nm isotopic imaging
+  state: Solid surface
+
+- science: Chemistry
+  technology: Mass Spectrometry
+  principle: IRMS (Isotope Ratio)
+  question: What is the isotopic ratio
+  answer: C, O, H, N, S isotope ratios
+  state: Gas, combusted solid
+
+# ── Thermal Analysis ──
+- science: Chemistry
+  technology: Thermal Analysis
+  principle: Melting
+  question: When does it melt
+  answer: Melting point, purity
+  state: Solid
+  available: true
+  completed: "20260405 Melting Point"
+
+- science: Chemistry
+  technology: Thermal Analysis
+  principle: Mass loss
+  question: When does it decompose
+  answer: Decomposition, moisture
+  state: Solid
+  highlighted: true
+  available: true
+
+- science: Chemistry
+  technology: Thermal Analysis
+  principle: Heat flow
+  question: When does it transition
+  answer: Glass transition, crystallization
+  state: Solid
+  highlighted: true
+  available: true
+
+- science: Chemistry
+  technology: Thermal Analysis
+  principle: DMA (Dynamic Mechanical Analysis)
+  question: How does stiffness change with temperature
+  answer: Storage/loss modulus, Tg
+  state: Solid bar or film
+
+- science: Chemistry
+  technology: Thermal Analysis
+  principle: Rheometry (DSR)
+  question: How does it flow under stress
+  answer: Viscosity, viscoelastic properties
+  state: Liquid, paste, soft solid
+
+# ── Structural Characterization ──
+- science: Chemistry
+  technology: Structural Characterization
+  principle: X-ray (Powder)
+  question: What crystal materials
+  answer: Crystal identity, fingerprint
+  state: Solid powder
+  available: true
+
+- science: Chemistry
+  technology: Structural Characterization
+  principle: X-ray (Single Crystal)
+  question: Where is every atom
+  answer: 3D structure
+  state: Single crystal
+  available: true
+
+- science: Chemistry
+  technology: Structural Characterization
+  principle: Tip
+  question: What is surface like
+  answer: Surface topology
+  state: Solid surface
+  available: true
+
+- science: Chemistry
+  technology: Structural Characterization
+  principle: Probe
+  question: How conductive
+  answer: Conductivity
+  state: Solid
+  available: true
+  completed: "20260404 Four Point Probe"
+
+- science: Chemistry
+  technology: Structural Characterization
+  principle: XRF (X-Ray Fluorescence)
+  question: What elements are on the surface
+  answer: Elemental composition, mapping
+  state: Solid surface
+
+- science: Chemistry
+  technology: Structural Characterization
+  principle: Macromolecular Crystallography
+  question: What is the protein 3D structure
+  answer: Atomic coordinates from crystal
+  state: Protein crystal
+
+# ── Chromatography ──
+- science: Chemistry
+  technology: Chromatography
+  principle: Gas
+  question: What is in this gas
+  answer: Component separation
+  state: Gas, volatile liquid
+  highlighted: true
+  available: true
+
+- science: Chemistry
+  technology: Chromatography
+  principle: Liquid
+  question: What is in this liquid
+  answer: Components, purity, retention
+  state: Solution
+  highlighted: true
+  available: true
+
+- science: Chemistry
+  technology: Chromatography
+  principle: Ion Chromatography
+  question: What ions are in solution
+  answer: Anion/cation identification, quantitation
+  state: Aqueous solution
+
+# ── Electron Microscopy ──
+- science: Chemistry
+  technology: Electron Microscopy
+  principle: SEM (Scanning Electron)
+  question: What does the surface look like
+  answer: Surface morphology, topography
+  state: Conductive solid
+
+- science: Chemistry
+  technology: Electron Microscopy
+  principle: TEM (Transmission Electron)
+  question: What is the internal nanostructure
+  answer: Lattice images, defects, nanoparticles
+  state: Thin section (<100 nm)
+
+- science: Chemistry
+  technology: Electron Microscopy
+  principle: Cryo-EM
+  question: What is the native structure
+  answer: Near-atomic resolution in vitreous ice
+  state: Frozen hydrated sample
+
+- science: Chemistry
+  technology: Electron Microscopy
+  principle: FIB-SEM (Focused Ion Beam)
+  question: What is the 3D internal structure
+  answer: Serial cross-sections, site-specific TEM prep
+  state: Solid
+
+- science: Chemistry
+  technology: Electron Microscopy
+  principle: EPMA (Electron Probe)
+  question: What is the quantitative composition
+  answer: Major/minor element wt% by WDS
+  state: Polished solid
+
+- science: Chemistry
+  technology: Electron Microscopy
+  principle: EDS/WDS
+  question: What elements are at this spot
+  answer: Elemental mapping, point analysis
+  state: Solid in SEM/TEM
+
+# ── Surface Analysis ──
+- science: Chemistry
+  technology: Surface Analysis
+  principle: AFM (Atomic Force Microscopy)
+  question: What is the surface topography at nm scale
+  answer: Height maps, roughness, force curves
+  state: Solid surface
+  available: true
+
+- science: Chemistry
+  technology: Surface Analysis
+  principle: STM (Scanning Tunneling)
+  question: What are the surface electronic states
+  answer: Atomic-resolution conductance maps
+  state: Conductive surface
+  available: true
+
+- science: Chemistry
+  technology: Surface Analysis
+  principle: XPS / ESCA
+  question: What is the surface chemical state
+  answer: Elemental composition, oxidation states
+  state: Solid surface (UHV)
+
+- science: Chemistry
+  technology: Surface Analysis
+  principle: Profilometry
+  question: What is the surface profile / step height
+  answer: Film thickness, roughness
+  state: Solid surface
+
+# ── General Tools ──
+- science: Chemistry
+  technology: General Tools
+  principle: Heat
+  question: How to speed up
+  answer: Microwave and pressure
+  state: Reagents
+  highlighted: true
+  available: true
+
+- science: Chemistry
+  technology: General Tools
+  principle: Ozone
+  question: How to oxidize/cleave
+  answer: Ozonolysis, cleavage
+  state: Reagents
+  highlighted: true
+  available: true
+
+- science: Chemistry
+  technology: General Tools
+  principle: Coat
+  question: How to coat surface
+  answer: Thin film metal
+  state: Substrate metal
+  available: true
+
+- science: Chemistry
+  technology: General Tools
+  principle: Water
+  question: Get pure water
+  answer: Pure water
+  state: Water
+  highlighted: true
+  available: true
+
+- science: Chemistry
+  technology: General Tools
+  principle: Centrifuge
+  question: How to separate by density
+  answer: Separated fractions, pellet/supernatant
+  state: Suspension, mixture
+  available: true
+  completed: "20260411 Centrifuge"
+
+- science: Chemistry
+  technology: General Tools
+  principle: pH Meter
+  question: What is the acidity
+  answer: pH value
+  state: Aqueous solution
+  available: true
+  completed: "20260411 Centrifuge"
+
+# ── Synthesis & Reaction Support ──
+- science: Chemistry
+  technology: Synthesis & Reaction Support
+  principle: Microwave Synthesis
+  question: How to run fast reactions
+  answer: Accelerated synthesis under pressure
+  state: Reagents in sealed vessel
+  available: true
+
+- science: Chemistry
+  technology: Synthesis & Reaction Support
+  principle: Ozone Generation
+  question: How to generate ozone for oxidation
+  answer: Ozonolysis, cleavage reactions
+  state: Reagents
+  available: true
+
+- science: Chemistry
+  technology: Synthesis & Reaction Support
+  principle: Fume Hood / Wet Chemistry
+  question: How to handle volatile/toxic reagents
+  answer: Safe reaction environment
+  state: Any reagents
+  available: true
+
+- science: Chemistry
+  technology: Synthesis & Reaction Support
+  principle: High-Pressure Apparatus
+  question: How to apply extreme pressure
+  answer: Phase changes, synthesis at GPa
+  state: Solid, powder
+
+# ── NMR Spectroscopy (detailed) ──
+- science: Chemistry
+  technology: NMR Spectroscopy
+  principle: Liquid-State NMR (<=400 MHz)
+  question: What is the molecular connectivity
+  answer: 1H, 13C chemical shifts, coupling
+  state: Deuterated solution
+  available: true
+
+- science: Chemistry
+  technology: NMR Spectroscopy
+  principle: Liquid-State NMR (500 MHz)
+  question: What are fine structural details
+  answer: Higher resolution, 2D experiments
+  state: Deuterated solution
+  available: true
+
+- science: Chemistry
+  technology: NMR Spectroscopy
+  principle: Liquid-State NMR (600+ MHz)
+  question: What are subtle structural features
+  answer: Highest resolution, protein NMR
+  state: Deuterated solution
+  available: true
+
+- science: Chemistry
+  technology: NMR Spectroscopy
+  principle: Solid-State NMR (CP/MAS)
+  question: What is the structure of insoluble material
+  answer: Crystalline/amorphous phases, polymers
+  state: Solid powder
+  available: true
+
+- science: Chemistry
+  technology: NMR Spectroscopy
+  principle: Dynamic Nuclear Polarization (DNP)
+  question: How to boost NMR sensitivity 100x
+  answer: Enhanced signals for dilute/surface species
+  state: Frozen solution, surface
+
+# ── EPR Spectroscopy ──
+- science: Chemistry
+  technology: EPR Spectroscopy
+  principle: EPR / ESR
+  question: What unpaired electrons are present
+  answer: Radical identity, metal oxidation state
+  state: Solid or solution
+  available: true
+
+- science: Chemistry
+  technology: EPR Spectroscopy
+  principle: Variable-Temperature EPR
+  question: How do radicals behave at low temperature
+  answer: Cryogenic spectra, spin relaxation
+  state: Solid or solution (4 K)
+  available: true
+
+# ── Materials Testing & Fabrication ──
+- science: Chemistry
+  technology: Materials Testing & Fabrication
+  principle: Spot Welding / Micro-Joining
+  question: How to join small metal pieces
+  answer: Welded joints
+  state: Metal workpieces
+  available: true
+
+- science: Chemistry
+  technology: Materials Testing & Fabrication
+  principle: KBr Pellet Press
+  question: How to make IR sample pellets
+  answer: Transparent KBr discs
+  state: Powder + KBr
+  available: true
+
+- science: Chemistry
+  technology: Materials Testing & Fabrication
+  principle: Four-Point Probe (Sheet Resistance)
+  question: How conductive is this film
+  answer: Sheet resistance in ohms/square
+  state: Conductive film on substrate
+  available: true
+  completed: "20260404 Four Point Probe"
+
+- science: Chemistry
+  technology: Materials Testing & Fabrication
+  principle: Mechanical Testing (Tensile/Hardness)
+  question: How strong is this material
+  answer: Yield strength, hardness, elongation
+  state: Solid specimen
+
+- science: Chemistry
+  technology: Materials Testing & Fabrication
+  principle: CNC Machining / Machine Shop
+  question: How to fabricate custom parts
+  answer: Precision machined components
+  state: Metal, plastic stock
+
+- science: Chemistry
+  technology: Materials Testing & Fabrication
+  principle: Friction Stir Welding
+  question: How to join dissimilar metals
+  answer: Solid-state welded joints
+  state: Metal plates
+
+# ── Nanofabrication & Cleanroom ──
+- science: Chemistry
+  technology: Nanofabrication & Cleanroom
+  principle: Photolithography
+  question: How to pattern at micron scale
+  answer: Patterned photoresist, device features
+  state: Wafer with photoresist
+
+- science: Chemistry
+  technology: Nanofabrication & Cleanroom
+  principle: E-Beam Lithography
+  question: How to pattern at nanometer scale
+  answer: Sub-20 nm features
+  state: Wafer with e-beam resist
+
+- science: Chemistry
+  technology: Nanofabrication & Cleanroom
+  principle: Thin Film Deposition (PVD/CVD)
+  question: How to deposit a thin film
+  answer: Controlled thickness metal/oxide coatings
+  state: Substrate in vacuum
+  available: true
+
+- science: Chemistry
+  technology: Nanofabrication & Cleanroom
+  principle: Etching (Wet/Dry/RIE)
+  question: How to remove material selectively
+  answer: Patterned structures, trenches
+  state: Patterned wafer
+
+- science: Chemistry
+  technology: Nanofabrication & Cleanroom
+  principle: MBE (Molecular Beam Epitaxy)
+  question: How to grow single-crystal thin films
+  answer: Epitaxial layers, quantum wells
+  state: Crystalline substrate in UHV
+
+- science: Chemistry
+  technology: Nanofabrication & Cleanroom
+  principle: Microfluidics / Soft Lithography
+  question: How to make lab-on-chip devices
+  answer: PDMS channels, droplet generators
+  state: PDMS, silicon molds
+
+# ── Sample Preparation & Infrastructure ──
+- science: Chemistry
+  technology: Sample Preparation & Infrastructure
+  principle: Ultrapure Water System
+  question: How to get contaminant-free water
+  answer: 18.2 MOhm-cm ultrapure water
+  state: Water
+  available: true
+
+- science: Chemistry
+  technology: Sample Preparation & Infrastructure
+  principle: N2 Generation / Gas Supply
+  question: How to get inert atmosphere
+  answer: Dry nitrogen, helium supply
+  state: Gas
+  available: true
+
+- science: Chemistry
+  technology: Sample Preparation & Infrastructure
+  principle: Analytical Balances
+  question: How to weigh precisely
+  answer: Mass to 0.01 mg
+  state: Any solid or liquid
+  available: true
+
+- science: Chemistry
+  technology: Sample Preparation & Infrastructure
+  principle: UPS / Power Protection
+  question: How to protect instruments from outages
+  answer: Uninterrupted power supply
+  state: Infrastructure
+  available: true
+
+# ═══════════════════════════════════════════════════════════════
+# PHYSICS
+# ═══════════════════════════════════════════════════════════════
+
+# ── Pulsed Power & Plasma ──
+- science: Physics
+  technology: Pulsed Power & Plasma
+  principle: Z-Pinch
+  question: How to compress plasma with current
+  answer: X-ray bursts, dense plasma conditions
+  state: Wire array, gas puff
+
+- science: Physics
+  technology: Pulsed Power & Plasma
+  principle: High-Power Laser
+  question: How to study extreme states of matter
+  answer: Laser-plasma interactions, fast ignition
+  state: Target in vacuum
+
+# ── Astronomy & Observatories ──
+- science: Physics
+  technology: Astronomy & Observatories
+  principle: Optical Telescope (Campus)
+  question: What celestial objects can we image
+  answer: CCD images, spectra of stars/planets
+  state: Clear sky
+
+- science: Physics
+  technology: Astronomy & Observatories
+  principle: Gravitational Wave Detection
+  question: What distorts spacetime
+  answer: Merging black holes, neutron stars
+  state: Laser interferometer
+
+- science: Physics
+  technology: Astronomy & Observatories
+  principle: Radio/Survey Telescopes
+  question: What emits at radio wavelengths
+  answer: Pulsars, transients, cosmic surveys
+  state: Radio receiver
+
+# ── Nuclear & Radiation ──
+- science: Physics
+  technology: Nuclear & Radiation
+  principle: Research Nuclear Reactor
+  question: How do neutrons interact with matter
+  answer: Neutron activation, irradiation
+  state: Sample in reactor
+
+- science: Physics
+  technology: Nuclear & Radiation
+  principle: Neutron Irradiation / Activation
+  question: What trace elements via activation
+  answer: Elemental composition by gamma counting
+  state: Solid or liquid sample
+
+- science: Physics
+  technology: Nuclear & Radiation
+  principle: Pulsed Power / Z-Pinch
+  question: How to generate intense X-rays
+  answer: X-ray radiography, plasma diagnostics
+  state: Wire array target
+
+- science: Physics
+  technology: Nuclear & Radiation
+  principle: High-Power Laser Systems
+  question: How to achieve extreme energy density
+  answer: Inertial confinement, laser-plasma
+  state: Target in vacuum
+
+# ── Brain & Medical Imaging ──
+- science: Physics
+  technology: Brain & Medical Imaging
+  principle: Human MRI (3T)
+  question: What does the brain structure/function look like
+  answer: Structural and functional MRI
+  state: Human subject (IRB)
+
+- science: Physics
+  technology: Brain & Medical Imaging
+  principle: Animal MRI (High-Field)
+  question: What does the animal brain look like
+  answer: High-resolution preclinical imaging
+  state: Anesthetized animal
+
+- science: Physics
+  technology: Brain & Medical Imaging
+  principle: EEG / MEG
+  question: What are the brain electrical patterns
+  answer: Neural oscillations, event-related potentials
+  state: Human subject (IRB)
+
+- science: Physics
+  technology: Brain & Medical Imaging
+  principle: fNIRS
+  question: What brain regions are active
+  answer: Hemodynamic response, oxygenation
+  state: Human subject (IRB)
+
+# ── Civil / Earthquake Engineering ──
+- science: Physics
+  technology: Civil & Earthquake Engineering
+  principle: Shake Table Testing
+  question: How does a structure respond to earthquakes
+  answer: Seismic response, failure modes
+  state: Structural model
+
+- science: Physics
+  technology: Civil & Earthquake Engineering
+  principle: Pavement / Rheology Testing
+  question: How does asphalt perform under stress
+  answer: Viscosity, fatigue life, performance grade
+  state: Asphalt binder, mix
+
+# ── Environmental & Geoscience ──
+- science: Physics
+  technology: Environmental & Geoscience
+  principle: Stable Isotope Analysis
+  question: What is the isotopic signature
+  answer: C, O, H, N, S ratios for provenance
+  state: Combusted solid or gas
+
+- science: Physics
+  technology: Environmental & Geoscience
+  principle: Atmospheric Reaction Chambers
+  question: How do pollutants transform in air
+  answer: Photochemistry, aerosol formation
+  state: Gas mixture in chamber
+
+- science: Physics
+  technology: Environmental & Geoscience
+  principle: Water Quality / TOC-TIC
+  question: What is the organic/inorganic carbon
+  answer: Total organic and inorganic carbon
+  state: Water sample
+
+- science: Physics
+  technology: Environmental & Geoscience
+  principle: Seismic / Shake Table
+  question: How to simulate earthquakes
+  answer: Structural response under seismic loads
+  state: Structural model on table
+
+# ═══════════════════════════════════════════════════════════════
+# COMPUTING
+# ═══════════════════════════════════════════════════════════════
+
+# ── Bioinformatics & Computing ──
+- science: Computing
+  technology: Bioinformatics & Computing
+  principle: Bioinformatics Analysis Platform
+  question: How to analyze genomic/proteomic data
+  answer: Sequence alignment, variant calling, annotation
+  state: Sequencing data (FASTQ, BAM)
+
+- science: Computing
+  technology: Bioinformatics & Computing
+  principle: High-Performance Computing (HPC)
+  question: How to run large-scale simulations
+  answer: Parallel computation, ML training
+  state: Code and data
+
+- science: Computing
+  technology: Statistical Analysis & Notebooks
+  principle: Python / Jupyter Notebooks
+  question: How to analyze and visualize data
+  answer: Statistical tests, plots, reproducible pipelines
+  state: Tabular data (CSV, JSON)
+  highlighted: true
+  available: true
+  completed: "20250225 Catfood"

@@ -48,8 +48,13 @@ hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0 0.5em 0; }
   font-size: 0.9em;
   color: #656d76;
 }
-.footer .footer-nav { display: flex; gap: 0.5em; }
-.footer .footer-github { margin-left: auto; }
+.footer .footer-nav { display: flex; gap: 0.5em; margin-left: auto; }
+.footer .footer-nav a.active {
+  font-weight: 600;
+  color: #1f2328;
+  pointer-events: none;
+  text-decoration: none;
+}
 @media (max-width: 600px) {
   .tab-labels {
     flex-wrap: wrap;

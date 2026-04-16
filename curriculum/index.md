@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="page-header"><h2>Curriculum</h2><a class="back-link" href="/">Science</a></div>
+<div class="page-header"><h2>Curriculum</h2><div class="header-nav"><a class="active" href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
 <link rel="stylesheet" href="/archives/LAYOUT/curriculum.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
@@ -16,4 +16,4 @@ layout: default
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/curriculum">View on GitHub</a></div>
+<div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a class="active" href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>

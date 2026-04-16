@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="page-header"><h2>Olympiads</h2><a class="back-link" href="/">Science</a></div>
+<div class="page-header"><h2>Olympiads</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a class="active" href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
 <div class="tabs">
   <input type="radio" name="view" id="view-all">
@@ -196,4 +196,4 @@ layout: default
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/olympiads">View on GitHub</a></div>
+<div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a class="active" href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>

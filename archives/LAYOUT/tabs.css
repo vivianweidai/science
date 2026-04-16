@@ -1,25 +1,6 @@
 /* Tab activation rules — all tab systems across the site.
    Pattern: #id:checked highlights its label and shows its content panel. */
 
-/* default.html: research/olympiad subject tabs */
-#tab-math:checked ~ .tab-labels label[for="tab-math"],
-#tab-comp:checked ~ .tab-labels label[for="tab-comp"],
-#tab-phys:checked ~ .tab-labels label[for="tab-phys"],
-#tab-chem:checked ~ .tab-labels label[for="tab-chem"],
-#tab-bio:checked ~ .tab-labels label[for="tab-bio"],
-#tab-astro:checked ~ .tab-labels label[for="tab-astro"] {
-  color: #0969da;
-  border-bottom-color: #0969da;
-}
-#tab-math:checked ~ #content-math,
-#tab-comp:checked ~ #content-comp,
-#tab-phys:checked ~ #content-phys,
-#tab-chem:checked ~ #content-chem,
-#tab-bio:checked ~ #content-bio,
-#tab-astro:checked ~ #content-astro {
-  display: block;
-}
-
 /* Olympiads timeline view-filter tabs — canonical science colours */
 #view-all:checked ~ .tab-labels label[for="view-all"] {
   color: #656d76;

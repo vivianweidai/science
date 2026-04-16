@@ -90,4 +90,4 @@ See the <a href="https://github.com/vivianweidai/science/blob/main/research/proj
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/research/projects/20250225%20Catfood">View on GitHub</a></div>
+<div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a class="active" href="/research/">Research</a></div></div>

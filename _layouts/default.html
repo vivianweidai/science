@@ -31,34 +31,42 @@
       border-color: #0969da;
       text-decoration: none;
     }
+    /* Header nav (Curriculum / Olympiads / Research) */
+    .page-header .header-nav {
+      display: flex;
+      gap: 0.8em;
+      font-size: 0.9em;
+      flex-shrink: 0;
+      margin-left: 1em;
+    }
+    .page-header .header-nav a {
+      font-weight: normal;
+      white-space: nowrap;
+    }
+    .page-header .header-nav a.active {
+      font-weight: 600;
+      color: #1f2328;
+      pointer-events: none;
+      text-decoration: none;
+    }
+    /* Footer links (main page: App Store / ORCID / GitHub) */
+    .footer .footer-links {
+      display: flex;
+      gap: 0.5em;
+    }
+    /* Footer nav active state */
+    .footer .footer-nav { margin-left: auto; }
+    .footer .footer-nav a.active {
+      font-weight: 600;
+      color: #1f2328;
+      pointer-events: none;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
   {{ content }}
   <script>
-    (function() {
-      var tabs = ['math','comp','phys','chem','bio','astro'];
-      var prefixes = ['tab-', 'oly-'];
-      var present = prefixes.filter(function(p) {
-        return document.getElementById(p + tabs[0]);
-      });
-      if (present.length === 0) return;
-
-      var firstPrefix = present[0];
-      var contentPrefix = firstPrefix === 'oly-' ? 'oly-content-' : 'content-';
-      var active = tabs.filter(function(t) {
-        var el = document.getElementById(contentPrefix + t);
-        return el && !el.querySelector('em');
-      });
-      if (active.length === 0) active = tabs;
-      var pick = active[Math.floor(Math.random() * active.length)];
-
-      present.forEach(function(prefix) {
-        var radio = document.getElementById(prefix + pick);
-        if (radio) radio.checked = true;
-      });
-    })();
-
     /* Fix tab-switching jump: preserve scroll position on label click so
        reflow from shorter/taller panels doesn't shift the viewport. */
     (function() {
