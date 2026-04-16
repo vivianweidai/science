@@ -338,13 +338,13 @@
       "technologies": [
         {
           "id": 16,
-          "technology": "Infrared",
-          "description": "Identify polar bonds and functional groups from mid-IR absorption",
+          "technology": "Vibrational",
+          "description": "Infrared and Raman — probe molecular bonds by how they absorb or scatter light",
           "toys": [
             {
               "id": 24,
-              "toy": "FT-IR Spectrometer",
-              "specs": "4000–400 cm⁻¹, ATR diamond crystal, transmission mode",
+              "toy": "IR Spectrometer",
+              "specs": "Identify polar bonds and functional groups, 4000–400 cm⁻¹, ATR and transmission",
               "highlighted": 1,
               "available": 1,
               "completed": "20260401 IR Spectroscopy",
@@ -352,8 +352,8 @@
             },
             {
               "id": 25,
-              "toy": "FT-IR Microscope",
-              "specs": "Spatially resolved micro-IR spectra of tiny samples",
+              "toy": "Raman Microscope",
+              "specs": "Identify nonpolar bonds and ring breathing modes via confocal laser scattering",
               "highlighted": 0,
               "available": 1
             }
@@ -361,13 +361,20 @@
         },
         {
           "id": 17,
-          "technology": "Raman",
-          "description": "Identify nonpolar bonds and ring breathing modes via inelastic light scattering",
+          "technology": "Electronic",
+          "description": "UV-Visible absorption and fluorescence — measure electronic transitions and emission",
           "toys": [
             {
               "id": 26,
-              "toy": "Raman Microscope",
-              "specs": "Confocal, 785 nm laser, mineral and polymer identification",
+              "toy": "Spectrophotometer",
+              "specs": "Electronic transitions, concentration, and color across 190–3300 nm",
+              "highlighted": 0,
+              "available": 1
+            },
+            {
+              "id": 27,
+              "toy": "Spectrofluorometer",
+              "specs": "Excited-state emission and molecular environment from excitation-emission matrices",
               "highlighted": 0,
               "available": 1
             }
@@ -375,13 +382,20 @@
         },
         {
           "id": 18,
-          "technology": "UV-Vis",
-          "description": "Measure electronic transitions, concentration, and color in solution",
+          "technology": "Chiroptical",
+          "description": "Probe molecular handedness and protein secondary structure using polarized light",
           "toys": [
             {
-              "id": 27,
-              "toy": "UV-Vis-NIR Spectrophotometer",
-              "specs": "190–3300 nm range, double beam, absorbance and transmittance",
+              "id": 28,
+              "toy": "CD Spectrometer",
+              "specs": "Circular dichroism — helix, sheet, and coil content of proteins",
+              "highlighted": 0,
+              "available": 1
+            },
+            {
+              "id": 29,
+              "toy": "Polarimeter",
+              "specs": "Optical rotation and enantiomeric excess of chiral molecules",
               "highlighted": 0,
               "available": 1
             }
@@ -389,41 +403,20 @@
         },
         {
           "id": 19,
-          "technology": "Fluorescence",
-          "description": "Detect excited-state emission and probe molecular environment",
-          "toys": [
-            {
-              "id": 28,
-              "toy": "Spectrofluorometer",
-              "specs": "Steady-state and time-resolved excitation-emission matrices",
-              "highlighted": 0,
-              "available": 1
-            }
-          ]
-        },
-        {
-          "id": 20,
-          "technology": "Circular Dichroism",
-          "description": "Measure differential absorption of left and right circularly polarized light to reveal secondary structure",
-          "toys": [
-            {
-              "id": 29,
-              "toy": "CD Spectrometer",
-              "specs": "Protein folding — helix, sheet, and coil content",
-              "highlighted": 0,
-              "available": 1
-            }
-          ]
-        },
-        {
-          "id": 21,
-          "technology": "Polarimetry",
-          "description": "Measure optical rotation to determine enantiomeric purity",
+          "technology": "Magnetic Resonance",
+          "description": "Place samples in a strong magnetic field and read nuclear or electron spin signals",
           "toys": [
             {
               "id": 30,
-              "toy": "Polarimeter",
-              "specs": "Specific rotation and enantiomeric excess of chiral molecules",
+              "toy": "NMR Spectrometer",
+              "specs": "Molecular connectivity from 1H and 13C chemical shifts at 400, 500, and 700 MHz",
+              "highlighted": 0,
+              "available": 1
+            },
+            {
+              "id": 31,
+              "toy": "EPR Spectrometer",
+              "specs": "Detect unpaired electrons in radicals and metal centers, variable temperature to 4 K",
               "highlighted": 0,
               "available": 1
             }
@@ -435,24 +428,45 @@
       "id": 9,
       "science": "Chemistry",
       "science_slug": "chem",
-      "topic": "Magnetic Resonance",
+      "topic": "Mass Spectrometry",
       "technologies": [
         {
-          "id": 22,
-          "technology": "NMR",
-          "description": "Determine molecular connectivity and dynamics from nuclear spin in a magnetic field",
+          "id": 20,
+          "technology": "GC-MS",
+          "description": "Identify volatile compounds by vaporizing, separating, and fragmenting them",
           "toys": [
             {
-              "id": 31,
-              "toy": "Liquid-State NMR",
-              "specs": "400, 500, and 700 MHz spectrometers for 1H, 13C, and 2D experiments",
+              "id": 32,
+              "toy": "GC-MS",
+              "specs": "Electron ionization, NIST library search, quadrupole mass analyzer",
               "highlighted": 0,
               "available": 1
-            },
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "technology": "LC-MS",
+          "description": "Identify nonvolatile compounds in solution by molecular weight",
+          "toys": [
             {
-              "id": 32,
-              "toy": "Solid-State NMR",
-              "specs": "CP/MAS for crystalline and amorphous phase analysis of insoluble materials",
+              "id": 33,
+              "toy": "LC-MS",
+              "specs": "Electrospray ionization, nominal and high-resolution accurate mass",
+              "highlighted": 0,
+              "available": 1
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "technology": "MALDI",
+          "description": "Weigh intact polymers and biomolecules by laser desorption from a solid matrix",
+          "toys": [
+            {
+              "id": 34,
+              "toy": "MALDI-TOF",
+              "specs": "Benchtop matrix-assisted laser desorption, polymer and peptide analysis",
               "highlighted": 0,
               "available": 1
             }
@@ -460,15 +474,15 @@
         },
         {
           "id": 23,
-          "technology": "EPR",
-          "description": "Detect unpaired electrons in radicals, metal centers, and defects",
+          "technology": "ICP-MS",
+          "description": "Identify and quantify trace elements by atomizing samples in plasma",
           "toys": [
             {
-              "id": 33,
-              "toy": "EPR Spectrometer",
-              "specs": "X-band with variable temperature down to 4 K via helium cryostat",
+              "id": 35,
+              "toy": "ICP-MS",
+              "specs": "Parts-per-billion elemental analysis across the periodic table",
               "highlighted": 0,
-              "available": 1
+              "available": 0
             }
           ]
         }
@@ -478,17 +492,17 @@
       "id": 10,
       "science": "Chemistry",
       "science_slug": "chem",
-      "topic": "Mass Spectrometry",
+      "topic": "Chromatography",
       "technologies": [
         {
           "id": 24,
-          "technology": "GC-MS",
-          "description": "Identify volatile compounds by vaporizing, separating, and fragmenting them",
+          "technology": "Liquid",
+          "description": "Separate and quantify components dissolved in a liquid mixture",
           "toys": [
             {
-              "id": 34,
-              "toy": "GC-MS",
-              "specs": "Electron ionization, NIST library search, quadrupole mass analyzer",
+              "id": 36,
+              "toy": "HPLC",
+              "specs": "Analytical and preparative dual stacks with UV and refractive index detection",
               "highlighted": 0,
               "available": 1
             }
@@ -496,27 +510,13 @@
         },
         {
           "id": 25,
-          "technology": "LC-MS",
-          "description": "Identify nonvolatile compounds in solution by molecular weight",
+          "technology": "Gas",
+          "description": "Separate and quantify volatile compounds carried through a column by inert gas",
           "toys": [
             {
-              "id": 35,
-              "toy": "LC-MS",
-              "specs": "Electrospray ionization, nominal and high-resolution accurate mass",
-              "highlighted": 0,
-              "available": 1
-            }
-          ]
-        },
-        {
-          "id": 26,
-          "technology": "MALDI",
-          "description": "Weigh intact polymers and biomolecules by laser desorption from a solid matrix",
-          "toys": [
-            {
-              "id": 36,
-              "toy": "MALDI-TOF",
-              "specs": "Benchtop matrix-assisted laser desorption, polymer and peptide analysis",
+              "id": 37,
+              "toy": "GC-FID",
+              "specs": "Flame ionization detection, standalone or coupled to MS, chiral column available",
               "highlighted": 0,
               "available": 1
             }
@@ -528,17 +528,33 @@
       "id": 11,
       "science": "Chemistry",
       "science_slug": "chem",
-      "topic": "Chromatography",
+      "topic": "Thermal Analysis",
       "technologies": [
         {
-          "id": 27,
-          "technology": "Liquid",
-          "description": "Separate and quantify components dissolved in a liquid mixture",
+          "id": 26,
+          "technology": "Melting Point",
+          "description": "Determine when a solid melts to assess identity and purity",
           "toys": [
             {
-              "id": 37,
-              "toy": "HPLC",
-              "specs": "Analytical and preparative dual stacks with UV and refractive index detection",
+              "id": 38,
+              "toy": "Melting Point Apparatus",
+              "specs": "Visual capillary method with digital temperature readout",
+              "highlighted": 0,
+              "available": 1,
+              "completed": "20260405 Melting Point",
+              "project_url": "/research/projects/20260405%20Melting%20Point/"
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "technology": "Thermogravimetry",
+          "description": "Measure mass loss as temperature rises to reveal decomposition and moisture content",
+          "toys": [
+            {
+              "id": 39,
+              "toy": "TGA",
+              "specs": "Ramp to 1000 °C under nitrogen or air, milligram sensitivity",
               "highlighted": 0,
               "available": 1
             }
@@ -546,13 +562,13 @@
         },
         {
           "id": 28,
-          "technology": "Gas",
-          "description": "Separate and quantify volatile compounds carried through a column by inert gas",
+          "technology": "Calorimetry",
+          "description": "Measure heat flow to detect glass transitions, crystallization, and phase changes",
           "toys": [
             {
-              "id": 38,
-              "toy": "GC-FID",
-              "specs": "Flame ionization detection, standalone or coupled to MS, chiral column available",
+              "id": 40,
+              "toy": "DSC",
+              "specs": "Modulated differential scanning calorimetry, heat capacity measurement",
               "highlighted": 0,
               "available": 1
             }
@@ -564,47 +580,45 @@
       "id": 12,
       "science": "Chemistry",
       "science_slug": "chem",
-      "topic": "Thermal Analysis",
+      "topic": "Structural Analysis",
       "technologies": [
         {
           "id": 29,
-          "technology": "Melting Point",
-          "description": "Determine when a solid melts to assess identity and purity",
+          "technology": "X-Ray Diffraction",
+          "description": "Bounce X-rays off crystals to identify phases or solve full 3D atomic structures",
           "toys": [
             {
-              "id": 39,
-              "toy": "Melting Point Apparatus",
-              "specs": "Visual capillary method with digital temperature readout",
+              "id": 41,
+              "toy": "Powder XRD",
+              "specs": "Phase identification, lattice parameters, and Rietveld refinement",
               "highlighted": 0,
-              "available": 1,
-              "completed": "20260405 Melting Point",
-              "project_url": "/research/projects/20260405%20Melting%20Point/"
-            }
-          ]
-        },
-        {
-          "id": 30,
-          "technology": "Thermogravimetry",
-          "description": "Measure mass loss as temperature rises to reveal decomposition and moisture content",
-          "toys": [
+              "available": 1
+            },
             {
-              "id": 40,
-              "toy": "TGA",
-              "specs": "Ramp to 1000 °C under nitrogen or air, milligram sensitivity",
+              "id": 42,
+              "toy": "Single-Crystal XRD",
+              "specs": "Complete 3D atomic coordinates from individual crystals",
               "highlighted": 0,
               "available": 1
             }
           ]
         },
         {
-          "id": 31,
-          "technology": "Calorimetry",
-          "description": "Measure heat flow to detect glass transitions, crystallization, and phase changes",
+          "id": 30,
+          "technology": "Scanning Probe",
+          "description": "Drag a sharp tip across a surface to map topography and electronic states at atomic scale",
           "toys": [
             {
-              "id": 41,
-              "toy": "DSC",
-              "specs": "Modulated differential scanning calorimetry, heat capacity measurement",
+              "id": 43,
+              "toy": "AFM",
+              "specs": "Contact and tapping mode, nanometer-resolution height maps",
+              "highlighted": 0,
+              "available": 1
+            },
+            {
+              "id": 44,
+              "toy": "STM",
+              "specs": "Atomic-resolution conductance maps of conductive surfaces",
               "highlighted": 0,
               "available": 1
             }
@@ -616,108 +630,15 @@
       "id": 13,
       "science": "Chemistry",
       "science_slug": "chem",
-      "topic": "Structural Analysis",
-      "technologies": [
-        {
-          "id": 32,
-          "technology": "X-Ray Diffraction",
-          "description": "Bounce X-rays off crystals to identify phases or solve full 3D atomic structures",
-          "toys": [
-            {
-              "id": 42,
-              "toy": "Powder XRD",
-              "specs": "Phase identification, lattice parameters, and Rietveld refinement",
-              "highlighted": 0,
-              "available": 1
-            },
-            {
-              "id": 43,
-              "toy": "Single-Crystal XRD",
-              "specs": "Complete 3D atomic coordinates from individual crystals",
-              "highlighted": 0,
-              "available": 1
-            }
-          ]
-        },
-        {
-          "id": 33,
-          "technology": "Scanning Probe",
-          "description": "Drag a sharp tip across a surface to map topography and electronic states at atomic scale",
-          "toys": [
-            {
-              "id": 44,
-              "toy": "AFM",
-              "specs": "Contact and tapping mode, nanometer-resolution height maps",
-              "highlighted": 0,
-              "available": 1
-            },
-            {
-              "id": 45,
-              "toy": "STM",
-              "specs": "Atomic-resolution conductance maps of conductive surfaces",
-              "highlighted": 0,
-              "available": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 14,
-      "science": "Chemistry",
-      "science_slug": "chem",
-      "topic": "Electron Microscopy",
-      "technologies": [
-        {
-          "id": 34,
-          "technology": "Scanning Electron",
-          "description": "Scan a focused electron beam across a surface to image morphology and map elements",
-          "toys": [
-            {
-              "id": 46,
-              "toy": "SEM",
-              "specs": "Secondary and backscatter imaging, EDS elemental mapping",
-              "highlighted": 0,
-              "available": 0
-            },
-            {
-              "id": 47,
-              "toy": "FIB-SEM",
-              "specs": "Focused ion beam for cross-sectioning and site-specific TEM sample prep",
-              "highlighted": 0,
-              "available": 0
-            }
-          ]
-        },
-        {
-          "id": 35,
-          "technology": "Transmission Electron",
-          "description": "Transmit electrons through an ultra-thin specimen to reveal internal nanostructure",
-          "toys": [
-            {
-              "id": 48,
-              "toy": "TEM",
-              "specs": "200 kV, lattice imaging, electron diffraction, and EDS analysis",
-              "highlighted": 0,
-              "available": 0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 15,
-      "science": "Chemistry",
-      "science_slug": "chem",
       "topic": "Synthesis and Preparation",
       "technologies": [
         {
-          "id": 36,
+          "id": 31,
           "technology": "Microwave Reactor",
           "description": "Accelerate chemical reactions with rapid sealed-vessel heating under pressure",
           "toys": [
             {
-              "id": 49,
+              "id": 45,
               "toy": "Microwave Reactor",
               "specs": "300 W, 300 °C, 20 bar, single-mode cavity",
               "highlighted": 0,
@@ -726,12 +647,12 @@
           ]
         },
         {
-          "id": 37,
+          "id": 32,
           "technology": "Ozone Generator",
           "description": "Cleave carbon-carbon double bonds by oxidation with ozone gas",
           "toys": [
             {
-              "id": 50,
+              "id": 46,
               "toy": "Ozone Generator",
               "specs": "Bench-scale ozone production for organic synthesis",
               "highlighted": 0,
@@ -740,12 +661,12 @@
           ]
         },
         {
-          "id": 38,
+          "id": 33,
           "technology": "Centrifuge",
           "description": "Separate mixtures by spinning them at high speed so denser components sink",
           "toys": [
             {
-              "id": 51,
+              "id": 47,
               "toy": "Centrifuge",
               "specs": "500–15,000 rpm, refrigerated, temperature-controlled",
               "highlighted": 1,
@@ -756,12 +677,12 @@
           ]
         },
         {
-          "id": 39,
+          "id": 34,
           "technology": "pH Measurement",
           "description": "Measure how acidic or basic a solution is",
           "toys": [
             {
-              "id": 52,
+              "id": 48,
               "toy": "pH Meter",
               "specs": "Benchtop electrode with 3-point buffer calibration",
               "highlighted": 1,
@@ -772,12 +693,12 @@
           ]
         },
         {
-          "id": 40,
+          "id": 35,
           "technology": "Ultrapure Water",
           "description": "Produce contaminant-free water for sensitive experiments",
           "toys": [
             {
-              "id": 53,
+              "id": 49,
               "toy": "Water Purification System",
               "specs": "18.2 MΩ·cm Type 1 reagent-grade water with UV oxidation",
               "highlighted": 0,
@@ -786,12 +707,12 @@
           ]
         },
         {
-          "id": 41,
+          "id": 36,
           "technology": "Analytical Balance",
           "description": "Weigh samples with precision down to hundredths of a milligram",
           "toys": [
             {
-              "id": 54,
+              "id": 50,
               "toy": "Analytical Balance",
               "specs": "0.01 mg readability with internal calibration",
               "highlighted": 0,
@@ -802,18 +723,18 @@
       ]
     },
     {
-      "id": 16,
+      "id": 14,
       "science": "Biology",
       "science_slug": "bio",
       "topic": "Molecular Biology",
       "technologies": [
         {
-          "id": 42,
+          "id": 37,
           "technology": "PCR",
           "description": "Amplify specific DNA sequences for detection and cloning",
           "toys": [
             {
-              "id": 55,
+              "id": 51,
               "toy": "miniPCR Thermal Cycler",
               "specs": "96-well, portable, Bluetooth-connected",
               "highlighted": 0,
@@ -822,12 +743,12 @@
           ]
         },
         {
-          "id": 43,
+          "id": 38,
           "technology": "Protein Expression",
           "description": "Produce proteins from DNA templates in cell-free systems",
           "toys": [
             {
-              "id": 56,
+              "id": 52,
               "toy": "BioBits Cell-Free System",
               "specs": "In vitro transcription-translation, fluorescent reporters",
               "highlighted": 0,
@@ -836,14 +757,107 @@
           ]
         },
         {
-          "id": 44,
+          "id": 39,
           "technology": "Gel / Plate Detection",
           "description": "Visualize gene expression products by fluorescence or absorbance",
           "toys": [
             {
-              "id": 57,
+              "id": 53,
               "toy": "P51 Fluorescence Viewer",
               "specs": "Blue/green excitation, gel and plate imaging",
+              "highlighted": 0,
+              "available": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "science": "Biology",
+      "science_slug": "bio",
+      "topic": "Genomics",
+      "technologies": [
+        {
+          "id": 40,
+          "technology": "Short-Read Sequencing",
+          "description": "Massively parallel sequencing for genome and transcriptome profiling",
+          "toys": [
+            {
+              "id": 54,
+              "toy": "Illumina NextSeq 2000",
+              "specs": "Up to 400M reads/run, 2×150 bp paired-end",
+              "highlighted": 0,
+              "available": 0
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "technology": "Long-Read Sequencing",
+          "description": "Full-length reads for structural variants and complete transcripts",
+          "toys": [
+            {
+              "id": 55,
+              "toy": "PacBio / Oxford Nanopore",
+              "specs": "10–100 kb reads, direct RNA sequencing",
+              "highlighted": 0,
+              "available": 0
+            }
+          ]
+        },
+        {
+          "id": 42,
+          "technology": "Single-Cell Genomics",
+          "description": "Profile gene expression in individual cells",
+          "toys": [
+            {
+              "id": 56,
+              "toy": "10x Chromium",
+              "specs": "Droplet-based scRNA-seq, cell-type clustering",
+              "highlighted": 0,
+              "available": 0
+            }
+          ]
+        },
+        {
+          "id": 43,
+          "technology": "Quantitative PCR",
+          "description": "Measure target copy number and gene expression levels",
+          "toys": [
+            {
+              "id": 57,
+              "toy": "QuantStudio 3",
+              "specs": "Real-time qPCR, 96-well, SYBR/TaqMan",
+              "highlighted": 0,
+              "available": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "science": "Biology",
+      "science_slug": "bio",
+      "topic": "Proteomics",
+      "technologies": [
+        {
+          "id": 44,
+          "technology": "Tandem Mass Spectrometry",
+          "description": "Identify and quantify proteins by fragmentation",
+          "toys": [
+            {
+              "id": 58,
+              "toy": "Thermo Orbitrap Eclipse",
+              "specs": "LC-MS/MS, TMT labeling, phosphoproteomics",
+              "highlighted": 0,
+              "available": 0
+            },
+            {
+              "id": 59,
+              "toy": "Bruker timsTOF Pro2",
+              "specs": "Ion mobility, dia-PASEF, high throughput",
               "highlighted": 0,
               "available": 0
             }
@@ -855,17 +869,17 @@
       "id": 17,
       "science": "Biology",
       "science_slug": "bio",
-      "topic": "Genomics",
+      "topic": "Cell Analysis",
       "technologies": [
         {
           "id": 45,
-          "technology": "Short-Read Sequencing",
-          "description": "Massively parallel sequencing for genome and transcriptome profiling",
+          "technology": "Flow Cytometry & Sorting",
+          "description": "Count, characterize, and isolate cells by surface markers",
           "toys": [
             {
-              "id": 58,
-              "toy": "Illumina NextSeq 2000",
-              "specs": "Up to 400M reads/run, 2×150 bp paired-end",
+              "id": 60,
+              "toy": "BD / Sony Cell Sorters",
+              "specs": "Multi-color FACS, rare cell isolation, high speed",
               "highlighted": 0,
               "available": 0
             }
@@ -873,41 +887,13 @@
         },
         {
           "id": 46,
-          "technology": "Long-Read Sequencing",
-          "description": "Full-length reads for structural variants and complete transcripts",
-          "toys": [
-            {
-              "id": 59,
-              "toy": "PacBio / Oxford Nanopore",
-              "specs": "10–100 kb reads, direct RNA sequencing",
-              "highlighted": 0,
-              "available": 0
-            }
-          ]
-        },
-        {
-          "id": 47,
-          "technology": "Single-Cell Genomics",
-          "description": "Profile gene expression in individual cells",
-          "toys": [
-            {
-              "id": 60,
-              "toy": "10x Chromium",
-              "specs": "Droplet-based scRNA-seq, cell-type clustering",
-              "highlighted": 0,
-              "available": 0
-            }
-          ]
-        },
-        {
-          "id": 48,
-          "technology": "Quantitative PCR",
-          "description": "Measure target copy number and gene expression levels",
+          "technology": "Metabolic Analysis",
+          "description": "Measure cellular respiration and glycolysis in real time",
           "toys": [
             {
               "id": 61,
-              "toy": "QuantStudio 3",
-              "specs": "Real-time qPCR, 96-well, SYBR/TaqMan",
+              "toy": "Seahorse XF Analyzer",
+              "specs": "Oxygen consumption rate, extracellular acidification",
               "highlighted": 0,
               "available": 0
             }
@@ -919,24 +905,59 @@
       "id": 18,
       "science": "Biology",
       "science_slug": "bio",
-      "topic": "Proteomics",
+      "topic": "Microscopy",
       "technologies": [
         {
-          "id": 49,
-          "technology": "Tandem Mass Spectrometry",
-          "description": "Identify and quantify proteins by fragmentation",
+          "id": 47,
+          "technology": "Confocal",
+          "description": "Optical sectioning by laser scanning for 3D fluorescence imaging",
           "toys": [
             {
               "id": 62,
-              "toy": "Thermo Orbitrap Eclipse",
-              "specs": "LC-MS/MS, TMT labeling, phosphoproteomics",
+              "toy": "Leica SP8 LIGHTNING Confocal",
+              "specs": "Adaptive deconvolution, 5 laser lines, spectral detection",
               "highlighted": 0,
               "available": 0
-            },
+            }
+          ]
+        },
+        {
+          "id": 48,
+          "technology": "Two-Photon",
+          "description": "Deep-tissue imaging via nonlinear excitation in thick samples",
+          "toys": [
             {
               "id": 63,
-              "toy": "Bruker timsTOF Pro2",
-              "specs": "Ion mobility, dia-PASEF, high throughput",
+              "toy": "Scientifica Two-Photon System",
+              "specs": "900+ nm excitation, live animal, 1 mm penetration",
+              "highlighted": 0,
+              "available": 0
+            }
+          ]
+        },
+        {
+          "id": 49,
+          "technology": "Super-Resolution",
+          "description": "Bypass the diffraction limit for nanoscale cellular structures",
+          "toys": [
+            {
+              "id": 64,
+              "toy": "STED / SIM Systems",
+              "specs": "Sub-100 nm resolution, fixed and live cells",
+              "highlighted": 0,
+              "available": 0
+            }
+          ]
+        },
+        {
+          "id": 50,
+          "technology": "Light Sheet",
+          "description": "Rapid volumetric imaging of whole organisms with minimal bleaching",
+          "toys": [
+            {
+              "id": 65,
+              "toy": "LaVision BioTec Light Sheet",
+              "specs": "Cleared tissue, whole embryo, dual-sided illumination",
               "highlighted": 0,
               "available": 0
             }
@@ -948,31 +969,38 @@
       "id": 19,
       "science": "Biology",
       "science_slug": "bio",
-      "topic": "Cell Analysis",
+      "topic": "Electron Microscopy",
       "technologies": [
         {
-          "id": 50,
-          "technology": "Flow Cytometry & Sorting",
-          "description": "Count, characterize, and isolate cells by surface markers",
+          "id": 51,
+          "technology": "Scanning Electron",
+          "description": "Scan a focused electron beam across a surface to image morphology and map elements",
           "toys": [
             {
-              "id": 64,
-              "toy": "BD / Sony Cell Sorters",
-              "specs": "Multi-color FACS, rare cell isolation, high speed",
+              "id": 66,
+              "toy": "SEM",
+              "specs": "Secondary and backscatter imaging, EDS elemental mapping",
+              "highlighted": 0,
+              "available": 0
+            },
+            {
+              "id": 67,
+              "toy": "FIB-SEM",
+              "specs": "Focused ion beam for cross-sectioning and site-specific TEM sample prep",
               "highlighted": 0,
               "available": 0
             }
           ]
         },
         {
-          "id": 51,
-          "technology": "Metabolic Analysis",
-          "description": "Measure cellular respiration and glycolysis in real time",
+          "id": 52,
+          "technology": "Transmission Electron",
+          "description": "Transmit electrons through an ultra-thin specimen to reveal internal nanostructure",
           "toys": [
             {
-              "id": 65,
-              "toy": "Seahorse XF Analyzer",
-              "specs": "Oxygen consumption rate, extracellular acidification",
+              "id": 68,
+              "toy": "TEM",
+              "specs": "200 kV, lattice imaging, electron diffraction, and EDS analysis",
               "highlighted": 0,
               "available": 0
             }
@@ -982,33 +1010,19 @@
     },
     {
       "id": 20,
-      "science": "Biology",
-      "science_slug": "bio",
-      "topic": "Microscopy",
+      "science": "Astronomy",
+      "science_slug": "astro",
+      "topic": "Observational Astronomy",
       "technologies": [
         {
-          "id": 52,
-          "technology": "Confocal",
-          "description": "Optical sectioning by laser scanning for 3D fluorescence imaging",
-          "toys": [
-            {
-              "id": 66,
-              "toy": "Leica SP8 LIGHTNING Confocal",
-              "specs": "Adaptive deconvolution, 5 laser lines, spectral detection",
-              "highlighted": 0,
-              "available": 0
-            }
-          ]
-        },
-        {
           "id": 53,
-          "technology": "Two-Photon",
-          "description": "Deep-tissue imaging via nonlinear excitation in thick samples",
+          "technology": "Optical Telescope",
+          "description": "Visual and CCD imaging of stars, planets, and deep-sky objects",
           "toys": [
             {
-              "id": 67,
-              "toy": "Scientifica Two-Photon System",
-              "specs": "900+ nm excitation, live animal, 1 mm penetration",
+              "id": 69,
+              "toy": "MacLean Observatory",
+              "specs": "22\" and 14\" telescopes, CCD cameras",
               "highlighted": 0,
               "available": 0
             }
@@ -1016,13 +1030,13 @@
         },
         {
           "id": 54,
-          "technology": "Super-Resolution",
-          "description": "Bypass the diffraction limit for nanoscale cellular structures",
+          "technology": "Stellar Spectroscopy",
+          "description": "Chemical composition, temperature, and redshift from starlight",
           "toys": [
             {
-              "id": 68,
-              "toy": "STED / SIM Systems",
-              "specs": "Sub-100 nm resolution, fixed and live cells",
+              "id": 70,
+              "toy": "Spectrometer",
+              "specs": "Diffraction grating, wavelength calibration, line identification",
               "highlighted": 0,
               "available": 0
             }
@@ -1030,13 +1044,13 @@
         },
         {
           "id": 55,
-          "technology": "Light Sheet",
-          "description": "Rapid volumetric imaging of whole organisms with minimal bleaching",
+          "technology": "Radio Observation",
+          "description": "Detect radio emission from pulsars, galaxies, and cosmic hydrogen",
           "toys": [
             {
-              "id": 69,
-              "toy": "LaVision BioTec Light Sheet",
-              "specs": "Cleared tissue, whole embryo, dual-sided illumination",
+              "id": 71,
+              "toy": "Radio / Survey Arrays",
+              "specs": "21 cm hydrogen mapping, transient detection",
               "highlighted": 0,
               "available": 0
             }
@@ -1048,65 +1062,15 @@
       "id": 21,
       "science": "Astronomy",
       "science_slug": "astro",
-      "topic": "Observational Astronomy",
-      "technologies": [
-        {
-          "id": 56,
-          "technology": "Optical Telescope",
-          "description": "Visual and CCD imaging of stars, planets, and deep-sky objects",
-          "toys": [
-            {
-              "id": 70,
-              "toy": "MacLean Observatory",
-              "specs": "22\" and 14\" telescopes, CCD cameras",
-              "highlighted": 0,
-              "available": 0
-            }
-          ]
-        },
-        {
-          "id": 57,
-          "technology": "Stellar Spectroscopy",
-          "description": "Chemical composition, temperature, and redshift from starlight",
-          "toys": [
-            {
-              "id": 71,
-              "toy": "Spectrometer",
-              "specs": "Diffraction grating, wavelength calibration, line identification",
-              "highlighted": 0,
-              "available": 0
-            }
-          ]
-        },
-        {
-          "id": 58,
-          "technology": "Radio Observation",
-          "description": "Detect radio emission from pulsars, galaxies, and cosmic hydrogen",
-          "toys": [
-            {
-              "id": 72,
-              "toy": "Radio / Survey Arrays",
-              "specs": "21 cm hydrogen mapping, transient detection",
-              "highlighted": 0,
-              "available": 0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 22,
-      "science": "Astronomy",
-      "science_slug": "astro",
       "topic": "Computational Astronomy",
       "technologies": [
         {
-          "id": 59,
+          "id": 56,
           "technology": "Orbit Simulation",
           "description": "N-body dynamics, mission planning, and ephemeris computation",
           "toys": [
             {
-              "id": 73,
+              "id": 72,
               "toy": "REBOUND / AstroPy",
               "specs": "Gravitational integrators, Horizons interface",
               "highlighted": 0,
@@ -1115,12 +1079,12 @@
           ]
         },
         {
-          "id": 60,
+          "id": 57,
           "technology": "Image Processing",
           "description": "Stack, calibrate, and extract photometry from astronomical images",
           "toys": [
             {
-              "id": 74,
+              "id": 73,
               "toy": "AstroPy / Photometry Pipelines",
               "specs": "Flat/dark calibration, aperture photometry, WCS alignment",
               "highlighted": 0,

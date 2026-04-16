@@ -177,65 +177,43 @@
 - science: Chemistry
   topic: Spectroscopy
   technologies:
-    - technology: Infrared
-      description: Identify polar bonds and functional groups from mid-IR absorption
+    - technology: Vibrational
+      description: Infrared and Raman — probe molecular bonds by how they absorb or scatter light
       toys:
-        - toy: FT-IR Spectrometer
-          specs: 4000–400 cm⁻¹, ATR diamond crystal, transmission mode
+        - toy: IR Spectrometer
+          specs: Identify polar bonds and functional groups, 4000–400 cm⁻¹, ATR and transmission
           highlighted: true
           available: true
           completed: "20260401 IR Spectroscopy"
-        - toy: FT-IR Microscope
-          specs: Spatially resolved micro-IR spectra of tiny samples
-          available: true
-    - technology: Raman
-      description: Identify nonpolar bonds and ring breathing modes via inelastic light scattering
-      toys:
         - toy: Raman Microscope
-          specs: Confocal, 785 nm laser, mineral and polymer identification
+          specs: Identify nonpolar bonds and ring breathing modes via confocal laser scattering
           available: true
-    - technology: UV-Vis
-      description: Measure electronic transitions, concentration, and color in solution
+    - technology: Electronic
+      description: UV-Visible absorption and fluorescence — measure electronic transitions and emission
       toys:
-        - toy: UV-Vis-NIR Spectrophotometer
-          specs: 190–3300 nm range, double beam, absorbance and transmittance
+        - toy: Spectrophotometer
+          specs: Electronic transitions, concentration, and color across 190–3300 nm
           available: true
-    - technology: Fluorescence
-      description: Detect excited-state emission and probe molecular environment
-      toys:
         - toy: Spectrofluorometer
-          specs: Steady-state and time-resolved excitation-emission matrices
+          specs: Excited-state emission and molecular environment from excitation-emission matrices
           available: true
-    - technology: Circular Dichroism
-      description: Measure differential absorption of left and right circularly polarized light to reveal secondary structure
+    - technology: Chiroptical
+      description: Probe molecular handedness and protein secondary structure using polarized light
       toys:
         - toy: CD Spectrometer
-          specs: Protein folding — helix, sheet, and coil content
+          specs: Circular dichroism — helix, sheet, and coil content of proteins
           available: true
-    - technology: Polarimetry
-      description: Measure optical rotation to determine enantiomeric purity
-      toys:
         - toy: Polarimeter
-          specs: Specific rotation and enantiomeric excess of chiral molecules
+          specs: Optical rotation and enantiomeric excess of chiral molecules
           available: true
-
-- science: Chemistry
-  topic: Magnetic Resonance
-  technologies:
-    - technology: NMR
-      description: Determine molecular connectivity and dynamics from nuclear spin in a magnetic field
+    - technology: Magnetic Resonance
+      description: Place samples in a strong magnetic field and read nuclear or electron spin signals
       toys:
-        - toy: Liquid-State NMR
-          specs: 400, 500, and 700 MHz spectrometers for 1H, 13C, and 2D experiments
+        - toy: NMR Spectrometer
+          specs: Molecular connectivity from 1H and 13C chemical shifts at 400, 500, and 700 MHz
           available: true
-        - toy: Solid-State NMR
-          specs: CP/MAS for crystalline and amorphous phase analysis of insoluble materials
-          available: true
-    - technology: EPR
-      description: Detect unpaired electrons in radicals, metal centers, and defects
-      toys:
         - toy: EPR Spectrometer
-          specs: X-band with variable temperature down to 4 K via helium cryostat
+          specs: Detect unpaired electrons in radicals and metal centers, variable temperature to 4 K
           available: true
 
 - science: Chemistry
@@ -259,6 +237,11 @@
         - toy: MALDI-TOF
           specs: Benchtop matrix-assisted laser desorption, polymer and peptide analysis
           available: true
+    - technology: ICP-MS
+      description: Identify and quantify trace elements by atomizing samples in plasma
+      toys:
+        - toy: ICP-MS
+          specs: Parts-per-billion elemental analysis across the periodic table
 
 - science: Chemistry
   topic: Chromatography
@@ -321,21 +304,6 @@
           specs: Atomic-resolution conductance maps of conductive surfaces
           available: true
 
-- science: Chemistry
-  topic: Electron Microscopy
-  technologies:
-    - technology: Scanning Electron
-      description: Scan a focused electron beam across a surface to image morphology and map elements
-      toys:
-        - toy: SEM
-          specs: Secondary and backscatter imaging, EDS elemental mapping
-        - toy: FIB-SEM
-          specs: Focused ion beam for cross-sectioning and site-specific TEM sample prep
-    - technology: Transmission Electron
-      description: Transmit electrons through an ultra-thin specimen to reveal internal nanostructure
-      toys:
-        - toy: TEM
-          specs: 200 kV, lattice imaging, electron diffraction, and EDS analysis
 
 - science: Chemistry
   topic: Synthesis and Preparation
@@ -476,6 +444,22 @@
       toys:
         - toy: LaVision BioTec Light Sheet
           specs: Cleared tissue, whole embryo, dual-sided illumination
+
+- science: Biology
+  topic: Electron Microscopy
+  technologies:
+    - technology: Scanning Electron
+      description: Scan a focused electron beam across a surface to image morphology and map elements
+      toys:
+        - toy: SEM
+          specs: Secondary and backscatter imaging, EDS elemental mapping
+        - toy: FIB-SEM
+          specs: Focused ion beam for cross-sectioning and site-specific TEM sample prep
+    - technology: Transmission Electron
+      description: Transmit electrons through an ultra-thin specimen to reveal internal nanostructure
+      toys:
+        - toy: TEM
+          specs: 200 kV, lattice imaging, electron diffraction, and EDS analysis
 
 # ═══════════════════════════════════════════════════════════════
 # ASTRONOMY
