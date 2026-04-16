@@ -197,9 +197,25 @@ layout: default
   .chip.astro { background: var(--subj-astro); }
 
   @media (max-width: 600px) {
-    .toys-table { font-size: .88em; }
-    .toys-toy-name { white-space: normal; padding-left: 1em; width: auto; min-width: 0; }
+    .toys-table { table-layout: auto; }
+    .toys-table colgroup { display: none; }
+    .toys-table td { display: block; padding: .2em .7em; }
+    .toys-tech-row td { display: block; }
     .toys-tech-desc { display: none; }
+    .toys-toy-row td:first-child {
+      padding-top: .4em;
+      padding-left: 1.2em;
+      padding-bottom: 0;
+    }
+    .toys-toy-specs {
+      padding-left: 1.2em;
+      padding-bottom: .4em;
+      font-size: .88em;
+      color: #656d76;
+    }
+    .toys-toy-access { display: inline; padding: 0; }
+    tr.toys-toy-row { border-bottom: 1px solid #f0f0f0; }
+    tr.toys-toy-row:last-child { border-bottom: none; }
   }
 
   /* Tab styling */
