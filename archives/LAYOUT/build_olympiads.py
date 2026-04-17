@@ -81,6 +81,8 @@ def build_activities() -> list[dict]:
             item["subjects"] = e["subjects"]
         if e.get("invited"):
             item["invited"] = 1
+        if e.get("photo_url"):
+            item["photo_url"] = e["photo_url"]
         items.append(item)
     return items
 

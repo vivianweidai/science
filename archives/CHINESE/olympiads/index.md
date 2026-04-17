@@ -77,6 +77,8 @@ html_lang: zh
 
   .type-icon { font-size: .85em; }
   .rings-icon { vertical-align: middle; }
+  .photo-link { font-size: .8em; margin-left: .3em; text-decoration: none; position: relative; top: -.1em; }
+  .photo-link:hover { opacity: .7; }
 
   .legend { font-size: .82em; color: #656d76; margin: .3em 0 1em; line-height: 2; }
   .legend .chip { margin-right: .3em; }
@@ -168,7 +170,7 @@ html_lang: zh
           + '<div class="type-cell">' + icon + '</div>'
           + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
           + '</div>'
-          + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="invited-badge">受邀</span>' : '') + '</div>'
+          + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="invited-badge">受邀</span>' : '') + (e.photo_url ? ' <a class="photo-link" href="' + e.photo_url + '" title="照片">\uD83D\uDCF7</a>' : '') + '</div>'
           + '</div>';
       });
     });

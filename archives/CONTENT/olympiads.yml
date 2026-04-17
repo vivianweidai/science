@@ -11,6 +11,7 @@
 
 #   highlighted: true                                         (optional — omit when false)
 #   invited:     true                                         (optional — omit when false)
+#   photo_url:   /olympiads/photos/name.jpeg                  (optional — link to a photo)
 - type: textbook
   subject: Mathematics
   date: Future
@@ -88,15 +89,18 @@
   subject: Mathematics
   date: May 2024
   name: Advanced Placement Precalculus Exam
+  photo_url: /olympiads/photos/ap.jpeg
 - type: textbook
   subject: Mathematics
   date: May 2024
   name: The Art of Problem Solving Book Series by Richard Rusczyk et al
   highlighted: true
+  photo_url: /olympiads/photos/aops.jpeg
 - type: textbook
   subject: Mathematics
   date: September 2023
   name: Precalculus Mathematics in a Nutshell by George F. Simmons
+  photo_url: /olympiads/photos/precalculus.jpeg
   highlighted: true
 - type: textbook
   subject: Computing
@@ -156,10 +160,12 @@
   subject: Computing
   date: May 2024
   name: Advanced Placement Computer Science A Exam
+  photo_url: /olympiads/photos/ap.jpeg
 - type: textbook
   subject: Computing
   date: May 2024
   name: Advanced Placement Computer Science Principles Exam
+  photo_url: /olympiads/photos/ap.jpeg
 - type: olympiad
   subject: Computing
   date: March 2024
@@ -168,6 +174,7 @@
   subject: Computing
   date: December 2023
   name: USA Computing Olympiad Bronze Exam
+  photo_url: /olympiads/photos/usaco.jpeg
 - type: textbook
   subject: Physics
   date: Future
@@ -268,6 +275,7 @@
   subject: Physics
   date: May 2024
   name: Advanced Placement Physics 1 Exam
+  photo_url: /olympiads/photos/ap.jpeg
 - type: olympiad
   subject: Physics
   date: April 2024
@@ -276,6 +284,7 @@
   subject: Physics
   date: March 2024
   name: Johns Hopkins University Center for Talented Youth AP Physics 1
+  photo_url: /olympiads/photos/ctyphysics.jpeg
 - type: olympiad
   subject: Physics
   date: February 2024
@@ -317,6 +326,7 @@
   subject: Chemistry
   date: March 2026
   name: United States National Chemistry Olympiad Local Exam
+  photo_url: /olympiads/photos/usnco.jpeg
   highlighted: true
 - type: textbook
   subject: Chemistry
@@ -366,6 +376,7 @@
   subject: Chemistry
   date: April 2025
   name: Washington University Chemistry Tournament
+  photo_url: /olympiads/photos/wuct.jpeg
 - type: olympiad
   subject: Chemistry
   date: March 2025
@@ -374,14 +385,17 @@
   subject: Chemistry
   date: March 2025
   name: University of California Berkeley Chemistry Tournament
+  photo_url: /olympiads/photos/bct.jpeg
 - type: textbook
   subject: Chemistry
   date: May 2024
   name: Advanced Placement Chemistry Exam
+  photo_url: /olympiads/photos/ap.jpeg
 - type: textbook
   subject: Chemistry
   date: May 2024
   name: British Columbia Chemistry Olympiad
+  photo_url: /olympiads/photos/bcco.jpeg
 - type: olympiad
   subject: Chemistry
   date: April 2024
@@ -390,6 +404,7 @@
   subject: Chemistry
   date: March 2024
   name: Johns Hopkins University Center for Talented Youth AP Chemistry
+  photo_url: /olympiads/photos/ctychemistry.jpeg
 - type: textbook
   subject: Biology
   date: Future
@@ -406,6 +421,7 @@
   subject: Biology
   date: February 2026
   name: USA Biology Olympiad Open Exam
+  photo_url: /olympiads/photos/usabo.jpeg
 - type: textbook
   subject: Biology
   date: May 2025
@@ -427,6 +443,7 @@
   subject: Biology
   date: May 2024
   name: Advanced Placement Biology Exam
+  photo_url: /olympiads/photos/ap.jpeg
 - type: textbook
   subject: Biology
   date: May 2024
@@ -436,10 +453,12 @@
   subject: Biology
   date: April 2024
   name: Canadian Biology Olympiad Competition Exam
+  photo_url: /olympiads/photos/cbo.jpeg
 - type: textbook
   subject: Biology
   date: March 2024
   name: Johns Hopkins University Center for Talented Youth AP Biology
+  photo_url: /olympiads/photos/ctybiology.jpeg
 - type: textbook
   subject: Astronomy
   date: September 2026
@@ -452,6 +471,7 @@
   subject: Astronomy
   date: March 2026
   name: Canadian Astronomy and Astrophysics Olympiad Senior Exam
+  photo_url: /olympiads/photos/caao.jpeg
 - type: textbook
   subject: Astronomy
   date: March 2026
