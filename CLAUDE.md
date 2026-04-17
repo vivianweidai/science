@@ -114,14 +114,14 @@ YYYYMMDD Project Name/
 This repo is synced to GitHub at `vivianweidai/science` and served at `vivianweidai.com`. Everything is publicly viewable. Keep this in mind:
 - Do not commit sensitive or personal information.
 - **Never include researcher names or lab location in any public-facing files.** Project pages should include Date and Instrument but not Researchers or Location.
-- **Resize images before committing.** Any image over ~500 KB or wider than 1600 px should be resized (e.g. `sips -Z 1600 file.jpeg`) before pushing to GitHub. For photos saved as PNG without transparency, convert to JPEG and update references. This applies to all directories including `DATA/` — "never modify raw data files" refers to analysis outputs; downsizing for repo hygiene is fine.
+- **Always resize images before committing.** No image may be committed over ~500 KB or wider than 1600 px — resize it first (`sips -Z 1600 -s formatOptions 82 file.jpeg --out file.jpeg`). For photos saved as PNG without transparency, convert to JPEG (`sips -s format jpeg`) and update every markdown reference. For PNGs with transparency that must stay PNG, run `pngquant --quality=65-85 --ext .png --force file.png`. This rule applies to **all** directories including `DATA/` and `PHOTOS/` — "never modify raw data files" refers to analysis outputs, not repo hygiene. **Before every commit**, run `find . -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) -size +500k -not -path './.git/*' -not -path './_site/*'` and shrink anything that surfaces.
 - **Photos:** If a project has 4+ photos, use the 2x2 photo grid with shuffle button (list all photos in front matter `photos` array). If a project has only 1 photo, use a single hero image with `<div class="hero-single">` for rounded styling and controlled height. The `project.html` layout provides CSS for both `.photo-grid`, `.shuffle-btn`, and `.hero-single`.
 - **Date/Instrument metadata** should be right-aligned below the photos using `<div class="project-meta">`. Put Instrument on a new line with `<br>`.
 - **Results links** should point to the GitHub blob URL (e.g. `https://github.com/vivianweidai/science/blob/main/...`) so files render inside GitHub.
 - Ensure all code, data, and documentation is presentable and well-organized.
 - Each project's `index.md` (not README.md) serves as the public-facing overview — Jekyll requires `index.md` for subdirectory pages.
 - **When creating a new project**, always add it to the tabbed project table in `research/index.md` under the appropriate discipline tab (Mathematics, Computing, Physics, Chemistry, Biology, Astronomy). Also add any new instruments to the Instruments section in `research/index.md`.
-- **Always commit and push after completing all changes.** Do not wait to be asked — once edits are done, stage, commit, and push to GitHub.
+- **Always commit and push after completing all changes.** Do not wait to be asked — once edits are done, stage, commit, and push to GitHub. **Before pushing**, scan for oversized images (see the resize rule above) and shrink any offenders — once a large blob is in git history it stays there forever.
 
 ## PROJECT README TEMPLATE
 
