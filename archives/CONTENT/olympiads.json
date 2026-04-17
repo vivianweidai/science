@@ -675,8 +675,7 @@
       "date": "March 2026",
       "sort_key": "2026-03",
       "name": "United States National Chemistry Olympiad Local Exam",
-      "highlighted": 1,
-      "photo_url": "/olympiads/photos/usnco.jpeg"
+      "highlighted": 1
     },
     {
       "id": 73,
@@ -786,7 +785,8 @@
       "date": "March 2025",
       "sort_key": "2025-03",
       "name": "United States National Chemistry Olympiad Local Exam",
-      "highlighted": 0
+      "highlighted": 0,
+      "photo_url": "/olympiads/photos/usnco.jpeg"
     },
     {
       "id": 85,
@@ -871,8 +871,7 @@
       "date": "February 2026",
       "sort_key": "2026-02",
       "name": "USA Biology Olympiad Open Exam",
-      "highlighted": 0,
-      "photo_url": "/olympiads/photos/usabo.jpeg"
+      "highlighted": 0
     },
     {
       "id": 94,
@@ -908,7 +907,8 @@
       "date": "February 2025",
       "sort_key": "2025-02",
       "name": "USA Biology Olympiad Open Exam",
-      "highlighted": 0
+      "highlighted": 0,
+      "photo_url": "/olympiads/photos/usabo.jpeg"
     },
     {
       "id": 98,
@@ -974,8 +974,7 @@
       "date": "March 2026",
       "sort_key": "2026-03",
       "name": "Canadian Astronomy and Astrophysics Olympiad Senior Exam",
-      "highlighted": 0,
-      "photo_url": "/olympiads/photos/caao.jpeg"
+      "highlighted": 0
     },
     {
       "id": 105,
@@ -1066,7 +1065,8 @@
       "date": "March 2024",
       "sort_key": "2024-03",
       "name": "Canadian Astronomy and Astrophysics Olympiad Senior Exam",
-      "highlighted": 0
+      "highlighted": 0,
+      "photo_url": "/olympiads/photos/caao.jpeg"
     },
     {
       "id": 115,

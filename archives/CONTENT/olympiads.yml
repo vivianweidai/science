@@ -326,7 +326,6 @@
   subject: Chemistry
   date: March 2026
   name: United States National Chemistry Olympiad Local Exam
-  photo_url: /olympiads/photos/usnco.jpeg
   highlighted: true
 - type: textbook
   subject: Chemistry
@@ -381,6 +380,7 @@
   subject: Chemistry
   date: March 2025
   name: United States National Chemistry Olympiad Local Exam
+  photo_url: /olympiads/photos/usnco.jpeg
 - type: textbook
   subject: Chemistry
   date: March 2025
@@ -421,7 +421,6 @@
   subject: Biology
   date: February 2026
   name: USA Biology Olympiad Open Exam
-  photo_url: /olympiads/photos/usabo.jpeg
 - type: textbook
   subject: Biology
   date: May 2025
@@ -439,6 +438,7 @@
   subject: Biology
   date: February 2025
   name: USA Biology Olympiad Open Exam
+  photo_url: /olympiads/photos/usabo.jpeg
 - type: textbook
   subject: Biology
   date: May 2024
@@ -471,7 +471,6 @@
   subject: Astronomy
   date: March 2026
   name: Canadian Astronomy and Astrophysics Olympiad Senior Exam
-  photo_url: /olympiads/photos/caao.jpeg
 - type: textbook
   subject: Astronomy
   date: March 2026
@@ -515,6 +514,7 @@
   subject: Astronomy
   date: March 2024
   name: Canadian Astronomy and Astrophysics Olympiad Senior Exam
+  photo_url: /olympiads/photos/caao.jpeg
 - type: olympiad
   subject: Astronomy
   date: February 2024
