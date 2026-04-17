@@ -110,6 +110,8 @@ photos:
   - /research/projects/20260404 Four Point Probe/PHOTOS/20260404 Setup 102.jpeg
 ---
 
+<div class="page-header"><h2>研究</h2><div class="header-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a class="active" href="/archives/CHINESE/research/">研究</a></div></div>
+
 # 四探针法薄层电阻测量
 
 <div class="photo-grid" id="photo-grid">

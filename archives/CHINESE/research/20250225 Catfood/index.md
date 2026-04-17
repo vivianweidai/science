@@ -31,6 +31,8 @@ data_photos:
   - /research/projects/20250225 Catfood/DATA/20240920 Catfood N.jpeg
 ---
 
+<div class="page-header"><h2>研究</h2><div class="header-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a class="active" href="/archives/CHINESE/research/">研究</a></div></div>
+
 # 红色还是绿色，Mi更喜欢什么颜色的猫粮？
 
 <div class="photo-grid" id="photo-grid">

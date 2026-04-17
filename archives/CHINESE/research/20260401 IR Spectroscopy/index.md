@@ -13,6 +13,8 @@ photos:
   - /research/projects/20260401 IR Spectroscopy/PHOTOS/20260404 Samples B.jpeg
 ---
 
+<div class="page-header"><h2>研究</h2><div class="header-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a class="active" href="/archives/CHINESE/research/">研究</a></div></div>
+
 # 日常材料的红外光谱分析
 
 <div class="photo-grid" id="photo-grid">

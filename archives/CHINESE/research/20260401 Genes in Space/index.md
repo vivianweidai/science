@@ -4,6 +4,8 @@ html_lang: zh
 project: 太空基因
 ---
 
+<div class="page-header"><h2>研究</h2><div class="header-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a class="active" href="/archives/CHINESE/research/">研究</a></div></div>
+
 # 喵向火星 — 太空会帮助还是伤害Mi的心脏？
 
 <div class="hero-single"><img src="/research/projects/20260401 Genes in Space/PHOTOS/mi.png" alt="宇航员猫Mi" style="object-position: center 70%;"></div>

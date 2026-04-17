@@ -15,6 +15,8 @@ photos:
   - /research/projects/20260405 Melting Point/PHOTOS/20260405 Samples C.jpeg
 ---
 
+<div class="page-header"><h2>研究</h2><div class="header-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a class="active" href="/archives/CHINESE/research/">研究</a></div></div>
+
 # 日常化合物的熔点测定
 
 <div class="photo-grid" id="photo-grid">
