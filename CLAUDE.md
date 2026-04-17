@@ -114,6 +114,7 @@ YYYYMMDD Project Name/
 This repo is synced to GitHub at `vivianweidai/science` and served at `vivianweidai.com`. Everything is publicly viewable. Keep this in mind:
 - Do not commit sensitive or personal information.
 - **Never include researcher names or lab location in any public-facing files.** Project pages should include Date and Instrument but not Researchers or Location.
+- **Resize images before committing.** Any image over ~500 KB or wider than 1600 px should be resized (e.g. `sips -Z 1600 file.jpeg`) before pushing to GitHub. For photos saved as PNG without transparency, convert to JPEG and update references. This applies to all directories including `DATA/` — "never modify raw data files" refers to analysis outputs; downsizing for repo hygiene is fine.
 - **Photos:** If a project has 4+ photos, use the 2x2 photo grid with shuffle button (list all photos in front matter `photos` array). If a project has only 1 photo, use a single hero image with `<div class="hero-single">` for rounded styling and controlled height. The `project.html` layout provides CSS for both `.photo-grid`, `.shuffle-btn`, and `.hero-single`.
 - **Date/Instrument metadata** should be right-aligned below the photos using `<div class="project-meta">`. Put Instrument on a new line with `<br>`.
 - **Results links** should point to the GitHub blob URL (e.g. `https://github.com/vivianweidai/science/blob/main/...`) so files render inside GitHub.
