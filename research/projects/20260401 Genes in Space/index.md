@@ -5,9 +5,9 @@ project: Genes in Space
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
-<div class="project-title"><h1>Meow to Mars — Will Space Help or Hurt Mi's Heart? <img src="/archives/LAYOUT/cat.svg" alt="" aria-hidden="true" style="height:0.85em;vertical-align:-0.12em;"></h1><span class="chip bio">Biology</span></div>
+<div class="project-title"><h1>Meow to Mars — Will Space Help or Hurt Mi's Heart? <img src="/archives/layout/cat.svg" alt="" aria-hidden="true" style="height:0.85em;vertical-align:-0.12em;"></h1><span class="chip bio">Biology</span></div>
 
-<div class="hero-single"><img src="PHOTOS/mi.jpeg" alt="Mi the astronaut cat" style="object-position: center 70%;"></div>
+<div class="hero-single"><img src="photos/mi.jpeg" alt="Mi the astronaut cat" style="object-position: center 70%;"></div>
 
 **Sarcomere Genes in Microgravity**
 
@@ -45,7 +45,7 @@ Cardiomyocyte cultures carrying both wild-type and known mutant MYBPC3 variants 
 
 ## Data
 
-See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260401%20Genes%20in%20Space/OUTPUT/20260331%20Genes%20in%20Space.pdf">proposal document</a> and <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260401%20Genes%20in%20Space/PAPERS">reference literature</a>.
+See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260401%20Genes%20in%20Space/output/20260331%20Genes%20in%20Space.pdf">proposal document</a> and <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260401%20Genes%20in%20Space/papers">reference literature</a>.
 
 ---
 

@@ -2,37 +2,37 @@
 layout: project
 project: Cat Food Color Preference
 photos:
-  - PHOTOS/20240901 Catfood A.jpeg
-  - PHOTOS/20240901 Catfood B.jpeg
-  - PHOTOS/20240901 Catfood C.jpeg
-  - PHOTOS/20240901 Catfood D.jpeg
-  - PHOTOS/20240906 Catfood.jpeg
-  - PHOTOS/20240907 Catfood A.jpeg
-  - PHOTOS/20240907 Catfood B.jpeg
-  - PHOTOS/20240920 Catfood A.jpeg
-  - PHOTOS/20240920 Catfood B.jpeg
-  - PHOTOS/20240920 Catfood C.jpeg
-  - PHOTOS/20240920 Catfood D.jpeg
-  - PHOTOS/20240920 Catfood E.jpeg
-  - PHOTOS/20240920 Catfood F.jpeg
-  - PHOTOS/20240920 Catfood G.jpeg
-  - PHOTOS/20240920 Catfood H.jpeg
-  - PHOTOS/20240920 Catfood I.jpeg
-  - PHOTOS/20240920 Catfood J.jpeg
-  - PHOTOS/20240920 Catfood K.jpeg
-  - PHOTOS/20240920 Catfood L.jpeg
-  - PHOTOS/20240920 Catfood M.jpeg
-  - PHOTOS/20240923 Catfood A.jpeg
-  - PHOTOS/20240923 Catfood B.jpeg
+  - photos/20240901 Catfood A.jpeg
+  - photos/20240901 Catfood B.jpeg
+  - photos/20240901 Catfood C.jpeg
+  - photos/20240901 Catfood D.jpeg
+  - photos/20240906 Catfood.jpeg
+  - photos/20240907 Catfood A.jpeg
+  - photos/20240907 Catfood B.jpeg
+  - photos/20240920 Catfood A.jpeg
+  - photos/20240920 Catfood B.jpeg
+  - photos/20240920 Catfood C.jpeg
+  - photos/20240920 Catfood D.jpeg
+  - photos/20240920 Catfood E.jpeg
+  - photos/20240920 Catfood F.jpeg
+  - photos/20240920 Catfood G.jpeg
+  - photos/20240920 Catfood H.jpeg
+  - photos/20240920 Catfood I.jpeg
+  - photos/20240920 Catfood J.jpeg
+  - photos/20240920 Catfood K.jpeg
+  - photos/20240920 Catfood L.jpeg
+  - photos/20240920 Catfood M.jpeg
+  - photos/20240923 Catfood A.jpeg
+  - photos/20240923 Catfood B.jpeg
 data_photos:
-  - DATA/20240901 Catfood B.jpeg
-  - DATA/20240907 Catfood B.jpeg
-  - DATA/20240920 Catfood N.jpeg
+  - data/20240901 Catfood B.jpeg
+  - data/20240907 Catfood B.jpeg
+  - data/20240920 Catfood N.jpeg
 ---
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
-<div class="project-title"><h1>Red or Green, What Colored Cat Food does Mi Prefer? <img src="/archives/LAYOUT/cat.svg" alt="" aria-hidden="true" style="height:0.85em;vertical-align:-0.12em;"></h1><span class="project-chips"><span class="chip math">Mathematics</span> <span class="chip comp">Computing</span></span></div>
+<div class="project-title"><h1>Red or Green, What Colored Cat Food does Mi Prefer? <img src="/archives/layout/cat.svg" alt="" aria-hidden="true" style="height:0.85em;vertical-align:-0.12em;"></h1><span class="project-chips"><span class="chip math">Mathematics</span> <span class="chip comp">Computing</span></span></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
@@ -43,7 +43,7 @@ data_photos:
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
-<script src="/archives/LAYOUT/shuffle.js"></script>
+<script src="/archives/layout/shuffle.js"></script>
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">February 25th 2025</span></div>
 
@@ -55,7 +55,7 @@ Does a cat prefer red or green colored food? This experiment tested whether a Br
 
 | Category | Details |
 |----------|---------|
-| Subject | British Shorthair cat (Mi) <img src="/archives/LAYOUT/cat.svg" alt="" aria-hidden="true" style="height:1em;vertical-align:-0.18em;"> |
+| Subject | British Shorthair cat (Mi) <img src="/archives/layout/cat.svg" alt="" aria-hidden="true" style="height:1em;vertical-align:-0.18em;"> |
 | Food | Regular dry cat food |
 | Dye | Red and green food coloring |
 | Serving | 10 pieces per bowl per trial |
@@ -67,7 +67,7 @@ Colored cat food was prepared by mixing regular dry food with red and green food
 
 ## Data
 
-Raw data was recorded on handwritten data sheets and photographed. Variables tracked per trial include: date, serving number, pieces served and remaining, bowl position (left/right), serving time, and food dye drops used. The original handwritten data sheets are photographed and available in <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20250225%20Catfood/DATA">DATA</a>. The preference tallies were transcribed from these handwritten records into <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/OUTPUT/catfood_summary.csv">catfood_summary.csv</a>.
+Raw data was recorded on handwritten data sheets and photographed. Variables tracked per trial include: date, serving number, pieces served and remaining, bowl position (left/right), serving time, and food dye drops used. The original handwritten data sheets are photographed and available in <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20250225%20Catfood/data">data</a>. The preference tallies were transcribed from these handwritten records into <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_summary.csv">catfood_summary.csv</a>.
 
 <div class="photo-grid three-col" id="data-grid">
   <img id="data-0" alt="Data sheet">
@@ -90,7 +90,7 @@ Over 30 days, Mi chose red on 13 days and green on 17 days. A chi-squared goodne
 
 **Note — correction to written report:** Claude identified an arithmetic error in the original PDF report. The report calculates χ² = 0.266 by dividing each (O − E)² term by 30 (the total number of observations). The correct chi-squared formula divides each term by the expected count for that category (15), not the total N. The corrected value is χ² = (13 − 15)² / 15 + (17 − 15)² / 15 = 0.267 + 0.267 = **0.533**, as computed in the reproducible notebook. The conclusion is unchanged — both values fall well below the critical value of 3.841 — but 0.533 is the correct test statistic.
 
-See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/OUTPUT/20250225%20Catfood.pdf">written report</a>, the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/OUTPUT/catfood_analysis.ipynb">run the reproducible analysis yourself</a>.
+See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/20250225%20Catfood.pdf">written report</a>, the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_analysis.ipynb">run the reproducible analysis yourself</a>.
 
 ---
 

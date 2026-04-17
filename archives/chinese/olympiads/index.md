@@ -1,36 +1,27 @@
 ---
 layout: default
+html_lang: zh
 ---
 
-<div class="page-header"><h2>Olympiads</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a class="active" href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+<div class="page-header"><h2>竞赛</h2><div class="header-nav"><a href="/archives/chinese/curriculum/">课程</a><a class="active" href="/archives/chinese/olympiads/">竞赛</a><a href="/archives/chinese/research/">研究</a></div></div>
 
 <div class="tabs">
-  <input type="radio" name="view" id="view-all">
+  <input type="radio" name="view" id="view-all" checked>
   <input type="radio" name="view" id="view-math">
   <input type="radio" name="view" id="view-comp">
   <input type="radio" name="view" id="view-phys">
   <input type="radio" name="view" id="view-chem">
   <input type="radio" name="view" id="view-bio">
   <input type="radio" name="view" id="view-astro">
-  <script>
-    (function(){
-      var tabs = ['view-math','view-comp','view-phys','view-chem','view-bio','view-astro'];
-      var saved = sessionStorage.getItem('oly-tab');
-      var pick = saved && document.getElementById('view-' + saved) ? 'view-' + saved
-        : tabs[Math.floor(Math.random() * tabs.length)];
-      document.getElementById(pick).checked = true;
-      sessionStorage.setItem('oly-tab', pick.replace('view-', ''));
-    })();
-  </script>
 
   <div class="tab-labels">
-    <label for="view-all"><span class="label-full">All</span><span class="label-abbr">All</span></label>
-    <label for="view-math"><span class="label-full">Mathematics</span><span class="label-abbr">Math</span></label>
-    <label for="view-comp"><span class="label-full">Computing</span><span class="label-abbr">Comp</span></label>
-    <label for="view-phys"><span class="label-full">Physics</span><span class="label-abbr">Phys</span></label>
-    <label for="view-chem"><span class="label-full">Chemistry</span><span class="label-abbr">Chem</span></label>
-    <label for="view-bio"><span class="label-full">Biology</span><span class="label-abbr">Bio</span></label>
-    <label for="view-astro"><span class="label-full">Astronomy</span><span class="label-abbr">Astro</span></label>
+    <label for="view-all">全部</label>
+    <label for="view-math">数学</label>
+    <label for="view-comp">计算</label>
+    <label for="view-phys">物理</label>
+    <label for="view-chem">化学</label>
+    <label for="view-bio">生物</label>
+    <label for="view-astro">天文</label>
   </div>
 </div>
 
@@ -94,7 +85,6 @@ layout: default
   .legend .chip { margin-right: .3em; }
 
   @media (max-width: 600px) {
-    .tabs .tab-labels label { padding: 0.45em 0.7em; font-size: 0.8em; }
     .timeline .entry {
       display: flex;
       flex-direction: column;
@@ -108,7 +98,6 @@ layout: default
       flex-wrap: wrap;
     }
     .timeline .entry .month { display: inline; font-size: .82em; }
-    .timeline .entry .month:empty { display: none; }
     .timeline .entry .type-cell { display: inline; text-align: left; margin: 0 .2em; }
     .timeline .entry .chips-cell { display: inline-flex; }
     .timeline .entry .name-cell { font-size: .95em; line-height: 1.4; }
@@ -116,13 +105,20 @@ layout: default
 </style>
 
 <script>
-// Timeline view — renders archives/truth/olympiads.json as a vertical
-// chronological timeline grouped by year. Built from archives/truth/olympiads.yml
-// by archives/layout/build_olympiads.py.
 (function () {
   var SUBJECT_SLUGS = {
     Mathematics: 'math', Computing: 'comp', Physics: 'phys',
     Chemistry: 'chem', Biology: 'bio', Astronomy: 'astro'
+  };
+  var SUBJECT_ZH = {
+    Mathematics: '数学', Computing: '计算', Physics: '物理',
+    Chemistry: '化学', Biology: '生物', Astronomy: '天文'
+  };
+  var MONTH_ZH = {
+    'January': '一月', 'February': '二月', 'March': '三月',
+    'April': '四月', 'May': '五月', 'June': '六月',
+    'July': '七月', 'August': '八月', 'September': '九月',
+    'October': '十月', 'November': '十一月', 'December': '十二月'
   };
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
@@ -132,7 +128,8 @@ layout: default
 
   function chip(subj) {
     var slug = SUBJECT_SLUGS[subj];
-    return '<span class="chip ' + slug + '">' + subj + '</span>';
+    var label = SUBJECT_ZH[subj] || subj;
+    return '<span class="chip ' + slug + '">' + label + '</span>';
   }
 
   function chipsForEntry(e) {
@@ -153,7 +150,7 @@ layout: default
     var years = {};
     var yearOrder = [];
     filtered.forEach(function (e) {
-      var y = e.sort_key === '9999-12' ? 'Future' : e.sort_key.slice(0, 4);
+      var y = e.sort_key === '9999-12' ? '未来' : e.sort_key.slice(0, 4);
       if (!years[y]) { years[y] = []; yearOrder.push(y); }
       years[y].push(e);
     });
@@ -163,17 +160,18 @@ layout: default
       html += '<div class="year-marker">' + y + '</div>';
       years[y].forEach(function (e) {
         var month = e.date === 'Future' ? '' : e.date.split(' ')[0];
+        var monthZh = MONTH_ZH[month] || month;
         var icon = e.type === 'olympiad'
           ? '<svg class="rings-icon" viewBox="0 0 50 24" width="20" height="10"><circle cx="8" cy="8" r="6" fill="none" stroke="#0081C8" stroke-width="1.5"/><circle cx="18" cy="8" r="6" fill="none" stroke="#000" stroke-width="1.5"/><circle cx="28" cy="8" r="6" fill="none" stroke="#EE334E" stroke-width="1.5"/><circle cx="13" cy="14" r="6" fill="none" stroke="#FCB131" stroke-width="1.5"/><circle cx="23" cy="14" r="6" fill="none" stroke="#00A651" stroke-width="1.5"/></svg>'
           : '<span class="type-icon">📖</span>';
         var cls = e.highlighted ? ' hl' : '';
         html += '<div class="entry' + cls + '" data-subject="' + SUBJECT_SLUGS[e.subject] + '">'
           + '<div class="top-line">'
-          + '<div class="month">' + month + '</div>'
+          + '<div class="month">' + monthZh + '</div>'
           + '<div class="type-cell">' + icon + '</div>'
           + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
           + '</div>'
-          + '<div class="name-cell">' + (e.photo_url ? '<a class="name-link" href="' + e.photo_url + '">' + esc(e.name) + '</a>' : esc(e.name)) + (e.invited ? ' <span class="invited-badge">INVITED</span>' : '') + (e.photo_url ? ' <span class="photo-icon" title="Photo">\uD83D\uDCF7</span>' : '') + '</div>'
+          + '<div class="name-cell">' + (e.photo_url ? '<a class="name-link" href="' + e.photo_url + '">' + esc(e.name) + '</a>' : esc(e.name)) + (e.invited ? ' <span class="invited-badge">受邀</span>' : '') + (e.photo_url ? ' <span class="photo-icon" title="照片">\uD83D\uDCF7</span>' : '') + '</div>'
           + '</div>';
       });
     });
@@ -182,23 +180,16 @@ layout: default
     document.getElementById('timeline').innerHTML = html;
   }
 
-  // Fetch data
-  fetch('../archives/truth/olympiads.json', { cache: 'no-cache' })
+  fetch('/archives/truth/olympiads.json', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (d) {
       var items = d.items;
+      renderTimeline(items, 'all');
 
-      // Initial render — respect the randomly preselected tab
-      var checked = document.querySelector('input[name="view"]:checked');
-      var filter = checked ? checked.id.replace('view-', '') : 'all';
-      renderTimeline(items, filter);
-
-      // Wire up tab filtering
       var radios = document.querySelectorAll('input[name="view"]');
       radios.forEach(function (radio) {
         radio.addEventListener('change', function () {
           var filter = this.id.replace('view-', '');
-          sessionStorage.setItem('oly-tab', filter);
           renderTimeline(items, filter);
         });
       });
@@ -208,4 +199,4 @@ layout: default
 
 ---
 
-<div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a class="active" href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+<div class="footer"><a class="footer-github" href="/archives/chinese/">科学</a><div class="footer-nav"><a href="/archives/chinese/curriculum/">课程</a><a class="active" href="/archives/chinese/olympiads/">竞赛</a><a href="/archives/chinese/research/">研究</a></div></div>

@@ -5,9 +5,9 @@ title: Vivian Dai
 
 <div class="page-header"><h2>Science</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
-<img src="archives/CONTENT/science.jpeg" alt="Science" width="100%">
+<img src="archives/layout/science.jpeg" alt="Science" width="100%">
 
-<a href="curriculum/"><img src="archives/CONTENT/curriculum.png" alt="Curriculum" width="100%"></a>
+<a href="curriculum/"><img src="archives/layout/curriculum.png" alt="Curriculum" width="100%"></a>
 
 <div class="nav-links">
   <a href="curriculum/archives/mathematics.pdf">Mathematics</a>
@@ -21,12 +21,13 @@ title: Vivian Dai
 ---
 
 <ul class="updates-list">
+  <li><span class="update-date">April 13th 2026</span> <span class="update-body"><a href="/research/projects/20260413%20UV%20Spectroscopy/">UV Spectroscopy of Everyday Fluorophores</a> <span class="chip chem">Chemistry</span></span></li>
   <li><span class="update-date">April 11th 2026</span> <span class="update-body"><a href="/research/projects/20260411%20Centrifuge/">Centrifugation and pH of Everyday Liquids</a> <span class="chip chem">Chemistry</span> <span class="chip bio">Biology</span></span></li>
   <li><span class="update-date">April 5th 2026</span> <span class="update-body"><a href="/research/projects/20260405%20Melting%20Point/">Melting Point of Everyday Compounds</a> <span class="chip chem">Chemistry</span></span></li>
   <li><span class="update-date">April 4th 2026</span> <span class="update-body"><a href="/research/projects/20260404%20Four%20Point%20Probe/">Four-Point Probe Sheet Resistance Measurements</a> <span class="chip phys">Physics</span></span></li>
   <li><span class="update-date">April 1st 2026</span> <span class="update-body"><a href="/research/projects/20260401%20IR%20Spectroscopy/">IR Spectroscopy of Everyday Materials</a> <span class="chip chem">Chemistry</span></span></li>
-  <li><span class="update-date">March 31st 2026</span> <span class="update-body"><a href="/research/projects/20260401%20Genes%20in%20Space/">Meow to Mars — Will Space Help or Hurt Mi's Heart? <img src="/archives/LAYOUT/cat.svg" alt="" aria-hidden="true" style="height:0.9em;vertical-align:-0.12em;"></a> <span class="chip bio">Biology</span></span></li>
-  <li><span class="update-date">February 25th 2025</span> <span class="update-body"><a href="/research/projects/20250225%20Catfood/">Red or Green, What Colored Cat Food does Mi Prefer? <img src="/archives/LAYOUT/cat.svg" alt="" aria-hidden="true" style="height:0.9em;vertical-align:-0.12em;"></a> <span class="chip math">Mathematics</span> <span class="chip comp">Computing</span></span></li>
+  <li><span class="update-date">March 31st 2026</span> <span class="update-body"><a href="/research/projects/20260401%20Genes%20in%20Space/">Meow to Mars — Will Space Help or Hurt Mi's Heart? <img src="/archives/layout/cat.svg" alt="" aria-hidden="true" style="height:0.9em;vertical-align:-0.12em;"></a> <span class="chip bio">Biology</span></span></li>
+  <li><span class="update-date">February 25th 2025</span> <span class="update-body"><a href="/research/projects/20250225%20Catfood/">Red or Green, What Colored Cat Food does Mi Prefer? <img src="/archives/layout/cat.svg" alt="" aria-hidden="true" style="height:0.9em;vertical-align:-0.12em;"></a> <span class="chip math">Mathematics</span> <span class="chip comp">Computing</span></span></li>
 </ul>
 
 <style>

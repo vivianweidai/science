@@ -1,8 +1,9 @@
 ---
 layout: default
+html_lang: zh
 ---
 
-<div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a class="active" href="/research/">Research</a></div></div>
+<div class="page-header"><h2>研究</h2><div class="header-nav"><a href="/archives/chinese/curriculum/">课程</a><a href="/archives/chinese/olympiads/">竞赛</a><a class="active" href="/archives/chinese/research/">研究</a></div></div>
 
 <div class="tabs" id="toys-tabs">
   <input type="radio" name="toys-view" id="toys-all">
@@ -15,21 +16,21 @@ layout: default
   <script>
     (function(){
       var picks = ['toys-chem','toys-bio','toys-phys','toys-comp'];
-      var saved = sessionStorage.getItem('res-tab');
+      var saved = sessionStorage.getItem('res-tab-zh');
       var pick = saved && document.getElementById('toys-' + saved) ? 'toys-' + saved
         : picks[Math.floor(Math.random() * picks.length)];
       document.getElementById(pick).checked = true;
-      sessionStorage.setItem('res-tab', pick.replace('toys-', ''));
+      sessionStorage.setItem('res-tab-zh', pick.replace('toys-', ''));
     })();
   </script>
   <div class="tab-labels">
-    <label for="toys-all"><span class="label-full">All</span><span class="label-abbr">All</span></label>
-    <label for="toys-math"><span class="label-full">Mathematics</span><span class="label-abbr">Math</span></label>
-    <label for="toys-comp"><span class="label-full">Computing</span><span class="label-abbr">Comp</span></label>
-    <label for="toys-phys"><span class="label-full">Physics</span><span class="label-abbr">Phys</span></label>
-    <label for="toys-chem"><span class="label-full">Chemistry</span><span class="label-abbr">Chem</span></label>
-    <label for="toys-bio"><span class="label-full">Biology</span><span class="label-abbr">Bio</span></label>
-    <label for="toys-astro"><span class="label-full">Astronomy</span><span class="label-abbr">Astro</span></label>
+    <label for="toys-all">全部</label>
+    <label for="toys-math">数学</label>
+    <label for="toys-comp">计算</label>
+    <label for="toys-phys">物理</label>
+    <label for="toys-chem">化学</label>
+    <label for="toys-bio">生物</label>
+    <label for="toys-astro">天文</label>
   </div>
 </div>
 
@@ -37,6 +38,15 @@ layout: default
 
 <script>
 (function () {
+  var SCIENCE_ZH = {
+    'Mathematics': '数学',
+    'Computing': '计算',
+    'Physics': '物理',
+    'Chemistry': '化学',
+    'Biology': '生物',
+    'Astronomy': '天文'
+  };
+
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
@@ -50,16 +60,17 @@ layout: default
 
     if (!filtered.length) {
       document.getElementById('toys-content').innerHTML =
-        '<p style="color:#656d76;font-style:italic;margin:1em 0;">No toys yet.</p>';
+        '<p style="color:#656d76;font-style:italic;margin:1em 0;">暂无内容。</p>';
       return;
     }
 
     var html = '';
     filtered.forEach(function (topic) {
+      var sci = SCIENCE_ZH[topic.science] || topic.science;
       html += '<div class="toys-card toys-accent-' + topic.science_slug + '">';
       html += '<div class="toys-card-header">'
         + '<span class="toys-topic-title">' + esc(topic.topic)
-        + ' <span class="chip ' + topic.science_slug + '">' + topic.science + '</span></span>'
+        + ' <span class="chip ' + topic.science_slug + '">' + sci + '</span></span>'
         + '<span class="toys-topic-desc">' + esc(topic.description || '') + '</span>'
         + '</div>';
       html += '<table class="toys-table"><colgroup><col style="width:28%"><col><col style="width:2em"></colgroup><tbody>';
@@ -79,16 +90,16 @@ layout: default
             var iconTitle = '';
             if (/\.(jpg|jpeg|png|gif)$/i.test(toy.url)) {
               icon = '\uD83D\uDCF7';
-              iconTitle = 'Photo / work in progress';
-            } else if (toy.toy === 'Jupyter' || /\.ipynb($|\?)/i.test(toy.url)) {
-              icon = '\uD83D\uDCD3';
-              iconTitle = 'Jupyter notebook';
+              iconTitle = '照片';
             } else if (/wolframcloud\.com|\.nb($|\?)/i.test(toy.url) || toy.toy === 'Wolfram Alpha') {
               icon = '<img src="/archives/layout/spikey.png" width="14" height="14" style="vertical-align:-0.15em" alt="">';
               iconTitle = 'Wolfram';
+            } else if (toy.toy === 'Jupyter' || /\.ipynb($|\?)/i.test(toy.url)) {
+              icon = '\uD83D\uDCD3';
+              iconTitle = 'Jupyter 笔记本';
             } else if (/colab\.research/i.test(toy.url)) {
               icon = '\uD83D\uDCD3';
-              iconTitle = 'Colab notebook';
+              iconTitle = 'Colab 笔记本';
             } else if (/github\.com/i.test(toy.url)) {
               icon = '<svg viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="vertical-align:-0.15em" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>';
               iconTitle = 'GitHub';
@@ -111,7 +122,7 @@ layout: default
     document.getElementById('toys-content').innerHTML = html;
   }
 
-  fetch('../archives/truth/toys.json', { cache: 'no-cache' })
+  fetch('/archives/truth/toys.json', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (d) {
       var topics = d.topics;
@@ -120,7 +131,7 @@ layout: default
       document.querySelectorAll('input[name="toys-view"]').forEach(function (r) {
         r.addEventListener('change', function () {
           var filter = this.id.replace('toys-', '');
-          sessionStorage.setItem('res-tab', filter);
+          sessionStorage.setItem('res-tab-zh', filter);
           renderToys(topics, filter);
         });
       });
@@ -129,7 +140,6 @@ layout: default
 </script>
 
 <style>
-  /* Card container */
   .toys-card {
     border: 1px solid #d1d9e0;
     border-left: 4px solid #d1d9e0;
@@ -172,7 +182,6 @@ layout: default
     -webkit-text-fill-color: #1f2328;
   }
 
-  /* Table */
   .toys-table {
     width: 100%;
     border-collapse: collapse;
@@ -186,17 +195,12 @@ layout: default
     color: #1f2328;
   }
 
-  /* Technology header rows */
   .toys-tech-row td {
     background: #f6f8fa;
     border-bottom: 1px solid #eaecef;
     padding-top: .4em;
     padding-bottom: .4em;
   }
-  .toys-tech-name {
-    font-weight: 700;
-  }
-
   .toys-tech-desc {
     font-weight: 400;
     color: #f6f8fa;
@@ -209,20 +213,13 @@ layout: default
     -webkit-text-fill-color: #1f2328;
   }
 
-  /* Toy rows */
-  .toys-toy-name {
-    word-wrap: break-word;
-    padding-left: 2.4em;
-  }
-  .toys-toy-name a { color: #0969da; text-decoration: none; font-weight: 600; }
-  .toys-toy-name a:hover { text-decoration: underline; }
+  .toys-toy-row td:first-child a { color: #0969da; text-decoration: none; font-weight: 600; }
+  .toys-toy-row td:first-child a:hover { text-decoration: underline; }
   .toys-toy-specs { color: #1f2328; }
   .toys-toy-access { width: 2em; text-align: center; }
 
-  /* Access icon */
   .toys-avail { color: #1a7f37; font-size: .85em; }
 
-  /* Inline link-type indicator (photo, notebook, GitHub, etc.) */
   .toys-wip {
     font-size: .8em;
     margin-left: .3em;
@@ -231,7 +228,6 @@ layout: default
     top: -0.1em;
   }
 
-  /* Chips */
   .chip {
     display: inline-block; padding: 1px 7px; border-radius: 999px;
     font-size: .72em; font-weight: 600; color: #1f2328;
@@ -266,7 +262,6 @@ layout: default
     tr.toys-toy-row:last-child { border-bottom: none; }
   }
 
-  /* Tab styling */
   #toys-all:checked ~ .tab-labels label[for="toys-all"] { color: #656d76; border-bottom-color: #656d76; background: #e8e8e8; }
   #toys-math:checked ~ .tab-labels label[for="toys-math"] { color: #2563eb; border-bottom-color: #2563eb; background: var(--subj-math); }
   #toys-comp:checked ~ .tab-labels label[for="toys-comp"] { color: #7c3aed; border-bottom-color: #7c3aed; background: var(--subj-comp); }
@@ -278,4 +273,4 @@ layout: default
 
 ---
 
-<div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a class="active" href="/research/">Research</a></div></div>
+<div class="footer"><a class="footer-github" href="/archives/chinese/">科学</a><div class="footer-nav"><a href="/archives/chinese/curriculum/">课程</a><a href="/archives/chinese/olympiads/">竞赛</a><a class="active" href="/archives/chinese/research/">研究</a></div></div>

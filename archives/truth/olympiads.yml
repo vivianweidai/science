@@ -1,0 +1,521 @@
+# Olympiads and textbooks — single source of truth.
+# Run `python archives/layout/build_olympiads.py` after edits to regenerate JSON.
+#
+# Schema:
+#   type:        olympiad | textbook                          (required)
+#   subject:     Mathematics | Computing | Physics |          (required)
+#                Chemistry | Biology | Astronomy
+#   subjects:    [Physics, Chemistry, Biology]                (optional — multi-subject override, e.g. JSOC)
+#   date:        "Month YYYY" | "Future"                      (required)
+#   name:        string                                       (required)
+
+#   highlighted: true                                         (optional — omit when false)
+#   invited:     true                                         (optional — omit when false)
+#   photo_url:   /olympiads/photos/name.jpeg                  (optional — link to a photo)
+- type: textbook
+  subject: Mathematics
+  date: Future
+  name: Olympiad Training for Individual Study by Evan Chen
+  highlighted: true
+- type: textbook
+  subject: Mathematics
+  date: Future
+  name: Linear Algebra Done Right by Sheldon Axler
+- type: textbook
+  subject: Mathematics
+  date: Future
+  name: Differential Equations with Applications and Historical Notes by George F. Simmons
+- type: textbook
+  subject: Mathematics
+  date: Future
+  name: The Art of Problem Solving Math Worldwide Online Olympiad Training A
+- type: textbook
+  subject: Mathematics
+  date: Future
+  name: The Art of Problem Solving Math Worldwide Online Olympiad Training B
+- type: textbook
+  subject: Mathematics
+  date: June 2026
+  name: Euclidean Geometry in Mathematical Olympiads by Evan Chen
+  highlighted: true
+- type: textbook
+  subject: Mathematics
+  date: June 2026
+  name: AwesomeMath Summer Program
+  highlighted: true
+- type: textbook
+  subject: Mathematics
+  date: December 2025
+  name: 'Calculus: Early Transcendentals by James Stewart'
+  highlighted: true
+- type: olympiad
+  subject: Mathematics
+  date: November 2025
+  name: American Mathematics Competition 12
+  highlighted: true
+- type: textbook
+  subject: Mathematics
+  date: November 2025
+  name: Athemath Women in Math Online Social Network
+- type: olympiad
+  subject: Mathematics
+  date: October 2025
+  name: Canadian Open Mathematics Challenge
+- type: textbook
+  subject: Mathematics
+  date: September 2025
+  name: The Art of Problem Solving American Mathematics Competition 12 Series
+- type: textbook
+  subject: Mathematics
+  date: July 2025
+  name: MathPath Summer Camp at Mount Holyoke College
+- type: textbook
+  subject: Mathematics
+  date: May 2025
+  name: Advanced Placement Calculus BC Exam
+- type: olympiad
+  subject: Mathematics
+  date: November 2024
+  name: American Mathematics Competition 12
+- type: olympiad
+  subject: Mathematics
+  date: October 2024
+  name: Canadian Open Mathematics Challenge
+- type: textbook
+  subject: Mathematics
+  date: July 2024
+  name: MathPath Summer Camp at Rockhurst University
+- type: textbook
+  subject: Mathematics
+  date: May 2024
+  name: Advanced Placement Precalculus Exam
+  photo_url: /olympiads/photos/ap.jpeg
+- type: textbook
+  subject: Mathematics
+  date: May 2024
+  name: The Art of Problem Solving Book Series by Richard Rusczyk et al
+  highlighted: true
+  photo_url: /olympiads/photos/aops.jpeg
+- type: textbook
+  subject: Mathematics
+  date: September 2023
+  name: Precalculus Mathematics in a Nutshell by George F. Simmons
+  photo_url: /olympiads/photos/precalculus.jpeg
+  highlighted: true
+- type: textbook
+  subject: Computing
+  date: Future
+  name: The Art of Problem Solving Code Worldwide Online Olympiad Training
+- type: textbook
+  subject: Computing
+  date: Future
+  name: Grokking Machine Learning by Luis Serrano
+  highlighted: true
+- type: textbook
+  subject: Computing
+  date: May 2026
+  name: Advanced Placement Statistics Exam
+- type: olympiad
+  subject: Computing
+  date: January 2026
+  name: North American Computational Linguistics Open Exam
+- type: textbook
+  subject: Computing
+  date: January 2026
+  name: 'Puzzles in Logic, Languages and Computation: the Red book by Dragomir Radev'
+- type: textbook
+  subject: Computing
+  date: January 2026
+  name: 'Puzzles in Logic, Languages and Computation: the Green book by Dragomir Radev'
+- type: textbook
+  subject: Computing
+  date: December 2025
+  name: 'Linguistics Olympiad: Training Guide - the Yellow book by Vlad A. Neacșu'
+  highlighted: true
+- type: textbook
+  subject: Computing
+  date: May 2025
+  name: Advanced Placement Statistics Exam
+- type: textbook
+  subject: Computing
+  date: May 2025
+  name: Advanced Placement Computer Science A Exam
+- type: olympiad
+  subject: Computing
+  date: March 2025
+  name: Canadian Computing Competition Senior Exam
+- type: olympiad
+  subject: Computing
+  date: January 2025
+  name: North American Computational Linguistics Open Exam
+- type: olympiad
+  subject: Computing
+  date: January 2025
+  name: USA Computing Olympiad Bronze Exam
+- type: textbook
+  subject: Computing
+  date: January 2025
+  name: The Art of Problem Solving USACO Bronze Series
+- type: textbook
+  subject: Computing
+  date: May 2024
+  name: Advanced Placement Computer Science A Exam
+  photo_url: /olympiads/photos/ap.jpeg
+- type: textbook
+  subject: Computing
+  date: May 2024
+  name: Advanced Placement Computer Science Principles Exam
+  photo_url: /olympiads/photos/ap.jpeg
+- type: olympiad
+  subject: Computing
+  date: March 2024
+  name: Canadian Computing Competition Senior Exam
+- type: olympiad
+  subject: Computing
+  date: December 2023
+  name: USA Computing Olympiad Bronze Exam
+  photo_url: /olympiads/photos/usaco.jpeg
+- type: textbook
+  subject: Physics
+  date: Future
+  name: The Feynman Lectures on Physics by Richard Feynman
+- type: textbook
+  subject: Physics
+  date: Future
+  name: The Art of Problem Solving Physics Worldwide Online Olympiad Training A
+- type: textbook
+  subject: Physics
+  date: Future
+  name: The Art of Problem Solving Physics Worldwide Online Olympiad Training B
+- type: textbook
+  subject: Physics
+  date: May 2026
+  name: Advanced Placement Physics 2 Exam
+- type: textbook
+  subject: Physics
+  date: May 2026
+  name: 'Advanced Placement Physics C: Electricity and Magnetism Exam'
+- type: olympiad
+  subject: Physics
+  date: April 2026
+  name: Canadian Association of Physicists High School Prize Exam
+- type: olympiad
+  subject: Physics
+  subjects: [Physics, Chemistry, Biology]
+  date: March 2026
+  name: Junior Science Olympiad of Canada Exam
+  highlighted: true
+- type: olympiad
+  subject: Physics
+  date: February 2026
+  name: USA Physics Olympiad F=ma Qualifying Exam
+- type: textbook
+  subject: Physics
+  date: December 2025
+  name: 'Physics: Principles with Applications by Douglas C. Giancoli'
+- type: textbook
+  subject: Physics
+  date: December 2025
+  name: Physics by Halliday, Resnick and Krane
+- type: textbook
+  subject: Physics
+  date: Future
+  name: Physics Olympiad Handouts by Kevin Zhou
+  highlighted: true
+- type: olympiad
+  subject: Physics
+  subjects: [Physics, Chemistry, Biology]
+  date: November 2025
+  name: Junior Science Olympiad of Canada National Camp
+  invited: true
+- type: olympiad
+  subject: Physics
+  subjects: [Physics, Chemistry, Biology]
+  date: May 2025
+  name: Junior Science Olympiad of Canada Exams
+- type: textbook
+  subject: Physics
+  date: May 2025
+  name: Advanced Placement Physics 1 Exam
+- type: textbook
+  subject: Physics
+  date: May 2025
+  name: Advanced Placement Physics 2 Exam
+- type: textbook
+  subject: Physics
+  date: May 2025
+  name: 'Advanced Placement Physics C: Mechanics Exam'
+- type: textbook
+  subject: Physics
+  date: May 2025
+  name: 'Advanced Placement Physics C: Electricity and Magnetism Exam'
+- type: olympiad
+  subject: Physics
+  date: April 2025
+  name: Canadian Association of Physicists High School Prize Exam
+- type: textbook
+  subject: Physics
+  date: March 2025
+  name: The Art of Problem Solving Physics F=ma Series
+- type: olympiad
+  subject: Physics
+  date: February 2025
+  name: USA Physics Olympiad F=ma Qualifying Exam
+- type: olympiad
+  subject: Physics
+  subjects: [Physics, Chemistry, Biology]
+  date: May 2024
+  name: Junior Science Olympiad of Canada Exams
+- type: textbook
+  subject: Physics
+  date: May 2024
+  name: University Physics by Richard Wolfson
+  highlighted: true
+- type: textbook
+  subject: Physics
+  date: May 2024
+  name: Advanced Placement Physics 1 Exam
+  photo_url: /olympiads/photos/ap.jpeg
+- type: olympiad
+  subject: Physics
+  date: April 2024
+  name: Canadian Association of Physicists High School Prize Exam
+- type: textbook
+  subject: Physics
+  date: March 2024
+  name: Johns Hopkins University Center for Talented Youth AP Physics 1
+  photo_url: /olympiads/photos/ctyphysics.jpeg
+- type: olympiad
+  subject: Physics
+  date: February 2024
+  name: USA Physics Olympiad F=ma Qualifying Exam
+- type: textbook
+  subject: Chemistry
+  date: September 2026
+  name: UNR 341 Organic Chemistry by Paula Yurkanis Bruice
+- type: textbook
+  subject: Chemistry
+  date: May 2026
+  name: Advanced Placement Chemistry Exam
+- type: textbook
+  subject: Chemistry
+  date: May 2026
+  name: British Columbia Chemistry Olympiad
+  photo_url: /olympiads/photos/bcco.jpeg
+- type: textbook
+  subject: Chemistry
+  date: Future
+  name: Atkins' Physical Chemistry by Peter Atkins, Julio de Paula and James Keeler
+- type: textbook
+  subject: Chemistry
+  date: Future
+  name: Organic Chemistry by Jonathan Clayden, Nick Greeves and Stuart Warren
+- type: textbook
+  subject: Chemistry
+  date: Future
+  name: Inorganic Chemistry by Mark Weller, Jonathan Rourke, Fraser Armstrong and Tina Overton
+- type: olympiad
+  subject: Chemistry
+  date: April 2026
+  name: Canadian Chemistry Olympiad Exams
+- type: textbook
+  subject: Chemistry
+  date: April 2026
+  name: Canadian Chemistry Olympiad Training Course by Ivan Shershnev
+  highlighted: true
+- type: olympiad
+  subject: Chemistry
+  date: March 2026
+  name: United States National Chemistry Olympiad Local Exam
+  highlighted: true
+- type: textbook
+  subject: Chemistry
+  date: March 2026
+  name: Descriptive Inorganic, Coordination, and Solid State Chemistry by Glen E. Rodgers
+  highlighted: true
+- type: textbook
+  subject: Chemistry
+  date: February 2026
+  name: Organic Chemistry as a Second Language by David Klein
+  highlighted: true
+- type: textbook
+  subject: Chemistry
+  date: January 2026
+  name: The Art of Problem Solving Chemistry Worldwide Online Olympiad Training A
+- type: textbook
+  subject: Chemistry
+  date: January 2026
+  name: The Art of Problem Solving Chemistry Worldwide Online Olympiad Training B
+- type: textbook
+  subject: Chemistry
+  date: December 2025
+  name: 'Chemical Principles: The Quest for Insight by Peter Atkins'
+- type: textbook
+  subject: Chemistry
+  date: May 2025
+  name: Advanced Placement Chemistry Exam
+- type: textbook
+  subject: Chemistry
+  date: May 2025
+  name: British Columbia Chemistry Olympiad
+- type: olympiad
+  subject: Chemistry
+  date: April 2025
+  name: Canadian Chemistry Olympiad Exams
+- type: olympiad
+  subject: Chemistry
+  date: April 2025
+  name: United States National Chemistry Olympiad National Exam
+  invited: true
+- type: textbook
+  subject: Chemistry
+  date: April 2025
+  name: Chemistry by Zumdahl and Zumdahl
+  highlighted: true
+- type: textbook
+  subject: Chemistry
+  date: April 2025
+  name: Washington University Chemistry Tournament
+  photo_url: /olympiads/photos/wuct.jpeg
+- type: olympiad
+  subject: Chemistry
+  date: March 2025
+  name: United States National Chemistry Olympiad Local Exam
+  photo_url: /olympiads/photos/usnco.jpeg
+- type: textbook
+  subject: Chemistry
+  date: March 2025
+  name: University of California Berkeley Chemistry Tournament
+  photo_url: /olympiads/photos/bct.jpeg
+- type: textbook
+  subject: Chemistry
+  date: May 2024
+  name: Advanced Placement Chemistry Exam
+  photo_url: /olympiads/photos/ap.jpeg
+- type: textbook
+  subject: Chemistry
+  date: May 2024
+  name: British Columbia Chemistry Olympiad
+- type: olympiad
+  subject: Chemistry
+  date: April 2024
+  name: Canadian Chemistry Olympiad Exams
+- type: textbook
+  subject: Chemistry
+  date: March 2024
+  name: Johns Hopkins University Center for Talented Youth AP Chemistry
+  photo_url: /olympiads/photos/ctychemistry.jpeg
+- type: textbook
+  subject: Biology
+  date: Future
+  name: The USA Biology Olympiad Semifinal Exams Worked Solutions by Martyna Petrulyte
+- type: textbook
+  subject: Biology
+  date: May 2026
+  name: Advanced Placement Biology Exam
+- type: olympiad
+  subject: Biology
+  date: April 2026
+  name: Canadian Biology Olympiad Competition Exam
+- type: olympiad
+  subject: Biology
+  date: February 2026
+  name: USA Biology Olympiad Open Exam
+- type: textbook
+  subject: Biology
+  date: May 2025
+  name: 'Biology: A Global Approach by Neil A. Campbell'
+  highlighted: true
+- type: textbook
+  subject: Biology
+  date: May 2025
+  name: Advanced Placement Psychology Exam
+- type: textbook
+  subject: Biology
+  date: May 2025
+  name: Advanced Placement Biology Exam
+- type: olympiad
+  subject: Biology
+  date: February 2025
+  name: USA Biology Olympiad Open Exam
+  photo_url: /olympiads/photos/usabo.jpeg
+- type: textbook
+  subject: Biology
+  date: May 2024
+  name: Advanced Placement Biology Exam
+  photo_url: /olympiads/photos/ap.jpeg
+- type: textbook
+  subject: Biology
+  date: May 2024
+  name: The USA Biology Olympiad Open Exam Exams Worked Solutions by Martyna Petrulyte
+  highlighted: true
+- type: olympiad
+  subject: Biology
+  date: April 2024
+  name: Canadian Biology Olympiad Competition Exam
+  photo_url: /olympiads/photos/cbo.jpeg
+- type: textbook
+  subject: Biology
+  date: March 2024
+  name: Johns Hopkins University Center for Talented Youth AP Biology
+  photo_url: /olympiads/photos/ctybiology.jpeg
+- type: textbook
+  subject: Astronomy
+  date: September 2026
+  name: UNR AST 310 To Measure the Sky by Frederick R. Chromey
+- type: olympiad
+  subject: Astronomy
+  date: May 2026
+  name: Canadian Astronomy and Astrophysics Olympiad Junior Exam
+- type: olympiad
+  subject: Astronomy
+  date: March 2026
+  name: Canadian Astronomy and Astrophysics Olympiad Senior Exam
+- type: textbook
+  subject: Astronomy
+  date: March 2026
+  name: Foundations of Astrophysics by Barbara Ryden and Bradley Peterson
+  highlighted: true
+- type: olympiad
+  subject: Astronomy
+  date: February 2026
+  name: USA Astronomy and Astrophysics Olympiad First Round Exam
+  highlighted: true
+- type: olympiad
+  subject: Astronomy
+  date: October 2025
+  name: International Olympiad on Astronomy and Astrophysics Junior
+  invited: true
+- type: olympiad
+  subject: Astronomy
+  date: May 2025
+  name: Canadian Astronomy and Astrophysics Olympiad Junior Exam
+- type: olympiad
+  subject: Astronomy
+  date: March 2025
+  name: Canadian Astronomy and Astrophysics Olympiad Senior Exam
+- type: olympiad
+  subject: Astronomy
+  date: February 2025
+  name: USA Astronomy and Astrophysics Olympiad First Round Exam
+- type: textbook
+  subject: Astronomy
+  date: August 2024
+  name: Fundamental Astronomy by Hannu Karttunen et al
+- type: textbook
+  subject: Astronomy
+  date: July 2024
+  name: 'Everaise Academy: Astronomy by Je Qin Chooi and Gregory Pylypovych'
+- type: textbook
+  subject: Astronomy
+  date: June 2024
+  name: 'Fundamentals of Astronomy: A Guide for Olympiads by Flavio Salvati'
+- type: olympiad
+  subject: Astronomy
+  date: March 2024
+  name: Canadian Astronomy and Astrophysics Olympiad Senior Exam
+  photo_url: /olympiads/photos/caao.jpeg
+- type: olympiad
+  subject: Astronomy
+  date: February 2024
+  name: USA Astronomy and Astrophysics Olympiad First Round Exam

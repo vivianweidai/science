@@ -2,14 +2,14 @@
 layout: project
 project: UV Spectroscopy
 photos:
-  - PHOTOS/setup/IMG_7129.jpeg
-  - PHOTOS/setup/IMG_7133.jpeg
-  - PHOTOS/setup/IMG_7155.jpeg
-  - PHOTOS/setup/IMG_7175.jpeg
-  - PHOTOS/samples/IMG_7046.jpeg
-  - PHOTOS/samples/IMG_7066.jpeg
-  - PHOTOS/samples/IMG_7158.jpeg
-  - PHOTOS/samples/IMG_7163.jpeg
+  - photos/setup/IMG_7129.jpeg
+  - photos/setup/IMG_7133.jpeg
+  - photos/setup/IMG_7155.jpeg
+  - photos/setup/IMG_7175.jpeg
+  - photos/samples/IMG_7046.jpeg
+  - photos/samples/IMG_7066.jpeg
+  - photos/samples/IMG_7158.jpeg
+  - photos/samples/IMG_7163.jpeg
 ---
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
@@ -25,7 +25,7 @@ photos:
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
-<script src="/archives/LAYOUT/shuffle.js"></script>
+<script src="/archives/layout/shuffle.js"></script>
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 13th 2026</span></div>
 
@@ -52,7 +52,7 @@ All six samples are prepared the evening before: tonic water is de-gassed for qu
 
 ## Samples
 
-<div class="hero-single"><img src="PHOTOS/samples/IMG_7154.jpeg" alt="The six fluorophore samples"></div>
+<div class="hero-single"><img src="photos/samples/IMG_7154.jpeg" alt="The six fluorophore samples"></div>
 
 | Category | Samples |
 |----------|---------|
@@ -64,7 +64,11 @@ All six samples are prepared the evening before: tonic water is de-gassed for qu
 
 ## Data
 
-Data from all three instruments is organized into two folders so far: <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260413%20UV%20Spectroscopy/DATA/ONE">ONE</a> holds the UV-2550 absorption spectra (`.txt` with `Wavelength nm, Abs.` columns, ~1,200 points over 200–800 nm per sample); <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260413%20UV%20Spectroscopy/DATA/TWO">TWO</a> holds the FluoroMax-3 excitation and emission scans (`.csv` with `Wavelength, S1` in CPS, plus the OriginLab `.OPJ` project and embedded `.pdf` previews). Lambda 750 data will land in a third folder (`THREE/`) after that session runs.
+Session 01 was a **pilot run** — a deliberate scattershot first pass to exercise each instrument and surface pitfalls before a comprehensive rerun. After pruning saturated, duplicate, misfiled, and unlabeled files, the usable pilot dataset is:
+
+- <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260413%20UV%20Spectroscopy/data/ONE">`data/one/`</a> — UV-2550 absorption scans (`.txt`, two header lines then `Wavelength nm, Abs.`, ~1,200 points each, 200–800 nm). Five of six samples cleanly covered: yellow HL (two replicates + one 1-drop dilution), pink HL, curcumin, green tea, salicylate. **Quinine missing** — the file on the instrument was overwritten with leftover Chem 423 `I₂ vapor` class data and covers only 614–650 nm.
+- <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260413%20UV%20Spectroscopy/data/TWO">`data/two/`</a> — FluoroMax-3 (`.csv`, `Wavelength, S1 (CPS)` for emission, `Wavelength, R1 (µA)` for excitation). Only the yellow highlighter emission/excitation pair survived renaming; the other samples' spectra were left inside an OriginLab `.OPJ` workbook without per-sample CSV exports. Those are treated as lost for this pilot and will be rerun.
+- `data/three/` — Lambda 750 data, to be populated in Session 02.
 
 ## Methods — three sessions, one set of samples
 
@@ -110,65 +114,56 @@ Parameters: 200–800 nm at 1 nm data interval and 2 nm slit (to match the UV-25
 
 ## Results
 
-*Analysis in progress — the UV-2550 and FluoroMax-3 scans are collected; Lambda 750 session pending. The sections below are the planned results layout.*
+Session 01 was a pilot. The goal was not to publish six clean spectra — it was to exercise the data → report pipeline end-to-end, find the operational pitfalls, and have the analysis code already written when the comprehensive Session 02 runs. What follows is what the pilot data actually says.
+
+See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260413%20UV%20Spectroscopy/output/uv_spectroscopy.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260413%20UV%20Spectroscopy/output/uv_spectroscopy.ipynb">run the reproducible analysis yourself</a>.
 
 ### UV-Vis absorption (UV-2550)
 
-<div class="tabs">
-  <input type="radio" name="abs-tab" id="abs-quinine">
-  <input type="radio" name="abs-tab" id="abs-yellow">
-  <input type="radio" name="abs-tab" id="abs-pink">
-  <input type="radio" name="abs-tab" id="abs-curcumin">
-  <input type="radio" name="abs-tab" id="abs-greentea">
-  <input type="radio" name="abs-tab" id="abs-salicylate">
+<img src="output/images/uvvis_overlay.png" alt="UV-Vis absorption overlay of five fluorophores">
 
-  <div class="tab-labels">
-    <label for="abs-quinine">Quinine</label>
-    <label for="abs-yellow">Yellow HL</label>
-    <label for="abs-pink">Pink HL</label>
-    <label for="abs-curcumin">Curcumin</label>
-    <label for="abs-greentea">Green Tea</label>
-    <label for="abs-salicylate">Salicylate</label>
-  </div>
+Auto-detected primary peaks (peak picker skips saturated points):
 
-  <div class="tab-content" id="content-abs-quinine">
-    <p><em>Expected: peaks near 225, 275, 335 nm. The 335 nm band is the n→π* transition responsible for quinine's blue fluorescence.</em></p>
-  </div>
-  <div class="tab-content" id="content-abs-yellow">
-    <p><em>Expected: peaks near 230 and 490 nm. The visible peak is the fluorescein-family π→π* transition.</em></p>
-  </div>
-  <div class="tab-content" id="content-abs-pink">
-    <p><em>Expected: peaks near 230 and 554 nm. The sharp visible band is characteristic of rhodamine-family dyes.</em></p>
-  </div>
-  <div class="tab-content" id="content-abs-curcumin">
-    <p><em>Expected: peaks near 265 and 425 nm in ethanol. The 425 nm absorption is responsible for turmeric's yellow color.</em></p>
-  </div>
-  <div class="tab-content" id="content-abs-greentea">
-    <p><em>Expected: peaks near 270, 410, and 665 nm. The 410/665 nm pair is the Soret + Q band of chlorophyll.</em></p>
-  </div>
-  <div class="tab-content" id="content-abs-salicylate">
-    <p><em>Expected: peaks near 230 and 296 nm. The 296 nm band drives salicylate's UV fluorescence.</em></p>
-  </div>
-</div>
+| Sample | λ_max (nm) | A at peak | D = A / 0.05 | Note |
+|---|---:|---:|---:|---|
+| S2 yellow HL (neat) | 453.5 | 0.35 | 7 | clean fluorescein-family visible band |
+| S2 yellow HL (1 drop / 3 mL) | 230 | 2.22 | 44 | over-diluted; UV tail dominates |
+| S3 pink HL | 219 | 4.3+ | — | **saturated** — dilute before rescan |
+| S4 curcumin (EtOH) | 421 | 0.37 | 7 | matches literature (~425 nm) |
+| S5 green tea (EtOH) | 218 | 3.5+ | — | **saturated** — dilute before rescan |
+| S6 salicylate | 268 | 4.8+ | — | **saturated** — dilute before rescan |
 
-### Fluorescence (FluoroMax-3)
+The curcumin and yellow-stock scans fall inside the 0.1–1.0 A sweet spot that Beer–Lambert requires for reliable peak position. The other three saturated the detector in the deep UV because the stocks were run neat — exactly the outcome the Doc 1 Part F dilution table is designed to prevent, and the main operational lesson from the pilot. **Quinine has no spectrum** (the instrument saved leftover class data in its place).
 
-*Emission + excitation overlays per sample; Stokes shift table summarizing the gap between λ_abs and λ_em. Largest Stokes shift is expected for salicylate; smallest for the rhodamine-family pink dye.*
+### Fluorescence (FluoroMax-3) — yellow highlighter
+
+<img src="output/images/fluoromax_yellow.png" alt="Yellow highlighter excitation and emission spectra">
+
+| Sample | Excitation λ_max | Emission λ_max | Stokes shift |
+|---|---:|---:|---:|
+| S2 yellow HL | 467 nm | 512 nm | 45 nm |
+
+Fluorescein-family behavior as expected: a modest ~45 nm Stokes shift between the excitation peak and the blue-shifted emission peak. The other five samples have no FluoroMax CSVs in the pilot dataset and will be rerun.
 
 ### Cross-validation (UV-2550 vs Lambda 750)
 
-*Overlay of quinine absorption from both instruments. Within-nanometer agreement on peak position is the headline scientific check.*
+*Pending Session 02 — Lambda 750 has not yet been run.*
 
 ### NIR solvent overtones (Lambda 750)
 
-*Water spectrum 800–2500 nm with the four O–H overtone peaks labeled (~970, 1200, 1450, 1940 nm); ethanol spectrum showing added C–H overtones at ~1400 and 1700 nm. The massive 1940 nm water band illustrates why infrared telescopes go to dry sites.*
+*Pending Session 02.*
+
+### Session 02 plan
+
+- Rerun all six UV-2550 scans with predilution for any stock that gave A > 1.5 here; the pipeline will emit the dilution table automatically from the pilot.
+- Rerun FluoroMax-3 using the Doc 2 file-naming convention (`YYYYMMDD_S{n}_{sample}_{EM|EX}_{ex|em}{λ}.csv`) so every file is self-identifying without an Origin workbook.
+- Add the Lambda 750 session — cross-validation 200–800 nm plus NIR 800–2500 nm on both blanks (H₂O, EtOH) to capture the O–H and C–H overtones.
+- Re-run the same notebook against the Session 02 data — the analysis pipeline is already wired.
 
 ### Cross-instrument summary
 
-*A per-sample table linking each UV-Vis λ_max → FluoroMax excitation wavelength → emission wavelength → Stokes shift → (solvent) NIR overtone position. This is the scientific payoff of the three-instrument morning.*
-
-<script src="/archives/LAYOUT/tabs.js"></script>
+*Will be populated after Session 02 completes all three instruments on the same six samples.*
 
 ---
 
-<div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a class="active" href="/research/">Research</a></div></div>
+<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/research/projects/20260413%20UV%20Spectroscopy">View on GitHub</a></div>
