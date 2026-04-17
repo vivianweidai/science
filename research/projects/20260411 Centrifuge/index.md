@@ -51,7 +51,9 @@ photos:
   - PHOTOS/toy8.jpeg
 ---
 
-<div class="page-header"><h1>Centrifugation and pH of Everyday Liquids</h1><a class="back-link" href="/research/">Research</a></div>
+<div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+
+<div class="project-title"><h1>Centrifugation and pH of Everyday Liquids</h1><span class="project-chips"><span class="chip chem">Chemistry</span> <span class="chip bio">Biology</span></span></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
@@ -64,13 +66,13 @@ photos:
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/LAYOUT/shuffle.js"></script>
 
-<div class="project-meta"><span class="chip chem">Chemistry</span><br>April 11th 2026<br>Thermo Scientific Sorvall RT3 Centrifuge, DiaMed ID-Centrifuge, Sartorius CP225D Analytical Balance, VWR pHenomenal pH 1100 L, Scientific Industries Vortex-Genie 2, Canlab Magnetic Stirrer, Gilson Pipetman Pipettes</div>
-
-## Overview
+<div class="section-heading"><h2>Overview</h2><span class="section-date">April 11th 2026</span></div>
 
 This experiment centrifuged five common household liquids to observe what separates out. We also practiced basic lab techniques of solution sample preparation with pipettes, analytical balances and pH meters.
 
 ## Setup
+
+<div class="setup-highlight" markdown="1">
 
 | Category | Details |
 |----------|---------|
@@ -82,6 +84,8 @@ This experiment centrifuged five common household liquids to observe what separa
 | Balance | Sartorius CP225D Analytical Balance |
 | Pipettes | Gilson Pipetman Pipettes |
 | Tubes | Sarstedt 50 mL conical centrifuge tubes, Falcon 50 mL tubes |
+
+</div>
 
 ## Samples
 

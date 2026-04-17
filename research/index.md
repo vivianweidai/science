@@ -71,13 +71,12 @@ layout: default
           + '</tr>';
 
         tech.toys.forEach(function (toy) {
-          var cls = toy.highlighted ? ' toys-hl' : '';
           var name = esc(toy.toy);
           var link = toy.project_url || toy.url;
           if (link) name = '<a href="' + link + '">' + name + '</a>';
           var access = toy.available ? '<span class="toys-avail">&#10003;</span>' : '';
 
-          html += '<tr class="toys-toy-row' + cls + '">'
+          html += '<tr class="toys-toy-row">'
             + '<td style="padding-left:2.8em">' + name + '</td>'
             + '<td class="toys-toy-specs">' + esc(toy.specs) + '</td>'
             + '<td class="toys-toy-access">' + access + '</td>'
@@ -182,6 +181,7 @@ layout: default
     color: #f6f8fa;
     -webkit-text-fill-color: #f6f8fa;
     transition: color .2s ease, -webkit-text-fill-color .2s ease;
+    text-align: right;
   }
   .toys-tech-row:hover .toys-tech-desc {
     color: #1f2328;
@@ -197,9 +197,6 @@ layout: default
   .toys-toy-name a:hover { text-decoration: underline; }
   .toys-toy-specs { color: #1f2328; }
   .toys-toy-access { width: 2em; text-align: center; }
-
-  /* Highlight — same yellow as olympiads */
-  .toys-hl td { background: #fff44f; }
 
   /* Access icon */
   .toys-avail { color: #1a7f37; font-size: .85em; }

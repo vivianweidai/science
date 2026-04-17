@@ -11,7 +11,6 @@
 #       toys:         list of specific instruments                    (optional — omit if no specific toys)
 #         - toy:          string — instrument name                    (required)
 #           specs:        string — key specs                          (required)
-#           highlighted:  true                                        (optional)
 #           available:    true                                        (optional)
 #           completed:    "YYYYMMDD Project Name"                     (optional — links to project page)
 #           url:          string — external URL                       (optional — links toy name to any URL)
@@ -82,7 +81,6 @@
       toys:
         - toy: SciPy
           specs: Hypothesis tests, distributions and confidence intervals
-          highlighted: true
           available: true
           completed: "20250225 Catfood"
         - toy: R
@@ -127,7 +125,6 @@
           specs: Waveforms in time and frequency
         - toy: Four-Point Probe
           specs: Sheet resistance of thin films
-          highlighted: true
           available: true
           completed: "20260404 Four Point Probe"
     - technology: Optics
@@ -172,7 +169,6 @@
       toys:
         - toy: IR Spectrometer
           specs: Polar bonds reveal functional groups
-          highlighted: true
           available: true
           completed: "20260401 IR Spectroscopy"
         - toy: Raman Microscope
@@ -241,7 +237,6 @@
       toys:
         - toy: Melting Point
           specs: Capillary method — identity and purity from melting temperature range
-          highlighted: true
           available: true
           completed: "20260405 Melting Point"
         - toy: Thermogravimetry
@@ -259,179 +254,80 @@
         - toy: Single-Crystal
           specs: Complete 3D atomic coordinates from a single crystal
           available: true
-    - technology: Scanning Microscope
-      description: Drag a sharp tip across a surface to map atomic structure
-      toys:
-        - toy: Atomic Force
-          specs: Nanometer-resolution height maps in any environment
-          available: true
-        - toy: Tunneling
-          specs: Atomic-resolution maps of conductive surfaces
-          available: true
-
-
-- science: Chemistry
-  topic: Synthesis and Preparation
-  description: Prepare samples and run chemical reactions
-  technologies:
-    - technology: Microwave Reactor
-      description: Accelerate chemical reactions with rapid sealed-vessel heating under pressure
-      toys:
-        - toy: Microwave Reactor
-          specs: 300 W, 300 °C, 20 bar, single-mode cavity
-          available: true
-    - technology: Ozone Generator
-      description: Cleave carbon-carbon double bonds by oxidation with ozone gas
-      toys:
-        - toy: Ozone Generator
-          specs: Bench-scale ozone production for organic synthesis
-          available: true
-    - technology: Centrifuge
-      description: Separate mixtures by spinning them at high speed so denser components sink
-      toys:
-        - toy: Centrifuge
-          specs: 500–15,000 rpm, refrigerated, temperature-controlled
-          highlighted: true
-          available: true
-          completed: "20260411 Centrifuge"
-    - technology: pH Measurement
-      description: Measure how acidic or basic a solution is
-      toys:
-        - toy: pH Meter
-          specs: Benchtop electrode with 3-point buffer calibration
-          highlighted: true
-          available: true
-          completed: "20260411 Centrifuge"
-    - technology: Ultrapure Water
-      description: Produce contaminant-free water for sensitive experiments
-      toys:
-        - toy: Water Purification System
-          specs: 18.2 MΩ·cm Type 1 reagent-grade water with UV oxidation
-          available: true
-    - technology: Analytical Balance
-      description: Weigh samples with precision down to hundredths of a milligram
-      toys:
-        - toy: Analytical Balance
-          specs: 0.01 mg readability with internal calibration
-          available: true
 
 # ═══════════════════════════════════════════════════════════════
 # BIOLOGY
 # ═══════════════════════════════════════════════════════════════
 
 - science: Biology
-  topic: Molecular Biology
-  description: DNA, RNA and proteins at the molecular scale
+  topic: Molecules
+  description: Amplify DNA, sequence genomes, express and identify proteins
   technologies:
-    - technology: PCR
-      description: Amplify specific DNA sequences for detection and cloning
+    - technology: Amplification
+      description: Copy and quantify DNA sequences
       toys:
-        - toy: miniPCR Thermal Cycler
-          specs: 96-well, portable, Bluetooth-connected
-    - technology: Protein Expression
-      description: Produce proteins from DNA templates in cell-free systems
+        - toy: PCR
+          specs: Amplify DNA through repeated heating and cooling
+          completed: "20260401 Genes in Space"
+        - toy: qPCR Machine
+          specs: Count how many copies of a gene are present
+    - technology: Sequencing
+      description: Read DNA base by base
       toys:
-        - toy: BioBits Cell-Free System
-          specs: In vitro transcription-translation, fluorescent reporters
-    - technology: Gel / Plate Detection
-      description: Visualize gene expression products by fluorescence or absorbance
+        - toy: Short-Read Sequencer
+          specs: Read many short stretches of DNA in parallel
+        - toy: Long-Read Sequencer
+          specs: Read very long stretches of DNA in one pass
+        - toy: Single-Cell Sequencer
+          specs: Sequence one cell at a time to map cell types
+    - technology: Expression
+      description: Produce and detect proteins
       toys:
-        - toy: P51 Fluorescence Viewer
-          specs: Blue/green excitation, gel and plate imaging
+        - toy: Cell-Free Kit
+          specs: Make proteins from DNA without living cells
+          completed: "20260401 Genes in Space"
+        - toy: Viewer
+          specs: See glowing gels and plates in the dark
+          completed: "20260401 Genes in Space"
+    - technology: Mass Spectrometry
+      description: Identify proteins by their mass
+      toys:
+        - toy: Orbitrap
+          specs: Identify proteins by their precise mass
+        - toy: Time-of-Flight
+          specs: Separate proteins by how fast they fly
 
 - science: Biology
-  topic: Genomics
-  description: Sequence and profile whole genomes
+  topic: Cells
+  description: Cell function, light microscopy and electron microscopy
   technologies:
-    - technology: Short-Read Sequencing
-      description: Massively parallel sequencing for genome and transcriptome profiling
+    - technology: Cell Function
+      description: Sort live cells and measure metabolism
       toys:
-        - toy: Illumina NextSeq 2000
-          specs: Up to 400M reads/run, 2×150 bp paired-end
-    - technology: Long-Read Sequencing
-      description: Full-length reads for structural variants and complete transcripts
+        - toy: Flow Cytometer
+          specs: Count and sort cells by fluorescent labels
+        - toy: Metabolic Analyzer
+          specs: Measure how cells burn sugar and use oxygen
+    - technology: Light Microscopy
+      description: Optical imaging from cells to whole organisms
       toys:
-        - toy: PacBio / Oxford Nanopore
-          specs: 10–100 kb reads, direct RNA sequencing
-    - technology: Single-Cell Genomics
-      description: Profile gene expression in individual cells
-      toys:
-        - toy: 10x Chromium
-          specs: Droplet-based scRNA-seq, cell-type clustering
-    - technology: Quantitative PCR
-      description: Measure target copy number and gene expression levels
-      toys:
-        - toy: QuantStudio 3
-          specs: Real-time qPCR, 96-well, SYBR/TaqMan
-
-- science: Biology
-  topic: Proteomics
-  description: Identify and quantify cellular proteins
-  technologies:
-    - technology: Tandem Mass Spectrometry
-      description: Identify and quantify proteins by fragmentation
-      toys:
-        - toy: Thermo Orbitrap Eclipse
-          specs: LC-MS/MS, TMT labeling, phosphoproteomics
-        - toy: Bruker timsTOF Pro2
-          specs: Ion mobility, dia-PASEF, high throughput
-
-- science: Biology
-  topic: Cell Analysis
-  description: Sort, count and characterize individual cells
-  technologies:
-    - technology: Flow Cytometry & Sorting
-      description: Count, characterize and isolate cells by surface markers
-      toys:
-        - toy: BD / Sony Cell Sorters
-          specs: Multi-color FACS, rare cell isolation, high speed
-    - technology: Metabolic Analysis
-      description: Measure cellular respiration and glycolysis in real time
-      toys:
-        - toy: Seahorse XF Analyzer
-          specs: Oxygen consumption rate, extracellular acidification
-
-- science: Biology
-  topic: Microscopy
-  description: High-resolution optical imaging of cells
-  technologies:
-    - technology: Confocal
-      description: Optical sectioning by laser scanning for 3D fluorescence imaging
-      toys:
-        - toy: Leica SP8 LIGHTNING Confocal
-          specs: Adaptive deconvolution, 5 laser lines, spectral detection
-    - technology: Two-Photon
-      description: Deep-tissue imaging via nonlinear excitation in thick samples
-      toys:
-        - toy: Scientifica Two-Photon System
-          specs: 900+ nm excitation, live animal, 1 mm penetration
-    - technology: Super-Resolution
-      description: Bypass the diffraction limit for nanoscale cellular structures
-      toys:
-        - toy: STED / SIM Systems
-          specs: Sub-100 nm resolution, fixed and live cells
-    - technology: Light Sheet
-      description: Rapid volumetric imaging of whole organisms with minimal bleaching
-      toys:
-        - toy: LaVision BioTec Light Sheet
-          specs: Cleared tissue, whole embryo, dual-sided illumination
-
-- science: Biology
-  topic: Electron Microscopy
-  description: Nanoscale imaging with focused electron beams
-  technologies:
-    - technology: Scanning Electron
-      description: Scan a focused electron beam across a surface to image morphology and map elements
+        - toy: Confocal Microscope
+          specs: Build sharp 3D images layer by layer
+        - toy: Two-Photon Microscope
+          specs: See deep into living tissue with infrared light
+        - toy: Super-Resolution Microscope
+          specs: Image structures smaller than a wavelength of light
+        - toy: Light Sheet Microscope
+          specs: Image whole embryos quickly and gently
+    - technology: Electron Microscopy
+      description: Nanoscale imaging with electron beams
       toys:
         - toy: SEM
-          specs: Secondary and backscatter imaging, EDS elemental mapping
+          specs: Image surfaces at nanometer resolution
         - toy: FIB-SEM
-          specs: Focused ion beam for cross-sectioning and site-specific TEM sample prep
-    - technology: Transmission Electron
-      description: Transmit electrons through an ultra-thin specimen to reveal internal nanostructure
-      toys:
+          specs: Slice samples atom-thin and image each layer
         - toy: TEM
-          specs: 200 kV, lattice imaging, electron diffraction and EDS analysis
+          specs: See through thin samples down to individual atoms
 
 # ═══════════════════════════════════════════════════════════════
 # ASTRONOMY
@@ -442,32 +338,32 @@
   description: Observe the sky across wavelengths
   technologies:
     - technology: Optical Telescope
-      description: Visual and CCD imaging of stars, planets and deep-sky objects
+      description: CCD imaging of stars and deep-sky objects
       toys:
-        - toy: MacLean Observatory
+        - toy: Observatory
           specs: 22" and 14" telescopes, CCD cameras
     - technology: Stellar Spectroscopy
-      description: Chemical composition, temperature and redshift from starlight
+      description: Composition and redshift from starlight
       toys:
         - toy: Spectrometer
           specs: Diffraction grating, wavelength calibration, line identification
     - technology: Radio Observation
-      description: Detect radio emission from pulsars, galaxies and cosmic hydrogen
+      description: Detect radio emission across the cosmos
       toys:
-        - toy: Radio / Survey Arrays
+        - toy: Radio Array
           specs: 21 cm hydrogen mapping, transient detection
 
 - science: Astronomy
   topic: Computational Astronomy
-  description: Simulate orbits and process sky images
+  description: Simulate orbits and process sky data
   technologies:
     - technology: Orbit Simulation
-      description: N-body dynamics, mission planning and ephemeris computation
+      description: N-body dynamics and ephemeris computation
       toys:
-        - toy: REBOUND / AstroPy
+        - toy: N-Body Simulator
           specs: Gravitational integrators, Horizons interface
     - technology: Image Processing
-      description: Stack, calibrate and extract photometry from astronomical images
+      description: Stack, calibrate and extract photometry
       toys:
-        - toy: AstroPy / Photometry Pipelines
+        - toy: Photometry Pipeline
           specs: Flat/dark calibration, aperture photometry, WCS alignment

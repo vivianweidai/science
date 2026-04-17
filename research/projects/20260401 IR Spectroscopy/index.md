@@ -12,7 +12,9 @@ photos:
   - PHOTOS/20260404 Samples B.jpeg
 ---
 
-<div class="page-header"><h1>IR Spectroscopy of Everyday Materials</h1><a class="back-link" href="/research/">Research</a></div>
+<div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+
+<div class="project-title"><h1>IR Spectroscopy of Everyday Materials</h1><span class="chip chem">Chemistry</span></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
@@ -25,13 +27,13 @@ photos:
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/LAYOUT/shuffle.js"></script>
 
-<div class="project-meta"><span class="chip chem">Chemistry</span><br>April 1st 2026<br>Thermo Scientific Nicolet 380 FT-IR Spectrometer (ATR mode)</div>
-
-## Overview
+<div class="section-heading"><h2>Overview</h2><span class="section-date">April 1st 2026</span></div>
 
 Fourier-transform infrared (FT-IR) spectroscopy identifies the polar covalent bonds in a material by measuring which infrared frequencies it absorbs. Different functional groups — O-H, C=O, C-H, N-H, and others — vibrate at characteristic frequencies, producing a unique absorption fingerprint for each compound. This survey of common household and laboratory materials uses the FT-IR spectrometer in ATR mode to capture each sample's spectrum across the mid-infrared range (~550–4000 cm⁻¹), building a reference library of spectra and identifying characteristic functional group signatures in everyday substances.
 
 ## Setup
+
+<div class="setup-highlight" markdown="1">
 
 | Category | Details |
 |----------|---------|
@@ -41,6 +43,8 @@ Fourier-transform infrared (FT-IR) spectroscopy identifies the polar covalent bo
 | Resolution | ~7,150 data points per spectrum |
 | Runs | Two sessions (19 + 6 samples) |
 | Software | Thermo Scientific OMNIC 8 |
+
+</div>
 
 A background spectrum was collected first to establish a baseline. Each sample was placed directly on the ATR crystal — in ATR mode, an infrared beam reflects internally within the crystal and an evanescent wave penetrates a few microns into the sample surface, so samples can be measured as-is without any preparation. A spectrum was acquired across the mid-IR range and <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260401%20IR%20Spectroscopy/DATA">the raw CSV</a> exported from OMNIC 8.
 

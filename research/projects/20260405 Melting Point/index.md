@@ -14,7 +14,9 @@ photos:
   - PHOTOS/20260405 Samples C.jpeg
 ---
 
-<div class="page-header"><h1>Melting Point of Everyday Compounds</h1><a class="back-link" href="/research/">Research</a></div>
+<div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+
+<div class="project-title"><h1>Melting Point of Everyday Compounds</h1><span class="chip chem">Chemistry</span></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
@@ -27,15 +29,15 @@ photos:
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/LAYOUT/shuffle.js"></script>
 
-<div class="project-meta"><span class="chip chem">Chemistry</span><br>April 5th 2026<br>OptiMelt Automated Melting Point System</div>
-
-## Overview
+<div class="section-heading"><h2>Overview</h2><span class="section-date">April 5th 2026</span></div>
 
 Melting point determination is a fundamental technique for identifying and assessing the purity of solid compounds. A pure substance melts sharply at a characteristic temperature, while impurities broaden the melting range and depress the onset temperature. This experiment aimed to measure melting points of caffeine and aspirin using capillary tube method on an automated melting point apparatus with digital image processing.
 
 **Status:** The OptiMelt instrument was non-functional during this session — the touchscreen was unresponsive and could not be used to configure or start a run. Samples were prepared but no measurements were collected. This project is on hold pending instrument repair or access to an alternative melting point apparatus.
 
 ## Setup
+
+<div class="setup-highlight" markdown="1">
 
 | Category | Details |
 |----------|---------|
@@ -44,6 +46,8 @@ Melting point determination is a fundamental technique for identifying and asses
 | Capillary tubes | Eisco Labs Borosilicate Glass Capillary Melting Tubes, 4″ long, 0.05″ OD |
 | Samples | Caffeine (CAF), aspirin (ASP) |
 | Replicates | 3 capillary tubes per compound |
+
+</div>
 
 ## Samples
 

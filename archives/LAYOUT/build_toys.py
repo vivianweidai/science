@@ -10,7 +10,7 @@ Three-level schema:
 Output shape:
   {"topics": [{id, science, science_slug, topic,
     technologies: [{id, technology, description,
-      toys: [{id, toy, specs, highlighted, available, completed?, project_url?}]
+      toys: [{id, toy, specs, available, completed?, project_url?}]
     }]
   }]}
 """
@@ -67,7 +67,6 @@ def build() -> list[dict]:
                     "id": toy_id,
                     "toy": toy["toy"],
                     "specs": toy["specs"],
-                    "highlighted": 1 if toy.get("highlighted") else 0,
                     "available": 1 if toy.get("available") else 0,
                 }
                 if toy.get("url"):
@@ -91,6 +90,7 @@ def build() -> list[dict]:
             "science": e["science"],
             "science_slug": SCIENCE_SLUGS[e["science"]],
             "topic": e["topic"],
+            "description": e.get("description", ""),
             "technologies": techs_out,
         })
     return topics

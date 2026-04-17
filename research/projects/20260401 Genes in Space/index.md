@@ -3,15 +3,15 @@ layout: project
 project: Genes in Space
 ---
 
-<div class="page-header"><h1>Meow to Mars — Will Space Help or Hurt Mi's Heart?</h1><a class="back-link" href="/research/">Research</a></div>
+<div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+
+<div class="project-title"><h1>Meow to Mars — Will Space Help or Hurt Mi's Heart?</h1><span class="chip bio">Biology</span></div>
 
 <div class="hero-single"><img src="PHOTOS/mi.png" alt="Mi the astronaut cat" style="object-position: center 70%;"></div>
 
 **Sarcomere Genes in Microgravity**
 
-<div class="project-meta"><span class="chip bio">Biology</span><br>March 31st 2026<br><a href="https://www.genesinspace.org/">Genes in Space</a> — ISS National Laboratory</div>
-
-## Overview
+<div class="section-heading"><h2>Overview</h2><span class="section-date">March 31st 2026</span></div>
 
 Can a journey to Mars actually be good for Mi's heart? Mi is a British Shorthair, a breed particularly predisposed to hypertrophic cardiomyopathy (HCM) — the most common heart disease in cats and one that also affects 1 in 500 humans. The MYBPC3 gene mediates HCM by disrupting the cardiac myosin-binding protein C (cMyBP-C), which regulates muscle contraction in the sarcomere. On Earth, the heart must work against gravity's hemodynamic load. In microgravity, that mechanical load disappears — but does this compensate for or compound the effects of MYBPC3 mutations?
 
@@ -21,13 +21,18 @@ Microgravity differentially reduces MYBPC3 gene expression in mutant versus wild
 
 ## Setup
 
+<div class="setup-highlight" markdown="1">
+
 | Category | Details |
 |----------|---------|
+| Instruments | miniPCR Thermal Cycler, BioBits Cell-Free System, P51 Fluorescence Viewer |
 | Samples | Cardiomyocyte cell cultures (human and British Shorthair cat) |
 | Variants | Wild-type and mutant MYBPC3 (A31P, R820W) |
 | Controls | Identical samples processed on Earth under normal gravity |
 | Measurement | mRNA transcript levels of MYBPC3, normalized against GAPDH |
 | Readout | Fluorescence band intensity comparison (ISS vs. Earth) |
+
+</div>
 
 Cardiomyocyte cultures carrying both wild-type and known mutant MYBPC3 variants are prepared on Earth. Identical sample sets are sent to the ISS and processed in parallel on the ground as controls. On the ISS, mRNA transcripts of MYBPC3 are amplified using the **miniPCR Thermal Cycler** and detected with the **P51 Fluorescence Viewer**, comparing band intensity between ISS and Earth samples. The **BioBits Cell Free System** is used to express cMyBP-C protein from the amplified cDNA, testing whether microgravity affects protein translation as well as transcription.
 

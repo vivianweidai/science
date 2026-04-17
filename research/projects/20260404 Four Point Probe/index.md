@@ -109,7 +109,9 @@ photos:
   - PHOTOS/20260404 Setup 102.jpeg
 ---
 
-<div class="page-header"><h1>Four-Point Probe Sheet Resistance Measurements</h1><a class="back-link" href="/research/">Research</a></div>
+<div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+
+<div class="project-title"><h1>Four-Point Probe Sheet Resistance Measurements</h1><span class="chip phys">Physics</span></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
@@ -122,9 +124,7 @@ photos:
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/LAYOUT/shuffle.js"></script>
 
-<div class="project-meta"><span class="chip phys">Physics</span><br>April 4th 2026<br>Jandel RM3 Four-Point Probe</div>
-
-## Overview
+<div class="section-heading"><h2>Overview</h2><span class="section-date">April 4th 2026</span></div>
 
 Sheet resistance is a measure of how easily electric current flows across a material's surface, reported in ohms per square (Ω/□). It characterizes conductive materials without needing to know the exact thickness. This is useful because material thickness is often non-uniform or difficult to measure precisely, so sheet resistance allows direct comparison of materials and quality control even when thickness is unknown.
 
@@ -132,11 +132,15 @@ The four-point probe technique separates the current-carrying and voltage-sensin
 
 ## Setup
 
+<div class="setup-highlight" markdown="1">
+
 | Category | Details |
 |----------|---------|
 | Instrument | Jandel RM3 Four-Point Probe |
 | Technique | Four-point probe — separate current and voltage pairs eliminate contact resistance |
 | Measurement | Sheet resistance (Ω/□) |
+
+</div>
 
 Each sample was placed on the measurement stage, the four-point probe head lowered onto the surface, and current applied through the outer probes while voltage was measured across the inner two. Multiple points were measured per sample.
 

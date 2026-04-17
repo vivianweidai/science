@@ -30,7 +30,9 @@ data_photos:
   - DATA/20240920 Catfood N.jpeg
 ---
 
-<div class="page-header"><h1>Red or Green, What Colored Cat Food does Mi Prefer?</h1><a class="back-link" href="/research/">Research</a></div>
+<div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+
+<div class="project-title"><h1>Red or Green, What Colored Cat Food does Mi Prefer?</h1><span class="project-chips"><span class="chip math">Mathematics</span> <span class="chip comp">Computing</span></span></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
@@ -43,9 +45,7 @@ data_photos:
 <script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/LAYOUT/shuffle.js"></script>
 
-<div class="project-meta"><span class="chip comp">Computing</span><br>February 25th 2025</div>
-
-## Overview
+<div class="section-heading"><h2>Overview</h2><span class="section-date">February 25th 2025</span></div>
 
 Does a cat prefer red or green colored food? This experiment tested whether a British Shorthair cat (Mi) shows a statistically significant preference for red- or green-dyed cat food. Regular dry cat food was dyed with food coloring and presented in two side-by-side bowls over 30 days. The bowl Mi approached first was recorded as his preference for that day. A chi-squared test was used to determine whether the observed preference differed significantly from chance.
 
