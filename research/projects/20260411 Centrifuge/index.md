@@ -83,6 +83,8 @@ This experiment centrifuged five common household liquids to observe what separa
 | Vortex mixer | Scientific Industries Vortex-Genie 2 |
 | Mini centrifuge | DiaMed ID-Centrifuge |
 
+</div>
+
 **Supporting gear**
 
 | Item | Details |
@@ -91,8 +93,6 @@ This experiment centrifuged five common household liquids to observe what separa
 | Balance | Sartorius CP225D Analytical Balance |
 | Pipettes | Gilson Pipetman Pipettes |
 | Tubes | Sarstedt 50 mL conical centrifuge tubes, Falcon 50 mL tubes |
-
-</div>
 
 ## Samples
 
