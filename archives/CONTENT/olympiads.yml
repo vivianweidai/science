@@ -301,6 +301,7 @@
   subject: Chemistry
   date: May 2026
   name: British Columbia Chemistry Olympiad
+  photo_url: /olympiads/photos/bcco.jpeg
 - type: textbook
   subject: Chemistry
   date: Future
@@ -357,7 +358,6 @@
   subject: Chemistry
   date: May 2025
   name: British Columbia Chemistry Olympiad
-  photo_url: /olympiads/photos/bcco.jpeg
 - type: olympiad
   subject: Chemistry
   date: April 2025

@@ -621,7 +621,8 @@
       "date": "May 2026",
       "sort_key": "2026-05",
       "name": "British Columbia Chemistry Olympiad",
-      "highlighted": 0
+      "highlighted": 0,
+      "photo_url": "/olympiads/photos/bcco.jpeg"
     },
     {
       "id": 67,
@@ -738,8 +739,7 @@
       "date": "May 2025",
       "sort_key": "2025-05",
       "name": "British Columbia Chemistry Olympiad",
-      "highlighted": 0,
-      "photo_url": "/olympiads/photos/bcco.jpeg"
+      "highlighted": 0
     },
     {
       "id": 80,
