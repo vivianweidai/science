@@ -232,7 +232,7 @@ All spectra plots, peak identification, and category overlays were generated fro
 
 <script src="/archives/LAYOUT/tabs.js"></script>
 
-See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">run the reproducible analysis yourself</a>.
+See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">static notebook</a> or run the <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb">reproducible analysis</a> yourself.
 
 ---
 
