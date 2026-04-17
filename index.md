@@ -18,7 +18,7 @@ title: Vivian Dai
   <a href="curriculum/archives/astronomy.pdf">Astronomy</a>
 </div>
 
-## Updates
+---
 
 <ul class="updates-list">
   <li><span class="update-date">April 11th 2026</span> <span class="update-body"><a href="/research/projects/20260411%20Centrifuge/">Centrifugation and pH of Everyday Liquids</a> <span class="chip chem">Chemistry</span> <span class="chip bio">Biology</span></span></li>

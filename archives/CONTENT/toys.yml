@@ -20,40 +20,39 @@
 # ═══════════════════════════════════════════════════════════════
 
 - science: Mathematics
-  topic: Computation
-  description: Symbolic and numerical problem solving
+  topic: Compute
+  description: Compute the answer — algebra, integrals and linear systems
   technologies:
     - technology: Symbolic
-      description: Exact algebra and machine-verified proofs
+      description: Exact answers in closed form
       toys:
         - toy: Wolfram Alpha
           specs: Symbolic engine with built-in mathematical knowledge
           available: true
           url: https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb
-        - toy: Lean
-          specs: Dependent type theory with the Mathlib library
     - technology: Numerical
-      description: Arrays, solvers and vectorized computation
+      description: Approximate answers at scale
       toys:
         - toy: NumPy
-          specs: N-dimensional arrays and linear algebra
+          specs: Array foundation — linear algebra and vectorized math
           available: true
         - toy: SciPy
-          specs: ODE integration, minimization and Fourier transforms
+          specs: Scientific routines — ODEs, optimizers and Fourier transforms
           available: true
+          completed: "20250225 Catfood"
 
 - science: Mathematics
-  topic: Visualization
-  description: Turning data and equations into figures
+  topic: Communicate
+  description: Communicate the answer — figures and typeset equations
   technologies:
     - technology: Graphing
-      description: Publication-quality figures from data
+      description: Figures from data
       toys:
         - toy: Matplotlib
           specs: Python 2D and 3D plotting
           available: true
     - technology: Typesetting
-      description: Professional documents with perfect equations
+      description: Documents and equations
       toys:
         - toy: LaTeX
           specs: Equations, references and bibliographies
@@ -64,34 +63,32 @@
 # ═══════════════════════════════════════════════════════════════
 
 - science: Computing
-  topic: Data Science
-  description: Extract patterns and signals from data
+  topic: Analyze
+  description: Analyze the data — find patterns and test claims
   technologies:
     - technology: Machine Learning
-      description: Models that learn patterns from data
+      description: Learn patterns to predict
       toys:
         - toy: scikit-learn
-          specs: Classical ML — regression, classification, clustering
+          specs: Classical models for tabular data — regression, classification, clustering
           available: true
         - toy: PyTorch
-          specs: Deep learning with GPU-accelerated training
+          specs: Neural networks for images, text and signals — GPU-accelerated
           available: true
-    - technology: Statistical Analysis
-      description: Test hypotheses and quantify uncertainty
+    - technology: Statistics
+      description: Quantify uncertainty in claims
       toys:
         - toy: SciPy
           specs: Hypothesis tests, distributions and confidence intervals
           available: true
           completed: "20250225 Catfood"
-        - toy: R
-          specs: Statistical modeling and Bayesian inference
 
 - science: Computing
-  topic: Documentation
-  description: Tools to share and reproduce work
+  topic: Publish
+  description: Publish the work — make it public and reproducible
   technologies:
     - technology: Repository
-      description: Every change tracked, versioned and open
+      description: Where code and notebooks live
       toys:
         - toy: GitHub
           specs: Git repos, pull requests and issue tracking
@@ -100,9 +97,9 @@
         - toy: Jupyter
           specs: Notebooks combining code, figures and narrative
           available: true
-          completed: "20260401 IR Spectroscopy"
+          url: https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260401%20IR%20Spectroscopy/OUTPUT/ir_analysis.ipynb
     - technology: Reproducibility
-      description: Anyone can rerun and get the same result
+      description: Freeze environments and archive results
       toys:
         - toy: Docker
           specs: Containers that freeze every dependency
@@ -115,46 +112,44 @@
 
 
 - science: Physics
-  topic: Measurement
-  description: Precision measurement of physical quantities
+  topic: Thermodynamics
+  description: Heat, temperature and energy flow
   technologies:
-    - technology: Electronics
-      description: Voltage, current and resistance in circuits and materials
+    - technology: Temperature
+      description: How hot is it?
       toys:
-        - toy: Oscilloscope
-          specs: Waveforms in time and frequency
-        - toy: Four-Point Probe
-          specs: Sheet resistance of thin films
-          available: true
-          completed: "20260404 Four Point Probe"
-    - technology: Optics
-      description: Produce and analyze light to reveal structure
+        - toy: Thermocouple
+          specs: Contact probe — point measurement at a junction
+        - toy: IR Camera
+          specs: Non-contact imaging — full thermal field at once
+    - technology: Heat
+      description: How does energy move?
       toys:
-        - toy: Laser
-          specs: Coherent light for alignment and interference
-        - toy: Spectrometer
-          specs: Atomic emission lines by wavelength
-        - toy: Interferometer
-          specs: Wavelength and refractive index by beam splitting
+        - toy: Stirling Engine
+          specs: Heat to work — classical engine cycle
+        - toy: Peltier
+          specs: Work to heat — semiconductor heat pump
 
 - science: Physics
-  topic: Neuroimaging
-  description: Record brain activity and neural structure
+  topic: Electromagnetism
+  description: Fields, currents and light
   technologies:
-    - technology: Electrical
-      description: Neural signals at millisecond resolution
+    - technology: Circuits
+      description: Electric current in wires and matter
       toys:
-        - toy: EEG
-          specs: Scalp electrodes — event-related potentials
-        - toy: MEG
-          specs: Magnetometer array — source-localized signals
-    - technology: Blood Flow
-      description: Brain activity via oxygenation changes
+        - toy: Oscilloscope
+          specs: Time-varying signals — waveforms and transients
+        - toy: Multimeter
+          specs: Steady-state values — voltage, current and resistance
+    - technology: Optics
+      description: Electromagnetic radiation, visible and beyond
       toys:
-        - toy: fNIRS
-          specs: Portable near-infrared cortical mapping
-        - toy: 3T MRI
-          specs: Structural and functional brain imaging
+        - toy: Laser
+          specs: Produce — coherent monochromatic light
+        - toy: Spectrometer
+          specs: Analyze — disperse light by wavelength
+        - toy: Interferometer
+          specs: Interfere — combine beams to reveal phase
 
 # ═══════════════════════════════════════════════════════════════
 # CHEMISTRY
@@ -162,98 +157,88 @@
 
 - science: Chemistry
   topic: Spectroscopy
-  description: Identify molecules by how they interact with light
+  description: Probe intact molecules with electromagnetic waves
   technologies:
     - technology: Vibrational
-      description: Identify molecular bonds by how they vibrate
+      description: Which bonds
       toys:
         - toy: IR Spectrometer
-          specs: Polar bonds reveal functional groups
+          specs: Polar bonds — functional-group fingerprints
           available: true
           completed: "20260401 IR Spectroscopy"
         - toy: Raman Microscope
-          specs: Nonpolar bonds and aromatic rings — complements IR
-          available: true
+          specs: Nonpolar bonds — aromatic rings and C=C
+          url: /research/archives/photos/chemistry/raman-microscope.jpg
     - technology: Electronic
-      description: Measure how molecules absorb and emit UV-Visible light
+      description: Color and excited states
       toys:
         - toy: Spectrophotometer
-          specs: Absorption — concentration, color and conjugation
+          specs: Absorption — concentration and conjugation
           available: true
+          url: /research/archives/photos/chemistry/spectrophotometer.jpg
         - toy: Spectrofluorometer
-          specs: Emission — probes excited-state dynamics
+          specs: Emission — excited-state lifetimes and yields
           available: true
+          url: /research/archives/photos/chemistry/spectrofluorometer.jpg
     - technology: Chiroptical
-      description: Distinguish left-handed from right-handed molecules
+      description: Chirality
       toys:
         - toy: CD Spectrometer
-          specs: Protein folding — helix, sheet and coil content
+          specs: Wavelength-resolved — secondary structure of proteins
           available: true
+          url: /research/archives/photos/chemistry/cd-spectrometer.jpg
         - toy: Polarimeter
-          specs: Optical rotation angle — chiral sample purity
+          specs: Single rotation angle — chiral purity of one sample
           available: true
-    - technology: Magnetic Resonance
-      description: Read nuclear and electron spin signals in a magnetic field
-      toys:
-        - toy: NMR Spectrometer
-          specs: Which atoms connect to which — full molecular structure
-          available: true
-        - toy: EPR Spectrometer
-          specs: Unpaired electrons — radicals, metal oxidation states
-          available: true
-
 - science: Chemistry
-  topic: Analytical Chemistry
-  description: Separate, identify and quantify compounds
+  topic: Analytical
+  description: Separate, weigh and characterize mixtures
   technologies:
     - technology: Chromatography
-      description: Separate mixtures into individual components
+      description: Separate components
       toys:
         - toy: Thin Layer
-          specs: Cheap and fast — monitor reactions on silica plates under UV
+          specs: Cheap visual check — silica plate under UV
         - toy: Liquid
-          specs: Analytical and preparative separation with UV detection
+          specs: High-resolution separation in solution — UV detection
           available: true
+          url: /research/archives/photos/chemistry/hplc.jpg
         - toy: Gas
-          specs: Volatile compound separation with flame ionization
+          specs: Volatile compounds in the gas phase — flame ionization
           available: true
+          url: /research/archives/photos/chemistry/gc-ms.jpg
     - technology: Mass Spectrometry
-      description: Identify molecules by weighing them
+      description: Measure molecular mass
       toys:
         - toy: Gas
-          specs: Volatile molecules — fragment fingerprints from library spectra
+          specs: Volatile molecules — fragment fingerprints via electron ionization
           available: true
+          url: /research/archives/photos/chemistry/gc-ms.jpg
         - toy: Liquid
-          specs: Nonvolatile molecules — molecular weight via electrospray
+          specs: Nonvolatile molecules — intact weight via electrospray
           available: true
         - toy: Laser
-          specs: Intact polymers and biomolecules — laser desorption from solid matrix
+          specs: Polymers and biomolecules — laser desorption from solid matrix
           available: true
+          url: /research/archives/photos/chemistry/maldi.jpg
         - toy: Plasma
-          specs: Trace elements — atoms not molecules, parts-per-billion sensitivity
+          specs: Individual atoms — trace elements at parts-per-billion
           available: true
     - technology: Thermal Analysis
-      description: Heat samples and measure what happens
+      description: Watch samples change with heat
       toys:
         - toy: Melting Point
-          specs: Capillary method — identity and purity from melting temperature range
+          specs: Identity and purity from melting temperature
           available: true
           completed: "20260405 Melting Point"
         - toy: Thermogravimetry
-          specs: Mass loss versus temperature — decomposition and moisture
+          specs: Mass loss with heating — decomposition and moisture
           available: true
+          url: /research/archives/photos/chemistry/tga.jpg
         - toy: Calorimetry
-          specs: Energy flow versus temperature — glass transitions and phase changes
+          specs: Energy flow with heating — phase transitions and heat capacity
           available: true
-    - technology: X-Ray Diffraction
-      description: Bounce X-rays off crystals to reveal atomic structure
-      toys:
-        - toy: Powder
-          specs: Phase identification and lattice parameters
-          available: true
-        - toy: Single-Crystal
-          specs: Complete 3D atomic coordinates from a single crystal
-          available: true
+          url: /research/archives/photos/chemistry/dsc.jpg
 
 # ═══════════════════════════════════════════════════════════════
 # BIOLOGY
@@ -261,109 +246,102 @@
 
 - science: Biology
   topic: Molecules
-  description: Amplify DNA, sequence genomes, express and identify proteins
+  description: Read and write DNA and proteins
   technologies:
     - technology: Amplification
-      description: Copy and quantify DNA sequences
+      description: Copy DNA for detection
       toys:
         - toy: PCR
-          specs: Amplify DNA through repeated heating and cooling
+          specs: Endpoint amplification — cycle temperature until enough copies exist
           completed: "20260401 Genes in Space"
-        - toy: qPCR Machine
-          specs: Count how many copies of a gene are present
+        - toy: qPCR
+          specs: Real-time quantitation — count copies as they are made
     - technology: Sequencing
-      description: Read DNA base by base
+      description: Read the DNA code
       toys:
-        - toy: Short-Read Sequencer
-          specs: Read many short stretches of DNA in parallel
-        - toy: Long-Read Sequencer
-          specs: Read very long stretches of DNA in one pass
-        - toy: Single-Cell Sequencer
-          specs: Sequence one cell at a time to map cell types
+        - toy: Short-Read
+          specs: Many short sequences in parallel — Illumina
+        - toy: Long-Read
+          specs: One long sequence end to end — Nanopore, PacBio
     - technology: Expression
-      description: Produce and detect proteins
+      description: Make and see proteins
       toys:
-        - toy: Cell-Free Kit
-          specs: Make proteins from DNA without living cells
+        - toy: Cell-Free
+          specs: Produce protein from DNA without living cells
           completed: "20260401 Genes in Space"
-        - toy: Viewer
-          specs: See glowing gels and plates in the dark
+        - toy: Fluorescence
+          specs: Visualize protein glow under UV light
           completed: "20260401 Genes in Space"
-    - technology: Mass Spectrometry
-      description: Identify proteins by their mass
-      toys:
-        - toy: Orbitrap
-          specs: Identify proteins by their precise mass
-        - toy: Time-of-Flight
-          specs: Separate proteins by how fast they fly
 
 - science: Biology
   topic: Cells
-  description: Cell function, light microscopy and electron microscopy
+  description: See and record living systems
   technologies:
-    - technology: Cell Function
-      description: Sort live cells and measure metabolism
+    - technology: Phenotyping
+      description: Sort and profile living cells
       toys:
         - toy: Flow Cytometer
           specs: Count and sort cells by fluorescent labels
         - toy: Metabolic Analyzer
-          specs: Measure how cells burn sugar and use oxygen
-    - technology: Light Microscopy
-      description: Optical imaging from cells to whole organisms
+          specs: Watch cells burn sugar and use oxygen in real time
+    - technology: Microscopy
+      description: Image cells at every scale
       toys:
-        - toy: Confocal Microscope
-          specs: Build sharp 3D images layer by layer
-        - toy: Two-Photon Microscope
-          specs: See deep into living tissue with infrared light
-        - toy: Super-Resolution Microscope
-          specs: Image structures smaller than a wavelength of light
-        - toy: Light Sheet Microscope
-          specs: Image whole embryos quickly and gently
-    - technology: Electron Microscopy
-      description: Nanoscale imaging with electron beams
-      toys:
+        - toy: Confocal
+          specs: Photons — sharp 3D optical images of cells and tissue
         - toy: SEM
-          specs: Image surfaces at nanometer resolution
-        - toy: FIB-SEM
-          specs: Slice samples atom-thin and image each layer
-        - toy: TEM
-          specs: See through thin samples down to individual atoms
+          specs: Electrons — surface topography at nanometer resolution
+    - technology: Systems Imaging
+      description: Record brain activity
+      toys:
+        - toy: EEG
+          specs: Scalp electrodes — millisecond electrical activity
+        - toy: fNIRS
+          specs: Near-infrared light — cortical blood flow
 
 # ═══════════════════════════════════════════════════════════════
 # ASTRONOMY
 # ═══════════════════════════════════════════════════════════════
 
 - science: Astronomy
-  topic: Observational Astronomy
-  description: Observe the sky across wavelengths
+  topic: Observe
+  description: Where the light comes from — capture photons across the spectrum
   technologies:
-    - technology: Optical Telescope
-      description: CCD imaging of stars and deep-sky objects
+    - technology: Visible
+      description: Optical wavelengths from backyards to mountaintop observatories
       toys:
-        - toy: Observatory
-          specs: 22" and 14" telescopes, CCD cameras
-    - technology: Stellar Spectroscopy
-      description: Composition and redshift from starlight
+        - toy: Household
+          specs: Amateur reflector with motorized mount and CCD
+          available: true
+        - toy: Earth
+          specs: Meter-class ground telescope at a dark site
+          url: /research/archives/photos/astronomy/refractor-a.jpg
+    - technology: Invisible
+      description: Wavelengths outside the visible — radio through X-ray
       toys:
-        - toy: Spectrometer
-          specs: Diffraction grating, wavelength calibration, line identification
-    - technology: Radio Observation
-      description: Detect radio emission across the cosmos
-      toys:
-        - toy: Radio Array
-          specs: 21 cm hydrogen mapping, transient detection
+        - toy: Radio
+          specs: Many dishes synthesized into one high-resolution image
+        - toy: Space
+          specs: Above the atmosphere — UV, infrared and X-ray wavelengths blocked by air
 
 - science: Astronomy
-  topic: Computational Astronomy
-  description: Simulate orbits and process sky data
+  topic: Decode
+  description: What the light tells you — extract measurements and classify sources
   technologies:
-    - technology: Orbit Simulation
-      description: N-body dynamics and ephemeris computation
+    - technology: Analysis
+      description: Extract measurements from raw images
       toys:
-        - toy: N-Body Simulator
-          specs: Gravitational integrators, Horizons interface
-    - technology: Image Processing
-      description: Stack, calibrate and extract photometry
+        - toy: Photometry
+          specs: How bright — light curves reveal variability, transits and distance
+        - toy: Astrometry
+          specs: Where — positions and proper motions reveal parallax and orbits
+        - toy: Spectroscopy
+          specs: What — wavelengths reveal composition, temperature and radial velocity
+          url: /research/archives/photos/astronomy/orion-nebula.jpg
+    - technology: Classification
+      description: Label sources with machine learning
       toys:
-        - toy: Photometry Pipeline
-          specs: Flat/dark calibration, aperture photometry, WCS alignment
+        - toy: Transient
+          specs: Classical ML on light curves — supernovae, variable stars
+        - toy: Galaxy Morphology
+          specs: Deep CNN on galaxy images — spirals, ellipticals, mergers

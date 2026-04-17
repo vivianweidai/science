@@ -138,13 +138,13 @@
   vertical-align: middle;
 }
 .curr-topic-body th {
-  background: #c0c4c8;
+  background: #e1e4e8;
   font-weight: 700;
   font-size: 0.95em;
 }
 
 .curr-topic-body td:first-child {
-  background: #d5d8dc !important;
+  background: #f6f8fa !important;
   font-weight: 600;
   width: 25%;
 }

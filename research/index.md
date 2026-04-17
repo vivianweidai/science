@@ -62,7 +62,7 @@ layout: default
         + ' <span class="chip ' + topic.science_slug + '">' + topic.science + '</span></span>'
         + '<span class="toys-topic-desc">' + esc(topic.description || '') + '</span>'
         + '</div>';
-      html += '<table class="toys-table"><colgroup><col style="width:22%"><col><col style="width:2em"></colgroup><tbody>';
+      html += '<table class="toys-table"><colgroup><col style="width:28%"><col><col style="width:2em"></colgroup><tbody>';
 
       topic.technologies.forEach(function (tech) {
         html += '<tr class="toys-tech-row">'
@@ -74,6 +74,24 @@ layout: default
           var name = esc(toy.toy);
           var link = toy.project_url || toy.url;
           if (link) name = '<a href="' + link + '">' + name + '</a>';
+          if (toy.url) {
+            var icon = '';
+            var iconTitle = '';
+            if (/\.(jpg|jpeg|png|gif)$/i.test(toy.url)) {
+              icon = '\uD83D\uDCF7';
+              iconTitle = 'Photo / work in progress';
+            } else if (/wolframcloud\.com|\.nb($|\?)/i.test(toy.url)) {
+              icon = '\uD83D\uDCD3';
+              iconTitle = 'Wolfram notebook';
+            } else if (/colab\.research|\.ipynb($|\?)/i.test(toy.url)) {
+              icon = '\uD83D\uDCD3';
+              iconTitle = 'Colab notebook';
+            } else if (/github\.com/i.test(toy.url)) {
+              icon = '\uD83D\uDC19';
+              iconTitle = 'GitHub';
+            }
+            if (icon) name += ' <span class="toys-wip" title="' + iconTitle + '">' + icon + '</span>';
+          }
           var access = toy.available ? '<span class="toys-avail">&#10003;</span>' : '';
 
           html += '<tr class="toys-toy-row">'
@@ -200,6 +218,15 @@ layout: default
 
   /* Access icon */
   .toys-avail { color: #1a7f37; font-size: .85em; }
+
+  /* Inline link-type indicator (photo, notebook, GitHub, etc.) */
+  .toys-wip {
+    font-size: .8em;
+    margin-left: .3em;
+    display: inline-block;
+    position: relative;
+    top: -0.1em;
+  }
 
   /* Chips */
   .chip {

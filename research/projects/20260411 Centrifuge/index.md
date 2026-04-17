@@ -74,12 +74,19 @@ This experiment centrifuged five common household liquids to observe what separa
 
 <div class="setup-highlight" markdown="1">
 
-| Category | Details |
-|----------|---------|
+**Featured instruments**
+
+| Instrument | Details |
+|------------|---------|
 | Centrifuge | Thermo Scientific Sorvall RT3 Centrifuge |
 | pH meter | VWR pHenomenal pH 1100 L, calibrated at 25 °C |
 | Vortex mixer | Scientific Industries Vortex-Genie 2 |
 | Mini centrifuge | DiaMed ID-Centrifuge |
+
+**Supporting gear**
+
+| Item | Details |
+|------|---------|
 | Magnetic stirrer | Canlab Magnetic Stirrer |
 | Balance | Sartorius CP225D Analytical Balance |
 | Pipettes | Gilson Pipetman Pipettes |
