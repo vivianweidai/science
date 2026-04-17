@@ -6,27 +6,14 @@ Process experimental data and build reproducible analysis pipelines. Parse raw i
 
 ## REFERENCE MATERIALS
 
-The shared SCIENCE project folder at `/Users/jamesdai/CLAUDE/SCIENCE/` contains comprehensive reference materials. Read these files as needed for instrument details, available equipment, curriculum context, and research planning:
+All background materials now live in the repo under `research/archives/`. Read these as needed for instrument details, context, and research planning:
 
-- **`CONTEXT/CONTEXT Toys.pdf`** — **canonical instrument list** (39 instruments across Biology, Chemistry). All instrument names in repos must exactly match this file.
-- **`CONTEXT/CONTEXT Technology.pdf`** — technology landscape: what each technique measures, what questions it answers, sample state required
-- **`CONTEXT/CONTEXT Overview.pdf`** — overview of goals
-- **`CONTEXT/CONTEXT Guide.pdf`** — Claude's guide on intended approach
-- **`CONTEXT/CONTEXT Workflow.pdf`** — technical reproducible framework
-- **`CONTEXT/CONTEXT Books.pdf`** — books for learning Machine Learning
-- **`CONTEXT/NOTES *.pdf`** — curriculum notes (Astronomy, Biology, Chemistry, Computing, Mathematics, Physics)
-- **`CONTEXT/PAPER *.pdf`** — classic papers (Turing, Rosenblatt, Hubel & Wiesel, Q-Learning, Transformers, AlphaGo, etc.)
-- **`OUTPUT/UNR_Toy_List.pdf`** — expanded instrument list with locations and contact info
-- **`OUTPUT/University_Technology_Landscape.xlsx`** — 5-sheet comparison of UNR vs UBC vs MIT vs Caltech
-- **`OUTPUT/UNR_SIL_Instrument_Inventory.xlsx`** — detailed SIL instrument inventory
-- **`OUTPUT/UNR_SIL_Lab_Guide.pdf`** — lab access and procedures
-- **`OUTPUT/UNR_SIL_Technique_Map.pdf`** — technique-to-instrument mapping
-- **`OUTPUT/UNR_Faculty_Catalogue_Updated.xlsx`** — UNR faculty research areas
-- **`OUTPUT/UNR_Labs_Catalogue_Updated.xlsx`** — UNR lab catalogue
-- **Instrument walk-up guides** — `OUTPUT/DSC_Q100_WalkUp_Guide.pdf`, `OUTPUT/DSC_Q20_WalkUp_Guide.pdf`, `OUTPUT/TGA_Q50_WalkUp_Guide.pdf`, `OUTPUT/FT-IR_Quick_Start_Guide.pdf`, `OUTPUT/FT-IR_Spectral_Analysis.pdf`, `OUTPUT/Jandel_RM3_Four_Point_Probe_Guide.pdf`, `OUTPUT/OptiMelt_WalkUp_Guide.pdf`
-- **`OUTPUT/Science_Competitions_Guide.pdf`** — science competitions guide
-- **`OUTPUT/UBC_Faculty_Catalogue.xlsx`**, **`OUTPUT/UBC_Vancouver_Research_Opportunities.pdf`** — UBC references
-- **`OUTPUT/University_Shared_Labs.pdf`** — university shared labs overview
+- **`research/archives/toys/`** — canonical instrument list (`toys.pdf`), plus technology landscape, UNR/UBC lab and faculty catalogues, and the university comparison.
+- **`research/archives/guides/`** — instrument walk-up guides (one PDF per instrument, e.g. `Thermo Scientific Nicolet 380 FT-IR Spectrometer.pdf`).
+- **`research/archives/papers/`** — classic papers (Turing, Rosenblatt, Hubel & Wiesel, Q-Learning, Transformers, AlphaGo, etc.).
+- **`research/archives/photos/`** — reference photos.
+
+All instrument names in code and prose must exactly match what's in `research/archives/toys/toys.pdf`.
 
 ## REPO STRUCTURE
 
@@ -40,6 +27,11 @@ science/
 ├── olympiads/              # Olympiads page (renders from archives/CONTENT/*.json)
 ├── research/               # Research projects
 │   ├── index.md            # Research landing with tabbed project table
+│   ├── archives/           # Background reference materials (see REFERENCE MATERIALS)
+│   │   ├── toys/           # Instrument list, lab/faculty catalogues
+│   │   ├── guides/         # Instrument walk-up guides
+│   │   ├── papers/         # Classic papers
+│   │   └── photos/         # Reference photos
 │   └── projects/           # Individual projects
 │       └── YYYYMMDD Project/   # (see below)
 └── archives/               # Shared assets
