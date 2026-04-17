@@ -220,10 +220,11 @@ layout: default
   @media (max-width: 600px) {
     .tabs .tab-labels label { padding: 0.45em 0.7em; font-size: 0.8em; }
     .toys-card-header { padding-left: .7em; }
+    .toys-topic-desc { display: none; }
     .toys-table { table-layout: auto; }
     .toys-table colgroup { display: none; }
     .toys-table td { display: block; padding: .2em .7em; }
-    .toys-tech-row td { display: block; padding-left: .7em !important; }
+    .toys-tech-row td { display: block; padding: .7em !important; font-size: 1em; }
     .toys-tech-desc { display: none !important; }
     .toys-toy-row td:first-child {
       padding: .4em .7em 0 .7em !important;
