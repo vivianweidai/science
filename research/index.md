@@ -197,6 +197,8 @@ layout: default
   .chip.astro { background: var(--subj-astro); }
 
   @media (max-width: 600px) {
+    .tabs .tab-labels { justify-content: flex-start; padding-left: .8em; }
+    .tabs .tab-labels label { padding: 0.45em 0.7em; font-size: 0.8em; }
     .toys-table { table-layout: auto; }
     .toys-table colgroup { display: none; }
     .toys-table td { display: block; padding: .2em .7em; }

@@ -91,6 +91,8 @@ layout: default
   .legend .chip { margin-right: .3em; }
 
   @media (max-width: 600px) {
+    .tabs .tab-labels { justify-content: flex-start; padding-left: .8em; }
+    .tabs .tab-labels label { padding: 0.45em 0.7em; font-size: 0.8em; }
     .timeline .entry {
       display: flex;
       flex-direction: column;
@@ -104,6 +106,7 @@ layout: default
       flex-wrap: wrap;
     }
     .timeline .entry .month { display: inline; font-size: .82em; }
+    .timeline .entry .month:empty { display: none; }
     .timeline .entry .type-cell { display: inline; text-align: left; margin: 0 .2em; }
     .timeline .entry .chips-cell { display: inline-flex; }
     .timeline .entry .name-cell { font-size: .95em; line-height: 1.4; }
