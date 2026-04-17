@@ -23,13 +23,13 @@ layout: default
     })();
   </script>
   <div class="tab-labels">
-    <label for="toys-all">All</label>
-    <label for="toys-math">Mathematics</label>
-    <label for="toys-comp">Computing</label>
-    <label for="toys-phys">Physics</label>
-    <label for="toys-chem">Chemistry</label>
-    <label for="toys-bio">Biology</label>
-    <label for="toys-astro">Astronomy</label>
+    <label for="toys-all"><span class="label-full">All</span><span class="label-abbr">All</span></label>
+    <label for="toys-math"><span class="label-full">Mathematics</span><span class="label-abbr">Math</span></label>
+    <label for="toys-comp"><span class="label-full">Computing</span><span class="label-abbr">Comp</span></label>
+    <label for="toys-phys"><span class="label-full">Physics</span><span class="label-abbr">Phys</span></label>
+    <label for="toys-chem"><span class="label-full">Chemistry</span><span class="label-abbr">Chem</span></label>
+    <label for="toys-bio"><span class="label-full">Biology</span><span class="label-abbr">Bio</span></label>
+    <label for="toys-astro"><span class="label-full">Astronomy</span><span class="label-abbr">Astro</span></label>
   </div>
 </div>
 
@@ -197,7 +197,6 @@ layout: default
   .chip.astro { background: var(--subj-astro); }
 
   @media (max-width: 600px) {
-    .tabs .tab-labels { justify-content: flex-start; padding-left: .8em; }
     .tabs .tab-labels label { padding: 0.45em 0.7em; font-size: 0.8em; }
     .toys-table { table-layout: auto; }
     .toys-table colgroup { display: none; }

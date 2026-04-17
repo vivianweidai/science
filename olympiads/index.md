@@ -24,13 +24,13 @@ layout: default
   </script>
 
   <div class="tab-labels">
-    <label for="view-all">All</label>
-    <label for="view-math">Mathematics</label>
-    <label for="view-comp">Computing</label>
-    <label for="view-phys">Physics</label>
-    <label for="view-chem">Chemistry</label>
-    <label for="view-bio">Biology</label>
-    <label for="view-astro">Astronomy</label>
+    <label for="view-all"><span class="label-full">All</span><span class="label-abbr">All</span></label>
+    <label for="view-math"><span class="label-full">Mathematics</span><span class="label-abbr">Math</span></label>
+    <label for="view-comp"><span class="label-full">Computing</span><span class="label-abbr">Comp</span></label>
+    <label for="view-phys"><span class="label-full">Physics</span><span class="label-abbr">Phys</span></label>
+    <label for="view-chem"><span class="label-full">Chemistry</span><span class="label-abbr">Chem</span></label>
+    <label for="view-bio"><span class="label-full">Biology</span><span class="label-abbr">Bio</span></label>
+    <label for="view-astro"><span class="label-full">Astronomy</span><span class="label-abbr">Astro</span></label>
   </div>
 </div>
 
@@ -91,7 +91,6 @@ layout: default
   .legend .chip { margin-right: .3em; }
 
   @media (max-width: 600px) {
-    .tabs .tab-labels { justify-content: flex-start; padding-left: .8em; }
     .tabs .tab-labels label { padding: 0.45em 0.7em; font-size: 0.8em; }
     .timeline .entry {
       display: flex;

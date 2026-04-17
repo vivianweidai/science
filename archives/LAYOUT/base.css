@@ -55,6 +55,7 @@ hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0 0.5em 0; }
   pointer-events: none;
   text-decoration: none;
 }
+.tab-labels .label-abbr { display: none; }
 @media (max-width: 600px) {
   .tab-labels {
     flex-wrap: wrap;
@@ -64,6 +65,8 @@ hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0 0.5em 0; }
     padding: 0.45em 0.6em;
     font-size: 0.8em;
   }
+  .tab-labels .label-full { display: none; }
+  .tab-labels .label-abbr { display: inline; }
 }
 
 /* Page heading with back-link */
@@ -85,6 +88,26 @@ hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0 0.5em 0; }
   font-size: 0.9em;
   font-weight: normal;
   white-space: nowrap;
+}
+.page-header .header-nav {
+  display: flex;
+  gap: 0.8em;
+  font-size: 0.9em;
+  flex-shrink: 0;
+  margin-left: 1em;
+}
+.page-header .header-nav a {
+  font-weight: normal;
+  white-space: nowrap;
+}
+.page-header .header-nav a.active {
+  font-weight: 600;
+  color: #1f2328;
+  pointer-events: none;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .page-header .header-nav { display: none; }
 }
 
 /* CSS-only tabs */
