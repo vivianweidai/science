@@ -86,8 +86,9 @@ layout: default
 
   .type-icon { font-size: .85em; }
   .rings-icon { vertical-align: middle; }
-  .photo-link { font-size: .8em; margin-left: .3em; text-decoration: none; position: relative; top: -.1em; }
-  .photo-link:hover { opacity: .7; }
+  .name-link { color: #0969da; text-decoration: none; }
+  .name-link:hover { text-decoration: underline; }
+  .photo-icon { font-size: .8em; margin-left: .3em; position: relative; top: -.1em; }
 
   .legend { font-size: .82em; color: #656d76; margin: .3em 0 1em; line-height: 2; }
   .legend .chip { margin-right: .3em; }
@@ -172,7 +173,7 @@ layout: default
           + '<div class="type-cell">' + icon + '</div>'
           + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
           + '</div>'
-          + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="invited-badge">INVITED</span>' : '') + (e.photo_url ? ' <a class="photo-link" href="' + e.photo_url + '" title="Photo">\uD83D\uDCF7</a>' : '') + '</div>'
+          + '<div class="name-cell">' + (e.photo_url ? '<a class="name-link" href="' + e.photo_url + '">' + esc(e.name) + '</a>' : esc(e.name)) + (e.invited ? ' <span class="invited-badge">INVITED</span>' : '') + (e.photo_url ? ' <span class="photo-icon" title="Photo">\uD83D\uDCF7</span>' : '') + '</div>'
           + '</div>';
       });
     });
