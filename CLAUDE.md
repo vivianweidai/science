@@ -83,6 +83,16 @@ YYYYMMDD Project Name/
 - **Never modify raw data files.** Read from `DATA/`; write all generated outputs to `OUTPUT/`.
 - Create subdirectories (`DATA/`, `PHOTOS/`, `PAPERS/`, `OUTPUT/`) as needed when setting up or processing a project.
 
+## LOCAL PREVIEWS (scratchpad)
+
+Use this workflow whenever the user asks to see something rendered ("show me", "preview", "give me choices", design comps, etc.) that isn't part of the published site.
+
+- **Location:** save all scratch HTML/SVG/PNG to `science/scratch/`. The folder is listed in `.gitignore`, so nothing here is ever committed.
+- **File naming:** `scratch/<topic>.html` (e.g. `scratch/caticons.html`, `scratch/hero-crop.html`). Overwrite freely — these are throwaways.
+- **Serving:** the existing Jekyll preview config (`.claude/launch.json` → `science-jekyll`, port 4321) serves the whole `science/` tree. Scratch files are reachable at `http://127.0.0.1:4321/scratch/<file>.html`. Start it with `preview_start` (name: `science-jekyll`) if it's not already running.
+- **Showing the user:** if the Claude_Preview MCP tools can't open the URL, fall back to `qlmanage -t -s 1200 -o /tmp /path/to/scratch/<file>.html` and `Read` the generated PNG so the image renders inline in the chat.
+- **Promoting to the site:** if the user picks an option and wants it live, move the chosen asset into the appropriate tracked path (e.g. `archives/LAYOUT/`, `archives/CONTENT/`, or a project's `OUTPUT/`), then commit that — never commit from `scratch/`.
+
 ## ANALYSIS GUIDELINES
 
 - **Tool choice is flexible** — use Python, R, Julia, shell scripts, or whatever fits the task best. Default to Python scientific stack (pandas, numpy, scipy, matplotlib, seaborn) when there's no strong reason to pick something else.
