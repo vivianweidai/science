@@ -126,4 +126,4 @@ pH读数从VWR pHenomenal pH 1100 L显示屏的照片中记录。实验室中还
 
 ---
 
-<div class="footer"><a class="footer-github" href="/research/projects/20260411%20Centrifuge/">English</a><div class="footer-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a class="active" href="/archives/CHINESE/research/">研究</a></div></div>
+<div class="footer"><a class="footer-github" href="/archives/CHINESE/">科学</a><div class="footer-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a class="active" href="/archives/CHINESE/research/">研究</a></div></div>

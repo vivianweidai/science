@@ -234,4 +234,4 @@ photos:
 
 ---
 
-<div class="footer"><a class="footer-github" href="/research/projects/20260401%20IR%20Spectroscopy/">English</a><div class="footer-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a class="active" href="/archives/CHINESE/research/">研究</a></div></div>
+<div class="footer"><a class="footer-github" href="/archives/CHINESE/">科学</a><div class="footer-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a class="active" href="/archives/CHINESE/research/">研究</a></div></div>

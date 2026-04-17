@@ -17,4 +17,4 @@ html_lang: zh
 
 ---
 
-<div class="footer"><a class="footer-github" href="/curriculum/">English</a><div class="footer-nav"><a class="active" href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a href="/archives/CHINESE/research/">研究</a></div></div>
+<div class="footer"><a class="footer-github" href="/archives/CHINESE/">科学</a><div class="footer-nav"><a class="active" href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a href="/archives/CHINESE/research/">研究</a></div></div>
