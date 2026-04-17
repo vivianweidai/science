@@ -5,7 +5,7 @@ title: Vivian Dai
 
 <div class="page-header"><h2>Science</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
-<img src="archives/CONTENT/science.png" alt="Science" width="100%">
+<img src="archives/CONTENT/science.jpeg" alt="Science" width="100%">
 
 <a href="curriculum/"><img src="archives/CONTENT/curriculum.png" alt="Curriculum" width="100%"></a>
 

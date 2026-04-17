@@ -7,7 +7,7 @@ project: Genes in Space
 
 <div class="project-title"><h1>Meow to Mars — Will Space Help or Hurt Mi's Heart?</h1><span class="chip bio">Biology</span></div>
 
-<div class="hero-single"><img src="PHOTOS/mi.png" alt="Mi the astronaut cat" style="object-position: center 70%;"></div>
+<div class="hero-single"><img src="PHOTOS/mi.jpeg" alt="Mi the astronaut cat" style="object-position: center 70%;"></div>
 
 **Sarcomere Genes in Microgravity**
 

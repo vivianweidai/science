@@ -6,7 +6,7 @@ title: Vivian Dai
 
 <div class="page-header"><h2>科学</h2><div class="header-nav"><a href="/archives/CHINESE/curriculum/">课程</a><a href="/archives/CHINESE/olympiads/">竞赛</a><a href="/archives/CHINESE/research/">研究</a></div></div>
 
-<img src="/archives/CONTENT/science.png" alt="科学" width="100%">
+<img src="/archives/CONTENT/science.jpeg" alt="科学" width="100%">
 
 <a href="/archives/CHINESE/curriculum/"><img src="/archives/CONTENT/curriculum.png" alt="课程" width="100%"></a>
 
