@@ -21,52 +21,43 @@
 # ═══════════════════════════════════════════════════════════════
 
 - science: Mathematics
-  topic: Symbolic Computation
+  topic: Computation
+  description: Symbolic and numerical problem solving
   technologies:
-    - technology: Computer Algebra
-      description: Exact symbolic solutions — no rounding, no approximation
+    - technology: Symbolic
+      description: Exact algebra and machine-verified proofs
       toys:
         - toy: Wolfram Alpha
-          specs: Symbolic engine with mathematical knowledge base and interactive notebooks
-          highlighted: true
+          specs: Symbolic engine with built-in mathematical knowledge
           available: true
           url: https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb
-    - technology: Proof Assistant
-      description: Machine-verified proofs where every logical step is checked
-      toys:
         - toy: Lean
-          specs: Dependent type theory with the Mathlib library of formalized theorems
-
-- science: Mathematics
-  topic: Numerical Computation
-  technologies:
-    - technology: Linear Algebra
-      description: Array operations, matrix decomposition, and vectorized computation
+          specs: Dependent type theory with the Mathlib library
+    - technology: Numerical
+      description: Arrays, solvers and vectorized computation
       toys:
         - toy: NumPy
-          specs: N-dimensional arrays, broadcasting, and linear algebra routines
+          specs: N-dimensional arrays and linear algebra
           available: true
-    - technology: Scientific Computing
-      description: Solvers for differential equations, optimization, and signal processing
-      toys:
         - toy: SciPy
-          specs: ODE integrators, minimization, curve fitting, and Fourier transforms
+          specs: ODE integration, minimization and Fourier transforms
           available: true
 
 - science: Mathematics
   topic: Visualization
+  description: Turning data and equations into figures
   technologies:
     - technology: Graphing
-      description: Publication-quality figures from functions, data, and surfaces
+      description: Publication-quality figures from data
       toys:
         - toy: Matplotlib
-          specs: Two-dimensional and three-dimensional Python plotting with full style control
+          specs: Python 2D and 3D plotting
           available: true
     - technology: Typesetting
-      description: Professionally formatted mathematical documents with perfect equations
+      description: Professional documents with perfect equations
       toys:
         - toy: LaTeX
-          specs: Equation typesetting, numbered references, and bibliography management
+          specs: Equations, references and bibliographies
           available: true
 
 # ═══════════════════════════════════════════════════════════════
@@ -75,54 +66,50 @@
 
 - science: Computing
   topic: Data Science
+  description: Extract patterns and signals from data
   technologies:
-    - technology: Statistical Analysis
-      description: Fit models, test hypotheses, and quantify uncertainty in experimental data
-      toys:
-        - toy: R
-          specs: Statistical modeling, hypothesis testing, and Bayesian inference
-          highlighted: true
-          completed: "20250225 Catfood"
     - technology: Machine Learning
-      description: Train models that learn patterns from data and generalize to new observations
+      description: Models that learn patterns from data
       toys:
         - toy: scikit-learn
-          specs: Regression, classification, clustering, and cross-validation pipelines
+          specs: Classical ML — regression, classification, clustering
           available: true
         - toy: PyTorch
-          specs: Neural networks and deep learning with GPU-accelerated training
+          specs: Deep learning with GPU-accelerated training
           available: true
-    - technology: GPU Computing
-      description: Scale computation to thousands of cores for simulation and model training
+    - technology: Statistical Analysis
+      description: Test hypotheses and quantify uncertainty
       toys:
-        - toy: GPU Cluster
-          specs: Multi-node SLURM-scheduled jobs with NVIDIA GPUs
+        - toy: SciPy
+          specs: Hypothesis tests, distributions and confidence intervals
+          highlighted: true
           available: true
+          completed: "20250225 Catfood"
+        - toy: R
+          specs: Statistical modeling and Bayesian inference
 
 - science: Computing
   topic: Documentation
+  description: Tools to share and reproduce work
   technologies:
     - technology: Repository
-      description: Every change to code and data tracked, versioned, and shared openly
+      description: Every change tracked, versioned and open
       toys:
         - toy: GitHub
-          specs: Git repositories, pull requests, issue tracking, and continuous integration
-          highlighted: true
+          specs: Git repos, pull requests and issue tracking
           available: true
           url: https://github.com/vivianweidai
         - toy: Jupyter
-          specs: Literate Python notebooks combining code, figures, and narrative in one document
-          highlighted: true
+          specs: Notebooks combining code, figures and narrative
           available: true
           completed: "20260401 IR Spectroscopy"
     - technology: Reproducibility
-      description: Anyone can rerun your analysis and get the same results
+      description: Anyone can rerun and get the same result
       toys:
         - toy: Docker
-          specs: Containerized environments that freeze every dependency and configuration
-          available: true
+          specs: Containers that freeze every dependency
         - toy: Zenodo
-          specs: Permanent DOI archive — making datasets and code citable forever
+          specs: Permanent DOI archive for datasets and code
 
 # ═══════════════════════════════════════════════════════════════
 # PHYSICS
@@ -131,44 +118,46 @@
 
 - science: Physics
   topic: Measurement
+  description: Precision measurement of physical quantities
   technologies:
     - technology: Electronics
-      description: Measure voltage, current, and resistance in circuits and materials
+      description: Voltage, current and resistance in circuits and materials
       toys:
         - toy: Oscilloscope
-          specs: Capture waveforms in time and frequency domains
+          specs: Waveforms in time and frequency
         - toy: Four-Point Probe
-          specs: Sheet resistance of conductive thin films
+          specs: Sheet resistance of thin films
           highlighted: true
           available: true
           completed: "20260404 Four Point Probe"
     - technology: Optics
-      description: Produce, separate, and recombine light to reveal composition and structure
+      description: Produce and analyze light to reveal structure
       toys:
         - toy: Laser
-          specs: Coherent 632.8 nm light for alignment, diffraction, and interference
+          specs: Coherent light for alignment and interference
         - toy: Spectrometer
-          specs: Resolve atomic emission lines by separating light into component wavelengths
+          specs: Atomic emission lines by wavelength
         - toy: Interferometer
-          specs: Measure wavelength and refractive index by splitting and recombining beams
+          specs: Wavelength and refractive index by beam splitting
 
 - science: Physics
   topic: Neuroimaging
+  description: Record brain activity and neural structure
   technologies:
     - technology: Electrical
-      description: Record neural electrical and magnetic activity with millisecond resolution
+      description: Neural signals at millisecond resolution
       toys:
         - toy: EEG
-          specs: Scalp electrodes capturing event-related potentials and oscillations
+          specs: Scalp electrodes — event-related potentials
         - toy: MEG
-          specs: Whole-head magnetometer array for source-localized brain signals
+          specs: Magnetometer array — source-localized signals
     - technology: Blood Flow
-      description: Track blood flow and oxygenation changes in the brain over seconds
+      description: Brain activity via oxygenation changes
       toys:
         - toy: fNIRS
-          specs: Portable near-infrared cortical oxygenation mapping
+          specs: Portable near-infrared cortical mapping
         - toy: 3T MRI
-          specs: Structural and functional imaging of the human brain
+          specs: Structural and functional brain imaging
 
 # ═══════════════════════════════════════════════════════════════
 # CHEMISTRY
@@ -176,137 +165,114 @@
 
 - science: Chemistry
   topic: Spectroscopy
+  description: Identify molecules by how they interact with light
   technologies:
     - technology: Vibrational
-      description: Infrared and Raman — probe molecular bonds by how they absorb or scatter light
+      description: Identify molecular bonds by how they vibrate
       toys:
         - toy: IR Spectrometer
-          specs: Identify polar bonds and functional groups, 4000–400 cm⁻¹, ATR and transmission
+          specs: Polar bonds reveal functional groups
           highlighted: true
           available: true
           completed: "20260401 IR Spectroscopy"
         - toy: Raman Microscope
-          specs: Identify nonpolar bonds and ring breathing modes via confocal laser scattering
+          specs: Nonpolar bonds and aromatic rings — complements IR
           available: true
     - technology: Electronic
-      description: UV-Visible absorption and fluorescence — measure electronic transitions and emission
+      description: Measure how molecules absorb and emit UV-Visible light
       toys:
         - toy: Spectrophotometer
-          specs: Electronic transitions, concentration, and color across 190–3300 nm
+          specs: Absorption — concentration, color and conjugation
           available: true
         - toy: Spectrofluorometer
-          specs: Excited-state emission and molecular environment from excitation-emission matrices
+          specs: Emission — probes excited-state dynamics
           available: true
     - technology: Chiroptical
-      description: Probe molecular handedness and protein secondary structure using polarized light
+      description: Distinguish left-handed from right-handed molecules
       toys:
         - toy: CD Spectrometer
-          specs: Circular dichroism — helix, sheet, and coil content of proteins
+          specs: Protein folding — helix, sheet and coil content
           available: true
         - toy: Polarimeter
-          specs: Optical rotation and enantiomeric excess of chiral molecules
+          specs: Optical rotation angle — chiral sample purity
           available: true
     - technology: Magnetic Resonance
-      description: Place samples in a strong magnetic field and read nuclear or electron spin signals
+      description: Read nuclear and electron spin signals in a magnetic field
       toys:
         - toy: NMR Spectrometer
-          specs: Molecular connectivity from 1H and 13C chemical shifts at 400, 500, and 700 MHz
+          specs: Which atoms connect to which — full molecular structure
           available: true
         - toy: EPR Spectrometer
-          specs: Detect unpaired electrons in radicals and metal centers, variable temperature to 4 K
+          specs: Unpaired electrons — radicals, metal oxidation states
           available: true
 
 - science: Chemistry
-  topic: Mass Spectrometry
+  topic: Analytical Chemistry
+  description: Separate, identify and quantify compounds
   technologies:
-    - technology: GC-MS
-      description: Identify volatile compounds by vaporizing, separating, and fragmenting them
+    - technology: Chromatography
+      description: Separate mixtures into individual components
       toys:
-        - toy: GC-MS
-          specs: Electron ionization, NIST library search, quadrupole mass analyzer
+        - toy: Thin Layer
+          specs: Cheap and fast — monitor reactions on silica plates under UV
+        - toy: Liquid
+          specs: Analytical and preparative separation with UV detection
           available: true
-    - technology: LC-MS
-      description: Identify nonvolatile compounds in solution by molecular weight
-      toys:
-        - toy: LC-MS
-          specs: Electrospray ionization, nominal and high-resolution accurate mass
+        - toy: Gas
+          specs: Volatile compound separation with flame ionization
           available: true
-    - technology: MALDI
-      description: Weigh intact polymers and biomolecules by laser desorption from a solid matrix
+    - technology: Mass Spectrometry
+      description: Identify molecules by weighing them
       toys:
-        - toy: MALDI-TOF
-          specs: Benchtop matrix-assisted laser desorption, polymer and peptide analysis
+        - toy: Gas
+          specs: Volatile molecules — fragment fingerprints from library spectra
           available: true
-    - technology: ICP-MS
-      description: Identify and quantify trace elements by atomizing samples in plasma
-      toys:
-        - toy: ICP-MS
-          specs: Parts-per-billion elemental analysis across the periodic table
-
-- science: Chemistry
-  topic: Chromatography
-  technologies:
-    - technology: Liquid
-      description: Separate and quantify components dissolved in a liquid mixture
-      toys:
-        - toy: HPLC
-          specs: Analytical and preparative dual stacks with UV and refractive index detection
+        - toy: Liquid
+          specs: Nonvolatile molecules — molecular weight via electrospray
           available: true
-    - technology: Gas
-      description: Separate and quantify volatile compounds carried through a column by inert gas
-      toys:
-        - toy: GC-FID
-          specs: Flame ionization detection, standalone or coupled to MS, chiral column available
+        - toy: Laser
+          specs: Intact polymers and biomolecules — laser desorption from solid matrix
           available: true
-
-- science: Chemistry
-  topic: Thermal Analysis
-  technologies:
-    - technology: Melting Point
-      description: Determine when a solid melts to assess identity and purity
+        - toy: Plasma
+          specs: Trace elements — atoms not molecules, parts-per-billion sensitivity
+          available: true
+    - technology: Thermal Analysis
+      description: Heat samples and measure what happens
       toys:
-        - toy: Melting Point Apparatus
-          specs: Visual capillary method with digital temperature readout
+        - toy: Melting Point
+          specs: Capillary method — identity and purity from melting temperature range
+          highlighted: true
           available: true
           completed: "20260405 Melting Point"
-    - technology: Thermogravimetry
-      description: Measure mass loss as temperature rises to reveal decomposition and moisture content
-      toys:
-        - toy: TGA
-          specs: Ramp to 1000 °C under nitrogen or air, milligram sensitivity
+        - toy: Thermogravimetry
+          specs: Mass loss versus temperature — decomposition and moisture
           available: true
-    - technology: Calorimetry
-      description: Measure heat flow to detect glass transitions, crystallization, and phase changes
-      toys:
-        - toy: DSC
-          specs: Modulated differential scanning calorimetry, heat capacity measurement
+        - toy: Calorimetry
+          specs: Energy flow versus temperature — glass transitions and phase changes
           available: true
-
-- science: Chemistry
-  topic: Structural Analysis
-  technologies:
     - technology: X-Ray Diffraction
-      description: Bounce X-rays off crystals to identify phases or solve full 3D atomic structures
+      description: Bounce X-rays off crystals to reveal atomic structure
       toys:
-        - toy: Powder XRD
-          specs: Phase identification, lattice parameters, and Rietveld refinement
+        - toy: Powder
+          specs: Phase identification and lattice parameters
           available: true
-        - toy: Single-Crystal XRD
-          specs: Complete 3D atomic coordinates from individual crystals
+        - toy: Single-Crystal
+          specs: Complete 3D atomic coordinates from a single crystal
           available: true
-    - technology: Scanning Probe
-      description: Drag a sharp tip across a surface to map topography and electronic states at atomic scale
+    - technology: Scanning Microscope
+      description: Drag a sharp tip across a surface to map atomic structure
       toys:
-        - toy: AFM
-          specs: Contact and tapping mode, nanometer-resolution height maps
+        - toy: Atomic Force
+          specs: Nanometer-resolution height maps in any environment
           available: true
-        - toy: STM
-          specs: Atomic-resolution conductance maps of conductive surfaces
+        - toy: Tunneling
+          specs: Atomic-resolution maps of conductive surfaces
           available: true
 
 
 - science: Chemistry
   topic: Synthesis and Preparation
+  description: Prepare samples and run chemical reactions
   technologies:
     - technology: Microwave Reactor
       description: Accelerate chemical reactions with rapid sealed-vessel heating under pressure
@@ -355,6 +321,7 @@
 
 - science: Biology
   topic: Molecular Biology
+  description: DNA, RNA and proteins at the molecular scale
   technologies:
     - technology: PCR
       description: Amplify specific DNA sequences for detection and cloning
@@ -374,6 +341,7 @@
 
 - science: Biology
   topic: Genomics
+  description: Sequence and profile whole genomes
   technologies:
     - technology: Short-Read Sequencing
       description: Massively parallel sequencing for genome and transcriptome profiling
@@ -398,6 +366,7 @@
 
 - science: Biology
   topic: Proteomics
+  description: Identify and quantify cellular proteins
   technologies:
     - technology: Tandem Mass Spectrometry
       description: Identify and quantify proteins by fragmentation
@@ -409,9 +378,10 @@
 
 - science: Biology
   topic: Cell Analysis
+  description: Sort, count and characterize individual cells
   technologies:
     - technology: Flow Cytometry & Sorting
-      description: Count, characterize, and isolate cells by surface markers
+      description: Count, characterize and isolate cells by surface markers
       toys:
         - toy: BD / Sony Cell Sorters
           specs: Multi-color FACS, rare cell isolation, high speed
@@ -423,6 +393,7 @@
 
 - science: Biology
   topic: Microscopy
+  description: High-resolution optical imaging of cells
   technologies:
     - technology: Confocal
       description: Optical sectioning by laser scanning for 3D fluorescence imaging
@@ -447,6 +418,7 @@
 
 - science: Biology
   topic: Electron Microscopy
+  description: Nanoscale imaging with focused electron beams
   technologies:
     - technology: Scanning Electron
       description: Scan a focused electron beam across a surface to image morphology and map elements
@@ -459,7 +431,7 @@
       description: Transmit electrons through an ultra-thin specimen to reveal internal nanostructure
       toys:
         - toy: TEM
-          specs: 200 kV, lattice imaging, electron diffraction, and EDS analysis
+          specs: 200 kV, lattice imaging, electron diffraction and EDS analysis
 
 # ═══════════════════════════════════════════════════════════════
 # ASTRONOMY
@@ -467,33 +439,35 @@
 
 - science: Astronomy
   topic: Observational Astronomy
+  description: Observe the sky across wavelengths
   technologies:
     - technology: Optical Telescope
-      description: Visual and CCD imaging of stars, planets, and deep-sky objects
+      description: Visual and CCD imaging of stars, planets and deep-sky objects
       toys:
         - toy: MacLean Observatory
           specs: 22" and 14" telescopes, CCD cameras
     - technology: Stellar Spectroscopy
-      description: Chemical composition, temperature, and redshift from starlight
+      description: Chemical composition, temperature and redshift from starlight
       toys:
         - toy: Spectrometer
           specs: Diffraction grating, wavelength calibration, line identification
     - technology: Radio Observation
-      description: Detect radio emission from pulsars, galaxies, and cosmic hydrogen
+      description: Detect radio emission from pulsars, galaxies and cosmic hydrogen
       toys:
         - toy: Radio / Survey Arrays
           specs: 21 cm hydrogen mapping, transient detection
 
 - science: Astronomy
   topic: Computational Astronomy
+  description: Simulate orbits and process sky images
   technologies:
     - technology: Orbit Simulation
-      description: N-body dynamics, mission planning, and ephemeris computation
+      description: N-body dynamics, mission planning and ephemeris computation
       toys:
         - toy: REBOUND / AstroPy
           specs: Gravitational integrators, Horizons interface
     - technology: Image Processing
-      description: Stack, calibrate, and extract photometry from astronomical images
+      description: Stack, calibrate and extract photometry from astronomical images
       toys:
         - toy: AstroPy / Photometry Pipelines
           specs: Flat/dark calibration, aperture photometry, WCS alignment

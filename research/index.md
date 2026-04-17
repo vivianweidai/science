@@ -57,8 +57,11 @@ layout: default
     var html = '';
     filtered.forEach(function (topic) {
       html += '<div class="toys-card toys-accent-' + topic.science_slug + '">';
-      html += '<div class="toys-card-header">' + esc(topic.topic)
-        + ' <span class="chip ' + topic.science_slug + '">' + topic.science + '</span></div>';
+      html += '<div class="toys-card-header">'
+        + '<span class="toys-topic-title">' + esc(topic.topic)
+        + ' <span class="chip ' + topic.science_slug + '">' + topic.science + '</span></span>'
+        + '<span class="toys-topic-desc">' + esc(topic.description || '') + '</span>'
+        + '</div>';
       html += '<table class="toys-table"><colgroup><col style="width:22%"><col><col style="width:2em"></colgroup><tbody>';
 
       topic.technologies.forEach(function (tech) {
@@ -128,8 +131,26 @@ layout: default
     padding: .6em .8em;
     border-bottom: 1px solid #eaecef;
     color: #1f2328;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
   }
   .toys-card-header .chip { vertical-align: middle; margin-left: .3em; position: relative; top: -.1em; }
+  .toys-topic-title { white-space: nowrap; flex-shrink: 0; }
+  .toys-topic-desc {
+    font-weight: 400;
+    font-size: .9em;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    transition: color .2s ease, -webkit-text-fill-color .2s ease;
+    text-align: right;
+    min-width: 0;
+  }
+  .toys-card-header:hover .toys-topic-desc {
+    color: #1f2328;
+    -webkit-text-fill-color: #1f2328;
+  }
 
   /* Table */
   .toys-table {
@@ -198,6 +219,7 @@ layout: default
 
   @media (max-width: 600px) {
     .tabs .tab-labels label { padding: 0.45em 0.7em; font-size: 0.8em; }
+    .toys-card-header { padding-left: .7em; }
     .toys-table { table-layout: auto; }
     .toys-table colgroup { display: none; }
     .toys-table td { display: block; padding: .2em .7em; }
