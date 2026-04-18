@@ -1,7 +1,7 @@
 sample,lambda_max_nm,A_at_peak,D = A / 0.05
-Yellow highlighter (neat stock),453.5,0.346,6.9
-Yellow highlighter (1 drop / 3 mL),230.0,2.216,44.3
-Pink highlighter,538.5,0.256,5.1
-Curcumin (EtOH),421.0,0.365,7.3
-Green tea extract (EtOH),273.5,0.758,15.2
-Salicylate (aspirin / NaHCO₃),267.5,4.786,95.7
+Yellow highlighter (distilled water),453.5,0.346,6.9
+Yellow highlighter (1 drop / 3 mL water),230.0,2.216,44.3
+Pink highlighter (distilled water),538.5,0.256,5.1
+Curcumin (ethanol),421.0,0.365,7.3
+Green tea extract (ethanol),273.5,0.758,15.2
+"Salicylate (aspirin + baking soda, distilled water)",267.5,4.786,95.7

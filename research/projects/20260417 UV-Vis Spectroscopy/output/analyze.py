@@ -50,12 +50,12 @@ def load_fluoromax(path: Path) -> pd.DataFrame:
 
 UVVIS_SAMPLES = {
     # slug -> (display title, filename, (lo, hi) window for primary peak)
-    "yellow_neat":   ("Yellow highlighter (neat stock)",         "20260417_UVVis_S2_yellow_rep1.txt",    (300, 600)),
-    "yellow_dilute": ("Yellow highlighter (1 drop / 3 mL)",      "20260417_UVVis_S2_yellow_1drop.txt",   (220, 600)),
-    "pink":          ("Pink highlighter",                         "20260417_UVVis_S3_pink.txt",           (300, 700)),
-    "curcumin":      ("Curcumin (EtOH)",                          "20260417_UVVis_S4_curcumin.txt",       (300, 600)),
-    "greentea":      ("Green tea extract (EtOH)",                 "20260417_UVVis_S5_greentea.txt",       (220, 750)),
-    "salicylate":    ("Salicylate (aspirin / NaHCO\u2083)",      "20260417_UVVis_S6_salicylate.txt",     (210, 500)),
+    "yellow_neat":   ("Yellow highlighter (distilled water)",     "20260417_UVVis_S2_yellow_rep1.txt",    (300, 600)),
+    "yellow_dilute": ("Yellow highlighter (1 drop / 3 mL water)",  "20260417_UVVis_S2_yellow_1drop.txt",   (220, 600)),
+    "pink":          ("Pink highlighter (distilled water)",        "20260417_UVVis_S3_pink.txt",           (300, 700)),
+    "curcumin":      ("Curcumin (ethanol)",                        "20260417_UVVis_S4_curcumin.txt",       (300, 600)),
+    "greentea":      ("Green tea extract (ethanol)",               "20260417_UVVis_S5_greentea.txt",       (220, 750)),
+    "salicylate":    ("Salicylate (aspirin + baking soda, distilled water)", "20260417_UVVis_S6_salicylate.txt", (210, 500)),
 }
 
 
@@ -111,13 +111,12 @@ def plot_single(slug, title, filename, window):
     annotate_regions(ax)
 
     if peak_nm is not None and peak_a < 4.9:
-        ax.annotate(
-            f"λmax = {peak_nm:.0f} nm\nA = {peak_a:.2f}",
-            xy=(peak_nm, peak_a),
-            xytext=(peak_nm + 40, peak_a + (ax.get_ylim()[1] - peak_a) * 0.45),
-            fontsize=9, color="#333",
-            arrowprops=dict(arrowstyle="->", color="#666", lw=0.8),
-            bbox=dict(facecolor="white", edgecolor="#ccc", alpha=0.9, pad=3),
+        ylo, yhi = ax.get_ylim()
+        ax.text(
+            peak_nm + 35, peak_a + (yhi - peak_a) * 0.15,
+            f"λmax = {peak_nm:.0f} nm   A = {peak_a:.2f}",
+            color=TRACE, fontsize=9, fontweight="bold",
+            va="center", ha="left",
         )
 
     ax.set_title(title)
@@ -127,9 +126,13 @@ def plot_single(slug, title, filename, window):
     return {"sample": title, "lambda_max_nm": peak_nm, "A_at_peak": peak_a}
 
 
+OVERLAY_SLUGS = ["curcumin", "yellow_neat", "pink", "greentea"]
+
+
 def plot_overlay():
     fig, ax = plt.subplots(figsize=(12, 5))
-    for (slug, (title, fname, _)), color in zip(UVVIS_SAMPLES.items(), PALETTE):
+    for slug, color in zip(OVERLAY_SLUGS, PALETTE):
+        title, fname, _ = UVVIS_SAMPLES[slug]
         df = load_uvvis(DATA_ONE / fname)
         df_plot = df.copy()
         df_plot.loc[df_plot.absorbance > 4.9, "absorbance"] = np.nan
@@ -138,7 +141,7 @@ def plot_overlay():
     ax.set_ylim(-0.05, 1.2)
     fmt(ax)
     annotate_regions(ax)
-    ax.set_title("UV-Vis absorption — all pilot samples (saturated regions clipped)")
+    ax.set_title("UV-Vis absorption — pilot samples (saturated regions clipped)")
     ax.legend(fontsize=8, loc="upper right")
     plt.tight_layout()
     fig.savefig(IMG / "uvvis_overlay.png", dpi=300, bbox_inches="tight")
@@ -153,9 +156,9 @@ def plot_fluoromax():
     em_n = em.signal / em.signal.max()
     ex_n = ex.signal / ex.signal.max()
     ax.plot(ex.wavelength_nm, ex_n, color="#5b9bd5", linewidth=0.8,
-            label="Excitation (em fixed at 515 nm)")
+            label="Excitation")
     ax.plot(em.wavelength_nm, em_n, color=TRACE, linewidth=0.8,
-            label="Emission (ex fixed at 488 nm)")
+            label="Emission")
 
     em_peak = em.loc[em.signal.idxmax(), "wavelength_nm"]
     ex_peak = ex.loc[ex.signal.idxmax(), "wavelength_nm"]
@@ -163,23 +166,22 @@ def plot_fluoromax():
 
     ax.set_ylim(-0.05, 1.2)
     ax.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, p: f"{x:,.0f}"))
-    ax.set_xlim(400, 650)
+    ax.set_xlim(200, 750)
     ax.set_xlabel("Wavelength (nm)")
     ax.set_ylabel("Normalized signal (0\u20131)")
     ax.spines[["top", "right"]].set_visible(False)
     ax.grid(axis="y", alpha=0.3)
+    annotate_regions(ax)
 
-    ax.annotate(f"ex λmax = {ex_peak:.0f} nm",
-                xy=(ex_peak, 1.0), xytext=(ex_peak - 60, 1.08),
-                fontsize=9, color="#5b9bd5",
-                arrowprops=dict(arrowstyle="->", color="#5b9bd5", lw=0.8))
-    ax.annotate(f"em λmax = {em_peak:.0f} nm",
-                xy=(em_peak, 1.0), xytext=(em_peak + 20, 1.08),
-                fontsize=9, color=TRACE,
-                arrowprops=dict(arrowstyle="->", color=TRACE, lw=0.8))
-    ax.text(0.02, 0.95, f"Stokes shift: {stokes:.0f} nm",
-            transform=ax.transAxes, fontsize=10,
-            bbox=dict(facecolor="white", edgecolor="#cccccc", alpha=0.9))
+    ax.text(0.02, 0.95, f"ex λmax = {ex_peak:.0f} nm",
+            transform=ax.transAxes, fontsize=9, color="#5b9bd5",
+            fontweight="bold", va="top", ha="left")
+    ax.text(0.02, 0.88, f"em λmax = {em_peak:.0f} nm",
+            transform=ax.transAxes, fontsize=9, color=TRACE,
+            fontweight="bold", va="top", ha="left")
+    ax.text(0.02, 0.81, f"Stokes shift: {stokes:.0f} nm",
+            transform=ax.transAxes, fontsize=9, color="#333",
+            fontweight="bold", va="top", ha="left")
 
     ax.set_title("Yellow highlighter — FluoroMax-3 excitation + emission")
     ax.legend(loc="upper right", fontsize=8)

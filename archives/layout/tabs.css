@@ -94,3 +94,25 @@
 #chem-ionic:checked ~ #content-chem-ionic {
   display: block;
 }
+
+/* UV-Vis Spectroscopy: absorption tabs */
+#uv-overlay:checked ~ .tab-labels label[for="uv-overlay"],
+#uv-curcumin:checked ~ .tab-labels label[for="uv-curcumin"],
+#uv-yellow-neat:checked ~ .tab-labels label[for="uv-yellow-neat"],
+#uv-yellow-dilute:checked ~ .tab-labels label[for="uv-yellow-dilute"],
+#uv-pink:checked ~ .tab-labels label[for="uv-pink"],
+#uv-greentea:checked ~ .tab-labels label[for="uv-greentea"],
+#uv-salicylate:checked ~ .tab-labels label[for="uv-salicylate"] {
+  color: #5c7a10;
+  border-bottom-color: #5c7a10;
+  background: var(--subj-chem);
+}
+#uv-overlay:checked ~ #content-uv-overlay,
+#uv-curcumin:checked ~ #content-uv-curcumin,
+#uv-yellow-neat:checked ~ #content-uv-yellow-neat,
+#uv-yellow-dilute:checked ~ #content-uv-yellow-dilute,
+#uv-pink:checked ~ #content-uv-pink,
+#uv-greentea:checked ~ #content-uv-greentea,
+#uv-salicylate:checked ~ #content-uv-salicylate {
+  display: block;
+}

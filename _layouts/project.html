@@ -121,8 +121,9 @@
       justify-content: space-between;
       gap: 1em;
       font-size: 0.9em;
-      margin-top: 2.5em;
+      margin-top: 0.3em;
     }
+    hr + .project-nav { margin-top: 0.8em; }
     .project-nav a { color: #0969da; text-decoration: none; }
     .project-nav a:hover { text-decoration: underline; }
     .project-nav .spacer { flex: 1; }
@@ -161,12 +162,12 @@
 
   {{ content }}
 
+  <hr>
+
   <nav class="project-nav">
     <a href="{{ newer.url }}">← {{ newer.project | default: newer.title }}</a>
     <a href="{{ older.url }}">{{ older.project | default: older.title }} →</a>
   </nav>
-
-  <hr>
 
   <div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
