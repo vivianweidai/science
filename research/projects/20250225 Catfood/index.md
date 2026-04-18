@@ -29,7 +29,7 @@ Does a cat prefer red or green colored food? This experiment tested whether a Br
 
 <div class="setup-highlight" markdown="1">
 
-| Category | Details |
+| Toolkit | Details |
 |----------|---------|
 | Subject | British Shorthair cat (Mi) <img src="/archives/layout/cat.svg" alt="" aria-hidden="true" style="height:1em;vertical-align:-0.18em;"> |
 | Food | Regular dry cat food |
@@ -63,7 +63,5 @@ var allData = {{ page.data_photos | jsonify }};
 ## Results
 
 Over 30 days, Mi chose red on 13 days and green on 17 days. A chi-squared goodness-of-fit test with one degree of freedom yielded a test statistic of 0.533, well below the critical value of 3.841 at 95% confidence. The null hypothesis (no color preference) was not rejected. Mi shows no statistically significant preference for red or green cat food.
-
-**Note — correction to written report:** Claude identified an arithmetic error in the original PDF report. The report calculates χ² = 0.266 by dividing each (O − E)² term by 30 (the total number of observations). The correct chi-squared formula divides each term by the expected count for that category (15), not the total N. The corrected value is χ² = (13 − 15)² / 15 + (17 − 15)² / 15 = 0.267 + 0.267 = **0.533**, as computed in the reproducible notebook. The conclusion is unchanged — both values fall well below the critical value of 3.841 — but 0.533 is the correct test statistic.
 
 See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/20250225%20Catfood.pdf">written report</a>, the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_analysis.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_analysis.ipynb">run the reproducible analysis yourself</a>.
