@@ -21,7 +21,7 @@ title: Vivian Dai
 ---
 
 <ul class="updates-list">
-  <li><span class="update-date">April 13th 2026</span> <span class="update-body"><a href="/research/projects/20260413%20UV%20Spectroscopy/">UV Spectroscopy of Everyday Fluorophores</a> <span class="chip chem">Chemistry</span></span></li>
+  <li><span class="update-date">April 17th 2026</span> <span class="update-body"><a href="/research/projects/20260417%20UV-Visible%20Spectroscopy/">UV-Visible Spectroscopy of Everyday Fluorophores</a> <span class="chip chem">Chemistry</span></span></li>
   <li><span class="update-date">April 11th 2026</span> <span class="update-body"><a href="/research/projects/20260411%20Centrifuge/">Centrifugation and pH of Everyday Liquids</a> <span class="chip chem">Chemistry</span> <span class="chip bio">Biology</span></span></li>
   <li><span class="update-date">April 5th 2026</span> <span class="update-body"><a href="/research/projects/20260405%20Melting%20Point/">Melting Point of Everyday Compounds</a> <span class="chip chem">Chemistry</span></span></li>
   <li><span class="update-date">April 4th 2026</span> <span class="update-body"><a href="/research/projects/20260404%20Four%20Point%20Probe/">Four-Point Probe Sheet Resistance Measurements</a> <span class="chip phys">Physics</span></span></li>

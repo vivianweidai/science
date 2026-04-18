@@ -1,7 +1,0 @@
-sample,file,lambda_max_nm,A_at_peak,D = A / 0.05,drops sample : drops solvent
-S2 yellow HL (neat stock),20260413_UVVis_S2_yellow_rep1.txt,453.5,0.346,6.9,1 : 6
-S2 yellow HL (1 drop / 3 mL),20260413_UVVis_S2_yellow_1drop.txt,230.0,2.216,44.3,1 : 43
-S3 pink HL,20260413_UVVis_S3_pink.txt,218.5,4.312,86.2,1 : 85
-S4 curcumin (EtOH),20260413_UVVis_S4_curcumin.txt,421.0,0.365,7.3,1 : 6
-S5 green tea (EtOH),20260413_UVVis_S5_greentea.txt,218.0,3.539,70.8,1 : 70
-S6 salicylate (aspirin/NaHCO3),20260413_UVVis_S6_salicylate.txt,267.5,4.786,95.7,1 : 95

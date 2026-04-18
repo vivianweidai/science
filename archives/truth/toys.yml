@@ -175,11 +175,11 @@
         - toy: Spectrophotometer
           specs: Absorption — concentration and conjugation
           available: true
-          completed: "20260413 UV Spectroscopy"
+          completed: "20260417 UV-Visible Spectroscopy"
         - toy: Spectrofluorometer
           specs: Emission — excited-state lifetimes and yields
           available: true
-          completed: "20260413 UV Spectroscopy"
+          completed: "20260417 UV-Visible Spectroscopy"
     - technology: Chiroptical
       description: Chirality
       toys:

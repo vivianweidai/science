@@ -37,12 +37,12 @@ def load_fluoromax(path: Path) -> pd.DataFrame:
 
 
 UVVIS_SAMPLES = {
-    "S2 yellow HL (neat stock)": ("20260413_UVVis_S2_yellow_rep1.txt", (200, 600)),
-    "S2 yellow HL (1 drop / 3 mL)": ("20260413_UVVis_S2_yellow_1drop.txt", (200, 600)),
-    "S3 pink HL": ("20260413_UVVis_S3_pink.txt", (200, 700)),
-    "S4 curcumin (EtOH)": ("20260413_UVVis_S4_curcumin.txt", (210, 600)),
-    "S5 green tea (EtOH)": ("20260413_UVVis_S5_greentea.txt", (210, 750)),
-    "S6 salicylate (aspirin/NaHCO3)": ("20260413_UVVis_S6_salicylate.txt", (210, 500)),
+    "S2 yellow HL (neat stock)": ("20260417_UVVis_S2_yellow_rep1.txt", (200, 600)),
+    "S2 yellow HL (1 drop / 3 mL)": ("20260417_UVVis_S2_yellow_1drop.txt", (200, 600)),
+    "S3 pink HL": ("20260417_UVVis_S3_pink.txt", (200, 700)),
+    "S4 curcumin (EtOH)": ("20260417_UVVis_S4_curcumin.txt", (210, 600)),
+    "S5 green tea (EtOH)": ("20260417_UVVis_S5_greentea.txt", (210, 750)),
+    "S6 salicylate (aspirin/NaHCO3)": ("20260417_UVVis_S6_salicylate.txt", (210, 500)),
 }
 
 
@@ -98,8 +98,8 @@ def compute_dilution_table(peak_df):
 
 
 def plot_fluoromax():
-    em = load_fluoromax(DATA_TWO / "20260413_S2_yellow_EM_ex488.csv")
-    ex = load_fluoromax(DATA_TWO / "20260413_S2_yellow_EX_em515.csv")
+    em = load_fluoromax(DATA_TWO / "20260417_S2_yellow_EM_ex488.csv")
+    ex = load_fluoromax(DATA_TWO / "20260417_S2_yellow_EX_em515.csv")
 
     fig, ax = plt.subplots(figsize=(9, 5))
     # Excitation is in microamps (reference detector); emission in CPS — normalize both to 0..1 for overlay.

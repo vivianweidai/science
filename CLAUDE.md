@@ -194,7 +194,7 @@ project: [Short Project Name]
 |----------|---------|
 | [Category] | [samples] |
 
-[Description of samples. Do NOT include a "#" numbering column in sample tables.]
+[Description of samples.]
 
 ## Data
 
@@ -213,4 +213,6 @@ See the <a href="https://github.com/vivianweidai/science/blob/main/[path]">writt
 <div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/[URL-encoded folder name]">View on GitHub</a></div>
 ```
 
-Always use `index.md` (not `README.md`) for project pages. Always include the footer div. The `photos` front matter array is for photos/ only; use `data_photos` for data/ images. **Samples** is a top-level `##` section (not a subsection of Setup). Never include a `#` numbering column in tables.
+Always use `index.md` (not `README.md`) for project pages. Always include the footer div. The `photos` front matter array is for photos/ only; use `data_photos` for data/ images. **Samples** is a top-level `##` section (not a subsection of Setup).
+
+**Never add a "#" / row-number column to any table** — in Setup, Samples, Results, or anywhere else. Markdown tables already read as a list; a numbering column only adds visual noise. If ordering matters, convey it through row sequence alone. This rule is repo-wide, not sample-table-specific.
