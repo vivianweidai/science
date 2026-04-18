@@ -35,6 +35,8 @@ Three optical spectroscopy instruments run back-to-back on the same six samples 
 
 <div class="setup-highlight" markdown="1">
 
+<style>.setup-highlight tbody tr:nth-child(-n+3) td { background: #fff44f; }</style>
+
 | Category | Details |
 |----------|---------|
 | Instrument 1 | Shimadzu UV-2550 UV/Vis Spectrophotometer |
@@ -52,22 +54,56 @@ All six samples are prepared the evening before: tonic water is de-gassed for qu
 
 ## Samples
 
-<div class="hero-single"><img src="photos/samples/IMG_7154.jpeg" alt="The six fluorophore samples"></div>
+<div class="hero-single"><img src="photos/samples/IMG_7065.jpeg" alt="Eight labeled amber stock bottles — six fluorophore samples plus two blank solvents"></div>
 
-| Category | Samples |
-|----------|---------|
+Six fluorophores plus two blank solvents split cleanly into two families by solvent. The grouping also sets the scan order: all four water samples run first against the water baseline, then the instrument is re-baselined against ethanol for the two alcoholic extracts.
+
+<style>
+  .sample-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin: 1em 0; }
+  .sample-grid h3 { margin: 0 0 .4em 0; font-size: 1em; }
+  .sample-grid h3 .chip { margin-left: .4em; position: relative; top: -.1em; }
+  .sample-grid table { width: 100%; }
+  @media (max-width: 700px) { .sample-grid { grid-template-columns: 1fr; } }
+  .chip.solvent-h2o { background: #d7e7f7; color: #1f2328; }
+  .chip.solvent-etoh { background: #f0e4d0; color: #1f2328; }
+</style>
+
+<div class="sample-grid" markdown="1">
+
+<div markdown="1">
+
+### Water-based <span class="chip solvent-h2o">H₂O blank</span>
+
+| Category | Sample |
+|----------|--------|
 | Antimalarial | quinine (tonic water, degassed) |
-| Fluorescent dyes | yellow highlighter (fluorescein-family), pink highlighter (rhodamine-family) |
-| Natural pigments | curcumin (turmeric / EtOH), green tea extract (EtOH) |
+| Fluorescent dye | yellow highlighter (fluorescein-family) |
+| Fluorescent dye | pink highlighter (rhodamine-family) |
 | Pharmaceutical | salicylate (aspirin + NaHCO₃) |
-| Blanks | distilled water, 95% ethanol |
+| Blank | distilled water |
+
+</div>
+
+<div markdown="1">
+
+### Ethanol-based <span class="chip solvent-etoh">95% EtOH blank</span>
+
+| Category | Sample |
+|----------|--------|
+| Natural pigment | curcumin (turmeric / EtOH) |
+| Natural pigment | green tea extract (EtOH) |
+| Blank | 95% ethanol |
+
+</div>
+
+</div>
 
 ## Data
 
 Session 01 was a **pilot run** — a deliberate scattershot first pass to exercise each instrument and surface pitfalls before a comprehensive rerun. After pruning saturated, duplicate, misfiled, and unlabeled files, the usable pilot dataset is:
 
-- <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260413%20UV%20Spectroscopy/data/ONE">`data/one/`</a> — UV-2550 absorption scans (`.txt`, two header lines then `Wavelength nm, Abs.`, ~1,200 points each, 200–800 nm). Five of six samples cleanly covered: yellow HL (two replicates + one 1-drop dilution), pink HL, curcumin, green tea, salicylate. **Quinine missing** — the file on the instrument was overwritten with leftover Chem 423 `I₂ vapor` class data and covers only 614–650 nm.
-- <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260413%20UV%20Spectroscopy/data/TWO">`data/two/`</a> — FluoroMax-3 (`.csv`, `Wavelength, S1 (CPS)` for emission, `Wavelength, R1 (µA)` for excitation). Only the yellow highlighter emission/excitation pair survived renaming; the other samples' spectra were left inside an OriginLab `.OPJ` workbook without per-sample CSV exports. Those are treated as lost for this pilot and will be rerun.
+- <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260413%20UV%20Spectroscopy/data/one">`data/one/`</a> — UV-2550 absorption scans (`.txt`, two header lines then `Wavelength nm, Abs.`, ~1,200 points each, 200–800 nm). Five of six samples cleanly covered: yellow HL (two replicates + one 1-drop dilution), pink HL, curcumin, green tea, salicylate. **Quinine missing** — the file on the instrument was overwritten with leftover Chem 423 `I₂ vapor` class data and covers only 614–650 nm.
+- <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260413%20UV%20Spectroscopy/data/two">`data/two/`</a> — FluoroMax-3 (`.csv`, `Wavelength, S1 (CPS)` for emission, `Wavelength, R1 (µA)` for excitation). Only the yellow highlighter emission/excitation pair survived renaming; the other samples' spectra were left inside an OriginLab `.OPJ` workbook without per-sample CSV exports. Those are treated as lost for this pilot and will be rerun.
 - `data/three/` — Lambda 750 data, to be populated in Session 02.
 
 ## Methods — three sessions, one set of samples
