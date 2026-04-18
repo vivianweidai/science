@@ -72,7 +72,9 @@ This experiment centrifuged five common household liquids to observe what separa
 
 ## Setup
 
-<div class="setup-highlight" markdown="1">
+<div class="setup-highlight setup-highlight-all" markdown="1">
+
+<style>.setup-highlight-all tbody tr td { background: #fff44f; }</style>
 
 **Featured instruments**
 
