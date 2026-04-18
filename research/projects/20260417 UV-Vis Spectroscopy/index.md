@@ -1,6 +1,6 @@
 ---
 layout: project
-project: UV-Visible Spectroscopy
+project: UV-Vis Spectroscopy
 photos:
   - photos/setup/IMG_7129.jpeg
   - photos/setup/IMG_7133.jpeg
@@ -14,7 +14,7 @@ photos:
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
-<div class="project-title"><h1>UV-Visible Spectroscopy of Everyday Fluorophores</h1><span class="chip chem">Chemistry</span></div>
+<div class="project-title"><h1>UV-Vis Spectroscopy of Everyday Fluorophores</h1><span class="chip chem">Chemistry</span></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
@@ -105,8 +105,8 @@ Six fluorophores plus two blank solvents split cleanly into two families by solv
 
 Session 01 was a **pilot run** — a deliberate scattershot first pass to exercise each instrument and surface pitfalls before a comprehensive rerun. After pruning saturated, duplicate, misfiled, and unlabeled files, the usable pilot dataset is:
 
-- <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260417%20UV-Visible%20Spectroscopy/data/one">`data/one/`</a> — UV-2550 absorption scans (`.txt`, two header lines then `Wavelength nm, Abs.`, ~1,200 points each, 200–800 nm). Five of six samples cleanly covered: yellow HL (two replicates + one 1-drop dilution), pink HL, curcumin, green tea, salicylate. **Quinine missing** — the file on the instrument was overwritten with leftover Chem 423 `I₂ vapor` class data and covers only 614–650 nm.
-- <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260417%20UV-Visible%20Spectroscopy/data/two">`data/two/`</a> — FluoroMax-3 (`.csv`, `Wavelength, S1 (CPS)` for emission, `Wavelength, R1 (µA)` for excitation). Only the yellow highlighter emission/excitation pair survived renaming; the other samples' spectra were left inside an OriginLab `.OPJ` workbook without per-sample CSV exports. Those are treated as lost for this pilot and will be rerun.
+- <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260417%20UV-Vis%20Spectroscopy/data/one">`data/one/`</a> — UV-2550 absorption scans (`.txt`, two header lines then `Wavelength nm, Abs.`, ~1,200 points each, 200–800 nm). Five of six samples cleanly covered: yellow HL (two replicates + one 1-drop dilution), pink HL, curcumin, green tea, salicylate. **Quinine missing** — the file on the instrument was overwritten with leftover Chem 423 `I₂ vapor` class data and covers only 614–650 nm.
+- <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260417%20UV-Vis%20Spectroscopy/data/two">`data/two/`</a> — FluoroMax-3 (`.csv`, `Wavelength, S1 (CPS)` for emission, `Wavelength, R1 (µA)` for excitation). Only the yellow highlighter emission/excitation pair survived renaming; the other samples' spectra were left inside an OriginLab `.OPJ` workbook without per-sample CSV exports. Those are treated as lost for this pilot and will be rerun.
 - `data/three/` — Lambda 750 data, to be populated in Session 02.
 
 ## Methods — three sessions, one set of samples
@@ -155,7 +155,7 @@ Parameters: 200–800 nm at 1 nm data interval and 2 nm slit (to match the UV-25
 
 Session 01 was a pilot. The goal was not to publish six clean spectra — it was to exercise the data → report pipeline end-to-end, find the operational pitfalls, and have the analysis code already written when the comprehensive Session 02 runs. What follows is what the pilot data actually says.
 
-See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260417%20UV-Visible%20Spectroscopy/output/uv_spectroscopy.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260417%20UV-Visible%20Spectroscopy/output/uv_spectroscopy.ipynb">run the reproducible analysis yourself</a>.
+See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260417%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260417%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb">run the reproducible analysis yourself</a>.
 
 ### UV-Vis absorption (UV-2550)
 
@@ -205,4 +205,4 @@ Fluorescein-family behavior as expected: a modest ~45 nm Stokes shift between th
 
 ---
 
-<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/research/projects/20260417%20UV-Visible%20Spectroscopy">View on GitHub</a></div>
+<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/research/projects/20260417%20UV-Vis%20Spectroscopy">View on GitHub</a></div>

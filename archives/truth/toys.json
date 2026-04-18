@@ -310,16 +310,16 @@
               "toy": "Spectrophotometer",
               "specs": "Absorption — concentration and conjugation",
               "available": 1,
-              "completed": "20260417 UV-Visible Spectroscopy",
-              "project_url": "/research/projects/20260417%20UV-Visible%20Spectroscopy/"
+              "completed": "20260417 UV-Vis Spectroscopy",
+              "project_url": "/research/projects/20260417%20UV-Vis%20Spectroscopy/"
             },
             {
               "id": 25,
               "toy": "Spectrofluorometer",
               "specs": "Emission — excited-state lifetimes and yields",
               "available": 1,
-              "completed": "20260417 UV-Visible Spectroscopy",
-              "project_url": "/research/projects/20260417%20UV-Visible%20Spectroscopy/"
+              "completed": "20260417 UV-Vis Spectroscopy",
+              "project_url": "/research/projects/20260417%20UV-Vis%20Spectroscopy/"
             }
           ]
         },
