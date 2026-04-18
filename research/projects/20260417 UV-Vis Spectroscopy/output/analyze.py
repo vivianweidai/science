@@ -1,14 +1,16 @@
-"""UV Spectroscopy analysis pipeline — pilot run on partial Session 01 data.
+"""UV-Vis Spectroscopy analysis pipeline — pilot run on partial Session 01 data.
 
-Loads the UV-2550 absorbance scans (data/one) and the FluoroMax-3 emission /
-excitation pair (data/two), finds peaks, computes FluoroMax dilution factors,
-and writes figures to output/images/.
+Canonical spectroscopy chart style (shared with IR Spectroscopy):
+  figsize=(12, 5), linewidth=0.8, top/right spines hidden, y-grid only,
+  colored wavelength-region shading with rotated labels, peak λmax
+  annotations drawn on the chart. One PNG per sample; tabs on the page.
 """
 
 from pathlib import Path
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 from scipy.signal import find_peaks
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -17,13 +19,24 @@ DATA_TWO = ROOT / "data" / "two"
 IMG = ROOT / "output" / "images"
 IMG.mkdir(parents=True, exist_ok=True)
 
-CHEM = "#d4e8a0"
+# Visible-light rainbow regions for UV-Vis (nm, label, fill color).
+# Deep UV + NIR are left unshaded. Colors are light/pastel to match the
+# repo chart palette.
+REGIONS = [
+    (200, 380, "UV",      "#e8eaf0"),
+    (380, 450, "violet",  "#d9ccee"),
+    (450, 495, "blue",    "#c5d9f7"),
+    (495, 570, "green",   "#d4e8a0"),
+    (570, 590, "yellow",  "#fff3a8"),
+    (590, 620, "orange",  "#f9c4a8"),
+    (620, 750, "red",     "#f4c2cb"),
+]
+
 TRACE = "#d95f5f"
-PALETTE = ["#d95f5f", "#c5d9f7", "#d9ccee", "#f9c4a8", "#a8ddd4", "#f4c2cb"]
+PALETTE = ["#d95f5f", "#5b9bd5", "#70ad47", "#ed7d31", "#9b59b6", "#e6a532"]
 
 
 def load_uvvis(path: Path) -> pd.DataFrame:
-    """Shimadzu UV-2550 export: 2-line header then Wavelength,Abs rows."""
     df = pd.read_csv(path, skiprows=2, header=None, names=["wavelength_nm", "absorbance"])
     df = df.dropna().astype(float)
     df = df[(df["wavelength_nm"] >= 190) & (df["wavelength_nm"] <= 800)]
@@ -31,25 +44,41 @@ def load_uvvis(path: Path) -> pd.DataFrame:
 
 
 def load_fluoromax(path: Path) -> pd.DataFrame:
-    """FluoroMax-3 export: Wavelength,S1 header, then units row, then data."""
     df = pd.read_csv(path, skiprows=2, header=None, names=["wavelength_nm", "signal"])
     return df.dropna().astype(float).reset_index(drop=True)
 
 
 UVVIS_SAMPLES = {
-    "S2 yellow HL (neat stock)": ("20260417_UVVis_S2_yellow_rep1.txt", (200, 600)),
-    "S2 yellow HL (1 drop / 3 mL)": ("20260417_UVVis_S2_yellow_1drop.txt", (200, 600)),
-    "S3 pink HL": ("20260417_UVVis_S3_pink.txt", (200, 700)),
-    "S4 curcumin (EtOH)": ("20260417_UVVis_S4_curcumin.txt", (210, 600)),
-    "S5 green tea (EtOH)": ("20260417_UVVis_S5_greentea.txt", (210, 750)),
-    "S6 salicylate (aspirin/NaHCO3)": ("20260417_UVVis_S6_salicylate.txt", (210, 500)),
+    # slug -> (display title, filename, (lo, hi) window for primary peak)
+    "yellow_neat":   ("Yellow highlighter (neat stock)",         "20260417_UVVis_S2_yellow_rep1.txt",    (300, 600)),
+    "yellow_dilute": ("Yellow highlighter (1 drop / 3 mL)",      "20260417_UVVis_S2_yellow_1drop.txt",   (220, 600)),
+    "pink":          ("Pink highlighter",                         "20260417_UVVis_S3_pink.txt",           (300, 700)),
+    "curcumin":      ("Curcumin (EtOH)",                          "20260417_UVVis_S4_curcumin.txt",       (300, 600)),
+    "greentea":      ("Green tea extract (EtOH)",                 "20260417_UVVis_S5_greentea.txt",       (220, 750)),
+    "salicylate":    ("Salicylate (aspirin / NaHCO\u2083)",      "20260417_UVVis_S6_salicylate.txt",     (210, 500)),
 }
 
 
-def find_primary_peak(df, lo, hi, min_abs=0.05):
+def annotate_regions(ax):
+    ylo, yhi = ax.get_ylim()
+    for lo, hi, label, color in REGIONS:
+        ax.axvspan(lo, hi, alpha=0.35, color=color, zorder=0)
+        ax.text((lo + hi) / 2, yhi * 0.95, label,
+                ha="center", va="top", fontsize=7, rotation=90, color="#555")
+
+
+def fmt(ax):
+    ax.set_xlim(200, 750)
+    ax.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, p: f"{x:,.0f}"))
+    ax.set_xlabel("Wavelength (nm)")
+    ax.set_ylabel("Absorbance")
+    ax.spines[["top", "right"]].set_visible(False)
+    ax.grid(axis="y", alpha=0.3)
+
+
+def find_primary_peak(df, lo, hi):
     mask = (df.wavelength_nm >= lo) & (df.wavelength_nm <= hi)
     sub = df[mask].reset_index(drop=True)
-    # Detector pins at A = 5.0 when saturated; drop those points from peak search.
     sub = sub[sub.absorbance < 4.9]
     if sub.empty:
         return None, None
@@ -57,80 +86,105 @@ def find_primary_peak(df, lo, hi, min_abs=0.05):
     if not len(peaks):
         i = int(sub.absorbance.idxmax())
         return float(sub.wavelength_nm.iloc[i]), float(sub.absorbance.iloc[i])
-    # Report the most prominent peak in the visible/near-UV range
     idx = peaks[np.argmax(props["prominences"])]
     return float(sub.wavelength_nm.iloc[idx]), float(sub.absorbance.iloc[idx])
 
 
-def plot_uvvis_overlay():
-    fig, ax = plt.subplots(figsize=(9, 5))
-    records = []
-    for (label, (fname, (lo, hi))), color in zip(UVVIS_SAMPLES.items(), PALETTE):
-        df = load_uvvis(DATA_ONE / fname)
-        ax.plot(df.wavelength_nm, df.absorbance, color=color, lw=1.4, label=label)
-        peak_nm, peak_a = find_primary_peak(df, lo, hi)
-        records.append({"sample": label, "file": fname,
-                        "lambda_max_nm": peak_nm, "A_at_peak": peak_a})
-        if peak_nm is not None:
-            ax.annotate(f"{peak_nm:.0f} nm",
-                        xy=(peak_nm, peak_a), xytext=(peak_nm + 8, peak_a + 0.04),
-                        fontsize=8, color=color)
-    ax.set_xlim(200, 750)
-    ax.set_ylim(-0.05, None)
-    ax.set_xlabel("Wavelength (nm)")
-    ax.set_ylabel("Absorbance")
-    ax.set_title("UV-Vis absorption — Shimadzu UV-2550 (Session 01 pilot)")
-    ax.legend(loc="upper right", fontsize=8)
-    ax.grid(alpha=0.25)
-    fig.tight_layout()
-    fig.savefig(IMG / "uvvis_overlay.png", dpi=300)
+def plot_single(slug, title, filename, window):
+    df = load_uvvis(DATA_ONE / filename)
+    # Clip saturated points (detector pin at A=5) to keep y-axis readable.
+    df_plot = df.copy()
+    df_plot.loc[df_plot.absorbance > 4.9, "absorbance"] = np.nan
+
+    fig, ax = plt.subplots(figsize=(12, 5))
+    ax.plot(df_plot.wavelength_nm, df_plot.absorbance, color=TRACE, linewidth=0.8)
+
+    # Set ylim based on the chemically interesting window (ignore deep-UV
+    # noise spikes that would otherwise dominate the scale).
+    lo, hi = window
+    win = df_plot[(df_plot.wavelength_nm >= lo) & (df_plot.wavelength_nm <= hi)]
+    visible_max = win.absorbance.dropna().max() if win.absorbance.notna().any() else 1
+    ax.set_ylim(-0.02, max(visible_max * 1.25, 0.5))
+
+    peak_nm, peak_a = find_primary_peak(df, *window)
+    fmt(ax)
+    annotate_regions(ax)
+
+    if peak_nm is not None and peak_a < 4.9:
+        ax.annotate(
+            f"λmax = {peak_nm:.0f} nm\nA = {peak_a:.2f}",
+            xy=(peak_nm, peak_a),
+            xytext=(peak_nm + 40, peak_a + (ax.get_ylim()[1] - peak_a) * 0.45),
+            fontsize=9, color="#333",
+            arrowprops=dict(arrowstyle="->", color="#666", lw=0.8),
+            bbox=dict(facecolor="white", edgecolor="#ccc", alpha=0.9, pad=3),
+        )
+
+    ax.set_title(title)
+    plt.tight_layout()
+    fig.savefig(IMG / f"uvvis_{slug}.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
-    return pd.DataFrame(records)
+    return {"sample": title, "lambda_max_nm": peak_nm, "A_at_peak": peak_a}
 
 
-def compute_dilution_table(peak_df):
-    peak_df = peak_df.copy()
-    peak_df["D = A / 0.05"] = (peak_df["A_at_peak"] / 0.05).round(1)
-    peak_df["drops sample : drops solvent"] = peak_df["D = A / 0.05"].apply(
-        lambda d: f"1 : {max(int(round(d)) - 1, 0)}" if d and d > 1 else "use neat"
-    )
-    return peak_df
+def plot_overlay():
+    fig, ax = plt.subplots(figsize=(12, 5))
+    for (slug, (title, fname, _)), color in zip(UVVIS_SAMPLES.items(), PALETTE):
+        df = load_uvvis(DATA_ONE / fname)
+        df_plot = df.copy()
+        df_plot.loc[df_plot.absorbance > 4.9, "absorbance"] = np.nan
+        ax.plot(df_plot.wavelength_nm, df_plot.absorbance,
+                color=color, linewidth=0.8, label=title)
+    ax.set_ylim(-0.05, 1.2)
+    fmt(ax)
+    annotate_regions(ax)
+    ax.set_title("UV-Vis absorption — all pilot samples (saturated regions clipped)")
+    ax.legend(fontsize=8, loc="upper right")
+    plt.tight_layout()
+    fig.savefig(IMG / "uvvis_overlay.png", dpi=300, bbox_inches="tight")
+    plt.close(fig)
 
 
 def plot_fluoromax():
     em = load_fluoromax(DATA_TWO / "20260417_S2_yellow_EM_ex488.csv")
     ex = load_fluoromax(DATA_TWO / "20260417_S2_yellow_EX_em515.csv")
 
-    fig, ax = plt.subplots(figsize=(9, 5))
-    # Excitation is in microamps (reference detector); emission in CPS — normalize both to 0..1 for overlay.
+    fig, ax = plt.subplots(figsize=(12, 5))
     em_n = em.signal / em.signal.max()
     ex_n = ex.signal / ex.signal.max()
-    ax.plot(ex.wavelength_nm, ex_n, color="#c5d9f7", lw=1.6,
+    ax.plot(ex.wavelength_nm, ex_n, color="#5b9bd5", linewidth=0.8,
             label="Excitation (em fixed at 515 nm)")
-    ax.plot(em.wavelength_nm, em_n, color=TRACE, lw=1.6,
+    ax.plot(em.wavelength_nm, em_n, color=TRACE, linewidth=0.8,
             label="Emission (ex fixed at 488 nm)")
 
     em_peak = em.loc[em.signal.idxmax(), "wavelength_nm"]
     ex_peak = ex.loc[ex.signal.idxmax(), "wavelength_nm"]
-    ax.axvline(em_peak, color=TRACE, lw=0.7, ls="--", alpha=0.5)
-    ax.axvline(ex_peak, color="#5d7fb8", lw=0.7, ls="--", alpha=0.5)
-    ax.annotate(f"ex λ_max = {ex_peak:.0f} nm", (ex_peak, 1.01),
-                ha="center", fontsize=9, color="#5d7fb8")
-    ax.annotate(f"em λ_max = {em_peak:.0f} nm", (em_peak, 1.01),
-                ha="center", fontsize=9, color=TRACE)
-
     stokes = em_peak - ex_peak
+
+    ax.set_ylim(-0.05, 1.2)
+    ax.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, p: f"{x:,.0f}"))
+    ax.set_xlim(400, 650)
+    ax.set_xlabel("Wavelength (nm)")
+    ax.set_ylabel("Normalized signal (0\u20131)")
+    ax.spines[["top", "right"]].set_visible(False)
+    ax.grid(axis="y", alpha=0.3)
+
+    ax.annotate(f"ex λmax = {ex_peak:.0f} nm",
+                xy=(ex_peak, 1.0), xytext=(ex_peak - 60, 1.08),
+                fontsize=9, color="#5b9bd5",
+                arrowprops=dict(arrowstyle="->", color="#5b9bd5", lw=0.8))
+    ax.annotate(f"em λmax = {em_peak:.0f} nm",
+                xy=(em_peak, 1.0), xytext=(em_peak + 20, 1.08),
+                fontsize=9, color=TRACE,
+                arrowprops=dict(arrowstyle="->", color=TRACE, lw=0.8))
     ax.text(0.02, 0.95, f"Stokes shift: {stokes:.0f} nm",
             transform=ax.transAxes, fontsize=10,
             bbox=dict(facecolor="white", edgecolor="#cccccc", alpha=0.9))
 
-    ax.set_xlabel("Wavelength (nm)")
-    ax.set_ylabel("Normalized signal (0–1)")
     ax.set_title("Yellow highlighter — FluoroMax-3 excitation + emission")
-    ax.legend(loc="upper right", fontsize=9)
-    ax.grid(alpha=0.25)
-    fig.tight_layout()
-    fig.savefig(IMG / "fluoromax_yellow.png", dpi=300)
+    ax.legend(loc="upper right", fontsize=8)
+    plt.tight_layout()
+    fig.savefig(IMG / "fluoromax_yellow.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
     return {"excitation_peak_nm": float(ex_peak),
             "emission_peak_nm": float(em_peak),
@@ -138,11 +192,17 @@ def plot_fluoromax():
 
 
 def main():
-    peak_df = plot_uvvis_overlay()
-    dilution_df = compute_dilution_table(peak_df)
-    dilution_df.to_csv(ROOT / "output" / "uvvis_peaks.csv", index=False)
-    print("UV-Vis peak table:")
-    print(dilution_df.to_string(index=False))
+    records = []
+    for slug, (title, fname, window) in UVVIS_SAMPLES.items():
+        r = plot_single(slug, title, fname, window)
+        records.append(r)
+        print(f"{slug:14s} λmax = {r['lambda_max_nm']} nm  A = {r['A_at_peak']}")
+
+    plot_overlay()
+
+    peaks_df = pd.DataFrame(records)
+    peaks_df["D = A / 0.05"] = (peaks_df["A_at_peak"] / 0.05).round(1)
+    peaks_df.to_csv(ROOT / "output" / "uvvis_peaks.csv", index=False)
 
     fluo = plot_fluoromax()
     print("\nFluoroMax-3 (yellow HL):")

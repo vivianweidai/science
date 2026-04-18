@@ -47,6 +47,9 @@ title: Vivian Dai
   }
   .updates-list .update-body { flex: 1; }
   .updates-list .chip { margin-left: 0.2em; }
+  @media (max-width: 600px) {
+    .updates-list .update-date { display: none; }
+  }
 </style>
 
 ---

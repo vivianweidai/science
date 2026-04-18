@@ -98,6 +98,19 @@ Use this workflow whenever the user asks to see something rendered — "show me"
   - **Chart styling** — use matplotlib defaults (no custom fonts, no facecolor overrides). Use soft, muted pastels for colours — reference palette: Mathematics blue `#c5d9f7`, Computing purple `#d9ccee`, Physics coral `#f9c4a8`, Chemistry lime `#d4e8a0`, Biology teal `#a8ddd4`, Astronomy rose `#f4c2cb`. For data line traces use slightly deeper tones like `#d95f5f`. Always keep colours light and airy — never saturated or bold. Save as PNG (300 dpi). If a project produces many images, save into an `output/images/` subfolder; if only one or two images, save directly into `output/`.
   - **Colab badge** — add a final markdown cell with `---` separator, then just the Colab badge image link (no descriptive text): `<a href="COLAB_URL"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="vertical-align:middle;"></a>`
 
+## WRITING STYLE FOR PROJECT PAGES
+
+Research project pages are **personal toolkit notes**, not publications. Their purpose is a fast future-you glance: what the toy does, what makes it different from its neighbors, and enough of a hook to go deeper if needed. They are the scaffold for real research, not the research itself.
+
+- **Note-and-bullet first.** Prefer short bullets over paragraphs. When a paragraph is needed, keep it to 1–2 sentences.
+- **Differentiate, don't summarize.** For every toy or technique, lead with what distinguishes it from the others on the page or in the repo. If two instruments could both measure the same thing, say which one this page uses and why.
+- **Cut publication scaffolding.** No abstract-style intros, no "in this work we…", no restating what the reader can read below. Skip motivation paragraphs that aren't load-bearing.
+- **Use font styling judiciously.** One or two bolds per section at most — ideally only the proper noun of the instrument or the differentiator itself. Avoid stacking bold + italic + sub/superscripts unless the notation carries real information (λ<sub>max</sub> is fine; *italicizing every verb* is not).
+- **Push specifications to Setup tables.** Ranges, software names, filename patterns, cuvette sizes — all of that lives in the Setup or Data table, not in overview prose.
+- **Tabs and section-heads are the structure.** Let the page layout carry the differentiation (tabs per instrument, one section per pass) instead of explaining the structure in prose.
+
+Existing pages that model this style: `20260401 IR Spectroscopy/index.md` and `20260417 UV-Vis Spectroscopy/index.md`. When adding a new project or revising an old one, aim for their level of density.
+
 ## INSTRUMENTS & DATA FORMATS
 
 **All instrument names must exactly match the canonical Toy List.** When referencing any instrument, verify the name — do not abbreviate, add prefixes, or rearrange words. Instruments used so far:
@@ -117,7 +130,7 @@ This repo is synced to GitHub at `vivianweidai/science` and served at `vivianwei
 - Do not commit sensitive or personal information.
 - **Never include researcher names or lab location in any public-facing files.** Project pages should include Date and Instrument but not Researchers or Location.
 - **Always resize images before committing.** No image may be committed over ~500 KB or wider than 1600 px — resize it first (`sips -Z 1600 -s formatOptions 82 file.jpeg --out file.jpeg`). The 1600 px cap is intentional for this repo: photos here are decorative illustrations inside research reports, not hero content that readers zoom into. (Compare: `domains/` uses 2560 px because it serves full-screen wallpapers where retina sharpness matters. Different caps, different jobs.) For photos saved as PNG without transparency, convert to JPEG (`sips -s format jpeg`) and update every markdown reference. For PNGs with transparency that must stay PNG, run `pngquant --quality=65-85 --ext .png --force file.png`. This rule applies to **all** directories including `data/` and `photos/` — "never modify raw data files" refers to analysis outputs, not repo hygiene. **Before every commit**, run `find . -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) -size +500k -not -path './.git/*' -not -path './_site/*'` and shrink anything that surfaces.
-- **Photos:** If a project has 4+ photos, use the 2x2 photo grid with shuffle button (list all photos in front matter `photos` array). If a project has only 1 photo, use a single hero image with `<div class="hero-single">` for rounded styling and controlled height. The `project.html` layout provides CSS for both `.photo-grid`, `.shuffle-btn`, and `.hero-single`.
+- **Photos:** If a project has 4+ photos, use the 2x2 photo grid with shuffle button. **The shuffle pool is auto-populated by the `project.html` layout** — it scans every `.jpg`/`.jpeg`/`.png` file under the project's `photos/` subtree (both `photos/setup/` and `photos/samples/`) and injects them as `window._pagePhotos`. Do not list photos in front matter; do not add a per-page `<script>var _pagePhotos = ...</script>` line. Just include the `<div class="photo-grid">` + `<button class="shuffle-btn">` markup and the `<script src="/archives/layout/shuffle.js"></script>` tag. The page gets every new photo automatically when you drop it into the right folder. If a project has only 1 photo, use a single hero image with `<div class="hero-single">` for rounded styling and controlled height.
 - **Date/Instrument metadata** should be right-aligned below the photos using `<div class="project-meta">`. Put Instrument on a new line with `<br>`.
 - **Results links** should point to the GitHub blob URL (e.g. `https://github.com/vivianweidai/science/blob/main/...`) so files render inside GitHub.
 - Ensure all code, data, and documentation is presentable and well-organized.
@@ -135,11 +148,6 @@ When creating a new project README, use this template:
 ---
 layout: project
 project: [Short Project Name]
-photos:
-  - photos/[filename1].jpeg
-  - photos/[filename2].jpeg
-  - photos/[filename3].jpeg
-  - photos/[filename4].jpeg
 ---
 
 # [Experiment Title]
@@ -152,11 +160,12 @@ photos:
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/layout/shuffle.js"></script>
 
 <div class="project-meta">[Month Dayth Year]<br>[Instrument name]</div>
 ```
+
+The shuffle pool is populated automatically by `project.html` — it scans every image file under `photos/` (both `setup/` and `samples/` subfolders). No `photos:` array, no `_pagePhotos` inline script. Drop a new photo into `photos/` and it joins the shuffle on next page load.
 
 ### Template B: Single photo
 

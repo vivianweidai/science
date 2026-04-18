@@ -1,54 +1,6 @@
 ---
 layout: project
 project: Centrifuge
-photos:
-  - photos/sample1.jpeg
-  - photos/sample2.jpeg
-  - photos/sample3.jpeg
-  - photos/sample4.jpeg
-  - photos/sample5.jpeg
-  - photos/sample6.jpeg
-  - photos/sample7.jpeg
-  - photos/sample8.jpeg
-  - photos/sample9.jpeg
-  - photos/sample10.jpeg
-  - photos/sample11.jpeg
-  - photos/sample12.jpeg
-  - photos/data1.jpeg
-  - photos/data2.jpeg
-  - photos/data3.jpeg
-  - photos/data4.jpeg
-  - photos/data5.jpeg
-  - photos/data6.jpeg
-  - photos/data7.jpeg
-  - photos/data8.jpeg
-  - photos/data9.jpeg
-  - photos/data10.jpeg
-  - photos/data11.jpeg
-  - photos/data12.jpeg
-  - photos/data13.jpeg
-  - photos/data14.jpeg
-  - photos/data15.jpeg
-  - photos/data16.jpeg
-  - photos/data17.jpeg
-  - photos/data18.jpeg
-  - photos/data19.jpeg
-  - photos/data20.jpeg
-  - photos/data21.jpeg
-  - photos/data22.jpeg
-  - photos/data23.jpeg
-  - photos/data24.jpeg
-  - photos/reagent1.jpeg
-  - photos/reagent2.jpeg
-  - photos/reagent3.jpeg
-  - photos/toy1.jpeg
-  - photos/toy2.jpeg
-  - photos/toy3.jpeg
-  - photos/toy4.jpeg
-  - photos/toy5.jpeg
-  - photos/toy6.jpeg
-  - photos/toy7.jpeg
-  - photos/toy8.jpeg
 ---
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
@@ -63,7 +15,6 @@ photos:
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/layout/shuffle.js"></script>
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 11th 2026</span></div>
@@ -135,7 +86,3 @@ Four samples were loaded into the Thermo Scientific Sorvall RT3 Centrifuge to ba
 - **Tube 4 — Milk + vinegar mixture** — white casein pellet with clear whey above, the acid curdled the milk proteins and centrifugation concentrated them at the bottom (<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data21.jpeg">Data 21</a>, <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data22.jpeg">Data 22</a> and <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data23.jpeg">Data 23</a>)
 
 The experiment demonstrated that centrifugation is most effective on emulsions and suspensions (milk, yogurt, unfiltered vinegar) where particles of different densities are physically mixed but not dissolved.
-
----
-
-<div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a class="active" href="/research/">Research</a></div></div>

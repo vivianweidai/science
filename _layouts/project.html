@@ -7,6 +7,25 @@
   <title>{{ page.project | default: page.title | default: site.title }}</title>
   <link rel="stylesheet" href="/archives/layout/base.css">
   <link rel="stylesheet" href="/archives/layout/tabs.css">
+  <script>
+    // Auto-populated from every image file under this project's photos/ directory.
+    // The shuffle button (loaded later from /archives/layout/shuffle.js) reads this.
+    // page.dir is URL-encoded (%20 for space); static_files paths are raw — decode to match.
+    {% assign proj_dir = page.dir | replace: "%20", " " %}
+    window._pagePhotos = [
+    {%- for f in site.static_files -%}
+      {%- if f.path contains proj_dir -%}
+        {%- assign rel = f.path | remove_first: proj_dir -%}
+        {%- if rel contains "photos/" -%}
+          {%- assign ext = f.extname | downcase -%}
+          {%- if ext == ".jpg" or ext == ".jpeg" or ext == ".png" -%}
+            "{{ rel }}",
+          {%- endif -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+    ];
+  </script>
   <style>
     /* Project layout specific styles */
     .photo-grid {
@@ -97,9 +116,66 @@
       color: #656d76;
     }
     .setup-highlight tbody tr:first-child td { background: #fff44f; }
+    .project-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 1em;
+      font-size: 0.9em;
+      margin-top: 2.5em;
+    }
+    .project-nav a { color: #0969da; text-decoration: none; }
+    .project-nav a:hover { text-decoration: underline; }
+    .project-nav .spacer { flex: 1; }
+    body:has(.project-nav-top) .page-header { border-bottom: none; padding-bottom: 0; }
+    .project-nav.project-nav-top {
+      margin-top: 0.3em;
+      padding-bottom: 0.3em;
+      border-bottom: 1px solid #d1d9e0;
+      margin-bottom: 0.5em;
+    }
+    .project-nav + hr { margin-top: 0.5em; }
   </style>
 </head>
 <body>
+  {%- assign all_projects = site.pages | where: "layout", "project" | sort: "url" -%}
+  {%- assign projects = "" | split: "" -%}
+  {%- for p in all_projects -%}
+    {%- if p.url contains "/research/projects/" -%}
+      {%- assign projects = projects | push: p -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign idx = -1 -%}
+  {%- for p in projects -%}
+    {%- if p.url == page.url -%}{%- assign idx = forloop.index0 -%}{%- endif -%}
+  {%- endfor -%}
+  {%- assign last_idx = projects.size | minus: 1 -%}
+  {%- if idx == last_idx -%}{%- assign newer_idx = 0 -%}{%- else -%}{%- assign newer_idx = idx | plus: 1 -%}{%- endif -%}
+  {%- if idx == 0 -%}{%- assign older_idx = last_idx -%}{%- else -%}{%- assign older_idx = idx | minus: 1 -%}{%- endif -%}
+  {%- assign newer = projects[newer_idx] -%}
+  {%- assign older = projects[older_idx] -%}
+
+  <nav class="project-nav project-nav-top">
+    <a href="{{ newer.url }}">← {{ newer.project | default: newer.title }}</a>
+    <a href="{{ older.url }}">{{ older.project | default: older.title }} →</a>
+  </nav>
+
   {{ content }}
+
+  <nav class="project-nav">
+    <a href="{{ newer.url }}">← {{ newer.project | default: newer.title }}</a>
+    <a href="{{ older.url }}">{{ older.project | default: older.title }} →</a>
+  </nav>
+
+  <hr>
+
+  <div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+
+  <script>
+    (function () {
+      const topNav = document.querySelector('.project-nav-top');
+      const header = document.querySelector('.page-header');
+      if (header && topNav) header.insertAdjacentElement('afterend', topNav);
+    })();
+  </script>
 </body>
 </html>

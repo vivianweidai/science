@@ -1,15 +1,6 @@
 ---
 layout: project
 project: IR Spectroscopy
-photos:
-  - photos/20260404 Setup A.jpeg
-  - photos/20260404 Setup B.jpeg
-  - photos/20260404 Setup C.jpeg
-  - photos/20260404 Setup D.jpeg
-  - photos/20260404 Setup E.jpeg
-  - photos/20260404 Setup F.jpeg
-  - photos/20260404 Samples A.jpeg
-  - photos/20260404 Samples B.jpeg
 ---
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
@@ -24,7 +15,6 @@ photos:
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/layout/shuffle.js"></script>
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 1st 2026</span></div>
@@ -233,7 +223,3 @@ All spectra plots, peak identification, and category overlays were generated fro
 <script src="/archives/layout/tabs.js"></script>
 
 See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260401%20IR%20Spectroscopy/output/ir_analysis.ipynb">static notebook</a> or run the <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260401%20IR%20Spectroscopy/output/ir_analysis.ipynb">reproducible analysis</a> yourself.
-
----
-
-<div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a class="active" href="/research/">Research</a></div></div>

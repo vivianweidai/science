@@ -1,15 +1,6 @@
 ---
 layout: project
 project: UV-Vis Spectroscopy
-photos:
-  - photos/setup/IMG_7129.jpeg
-  - photos/setup/IMG_7133.jpeg
-  - photos/setup/IMG_7155.jpeg
-  - photos/setup/IMG_7175.jpeg
-  - photos/samples/IMG_7046.jpeg
-  - photos/samples/IMG_7066.jpeg
-  - photos/samples/IMG_7158.jpeg
-  - photos/samples/IMG_7163.jpeg
 ---
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
@@ -24,14 +15,17 @@ photos:
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/layout/shuffle.js"></script>
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 17th 2026</span></div>
 
-Three optical spectroscopy instruments run back-to-back on the same six samples in a single morning. Each instrument answers a different question about the same molecules: **UV-2550** locates *where* each compound absorbs light (λ_max) and *how much* (A); **FluoroMax-3** uses those λ_max values to excite the same molecules and records *where they emit*; **Lambda 750** cross-validates the UV-Vis spectra on a research-grade double-beam instrument and extends the range into the **near-infrared (800–2500 nm)** to reveal vibrational overtones in the solvents that the first two instruments cannot see. Samples are prepared once the night before and scanned three times.
+One set of samples, three instruments, three questions:
 
-All six samples are **fluorophores** — molecules that absorb a photon of light and then a few nanoseconds later re-emit a photon at a longer wavelength. That two-step behavior is what makes them the right sample class for this specific three-instrument morning: instruments 1 and 3 measure the *absorption* half, instrument 2 measures the *emission* half, and the gap between the two (the Stokes shift) is the scientific payoff that links the three datasets. A non-fluorescent dye would light up only the two absorption instruments; a transparent solvent would light up only the NIR extension. Fluorophores are the only substance class that activates all three instruments in their primary mode, which is why everyday examples (tonic-water quinine, highlighter ink, turmeric curcumin, green-tea chlorophyll, hydrolyzed aspirin) were chosen.
+- **UV-2550** — which colors of light the compound swallows, and how greedily.
+- **FluoroMax-3** — which colors come back out again driven by which absorption.
+- **Lambda 750** — which solvents.
+
+The samples are all fluorophores: molecules that catch a photon and release a longer-wavelength one. The gap between the two peaks is the **Stokes shift**, and it's what makes this experiment interesting — the return photon is never quite the one that went in. Everyday sources stand in for lab references: quinine from tonic water, fluorescein and rhodamine dyes from highlighter ink, curcumin from turmeric, chlorophyll from green tea, salicylate from aspirin.
 
 ## Setup
 
@@ -39,43 +33,40 @@ All six samples are **fluorophores** — molecules that absorb a photon of light
 
 <div class="instrument-table" markdown="1">
 
-| Instrument | Role |
-|------------|------|
-| Shimadzu UV-2550 UV/Vis Spectrophotometer | Absorption survey, 200–800 nm (λ_max and A) |
-| Horiba Jobin Yvon FluoroMax-3 Spectrofluorometer | Fluorescence excitation + emission fingerprint |
-| PerkinElmer Lambda 750 UV/Vis/NIR Spectrophotometer | Research-grade rescan; NIR extension to 2500 nm |
+| Instrument | Role | Range |
+|------------|------|-------|
+| Shimadzu UV-2550 UV/Vis Spectrophotometer | Absorption (λ<sub>max</sub>) | 200–800 nm |
+| Horiba Jobin Yvon FluoroMax-3 Spectrofluorometer | Fluorescence (emission and excitation) | 200–800 nm |
+| PerkinElmer Lambda 750 UV/Vis/NIR Spectrophotometer | Solvent (NIR overtones) | 200–2500 nm |
 
 </div>
 
-| Category | Details |
+| Toolkit | Details |
 |----------|---------|
-| Cuvettes | 10 mm quartz, four clear sides (fluorescence-grade) |
+| Cuvettes | Fluorescence-grade 10 mm quartz with four clear sides |
 | Software | UVProbe (Shimadzu), FluorEssence (Horiba), UV WinLab (PerkinElmer) |
 | Blanks | Distilled water (aqueous samples), 95% ethanol (ethanol samples) |
 
-All six samples are prepared the evening before: tonic water is de-gassed for quinine, highlighter ink reservoirs are soaked and filtered for the fluorescein and rhodamine dyes, turmeric is extracted into ethanol for curcumin, green tea leaves are extracted into ethanol for chlorophyll/catechins, and a crushed aspirin tablet is hydrolyzed with a pinch of baking soda for salicylate. Both blank solvents (H₂O and 95% EtOH) are bottled alongside. Cuvettes are cleaned with the same ritual on every instrument — 3× distilled water, 1× ethanol, 1× water, Kimwipe polish, never bare fingers on the optical faces — and each sample is pre-rinsed once with itself before the keeper fill to displace residual blank.
+Cuvette protocol (same on every instrument): 3× distilled water, 1× ethanol, 1× water, Kimwipe polish each optical face, gripped only at the top rim with ceramic tweezers. Each sample pre-rinses its cuvette with itself before the keeper fill.
 
 ## Samples
 
 <div class="hero-single"><img src="photos/samples/IMG_7065.jpeg" alt="Eight labeled amber stock bottles — six fluorophore samples plus two blank solvents"></div>
 
-Six fluorophores plus two blank solvents split cleanly into two families by solvent. The grouping also sets the scan order: all four water samples run first against the water baseline, then the instrument is re-baselined against ethanol for the two alcoholic extracts.
+Six fluorophores plus two blanks, split by solvent. The grouping is also the scan order: four water samples first against a water baseline, then re-baseline and run the two ethanol extracts. Each sample is prepared from an everyday source: quinine from de-gassed tonic water, fluorescein- and rhodamine-family dyes from highlighter ink reservoirs, curcumin and chlorophyll from turmeric and green tea extracted into ethanol, salicylate from aspirin hydrolyzed with a pinch of baking soda.
 
 <style>
   .sample-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin: 1em 0; }
   .sample-grid h3 { margin: 0 0 .4em 0; font-size: 1em; }
-  .sample-grid h3 .chip { margin-left: .4em; position: relative; top: -.1em; }
   .sample-grid table { width: 100%; }
   @media (max-width: 700px) { .sample-grid { grid-template-columns: 1fr; } }
-  .chip.solvent-h2o { background: #d7e7f7; color: #1f2328; }
-  .chip.solvent-etoh { background: #f0e4d0; color: #1f2328; }
 </style>
 
 <div class="sample-grid" markdown="1">
 
 <div markdown="1">
 
-### Water-based <span class="chip solvent-h2o">H₂O blank</span>
+### Water-based
 
 | Category | Sample |
 |----------|--------|
@@ -89,7 +80,7 @@ Six fluorophores plus two blank solvents split cleanly into two families by solv
 
 <div markdown="1">
 
-### Ethanol-based <span class="chip solvent-etoh">95% EtOH blank</span>
+### Ethanol-based
 
 | Category | Sample |
 |----------|--------|
@@ -101,108 +92,178 @@ Six fluorophores plus two blank solvents split cleanly into two families by solv
 
 </div>
 
+## Methods
+
+Same samples, three instruments in sequence. The UV-2550 run feeds the FluoroMax: its λ<sub>max</sub> sets FluoroMax's λ<sub>ex</sub>, and its peak absorbance sets the dilution factor D = A / 0.05.
+
+<style>
+  .methods-tabs #m-uv:checked ~ .tab-labels label[for="m-uv"],
+  .methods-tabs #m-flu:checked ~ .tab-labels label[for="m-flu"],
+  .methods-tabs #m-lam:checked ~ .tab-labels label[for="m-lam"] {
+    color: #5c7a10; border-bottom-color: #5c7a10; background: var(--subj-chem);
+  }
+  .methods-tabs #m-uv:checked ~ #content-m-uv,
+  .methods-tabs #m-flu:checked ~ #content-m-flu,
+  .methods-tabs #m-lam:checked ~ #content-m-lam {
+    display: block;
+  }
+  .methods-tabs table { width: 100%; }
+  .methods-tabs td:first-child, .methods-tabs th:first-child { width: 2.5em; text-align: center; }
+</style>
+
+<div class="tabs methods-tabs">
+  <input type="radio" name="methods-tab" id="m-uv" checked>
+  <input type="radio" name="methods-tab" id="m-flu">
+  <input type="radio" name="methods-tab" id="m-lam">
+
+  <div class="tab-labels">
+    <label for="m-uv"><span class="label-full">UV-2550 — absorption</span><span class="label-abbr">UV-2550</span></label>
+    <label for="m-flu"><span class="label-full">FluoroMax-3 — fluorescence</span><span class="label-abbr">FluoroMax</span></label>
+    <label for="m-lam"><span class="label-full">Lambda 750 — extension</span><span class="label-abbr">Lambda 750</span></label>
+  </div>
+
+  <div class="tab-content" id="content-m-uv" markdown="1">
+
+One absorption scan per sample, 190–800 nm. Output: λ<sub>max</sub> and A at peak. Re-baseline when switching solvents.
+
+| # | Sample |
+|---|--------|
+| 1 | quinine *(against H₂O baseline)* |
+| 2 | yellow HL |
+| 3 | pink HL |
+| 4 | salicylate |
+| — | *re-baseline in 95% EtOH* |
+| 5 | curcumin |
+| 6 | green tea |
+
+  </div>
+
+  <div class="tab-content" id="content-m-flu" markdown="1">
+
+Two scans per sample on aliquots diluted to D = A / 0.05. Emission scan fixes λ<sub>ex</sub> (from the UV-2550 λ<sub>max</sub>) and sweeps emission; excitation scan fixes λ<sub>em</sub> and sweeps excitation. Order runs dilute → concentrated.
+
+| # | Sample | λ<sub>ex</sub> | λ<sub>em</sub> | Expected emission |
+|---|--------|------|------|--------------------|
+| 1 | blank (H₂O) | — | — | — |
+| 2 | quinine | 350 | 450 | ~450 nm (blue) |
+| 3 | blank (H₂O) | — | — | — |
+| 4 | salicylate | 300 | 410 | ~410 nm |
+| 5 | blank (95% EtOH) | — | — | — |
+| 6 | green tea | 430 | 670 | ~670 nm (chlorophyll, dual Soret + Q) |
+| 7 | curcumin | 425 | 540 | ~540 nm (solvatochromic) |
+| — | *switch to "dyes" cuvette* | | | |
+| 8 | yellow HL | 488 | 515 | ~515 nm (fluorescein) |
+| 9 | pink HL | 540 | 585 | ~580 nm (rhodamine) |
+
+  </div>
+
+  <div class="tab-content" id="content-m-lam" markdown="1">
+
+One pass per solvent, 800–2500 nm — the range no other instrument reaches. Water shows O–H overtones at ~970, 1200, 1450, 1940 nm; ethanol adds C–H overtones at ~1400, 1700 nm. A brief 200–800 nm rescan on each sample doubles as a calibration check against the UV-2550 (agreement expected within ~1 nm).
+
+| # | Sample |
+|---|--------|
+| 1 | distilled water blank |
+| 2 | 95% ethanol blank |
+
+  </div>
+</div>
+
 ## Data
 
-Session 01 was a **pilot run** — a deliberate scattershot first pass to exercise each instrument and surface pitfalls before a comprehensive rerun. After pruning saturated, duplicate, misfiled, and unlabeled files, the usable pilot dataset is:
+One subfolder per instrument. Filenames are date-prefixed and self-identifying (`YYYYMMDD_{instrument}_S{n}_{sample}...`) so the pipeline ingests mixed sessions without external metadata.
 
-- <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260417%20UV-Vis%20Spectroscopy/data/one">`data/one/`</a> — UV-2550 absorption scans (`.txt`, two header lines then `Wavelength nm, Abs.`, ~1,200 points each, 200–800 nm). Five of six samples cleanly covered: yellow HL (two replicates + one 1-drop dilution), pink HL, curcumin, green tea, salicylate. **Quinine missing** — the file on the instrument was overwritten with leftover Chem 423 `I₂ vapor` class data and covers only 614–650 nm.
-- <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260417%20UV-Vis%20Spectroscopy/data/two">`data/two/`</a> — FluoroMax-3 (`.csv`, `Wavelength, S1 (CPS)` for emission, `Wavelength, R1 (µA)` for excitation). Only the yellow highlighter emission/excitation pair survived renaming; the other samples' spectra were left inside an OriginLab `.OPJ` workbook without per-sample CSV exports. Those are treated as lost for this pilot and will be rerun.
-- `data/three/` — Lambda 750 data, to be populated in Session 02.
+### Desired clean-run manifest
 
-## Methods — three sessions, one set of samples
+Drop these files into the matching folder; the notebook re-runs end-to-end with zero code changes.
 
-### Session 1 — Shimadzu UV-2550 (absorption, 200–800 nm)
+| Folder | Instrument | Expected files | Filename pattern |
+|--------|------------|----------------|------------------|
+| [`data/one/`](https://github.com/vivianweidai/science/tree/main/research/projects/20260417%20UV-Vis%20Spectroscopy/data/one) | UV-2550 | **8** — 6 samples + 2 blanks | `20260417_UVVis_S{n}_{sample}.txt` · `20260417_UVVis_blank_{H2O\|EtOH}.txt` |
+| [`data/two/`](https://github.com/vivianweidai/science/tree/main/research/projects/20260417%20UV-Vis%20Spectroscopy/data/two) | FluoroMax-3 | **16** — 2 scans (EM + EX) × 6 samples + 2 scans × 2 blanks | `20260417_S{n}_{sample}_{EM\|EX}_{ex\|em}{λ}.csv` |
+| `data/three/` | Lambda 750 | **10** — 6 UV-Vis rescans + 2 NIR blanks + 2 bonus NIR samples | `20260417_Lambda750_{UVVIS\|NIR}_S{n}_{sample}.csv` |
 
-The UV-2550 is the fast, simple first stop. A single spectrum per sample from 200–800 nm tells us two things: the electronic absorption peaks (λ_max) and the absorbance at those peaks (A). The λ_max values become the excitation wavelengths for the FluoroMax session; the A values drive the dilution calculation.
+Column conventions: UV-2550 and Lambda 750 export `Wavelength nm., Abs.`; FluoroMax-3 emission exports `Wavelength, S1 (CPS)` and excitation exports `Wavelength, R1 (µA)`.
 
-1. **Warmup** — D₂ lamp on for 15 min, UVProbe launched, cuvettes cleaned.
-2. **Baseline** — both cuvettes filled with distilled water, full 200–800 nm baseline stored; re-baselined with ethanol before the curcumin and green tea scans.
-3. **Scan** — water samples first (quinine → yellow HL → pink HL → salicylate), then ethanol samples (curcumin → green tea). Spectrum mode, 1 nm sampling, 2 nm slit, ~300 nm/min, Absorbance.
-4. **Export** — one CSV per sample, named `20260417_UVVis_S{n}_{sample}.csv`.
-5. **Handoff** — for each sample record A at the intended FluoroMax excitation peak and compute the dilution factor **D = A_measured / 0.05**; this keeps A < 0.1 at λ_ex and avoids the inner-filter effect in fluorescence.
+### Session 01 pilot — what survived triage
 
-### Session 2 — Horiba FluoroMax-3 (emission + excitation)
-
-Fluorescence picks up where absorption leaves off: once a molecule has absorbed a photon at λ_max, it relaxes and emits at a longer wavelength. Every sample is measured twice — an **emission scan** with the excitation fixed at its UV-Vis λ_max, and an **excitation scan** with the emission fixed at the expected peak. The two spectra together form the molecule's fluorescence fingerprint.
-
-1. **Warmup** — xenon arc ignited 20 min before scans (started while leaving the UV-2550 room); FluorEssence launched.
-2. **Parameters** — 2 nm ex/em slits, 1 nm step, 0.5 s integration, instrument correction (S1/R1) ON.
-3. **Order (dilute → concentrated to minimize cross-contamination)** — blank → quinine → blank → salicylate → blank(EtOH) → green tea → curcumin, then switch to the "dyes" cuvette for yellow HL → pink HL.
-4. **Per sample** — blank emission + excitation, then the diluted sample emission + excitation. Filenames `20260417_S{n}_{sample}_{EM|EX}_{ex|em}{λ}.csv`.
-5. **Between samples** — 3× water, 1× ethanol, 1× water rinse, Kimwipe polish; extra ethanol+water pair after strong dyes.
-
-Expected fluorescence peaks (from guide):
-
-| Sample | Excite at | Expect emission | Notes |
-|--------|-----------|-----------------|-------|
-| Quinine | 350 nm | ~450 nm (blue) | neat tonic |
-| Salicylate | 300 nm | ~410 nm | neat |
-| Green tea | 430 nm | ~670 nm (chlorophyll red) | dual Soret + Q band |
-| Curcumin | 425 nm | ~540 nm (yellow-green) | strong solvatochromism |
-| Yellow HL | 488 nm | ~515 nm | fluorescein-family |
-| Pink HL | 540 nm | ~580 nm | rhodamine-family |
-
-### Session 3 — PerkinElmer Lambda 750 (cross-validation + NIR extension)
-
-The Lambda 750 is a research-grade double-beam, double-monochromator instrument with a second PbS detector for the near-infrared. It does two jobs:
-
-- **Cross-validation (200–800 nm)** — rescan the same six undiluted stocks and overlay against the UV-2550 spectra. Peak positions should agree within ~1 nm; A values within a few percent. Any larger discrepancy flags a wavelength calibration or cuvette-pair issue.
-- **NIR extension (800–2500 nm)** — rescan both blank solvents and two bonus samples out to 2500 nm. The NIR region probes **vibrational overtones**, not electronic transitions, so the interesting features are in the *solvent*, not the dyes: water shows O–H overtones at ~970, 1200, 1450, and 1940 nm; ethanol adds C–H overtones at ~1400 and 1700 nm.
-
-Parameters: 200–800 nm at 1 nm data interval and 2 nm slit (to match the UV-2550); 800–2500 nm at 2 nm data interval with servo slit; automatic lamp changeover at ~320 nm (D₂ → tungsten) and detector/grating changeover at ~860 nm (PMT → PbS) — small kinks at the changeover points are expected and ignored in qualitative work.
+- `data/one/` — five of six UV-2550 samples cleanly covered (yellow HL with two replicates + one 1-drop dilution, pink HL, curcumin, green tea, salicylate). **Quinine missing** — the file on the instrument was overwritten with leftover Chem 423 `I₂ vapor` class data and covers only 614–650 nm.
+- `data/two/` — only the yellow highlighter EM + EX pair survived renaming; the other samples' spectra were trapped inside an OriginLab `.OPJ` workbook without per-sample CSV exports. Treated as lost.
+- `data/three/` — Lambda 750 session not yet run.
 
 ## Results
 
-Session 01 was a pilot. The goal was not to publish six clean spectra — it was to exercise the data → report pipeline end-to-end, find the operational pitfalls, and have the analysis code already written when the comprehensive Session 02 runs. What follows is what the pilot data actually says.
+Session 01 was a pilot: not six clean spectra, but a full exercise of the data → report pipeline to surface the operational pitfalls before Session 02.
 
 See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260417%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb">static notebook</a> or <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260417%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb">run the reproducible analysis yourself</a>.
 
 ### UV-Vis absorption (UV-2550)
 
-<img src="output/images/uvvis_overlay.png" alt="UV-Vis absorption overlay of five fluorophores">
+<div class="tabs">
+  <input type="radio" name="uv-tab" id="uv-overlay" checked>
+  <input type="radio" name="uv-tab" id="uv-curcumin">
+  <input type="radio" name="uv-tab" id="uv-yellow-neat">
+  <input type="radio" name="uv-tab" id="uv-yellow-dilute">
+  <input type="radio" name="uv-tab" id="uv-pink">
+  <input type="radio" name="uv-tab" id="uv-greentea">
+  <input type="radio" name="uv-tab" id="uv-salicylate">
 
-Auto-detected primary peaks (peak picker skips saturated points):
+  <div class="tab-labels">
+    <label for="uv-overlay">Overlay</label>
+    <label for="uv-curcumin">Curcumin</label>
+    <label for="uv-yellow-neat">Yellow HL</label>
+    <label for="uv-yellow-dilute">Yellow HL (dil.)</label>
+    <label for="uv-pink">Pink HL</label>
+    <label for="uv-greentea">Green tea</label>
+    <label for="uv-salicylate">Salicylate</label>
+  </div>
 
-| Sample | λ_max (nm) | A at peak | D = A / 0.05 | Note |
-|---|---:|---:|---:|---|
-| S2 yellow HL (neat) | 453.5 | 0.35 | 7 | clean fluorescein-family visible band |
-| S2 yellow HL (1 drop / 3 mL) | 230 | 2.22 | 44 | over-diluted; UV tail dominates |
-| S3 pink HL | 219 | 4.3+ | — | **saturated** — dilute before rescan |
-| S4 curcumin (EtOH) | 421 | 0.37 | 7 | matches literature (~425 nm) |
-| S5 green tea (EtOH) | 218 | 3.5+ | — | **saturated** — dilute before rescan |
-| S6 salicylate | 268 | 4.8+ | — | **saturated** — dilute before rescan |
+  <div class="tab-content" id="content-uv-overlay">
+    <img src="output/images/uvvis_overlay.png" alt="UV-Vis overlay" class="result-img">
+  </div>
+  <div class="tab-content" id="content-uv-curcumin">
+    <img src="output/images/uvvis_curcumin.png" alt="Curcumin UV-Vis spectrum" class="result-img">
+  </div>
+  <div class="tab-content" id="content-uv-yellow-neat">
+    <img src="output/images/uvvis_yellow_neat.png" alt="Yellow highlighter neat UV-Vis spectrum" class="result-img">
+  </div>
+  <div class="tab-content" id="content-uv-yellow-dilute">
+    <img src="output/images/uvvis_yellow_dilute.png" alt="Yellow highlighter diluted UV-Vis spectrum" class="result-img">
+  </div>
+  <div class="tab-content" id="content-uv-pink">
+    <img src="output/images/uvvis_pink.png" alt="Pink highlighter UV-Vis spectrum" class="result-img">
+  </div>
+  <div class="tab-content" id="content-uv-greentea">
+    <img src="output/images/uvvis_greentea.png" alt="Green tea UV-Vis spectrum" class="result-img">
+  </div>
+  <div class="tab-content" id="content-uv-salicylate">
+    <img src="output/images/uvvis_salicylate.png" alt="Salicylate UV-Vis spectrum" class="result-img">
+  </div>
+</div>
 
-The curcumin and yellow-stock scans fall inside the 0.1–1.0 A sweet spot that Beer–Lambert requires for reliable peak position. The other three saturated the detector in the deep UV because the stocks were run neat — exactly the outcome the Doc 1 Part F dilution table is designed to prevent, and the main operational lesson from the pilot. **Quinine has no spectrum** (the instrument saved leftover class data in its place).
+Curcumin and the yellow stock land inside the 0.1–1.0 A Beer–Lambert sweet spot. Pink HL, green tea, and salicylate saturated the detector in the deep UV — the stocks were run neat, which is exactly what the Part F dilution table is designed to prevent. That's the pilot's headline lesson. **Quinine has no spectrum**: the file slot was overwritten with leftover class data.
 
 ### Fluorescence (FluoroMax-3) — yellow highlighter
 
 <img src="output/images/fluoromax_yellow.png" alt="Yellow highlighter excitation and emission spectra">
 
-| Sample | Excitation λ_max | Emission λ_max | Stokes shift |
+| Sample | Excitation λ<sub>max</sub> | Emission λ<sub>max</sub> | Stokes shift |
 |---|---:|---:|---:|
 | S2 yellow HL | 467 nm | 512 nm | 45 nm |
 
-Fluorescein-family behavior as expected: a modest ~45 nm Stokes shift between the excitation peak and the blue-shifted emission peak. The other five samples have no FluoroMax CSVs in the pilot dataset and will be rerun.
+Fluorescein-family behavior as expected: ~45 nm Stokes shift between excitation and the blue-shifted emission. The other five samples had no surviving CSVs — will be rerun.
 
-### Cross-validation (UV-2550 vs Lambda 750)
+### Lambda 750 — extension
 
-*Pending Session 02 — Lambda 750 has not yet been run.*
-
-### NIR solvent overtones (Lambda 750)
-
-*Pending Session 02.*
+*Pending Session 02 (NIR overtones + UV-2550 cross-check).*
 
 ### Session 02 plan
 
-- Rerun all six UV-2550 scans with predilution for any stock that gave A > 1.5 here; the pipeline will emit the dilution table automatically from the pilot.
-- Rerun FluoroMax-3 using the Doc 2 file-naming convention (`YYYYMMDD_S{n}_{sample}_{EM|EX}_{ex|em}{λ}.csv`) so every file is self-identifying without an Origin workbook.
-- Add the Lambda 750 session — cross-validation 200–800 nm plus NIR 800–2500 nm on both blanks (H₂O, EtOH) to capture the O–H and C–H overtones.
-- Re-run the same notebook against the Session 02 data — the analysis pipeline is already wired.
+- **UV-2550** — rerun all six with predilution for any A > 1.5 (the pipeline emits the dilution table from the pilot).
+- **FluoroMax-3** — rerun five missing samples using the `YYYYMMDD_S{n}_{sample}_{EM|EX}_{ex|em}{λ}.csv` convention; no more Origin workbooks.
+- **Lambda 750** — add the session: NIR 800–2500 nm on both blanks for O–H / C–H overtones, with a 200–800 nm rescan as a UV-2550 cross-check.
+- Re-run the same notebook against Session 02 — analysis code is already wired.
 
 ### Cross-instrument summary
 
 *Will be populated after Session 02 completes all three instruments on the same six samples.*
-
----
-
-<div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/research/projects/20260417%20UV-Vis%20Spectroscopy">View on GitHub</a></div>

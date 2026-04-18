@@ -1,17 +1,6 @@
 ---
 layout: project
 project: Melting Point
-photos:
-  - photos/20260405 Setup A.jpeg
-  - photos/20260405 Setup B.jpeg
-  - photos/20260405 Setup C.jpeg
-  - photos/20260405 Setup D.jpeg
-  - photos/20260405 Setup E.jpeg
-  - photos/20260405 Setup F.jpeg
-  - photos/20260405 Setup G.jpeg
-  - photos/20260405 Samples A.jpeg
-  - photos/20260405 Samples B.jpeg
-  - photos/20260405 Samples C.jpeg
 ---
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
@@ -26,7 +15,6 @@ photos:
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script>var _pagePhotos = {{ page.photos | jsonify }};</script>
 <script src="/archives/layout/shuffle.js"></script>
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 5th 2026</span></div>
@@ -69,7 +57,3 @@ Pending instrument repair. Expected deliverables when data is available:
 - Temperature-time curves from the OptiMelt software
 
 This project connects to the broader thermal analysis series — the next step is thermogravimetric analysis (TGA) on the TA Instruments TGA Q50.
-
----
-
-<div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a class="active" href="/research/">Research</a></div></div>
