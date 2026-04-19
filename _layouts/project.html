@@ -17,10 +17,12 @@
       {%- if f.path contains proj_dir -%}
         {%- assign rel = f.path | remove_first: proj_dir -%}
         {%- if rel contains "photos/" -%}
-          {%- assign ext = f.extname | downcase -%}
-          {%- if ext == ".jpg" or ext == ".jpeg" or ext == ".png" -%}
-            "{{ rel }}",
-          {%- endif -%}
+          {%- unless rel contains "photos/data/" -%}
+            {%- assign ext = f.extname | downcase -%}
+            {%- if ext == ".jpg" or ext == ".jpeg" or ext == ".png" -%}
+              "{{ rel }}",
+            {%- endif -%}
+          {%- endunless -%}
         {%- endif -%}
       {%- endif -%}
     {%- endfor -%}

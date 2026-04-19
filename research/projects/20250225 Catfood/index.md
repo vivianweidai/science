@@ -2,9 +2,9 @@
 layout: project
 project: Cat Food Color Preference
 data_photos:
-  - data/20240901 Catfood B.jpeg
-  - data/20240907 Catfood B.jpeg
-  - data/20240920 Catfood N.jpeg
+  - photos/data/data1.jpeg
+  - photos/data/data2.jpeg
+  - photos/data/data3.jpeg
 ---
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
@@ -43,8 +43,6 @@ Colored cat food was prepared by mixing regular dry food with red and green food
 
 ## Data
 
-Raw data was recorded on handwritten data sheets and photographed. Variables tracked per trial include: date, serving number, pieces served and remaining, bowl position (left/right), serving time, and food dye drops used. The original handwritten data sheets are photographed and available in <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20250225%20Catfood/data">data</a>. The preference tallies were transcribed from these handwritten records into <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_summary.csv">catfood_summary.csv</a>.
-
 <div class="photo-grid three-col" id="data-grid">
   <img id="data-0" alt="Data sheet">
   <img id="data-1" alt="Data sheet">
@@ -59,6 +57,8 @@ var allData = {{ page.data_photos | jsonify }};
   }
 })();
 </script>
+
+Raw data was recorded on handwritten data sheets and photographed. Variables tracked per trial include: date, serving number, pieces served and remaining, bowl position (left/right), serving time, and food dye drops used. The original handwritten data sheets are photographed and available in <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20250225%20Catfood/photos/data">photos/data</a>. The preference tallies were transcribed from these handwritten records into <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_summary.csv">catfood_summary.csv</a>.
 
 ## Results
 

@@ -51,7 +51,7 @@ Cuvette protocol (same on every instrument): 3× distilled water, 1× ethanol, 1
 
 ## Samples
 
-<div class="hero-single"><img src="photos/samples/IMG_7065.jpeg" alt="Eight labeled amber stock bottles — six fluorophore samples plus two blank solvents"></div>
+<div class="hero-single"><img src="photos/samples/samples3.jpeg" alt="Eight labeled amber stock bottles — six fluorophore samples plus two blank solvents"></div>
 
 Six fluorophores plus two blanks, split by solvent. The grouping is also the scan order: four water samples first against a water baseline, then re-baseline and run the two ethanol extracts. Each sample is prepared from an everyday source: quinine from de-gassed tonic water, fluorescein- and rhodamine-family dyes from highlighter ink reservoirs, curcumin and chlorophyll from turmeric and green tea extracted into ethanol, salicylate from aspirin hydrolyzed with a pinch of baking soda.
 

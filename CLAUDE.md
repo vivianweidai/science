@@ -63,7 +63,10 @@ Each research project lives in a date-prefixed folder under `research/projects/`
 ```
 YYYYMMDD Project Name/
 ├── data/                   # Raw data from instruments (CSVs, spectra, etc.)
-├── photos/                 # Experiment photos (YYYYMMDD format filenames)
+├── photos/                 # Experiment photos, organized by purpose
+│   ├── setup/              # Setup + sample shots — feed the top-page shuffle
+│   ├── samples/            # (optional) sample close-ups — also shuffled
+│   └── data/               # Photographs of handwritten data sheets — excluded from shuffle, shown via `data_photos` frontmatter
 ├── papers/                 # Background papers
 ├── output/                 # Analysis output: scripts, notebooks, figures, processed data
 │   ├── *.py / *.ipynb      # Analysis code
@@ -74,6 +77,8 @@ YYYYMMDD Project Name/
 
 - **Never modify raw data files.** Read from `data/`; write all generated outputs to `output/`.
 - Create subdirectories (`data/`, `photos/`, `papers/`, `output/`) as needed when setting up or processing a project — existing projects use these names; follow the existing pattern rather than inventing new ones.
+- **Photo subfolders.** All experiment images live under `photos/`, split by purpose: `photos/setup/` (and optionally `photos/samples/`) for shots that should rotate through the top-of-page shuffle, and `photos/data/` for handwritten data sheets that are surfaced explicitly via the `data_photos` frontmatter and the in-page `#data-grid`. The `project.html` layout filters `photos/data/` out of the shuffle pool so data sheets never appear in the hero — keep this contract intact when adding new subfolders.
+- **Photo naming.** Within each subfolder, name files sequentially by chronological order: `setup1.jpeg`, `setup2.jpeg`, … and `data1.jpeg`, `data2.jpeg`, …. The numeric suffix encodes capture order (oldest = 1). Don't keep the original camera names like `20240920 Catfood G.jpeg` once a project is being committed — rename with `git mv` so the index.md frontmatter and any in-prose references stay short and stable.
 
 ## LOCAL PREVIEWS (scratchpad)
 
@@ -209,7 +214,7 @@ project: [Short Project Name]
 
 [Description of data format and what was recorded.]
 
-[If data/ contains photos/images, add a photo grid here using `data_photos` front matter. Show all photos without a shuffle button if count <= 4. Only add shuffle button if there are more photos than grid slots. Use `three-col` class for 3 images. This grid is independent from the top PHOTOS shuffler.]
+[If `photos/data/` contains data-sheet images, add a photo grid here using the `data_photos` frontmatter (paths like `photos/data/data1.jpeg`). Show all photos without a shuffle button if count <= 4. Only add shuffle button if there are more photos than grid slots. Use `three-col` class for 3 images. This grid is independent from the top PHOTOS shuffler — `photos/data/` is filtered out of the shuffle pool.]
 
 ## Results
 
@@ -222,6 +227,6 @@ See the <a href="https://github.com/vivianweidai/science/blob/main/[path]">writt
 <div class="footer"><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div><a class="footer-github" href="https://github.com/vivianweidai/science/tree/main/[URL-encoded folder name]">View on GitHub</a></div>
 ```
 
-Always use `index.md` (not `README.md`) for project pages. Always include the footer div. The `photos` front matter array is for photos/ only; use `data_photos` for data/ images. **Samples** is a top-level `##` section (not a subsection of Setup).
+Always use `index.md` (not `README.md`) for project pages. Always include the footer div. The top-page shuffle is auto-populated from `photos/setup/` (and `photos/samples/` if present); use the `data_photos` frontmatter to point the in-page data grid at `photos/data/` images. **Samples** is a top-level `##` section (not a subsection of Setup).
 
 **Never add a "#" / row-number column to any table** — in Setup, Samples, Results, or anywhere else. Markdown tables already read as a list; a numbering column only adds visual noise. If ordering matters, convey it through row sequence alone. This rule is repo-wide, not sample-table-specific.

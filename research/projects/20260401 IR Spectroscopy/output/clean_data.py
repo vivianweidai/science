@@ -1,7 +1,7 @@
 """
 Clean raw FT-IR CSV exports into standardised per-sample files.
 
-Input:  data/one/*.CSV and data/two/*.CSV  (headerless: wavenumber, transmittance)
+Input:  data/one/*.csv and data/two/*.csv  (headerless: wavenumber, transmittance)
 Output: output/scrubbed/<sample>.csv        (headers: wavenumber,transmittance,absorbance)
 
 The Nicolet 380 already applies background correction, so transmittance
@@ -20,31 +20,31 @@ os.makedirs(SCRUBBED, exist_ok=True)
 # Map raw filenames → clean output names
 SAMPLES = {
     "one": {
-        "acetone.CSV":        "acetone",
-        "cleaner.CSV":        "cleaner",
-        "coffee.CSV":         "coffee",
-        "conditioner.CSV":    "conditioner",
-        "finger.CSV":         "finger",
-        "isopropanol.CSV":    "isopropanol",
-        "lotion.CSV":         "lotion",
-        "paper.CSV":          "paper",
-        "paperplasticcup.CSV":"paper_plastic_cup",
-        "plastic bag.CSV":    "plastic_bag",
-        "plastic cap.CSV":    "plastic_cap",
-        "plastic glove.CSV":  "plastic_glove",
-        "salt.CSV":           "salt",
-        "shampoo.CSV":        "shampoo",
-        "soap.CSV":           "soap",
-        "sugar.CSV":          "sugar",
-        "sunscreen.CSV":      "sunscreen",
-        "water.CSV":          "water",
+        "acetone.csv":        "acetone",
+        "cleaner.csv":        "cleaner",
+        "coffee.csv":         "coffee",
+        "conditioner.csv":    "conditioner",
+        "finger.csv":         "finger",
+        "isopropanol.csv":    "isopropanol",
+        "lotion.csv":         "lotion",
+        "paper.csv":          "paper",
+        "paperplasticcup.csv":"paper_plastic_cup",
+        "plastic bag.csv":    "plastic_bag",
+        "plastic cap.csv":    "plastic_cap",
+        "plastic glove.csv":  "plastic_glove",
+        "salt.csv":           "salt",
+        "shampoo.csv":        "shampoo",
+        "soap.csv":           "soap",
+        "sugar.csv":          "sugar",
+        "sunscreen.csv":      "sunscreen",
+        "water.csv":          "water",
     },
     "two": {
-        "leaf.CSV":            "leaf",
-        "orangepeel.CSV":      "orange_peel",
-        "paper.CSV":           "paper_2",
-        "plasticwrapper.CSV":  "plastic_wrapper",
-        "plasticwrapper2.CSV": "plastic_wrapper_2",
+        "leaf.csv":            "leaf",
+        "orangepeel.csv":      "orange_peel",
+        "paper.csv":           "paper_2",
+        "plasticwrapper.csv":  "plastic_wrapper",
+        "plasticwrapper2.csv": "plastic_wrapper_2",
     },
 }
 

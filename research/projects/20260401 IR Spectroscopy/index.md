@@ -40,7 +40,7 @@ A background spectrum was collected first to establish a baseline. Each sample w
 
 ## Samples
 
-<div class="hero-single"><img src="photos/20260404 Samples B.jpeg" alt="Samples"></div>
+<div class="hero-single"><img src="photos/samples/samples2.jpeg" alt="Samples"></div>
 
 | Category | Samples |
 |----------|---------|

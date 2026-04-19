@@ -19,27 +19,25 @@ project: Melting Point
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 5th 2026</span></div>
 
-Melting point determination is a fundamental technique for identifying and assessing the purity of solid compounds. A pure substance melts sharply at a characteristic temperature, while impurities broaden the melting range and depress the onset temperature. This experiment aimed to measure melting points of caffeine and aspirin using capillary tube method on an automated melting point apparatus with digital image processing.
-
-**Status:** The OptiMelt instrument was non-functional during this session — the touchscreen was unresponsive and could not be used to configure or start a run. Samples were prepared but no measurements were collected. This project is on hold pending instrument repair or access to an alternative melting point apparatus.
+Melting point determination is a fundamental technique for identifying and assessing the purity of solid compounds. A pure substance melts sharply at a characteristic temperature, while impurities broaden the melting range and depress the onset temperature. This experiment aimed to measure the melting points of caffeine and aspirin using the capillary tube method on the OptiMelt. Project on hold pending broken instrument.
 
 ## Setup
 
 <div class="setup-highlight" markdown="1">
 
-| Category | Details |
+| Toolkit | Details |
 |----------|---------|
 | Instrument | OptiMelt Automated Melting Point System |
-| Method | Capillary tube, digital image processing |
-| Capillary tubes | Eisco Labs Borosilicate Glass Capillary Melting Tubes, 4″ long, 0.05″ OD |
-| Samples | Caffeine (CAF), aspirin (ASP) |
+| Method | Capillary tube |
+| Capillary tubes | Eisco Labs Borosilicate Glass Capillary Melting Tubes 4″ long 0.05″ OD |
+| Samples | Caffeine (CAF) and aspirin (ASP) |
 | Replicates | 3 capillary tubes per compound |
 
 </div>
 
 ## Samples
 
-<div class="hero-single"><img src="photos/20260405 Samples A.jpeg" alt="Capillary tubes labeled CAF1–3 and MP1–3"></div>
+<div class="hero-single"><img src="photos/samples/samples3.jpeg" alt="Capillary tubes labeled CAF1–3 and MP1–3"></div>
 
 Samples were ground to a fine powder and packed into glass capillary tubes (~2–3 mm fill height). Each compound was prepared in triplicate (CAF 1–3, ASP 1–3) to allow averaging and assess reproducibility. Tubes were labeled and inserted into the OptiMelt sample chamber.
 
@@ -56,4 +54,4 @@ Pending instrument repair. Expected deliverables when data is available:
 - Comparison to literature values (caffeine: 235–237 °C, aspirin: 135–136 °C)
 - Temperature-time curves from the OptiMelt software
 
-This project connects to the broader thermal analysis series — the next step is thermogravimetric analysis (TGA) on the TA Instruments TGA Q50.
+This project connects to the broader thermal analysis series — the next steps are thermogravimetric analysis (TGA) on the TA Instruments TGA Q50 and differential scanning calorimetry (DSC) on the TA Instruments DSC Q20.
