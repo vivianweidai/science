@@ -25,7 +25,7 @@ title: Vivian Dai
   <li><span class="update-date">2026年4月11日</span> <span class="update-body"><a href="/archives/chinese/research/20260411%20Centrifuge/">日常液体的离心分离与pH测量</a> <span class="chip chem">化学</span> <span class="chip bio">生物</span></span></li>
   <li><span class="update-date">2026年4月5日</span> <span class="update-body"><a href="/archives/chinese/research/20260405%20Melting%20Point/">日常化合物的熔点测定</a> <span class="chip chem">化学</span></span></li>
   <li><span class="update-date">2026年4月4日</span> <span class="update-body"><a href="/archives/chinese/research/20260404%20Four%20Point%20Probe/">四探针法薄层电阻测量</a> <span class="chip phys">物理</span></span></li>
-  <li><span class="update-date">2026年4月1日</span> <span class="update-body"><a href="/archives/chinese/research/20260401%20IR%20Spectroscopy/">日常材料的红外光谱分析</a> <span class="chip chem">化学</span></span></li>
+  <li><span class="update-date">2026年4月15日</span> <span class="update-body"><a href="/archives/chinese/research/20260415%20IR%20Spectroscopy/">日常材料的红外光谱分析</a> <span class="chip chem">化学</span></span></li>
   <li><span class="update-date">2026年3月31日</span> <span class="update-body"><a href="/archives/chinese/research/20260401%20Genes%20in%20Space/">喵向火星 — 太空会帮助还是伤害Mi的心脏？</a> <span class="chip bio">生物</span></span></li>
   <li><span class="update-date">2025年2月25日</span> <span class="update-body"><a href="/archives/chinese/research/20250225%20Catfood/">红色还是绿色，Mi更喜欢什么颜色的猫粮？</a> <span class="chip math">数学</span> <span class="chip comp">计算</span></span></li>
 </ul>

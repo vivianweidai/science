@@ -17,9 +17,19 @@ project: IR Spectroscopy
 
 <script src="/archives/layout/shuffle.js"></script>
 
-<div class="section-heading"><h2>Overview</h2><span class="section-date">April 1st 2026</span></div>
+<div class="section-heading"><h2>Overview</h2><span class="section-date">April 15th 2026</span></div>
+
+<!-- BEFORE -->
 
 Fourier-transform infrared (FT-IR) spectroscopy identifies the polar covalent bonds in a material by measuring which infrared frequencies it absorbs. Different functional groups — O-H, C=O, C-H, N-H, and others — vibrate at characteristic frequencies, producing a unique absorption fingerprint for each compound. This survey of common household and laboratory materials uses the FT-IR spectrometer in ATR mode to capture each sample's spectrum across the mid-infrared range (~550–4000 cm⁻¹), building a reference library of spectra and identifying characteristic functional group signatures in everyday substances.
+
+<!-- AFTER -->
+
+Twenty-five everyday materials, one instrument, one question: which bonds are in there?
+
+- **FT-IR in ATR mode** — every polar bond vibrates at a characteristic frequency. The spectrum is a fingerprint of which functional groups (O–H, C=O, C–H, N–H, …) are present, not how much.
+- **Why ATR** — beam reflects off a crystal in contact with the sample; the evanescent wave reads the top few microns. No prep, no pellets, no solvent — touch the sample to the crystal and scan.
+- **Survey, not assay** — the goal is a reference library across solvents, foods, polymers, papers, biological samples, and one ionic control (NaCl, the negative case).
 
 ## Setup
 
@@ -31,12 +41,12 @@ Fourier-transform infrared (FT-IR) spectroscopy identifies the polar covalent bo
 | Mode | Attenuated Total Reflectance (ATR) |
 | Range | ~550–4000 cm⁻¹ |
 | Resolution | ~7,150 data points per spectrum |
-| Runs | Two sessions (19 + 6 samples) |
+| Samples | 21 |
 | Software | Thermo Scientific OMNIC 8 |
 
 </div>
 
-A background spectrum was collected first to establish a baseline. Each sample was placed directly on the ATR crystal — in ATR mode, an infrared beam reflects internally within the crystal and an evanescent wave penetrates a few microns into the sample surface, so samples can be measured as-is without any preparation. A spectrum was acquired across the mid-IR range and <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260401%20IR%20Spectroscopy/data">the raw CSV</a> exported from OMNIC 8.
+A background spectrum was collected first to establish a baseline. Each sample was placed directly on the ATR crystal — in ATR mode, an infrared beam reflects internally within the crystal and an evanescent wave penetrates a few microns into the sample surface, so samples can be measured as-is without any preparation. A spectrum was acquired across the mid-IR range and <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260415%20IR%20Spectroscopy/data">the raw CSV</a> exported from OMNIC 8.
 
 ## Samples
 
@@ -54,17 +64,17 @@ A background spectrum was collected first to establish a baseline. Each sample w
 
 ## Data
 
-Raw spectra are available as CSV files each containing two columns (wavenumber in cm⁻¹ and transmittance in %) with ~7,150 data points per spectrum. Data is organized into two experimental runs: <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260401%20IR%20Spectroscopy/data/ONE">one</a> (19 samples) and <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260401%20IR%20Spectroscopy/data/TWO">two</a> (6 samples) over two different days.
+Raw spectra are available as <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260415%20IR%20Spectroscopy/data">CSV files</a>, each with two columns (wavenumber in cm⁻¹ and transmittance in %) and ~7,150 data points per spectrum.
 
 ## Methods
 
-The instrument (Nicolet 380) applies background correction automatically — each sample's transmittance is already measured relative to the background spectrum, so non-absorbing regions read ~100% transmittance. The <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260401%20IR%20Spectroscopy/output/clean_data.py">data cleaning pipeline</a>:
+The instrument (Nicolet 380) applies background correction automatically — each sample's transmittance is already measured relative to the background spectrum, so non-absorbing regions read ~100% transmittance. The <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260415%20IR%20Spectroscopy/output/clean_data.py">data cleaning pipeline</a>:
 
 1. **Parse** — raw CSVs use scientific notation with no headers; each file was parsed into numeric wavenumber and transmittance columns.
 2. **Convert to absorbance** — transmittance was converted using A = −log₁₀(T/100), where T is transmittance in percent. Absorbance is dimensionless and directly proportional to concentration via the Beer-Lambert law.
-3. **Export** — all 23 samples were saved as individual cleaned CSVs with headers (wavenumber, transmittance, absorbance) into a single <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260401%20IR%20Spectroscopy/output/scrubbed">scrubbed</a> folder.
+3. **Export** — all 23 samples were saved as individual cleaned CSVs with headers (wavenumber, transmittance, absorbance) into a single <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260415%20IR%20Spectroscopy/output/scrubbed">scrubbed</a> folder.
 
-All spectra plots, peak identification, and category overlays were generated from the cleaned data using Python libraries in the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260401%20IR%20Spectroscopy/output/ir_analysis.ipynb">analysis notebook</a>.
+All spectra plots, peak identification, and category overlays were generated from the cleaned data using Python libraries in the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260415%20IR%20Spectroscopy/output/ir_analysis.ipynb">analysis notebook</a>.
 
 ## Results
 
@@ -191,7 +201,7 @@ All spectra plots, peak identification, and category overlays were generated fro
 
   <div class="tab-content" id="content-chem-ch">
     <img src="output/images/chem_ch_spectrum.png" alt="C–H dominant spectra" class="result-img">
-    <p><strong>Plastic bag, plastic cap, plastic wrapper (×2)</strong> — polyolefin plastics made almost entirely of carbon and hydrogen. The sharp C–H stretching doublet at ~2,920/2,850 cm⁻¹ and C–H bending at ~1,460 cm⁻¹ are virtually the only features. These spectra overlap closely because the underlying polymer (polyethylene or polypropylene) is chemically simple — long hydrocarbon chains with no heteroatoms.</p>
+    <p><strong>Plastic bag, plastic cap, plastic wrapper</strong> — polyolefin plastics made almost entirely of carbon and hydrogen. The sharp C–H stretching doublet at ~2,920/2,850 cm⁻¹ and C–H bending at ~1,460 cm⁻¹ are virtually the only features. These spectra overlap closely because the underlying polymer (polyethylene or polypropylene) is chemically simple — long hydrocarbon chains with no heteroatoms.</p>
   </div>
 
   <div class="tab-content" id="content-chem-co">
@@ -206,7 +216,7 @@ All spectra plots, peak identification, and category overlays were generated fro
 
   <div class="tab-content" id="content-chem-cellulose">
     <img src="output/images/chem_cellulose_spectrum.png" alt="Cellulose spectra" class="result-img">
-    <p><strong>Paper, paper (run 2), paper-plastic cup, leaf</strong> — all contain cellulose as the structural backbone. The characteristic pattern is a broad O–H band (hydroxyl groups along the polysaccharide chain) combined with strong C–O stretching at 1,000–1,150 cm⁻¹ from glycosidic linkages. The paper-plastic cup adds polyethylene C–H peaks on top of the cellulose base. Leaf includes additional cuticle wax signatures but the underlying cellulose framework is clearly visible.</p>
+    <p><strong>Paper, paper-plastic cup, leaf</strong> — all contain cellulose as the structural backbone. The characteristic pattern is a broad O–H band (hydroxyl groups along the polysaccharide chain) combined with strong C–O stretching at 1,000–1,150 cm⁻¹ from glycosidic linkages. The paper-plastic cup adds polyethylene C–H peaks on top of the cellulose base. Leaf includes additional cuticle wax signatures but the underlying cellulose framework is clearly visible.</p>
   </div>
 
   <div class="tab-content" id="content-chem-protein">
@@ -222,4 +232,4 @@ All spectra plots, peak identification, and category overlays were generated fro
 
 <script src="/archives/layout/tabs.js"></script>
 
-See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260401%20IR%20Spectroscopy/output/ir_analysis.ipynb">static notebook</a> or run the <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260401%20IR%20Spectroscopy/output/ir_analysis.ipynb">reproducible analysis</a> yourself.
+See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260415%20IR%20Spectroscopy/output/ir_analysis.ipynb">static notebook</a> or run the <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260415%20IR%20Spectroscopy/output/ir_analysis.ipynb">reproducible analysis</a> yourself.

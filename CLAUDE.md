@@ -114,7 +114,7 @@ Research project pages are **personal toolkit notes**, not publications. Their p
 - **Push specifications to Setup tables.** Ranges, software names, filename patterns, cuvette sizes — all of that lives in the Setup or Data table, not in overview prose.
 - **Tabs and section-heads are the structure.** Let the page layout carry the differentiation (tabs per instrument, one section per pass) instead of explaining the structure in prose.
 
-Existing pages that model this style: `20260401 IR Spectroscopy/index.md` and `20260417 UV-Vis Spectroscopy/index.md`. When adding a new project or revising an old one, aim for their level of density.
+Existing pages that model this style: `20260415 IR Spectroscopy/index.md` and `20260417 UV-Vis Spectroscopy/index.md`. When adding a new project or revising an old one, aim for their level of density.
 
 ## INSTRUMENTS & DATA FORMATS
 

@@ -146,7 +146,7 @@
               "toy": "Jupyter",
               "specs": "Notebooks combining code, figures and narrative",
               "available": 1,
-              "url": "https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260401%20IR%20Spectroscopy/output/ir_analysis.ipynb"
+              "url": "https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260415%20IR%20Spectroscopy/output/ir_analysis.ipynb"
             }
           ]
         },
@@ -288,8 +288,8 @@
               "toy": "IR Spectrometer",
               "specs": "Polar bonds — functional-group fingerprints",
               "available": 1,
-              "completed": "20260401 IR Spectroscopy",
-              "project_url": "/research/projects/20260401%20IR%20Spectroscopy/"
+              "completed": "20260415 IR Spectroscopy",
+              "project_url": "/research/projects/20260415%20IR%20Spectroscopy/"
             },
             {
               "id": 23,

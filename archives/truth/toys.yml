@@ -97,7 +97,7 @@
         - toy: Jupyter
           specs: Notebooks combining code, figures and narrative
           available: true
-          url: https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260401%20IR%20Spectroscopy/output/ir_analysis.ipynb
+          url: https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260415%20IR%20Spectroscopy/output/ir_analysis.ipynb
     - technology: Reproducibility
       description: Freeze environments and archive results
       toys:
@@ -165,7 +165,7 @@
         - toy: IR Spectrometer
           specs: Polar bonds — functional-group fingerprints
           available: true
-          completed: "20260401 IR Spectroscopy"
+          completed: "20260415 IR Spectroscopy"
         - toy: Raman Microscope
           specs: Nonpolar bonds — aromatic rings and C=C
           url: /research/archives/photos/chemistry-raman-microscope.jpg
