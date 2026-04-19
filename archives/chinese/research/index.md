@@ -84,6 +84,9 @@ html_lang: zh
         tech.toys.forEach(function (toy) {
           var name = esc(toy.toy);
           var link = toy.project_url || toy.url;
+          if (link && toy.project_url) {
+            link = link.replace('/research/projects/', '/archives/chinese/research/');
+          }
           if (link) name = '<a href="' + link + '">' + name + '</a>';
           if (toy.url) {
             var icon = '';
