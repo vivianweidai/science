@@ -1,0 +1,47 @@
+#!/bin/sh
+# Pre-commit BLOAT WARNING — does not block, just flags oversized files.
+# Activated by running once: git config core.hooksPath .githooks
+
+IMG_LIMIT=512000      # 500 KB
+PDF_LIMIT=5242880     # 5 MB
+
+staged=$(git diff --cached --name-only --diff-filter=AM)
+[ -z "$staged" ] && exit 0
+
+img_warns=""
+pdf_warns=""
+
+while IFS= read -r f; do
+  [ -z "$f" ] || [ ! -f "$f" ] && continue
+  size=$(wc -c < "$f" 2>/dev/null | tr -d ' ')
+  [ -z "$size" ] && continue
+  case "$(printf '%s' "$f" | tr '[:upper:]' '[:lower:]')" in
+    *.jpg|*.jpeg|*.png)
+      if [ "$size" -gt "$IMG_LIMIT" ]; then
+        img_warns="${img_warns}  $(du -h "$f" | cut -f1)\t$f\n"
+      fi
+      ;;
+    *.pdf)
+      if [ "$size" -gt "$PDF_LIMIT" ]; then
+        pdf_warns="${pdf_warns}  $(du -h "$f" | cut -f1)\t$f\n"
+      fi
+      ;;
+  esac
+done <<EOF
+$staged
+EOF
+
+if [ -n "$img_warns" ] || [ -n "$pdf_warns" ]; then
+  printf '\n\033[33m⚠️  bloat warning — staged files exceed soft limits (commit will proceed):\033[0m\n' >&2
+  if [ -n "$img_warns" ]; then
+    printf '\nImages > 500 KB (consider: sips -Z 1600 -s formatOptions 82 file --out file):\n' >&2
+    printf '%b' "$img_warns" >&2
+  fi
+  if [ -n "$pdf_warns" ]; then
+    printf '\nPDFs > 5 MB (consider: gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=out.pdf in.pdf):\n' >&2
+    printf '%b' "$pdf_warns" >&2
+  fi
+  printf '\nHandle case-by-case. Use --no-verify if intentional.\n\n' >&2
+fi
+
+exit 0
