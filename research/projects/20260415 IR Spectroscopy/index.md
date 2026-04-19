@@ -19,34 +19,30 @@ project: IR Spectroscopy
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 15th 2026</span></div>
 
-<!-- BEFORE -->
+Twenty-one everyday materials, one instrument, one question: which bonds are in there?
 
-Fourier-transform infrared (FT-IR) spectroscopy identifies the polar covalent bonds in a material by measuring which infrared frequencies it absorbs. Different functional groups — O-H, C=O, C-H, N-H, and others — vibrate at characteristic frequencies, producing a unique absorption fingerprint for each compound. This survey of common household and laboratory materials uses the FT-IR spectrometer in ATR mode to capture each sample's spectrum across the mid-infrared range (~550–4000 cm⁻¹), building a reference library of spectra and identifying characteristic functional group signatures in everyday substances.
-
-<!-- AFTER -->
-
-Twenty-five everyday materials, one instrument, one question: which bonds are in there?
-
-- **FT-IR in ATR mode** — every polar bond vibrates at a characteristic frequency. The spectrum is a fingerprint of which functional groups (O–H, C=O, C–H, N–H, …) are present, not how much.
-- **Why ATR** — beam reflects off a crystal in contact with the sample; the evanescent wave reads the top few microns. No prep, no pellets, no solvent — touch the sample to the crystal and scan.
-- **Survey, not assay** — the goal is a reference library across solvents, foods, polymers, papers, biological samples, and one ionic control (NaCl, the negative case).
+IR Spectroscopy identifies the polar covalent bonds in a material by measuring which infrared frequencies it absorbs. Different functional groups — O-H, C=O, C-H, N-H, and others — vibrate at characteristic frequencies, producing a unique absorption fingerprint for each compound.
 
 ## Setup
 
-<div class="setup-highlight" markdown="1">
+<style>.instrument-table tbody tr td { background: #fff44f; }</style>
 
-| Category | Details |
-|----------|---------|
-| Instrument | Thermo Scientific Nicolet 380 FT-IR Spectrometer |
-| Mode | Attenuated Total Reflectance (ATR) |
-| Range | ~550–4000 cm⁻¹ |
-| Resolution | ~7,150 data points per spectrum |
-| Samples | 21 |
-| Software | Thermo Scientific OMNIC 8 |
+<div class="instrument-table" markdown="1">
+
+| Instrument | Role | Range |
+|------------|------|-------|
+| Thermo Scientific Nicolet 380 FT-IR Spectrometer | Bulk samples (ATR — no prep) | ~550–4000 cm⁻¹ |
+| Bruker Tensor 27 Hyperion FT-IR Microscope | Bulk samples (ATR — no prep; Hyperion microscope module not used yet) | ~600–4000 cm⁻¹ |
 
 </div>
 
-A background spectrum was collected first to establish a baseline. Each sample was placed directly on the ATR crystal — in ATR mode, an infrared beam reflects internally within the crystal and an evanescent wave penetrates a few microns into the sample surface, so samples can be measured as-is without any preparation. A spectrum was acquired across the mid-IR range and <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260415%20IR%20Spectroscopy/data">the raw CSV</a> exported from OMNIC 8.
+| Toolkit | Details |
+|---------|---------|
+| Mode | Attenuated Total Reflectance (ATR) — sample pressed onto the diamond crystal, no prep |
+| Samples | 21 — solvents, food/minerals, personal care, polymers, paper, biological, control |
+| Software | Thermo Scientific OMNIC 8 (Nicolet), OPUS (Bruker) |
+
+A background spectrum was collected first to establish a baseline. Each sample was placed directly on the ATR crystal — the IR beam reflects internally within the crystal and an evanescent wave penetrates a few microns into the sample surface, so samples can be measured as-is without any preparation. Spectra were acquired across the mid-IR range.
 
 ## Samples
 
@@ -64,7 +60,7 @@ A background spectrum was collected first to establish a baseline. Each sample w
 
 ## Data
 
-Raw spectra are available as <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260415%20IR%20Spectroscopy/data">CSV files</a>, each with two columns (wavenumber in cm⁻¹ and transmittance in %) and ~7,150 data points per spectrum.
+Raw spectra are exported as <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260415%20IR%20Spectroscopy/data">CSV files</a> — two columns (wavenumber in cm⁻¹, transmittance in %), one row per sampling step. The 21 spectra below were collected on the Nicolet 380 (~7,150 points each at its default resolution); Bruker scans are not in this run.
 
 ## Methods
 
