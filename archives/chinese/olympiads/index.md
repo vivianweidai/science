@@ -6,13 +6,23 @@ html_lang: zh
 <div class="page-header"><h2>竞赛</h2><div class="header-nav"><a href="/archives/chinese/curriculum/">课程</a><a class="active" href="/archives/chinese/olympiads/">竞赛</a><a href="/archives/chinese/research/">研究</a></div></div>
 
 <div class="tabs">
-  <input type="radio" name="view" id="view-all" checked>
+  <input type="radio" name="view" id="view-all">
   <input type="radio" name="view" id="view-math">
   <input type="radio" name="view" id="view-comp">
   <input type="radio" name="view" id="view-phys">
   <input type="radio" name="view" id="view-chem">
   <input type="radio" name="view" id="view-bio">
   <input type="radio" name="view" id="view-astro">
+  <script>
+    (function(){
+      var tabs = ['view-math','view-comp','view-phys','view-chem','view-bio','view-astro'];
+      var saved = sessionStorage.getItem('oly-tab');
+      var pick = saved && document.getElementById('view-' + saved) ? 'view-' + saved
+        : tabs[Math.floor(Math.random() * tabs.length)];
+      document.getElementById(pick).checked = true;
+      sessionStorage.setItem('oly-tab', pick.replace('view-', ''));
+    })();
+  </script>
 
   <div class="tab-labels">
     <label for="view-all">全部</label>
@@ -52,7 +62,7 @@ html_lang: zh
   .timeline .entry .type-cell { text-align: center; }
   .timeline .entry .chips-cell { white-space: nowrap; display: flex; gap: 2px; align-items: center; }
   .timeline .entry .name-cell { }
-  .invited-badge { display: inline-block; font-size: .65em; font-weight: 700; padding: 1px 6px; border-radius: 4px; vertical-align: baseline; margin-left: 4px; background: #ffd700; color: #5a4500; position: relative; top: -1px; }
+  .status-emoji { font-size: 1em; margin-left: .3em; position: relative; top: -.05em; }
   .timeline .entry.hl { position: relative; }
   .timeline .entry.hl::before { content: ''; position: absolute; inset: -.1em -.4em; background: #fff44f; border-radius: 6px; z-index: -1; }
 
@@ -85,6 +95,7 @@ html_lang: zh
   .legend .chip { margin-right: .3em; }
 
   @media (max-width: 600px) {
+    .tabs .tab-labels label { padding: 0.45em 0.7em; font-size: 0.8em; }
     .timeline .entry {
       display: flex;
       flex-direction: column;
@@ -98,6 +109,7 @@ html_lang: zh
       flex-wrap: wrap;
     }
     .timeline .entry .month { display: inline; font-size: .82em; }
+    .timeline .entry .month:empty { display: none; }
     .timeline .entry .type-cell { display: inline; text-align: left; margin: 0 .2em; }
     .timeline .entry .chips-cell { display: inline-flex; }
     .timeline .entry .name-cell { font-size: .95em; line-height: 1.4; }
@@ -171,7 +183,7 @@ html_lang: zh
           + '<div class="type-cell">' + icon + '</div>'
           + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
           + '</div>'
-          + '<div class="name-cell">' + (e.photo_url ? '<a class="name-link" href="' + e.photo_url + '">' + esc(e.name) + '</a>' : esc(e.name)) + (e.invited ? ' <span class="invited-badge">受邀</span>' : '') + (e.photo_url ? ' <span class="photo-icon" title="照片">\uD83D\uDCF7</span>' : '') + '</div>'
+          + '<div class="name-cell">' + (e.photo_url ? '<a class="name-link" href="' + e.photo_url + '">' + esc(e.name) + '</a>' : esc(e.name)) + (e.invited ? ' <span class="status-emoji" title="受邀">\uD83C\uDF9F\uFE0F</span>' : '') + (e.borderline ? ' <span class="status-emoji" title="接近分数线">\uD83C\uDFAF</span>' : '') + (e.photo_url ? ' <span class="photo-icon" title="照片">\uD83D\uDCF7</span>' : '') + '</div>'
           + '</div>';
       });
     });
@@ -184,12 +196,16 @@ html_lang: zh
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (d) {
       var items = d.items;
-      renderTimeline(items, 'all');
+
+      var checked = document.querySelector('input[name="view"]:checked');
+      var filter = checked ? checked.id.replace('view-', '') : 'all';
+      renderTimeline(items, filter);
 
       var radios = document.querySelectorAll('input[name="view"]');
       radios.forEach(function (radio) {
         radio.addEventListener('change', function () {
           var filter = this.id.replace('view-', '');
+          sessionStorage.setItem('oly-tab', filter);
           renderTimeline(items, filter);
         });
       });

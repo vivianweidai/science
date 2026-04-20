@@ -621,23 +621,13 @@
       "id": 66,
       "type": "textbook",
       "subject": "Chemistry",
-      "date": "May 2026",
-      "sort_key": "2026-05",
-      "name": "British Columbia Chemistry Olympiad",
-      "highlighted": 0,
-      "photo_url": "/olympiads/photos/bcco.jpeg"
-    },
-    {
-      "id": 67,
-      "type": "textbook",
-      "subject": "Chemistry",
       "date": "Future",
       "sort_key": "9999-12",
       "name": "Atkins' Physical Chemistry by Peter Atkins, Julio de Paula and James Keeler",
       "highlighted": 0
     },
     {
-      "id": 68,
+      "id": 67,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "Future",
@@ -646,7 +636,7 @@
       "highlighted": 0
     },
     {
-      "id": 69,
+      "id": 68,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "Future",
@@ -655,7 +645,7 @@
       "highlighted": 0
     },
     {
-      "id": 70,
+      "id": 69,
       "type": "olympiad",
       "subject": "Chemistry",
       "date": "April 2026",
@@ -664,7 +654,7 @@
       "highlighted": 0
     },
     {
-      "id": 71,
+      "id": 70,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "April 2026",
@@ -673,7 +663,7 @@
       "highlighted": 1
     },
     {
-      "id": 72,
+      "id": 71,
       "type": "olympiad",
       "subject": "Chemistry",
       "date": "March 2026",
@@ -683,7 +673,7 @@
       "borderline": 1
     },
     {
-      "id": 73,
+      "id": 72,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "March 2026",
@@ -692,7 +682,7 @@
       "highlighted": 1
     },
     {
-      "id": 74,
+      "id": 73,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "February 2026",
@@ -701,7 +691,7 @@
       "highlighted": 1
     },
     {
-      "id": 75,
+      "id": 74,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "January 2026",
@@ -710,7 +700,7 @@
       "highlighted": 0
     },
     {
-      "id": 76,
+      "id": 75,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "January 2026",
@@ -719,7 +709,7 @@
       "highlighted": 0
     },
     {
-      "id": 77,
+      "id": 76,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "December 2025",
@@ -728,7 +718,7 @@
       "highlighted": 0
     },
     {
-      "id": 78,
+      "id": 77,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "May 2025",
@@ -737,7 +727,7 @@
       "highlighted": 0
     },
     {
-      "id": 79,
+      "id": 78,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "May 2025",
@@ -746,7 +736,7 @@
       "highlighted": 0
     },
     {
-      "id": 80,
+      "id": 79,
       "type": "olympiad",
       "subject": "Chemistry",
       "date": "April 2025",
@@ -755,7 +745,7 @@
       "highlighted": 0
     },
     {
-      "id": 81,
+      "id": 80,
       "type": "olympiad",
       "subject": "Chemistry",
       "date": "April 2025",
@@ -765,7 +755,7 @@
       "invited": 1
     },
     {
-      "id": 82,
+      "id": 81,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "April 2025",
@@ -774,7 +764,7 @@
       "highlighted": 1
     },
     {
-      "id": 83,
+      "id": 82,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "April 2025",
@@ -784,7 +774,7 @@
       "photo_url": "/olympiads/photos/wuct.jpeg"
     },
     {
-      "id": 84,
+      "id": 83,
       "type": "olympiad",
       "subject": "Chemistry",
       "date": "March 2025",
@@ -794,7 +784,7 @@
       "photo_url": "/olympiads/photos/usnco.jpeg"
     },
     {
-      "id": 85,
+      "id": 84,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "March 2025",
@@ -804,7 +794,7 @@
       "photo_url": "/olympiads/photos/bct.jpeg"
     },
     {
-      "id": 86,
+      "id": 85,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "May 2024",
@@ -814,7 +804,7 @@
       "photo_url": "/olympiads/photos/ap.jpeg"
     },
     {
-      "id": 87,
+      "id": 86,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "May 2024",
@@ -823,7 +813,7 @@
       "highlighted": 0
     },
     {
-      "id": 88,
+      "id": 87,
       "type": "olympiad",
       "subject": "Chemistry",
       "date": "April 2024",
@@ -832,7 +822,7 @@
       "highlighted": 0
     },
     {
-      "id": 89,
+      "id": 88,
       "type": "textbook",
       "subject": "Chemistry",
       "date": "March 2024",
@@ -842,7 +832,7 @@
       "photo_url": "/olympiads/photos/ctychemistry.jpeg"
     },
     {
-      "id": 90,
+      "id": 89,
       "type": "textbook",
       "subject": "Biology",
       "date": "Future",
@@ -851,7 +841,7 @@
       "highlighted": 0
     },
     {
-      "id": 91,
+      "id": 90,
       "type": "textbook",
       "subject": "Biology",
       "date": "May 2026",
@@ -860,16 +850,17 @@
       "highlighted": 0
     },
     {
-      "id": 92,
+      "id": 91,
       "type": "olympiad",
       "subject": "Biology",
       "date": "April 2026",
       "sort_key": "2026-04",
       "name": "Canadian Biology Olympiad Competition Exam",
-      "highlighted": 0
+      "highlighted": 0,
+      "photo_url": "/olympiads/photos/cbo2026.jpeg"
     },
     {
-      "id": 93,
+      "id": 92,
       "type": "olympiad",
       "subject": "Biology",
       "date": "February 2026",
@@ -878,7 +869,7 @@
       "highlighted": 0
     },
     {
-      "id": 94,
+      "id": 93,
       "type": "textbook",
       "subject": "Biology",
       "date": "May 2025",
@@ -887,7 +878,7 @@
       "highlighted": 1
     },
     {
-      "id": 95,
+      "id": 94,
       "type": "textbook",
       "subject": "Biology",
       "date": "May 2025",
@@ -896,7 +887,7 @@
       "highlighted": 0
     },
     {
-      "id": 96,
+      "id": 95,
       "type": "textbook",
       "subject": "Biology",
       "date": "May 2025",
@@ -905,7 +896,7 @@
       "highlighted": 0
     },
     {
-      "id": 97,
+      "id": 96,
       "type": "olympiad",
       "subject": "Biology",
       "date": "February 2025",
@@ -915,7 +906,7 @@
       "photo_url": "/olympiads/photos/usabo.jpeg"
     },
     {
-      "id": 98,
+      "id": 97,
       "type": "textbook",
       "subject": "Biology",
       "date": "May 2024",
@@ -925,7 +916,7 @@
       "photo_url": "/olympiads/photos/ap.jpeg"
     },
     {
-      "id": 99,
+      "id": 98,
       "type": "textbook",
       "subject": "Biology",
       "date": "May 2024",
@@ -934,17 +925,17 @@
       "highlighted": 0
     },
     {
-      "id": 100,
+      "id": 99,
       "type": "olympiad",
       "subject": "Biology",
       "date": "April 2024",
       "sort_key": "2024-04",
       "name": "Canadian Biology Olympiad Competition Exam",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/cbo.jpeg"
+      "photo_url": "/olympiads/photos/cbo2024.jpeg"
     },
     {
-      "id": 101,
+      "id": 100,
       "type": "textbook",
       "subject": "Biology",
       "date": "March 2024",
@@ -954,7 +945,7 @@
       "photo_url": "/olympiads/photos/ctybiology.jpeg"
     },
     {
-      "id": 102,
+      "id": 101,
       "type": "textbook",
       "subject": "Astronomy",
       "date": "September 2026",
@@ -963,7 +954,7 @@
       "highlighted": 0
     },
     {
-      "id": 103,
+      "id": 102,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "May 2026",
@@ -972,7 +963,7 @@
       "highlighted": 0
     },
     {
-      "id": 104,
+      "id": 103,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "March 2026",
@@ -981,7 +972,7 @@
       "highlighted": 0
     },
     {
-      "id": 105,
+      "id": 104,
       "type": "textbook",
       "subject": "Astronomy",
       "date": "March 2026",
@@ -990,7 +981,7 @@
       "highlighted": 1
     },
     {
-      "id": 106,
+      "id": 105,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "February 2026",
@@ -1000,7 +991,7 @@
       "borderline": 1
     },
     {
-      "id": 107,
+      "id": 106,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "October 2025",
@@ -1010,7 +1001,7 @@
       "invited": 1
     },
     {
-      "id": 108,
+      "id": 107,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "May 2025",
@@ -1020,7 +1011,7 @@
       "borderline": 1
     },
     {
-      "id": 109,
+      "id": 108,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "March 2025",
@@ -1029,7 +1020,7 @@
       "highlighted": 0
     },
     {
-      "id": 110,
+      "id": 109,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "February 2025",
@@ -1038,7 +1029,7 @@
       "highlighted": 0
     },
     {
-      "id": 111,
+      "id": 110,
       "type": "textbook",
       "subject": "Astronomy",
       "date": "August 2024",
@@ -1047,7 +1038,7 @@
       "highlighted": 0
     },
     {
-      "id": 112,
+      "id": 111,
       "type": "textbook",
       "subject": "Astronomy",
       "date": "July 2024",
@@ -1056,7 +1047,7 @@
       "highlighted": 0
     },
     {
-      "id": 113,
+      "id": 112,
       "type": "textbook",
       "subject": "Astronomy",
       "date": "June 2024",
@@ -1065,7 +1056,7 @@
       "highlighted": 0
     },
     {
-      "id": 114,
+      "id": 113,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "March 2024",
@@ -1075,7 +1066,7 @@
       "photo_url": "/olympiads/photos/caao.jpeg"
     },
     {
-      "id": 115,
+      "id": 114,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "February 2024",

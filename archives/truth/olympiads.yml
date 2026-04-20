@@ -296,11 +296,6 @@
   name: Advanced Placement Chemistry Exam
 - type: textbook
   subject: Chemistry
-  date: May 2026
-  name: British Columbia Chemistry Olympiad
-  photo_url: /olympiads/photos/bcco.jpeg
-- type: textbook
-  subject: Chemistry
   date: Future
   name: Atkins' Physical Chemistry by Peter Atkins, Julio de Paula and James Keeler
 - type: textbook
@@ -414,6 +409,7 @@
   subject: Biology
   date: April 2026
   name: Canadian Biology Olympiad Competition Exam
+  photo_url: /olympiads/photos/cbo2026.jpeg
 - type: olympiad
   subject: Biology
   date: February 2026
@@ -449,7 +445,7 @@
   subject: Biology
   date: April 2024
   name: Canadian Biology Olympiad Competition Exam
-  photo_url: /olympiads/photos/cbo.jpeg
+  photo_url: /olympiads/photos/cbo2024.jpeg
 - type: textbook
   subject: Biology
   date: March 2024
