@@ -163,15 +163,15 @@
     - technology: Molecular Spectroscopy
       description: Absorb EM radiation — vibrational, electronic and nuclear transitions
       toys:
-        - toy: IR Spectrometer
+        - toy: IR Spectroscopy
           specs: Polar bonds — functional-group fingerprints
           available: true
           completed: "20260415 IR Spectroscopy"
-        - toy: UV-Vis Spectrometer
+        - toy: UV-Vis Spectroscopy
           specs: UV-Vis absorption — concentration and conjugation
           available: true
           completed: "20260417 UV-Vis Spectroscopy"
-        - toy: NMR Spectrometer
+        - toy: NMR Spectroscopy
           specs: Chemical shifts and couplings — full structural fingerprint
           url: /research/archives/photos/chemistry-nmr.jpg
     - technology: Mass Spectrometry

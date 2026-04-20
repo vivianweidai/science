@@ -78,6 +78,13 @@ def build() -> list[dict]:
                     if not (PROJECTS / folder).is_dir():
                         print(f"  warn: topic[{i}].tech[{j}].toy[{k}] → "
                               f"{folder!r} not found", file=sys.stderr)
+                elif toy.get("extension_of"):
+                    folder = toy["extension_of"]
+                    t["extension_of"] = folder
+                    t["project_url"] = f"/research/projects/{urllib.parse.quote(folder)}/#extensions"
+                    if not (PROJECTS / folder).is_dir():
+                        print(f"  warn: topic[{i}].tech[{j}].toy[{k}] → extension_of "
+                              f"{folder!r} not found", file=sys.stderr)
                 toys_out.append(t)
             techs_out.append({
                 "id": tech_id,

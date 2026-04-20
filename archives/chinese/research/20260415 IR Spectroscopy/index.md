@@ -3,14 +3,25 @@ layout: project
 html_lang: zh
 project: 红外光谱
 photos:
-  - /research/projects/20260415 IR Spectroscopy/photos/20260404 Setup A.jpeg
-  - /research/projects/20260415 IR Spectroscopy/photos/20260404 Setup B.jpeg
-  - /research/projects/20260415 IR Spectroscopy/photos/20260404 Setup C.jpeg
-  - /research/projects/20260415 IR Spectroscopy/photos/20260404 Setup D.jpeg
-  - /research/projects/20260415 IR Spectroscopy/photos/20260404 Setup E.jpeg
-  - /research/projects/20260415 IR Spectroscopy/photos/20260404 Setup F.jpeg
-  - /research/projects/20260415 IR Spectroscopy/photos/20260404 Samples A.jpeg
-  - /research/projects/20260415 IR Spectroscopy/photos/20260404 Samples B.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup1.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup2.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup3.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup4.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup5.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup6.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup7.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup8.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup9.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup10.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup11.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup12.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup13.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup14.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup15.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup16.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/setup/setup17.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/samples/samples1.jpeg
+  - /research/projects/20260415 IR Spectroscopy/photos/samples/samples2.jpeg
 ---
 
 <div class="page-header"><h2>研究</h2><div class="header-nav"><a href="/archives/chinese/curriculum/">课程</a><a href="/archives/chinese/olympiads/">竞赛</a><a class="active" href="/archives/chinese/research/">研究</a></div></div>

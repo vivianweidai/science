@@ -27,8 +27,6 @@ This experiment centrifuged five common household liquids to observe what separa
 
 <style>.setup-highlight-all tbody tr td { background: #fff44f; }</style>
 
-**Featured instruments**
-
 | Instrument | Details |
 |------------|---------|
 | Centrifuge | Thermo Scientific Sorvall RT3 Centrifuge |
@@ -37,8 +35,6 @@ This experiment centrifuged five common household liquids to observe what separa
 | Mini centrifuge | DiaMed ID-Centrifuge |
 
 </div>
-
-**Supporting gear**
 
 | Item | Details |
 |------|---------|

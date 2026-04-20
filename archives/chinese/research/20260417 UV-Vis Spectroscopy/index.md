@@ -14,6 +14,12 @@ photos:
   - /research/projects/20260417 UV-Vis Spectroscopy/photos/setup/setup9.jpeg
   - /research/projects/20260417 UV-Vis Spectroscopy/photos/setup/setup10.jpeg
   - /research/projects/20260417 UV-Vis Spectroscopy/photos/setup/setup11.jpeg
+  - /research/projects/20260417 UV-Vis Spectroscopy/photos/setup/setup12.jpeg
+  - /research/projects/20260417 UV-Vis Spectroscopy/photos/setup/setup13.jpeg
+  - /research/projects/20260417 UV-Vis Spectroscopy/photos/setup/setup14.jpeg
+  - /research/projects/20260417 UV-Vis Spectroscopy/photos/setup/setup15.jpeg
+  - /research/projects/20260417 UV-Vis Spectroscopy/photos/setup/setup16.jpeg
+  - /research/projects/20260417 UV-Vis Spectroscopy/photos/setup/setup17.jpeg
   - /research/projects/20260417 UV-Vis Spectroscopy/photos/samples/samples1.jpeg
   - /research/projects/20260417 UV-Vis Spectroscopy/photos/samples/samples2.jpeg
   - /research/projects/20260417 UV-Vis Spectroscopy/photos/samples/samples3.jpeg

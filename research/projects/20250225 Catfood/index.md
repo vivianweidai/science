@@ -58,7 +58,7 @@ var allData = {{ page.data_photos | jsonify }};
 })();
 </script>
 
-Raw data was recorded on handwritten data sheets and photographed. Variables tracked per trial include: date, serving number, pieces served and remaining, bowl position (left/right), serving time, and food dye drops used. The original handwritten data sheets are photographed and available in <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20250225%20Catfood/photos/data">photos/data</a>. The preference tallies were transcribed from these handwritten records into <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_summary.csv">catfood_summary.csv</a>.
+Raw data was recorded on handwritten data sheets and photographed. Variables tracked per trial include: date, serving number, pieces served and remaining, bowl position (left/right), serving time, and food dye drops used. The original handwritten data sheets are photographed and available in <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20250225%20Catfood/photos/data">photos</a>. The preference tallies were transcribed from these handwritten records into <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_summary.csv">catfood_summary.csv</a>.
 
 ## Results
 
