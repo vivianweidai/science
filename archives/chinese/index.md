@@ -22,8 +22,8 @@ title: Vivian Dai
 ---
 
 <ul class="updates-list">
-  <li><span class="update-date">2026年4月17日</span> <span class="update-body"><a href="/archives/chinese/research/20260417%20UV-Vis%20Spectroscopy/">日常荧光团的紫外-可见光谱分析</a> <span class="chip chem">化学</span></span></li>
-  <li><span class="update-date">2026年4月15日</span> <span class="update-body"><a href="/archives/chinese/research/20260415%20IR%20Spectroscopy/">日常材料的红外光谱分析</a> <span class="chip chem">化学</span></span></li>
+  <li><span class="update-date">2026年4月20日</span> <span class="update-body"><a href="/archives/chinese/research/20260420%20UV-Vis%20Spectroscopy/">日常荧光团的紫外-可见光谱分析</a> <span class="chip chem">化学</span></span></li>
+  <li><span class="update-date">2026年4月19日</span> <span class="update-body"><a href="/archives/chinese/research/20260419%20IR%20Spectroscopy/">日常材料的红外光谱分析</a> <span class="chip chem">化学</span></span></li>
   <li><span class="update-date">2026年4月11日</span> <span class="update-body"><a href="/archives/chinese/research/20260411%20Centrifuge/">日常液体的离心分离与pH测量</a> <span class="chip chem">化学</span> <span class="chip bio">生物</span></span></li>
   <li><span class="update-date">2026年4月5日</span> <span class="update-body"><a href="/archives/chinese/research/20260405%20Melting%20Point/">日常化合物的熔点测定</a> <span class="chip chem">化学</span></span></li>
   <li><span class="update-date">2026年4月4日</span> <span class="update-body"><a href="/archives/chinese/research/20260404%20Four%20Point%20Probe/">四探针法薄层电阻测量</a> <span class="chip phys">物理</span></span></li>

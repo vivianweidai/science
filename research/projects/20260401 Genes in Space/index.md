@@ -19,7 +19,7 @@ Can a journey to Mars actually be good for Mi's heart? Mi is a British Shorthair
 
 Microgravity differentially reduces MYBPC3 gene expression in mutant versus wild-type cardiomyocytes, revealing whether mechanical unloading compensates for or compounds hypertrophic cardiomyopathy in space. The molecular target is the **MYBPC3 gene** — two mutations associated with HCM in cats (**A31P** and **R820W**), with myriad other MYBPC3 mutations linked to HCM in humans.
 
-## Methods
+## Method
 
 <div class="setup-highlight" markdown="1">
 

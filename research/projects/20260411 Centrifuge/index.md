@@ -36,8 +36,8 @@ This experiment centrifuged five common household liquids to observe what separa
 
 </div>
 
-| Item | Details |
-|------|---------|
+| Toolkit | Details |
+|---------|---------|
 | Magnetic stirrer | Canlab Magnetic Stirrer |
 | Balance | Sartorius CP225D Analytical Balance |
 | Pipettes | Gilson Pipetman Pipettes |
