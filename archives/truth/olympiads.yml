@@ -16,18 +16,6 @@
 - type: textbook
   subject: Mathematics
   date: Future
-  name: Olympiad Training for Individual Study by Evan Chen
-- type: textbook
-  subject: Mathematics
-  date: Future
-  name: Linear Algebra Done Right by Sheldon Axler
-- type: textbook
-  subject: Mathematics
-  date: Future
-  name: Differential Equations with Applications and Historical Notes by George F. Simmons
-- type: textbook
-  subject: Mathematics
-  date: Future
   name: The Art of Problem Solving Math Worldwide Online Olympiad Training A
 - type: textbook
   subject: Mathematics
@@ -106,10 +94,6 @@
   name: The Art of Problem Solving Code Worldwide Online Olympiad Training
 - type: textbook
   subject: Computing
-  date: Future
-  name: Grokking Machine Learning by Luis Serrano
-- type: textbook
-  subject: Computing
   date: May 2026
   name: Advanced Placement Statistics Exam
 - type: olympiad
@@ -175,10 +159,6 @@
 - type: textbook
   subject: Physics
   date: Future
-  name: The Feynman Lectures on Physics by Richard Feynman
-- type: textbook
-  subject: Physics
-  date: Future
   name: The Art of Problem Solving Physics Worldwide Online Olympiad Training A
 - type: textbook
   subject: Physics
@@ -206,14 +186,6 @@
   subject: Physics
   date: February 2026
   name: USA Physics Olympiad F=ma Qualifying Exam
-- type: textbook
-  subject: Physics
-  date: December 2025
-  name: 'Physics: Principles with Applications by Douglas C. Giancoli'
-- type: textbook
-  subject: Physics
-  date: December 2025
-  name: Physics by Halliday, Resnick and Krane
 - type: textbook
   subject: Physics
   date: Future
@@ -288,24 +260,8 @@
   name: USA Physics Olympiad F=ma Qualifying Exam
 - type: textbook
   subject: Chemistry
-  date: September 2026
-  name: UNR 341 Organic Chemistry by Paula Yurkanis Bruice
-- type: textbook
-  subject: Chemistry
   date: May 2026
   name: Advanced Placement Chemistry Exam
-- type: textbook
-  subject: Chemistry
-  date: Future
-  name: Atkins' Physical Chemistry by Peter Atkins, Julio de Paula and James Keeler
-- type: textbook
-  subject: Chemistry
-  date: Future
-  name: Organic Chemistry by Jonathan Clayden, Nick Greeves and Stuart Warren
-- type: textbook
-  subject: Chemistry
-  date: Future
-  name: Inorganic Chemistry by Mark Weller, Jonathan Rourke, Fraser Armstrong and Tina Overton
 - type: olympiad
   subject: Chemistry
   date: April 2026
@@ -322,34 +278,24 @@
   borderline: true
 - type: textbook
   subject: Chemistry
-  date: March 2026
+  date: Future
   name: Descriptive Inorganic, Coordination, and Solid State Chemistry by Glen E. Rodgers
-  highlighted: true
 - type: textbook
   subject: Chemistry
-  date: February 2026
+  date: Future
   name: Organic Chemistry as a Second Language by David Klein
-  highlighted: true
 - type: textbook
   subject: Chemistry
-  date: January 2026
+  date: April 2026
   name: The Art of Problem Solving Chemistry Worldwide Online Olympiad Training A
 - type: textbook
   subject: Chemistry
-  date: January 2026
+  date: April 2026
   name: The Art of Problem Solving Chemistry Worldwide Online Olympiad Training B
-- type: textbook
-  subject: Chemistry
-  date: December 2025
-  name: 'Chemical Principles: The Quest for Insight by Peter Atkins'
 - type: textbook
   subject: Chemistry
   date: May 2025
   name: Advanced Placement Chemistry Exam
-- type: textbook
-  subject: Chemistry
-  date: May 2025
-  name: British Columbia Chemistry Olympiad
 - type: olympiad
   subject: Chemistry
   date: April 2025
@@ -384,10 +330,6 @@
   date: May 2024
   name: Advanced Placement Chemistry Exam
   photo_url: /olympiads/photos/ap.jpeg
-- type: textbook
-  subject: Chemistry
-  date: May 2024
-  name: British Columbia Chemistry Olympiad
 - type: olympiad
   subject: Chemistry
   date: April 2024
@@ -397,10 +339,6 @@
   date: March 2024
   name: Johns Hopkins University Center for Talented Youth AP Chemistry
   photo_url: /olympiads/photos/ctychemistry.jpeg
-- type: textbook
-  subject: Biology
-  date: Future
-  name: The USA Biology Olympiad Semifinal Exams Worked Solutions by Martyna Petrulyte
 - type: textbook
   subject: Biology
   date: May 2026
@@ -439,7 +377,7 @@
   photo_url: /olympiads/photos/ap.jpeg
 - type: textbook
   subject: Biology
-  date: May 2024
+  date: Future
   name: The USA Biology Olympiad Open Exam Exams Worked Solutions by Martyna Petrulyte
 - type: olympiad
   subject: Biology
@@ -451,10 +389,6 @@
   date: March 2024
   name: Johns Hopkins University Center for Talented Youth AP Biology
   photo_url: /olympiads/photos/ctybiology.jpeg
-- type: textbook
-  subject: Astronomy
-  date: September 2026
-  name: UNR AST 310 To Measure the Sky by Frederick R. Chromey
 - type: olympiad
   subject: Astronomy
   date: May 2026
