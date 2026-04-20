@@ -1,6 +1,6 @@
 sample,lambda_max_nm,A_at_peak,D = A / 0.05
 Baseline — distilled water,330.0,0.036,0.7
-Quinine — iteration 8 (final),347.5,0.096,1.9
-Yellow highlighter — 1 drop / 3 mL water,453.5,0.402,8.0
-Pink highlighter — ⅙ drop / 3 mL water,532.0,0.049,1.0
+Quinine — 8 drops,347.5,0.096,1.9
+Yellow highlighter — 1 drop,453.5,0.402,8.0
+Pink highlighter — ⅙ drop,532.0,0.049,1.0
 Salicylate — ⅙ drop further diluted ⅕,307.0,0.06,1.2

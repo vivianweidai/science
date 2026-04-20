@@ -132,7 +132,7 @@ The UV-2550 scan yields λ<sub>max</sub> (peak wavelength) and A (peak absorbanc
 | 3 | quinine | 8 drops |
 | 4 | yellow HL | 1 drop |
 | 5 | pink HL | ⅙ drop |
-| 6 | salicylate | ⅙ drop |
+| 6 | salicylate | ⅕ of ⅙ drop |
 | 7 | *re-baseline — 95% ethanol* | — |
 | 8 | blank (95% ethanol) — confirm ~0 A | — |
 | 9 | curcumin | upcoming |
@@ -163,11 +163,11 @@ Each sample goes straight from the UV-2550 into the FluoroMax using the final in
 
 | Instrument | Files | Coverage |
 |------------|-------|----------|
-| UV-2550 | 19 `.txt` | baseline, quinine (9), yellow HL (3), pink HL (2), salicylate (3) |
+| UV-2550 | 19 `.txt` | baseline, quinine (10), yellow HL (3), pink HL (2), salicylate (3) |
 | FluoroMax-3 | 7 `.csv` + 7 `.pdf` | quinine, yellow HL, salicylate — emission + excitation; pink HL — emission only |
 | Lambda 750 | 2 `.csv` | exploratory — water sample + baseline |
 
-Water-solvent samples only this session — ethanol block (curcumin, green tea) deferred to a later run. Raw files live under <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260420%20UV-Vis%20Spectroscopy/data">data</a>. Iterative-dilution filenames preserve the full convergence sequence for each sample in the attempt to land in the 0.3–0.8 A sweet spot.
+Water-solvent samples only this session — ethanol block (curcumin, green tea) deferred to a later run. Raw files live under <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260420%20UV-Vis%20Spectroscopy/data">data</a>. Iterative-dilution filenames preserve the full convergence sequence for each sample in the attempt to land in the 0.3–0.8 A sweet spot. The PDF files retain the machine settings used for the scans.
 
 ## Results
 
@@ -192,25 +192,29 @@ Water-solvent samples only this session — ethanol block (curcumin, green tea) 
 
   <div class="tab-content" id="content-uv-overlay">
     <img src="output/images/uvvis_overlay.png" alt="UV-Vis overlay — four water samples" class="result-img">
+    <p>Four fluorophores on one axis. <strong>Yellow HL</strong> is the only sample that landed in the 0.3–0.8 A sweet spot (A = 0.40 at 454 nm). Quinine, pink, and salicylate all over-diluted below A = 0.1 — the iterative protocol overshot three times out of four.</p>
   </div>
   <div class="tab-content" id="content-uv-baseline">
     <img src="output/images/uvvis_baseline.png" alt="Distilled water baseline" class="result-img">
+    <p>Distilled water against a water baseline — flat near zero across 200–800 nm. Confirms clean background subtraction before samples loaded. Water's O–H overtones don't appear until the NIR (see Lambda 750 below).</p>
   </div>
   <div class="tab-content" id="content-uv-quinine">
     <img src="output/images/uvvis_quinine.png" alt="Quinine UV-Vis spectrum" class="result-img">
+    <p><strong>Quinoline π→π* at 347 nm</strong> — the bicyclic nitrogen-heterocycle that makes tonic water glow under UV (see FluoroMax tab). A = 0.10 after 9 dilution iterations: over-diluted, below the 0.3–0.8 target.</p>
   </div>
   <div class="tab-content" id="content-uv-yellow">
     <img src="output/images/uvvis_yellow.png" alt="Yellow highlighter UV-Vis spectrum" class="result-img">
+    <p><strong>Fluorescein-family dye — xanthene ring absorbs in the blue at 454 nm</strong>, ink appears yellow (the complement). A = 0.40 landed cleanly on the first try. Textbook fluorescein λ<sub>max</sub> is 488 nm; the 34 nm blue-shift here marks this as a fluorescein variant, not pure sodium fluorescein.</p>
   </div>
   <div class="tab-content" id="content-uv-pink">
     <img src="output/images/uvvis_pink.png" alt="Pink highlighter UV-Vis spectrum" class="result-img">
+    <p><strong>Rhodamine-family dye — dialkyl-amino groups on the xanthene ring shift absorption to 532 nm</strong> (green), ink appears pink (the complement). A = 0.05: over-diluted at ⅙ drop, barely above noise. Rhodamines are the brighter, more photostable sibling to fluoresceins — the workhorse dye for single-molecule fluorescence.</p>
   </div>
   <div class="tab-content" id="content-uv-salicylate">
     <img src="output/images/uvvis_salicylate.png" alt="Salicylate UV-Vis spectrum" class="result-img">
+    <p>Salicylate anion, freed from aspirin by NaHCO₃. <strong>Hydroxybenzoate π→π* at 307 nm</strong> — UV only, so aspirin solutions look colorless. A = 0.06 at ⅕ of ⅙ drop; the ⅙ alone saturated at A ≈ 5, the ⅕ dilution over-corrected.</p>
   </div>
 </div>
-
-*Per-sample commentary forthcoming.*
 
 ### Fluorescence - FluoroMax-3
 
@@ -229,40 +233,27 @@ Water-solvent samples only this session — ethanol block (curcumin, green tea) 
 
   <div class="tab-content" id="content-flu-quinine">
     <img src="output/images/fluoromax_quinine.png" alt="Quinine excitation and emission spectra" class="result-img">
+    <p>Textbook quinine fluorescence. λ<sub>ex</sub> = **350 nm** (matches UV-2550 and prediction), λ<sub>em</sub> = **445 nm**, Stokes shift **95 nm** — typical for a rigid quinoline framework. The blue glow you see when tonic water sits under a UV lamp.</p>
   </div>
   <div class="tab-content" id="content-flu-yellow">
     <img src="output/images/fluoromax_yellow.png" alt="Yellow highlighter excitation and emission spectra" class="result-img">
+    <p>λ<sub>ex</sub> = **403 nm**, λ<sub>em</sub> = **512 nm**, Stokes shift **109 nm** — much larger than pure fluorescein's ~30 nm, confirming a perturbed xanthene variant. Spikes around 450–500 nm are Rayleigh scatter from the excitation beam bleeding into the detector.</p>
   </div>
   <div class="tab-content" id="content-flu-pink">
     <img src="output/images/fluoromax_pink.png" alt="Pink highlighter emission only" class="result-img">
+    <p>**Emission only** — excitation scan not collected (plan next session). λ<sub>em</sub> = **582 nm** near the 585 prediction; orange-red rhodamine glow. Broad tail toward longer wavelengths may indicate dimer formation — rhodamines self-quench above ~10 μM.</p>
   </div>
   <div class="tab-content" id="content-flu-salicylate">
     <img src="output/images/fluoromax_salicylate.png" alt="Salicylate excitation and emission spectra" class="result-img">
+    <p>**ESIPT in action.** λ<sub>ex</sub> = 301, λ<sub>em</sub> = 409 (both match predictions). Stokes shift **108 nm** — unusually large for a small aromatic. The fingerprint of excited-state intramolecular proton transfer: the excited state shuffles a proton from the ortho-OH to the carboxylate before emitting.</p>
   </div>
 </div>
 
-Seven FluoroMax PDFs (one per scan) record the full acquisition settings — wavelength ranges, slit widths, integration times, grating, detector. Each scan was vetted against the predicted λ<sub>ex</sub>/λ<sub>em</sub>:
+### Solvent NIR - Lambda 750
 
-| Sample | Scan | λ<sub>ex</sub> | λ<sub>em</sub> | Slits (ex / em) | Integration |
-|--------|------|----------------|----------------|-----------------|-------------|
-| quinine | em | park 347 | scan 200–800 | 5 nm / 5 nm | 0.1 s |
-| quinine | ex | scan 220–430 | park 450 | 1 nm / 1 nm | 1.0 s |
-| yellow HL | em | park 451 | scan 470–700 | 5 nm / 2 nm | 0.1 s |
-| yellow HL | ex | scan 220–495 | park 515 | 2 nm / 2 nm | 0.1 s |
-| pink HL | em | park 533 | scan 553–750 | 2 nm / 2 nm | 0.1 s |
-| salicylate | em | park 290 | scan 315–550 | 2 nm / 2 nm | 0.1 s |
-| salicylate | ex | scan 220–390 | park 410 | 2 nm / 2 nm | 0.1 s |
+<img src="output/images/lambda750_water.png" alt="Lambda 750 distilled water NIR spectrum" class="result-img">
 
-Settings vet:
-
-- **Mostly clean.** Defaults (2 nm slits, 0.1 s integration, 1200 g/mm grating, single-scan accumulation) applied to four of the seven scans.
-- **Quinine emission scan uses the full 200–800 nm range** — unusual. The region below 347 nm is below the excitation wavelength, so it captures Rayleigh scatter rather than emission. Not harmful, just wasteful; trim to 357–600 nm next session.
-- **Quinine excitation narrowed to 1 nm slits with 1 s integration** — higher resolution, dimmer signal, longer dwell. Deliberate trade-off; fine.
-- **Yellow HL λ<sub>ex</sub> park = 451 nm** vs the 488 nm prediction. Either the UV-2550 measured λ<sub>max</sub> at 451 (not 488) for this highlighter's fluorescein variant, or the operator mis-set the park. Cross-check against the UV-2550 yellow data.
-- **Pink HL excitation scan missing** — only emission was collected. Plan to run the excitation scan next session.
-- **Salicylate λ<sub>ex</sub> park = 290 nm** vs 300 predicted — within 10 nm; acceptable.
-
-Yellow highlighter shows a clean excitation/emission pair with a visible Stokes shift. Plots for quinine, pink, and salicylate forthcoming.
+Brief exploratory scan of distilled water — one pass on the PerkinElmer Lambda 750 (200–2500 nm), kept for reference. Not revisited. The 10 mm cuvette saturated the detector across most of the NIR, but you can still pick out where water's **O–H overtone bands** sit: the clustered absorption spikes line up with the expected 970 nm (2nd overtone), 1200 nm (combination), and 1450 nm (1st overtone). Beyond ~1500 nm the detector is fully pinned.
 
 <h2 id="extensions">Extensions</h2>
 
@@ -277,7 +268,7 @@ Yellow highlighter shows a clean excitation/emission pair with a visible Stokes 
 
 | Instrument | Extension | Description |
 |------------|-----------|-------------|
-| [PerkinElmer Lambda 750 UV/Vis/NIR Spectrophotometer](photos/setup/setup12.jpeg) 📷 | Range | Extend into near-infrared (200–2500 nm) for solvent overtones |
+| [PerkinElmer Lambda 750 UV/Vis/NIR Spectrophotometer](photos/setup/setup12.jpeg) 📷 | Range | More definition and extend into near-infrared (200–2500 nm) for solvent overtones |
 | [Jasco J-1500 CD Spectrometer](photos/setup/setup18.jpeg) 📷 | Chirality | Detect chiral molecules and protein secondary structure |
 
 </div>

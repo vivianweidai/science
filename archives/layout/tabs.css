@@ -97,22 +97,36 @@
 
 /* UV-Vis Spectroscopy: absorption tabs */
 #uv-overlay:checked ~ .tab-labels label[for="uv-overlay"],
-#uv-curcumin:checked ~ .tab-labels label[for="uv-curcumin"],
-#uv-yellow-neat:checked ~ .tab-labels label[for="uv-yellow-neat"],
-#uv-yellow-dilute:checked ~ .tab-labels label[for="uv-yellow-dilute"],
+#uv-baseline:checked ~ .tab-labels label[for="uv-baseline"],
+#uv-quinine:checked ~ .tab-labels label[for="uv-quinine"],
+#uv-yellow:checked ~ .tab-labels label[for="uv-yellow"],
 #uv-pink:checked ~ .tab-labels label[for="uv-pink"],
-#uv-greentea:checked ~ .tab-labels label[for="uv-greentea"],
 #uv-salicylate:checked ~ .tab-labels label[for="uv-salicylate"] {
   color: #5c7a10;
   border-bottom-color: #5c7a10;
   background: var(--subj-chem);
 }
 #uv-overlay:checked ~ #content-uv-overlay,
-#uv-curcumin:checked ~ #content-uv-curcumin,
-#uv-yellow-neat:checked ~ #content-uv-yellow-neat,
-#uv-yellow-dilute:checked ~ #content-uv-yellow-dilute,
+#uv-baseline:checked ~ #content-uv-baseline,
+#uv-quinine:checked ~ #content-uv-quinine,
+#uv-yellow:checked ~ #content-uv-yellow,
 #uv-pink:checked ~ #content-uv-pink,
-#uv-greentea:checked ~ #content-uv-greentea,
 #uv-salicylate:checked ~ #content-uv-salicylate {
+  display: block;
+}
+
+/* UV-Vis Spectroscopy: fluorescence tabs */
+#flu-quinine:checked ~ .tab-labels label[for="flu-quinine"],
+#flu-yellow:checked ~ .tab-labels label[for="flu-yellow"],
+#flu-pink:checked ~ .tab-labels label[for="flu-pink"],
+#flu-salicylate:checked ~ .tab-labels label[for="flu-salicylate"] {
+  color: #5c7a10;
+  border-bottom-color: #5c7a10;
+  background: var(--subj-chem);
+}
+#flu-quinine:checked ~ #content-flu-quinine,
+#flu-yellow:checked ~ #content-flu-yellow,
+#flu-pink:checked ~ #content-flu-pink,
+#flu-salicylate:checked ~ #content-flu-salicylate {
   display: block;
 }

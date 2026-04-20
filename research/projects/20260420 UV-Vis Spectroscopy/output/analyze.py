@@ -52,9 +52,9 @@ def load_fluoromax(path: Path) -> pd.DataFrame:
 UVVIS_SAMPLES = {
     # slug -> (display title, filename, (lo, hi) window for primary peak)
     "baseline":   ("Baseline — distilled water",                     "baseline.txt",                        (220, 750)),
-    "quinine":    ("Quinine — iteration 8 (final)",                  "quinine-drop-8.txt",                  (300, 450)),
-    "yellow":     ("Yellow highlighter — 1 drop / 3 mL water",       "yellow-drop-1.txt",                   (300, 600)),
-    "pink":       ("Pink highlighter — ⅙ drop / 3 mL water",         "pink-drop-onesixth.txt",              (400, 700)),
+    "quinine":    ("Quinine — 8 drops",                              "quinine-drop-8.txt",                  (300, 450)),
+    "yellow":     ("Yellow highlighter — 1 drop",                    "yellow-drop-1.txt",                   (300, 600)),
+    "pink":       ("Pink highlighter — ⅙ drop",                      "pink-drop-onesixth.txt",              (400, 700)),
     "salicylate": ("Salicylate — ⅙ drop further diluted ⅕",          "salicylate-drop-onesixth-onefifth.txt", (220, 500)),
 }
 
@@ -214,6 +214,36 @@ def plot_fluoromax():
     return results
 
 
+def plot_lambda750():
+    sample = pd.read_csv(DATA_LAMBDA / "sample.csv", names=["nm", "absorbance"], skiprows=1)
+    sample = sample.astype(float).sort_values("nm").reset_index(drop=True)
+    # Clip detector-pinned rows (A ≥ 9.9) to NaN for a readable scale.
+    sample.loc[sample.absorbance >= 9.9, "absorbance"] = np.nan
+
+    fig, ax = plt.subplots(figsize=(12, 5))
+    ax.plot(sample.nm, sample.absorbance, color=TRACE, linewidth=0.8, label="Distilled water")
+    ax.set_xlim(200, 2500)
+    ax.set_ylim(0, 3)
+    ax.set_xlabel("Wavelength (nm)")
+    ax.set_ylabel("Absorbance")
+    ax.spines[["top", "right"]].set_visible(False)
+    ax.grid(axis="y", alpha=0.3)
+
+    # Expected water NIR overtone bands.
+    for x, label in [(970, "2nd O–H\novertone"),
+                     (1200, "O–H\ncombination"),
+                     (1450, "1st O–H\novertone"),
+                     (1940, "combination\nband")]:
+        ax.axvline(x, color="#666", linestyle=":", linewidth=0.6, alpha=0.6)
+        ax.text(x, 2.85, label, fontsize=7, color="#555", ha="center", va="top")
+
+    ax.set_title("Distilled water — Lambda 750 NIR scan")
+    ax.legend(loc="upper left", fontsize=8)
+    plt.tight_layout()
+    fig.savefig(IMG / "lambda750_water.png", dpi=300, bbox_inches="tight")
+    plt.close(fig)
+
+
 def main():
     records = []
     for slug, (title, fname, window) in UVVIS_SAMPLES.items():
@@ -231,6 +261,9 @@ def main():
     print("\nFluoroMax-3:")
     for slug, peaks in fluo.items():
         print(f"  {slug}: {peaks}")
+
+    plot_lambda750()
+    print("\nLambda 750: water NIR scan plotted")
 
 
 if __name__ == "__main__":
