@@ -3,32 +3,20 @@ layout: project
 html_lang: zh
 project: 猫粮颜色偏好
 photos:
-  - /research/projects/20250225 Catfood/photos/20240901 Catfood A.jpeg
-  - /research/projects/20250225 Catfood/photos/20240901 Catfood B.jpeg
-  - /research/projects/20250225 Catfood/photos/20240901 Catfood C.jpeg
-  - /research/projects/20250225 Catfood/photos/20240901 Catfood D.jpeg
-  - /research/projects/20250225 Catfood/photos/20240906 Catfood.jpeg
-  - /research/projects/20250225 Catfood/photos/20240907 Catfood A.jpeg
-  - /research/projects/20250225 Catfood/photos/20240907 Catfood B.jpeg
-  - /research/projects/20250225 Catfood/photos/20240920 Catfood A.jpeg
-  - /research/projects/20250225 Catfood/photos/20240920 Catfood B.jpeg
-  - /research/projects/20250225 Catfood/photos/20240920 Catfood C.jpeg
-  - /research/projects/20250225 Catfood/photos/20240920 Catfood D.jpeg
-  - /research/projects/20250225 Catfood/photos/20240920 Catfood E.jpeg
-  - /research/projects/20250225 Catfood/photos/20240920 Catfood F.jpeg
-  - /research/projects/20250225 Catfood/photos/20240920 Catfood G.jpeg
-  - /research/projects/20250225 Catfood/photos/20240920 Catfood H.jpeg
-  - /research/projects/20250225 Catfood/photos/20240920 Catfood I.jpeg
-  - /research/projects/20250225 Catfood/photos/20240920 Catfood J.jpeg
-  - /research/projects/20250225 Catfood/photos/20240920 Catfood K.jpeg
-  - /research/projects/20250225 Catfood/photos/20240920 Catfood L.jpeg
-  - /research/projects/20250225 Catfood/photos/20240920 Catfood M.jpeg
-  - /research/projects/20250225 Catfood/photos/20240923 Catfood A.jpeg
-  - /research/projects/20250225 Catfood/photos/20240923 Catfood B.jpeg
+  - /research/projects/20250225 Catfood/photos/setup/setup1.jpeg
+  - /research/projects/20250225 Catfood/photos/setup/setup2.jpeg
+  - /research/projects/20250225 Catfood/photos/setup/setup3.jpeg
+  - /research/projects/20250225 Catfood/photos/setup/setup4.jpeg
+  - /research/projects/20250225 Catfood/photos/setup/setup5.jpeg
+  - /research/projects/20250225 Catfood/photos/setup/setup6.jpeg
+  - /research/projects/20250225 Catfood/photos/setup/setup7.jpeg
+  - /research/projects/20250225 Catfood/photos/setup/setup8.jpeg
+  - /research/projects/20250225 Catfood/photos/setup/setup9.jpeg
+  - /research/projects/20250225 Catfood/photos/setup/setup10.jpeg
 data_photos:
-  - /research/projects/20250225 Catfood/data/20240901 Catfood B.jpeg
-  - /research/projects/20250225 Catfood/data/20240907 Catfood B.jpeg
-  - /research/projects/20250225 Catfood/data/20240920 Catfood N.jpeg
+  - /research/projects/20250225 Catfood/photos/data/data1.jpeg
+  - /research/projects/20250225 Catfood/photos/data/data2.jpeg
+  - /research/projects/20250225 Catfood/photos/data/data3.jpeg
 ---
 
 <div class="page-header"><h2>研究</h2><div class="header-nav"><a href="/archives/chinese/curriculum/">课程</a><a href="/archives/chinese/olympiads/">竞赛</a><a class="active" href="/archives/chinese/research/">研究</a></div></div>

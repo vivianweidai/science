@@ -21,6 +21,8 @@ photos:
   - /research/projects/20260420 UV-Vis Spectroscopy/photos/setup/setup16.jpeg
   - /research/projects/20260420 UV-Vis Spectroscopy/photos/setup/setup17.jpeg
   - /research/projects/20260420 UV-Vis Spectroscopy/photos/setup/setup18.jpeg
+  - /research/projects/20260420 UV-Vis Spectroscopy/photos/setup/setup19.jpeg
+  - /research/projects/20260420 UV-Vis Spectroscopy/photos/setup/setup20.jpeg
   - /research/projects/20260420 UV-Vis Spectroscopy/photos/samples/samples1.jpeg
   - /research/projects/20260420 UV-Vis Spectroscopy/photos/samples/samples2.jpeg
   - /research/projects/20260420 UV-Vis Spectroscopy/photos/samples/samples3.jpeg
@@ -225,33 +227,38 @@ photos:
 
 <div class="tabs">
   <input type="radio" name="uv-tab" id="uv-overlay" checked>
-  <input type="radio" name="uv-tab" id="uv-curcumin">
-  <input type="radio" name="uv-tab" id="uv-yellow-neat">
+  <input type="radio" name="uv-tab" id="uv-baseline">
+  <input type="radio" name="uv-tab" id="uv-quinine">
+  <input type="radio" name="uv-tab" id="uv-yellow">
   <input type="radio" name="uv-tab" id="uv-pink">
-  <input type="radio" name="uv-tab" id="uv-greentea">
+  <input type="radio" name="uv-tab" id="uv-salicylate">
 
   <div class="tab-labels">
     <label for="uv-overlay">叠加</label>
-    <label for="uv-curcumin">姜黄素</label>
-    <label for="uv-yellow-neat">黄色荧光笔</label>
+    <label for="uv-baseline">基线</label>
+    <label for="uv-quinine">奎宁</label>
+    <label for="uv-yellow">黄色荧光笔</label>
     <label for="uv-pink">粉色荧光笔</label>
-    <label for="uv-greentea">绿茶</label>
+    <label for="uv-salicylate">水杨酸</label>
   </div>
 
   <div class="tab-content" id="content-uv-overlay">
     <img src="/research/projects/20260420 UV-Vis Spectroscopy/output/images/uvvis_overlay.png" alt="UV-Vis 叠加" class="result-img">
   </div>
-  <div class="tab-content" id="content-uv-curcumin">
-    <img src="/research/projects/20260420 UV-Vis Spectroscopy/output/images/uvvis_curcumin.png" alt="姜黄素 UV-Vis 光谱" class="result-img">
+  <div class="tab-content" id="content-uv-baseline">
+    <img src="/research/projects/20260420 UV-Vis Spectroscopy/output/images/uvvis_baseline.png" alt="蒸馏水基线" class="result-img">
   </div>
-  <div class="tab-content" id="content-uv-yellow-neat">
-    <img src="/research/projects/20260420 UV-Vis Spectroscopy/output/images/uvvis_yellow_neat.png" alt="黄色荧光笔 UV-Vis 光谱" class="result-img">
+  <div class="tab-content" id="content-uv-quinine">
+    <img src="/research/projects/20260420 UV-Vis Spectroscopy/output/images/uvvis_quinine.png" alt="奎宁 UV-Vis 光谱" class="result-img">
+  </div>
+  <div class="tab-content" id="content-uv-yellow">
+    <img src="/research/projects/20260420 UV-Vis Spectroscopy/output/images/uvvis_yellow.png" alt="黄色荧光笔 UV-Vis 光谱" class="result-img">
   </div>
   <div class="tab-content" id="content-uv-pink">
     <img src="/research/projects/20260420 UV-Vis Spectroscopy/output/images/uvvis_pink.png" alt="粉色荧光笔 UV-Vis 光谱" class="result-img">
   </div>
-  <div class="tab-content" id="content-uv-greentea">
-    <img src="/research/projects/20260420 UV-Vis Spectroscopy/output/images/uvvis_greentea.png" alt="绿茶 UV-Vis 光谱" class="result-img">
+  <div class="tab-content" id="content-uv-salicylate">
+    <img src="/research/projects/20260420 UV-Vis Spectroscopy/output/images/uvvis_salicylate.png" alt="水杨酸 UV-Vis 光谱" class="result-img">
   </div>
 </div>
 

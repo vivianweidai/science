@@ -10,9 +10,9 @@ photos:
   - /research/projects/20260405 Melting Point/photos/20260405 Setup E.jpeg
   - /research/projects/20260405 Melting Point/photos/20260405 Setup F.jpeg
   - /research/projects/20260405 Melting Point/photos/20260405 Setup G.jpeg
-  - /research/projects/20260405 Melting Point/photos/20260405 Samples A.jpeg
-  - /research/projects/20260405 Melting Point/photos/20260405 Samples B.jpeg
-  - /research/projects/20260405 Melting Point/photos/20260405 Samples C.jpeg
+  - /research/projects/20260405 Melting Point/photos/samples/samples1.jpeg
+  - /research/projects/20260405 Melting Point/photos/samples/samples2.jpeg
+  - /research/projects/20260405 Melting Point/photos/samples/samples3.jpeg
 ---
 
 <div class="page-header"><h2>研究</h2><div class="header-nav"><a href="/archives/chinese/curriculum/">课程</a><a href="/archives/chinese/olympiads/">竞赛</a><a class="active" href="/archives/chinese/research/">研究</a></div></div>
@@ -50,7 +50,7 @@ photos:
 
 ## 样品
 
-<div class="hero-single"><img src="/research/projects/20260405 Melting Point/photos/20260405 Samples A.jpeg" alt="标记为CAF1–3和MP1–3的毛细管"></div>
+<div class="hero-single"><img src="/research/projects/20260405 Melting Point/photos/samples/samples1.jpeg" alt="标记为CAF1–3和MP1–3的毛细管"></div>
 
 样品被研磨成细粉并装入玻璃毛细管中（约2–3 mm填充高度）。每种化合物制备三个平行样（CAF 1–3, ASP 1–3）以便取平均值并评估重复性。毛细管标记后插入OptiMelt样品室。
 

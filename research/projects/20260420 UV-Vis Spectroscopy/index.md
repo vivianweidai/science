@@ -169,6 +169,8 @@ Each sample goes straight from the UV-2550 into the FluoroMax using the final in
 
 Water-solvent samples only this session — ethanol block (curcumin, green tea) deferred to a later run. Raw files live under <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260420%20UV-Vis%20Spectroscopy/data">data</a>. Iterative-dilution filenames preserve the full convergence sequence for each sample in the attempt to land in the 0.3–0.8 A sweet spot. The PDF files retain the machine settings used for the scans.
 
+All UV-Vis, fluorescence, and Lambda 750 plots were generated from the raw data using Python libraries in the analysis <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb">colab</a>.
+
 ## Results
 
 ### UV-Vis Absorption - UV-2550

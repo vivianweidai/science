@@ -8,7 +8,7 @@ project: 太空基因
 
 # 喵向火星 — 太空会帮助还是伤害Mi的心脏？
 
-<div class="hero-single"><img src="/research/projects/20260401 Genes in Space/photos/mi.jpeg" alt="宇航员猫Mi" style="object-position: center 70%;"></div>
+<div class="hero-single"><img src="/research/projects/20260401 Genes in Space/photos/photo.jpeg" alt="宇航员猫Mi" style="object-position: center 70%;"></div>
 
 **微重力环境下的肌节基因**
 

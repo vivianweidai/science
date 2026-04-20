@@ -17,9 +17,6 @@ photos:
   - /research/projects/20260419 IR Spectroscopy/photos/setup/setup12.jpeg
   - /research/projects/20260419 IR Spectroscopy/photos/setup/setup13.jpeg
   - /research/projects/20260419 IR Spectroscopy/photos/setup/setup14.jpeg
-  - /research/projects/20260419 IR Spectroscopy/photos/setup/setup15.jpeg
-  - /research/projects/20260419 IR Spectroscopy/photos/setup/setup16.jpeg
-  - /research/projects/20260419 IR Spectroscopy/photos/setup/setup17.jpeg
   - /research/projects/20260419 IR Spectroscopy/photos/samples/samples1.jpeg
   - /research/projects/20260419 IR Spectroscopy/photos/samples/samples2.jpeg
 ---
@@ -60,7 +57,7 @@ photos:
 
 ## 样品
 
-<div class="hero-single"><img src="/research/projects/20260419 IR Spectroscopy/photos/20260404 Samples B.jpeg" alt="样品"></div>
+<div class="hero-single"><img src="/research/projects/20260419 IR Spectroscopy/photos/samples/samples2.jpeg" alt="样品"></div>
 
 | 类别 | 样品 |
 |------|------|

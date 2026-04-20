@@ -55,3 +55,29 @@ Pending instrument repair. Expected deliverables when data is available:
 - Temperature-time curves from the OptiMelt software
 
 This project connects to the broader thermal analysis series — the next steps are thermogravimetric analysis (TGA) on the TA Instruments TGA Q50 and differential scanning calorimetry (DSC) on the TA Instruments DSC Q20.
+
+<h2 id="extensions">Extensions</h2>
+
+<div class="photo-grid" style="grid-template-columns: repeat(3, 1fr);">
+  <img src="/research/archives/photos/chemistry-dsc-q20.jpg" alt="TA Instruments DSC Q20">
+  <img src="/research/archives/photos/chemistry-dsc-q100.jpg" alt="TA Instruments DSC Q100">
+  <img src="/research/archives/photos/chemistry-tga-q50.jpg" alt="TA Instruments TGA Q50">
+  <img src="/research/archives/photos/chemistry-tzero-press.jpg" alt="TA Instruments Tzero Sample Encapsulation Press">
+  <img src="/research/archives/photos/chemistry-cem-discover.jpg" alt="CEM Discover Microwave Reactor">
+  <img src="/research/archives/photos/chemistry-hughes-welder.jpg" alt="Hughes Aircraft HRW 250B">
+</div>
+
+<style>.instrument-table.no-highlight tbody tr td { background: transparent; }</style>
+
+<div class="instrument-table no-highlight" markdown="1">
+
+| Instrument | Extension | Description |
+|------------|-----------|-------------|
+| [TA Instruments DSC Q20](/research/archives/photos/chemistry-dsc-q20.jpg) 📷 | Energy | Heat of fusion, not just T<sub>melt</sub> |
+| [TA Instruments DSC Q100](/research/archives/photos/chemistry-dsc-q100.jpg) 📷 | Modulation | Reversing vs non-reversing heat flow (MDSC) |
+| [TA Instruments TGA Q50](/research/archives/photos/chemistry-tga-q50.jpg) 📷 | Mass | Continuous weight vs temperature |
+| [TA Instruments Tzero Sample Encapsulation Press](/research/archives/photos/chemistry-tzero-press.jpg) 📷 | Prep | Seals DSC pans |
+| [CEM Discover Microwave Reactor](/research/archives/photos/chemistry-cem-discover.jpg) 📷 | Synthesis | Microwave-driven elevated-T/P reactions |
+| [Hughes Aircraft HRW 250B](/research/archives/photos/chemistry-hughes-welder.jpg) 📷 | Repair | Welds new thermocouple tips |
+
+</div>

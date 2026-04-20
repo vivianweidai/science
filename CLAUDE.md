@@ -8,12 +8,12 @@ Process experimental data and build reproducible analysis pipelines. Parse raw i
 
 All background materials now live in the repo under `research/archives/`. Read these as needed for instrument details, context, and research planning:
 
-- **`research/archives/toys/`** — canonical instrument list (`toys.pdf`), plus technology landscape, UNR/UBC lab and faculty catalogues, and the university comparison.
+- **`research/archives/technology/`** — canonical instrument list (`toys.pdf`), plus technology landscape, UNR/UBC lab and faculty catalogues, and the university comparison.
 - **`research/archives/guides/`** — instrument walk-up guides (one PDF per instrument, e.g. `Thermo Scientific Nicolet 380 FT-IR Spectrometer.pdf`).
 - **`research/archives/papers/`** — classic papers (Turing, Rosenblatt, Hubel & Wiesel, Q-Learning, Transformers, AlphaGo, etc.).
 - **`research/archives/photos/`** — reference photos.
 
-All instrument names in code and prose must exactly match what's in `research/archives/toys/toys.pdf`.
+All instrument names in code and prose must exactly match what's in `research/archives/technology/toys.pdf`.
 
 ## REPO STRUCTURE
 
@@ -28,7 +28,7 @@ science/
 ├── research/               # Research projects
 │   ├── index.md            # Research landing with tabbed project table
 │   ├── archives/           # Background reference materials (see REFERENCE MATERIALS)
-│   │   ├── toys/           # Instrument list, lab/faculty catalogues
+│   │   ├── technology/     # Instrument list, lab/faculty catalogues
 │   │   ├── guides/         # Instrument walk-up guides
 │   │   ├── papers/         # Classic papers
 │   │   └── photos/         # Reference photos

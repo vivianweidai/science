@@ -67,7 +67,7 @@ The Nicolet 380 applies background correction automatically — non-absorbing re
 2. **Convert to absorbance** — transmittance was converted using A = −log₁₀(T/100), where T is transmittance in percent. Absorbance is dimensionless and directly proportional to concentration via the Beer-Lambert law.
 3. **Export** — all 21 samples were saved as individual cleaned CSVs with headers (wavenumber, transmittance, absorbance) into a single <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260419%20IR%20Spectroscopy/output/scrubbed">scrubbed</a> folder.
 
-All spectra plots, peak identification, and category overlays were generated from the cleaned data using Python libraries in the analysis <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">notebook</a> and reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">colab</a>.
+All spectra plots, peak identification, and category overlays were generated from the cleaned data using Python libraries in the analysis <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">colab</a>.
 
 ## Results
 
@@ -228,9 +228,9 @@ All spectra plots, peak identification, and category overlays were generated fro
 <h2 id="extensions">Extensions</h2>
 
 <div class="photo-grid three-col">
-  <img src="photos/setup/setup12.jpeg" alt="Bruker Tensor 27 Hyperion FT-IR Microscope">
+  <img src="photos/setup/setup14.jpeg" alt="Bruker Tensor 27 Hyperion FT-IR Microscope">
   <img src="photos/setup/setup9.jpeg" alt="Mettler Toledo ReactIR iC10">
-  <img src="photos/setup/setup17.jpeg" alt="Renishaw inVia Raman Microscope">
+  <img src="photos/setup/setup13.jpeg" alt="Renishaw inVia Raman Microscope">
 </div>
 
 
@@ -240,8 +240,8 @@ All spectra plots, peak identification, and category overlays were generated fro
 
 | Instrument | Extension | Description |
 |------------|------|-------------|
-| [Bruker Tensor 27 Hyperion FT-IR Microscope](photos/setup/setup12.jpeg) 📷 | Space | Scan IR spectrum at microscopic spot |
+| [Bruker Tensor 27 Hyperion FT-IR Microscope](photos/setup/setup14.jpeg) 📷 | Space | Scan IR spectrum at microscopic spot |
 | [Mettler Toledo ReactIR iC10](photos/setup/setup9.jpeg) 📷 | Time | Produce IR spectrum as reaction proceeds |
-| [Renishaw inVia Raman Microscope](photos/setup/setup17.jpeg) 📷 | Chemistry | Detect non-polar bonds |
+| [Renishaw inVia Raman Microscope](photos/setup/setup13.jpeg) 📷 | Chemistry | Detect non-polar bonds |
 
 </div>

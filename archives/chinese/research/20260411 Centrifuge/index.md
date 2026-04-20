@@ -3,18 +3,18 @@ layout: project
 html_lang: zh
 project: 离心分离
 photos:
-  - /research/projects/20260411 Centrifuge/photos/sample1.jpeg
-  - /research/projects/20260411 Centrifuge/photos/sample2.jpeg
-  - /research/projects/20260411 Centrifuge/photos/sample3.jpeg
-  - /research/projects/20260411 Centrifuge/photos/sample4.jpeg
-  - /research/projects/20260411 Centrifuge/photos/sample5.jpeg
-  - /research/projects/20260411 Centrifuge/photos/sample6.jpeg
-  - /research/projects/20260411 Centrifuge/photos/sample7.jpeg
-  - /research/projects/20260411 Centrifuge/photos/sample8.jpeg
-  - /research/projects/20260411 Centrifuge/photos/sample9.jpeg
-  - /research/projects/20260411 Centrifuge/photos/sample10.jpeg
-  - /research/projects/20260411 Centrifuge/photos/sample11.jpeg
-  - /research/projects/20260411 Centrifuge/photos/sample12.jpeg
+  - /research/projects/20260411 Centrifuge/photos/samples/samples1.jpeg
+  - /research/projects/20260411 Centrifuge/photos/samples/samples2.jpeg
+  - /research/projects/20260411 Centrifuge/photos/samples/samples3.jpeg
+  - /research/projects/20260411 Centrifuge/photos/samples/samples4.jpeg
+  - /research/projects/20260411 Centrifuge/photos/samples/samples5.jpeg
+  - /research/projects/20260411 Centrifuge/photos/samples/samples6.jpeg
+  - /research/projects/20260411 Centrifuge/photos/samples/samples7.jpeg
+  - /research/projects/20260411 Centrifuge/photos/samples/samples8.jpeg
+  - /research/projects/20260411 Centrifuge/photos/samples/samples9.jpeg
+  - /research/projects/20260411 Centrifuge/photos/samples/samples10.jpeg
+  - /research/projects/20260411 Centrifuge/photos/samples/samples11.jpeg
+  - /research/projects/20260411 Centrifuge/photos/samples/samples12.jpeg
   - /research/projects/20260411 Centrifuge/photos/data1.jpeg
   - /research/projects/20260411 Centrifuge/photos/data2.jpeg
   - /research/projects/20260411 Centrifuge/photos/data3.jpeg
@@ -88,7 +88,7 @@ photos:
 
 ## 样品
 
-<div class="hero-single"><img src="/research/projects/20260411 Centrifuge/photos/sample1.jpeg" alt="五个标记的Sarstedt试管：可乐、牛奶、酸奶、苹果醋、蜂蜜"></div>
+<div class="hero-single"><img src="/research/projects/20260411 Centrifuge/photos/samples/samples1.jpeg" alt="五个标记的Sarstedt试管：可乐、牛奶、酸奶、苹果醋、蜂蜜"></div>
 
 五种日常液体被装入标记的50 mL离心管。每个样品先涡旋混匀，然后离心。离心前将VWR电极直接插入样品中测量一次pH值。
 
@@ -115,7 +115,7 @@ pH读数从VWR pHenomenal pH 1100 L显示屏的照片中记录。实验室中还
 
 ## 结果
 
-<div class="hero-single"><img src="/research/projects/20260411 Centrifuge/photos/sample8.jpeg" alt="四个标记的Sarstedt试管：1-牛奶 2-酸奶 3-苹果醋 4-牛奶+醋"></div>
+<div class="hero-single"><img src="/research/projects/20260411 Centrifuge/photos/samples/samples8.jpeg" alt="四个标记的Sarstedt试管：1-牛奶 2-酸奶 3-苹果醋 4-牛奶+醋"></div>
 
 四个样品被放入Thermo Scientific Sorvall RT3离心机中平衡转子（<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data16.jpeg">数据16</a>和<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data17.jpeg">数据17</a>）。离心后观察到明显分离：
 
