@@ -13,6 +13,7 @@
 #           specs:        string — key specs                          (required)
 #           available:    true                                        (optional)
 #           completed:    "YYYYMMDD Project Name"                     (optional — links to project page)
+#           extension_of: "YYYYMMDD Project Name"                     (optional — links to that project's #extensions section, for second-tier toys documented but not yet run)
 #           url:          string — external URL                       (optional — links toy name to any URL)
 
 # ═══════════════════════════════════════════════════════════════
@@ -156,81 +157,56 @@
 # ═══════════════════════════════════════════════════════════════
 
 - science: Chemistry
-  topic: Spectroscopy
-  description: Probe intact molecules with electromagnetic waves
+  topic: Spectroscopic
+  description: Probe intact molecules — electromagnetic, magnetic and mass spectra
   technologies:
-    - technology: Vibrational
-      description: Which bonds
+    - technology: Molecular Spectroscopy
+      description: Absorb EM radiation — vibrational, electronic and nuclear transitions
       toys:
         - toy: IR Spectrometer
           specs: Polar bonds — functional-group fingerprints
           available: true
           completed: "20260415 IR Spectroscopy"
-        - toy: Raman Microscope
-          specs: Nonpolar bonds — aromatic rings and C=C
-          url: /research/archives/photos/chemistry-raman-microscope.jpg
-    - technology: Electronic
-      description: Color and excited states
-      toys:
-        - toy: Spectrophotometer
-          specs: Absorption — concentration and conjugation
+        - toy: UV-Vis Spectrometer
+          specs: UV-Vis absorption — concentration and conjugation
           available: true
           completed: "20260417 UV-Vis Spectroscopy"
-        - toy: Spectrofluorometer
-          specs: Emission — excited-state lifetimes and yields
-          available: true
-          completed: "20260417 UV-Vis Spectroscopy"
-    - technology: Chiroptical
-      description: Chirality
-      toys:
-        - toy: CD Spectrometer
-          specs: Wavelength-resolved — secondary structure of proteins
-          available: true
-          url: /research/archives/photos/chemistry-cd-spectrometer.jpg
-        - toy: Polarimeter
-          specs: Single rotation angle — chiral purity of one sample
-          available: true
-- science: Chemistry
-  topic: Analytical
-  description: Separate, weigh and characterize mixtures
-  technologies:
-    - technology: Chromatography
-      description: Separate components
-      toys:
-        - toy: Thin Layer
-          specs: Cheap visual check — silica plate under UV
-        - toy: Liquid
-          specs: High-resolution separation in solution — UV detection
-          available: true
-          url: /research/archives/photos/chemistry-hplc.jpg
-        - toy: Gas
-          specs: Volatile compounds in the gas phase — flame ionization
-          available: true
-          url: /research/archives/photos/chemistry-gc-ms.jpg
+        - toy: NMR Spectrometer
+          specs: Chemical shifts and couplings — full structural fingerprint
+          url: /research/archives/photos/chemistry-nmr.jpg
     - technology: Mass Spectrometry
       description: Measure molecular mass
       toys:
-        - toy: Gas
+        - toy: GC-MS
           specs: Volatile molecules — fragment fingerprints via electron ionization
           available: true
           url: /research/archives/photos/chemistry-gc-ms.jpg
-        - toy: Liquid
+        - toy: LC-MS
           specs: Nonvolatile molecules — intact weight via electrospray
           available: true
-        - toy: Laser
-          specs: Polymers and biomolecules — laser desorption from solid matrix
+          url: /research/archives/photos/chemistry-lc-ms.jpg
+- science: Chemistry
+  topic: Physical
+  description: Separate, scatter and transform — non-spectroscopic characterization
+  technologies:
+    - technology: Separation
+      description: Pull mixtures apart — by phase partitioning or electric field
+      toys:
+        - toy: Liquid Chromatography
+          specs: Partition in solution — HPLC workhorse for analytical separations
           available: true
-          url: /research/archives/photos/chemistry-maldi.jpg
-        - toy: Plasma
-          specs: Individual atoms — trace elements at parts-per-billion
-          available: true
+          url: /research/archives/photos/chemistry-hplc.jpg
+        - toy: Gel Electrophoresis
+          specs: Migration in an electric field — DNA and protein size separation
+    - technology: Diffraction
+      description: Scatter X-rays off a crystal lattice — atomic-level structure
+      toys:
+        - toy: X-Ray Diffraction
+          specs: Phase identification — fingerprint crystalline materials by peak positions
+          url: /research/archives/photos/chemistry-xrd.jpg
     - technology: Thermal Analysis
       description: Watch samples change with heat
       toys:
-        - toy: Melting Point
-          specs: Identity and purity from melting temperature
-          available: true
-          completed: "20260405 Melting Point"
         - toy: Thermogravimetry
           specs: Mass loss with heating — decomposition and moisture
           available: true

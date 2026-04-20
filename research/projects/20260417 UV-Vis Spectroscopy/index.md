@@ -238,3 +238,16 @@ One pass per solvent, 800–2500 nm — the range no other instrument reaches. W
 ### Solvent - Lambda 750
 
 *Forthcoming.*
+
+<h2 id="extensions">Extensions</h2>
+
+Adjacent electronic / chiroptical spectroscopy instruments — same UV-Vis wavelength range, different what-they-measure. None were run for this project.
+
+<div class="instrument-table" markdown="1">
+
+| Instrument | Extends | Why it would be added |
+|------------|---------|------------------------|
+| Thermo Scientific Evolution 220 UV-Vis Spectrophotometer | Alternative bench UV-Vis (single-monochromator, NIR reach to 1100 nm) | Newer mid-range instrument; reaches 200 nm further into the NIR than the Shimadzu UV-2550 (cap 900 nm) but with higher stray light. Cross-check option when the UV-2550 is busy or for samples with weak NIR features |
+| CD Spectrometer | UV-Vis variant with circularly polarized light | Measures differential absorption of left- vs right-circularly polarized UV — reveals protein secondary structure (α-helix vs β-sheet) and chirality, which plain UV-Vis absorption cannot distinguish |
+
+</div>

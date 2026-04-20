@@ -275,13 +275,13 @@
       "id": 7,
       "science": "Chemistry",
       "science_slug": "chem",
-      "topic": "Spectroscopy",
-      "description": "Probe intact molecules with electromagnetic waves",
+      "topic": "Spectroscopic",
+      "description": "Probe intact molecules — electromagnetic, magnetic and mass spectra",
       "technologies": [
         {
           "id": 13,
-          "technology": "Vibrational",
-          "description": "Which bonds",
+          "technology": "Molecular Spectroscopy",
+          "description": "Absorb EM radiation — vibrational, electronic and nuclear transitions",
           "toys": [
             {
               "id": 22,
@@ -293,53 +293,39 @@
             },
             {
               "id": 23,
-              "toy": "Raman Microscope",
-              "specs": "Nonpolar bonds — aromatic rings and C=C",
+              "toy": "UV-Vis Spectrometer",
+              "specs": "UV-Vis absorption — concentration and conjugation",
+              "available": 1,
+              "completed": "20260417 UV-Vis Spectroscopy",
+              "project_url": "/research/projects/20260417%20UV-Vis%20Spectroscopy/"
+            },
+            {
+              "id": 24,
+              "toy": "NMR Spectrometer",
+              "specs": "Chemical shifts and couplings — full structural fingerprint",
               "available": 0,
-              "url": "/research/archives/photos/chemistry-raman-microscope.jpg"
+              "url": "/research/archives/photos/chemistry-nmr.jpg"
             }
           ]
         },
         {
           "id": 14,
-          "technology": "Electronic",
-          "description": "Color and excited states",
+          "technology": "Mass Spectrometry",
+          "description": "Measure molecular mass",
           "toys": [
-            {
-              "id": 24,
-              "toy": "Spectrophotometer",
-              "specs": "Absorption — concentration and conjugation",
-              "available": 1,
-              "completed": "20260417 UV-Vis Spectroscopy",
-              "project_url": "/research/projects/20260417%20UV-Vis%20Spectroscopy/"
-            },
             {
               "id": 25,
-              "toy": "Spectrofluorometer",
-              "specs": "Emission — excited-state lifetimes and yields",
+              "toy": "GC-MS",
+              "specs": "Volatile molecules — fragment fingerprints via electron ionization",
               "available": 1,
-              "completed": "20260417 UV-Vis Spectroscopy",
-              "project_url": "/research/projects/20260417%20UV-Vis%20Spectroscopy/"
-            }
-          ]
-        },
-        {
-          "id": 15,
-          "technology": "Chiroptical",
-          "description": "Chirality",
-          "toys": [
-            {
-              "id": 26,
-              "toy": "CD Spectrometer",
-              "specs": "Wavelength-resolved — secondary structure of proteins",
-              "available": 1,
-              "url": "/research/archives/photos/chemistry-cd-spectrometer.jpg"
+              "url": "/research/archives/photos/chemistry-gc-ms.jpg"
             },
             {
-              "id": 27,
-              "toy": "Polarimeter",
-              "specs": "Single rotation angle — chiral purity of one sample",
-              "available": 1
+              "id": 26,
+              "toy": "LC-MS",
+              "specs": "Nonvolatile molecules — intact weight via electrospray",
+              "available": 1,
+              "url": "/research/archives/photos/chemistry-lc-ms.jpg"
             }
           ]
         }
@@ -349,91 +335,57 @@
       "id": 8,
       "science": "Chemistry",
       "science_slug": "chem",
-      "topic": "Analytical",
-      "description": "Separate, weigh and characterize mixtures",
+      "topic": "Physical",
+      "description": "Separate, scatter and transform — non-spectroscopic characterization",
       "technologies": [
         {
-          "id": 16,
-          "technology": "Chromatography",
-          "description": "Separate components",
+          "id": 15,
+          "technology": "Separation",
+          "description": "Pull mixtures apart — by phase partitioning or electric field",
           "toys": [
             {
-              "id": 28,
-              "toy": "Thin Layer",
-              "specs": "Cheap visual check — silica plate under UV",
-              "available": 0
-            },
-            {
-              "id": 29,
-              "toy": "Liquid",
-              "specs": "High-resolution separation in solution — UV detection",
+              "id": 27,
+              "toy": "Liquid Chromatography",
+              "specs": "Partition in solution — HPLC workhorse for analytical separations",
               "available": 1,
               "url": "/research/archives/photos/chemistry-hplc.jpg"
             },
             {
-              "id": 30,
-              "toy": "Gas",
-              "specs": "Volatile compounds in the gas phase — flame ionization",
-              "available": 1,
-              "url": "/research/archives/photos/chemistry-gc-ms.jpg"
+              "id": 28,
+              "toy": "Gel Electrophoresis",
+              "specs": "Migration in an electric field — DNA and protein size separation",
+              "available": 0
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "technology": "Diffraction",
+          "description": "Scatter X-rays off a crystal lattice — atomic-level structure",
+          "toys": [
+            {
+              "id": 29,
+              "toy": "X-Ray Diffraction",
+              "specs": "Phase identification — fingerprint crystalline materials by peak positions",
+              "available": 0,
+              "url": "/research/archives/photos/chemistry-xrd.jpg"
             }
           ]
         },
         {
           "id": 17,
-          "technology": "Mass Spectrometry",
-          "description": "Measure molecular mass",
-          "toys": [
-            {
-              "id": 31,
-              "toy": "Gas",
-              "specs": "Volatile molecules — fragment fingerprints via electron ionization",
-              "available": 1,
-              "url": "/research/archives/photos/chemistry-gc-ms.jpg"
-            },
-            {
-              "id": 32,
-              "toy": "Liquid",
-              "specs": "Nonvolatile molecules — intact weight via electrospray",
-              "available": 1
-            },
-            {
-              "id": 33,
-              "toy": "Laser",
-              "specs": "Polymers and biomolecules — laser desorption from solid matrix",
-              "available": 1,
-              "url": "/research/archives/photos/chemistry-maldi.jpg"
-            },
-            {
-              "id": 34,
-              "toy": "Plasma",
-              "specs": "Individual atoms — trace elements at parts-per-billion",
-              "available": 1
-            }
-          ]
-        },
-        {
-          "id": 18,
           "technology": "Thermal Analysis",
           "description": "Watch samples change with heat",
           "toys": [
             {
-              "id": 35,
-              "toy": "Melting Point",
-              "specs": "Identity and purity from melting temperature",
-              "available": 1,
-              "completed": "20260405 Melting Point",
-              "project_url": "/research/projects/20260405%20Melting%20Point/"
-            },
-            {
-              "id": 36,
+              "id": 30,
               "toy": "Thermogravimetry",
               "specs": "Mass loss with heating — decomposition and moisture",
               "available": 1,
               "url": "/research/archives/photos/chemistry-tga.jpg"
             },
             {
-              "id": 37,
+              "id": 31,
               "toy": "Calorimetry",
               "specs": "Energy flow with heating — phase transitions and heat capacity",
               "available": 1,
@@ -451,12 +403,12 @@
       "description": "Read and write DNA and proteins",
       "technologies": [
         {
-          "id": 19,
+          "id": 18,
           "technology": "Amplification",
           "description": "Copy DNA for detection",
           "toys": [
             {
-              "id": 38,
+              "id": 32,
               "toy": "PCR",
               "specs": "Endpoint amplification — cycle temperature until enough copies exist",
               "available": 0,
@@ -464,7 +416,7 @@
               "project_url": "/research/projects/20260401%20Genes%20in%20Space/"
             },
             {
-              "id": 39,
+              "id": 33,
               "toy": "qPCR",
               "specs": "Real-time quantitation — count copies as they are made",
               "available": 0
@@ -472,18 +424,18 @@
           ]
         },
         {
-          "id": 20,
+          "id": 19,
           "technology": "Sequencing",
           "description": "Read the DNA code",
           "toys": [
             {
-              "id": 40,
+              "id": 34,
               "toy": "Short-Read",
               "specs": "Many short sequences in parallel — Illumina",
               "available": 0
             },
             {
-              "id": 41,
+              "id": 35,
               "toy": "Long-Read",
               "specs": "One long sequence end to end — Nanopore, PacBio",
               "available": 0
@@ -491,12 +443,12 @@
           ]
         },
         {
-          "id": 21,
+          "id": 20,
           "technology": "Expression",
           "description": "Make and see proteins",
           "toys": [
             {
-              "id": 42,
+              "id": 36,
               "toy": "Cell-Free",
               "specs": "Produce protein from DNA without living cells",
               "available": 0,
@@ -504,7 +456,7 @@
               "project_url": "/research/projects/20260401%20Genes%20in%20Space/"
             },
             {
-              "id": 43,
+              "id": 37,
               "toy": "Fluorescence",
               "specs": "Visualize protein glow under UV light",
               "available": 0,
@@ -523,18 +475,18 @@
       "description": "See and record living systems",
       "technologies": [
         {
-          "id": 22,
+          "id": 21,
           "technology": "Phenotyping",
           "description": "Sort and profile living cells",
           "toys": [
             {
-              "id": 44,
+              "id": 38,
               "toy": "Flow Cytometer",
               "specs": "Count and sort cells by fluorescent labels",
               "available": 0
             },
             {
-              "id": 45,
+              "id": 39,
               "toy": "Metabolic Analyzer",
               "specs": "Watch cells burn sugar and use oxygen in real time",
               "available": 0
@@ -542,18 +494,18 @@
           ]
         },
         {
-          "id": 23,
+          "id": 22,
           "technology": "Microscopy",
           "description": "Image cells at every scale",
           "toys": [
             {
-              "id": 46,
+              "id": 40,
               "toy": "Confocal",
               "specs": "Photons — sharp 3D optical images of cells and tissue",
               "available": 0
             },
             {
-              "id": 47,
+              "id": 41,
               "toy": "SEM",
               "specs": "Electrons — surface topography at nanometer resolution",
               "available": 0
@@ -561,18 +513,18 @@
           ]
         },
         {
-          "id": 24,
+          "id": 23,
           "technology": "Systems Imaging",
           "description": "Record brain activity",
           "toys": [
             {
-              "id": 48,
+              "id": 42,
               "toy": "EEG",
               "specs": "Scalp electrodes — millisecond electrical activity",
               "available": 0
             },
             {
-              "id": 49,
+              "id": 43,
               "toy": "fNIRS",
               "specs": "Near-infrared light — cortical blood flow",
               "available": 0
@@ -589,18 +541,18 @@
       "description": "Where the light comes from — capture photons across the spectrum",
       "technologies": [
         {
-          "id": 25,
+          "id": 24,
           "technology": "Visible",
           "description": "Optical wavelengths from backyards to mountaintop observatories",
           "toys": [
             {
-              "id": 50,
+              "id": 44,
               "toy": "Household",
               "specs": "Amateur reflector with motorized mount and CCD",
               "available": 1
             },
             {
-              "id": 51,
+              "id": 45,
               "toy": "Earth",
               "specs": "Meter-class ground telescope at a dark site",
               "available": 0,
@@ -609,18 +561,18 @@
           ]
         },
         {
-          "id": 26,
+          "id": 25,
           "technology": "Invisible",
           "description": "Wavelengths outside the visible — radio through X-ray",
           "toys": [
             {
-              "id": 52,
+              "id": 46,
               "toy": "Radio",
               "specs": "Many dishes synthesized into one high-resolution image",
               "available": 0
             },
             {
-              "id": 53,
+              "id": 47,
               "toy": "Space",
               "specs": "Above the atmosphere — UV, infrared and X-ray wavelengths blocked by air",
               "available": 0
@@ -637,24 +589,24 @@
       "description": "What the light tells you — extract measurements and classify sources",
       "technologies": [
         {
-          "id": 27,
+          "id": 26,
           "technology": "Analysis",
           "description": "Extract measurements from raw images",
           "toys": [
             {
-              "id": 54,
+              "id": 48,
               "toy": "Photometry",
               "specs": "How bright — light curves reveal variability, transits and distance",
               "available": 0
             },
             {
-              "id": 55,
+              "id": 49,
               "toy": "Astrometry",
               "specs": "Where — positions and proper motions reveal parallax and orbits",
               "available": 0
             },
             {
-              "id": 56,
+              "id": 50,
               "toy": "Spectroscopy",
               "specs": "What — wavelengths reveal composition, temperature and radial velocity",
               "available": 0,
@@ -663,18 +615,18 @@
           ]
         },
         {
-          "id": 28,
+          "id": 27,
           "technology": "Classification",
           "description": "Label sources with machine learning",
           "toys": [
             {
-              "id": 57,
+              "id": 51,
               "toy": "Transient",
               "specs": "Classical ML on light curves — supernovae, variable stars",
               "available": 0
             },
             {
-              "id": 58,
+              "id": 52,
               "toy": "Galaxy Morphology",
               "specs": "Deep CNN on galaxy images — spirals, ellipticals, mergers",
               "available": 0
