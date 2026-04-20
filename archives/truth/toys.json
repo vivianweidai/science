@@ -146,7 +146,7 @@
               "toy": "Jupyter",
               "specs": "Notebooks combining code, figures and narrative",
               "available": 1,
-              "url": "https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260415%20IR%20Spectroscopy/output/ir_analysis.ipynb"
+              "url": "https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb"
             }
           ]
         },
@@ -288,16 +288,16 @@
               "toy": "IR Spectroscopy",
               "specs": "Polar bonds — functional-group fingerprints",
               "available": 1,
-              "completed": "20260415 IR Spectroscopy",
-              "project_url": "/research/projects/20260415%20IR%20Spectroscopy/"
+              "completed": "20260419 IR Spectroscopy",
+              "project_url": "/research/projects/20260419%20IR%20Spectroscopy/"
             },
             {
               "id": 23,
               "toy": "UV-Vis Spectroscopy",
               "specs": "UV-Vis absorption — concentration and conjugation",
               "available": 1,
-              "completed": "20260417 UV-Vis Spectroscopy",
-              "project_url": "/research/projects/20260417%20UV-Vis%20Spectroscopy/"
+              "completed": "20260420 UV-Vis Spectroscopy",
+              "project_url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/"
             },
             {
               "id": 24,
