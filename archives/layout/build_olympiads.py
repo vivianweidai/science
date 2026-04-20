@@ -27,7 +27,7 @@ except ImportError:
     sys.exit("PyYAML is required: pip install pyyaml")
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-CONTENT = ROOT / "archives" / "CONTENT"
+CONTENT = ROOT / "archives" / "truth"
 
 SUBJECTS = {"Mathematics", "Computing", "Physics", "Chemistry", "Biology", "Astronomy"}
 TYPES = {"olympiad", "textbook"}
@@ -81,6 +81,8 @@ def build_activities() -> list[dict]:
             item["subjects"] = e["subjects"]
         if e.get("invited"):
             item["invited"] = 1
+        if e.get("borderline"):
+            item["borderline"] = 1
         if e.get("photo_url"):
             item["photo_url"] = e["photo_url"]
         items.append(item)

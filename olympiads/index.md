@@ -61,7 +61,7 @@ layout: default
   .timeline .entry .type-cell { text-align: center; }
   .timeline .entry .chips-cell { white-space: nowrap; display: flex; gap: 2px; align-items: center; }
   .timeline .entry .name-cell { }
-  .invited-badge { display: inline-block; font-size: .65em; font-weight: 700; padding: 1px 6px; border-radius: 4px; vertical-align: baseline; margin-left: 4px; background: #ffd700; color: #5a4500; position: relative; top: -1px; }
+  .status-emoji { font-size: 1em; margin-left: .3em; position: relative; top: -.05em; }
   .timeline .entry.hl { position: relative; }
   .timeline .entry.hl::before { content: ''; position: absolute; inset: -.1em -.4em; background: #fff44f; border-radius: 6px; z-index: -1; }
 
@@ -173,7 +173,7 @@ layout: default
           + '<div class="type-cell">' + icon + '</div>'
           + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
           + '</div>'
-          + '<div class="name-cell">' + (e.photo_url ? '<a class="name-link" href="' + e.photo_url + '">' + esc(e.name) + '</a>' : esc(e.name)) + (e.invited ? ' <span class="invited-badge">INVITED</span>' : '') + (e.photo_url ? ' <span class="photo-icon" title="Photo">\uD83D\uDCF7</span>' : '') + '</div>'
+          + '<div class="name-cell">' + (e.photo_url ? '<a class="name-link" href="' + e.photo_url + '">' + esc(e.name) + '</a>' : esc(e.name)) + (e.invited ? ' <span class="status-emoji" title="Invited">\uD83C\uDF9F\uFE0F</span>' : '') + (e.borderline ? ' <span class="status-emoji" title="Close to cutoff">\uD83C\uDFAF</span>' : '') + (e.photo_url ? ' <span class="photo-icon" title="Photo">\uD83D\uDCF7</span>' : '') + '</div>'
           + '</div>';
       });
     });
