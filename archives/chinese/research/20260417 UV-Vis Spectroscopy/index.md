@@ -260,6 +260,19 @@ photos:
 
 *待补充。*
 
+<h2 id="extensions">延伸</h2>
+
+相邻的电子/手性光学光谱仪器——波长范围与紫外-可见相同，测量内容不同。本项目均未使用。
+
+<div class="instrument-table" markdown="1">
+
+| 仪器 | 延伸方向 | 为何值得加入 |
+|------|---------|------------|
+| Thermo Scientific Evolution 220 UV-Vis 分光光度计 | 备用台式 UV-Vis（单色器，近红外延伸到 1100 nm） | 较新的中端仪器；比 Shimadzu UV-2550（上限 900 nm）多覆盖 200 nm 的近红外波段，但杂散光较高。当 UV-2550 被占用或样品近红外特征较弱时可作为交叉验证 |
+| 圆二色光谱仪 (CD Spectrometer) | 采用圆偏振光的 UV-Vis 变体 | 测量样品对左/右圆偏振紫外光的差异吸收——揭示蛋白质二级结构（α-螺旋与 β-折叠）及手性，普通 UV-Vis 吸收无法区分 |
+
+</div>
+
 <script src="/archives/layout/tabs.js"></script>
 
 ---
