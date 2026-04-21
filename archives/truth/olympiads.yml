@@ -12,6 +12,7 @@
 #   highlighted: true                                         (optional — omit when false)
 #   invited:     true                                         (optional — renders 🎟️)
 #   borderline:  true                                         (optional — renders 🎯, "almost made cutoff")
+#   competitive: true                                         (optional — renders 🏆, "competitive field")
 #   photo_url:   /olympiads/photos/name.jpeg                  (optional — link to a photo)
 - type: textbook
   subject: Mathematics
@@ -352,6 +353,7 @@
   subject: Biology
   date: February 2026
   name: USA Biology Olympiad Open Exam
+  competitive: true
 - type: textbook
   subject: Biology
   date: May 2025

@@ -83,6 +83,8 @@ def build_activities() -> list[dict]:
             item["invited"] = 1
         if e.get("borderline"):
             item["borderline"] = 1
+        if e.get("competitive"):
+            item["competitive"] = 1
         if e.get("photo_url"):
             item["photo_url"] = e["photo_url"]
         items.append(item)

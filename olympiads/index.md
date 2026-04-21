@@ -173,7 +173,7 @@ layout: default
           + '<div class="type-cell">' + icon + '</div>'
           + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
           + '</div>'
-          + '<div class="name-cell">' + (e.photo_url ? '<a class="name-link" href="' + e.photo_url + '">' + esc(e.name) + '</a>' : esc(e.name)) + (e.invited ? ' <span class="status-emoji" title="Invited">\uD83C\uDF9F\uFE0F</span>' : '') + (e.borderline ? ' <span class="status-emoji" title="Close to cutoff">\uD83C\uDFAF</span>' : '') + (e.photo_url ? ' <span class="photo-icon" title="Photo">\uD83D\uDCF7</span>' : '') + '</div>'
+          + '<div class="name-cell">' + (e.photo_url ? '<a class="name-link" href="' + e.photo_url + '">' + esc(e.name) + '</a>' : esc(e.name)) + (e.invited ? ' <span class="status-emoji" title="Invited">\uD83C\uDF9F\uFE0F</span>' : '') + (e.borderline ? ' <span class="status-emoji" title="Close to cutoff">\uD83C\uDFAF</span>' : '') + (e.competitive ? ' <span class="status-emoji" title="Competitive field">\uD83C\uDFC6</span>' : '') + (e.photo_url ? ' <span class="photo-icon" title="Photo">\uD83D\uDCF7</span>' : '') + '</div>'
           + '</div>';
       });
     });

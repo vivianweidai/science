@@ -731,7 +731,8 @@
       "date": "February 2026",
       "sort_key": "2026-02",
       "name": "USA Biology Olympiad Open Exam",
-      "highlighted": 0
+      "highlighted": 0,
+      "competitive": 1
     },
     {
       "id": 78,
