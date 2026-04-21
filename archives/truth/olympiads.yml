@@ -12,7 +12,7 @@
 #   highlighted: true                                         (optional — omit when false)
 #   invited:     true                                         (optional — renders 🎟️)
 #   borderline:  true                                         (optional — renders 🎯, "almost made cutoff")
-#   competitive: true                                         (optional — renders 🏆, "competitive field")
+#   competitive: true                                         (optional — renders 🎯, "competitive field")
 #   photo_url:   /olympiads/photos/name.jpeg                  (optional — link to a photo)
 - type: textbook
   subject: Mathematics
