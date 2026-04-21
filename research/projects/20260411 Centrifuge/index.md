@@ -63,22 +63,22 @@ The pH readings were recorded from photographs of the VWR pHenomenal pH 1100 L d
 
 | Sample | pH | Photo | Notes |
 |--------|:--:|:-----:|-------|
-| Yogurt | 4.335 | <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data1.jpeg">Data 1</a> | Acidic — lactic acid |
-| Vinegar | 2.515 | <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data3.jpeg">Data 3</a> | Strongly acidic — acetic acid |
-| Apple cider vinegar | 2.436 | <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data4.jpeg">Data 4</a> | Acidic — acetic acid |
-| Coke | 2.342 | <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data5.jpeg">Data 5</a> | Strongly acidic, phosphoric/carbonic acid |
-| Milk | 6.566 | <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data6.jpeg">Data 6</a> | Near neutral, slightly acidic |
-| Mystery solutions | 3.7–12.0 | <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data7.jpeg">Data 7</a>–<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data15.jpeg">Data 15</a> | Nine unknown lab solutions ranging from acidic to strongly basic |
+| Yogurt | 4.335 | <a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data1.jpeg">Data 1</a> | Acidic — lactic acid |
+| Vinegar | 2.515 | <a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data3.jpeg">Data 3</a> | Strongly acidic — acetic acid |
+| Apple cider vinegar | 2.436 | <a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data4.jpeg">Data 4</a> | Acidic — acetic acid |
+| Coke | 2.342 | <a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data5.jpeg">Data 5</a> | Strongly acidic, phosphoric/carbonic acid |
+| Milk | 6.566 | <a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data6.jpeg">Data 6</a> | Near neutral, slightly acidic |
+| Mystery solutions | 3.7–12.0 | <a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data7.jpeg">Data 7</a>–<a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data15.jpeg">Data 15</a> | Nine unknown lab solutions ranging from acidic to strongly basic |
 
 ## Results
 
 <div class="hero-single"><img src="photos/samples/samples8.jpeg" alt="Four labeled Sarstedt tubes before centrifugation: 1 Milk, 2 Yogurt, 3 Apple Cider Vinegar, 4 Milk + Vinegar"></div>
 
-Four samples were loaded into the Thermo Scientific Sorvall RT3 Centrifuge to balance the rotor (<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data16.jpeg">Data 16</a> and <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data17.jpeg">Data 17</a>). After centrifugation, visible separation was observed:
+Four samples were loaded into the Thermo Scientific Sorvall RT3 Centrifuge to balance the rotor (<a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data16.jpeg">Data 16</a> and <a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data17.jpeg">Data 17</a>). After centrifugation, visible separation was observed:
 
-- **Tube 1 — Milk** — separated into a translucent whey layer and a white fat/casein pellet (<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data24.jpeg">Data 24</a>)
-- **Tube 2 — Yogurt** — similar separation to milk with a denser pellet (<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data19.jpeg">Data 19</a> and <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data20.jpeg">Data 20</a>)
-- **Tube 3 — Apple cider vinegar** — sediment ("mother") pelleted at the bottom, leaving clearer vinegar above (<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data18.jpeg">Data 18</a>)
-- **Tube 4 — Milk + vinegar mixture** — white casein pellet with clear whey above, the acid curdled the milk proteins and centrifugation concentrated them at the bottom (<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data21.jpeg">Data 21</a>, <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data22.jpeg">Data 22</a> and <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260411%20Centrifuge/photos/data/data23.jpeg">Data 23</a>)
+- **Tube 1 — Milk** — separated into a translucent whey layer and a white fat/casein pellet (<a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data24.jpeg">Data 24</a>)
+- **Tube 2 — Yogurt** — similar separation to milk with a denser pellet (<a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data19.jpeg">Data 19</a> and <a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data20.jpeg">Data 20</a>)
+- **Tube 3 — Apple cider vinegar** — sediment ("mother") pelleted at the bottom, leaving clearer vinegar above (<a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data18.jpeg">Data 18</a>)
+- **Tube 4 — Milk + vinegar mixture** — white casein pellet with clear whey above, the acid curdled the milk proteins and centrifugation concentrated them at the bottom (<a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data21.jpeg">Data 21</a>, <a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data22.jpeg">Data 22</a> and <a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data23.jpeg">Data 23</a>)
 
 The experiment demonstrated that centrifugation is most effective on emulsions and suspensions (milk, yogurt, unfiltered vinegar) where particles of different densities are physically mixed but not dissolved.

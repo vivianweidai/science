@@ -56,7 +56,7 @@ Raw data were photographs of the instrument display taken after each measurement
 
 ## Results
 
-In total 56 valid sheet resistance readings were collected at 9 µA. Three non-conductive samples (leaf, DVD, paper cardboard) returned Contact Limit at all current settings, and one metal washer reading was excluded due to an <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/photos/setup/setup89.jpeg">incorrect current range (20 nA)</a> — the current had been changed while testing insulator samples to see if a different current could produce a detection, and was not reset before measuring the washer.
+In total 56 valid sheet resistance readings were collected at 9 µA. Three non-conductive samples (leaf, DVD, paper cardboard) returned Contact Limit at all current settings, and one metal washer reading was excluded due to an <a href="https://vivianweidai.com/research/projects/20260404%20Four%20Point%20Probe/photos/setup/setup89.jpeg">incorrect current range (20 nA)</a> — the current had been changed while testing insulator samples to see if a different current could produce a detection, and was not reset before measuring the washer.
 
 | Sample | Material | n | Mean (Ω/□) | Range |
 |--------|----------|--:|------------|-------|

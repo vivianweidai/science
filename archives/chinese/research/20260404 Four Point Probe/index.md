@@ -162,7 +162,7 @@ photos:
 
 ## 结果
 
-共在9 µA下收集了56个有效薄层电阻读数。三个非导电样品（树叶、DVD、纸板）在所有电流设置下均返回接触限，一个金属垫圈读数因<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/photos/20260404%20Setup%2089.jpeg">电流量程错误（20 nA）</a>被排除——测试绝缘体样品时为了查看不同电流能否产生检测而改变了电流设置，测量垫圈前未重置。
+共在9 µA下收集了56个有效薄层电阻读数。三个非导电样品（树叶、DVD、纸板）在所有电流设置下均返回接触限，一个金属垫圈读数因<a href="https://vivianweidai.com/research/projects/20260404%20Four%20Point%20Probe/photos/20260404%20Setup%2089.jpeg">电流量程错误（20 nA）</a>被排除——测试绝缘体样品时为了查看不同电流能否产生检测而改变了电流设置，测量垫圈前未重置。
 
 | 样品 | 材料 | n | 平均值（Ω/□） | 范围 |
 |------|------|--:|---------------|------|
