@@ -458,7 +458,7 @@ def main() -> None:
     root = Path(__file__).resolve().parent.parent.parent
     manifest = build_all(root)
 
-    out_path = root / "archives" / "CONTENT" / "curriculum.json"
+    out_path = root / "archives" / "truth" / "curriculum.json"
     out_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
     total_tables = 0

@@ -1,101 +1,525 @@
 import SwiftUI
 import ScienceCore
 
+/// Toy browser matching the webapp /research/ page. Topics are grouped
+/// cards with a subject chip, each containing rows of technologies and
+/// their toys. Source of truth: archives/truth/toys.json.
 struct ResearchView: View {
-    @State private var projects: [ResearchProject] = []
-    @State private var loading = true
-    @State private var error: String?
+    @State private var store = ContentStore.shared
+    @State private var subject: SubjectFilter = SubjectFilter.randomResearchSubject()
+    /// Photo-placeholder toy currently being previewed. Presented as a
+    /// modal sheet (slide-up) to match the in-project markdown image
+    /// preview — the user explicitly preferred the sheet over the
+    /// NavigationLink push, so both surfaces now use this pattern.
+    @State private var presentedImage: IdentifiableURL?
 
     var body: some View {
         NavigationStack {
             Group {
-                if loading {
-                    ProgressView()
-                } else if let error {
-                    Text(error).foregroundStyle(.red).padding()
+                if let topics = store.topics {
+                    content(topics: topics)
+                } else if let errorMessage = store.topicsError {
+                    ErrorState(message: errorMessage)
                 } else {
-                    List(projects) { project in
-                        NavigationLink {
-                            ProjectDetailView(project: project)
-                        } label: {
-                            projectRow(project)
-                        }
-                    }
+                    LoadingState(
+                        title: "Loading toys",
+                        subtitle: "Fetching research topics from GitHub."
+                    )
                 }
             }
             .navigationTitle("Research")
-            .task { await load() }
-            .refreshable { await load() }
-        }
-    }
-
-    private func load() async {
-        loading = true
-        do {
-            projects = try await ResearchLoader.shared.projects()
-            error = nil
-        } catch {
-            self.error = error.localizedDescription
-        }
-        loading = false
-    }
-
-    /// Project title on top, with the subject chip leading the second
-    /// line followed by the formatted date. Subject mapping comes from
-    /// the webapp chip markup in research/index.md.
-    @ViewBuilder
-    private func projectRow(_ project: ResearchProject) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(project.title)
-                .font(.headline)
-                .fixedSize(horizontal: false, vertical: true)
-            HStack(alignment: .firstTextBaseline, spacing: 8) {
-                if let subject = project.subject {
-                    SubjectChip(subject: subject)
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    SubjectFilterMenu(selected: $subject)
                 }
-                Text(formatProjectDate(project.date))
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+            }
+            .refreshable { await store.refreshAll() }
+            .sheet(item: $presentedImage) { wrapper in
+                NavigationStack {
+                    PhotoViewer(title: wrapper.url.lastPathComponent, url: wrapper.url)
+                        .toolbar {
+                            ToolbarItem(placement: .primaryAction) {
+                                Button("Done") { presentedImage = nil }
+                            }
+                        }
+                }
             }
         }
     }
 
-    /// Convert the raw `YYYYMMDD` folder-date prefix into a readable
-    /// `Month Day{st,nd,rd,th} Year` string (e.g. "April 4th 2026").
-    /// Falls back to the raw string if parsing fails so nothing ever
-    /// disappears from the UI.
-    private func formatProjectDate(_ raw: String) -> String {
-        guard raw.count == 8,
-              let year = Int(raw.prefix(4)),
-              let month = Int(raw.dropFirst(4).prefix(2)),
-              let day = Int(raw.suffix(2)),
-              (1...12).contains(month) else {
-            return raw
-        }
-        let monthNames = [
-            "January", "February", "March", "April", "May", "June",
-            "July", "August", "September", "October", "November", "December",
-        ]
-        return "\(monthNames[month - 1]) \(day)\(ordinalSuffix(for: day)) \(year)"
+    private func filteredTopics(_ topics: [ResearchTopic]) -> [ResearchTopic] {
+        guard case .named(let name) = subject else { return topics }
+        return topics.filter { $0.science == name }
     }
 
-    /// English ordinal suffix: 1st, 2nd, 3rd, 4th … with the 11/12/13
-    /// exception (11th, 12th, 13th — not 11st, 12nd, 13rd).
-    private func ordinalSuffix(for day: Int) -> String {
-        let lastTwo = day % 100
-        if (11...13).contains(lastTwo) { return "th" }
-        switch day % 10 {
-        case 1:  return "st"
-        case 2:  return "nd"
-        case 3:  return "rd"
-        default: return "th"
+    private func content(topics: [ResearchTopic]) -> some View {
+        let filtered = filteredTopics(topics)
+        return ScrollView {
+            LazyVStack(alignment: .leading, spacing: 14) {
+                ForEach(filtered) { topic in
+                    TopicCard(topic: topic) { url in presentedImage = IdentifiableURL(url: url) }
+                }
+                if filtered.isEmpty {
+                    Text("No toys yet.")
+                        .font(.system(size: 14))
+                        .foregroundStyle(.secondary)
+                        .italic()
+                        .padding(.horizontal, 16)
+                }
+            }
+            .padding(.vertical, 12)
         }
     }
 }
 
-/// Small subject chip matching the webapp .chip style — a rounded capsule
-/// with the canonical subject color. Defined at file scope so this view can
-/// use it without exposing OlympiadsView's private chip type.
+// MARK: - Topic card
+
+private struct TopicCard: View {
+    let topic: ResearchTopic
+    let onImageTap: (URL) -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            header
+            Divider()
+            VStack(alignment: .leading, spacing: 0) {
+                ForEach(topic.technologies) { tech in
+                    TechnologyBlock(tech: tech, onImageTap: onImageTap)
+                }
+            }
+        }
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .fill(ResearchColors.cardBackground)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(SubjectPalette.color(for: topic.science).opacity(0.7), lineWidth: 1)
+        )
+        .overlay(alignment: .leading) {
+            // Left accent bar, mirrors webapp .toys-accent-* border.
+            RoundedRectangle(cornerRadius: 2)
+                .fill(SubjectPalette.color(for: topic.science))
+                .frame(width: 4)
+        }
+        .padding(.horizontal, 12)
+    }
+
+    private var header: some View {
+        HStack(spacing: 6) {
+            Text(topic.topic)
+                .font(.system(size: 15, weight: .bold))
+            SubjectChip(subject: topic.science)
+            Spacer(minLength: 0)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.vertical, 10)
+        .padding(.leading, 14)
+        .padding(.trailing, 12)
+    }
+}
+
+private struct TechnologyBlock: View {
+    let tech: ResearchTechnology
+    let onImageTap: (URL) -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text(tech.technology)
+                .font(.system(size: 13, weight: .semibold))
+                .frame(maxWidth: .infinity, minHeight: 28, alignment: .leading)
+                .padding(.leading, 14)
+                .padding(.trailing, 12)
+                .background(ResearchColors.technologyHeader)
+
+            ForEach(tech.toys) { toy in
+                ToyRow(toy: toy, onImageTap: onImageTap)
+                if toy.id != tech.toys.last?.id {
+                    Divider().padding(.leading, 28)
+                }
+            }
+        }
+    }
+}
+
+private struct ToyRow: View {
+    let toy: ResearchToy
+    let onImageTap: (URL) -> Void
+    @Environment(\.openURL) private var openURL
+
+    private var hasLink: Bool { toy.projectIndexURL != nil || toy.externalURL != nil }
+
+    var body: some View {
+        Group {
+            if let projectURL = toy.projectIndexURL {
+                NavigationLink {
+                    ProjectDetailView(title: toy.toy, indexURL: projectURL)
+                } label: {
+                    rowBody
+                }
+                .buttonStyle(.plain)
+            } else if let external = toy.externalURL, Self.isImageURL(external) {
+                // Slide-up sheet (handled by ResearchView) instead of a
+                // NavigationLink push — matches the in-project markdown
+                // image preview so both surfaces feel the same.
+                Button { onImageTap(external) } label: {
+                    rowBody
+                }
+                .buttonStyle(.plain)
+            } else if let external = toy.externalURL {
+                Button { openURL(external) } label: {
+                    rowBody
+                }
+                .buttonStyle(.plain)
+            } else {
+                rowBody
+            }
+        }
+    }
+
+    private static func isImageURL(_ url: URL) -> Bool {
+        let lower = url.absoluteString.lowercased()
+        return lower.hasSuffix(".jpg") || lower.hasSuffix(".jpeg")
+            || lower.hasSuffix(".png") || lower.hasSuffix(".gif")
+    }
+
+    @ViewBuilder
+    private var rowBody: some View {
+        HStack(alignment: .firstTextBaseline, spacing: 8) {
+            VStack(alignment: .leading, spacing: 2) {
+                HStack(spacing: 4) {
+                    Text(toy.toy)
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(hasLink ? Color.accentColor : Color.primary)
+                    if let icon = ToyURLIcon.icon(for: toy) {
+                        Text(icon).font(.system(size: 11))
+                    }
+                }
+                if let specs = toy.specs, !specs.isEmpty {
+                    Text(specs)
+                        .font(.system(size: 12))
+                        .foregroundStyle(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+            Spacer(minLength: 0)
+            if toy.isAvailable {
+                Image(systemName: "checkmark")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundStyle(Color(red: 0.10, green: 0.50, blue: 0.22))
+            }
+        }
+        .padding(.vertical, 8)
+        .padding(.leading, 28)
+        .padding(.trailing, 12)
+        .contentShape(Rectangle())
+    }
+}
+
+/// Inline indicator next to a toy name, mirroring the webapp markup in
+/// research/index.md. Tells the user at a glance that a link is a
+/// placeholder photo, a notebook, etc. Returns `nil` when no url is set
+/// or the url doesn't match a known pattern.
+private enum ToyURLIcon {
+    static func icon(for toy: ResearchToy) -> String? {
+        guard let url = toy.url else { return nil }
+        let lower = url.lowercased()
+        if lower.hasSuffix(".jpg") || lower.hasSuffix(".jpeg")
+            || lower.hasSuffix(".png") || lower.hasSuffix(".gif") {
+            return "📷"
+        }
+        if toy.toy == "Jupyter" || lower.contains(".ipynb") || lower.contains("colab.research") {
+            return "📓"
+        }
+        if toy.toy == "Wolfram Alpha" || lower.contains("wolframcloud.com") || lower.hasSuffix(".nb") {
+            return "✴️"
+        }
+        if lower.contains("github.com") {
+            return "🐙"
+        }
+        return nil
+    }
+}
+
+// MARK: - Project detail
+
+/// Loads a research project's index.md from GitHub raw and renders it
+/// inside the app with the shared KaTeX markdown webview. Avoids the
+/// Safari bounce the user was seeing when tapping a project toy.
+struct ProjectDetailView: View {
+    let title: String
+    let indexURL: URL
+    @State private var markdown: String = ""
+    @State private var loading = true
+    @State private var presentedImage: IdentifiableURL?
+
+    var body: some View {
+        Group {
+            if loading {
+                ProgressView()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            } else {
+                ScrollView {
+                    MarkdownWebView(
+                        markdown: markdown,
+                        onImageTap: { url in
+                            presentedImage = IdentifiableURL(url: url)
+                        }
+                    )
+                }
+            }
+        }
+        .navigationTitle(title)
+        #if os(iOS)
+        .navigationBarTitleDisplayMode(.inline)
+        #endif
+        .sheet(item: $presentedImage) { wrapper in
+            NavigationStack {
+                PhotoViewer(title: wrapper.url.lastPathComponent, url: wrapper.url)
+                    .toolbar {
+                        ToolbarItem(placement: .primaryAction) {
+                            Button("Done") { presentedImage = nil }
+                        }
+                    }
+            }
+        }
+        .task {
+            do {
+                let (data, _) = try await URLSession.shared.data(from: indexURL)
+                var md = String(data: data, encoding: .utf8) ?? ""
+
+                // Front-matter photos: legacy projects list them explicitly.
+                var photos = MarkdownHelper.extractPhotos(from: md, key: "photos")
+                let dataPhotos = MarkdownHelper.extractPhotos(from: md, key: "data_photos")
+
+                // Modern projects rely on the Jekyll layout scanning
+                // photos/setup + photos/samples. Replicate that by
+                // querying the GitHub contents API so the in-app grid
+                // has sources to show, matching the webapp behavior.
+                if photos.isEmpty {
+                    photos = await Self.scanProjectPhotos(indexURL: indexURL).shuffled()
+                }
+
+                md = MarkdownHelper.stripFrontMatter(md)
+                md = MarkdownHelper.injectPhotos(md, photos: photos)
+                md = MarkdownHelper.injectDataPhotos(md, photos: dataPhotos)
+                md = MarkdownHelper.stripJekyllSyntax(md)
+                let folderURL = indexURL.deletingLastPathComponent()
+                md = MarkdownHelper.resolveRelativeURLs(in: md, baseURL: folderURL)
+                markdown = md
+            } catch {
+                markdown = "# Error\n\n\(error.localizedDescription)"
+            }
+            loading = false
+        }
+    }
+
+    /// Fetch the union of image filenames under a project's
+    /// `photos/setup/` and `photos/samples/` via the GitHub contents
+    /// API. Returns relative paths (e.g. `photos/setup/setup1.jpeg`) so
+    /// they resolve through `MarkdownHelper.resolveRelativeURLs` with
+    /// the project folder as base. Silent on failure — photos are
+    /// decorative; a broken network should not crash the page.
+    private static func scanProjectPhotos(indexURL: URL) async -> [String] {
+        // indexURL path: /vivianweidai/science/main/research/projects/{folder}/index.md
+        let parts = indexURL.path.split(separator: "/").map(String.init)
+        guard parts.count >= 4,
+              let idxPos = parts.firstIndex(of: "index.md") else { return [] }
+        let owner = parts[0]
+        let repo = parts[1]
+        let branch = parts[2]
+        let folderParts = Array(parts[3..<idxPos])
+        let folderPath = folderParts.joined(separator: "/")
+
+        var all: [String] = []
+        for sub in ["photos/setup", "photos/samples"] {
+            let apiPath = "\(folderPath)/\(sub)"
+            let encoded = apiPath.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? apiPath
+            guard let url = URL(string: "https://api.github.com/repos/\(owner)/\(repo)/contents/\(encoded)?ref=\(branch)") else {
+                continue
+            }
+            var req = URLRequest(url: url)
+            req.setValue("application/vnd.github+json", forHTTPHeaderField: "accept")
+            do {
+                let (data, response) = try await URLSession.shared.data(for: req)
+                guard let http = response as? HTTPURLResponse,
+                      (200..<300).contains(http.statusCode) else { continue }
+                let entries = try JSONDecoder().decode([GitHubContentEntry].self, from: data)
+                for e in entries where e.type == "file" {
+                    let lower = e.name.lowercased()
+                    if lower.hasSuffix(".jpg") || lower.hasSuffix(".jpeg")
+                        || lower.hasSuffix(".png") {
+                        all.append("\(sub)/\(e.name)")
+                    }
+                }
+            } catch {
+                continue
+            }
+        }
+        return all
+    }
+}
+
+private struct GitHubContentEntry: Decodable {
+    let name: String
+    let type: String
+}
+
+/// Wrapper so a `URL` can drive SwiftUI's `.sheet(item:)` binding,
+/// which requires `Identifiable`.
+private struct IdentifiableURL: Identifiable {
+    let url: URL
+    var id: String { url.absoluteString }
+}
+
+// MARK: - Photo viewer
+
+/// Simple in-app photo viewer for toys that are just placeholder image
+/// links (the webapp shows a 📷 next to them). AsyncImage handles load
+/// states; the image is centered and scaled to fit so portraits and
+/// landscapes both read well without cropping.
+struct PhotoViewer: View {
+    let title: String
+    let url: URL
+
+    var body: some View {
+        AsyncImage(url: url) { phase in
+            switch phase {
+            case .empty:
+                ProgressView()
+            case .success(let image):
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            case .failure:
+                VStack(spacing: 8) {
+                    Image(systemName: "photo.badge.exclamationmark")
+                        .font(.system(size: 36))
+                        .foregroundStyle(.secondary)
+                    Text("Couldn't load photo")
+                        .font(.system(size: 13))
+                        .foregroundStyle(.secondary)
+                }
+            @unknown default:
+                EmptyView()
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding()
+        .navigationTitle(title)
+        #if os(iOS)
+        .navigationBarTitleDisplayMode(.inline)
+        #endif
+    }
+}
+
+// MARK: - Subject filter (shared pattern with OlympiadsView)
+
+private enum SubjectFilter: Hashable {
+    case all
+    case named(String)
+
+    static let allCases: [SubjectFilter] = [
+        .all,
+        .named("Mathematics"),
+        .named("Computing"),
+        .named("Physics"),
+        .named("Chemistry"),
+        .named("Biology"),
+        .named("Astronomy"),
+    ]
+
+    /// Matches the webapp pick pool: chem / bio / phys / comp.
+    static func randomResearchSubject() -> SubjectFilter {
+        let pool: [SubjectFilter] = [
+            .named("Chemistry"), .named("Biology"),
+            .named("Physics"), .named("Computing"),
+        ]
+        return pool.randomElement() ?? .all
+    }
+
+    var label: String {
+        switch self {
+        case .all: return "All"
+        case .named(let n): return n
+        }
+    }
+
+    var color: Color? {
+        switch self {
+        case .all: return nil
+        case .named(let n): return SubjectPalette.color(for: n)
+        }
+    }
+}
+
+private struct SubjectFilterMenu: View {
+    @Binding var selected: SubjectFilter
+
+    var body: some View {
+        Menu {
+            // Plain Buttons instead of a Picker so each row's dot can
+            // carry its own palette color — see OlympiadsView for the
+            // same pattern.
+            ForEach(SubjectFilter.allCases, id: \.self) { filter in
+                Button { selected = filter } label: {
+                    filterMenuRow(filter: filter, isSelected: filter == selected)
+                }
+            }
+        } label: {
+            HStack(spacing: 4) {
+                if let color = selected.color {
+                    Circle().fill(color).frame(width: 10, height: 10)
+                }
+                Text(selected.label)
+                    .font(.system(size: 15, weight: .medium))
+            }
+        }
+    }
+}
+
+@ViewBuilder
+private func filterMenuRow(filter: SubjectFilter, isSelected: Bool) -> some View {
+    HStack {
+        Text(filter.label)
+        Spacer()
+        if isSelected {
+            Image(systemName: "checkmark")
+        }
+        if let color = filter.color {
+            Circle().fill(color).frame(width: 12, height: 12)
+        } else {
+            Image(systemName: "square.grid.2x2")
+        }
+    }
+}
+
+// MARK: - Cross-platform colors
+
+/// Semantic colors that adapt to light/dark mode on iOS, with macOS
+/// fallbacks for the watchOS/macOS ScienceCoreUI build. Uses UIKit/AppKit
+/// bridges guarded by platform availability.
+private enum ResearchColors {
+    static var cardBackground: Color {
+        #if canImport(UIKit)
+        return Color(uiColor: .secondarySystemBackground)
+        #else
+        return Color.gray.opacity(0.08)
+        #endif
+    }
+
+    static var technologyHeader: Color {
+        #if canImport(UIKit)
+        return Color(uiColor: .tertiarySystemBackground)
+        #else
+        return Color.gray.opacity(0.05)
+        #endif
+    }
+}
+
+// MARK: - Subject chip
+
 private struct SubjectChip: View {
     let subject: String
 
@@ -107,55 +531,4 @@ private struct SubjectChip: View {
             .background(Capsule().fill(SubjectPalette.color(for: subject)))
             .foregroundStyle(Color.black.opacity(0.82))
     }
-}
-
-struct ProjectDetailView: View {
-    let project: ResearchProject
-    @State private var markdown: String = ""
-    @State private var loading = true
-
-    var body: some View {
-        Group {
-            if loading {
-                ProgressView()
-            } else {
-                // MarkdownWebView's internal WKWebView scrolling is
-                // disabled (it now sizes its frame to content height),
-                // so the outer ScrollView here provides the scroll
-                // gesture for long project pages.
-                ScrollView {
-                    MarkdownWebView(markdown: markdown)
-                }
-            }
-        }
-        .navigationTitle(project.title)
-        #if os(iOS)
-        .navigationBarTitleDisplayMode(.inline)
-        #endif
-        .task {
-            do {
-                let (data, _) = try await URLSession.shared.data(from: project.indexURL)
-                var md = String(data: data, encoding: .utf8) ?? ""
-                // Extract both grids independently — the top photo grid
-                // (`photos:`) and the optional data-sheet grid
-                // (`data_photos:`, used by e.g. the Catfood project).
-                let photos = MarkdownHelper.extractPhotos(from: md, key: "photos")
-                let dataPhotos = MarkdownHelper.extractPhotos(from: md, key: "data_photos")
-                md = MarkdownHelper.stripFrontMatter(md)
-                md = MarkdownHelper.injectPhotos(md, photos: photos)
-                md = MarkdownHelper.injectDataPhotos(md, photos: dataPhotos)
-                md = MarkdownHelper.stripJekyllSyntax(md)
-                // Relative paths in the project's index.md resolve against
-                // the folder that contains index.md — derive that URL rather
-                // than hardcoding the repo layout in MarkdownHelper.
-                let folderURL = project.indexURL.deletingLastPathComponent()
-                md = MarkdownHelper.resolveRelativeURLs(in: md, baseURL: folderURL)
-                markdown = md
-            } catch {
-                markdown = "# Error\n\n\(error.localizedDescription)"
-            }
-            loading = false
-        }
-    }
-
 }

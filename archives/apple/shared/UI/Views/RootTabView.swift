@@ -1,4 +1,5 @@
 import SwiftUI
+import ScienceCore
 
 /// Root view for iPhone and iPad.
 ///
@@ -6,17 +7,32 @@ import SwiftUI
 /// (regular width) SwiftUI will automatically present the same TabView —
 /// the individual screens already use `NavigationStack` which adapts to
 /// the wider canvas.
+///
+/// Default tab is Olympiads. At launch, kicks off a parallel preload
+/// via the shared ContentStore so Curriculum and Research populate in
+/// the background — when the user taps them the data is already
+/// there, no per-tab spinner. See `ContentStore` for why we use a
+/// store rather than each view's own `.task`.
 public struct RootTabView: View {
+    @State private var selection: Tab = .olympiads
+    @State private var store = ContentStore.shared
+
     public init() {}
 
     public var body: some View {
-        TabView {
+        TabView(selection: $selection) {
             CurriculumView()
                 .tabItem { Label("Curriculum", systemImage: "book") }
+                .tag(Tab.curriculum)
             OlympiadsView()
                 .tabItem { Label("Olympiads", systemImage: "trophy") }
+                .tag(Tab.olympiads)
             ResearchView()
                 .tabItem { Label("Research", systemImage: "flask") }
+                .tag(Tab.research)
         }
+        .task { await store.preloadAll() }
     }
+
+    enum Tab: Hashable { case curriculum, olympiads, research }
 }

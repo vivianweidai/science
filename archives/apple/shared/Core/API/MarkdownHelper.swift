@@ -8,7 +8,26 @@ public enum MarkdownHelper {
 
     private static let mdImageRegex = try! NSRegularExpression(pattern: #"(\!\[[^\]]*\]\()(?!https?://)([^\)]+)(\))"#)
     private static let htmlImgRegex = try! NSRegularExpression(pattern: #"(<img\s[^>]*src=")(?!https?://)([^"]+)(")"#)
+    /// Markdown hyperlinks `[text](path)` with a relative target — the
+    /// `(?<!!)` negative lookbehind excludes image syntax `![...](...)`
+    /// which is handled by `mdImageRegex`. Used so links to extension
+    /// photos, local notebooks, etc. resolve against the project's
+    /// GitHub raw base.
+    private static let mdLinkRegex = try! NSRegularExpression(pattern: #"(?<!!)(\[[^\]]*\]\()(?!https?://|mailto:|#)([^\)]+)(\))"#)
+    private static let htmlHrefRegex = try! NSRegularExpression(pattern: #"(<a\s[^>]*href=")(?!https?://|mailto:|#)([^"]+)(")"#)
     private static let scriptRegex = try! NSRegularExpression(pattern: #"<script[\s\S]*?</script>"#)
+    private static let styleRegex = try! NSRegularExpression(pattern: #"<style[\s\S]*?</style>"#)
+    /// Kramdown `<div ... markdown="1">...</div>` wrappers: match the
+    /// whole block non-greedily and replace with just its inner content.
+    /// Matching opener + closer as a single pair avoids the ambiguity
+    /// of stripping `</div>` by count — a naive count-based strip
+    /// misfires on pages that also carry structural divs
+    /// (`.photo-grid`, `.tabs`), clipping the structural div's close
+    /// tag instead of the kramdown wrapper's.
+    private static let kramdownWrapperRegex = try! NSRegularExpression(
+        pattern: #"<div[^>]*\bmarkdown="1"[^>]*>([\s\S]*?)</div>"#,
+        options: []
+    )
 
     // MARK: - Front matter
 
@@ -102,11 +121,21 @@ public enum MarkdownHelper {
     /// Remove Jekyll/Liquid template syntax that won't render in the app.
     public static func stripJekyllSyntax(_ md: String) -> String {
         var result = md
+        for regex in [scriptRegex, styleRegex] {
+            let ns = result as NSString
+            result = regex.stringByReplacingMatches(
+                in: result,
+                range: NSRange(location: 0, length: ns.length),
+                withTemplate: ""
+            )
+        }
+        // Unwrap `<div markdown="1">…</div>` pairs in one pass — keep
+        // the captured contents via back-reference $1.
         let ns = result as NSString
-        result = scriptRegex.stringByReplacingMatches(
+        result = kramdownWrapperRegex.stringByReplacingMatches(
             in: result,
             range: NSRange(location: 0, length: ns.length),
-            withTemplate: ""
+            withTemplate: "$1"
         )
         result = result.components(separatedBy: "\n")
             .filter { !$0.contains("{{") && !$0.contains("{%") }
@@ -138,6 +167,13 @@ public enum MarkdownHelper {
 
         // HTML images: <img src="relative">
         result = replaceRelativePaths(in: result, regex: htmlImgRegex, base: base, group: 2)
+
+        // Markdown hyperlinks: [text](relative) — exclude images via
+        // the negative lookbehind in the regex.
+        result = replaceRelativePaths(in: result, regex: mdLinkRegex, base: base, group: 2)
+
+        // HTML anchors: <a href="relative">
+        result = replaceRelativePaths(in: result, regex: htmlHrefRegex, base: base, group: 2)
 
         return result
     }

@@ -35,13 +35,20 @@ public struct MarkdownWebView: View {
     let markdown: String
     let tableName: String?
     let highlightedRows: [Int]
+    let onImageTap: ((URL) -> Void)?
 
     @State private var contentHeight: CGFloat = 80
 
-    public init(markdown: String, tableName: String? = nil, highlightedRows: [Int] = []) {
+    public init(
+        markdown: String,
+        tableName: String? = nil,
+        highlightedRows: [Int] = [],
+        onImageTap: ((URL) -> Void)? = nil
+    ) {
         self.markdown = markdown
         self.tableName = tableName
         self.highlightedRows = highlightedRows
+        self.onImageTap = onImageTap
     }
 
     public var body: some View {
@@ -49,6 +56,7 @@ public struct MarkdownWebView: View {
             markdown: markdown,
             tableName: tableName,
             highlightedRows: highlightedRows,
+            onImageTap: onImageTap,
             contentHeight: $contentHeight
         )
         .frame(height: contentHeight)
@@ -59,6 +67,7 @@ private struct MarkdownWebViewRep: UIViewRepresentable {
     let markdown: String
     let tableName: String?
     let highlightedRows: [Int]
+    let onImageTap: ((URL) -> Void)?
     @Binding var contentHeight: CGFloat
 
     struct RenderOptions {
@@ -107,7 +116,7 @@ private struct MarkdownWebViewRep: UIViewRepresentable {
     }
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(contentHeight: $contentHeight)
+        Coordinator(contentHeight: $contentHeight, onImageTap: onImageTap)
     }
 
     final class Coordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler {
@@ -115,9 +124,11 @@ private struct MarkdownWebViewRep: UIViewRepresentable {
         var pendingOptions: RenderOptions?
         var loaded = false
         var contentHeight: Binding<CGFloat>
+        var onImageTap: ((URL) -> Void)?
 
-        init(contentHeight: Binding<CGFloat>) {
+        init(contentHeight: Binding<CGFloat>, onImageTap: ((URL) -> Void)?) {
             self.contentHeight = contentHeight
+            self.onImageTap = onImageTap
         }
 
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
@@ -125,6 +136,38 @@ private struct MarkdownWebViewRep: UIViewRepresentable {
             if let pending = pendingOptions {
                 render(pending)
             }
+        }
+
+        /// Intercept link clicks inside rendered markdown. Without this,
+        /// tapping any `<a href>` inside the shell causes WKWebView to
+        /// navigate in place — replacing our katex-shell with the link
+        /// target and breaking the page. Redirect link activations to
+        /// Safari (images open inline in Safari, as do notebooks /
+        /// repo URLs) while letting the initial katex-shell.html load
+        /// through as a same-document navigation.
+        func webView(
+            _ webView: WKWebView,
+            decidePolicyFor navigationAction: WKNavigationAction,
+            decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
+        ) {
+            if navigationAction.navigationType == .linkActivated,
+               let url = navigationAction.request.url {
+                // Image links open in the in-app PhotoViewer to match
+                // the behavior of photo-placeholder toys on the main
+                // Research page. Other links (GitHub, Colab, Wolfram,
+                // etc.) hand off to Safari.
+                let lower = url.absoluteString.lowercased()
+                let isImage = lower.hasSuffix(".jpg") || lower.hasSuffix(".jpeg")
+                    || lower.hasSuffix(".png") || lower.hasSuffix(".gif")
+                if isImage, let handler = onImageTap {
+                    handler(url)
+                } else {
+                    UIApplication.shared.open(url)
+                }
+                decisionHandler(.cancel)
+                return
+            }
+            decisionHandler(.allow)
         }
 
         /// Called by katex-shell.html via
@@ -175,11 +218,18 @@ public struct MarkdownWebView: View {
     let markdown: String
     let tableName: String?
     let highlightedRows: [Int]
+    let onImageTap: ((URL) -> Void)?
 
-    public init(markdown: String, tableName: String? = nil, highlightedRows: [Int] = []) {
+    public init(
+        markdown: String,
+        tableName: String? = nil,
+        highlightedRows: [Int] = [],
+        onImageTap: ((URL) -> Void)? = nil
+    ) {
         self.markdown = markdown
         self.tableName = tableName
         self.highlightedRows = highlightedRows
+        self.onImageTap = onImageTap
     }
 
     public var body: some View {

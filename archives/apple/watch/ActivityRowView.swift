@@ -49,9 +49,11 @@ struct ActivityRowView: View {
             }
         }
         .padding(.vertical, 2)
+        // Canonical curriculum highlight yellow — #fff056. Watch rows
+        // keep a light alpha wash so the dense row text stays legible.
         .listRowBackground(
             activity.highlighted == 1
-                ? Color(red: 1.0, green: 0.96, blue: 0.31).opacity(0.22)
+                ? Color(red: 1.0, green: 0.941, blue: 0.337).opacity(0.22)
                 : Color.clear
         )
     }

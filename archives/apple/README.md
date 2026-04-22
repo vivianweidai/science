@@ -26,9 +26,11 @@ Three tabs:
 - **Olympiads** — contests tracker plus unified textbooks list, read
   from `archives/truth/olympiads.json` (built from
   `olympiads.yml` via `archives/layout/build_olympiads.py`).
-- **Research** — experimental data projects under `/research/projects/`
-  (the `/research/` folder itself also holds `archives/` reference PDFs
-  and `index.md`, which the app ignores).
+- **Research** — toy browser driven by `archives/truth/toys.json`
+  (topics → technologies → toys). Project links open an in-app markdown
+  render of the project's `index.md`; photo placeholder links open in
+  an in-app `PhotoViewer`; GitHub / Colab / Wolfram links hand off to
+  Safari.
 
 ## Layout
 
@@ -38,8 +40,9 @@ archives/apple/
 ├── project.yml               XcodeGen spec — regenerate with `xcodegen generate`
 ├── shared/
 │   ├── Core/                 ScienceCore library (platform-neutral)
-│   │   ├── Models/           Activity, ResearchProject, CurriculumManifest, Manifest
-│   │   ├── API/              APIClient, CurriculumLoader, ResearchLoader, MarkdownHelper
+│   │   ├── ContentStore.swift @Observable store shared by all 3 tabs
+│   │   ├── Models/           Activity, ResearchTopic, CurriculumManifest
+│   │   ├── API/              APIClient, CurriculumLoader, MarkdownHelper
 │   │   └── Grouping/         ActivityGrouping, SubjectPaletteRGB
 │   └── UI/                   ScienceCoreUI library (iOS-only)
 │       ├── Rendering/        MarkdownWebView + katex-shell.html

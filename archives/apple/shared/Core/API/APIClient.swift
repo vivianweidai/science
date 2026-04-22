@@ -14,14 +14,38 @@ public actor APIClient {
 
     private let session: URLSession
     private let decoder: JSONDecoder
+    private var cachedActivities: [Activity]?
+    private var cachedTopics: [ResearchTopic]?
 
     public init(session: URLSession = .shared) {
         self.session = session
         self.decoder = JSONDecoder()
     }
 
+    /// Return cached activities if a previous fetch (e.g. the
+    /// app-launch preload) already populated them; otherwise fetch.
+    /// Caching here is what makes the background preload useful — when
+    /// the user taps the Olympiads tab, its `.task` returns the
+    /// already-loaded list instantly.
     public func listActivities() async throws -> [Activity] {
-        try await get(file: "olympiads.json", as: ActivityList.self).items
+        if let cachedActivities { return cachedActivities }
+        let items = try await get(file: "olympiads.json", as: ActivityList.self).items
+        cachedActivities = items
+        return items
+    }
+
+    public func listResearchTopics() async throws -> [ResearchTopic] {
+        if let cachedTopics { return cachedTopics }
+        let topics = try await get(file: "toys.json", as: ResearchToysResponse.self).topics
+        cachedTopics = topics
+        return topics
+    }
+
+    /// Invalidate caches — wired to pull-to-refresh so users can force
+    /// a round trip when they've just pushed new YAML.
+    public func invalidate() {
+        cachedActivities = nil
+        cachedTopics = nil
     }
 
     // MARK: - Private

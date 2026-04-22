@@ -7,24 +7,24 @@ import ScienceCore
 /// tables, each level preserving the order that `build_curriculum.py`
 /// writes into `archives/truth/curriculum.json`.
 struct CurriculumView: View {
-    @State private var manifest: CurriculumManifest?
-    @State private var initialLoading = true
-    @State private var errorMessage: String?
+    @State private var store = ContentStore.shared
 
     var body: some View {
         NavigationStack {
             Group {
-                if initialLoading {
-                    ProgressView()
-                } else if manifest == nil, let errorMessage {
-                    ErrorState(message: errorMessage)
-                } else if let manifest {
+                if let manifest = store.manifest {
                     subjectList(manifest)
+                } else if let errorMessage = store.manifestError {
+                    ErrorState(message: errorMessage)
+                } else {
+                    LoadingState(
+                        title: "Loading curriculum",
+                        subtitle: "Fetching the syllabus manifest from GitHub."
+                    )
                 }
             }
             .navigationTitle("Curriculum")
-            .task { await load() }
-            .refreshable { await refresh() }
+            .refreshable { await store.refreshAll() }
         }
     }
 
@@ -44,25 +44,6 @@ struct CurriculumView: View {
         }
     }
 
-    private func load() async {
-        do {
-            manifest = try await CurriculumLoader.shared.manifest()
-            errorMessage = nil
-        } catch {
-            errorMessage = error.localizedDescription
-        }
-        initialLoading = false
-    }
-
-    private func refresh() async {
-        await CurriculumLoader.shared.invalidate()
-        do {
-            manifest = try await CurriculumLoader.shared.manifest()
-            errorMessage = nil
-        } catch {
-            // keep stale manifest
-        }
-    }
 }
 
 /// Single colored row on the curriculum landing page.

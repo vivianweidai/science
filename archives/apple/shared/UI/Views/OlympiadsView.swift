@@ -9,39 +9,39 @@ import ScienceCore
 /// The webapp's implementation lives in olympiads/index.md — keep this view
 /// in sync with the timeline JS there when the design changes.
 struct OlympiadsView: View {
-    @State private var activities: [Activity] = []
+    @State private var store = ContentStore.shared
     @State private var subject: SubjectFilter = SubjectFilter.randomSubject()
-    @State private var initialLoading = true
-    @State private var errorMessage: String?
 
     var body: some View {
         NavigationStack {
             Group {
-                if initialLoading {
-                    ProgressView()
-                } else if activities.isEmpty, let errorMessage {
+                if let activities = store.activities {
+                    timelineContent(activities: activities)
+                } else if let errorMessage = store.activitiesError {
                     ErrorState(message: errorMessage)
                 } else {
-                    timelineContent
+                    LoadingState(
+                        title: "Loading olympiads",
+                        subtitle: "Fetching the latest timeline from GitHub."
+                    )
                 }
             }
             .navigationTitle("Olympiads")
-            .task { await load() }
-            .refreshable { await refresh() }
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    SubjectFilterMenu(selected: $subject)
+                }
+            }
+            .refreshable { await store.refreshAll() }
         }
     }
 
     // MARK: - Timeline
 
-    private var timelineContent: some View {
+    private func timelineContent(activities: [Activity]) -> some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 0) {
-                SubjectTabStrip(selected: $subject)
-                    .padding(.horizontal)
-                    .padding(.top, 4)
-                    .padding(.bottom, 8)
-
-                ForEach(yearGroups, id: \.year) { group in
+                ForEach(yearGroups(for: activities), id: \.year) { group in
                     YearSection(year: group.year, entries: group.entries)
                 }
             }
@@ -49,46 +49,14 @@ struct OlympiadsView: View {
         }
     }
 
-    // MARK: - Grouping
-    //
-    // The filter + year bucketing logic lives in `ScienceCore` so the
-    // watchOS companion app shares identical semantics. This view just
-    // maps its enum filter onto the shared helpers.
-
-    private var yearGroups: [ActivityGrouping.YearGroup] {
+    // Grouping semantics shared with watchOS via `ScienceCore`.
+    private func yearGroups(for activities: [Activity]) -> [ActivityGrouping.YearGroup] {
         let subjectName: String? = {
             if case .named(let name) = subject { return name }
             return nil
         }()
         let filtered = ActivityGrouping.filtered(activities, subject: subjectName)
         return ActivityGrouping.groupedByYear(filtered)
-    }
-
-    // MARK: - Loading
-
-    private func load() async {
-        guard activities.isEmpty else { return }
-        do {
-            activities = try await APIClient.shared.listActivities()
-            errorMessage = nil
-        } catch {
-            errorMessage = error.localizedDescription
-        }
-        initialLoading = false
-    }
-
-    /// Pull-to-refresh: keep stale data on failure, only replace on success.
-    /// Fixes the bug where the previous `load()` set `loading = true` and
-    /// wiped the list every time the user pulled down.
-    private func refresh() async {
-        do {
-            let fresh = try await APIClient.shared.listActivities()
-            activities = fresh
-            errorMessage = nil
-        } catch {
-            // Silently keep stale data. SwiftUI's refreshable shows no
-            // error UI by design — users will notice nothing changed.
-        }
     }
 }
 
@@ -134,83 +102,75 @@ private enum SubjectFilter: Hashable {
     }
 }
 
-private struct SubjectTabStrip: View {
+/// Native toolbar filter: a "Filter" button with a colored dot for the
+/// active subject opens a system menu of all subjects with a checkmark on
+/// the current selection. Adapts to light/dark mode automatically.
+private struct SubjectFilterMenu: View {
     @Binding var selected: SubjectFilter
 
     var body: some View {
-        ScrollViewReader { proxy in
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 8) {
-                    ForEach(SubjectFilter.allCases, id: \.self) { filter in
-                        Button {
-                            withAnimation(.easeInOut(duration: 0.25)) {
-                                selected = filter
-                                proxy.scrollTo(filter, anchor: .center)
-                            }
-                        } label: {
-                            TabChipLabel(
-                                label: filter.label,
-                                isSelected: selected == filter,
-                                selectedColor: filter.color
-                            )
-                        }
-                        .buttonStyle(.plain)
-                        .id(filter)
-                    }
+        Menu {
+            // Plain Button rows (not a Picker) so each subject dot can
+            // carry its own palette color. SwiftUI's Picker inside a
+            // Menu renders system-tinted symbols only.
+            ForEach(SubjectFilter.allCases, id: \.self) { filter in
+                Button { selected = filter } label: {
+                    filterMenuRow(filter: filter, isSelected: filter == selected)
                 }
             }
-            .onAppear {
-                // The initial subject is a random non-"All" filter (to
-                // match the webapp's random tab preselect). On narrow
-                // screens the selected chip can be offscreen to the
-                // right — scroll it into view so users know which
-                // subject they're looking at.
-                DispatchQueue.main.async {
-                    proxy.scrollTo(selected, anchor: .center)
+        } label: {
+            HStack(spacing: 4) {
+                if let color = selected.color {
+                    Circle().fill(color).frame(width: 10, height: 10)
                 }
-            }
-            .onChange(of: selected) { _, newValue in
-                withAnimation(.easeInOut(duration: 0.25)) {
-                    proxy.scrollTo(newValue, anchor: .center)
-                }
+                Text(selected.label)
+                    .font(.system(size: 15, weight: .medium))
             }
         }
     }
 }
 
-/// Single chip in the subject tab strip. Extracted into its own view so the
-/// SwiftUI type-checker can resolve it in reasonable time — inlined, the
-/// nested ternaries around background + foreground color hit the "unable to
-/// type-check in reasonable time" limit.
-private struct TabChipLabel: View {
-    let label: String
-    let isSelected: Bool
-    let selectedColor: Color?
-
-    private var fillColor: Color {
-        guard isSelected else { return PlatformColors.chipInactive }
-        return selectedColor ?? PlatformColors.chipNeutralActive
-    }
-
-    private var textColor: Color {
-        isSelected ? .black : .primary.opacity(0.8)
-    }
-
-    var body: some View {
-        Text(label)
-            .font(.system(size: 13, weight: .semibold))
-            .padding(.horizontal, 14)
-            .padding(.vertical, 7)
-            .background(Capsule().fill(fillColor))
-            .foregroundStyle(textColor)
+/// Menu row for Olympiads subject filter. ResearchView carries its own
+/// near-identical copy because `SubjectFilter` is file-private to each
+/// view.
+@ViewBuilder
+private func filterMenuRow(filter: SubjectFilter, isSelected: Bool) -> some View {
+    HStack {
+        Text(filter.label)
+        Spacer()
+        if isSelected {
+            Image(systemName: "checkmark")
+        }
+        if let color = filter.color {
+            Circle().fill(color).frame(width: 12, height: 12)
+        } else {
+            Image(systemName: "square.grid.2x2")
+        }
     }
 }
 
-/// Cross-platform gray colors for the tab chip strip. Avoids
-/// `Color(.systemGray4)` etc. which only resolve on iOS/tvOS contextual type.
-private enum PlatformColors {
-    static let chipInactive = Color(red: 0.93, green: 0.93, blue: 0.95)
-    static let chipNeutralActive = Color(red: 0.78, green: 0.78, blue: 0.80)
+/// Initial-load placeholder shown while the first network fetch is in
+/// flight. A bare `ProgressView()` reads as a blank screen on iPhone;
+/// this wraps it with a title + subtle subtitle so the wait feels
+/// intentional. Used by all three top-level tabs.
+struct LoadingState: View {
+    let title: String
+    let subtitle: String
+
+    var body: some View {
+        VStack(spacing: 14) {
+            ProgressView()
+                .controlSize(.large)
+            Text(title)
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundStyle(.primary)
+            Text(subtitle)
+                .font(.system(size: 12))
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
 }
 
 /// Simple error display used when the initial fetch fails. Avoids
@@ -296,12 +256,15 @@ private struct ActivityRow: View {
                         SubjectChip(subject: subject)
                     }
                 }
-                HStack(alignment: .firstTextBaseline, spacing: 6) {
+                HStack(alignment: .firstTextBaseline, spacing: 4) {
                     Text(activity.name)
                         .font(.system(size: 14))
                         .fixedSize(horizontal: false, vertical: true)
                     if activity.invited == 1 {
-                        InvitedBadge()
+                        Text("🎟️").font(.system(size: 12))
+                    }
+                    if activity.borderline == 1 || activity.competitive == 1 {
+                        Text("🎯").font(.system(size: 12))
                     }
                 }
             }
@@ -310,9 +273,12 @@ private struct ActivityRow: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
+        // Canonical curriculum highlight yellow — #fff056, matching
+        // --highlight-bg in archives/apple/shared/UI/Rendering/katex-shell.html
+        // and archives/layout/curriculum.css. Keep these in sync.
         .background(
             activity.highlighted == 1
-                ? Color(red: 1.0, green: 0.96, blue: 0.31).opacity(0.5)
+                ? Color(red: 1.0, green: 0.941, blue: 0.337)
                 : Color.clear
         )
     }
@@ -330,22 +296,6 @@ private struct SubjectChip: View {
             .padding(.vertical, 2)
             .background(Capsule().fill(SubjectPalette.color(for: subject)))
             .foregroundStyle(Color.black.opacity(0.82))
-    }
-}
-
-// MARK: - Invited badge
-
-private struct InvitedBadge: View {
-    var body: some View {
-        Text("INVITED")
-            .font(.system(size: 9, weight: .bold))
-            .padding(.horizontal, 5)
-            .padding(.vertical, 1)
-            .background(
-                RoundedRectangle(cornerRadius: 3)
-                    .fill(Color(red: 1.0, green: 0.84, blue: 0.0))
-            )
-            .foregroundStyle(Color(red: 0.35, green: 0.27, blue: 0.0))
     }
 }
 

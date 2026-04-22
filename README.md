@@ -1,6 +1,6 @@
 # Science
 
-Personal science portfolio and lab notebook — available on [web](https://vivianweidai.com) and on the [App Store](https://apps.apple.com/app/id6762091743) for iPhone and iPad.
+Personal science portfolio and lab notebook — available on [web](https://vivianweidai.com), on the [App Store](https://apps.apple.com/app/id6762091743) for iPhone and iPad (with an embedded Apple Watch companion), and as an Android / Wear OS port under `archives/android/`.
 
 ## What's Inside
 
@@ -18,7 +18,8 @@ olympiads/           Timeline page driven by olympiads.yml → olympiads.json
 archives/
   CONTENT/           Source data (olympiads.yml, curriculum.json, images)
   LAYOUT/            CSS, JS, and Python build scripts
-  APPLE/             iOS app (SwiftUI, read-only)
+  APPLE/             iOS + watchOS app (SwiftUI, read-only)
+  ANDROID/           Android + Wear OS port (Kotlin/Compose, read-only)
   CHINESE/           Chinese language mirror
 ```
 
