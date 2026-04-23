@@ -12,14 +12,24 @@ public struct Activity: Identifiable, Hashable, Codable, Sendable {
     public let invited: Int?
     public let borderline: Int?
     public let competitive: Int?
+    public let photoUrl: String?
 
     enum CodingKeys: String, CodingKey {
         case id, type, subject, date, name, highlighted, subjects, invited, borderline, competitive
         case sortKey = "sort_key"
+        case photoUrl = "photo_url"
     }
 
     public var isOlympiad: Bool { type == "olympiad" }
     public var isTextbook: Bool { type == "textbook" }
+
+    /// Resolve the optional site-relative `photo_url` (e.g. `/olympiads/photos/ap.jpeg`)
+    /// to an absolute GitHub-raw URL matching the JSON fetch host in `APIClient`.
+    public var photoURL: URL? {
+        guard let raw = photoUrl, !raw.isEmpty else { return nil }
+        let trimmed = raw.hasPrefix("/") ? String(raw.dropFirst()) : raw
+        return URL(string: "https://raw.githubusercontent.com/vivianweidai/science/main/" + trimmed)
+    }
 }
 
 public struct ActivityList: Codable, Sendable {

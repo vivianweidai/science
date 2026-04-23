@@ -14,6 +14,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -38,6 +40,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontStyle
@@ -445,9 +449,15 @@ private suspend fun scanProjectPhotos(indexUrl: String): List<String> {
 
 // ---------- Photo viewer ----------
 
+/// Shared pinch-to-zoom + drag-to-pan viewer used by both Research
+/// (toy placeholder photos, in-page images) and Olympiads (activity
+/// photos). `internal` so OlympiadsView.kt in the same module can reuse
+/// the route target directly. Double-tap toggles between fit and 2.5x.
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun PhotoViewerScreen(title: String, url: String, onBack: () -> Unit) {
+internal fun PhotoViewerScreen(title: String, url: String, onBack: () -> Unit) {
+    var scale by remember { mutableStateOf(1f) }
+    var offset by remember { mutableStateOf(androidx.compose.ui.geometry.Offset.Zero) }
     Scaffold(
         topBar = {
             TopAppBar(
@@ -467,7 +477,34 @@ private fun PhotoViewerScreen(title: String, url: String, onBack: () -> Unit) {
             AsyncImage(
                 model = url,
                 contentDescription = title,
-                modifier = Modifier.fillMaxSize().clip(RoundedCornerShape(8.dp)),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .clip(RoundedCornerShape(8.dp))
+                    .graphicsLayer(
+                        scaleX = scale,
+                        scaleY = scale,
+                        translationX = offset.x,
+                        translationY = offset.y,
+                    )
+                    .pointerInput(Unit) {
+                        detectTransformGestures { _, pan, zoom, _ ->
+                            scale = (scale * zoom).coerceIn(1f, 6f)
+                            offset = if (scale > 1f) offset + pan
+                                     else androidx.compose.ui.geometry.Offset.Zero
+                        }
+                    }
+                    .pointerInput(Unit) {
+                        detectTapGestures(
+                            onDoubleTap = {
+                                if (scale > 1f) {
+                                    scale = 1f
+                                    offset = androidx.compose.ui.geometry.Offset.Zero
+                                } else {
+                                    scale = 2.5f
+                                }
+                            },
+                        )
+                    },
             )
         }
     }

@@ -17,6 +17,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.vivianweidai.science.core.ContentStore
@@ -35,6 +36,13 @@ fun RootTabView(store: ContentStore = ContentStore.shared) {
 
     LaunchedEffect(Unit) { scope.launch { store.preloadAll() } }
 
+    // Preserves per-tab UI state (nested NavController back stacks,
+    // scroll positions, etc.) when the user switches tabs. Without this
+    // the inactive tab is removed from composition and its NavController
+    // is reset — so e.g. drilling into Curriculum → Chemistry → Atoms →
+    // First Law and then tapping Olympiads loses the position.
+    val stateHolder = rememberSaveableStateHolder()
+
     Scaffold(
         bottomBar = {
             NavigationBar {
@@ -49,10 +57,12 @@ fun RootTabView(store: ContentStore = ContentStore.shared) {
             }
         },
     ) { padding ->
-        when (tab) {
-            Tab.Curriculum -> CurriculumView(store, Modifier.fillMaxSize().padding(padding))
-            Tab.Olympiads  -> OlympiadsView (store, Modifier.fillMaxSize().padding(padding))
-            Tab.Research   -> ResearchView  (store, Modifier.fillMaxSize().padding(padding))
+        stateHolder.SaveableStateProvider(key = tab.name) {
+            when (tab) {
+                Tab.Curriculum -> CurriculumView(store, Modifier.fillMaxSize().padding(padding))
+                Tab.Olympiads  -> OlympiadsView (store, Modifier.fillMaxSize().padding(padding))
+                Tab.Research   -> ResearchView  (store, Modifier.fillMaxSize().padding(padding))
+            }
         }
     }
 }

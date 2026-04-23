@@ -1,6 +1,7 @@
 package com.vivianweidai.science.ui
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -92,6 +93,9 @@ fun CurriculumView(store: ContentStore, modifier: Modifier = Modifier) {
                             subject = subject,
                             section = section,
                             onBack = { nav.popBackStack() },
+                            onSubjectCrumb = {
+                                nav.popBackStack(route = "subject/$subjectSlug", inclusive = false)
+                            },
                             onTopic = { t ->
                                 nav.navigate("topic/$subjectSlug/$sectionSlug/${t.slug}")
                             },
@@ -106,7 +110,21 @@ fun CurriculumView(store: ContentStore, modifier: Modifier = Modifier) {
                             ?: return@composable
                         val topic = section.topics.firstOrNull { it.slug == topicSlug }
                             ?: return@composable
-                        TopicScreen(subject, section, topic, onBack = { nav.popBackStack() })
+                        TopicScreen(
+                            subject = subject,
+                            section = section,
+                            topic = topic,
+                            onBack = { nav.popBackStack() },
+                            onSubjectCrumb = {
+                                nav.popBackStack(route = "subject/$subjectSlug", inclusive = false)
+                            },
+                            onSectionCrumb = {
+                                nav.popBackStack(
+                                    route = "section/$subjectSlug/$sectionSlug",
+                                    inclusive = false,
+                                )
+                            },
+                        )
                     }
                 }
                 error != null -> ErrorState(error!!)
@@ -180,7 +198,7 @@ private fun SubjectScreen(
 ) {
     Scaffold(topBar = { TintedBackAppBar(subject, subject.name, onBack) }) { p ->
         Column(Modifier.padding(p).fillMaxSize()) {
-            SubjectBreadcrumb(subject, trail = emptyList())
+            SubjectBreadcrumb(subject, onSubjectClick = null, trail = emptyList())
             LazyColumn {
                 items(subject.sections, key = { it.slug }) { section ->
                     RowItem(
@@ -202,11 +220,16 @@ private fun SectionScreen(
     subject: CurriculumSubject,
     section: CurriculumSection,
     onBack: () -> Unit,
+    onSubjectCrumb: () -> Unit,
     onTopic: (CurriculumTopic) -> Unit,
 ) {
     Scaffold(topBar = { TintedBackAppBar(subject, section.name, onBack) }) { p ->
         Column(Modifier.padding(p).fillMaxSize()) {
-            SubjectBreadcrumb(subject, trail = listOf(section.name))
+            SubjectBreadcrumb(
+                subject = subject,
+                onSubjectClick = onSubjectCrumb,
+                trail = listOf(Crumb(section.name, null)),
+            )
             LazyColumn {
                 items(section.topics, key = { it.slug }) { topic ->
                     RowItem(
@@ -230,10 +253,19 @@ private fun TopicScreen(
     section: CurriculumSection,
     topic: CurriculumTopic,
     onBack: () -> Unit,
+    onSubjectCrumb: () -> Unit,
+    onSectionCrumb: () -> Unit,
 ) {
     Scaffold(topBar = { TintedBackAppBar(subject, topic.name, onBack) }) { p ->
         Column(Modifier.padding(p).fillMaxSize()) {
-            SubjectBreadcrumb(subject, trail = listOf(section.name, topic.name))
+            SubjectBreadcrumb(
+                subject = subject,
+                onSubjectClick = onSubjectCrumb,
+                trail = listOf(
+                    Crumb(section.name, onSectionCrumb),
+                    Crumb(topic.name, null),
+                ),
+            )
             // A regular scrollable Column — not LazyColumn — because every
             // CurriculumTableCard hosts a WebView whose height updates
             // mid-render (markdown → rendered tables). LazyColumn's
@@ -346,8 +378,21 @@ private fun RowItem(title: String, subtitle: String? = null, onClick: () -> Unit
     }
 }
 
+/** One breadcrumb segment. `onClick == null` means "current level" —
+ *  rendered as plain black ink. Otherwise the label becomes a blue
+ *  hyperlink matching the olympiad photo-row link style. */
+internal data class Crumb(val label: String, val onClick: (() -> Unit)?)
+
 @Composable
-private fun SubjectBreadcrumb(subject: CurriculumSubject, trail: List<String>) {
+private fun SubjectBreadcrumb(
+    subject: CurriculumSubject,
+    onSubjectClick: (() -> Unit)?,
+    trail: List<Crumb>,
+) {
+    val linkBlue = Color(0xFF0969DA)
+    val ink = Color.Black.copy(alpha = 0.82f)
+    val divider = Color.Black.copy(alpha = 0.5f)
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -355,25 +400,41 @@ private fun SubjectBreadcrumb(subject: CurriculumSubject, trail: List<String>) {
             .padding(horizontal = 14.dp, vertical = 10.dp),
         verticalAlignment = Alignment.Top,
     ) {
-        Text(
-            subject.name,
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 12.sp,
-            color = Color.Black.copy(alpha = 0.82f),
+        CrumbText(
+            label = subject.name,
+            color = if (onSubjectClick != null) linkBlue else ink,
+            bold = true,
+            onClick = onSubjectClick,
         )
         trail.forEach { piece ->
-            Text(
-                " / ",
-                fontSize = 12.sp,
-                color = Color.Black.copy(alpha = 0.5f),
-            )
-            Text(
-                piece,
-                fontSize = 12.sp,
-                color = Color.Black.copy(alpha = 0.82f),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
+            Text(" / ", fontSize = 12.sp, color = divider)
+            CrumbText(
+                label = piece.label,
+                color = if (piece.onClick != null) linkBlue else ink,
+                bold = false,
+                onClick = piece.onClick,
             )
         }
     }
+}
+
+@Composable
+private fun CrumbText(
+    label: String,
+    color: Color,
+    bold: Boolean,
+    onClick: (() -> Unit)?,
+) {
+    val modifier = if (onClick != null)
+        Modifier.clickable(onClick = onClick)
+    else Modifier
+    Text(
+        text = label,
+        fontSize = 12.sp,
+        fontWeight = if (bold) FontWeight.SemiBold else FontWeight.Normal,
+        color = color,
+        maxLines = 1,
+        overflow = TextOverflow.Ellipsis,
+        modifier = modifier,
+    )
 }

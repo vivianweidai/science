@@ -2,6 +2,7 @@ package com.vivianweidai.science.ui
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -33,9 +34,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.vivianweidai.science.core.ContentStore
 import com.vivianweidai.science.core.grouping.ActivityGrouping
 import com.vivianweidai.science.core.model.Activity
+import java.net.URLEncoder
 
 /** Unified chronological timeline of olympiads + textbooks, visually
  *  matching the webapp at /olympiads/. Groups by year (newest first),
@@ -48,6 +53,7 @@ fun OlympiadsView(
 ) {
     val activities by store.activities.collectAsStateWithLifecycle()
     val error by store.activitiesError.collectAsStateWithLifecycle()
+    val nav = rememberNavController()
     var filter by rememberSaveable(
         stateSaver = androidx.compose.runtime.saveable.Saver<SubjectFilter, String>(
             save = { (it as? SubjectFilter.Named)?.name ?: "__all__" },
@@ -55,31 +61,47 @@ fun OlympiadsView(
         )
     ) { mutableStateOf<SubjectFilter>(SubjectFilter.randomSubject()) }
 
-    Scaffold(
-        modifier = modifier,
-        topBar = {
-            TopAppBar(
-                title = { Text("Olympiads") },
-                actions = {
-                    SubjectFilterMenu(
-                        selected = filter,
-                        onSelect = { filter = it },
+    NavHost(navController = nav, startDestination = "list", modifier = modifier) {
+        composable("list") {
+            Scaffold(
+                topBar = {
+                    TopAppBar(
+                        title = { Text("Olympiads") },
+                        actions = {
+                            SubjectFilterMenu(
+                                selected = filter,
+                                onSelect = { filter = it },
+                            )
+                        },
                     )
                 },
-            )
-        },
-    ) { padding ->
-        Box(Modifier.padding(padding)) {
-            when {
-                activities != null -> Timeline(
-                    groups = yearGroups(activities!!, filter),
-                )
-                error != null -> ErrorState(error!!)
-                else -> LoadingState(
-                    title = "Loading olympiads",
-                    subtitle = "Fetching the latest timeline from GitHub.",
-                )
+            ) { padding ->
+                Box(Modifier.padding(padding)) {
+                    when {
+                        activities != null -> Timeline(
+                            groups = yearGroups(activities!!, filter),
+                            onPhoto = { title, url ->
+                                val encodedTitle = URLEncoder.encode(title, "UTF-8")
+                                val encodedUrl = URLEncoder.encode(url, "UTF-8")
+                                nav.navigate("photo/$encodedTitle/$encodedUrl")
+                            },
+                        )
+                        error != null -> ErrorState(error!!)
+                        else -> LoadingState(
+                            title = "Loading olympiads",
+                            subtitle = "Fetching the latest timeline from GitHub.",
+                        )
+                    }
+                }
             }
+        }
+        composable("photo/{title}/{url}") { back ->
+            val title = back.arguments?.getString("title") ?: ""
+            val url = back.arguments?.getString("url") ?: ""
+            // Reuses the shared PhotoViewerScreen declared in ResearchView.kt
+            // (same Compose package, internal visibility) so zoom behavior
+            // stays identical across Research and Olympiads.
+            PhotoViewerScreen(title, url) { nav.popBackStack() }
         }
     }
 }
@@ -94,7 +116,10 @@ private fun yearGroups(
 }
 
 @Composable
-private fun Timeline(groups: List<ActivityGrouping.YearGroup>) {
+private fun Timeline(
+    groups: List<ActivityGrouping.YearGroup>,
+    onPhoto: (String, String) -> Unit,
+) {
     LazyColumn(
         contentPadding = PaddingValues(bottom = 24.dp),
     ) {
@@ -111,7 +136,7 @@ private fun Timeline(groups: List<ActivityGrouping.YearGroup>) {
                 )
             }
             items(group.entries, key = { "act-${it.id}" }) { entry ->
-                ActivityRow(entry)
+                ActivityRow(entry, onPhoto = onPhoto)
                 HorizontalDivider(modifier = Modifier.padding(start = 16.dp))
             }
         }
@@ -119,7 +144,7 @@ private fun Timeline(groups: List<ActivityGrouping.YearGroup>) {
 }
 
 @Composable
-private fun ActivityRow(a: Activity) {
+private fun ActivityRow(a: Activity, onPhoto: (String, String) -> Unit) {
     val month = remember(a.date) {
         if (a.date == "Future") "" else a.date.substringBefore(' ').take(3)
     }
@@ -128,13 +153,22 @@ private fun ActivityRow(a: Activity) {
     // --highlight-bg in archives/android/ui/src/main/assets/katex-shell.html
     // and archives/layout/curriculum.css. Keep these in sync.
     val highlighted = a.highlighted == 1
+    val photoUrl = a.photoAbsoluteUrl
+    val hasPhoto = photoUrl != null
     val rowBg = if (highlighted)
         Color(red = 1.0f, green = 0.941f, blue = 0.337f)
     else Color.Transparent
     // Force dark ink on highlighted rows — in dark mode the default
     // body color is near-white, which is unreadable on the yellow wash.
-    val nameColor = if (highlighted) Color.Black.copy(alpha = 0.82f)
-                    else MaterialTheme.colorScheme.onSurface
+    // Rows with a photo_url are tappable links to the in-app viewer;
+    // show the name in GitHub link blue (#0969da) so the affordance
+    // reads at a glance in both modes and on both backgrounds.
+    val linkBlue = Color(0xFF0969DA)
+    val nameColor = when {
+        hasPhoto -> linkBlue
+        highlighted -> Color.Black.copy(alpha = 0.82f)
+        else -> MaterialTheme.colorScheme.onSurface
+    }
     val monthColor = if (highlighted) Color.Black.copy(alpha = 0.55f)
                      else MaterialTheme.colorScheme.onSurfaceVariant
 
@@ -142,6 +176,11 @@ private fun ActivityRow(a: Activity) {
         modifier = Modifier
             .fillMaxWidth()
             .background(rowBg)
+            .then(
+                if (photoUrl != null)
+                    Modifier.clickable { onPhoto(a.name, photoUrl) }
+                else Modifier
+            )
             .padding(horizontal = 16.dp, vertical = 8.dp),
         verticalAlignment = Alignment.Top,
     ) {
@@ -168,6 +207,7 @@ private fun ActivityRow(a: Activity) {
                 )
                 if (a.invited == 1) Text(" 🎟️", fontSize = 12.sp)
                 if (a.borderline == 1 || a.competitive == 1) Text(" 🎯", fontSize = 12.sp)
+                if (photoUrl != null) Text(" 📷", fontSize = 12.sp)
             }
         }
     }

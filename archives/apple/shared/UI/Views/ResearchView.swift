@@ -382,6 +382,15 @@ struct PhotoViewer: View {
     let title: String
     let url: URL
 
+    // Pinch-to-zoom + drag-to-pan state. `scale`/`offset` are the
+    // committed values; `gestureScale`/`gestureOffset` accumulate the
+    // in-flight gesture so the image tracks smoothly while the user
+    // pinches or drags. Double-tap resets to fit.
+    @State private var scale: CGFloat = 1
+    @State private var gestureScale: CGFloat = 1
+    @State private var offset: CGSize = .zero
+    @State private var gestureOffset: CGSize = .zero
+
     var body: some View {
         AsyncImage(url: url) { phase in
             switch phase {
@@ -391,6 +400,36 @@ struct PhotoViewer: View {
                 image
                     .resizable()
                     .scaledToFit()
+                    .scaleEffect(scale * gestureScale)
+                    .offset(x: offset.width + gestureOffset.width,
+                            y: offset.height + gestureOffset.height)
+                    .gesture(
+                        SimultaneousGesture(
+                            MagnificationGesture()
+                                .onChanged { value in gestureScale = value }
+                                .onEnded { value in
+                                    scale = max(1, min(scale * value, 6))
+                                    gestureScale = 1
+                                    if scale == 1 { offset = .zero }
+                                },
+                            DragGesture()
+                                .onChanged { value in gestureOffset = value.translation }
+                                .onEnded { value in
+                                    offset.width += value.translation.width
+                                    offset.height += value.translation.height
+                                    gestureOffset = .zero
+                                }
+                        )
+                    )
+                    .onTapGesture(count: 2) {
+                        withAnimation(.spring(response: 0.3)) {
+                            if scale > 1 {
+                                scale = 1; offset = .zero
+                            } else {
+                                scale = 2.5
+                            }
+                        }
+                    }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             case .failure:
                 VStack(spacing: 8) {

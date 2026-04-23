@@ -115,13 +115,14 @@
   }
 
   /* Highlighted rows from curriculum.json `highlighted_rows` — mirror
-     .curr-topic-body tr.highlight from archives/layout/curriculum.css. */
-  :root { --highlight-bg: #fff056; }
-  @media (prefers-color-scheme: dark) {
-    :root { --highlight-bg: #7a6b00; }
-  }
+     .curr-topic-body tr.highlight from archives/layout/curriculum.css.
+     Canonical highlight yellow (#fff056) in both light and dark mode;
+     force near-black text on the wash so it stays readable in dark mode
+     (default body text is near-white there). Matches the native
+     OlympiadsView rule on both platforms. */
   tr.highlight td:not(.curr-group-cell) {
-    background: var(--highlight-bg) !important;
+    background: #fff056 !important;
+    color: #1f2328 !important;
   }
 
   /* Subject chip pills used by research project pages (e.g.
@@ -167,8 +168,8 @@
      the project-wide canonical highlight yellow (#fff056), matching
      the curriculum table highlight and olympiad row highlight.
      `.no-highlight` (Extensions sections) opts out. */
-  .instrument-table tbody tr td { background: #fff056; }
-  .instrument-table.no-highlight tbody tr td { background: transparent; }
+  .instrument-table tbody tr td { background: #fff056; color: #1f2328; }
+  .instrument-table.no-highlight tbody tr td { background: transparent; color: inherit; }
   .hero-single img { max-width: 100%; height: auto; max-height: 300px; object-fit: cover; border-radius: 8px; }
   .shuffle-btn { display: none; }
 
