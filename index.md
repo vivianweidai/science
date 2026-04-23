@@ -54,4 +54,4 @@ title: Vivian Dai
 
 ---
 
-<div class="footer"><div class="footer-links" style="display: inline; gap: 0;"><a href="https://github.com/vivianweidai/science">GitHub</a> <a href="https://apps.apple.com/app/id6762091743">Apple</a> <span style="color: #8c959f;">Google</span></div><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+<div class="footer"><div class="footer-links" style="display: inline; gap: 0;"><a href="https://apps.apple.com/app/id6762091743">Apple</a> <span style="color: #8c959f;">Google</span></div><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
