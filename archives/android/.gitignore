@@ -1,5 +1,6 @@
 *.iml
 .gradle/
+.kotlin/
 local.properties
 .idea/
 build/
@@ -10,5 +11,7 @@ captures/
 *.aab
 *.ap_
 *.dex
+*.keystore
+*.jks
 output.json
 .DS_Store
