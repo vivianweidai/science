@@ -34,7 +34,6 @@
   subject: Mathematics
   date: December 2025
   name: 'Calculus: Early Transcendentals by James Stewart'
-  highlighted: true
 - type: olympiad
   subject: Mathematics
   date: November 2025
@@ -88,7 +87,6 @@
   date: September 2023
   name: Precalculus Mathematics in a Nutshell by George F. Simmons
   photo_url: /olympiads/photos/precalculus.jpeg
-  highlighted: true
 - type: textbook
   subject: Computing
   date: Future

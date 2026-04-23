@@ -43,7 +43,7 @@
       "date": "December 2025",
       "sort_key": "2025-12",
       "name": "Calculus: Early Transcendentals by James Stewart",
-      "highlighted": 1
+      "highlighted": 0
     },
     {
       "id": 6,
@@ -154,7 +154,7 @@
       "date": "September 2023",
       "sort_key": "2023-09",
       "name": "Precalculus Mathematics in a Nutshell by George F. Simmons",
-      "highlighted": 1,
+      "highlighted": 0,
       "photo_url": "/olympiads/photos/precalculus.jpeg"
     },
     {
