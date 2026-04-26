@@ -1,6 +1,7 @@
 ---
 import './base.css';
 import './tabs.css';
+import faviconSvg from './favicon.svg?url';
 
 interface Props {
   title?: string;
@@ -13,7 +14,7 @@ const { title = 'Vivian Dai', htmlLang = 'en' } = Astro.props;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href={faviconSvg} />
   <title>{title}</title>
   <style is:global>
     /* Nav link cards (default layout only) */
