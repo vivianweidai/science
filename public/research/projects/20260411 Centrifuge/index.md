@@ -15,17 +15,13 @@ project: Centrifuge
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script src="/research/layouts/shuffle.js"></script>
-
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 11th 2026</span></div>
 
 This experiment centrifuged five common household liquids to observe what separates out. We also practiced basic lab techniques of solution sample preparation with pipettes, analytical balances and pH meters.
 
 ## Setup
 
-<div class="setup-highlight setup-highlight-all" markdown="1">
-
-<style>.setup-highlight-all tbody tr td { background: #fff44f; }</style>
+<div class="setup-highlight setup-highlight-all">
 
 | Instrument | Details |
 |------------|---------|
@@ -59,7 +55,7 @@ Five everyday liquids were loaded into labeled 50 mL centrifuge tubes. Each samp
 
 ## Data
 
-The pH readings were recorded from photographs of the VWR pHenomenal pH 1100 L display. A number of mystery solutions available in the lab were also measured for additional pH practice. Raw data photos are in the <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260411%20Centrifuge/photos">photos</a> directory.
+The pH readings were recorded from photographs of the VWR pHenomenal pH 1100 L display. A number of mystery solutions available in the lab were also measured for additional pH practice. Raw data photos are in the <a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260411%20Centrifuge/photos" rel="noopener">photos</a> directory.
 
 | Sample | pH | Photo | Notes |
 |--------|:--:|:-----:|-------|

@@ -14,8 +14,6 @@ project: 熔点测定
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">随机切换照片</button>
 
-<script src="/research/layouts/shuffle.js"></script>
-
 <div class="project-meta">2026年4月5日<br>OptiMelt Automated Melting Point System</div>
 
 ## 概述

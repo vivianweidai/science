@@ -15,20 +15,6 @@ public enum MarkdownHelper {
     /// GitHub raw base.
     private static let mdLinkRegex = try! NSRegularExpression(pattern: #"(?<!!)(\[[^\]]*\]\()(?!https?://|mailto:|#)([^\)]+)(\))"#)
     private static let htmlHrefRegex = try! NSRegularExpression(pattern: #"(<a\s[^>]*href=")(?!https?://|mailto:|#)([^"]+)(")"#)
-    private static let scriptRegex = try! NSRegularExpression(pattern: #"<script[\s\S]*?</script>"#)
-    private static let styleRegex = try! NSRegularExpression(pattern: #"<style[\s\S]*?</style>"#)
-    /// Kramdown `<div ... markdown="1">...</div>` wrappers: match the
-    /// whole block non-greedily and replace with just its inner content.
-    /// Matching opener + closer as a single pair avoids the ambiguity
-    /// of stripping `</div>` by count — a naive count-based strip
-    /// misfires on pages that also carry structural divs
-    /// (`.photo-grid`, `.tabs`), clipping the structural div's close
-    /// tag instead of the kramdown wrapper's.
-    private static let kramdownWrapperRegex = try! NSRegularExpression(
-        pattern: #"<div[^>]*\bmarkdown="1"[^>]*>([\s\S]*?)</div>"#,
-        options: []
-    )
-
     // MARK: - Front matter
 
     /// Strip YAML front matter (--- ... ---) from the top of markdown.
@@ -88,11 +74,11 @@ public enum MarkdownHelper {
     }
 
     /// Replace empty `<img id="data-N">` tags in the data-sheet grid
-    /// (e.g. on the Catfood project) with actual src from the
-    /// `data_photos:` front-matter array. The webapp fills these via an
-    /// inline Jekyll script that our `stripJekyllSyntax` removes, so we
-    /// have to rewrite the sources statically before handing the
-    /// markdown to marked.js.
+    /// with actual src from a `data_photos:` front-matter array.
+    /// Currently no project ships this pattern (catfood was the last
+    /// holdout, migrated 2026-04-25), so this is a noop today; kept
+    /// as the obvious symmetric helper to `injectPhotos` for any
+    /// future project that wants a separate data-sheet grid.
     public static func injectDataPhotos(_ md: String, photos: [String]) -> String {
         injectImageSources(
             md, photos: photos,
@@ -113,33 +99,6 @@ public enum MarkdownHelper {
             let replacement = "<img id=\"\(idPrefix)\(i)\" src=\"\(photo)\" alt=\"\(altText)\">"
             result = result.replacingOccurrences(of: pattern, with: replacement)
         }
-        return result
-    }
-
-    // MARK: - Jekyll cleanup
-
-    /// Remove Jekyll/Liquid template syntax that won't render in the app.
-    public static func stripJekyllSyntax(_ md: String) -> String {
-        var result = md
-        for regex in [scriptRegex, styleRegex] {
-            let ns = result as NSString
-            result = regex.stringByReplacingMatches(
-                in: result,
-                range: NSRange(location: 0, length: ns.length),
-                withTemplate: ""
-            )
-        }
-        // Unwrap `<div markdown="1">…</div>` pairs in one pass — keep
-        // the captured contents via back-reference $1.
-        let ns = result as NSString
-        result = kramdownWrapperRegex.stringByReplacingMatches(
-            in: result,
-            range: NSRange(location: 0, length: ns.length),
-            withTemplate: "$1"
-        )
-        result = result.components(separatedBy: "\n")
-            .filter { !$0.contains("{{") && !$0.contains("{%") }
-            .joined(separator: "\n")
         return result
     }
 

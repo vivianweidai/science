@@ -41,7 +41,7 @@ project: 太空基因
 
 ## 数据
 
-查看<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260401%20Genes%20in%20Space/output/20260331%20Genes%20in%20Space.pdf">提案文件</a>和<a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260401%20Genes%20in%20Space/papers">参考文献</a>。
+查看<a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260401%20Genes%20in%20Space/output/20260331%20Genes%20in%20Space.pdf" rel="noopener">提案文件</a>和<a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260401%20Genes%20in%20Space/papers" rel="noopener">参考文献</a>。
 
 ---
 

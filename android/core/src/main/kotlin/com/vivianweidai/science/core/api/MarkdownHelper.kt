@@ -14,19 +14,6 @@ object MarkdownHelper {
     // Markdown links: [text](path) — the (?<!!) excludes ![...](...) images.
     private val mdLinkRegex = Regex("""(?<!!)(\[[^\]]*]\()(?!https?://|mailto:|#)([^)]+)(\))""")
     private val htmlHrefRegex = Regex("""(<a\s[^>]*href=")(?!https?://|mailto:|#)([^"]+)(")""")
-    private val scriptRegex = Regex("""<script[\s\S]*?</script>""")
-    private val styleRegex = Regex("""<style[\s\S]*?</style>""")
-    // Kramdown `<div ... markdown="1">...</div>` wrappers exist purely to
-    // tell the webapp's markdown engine "process markdown inside this
-    // HTML block". marked.js (in the in-app WebView) doesn't understand
-    // that hint and leaves the enclosed markdown as raw text. We match
-    // the entire wrapper as a single non-greedy block and replace with
-    // just its contents, so the opener AND its matching `</div>` are
-    // removed together. Naive "strip opener + strip next </div>"
-    // misfires on pages that also carry structural divs (photo-grid,
-    // etc.) — it would clip the structural div's close tag instead.
-    private val kramdownWrapperRegex = Regex("""<div[^>]*\bmarkdown="1"[^>]*>([\s\S]*?)</div>""")
-
     // ---------- Front matter ----------
 
     fun stripFrontMatter(md: String): String {
@@ -79,20 +66,6 @@ object MarkdownHelper {
             result = result.replace(pattern, replacement)
         }
         return result
-    }
-
-    // ---------- Jekyll cleanup ----------
-
-    fun stripJekyllSyntax(md: String): String {
-        var result = scriptRegex.replace(md, "")
-        result = styleRegex.replace(result, "")
-        // Unwrap every kramdown `<div markdown="1">…</div>` in one pass,
-        // keeping the inner contents. Non-greedy `[\s\S]*?` so multiple
-        // wrappers on the same page each match their own tag pair.
-        result = kramdownWrapperRegex.replace(result) { it.groupValues[1] }
-        return result.lineSequence()
-            .filter { !it.contains("{{") && !it.contains("{%") }
-            .joinToString("\n")
     }
 
     // ---------- URL resolution ----------

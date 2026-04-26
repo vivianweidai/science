@@ -15,8 +15,6 @@ project: Four-Point Probe
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script src="/research/layouts/shuffle.js"></script>
-
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 4th 2026</span></div>
 
 Sheet resistance is a measure of how easily electric current flows across a material's surface, reported in ohms per square (Ω/□). It characterizes conductive materials without needing to know the exact thickness. This is useful because material thickness is often non-uniform or difficult to measure precisely, so sheet resistance allows direct comparison of materials and quality control even when thickness is unknown.
@@ -25,7 +23,7 @@ The four-point probe technique separates the current-carrying and voltage-sensin
 
 ## Setup
 
-<div class="setup-highlight" markdown="1">
+<div class="setup-highlight">
 
 | Category | Details |
 |----------|---------|
@@ -52,7 +50,7 @@ Conductive samples (coins, household metals) produced measurable sheet resistanc
 
 ## Data
 
-Raw data were photographs of the instrument display taken after each measurement. These were manually transcribed into a CSV file. The raw photos are in the <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260404%20Four%20Point%20Probe/photos">photos</a> directory and the scrubbed <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_readings.csv">CSV</a> is in the <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260404%20Four%20Point%20Probe/output">output</a> directory.
+Raw data were photographs of the instrument display taken after each measurement. These were manually transcribed into a CSV file. The raw photos are in the <a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260404%20Four%20Point%20Probe/photos" rel="noopener">photos</a> directory and the scrubbed <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_readings.csv" rel="noopener">CSV</a> is in the <a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260404%20Four%20Point%20Probe/output" rel="noopener">output</a> directory.
 
 ## Results
 
@@ -78,4 +76,4 @@ The quarter and spoon were the most conductive samples, while the brass house ke
 
 Readings fluctuated significantly during measurement — the display value drifted continuously and never fully stabilized, even on the same sample without moving the probes. Repeated measurements of the same item produced a wide spread of values, making it difficult to draw firm quantitative conclusions. The broad ranges in the table above reflect this instability rather than true differences between measurement points. Four-point probes are designed for flat, uniform samples with controlled contact pressure, so the irregular and curved surfaces of household objects likely contributed to the variability.
 
-All sheet-resistance calculations and per-sample plots are in the analysis <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb">colab</a>.
+All sheet-resistance calculations and per-sample plots are in the analysis <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb" rel="noopener">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb" rel="noopener">colab</a>.

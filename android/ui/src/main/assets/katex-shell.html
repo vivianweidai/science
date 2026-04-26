@@ -162,12 +162,12 @@
      cleanly on both iPhone and Pixel. */
   .photo-grid { display: block; margin: 12px 0; }
   .photo-grid img { display: block; width: 100%; height: auto; object-fit: cover; border-radius: 6px; margin: 0 0 6px; }
-  /* Instrument tables on research project pages. The webapp sets the
-     row color via an inline <style> per page; our `stripJekyllSyntax`
-     removes those, so we replicate the canonical behavior here. Uses
-     the project-wide canonical highlight yellow (#fff056), matching
-     the curriculum table highlight and olympiad row highlight.
-     `.no-highlight` (Extensions sections) opts out. */
+  /* Instrument tables on research project pages. Webapp styling for
+     these lives in src/layouts/Project.astro and tabs.css; the in-app
+     WebView replicates the canonical highlight here. Uses the project-
+     wide highlight yellow (#fff056), matching the curriculum table
+     highlight and olympiad row highlight. `.no-highlight` (Extensions
+     sections) opts out. */
   .instrument-table tbody tr td { background: #fff056; color: #1f2328; }
   .instrument-table.no-highlight tbody tr td { background: transparent; color: inherit; }
   .hero-single img { max-width: 100%; height: auto; max-height: 300px; object-fit: cover; border-radius: 8px; }
@@ -228,21 +228,16 @@
     // fetches raw markdown directly so we have to do it here.
     md = md.replace(/^---\s*\n[\s\S]*?\n---\s*\n?/, '');
 
-    // Unwrap kramdown `<div markdown="1">…</div>` containers. The webapp
-    // uses this attribute to tell kramdown "parse markdown inside this
-    // HTML block"; marked.js doesn't understand it and leaves the
-    // enclosed markdown as raw text (visible URLs in link syntax, no
-    // table parsing, etc.). Native `stripJekyllSyntax` does this too,
-    // but running the pass here as well makes the shell robust to any
-    // regex drift on the native side — and is the layer we can most
-    // easily iterate on.
+    // Defense-in-depth strips for legacy markdown patterns. As of the
+    // 2026-04-25 Astro migration the live markdown is clean (Astro/remark
+    // doesn't need `markdown="1"`, all per-project styles moved into
+    // src/layouts/Project.astro and tabs.css), so these are no-ops on
+    // current content — kept so the shell stays robust to any future
+    // markdown that slips a `<style>` or kramdown wrapper back in.
     md = md.replace(
       /<div[^>]*\bmarkdown\s*=\s*["']1["'][^>]*>([\s\S]*?)<\/div>/g,
       '$1'
     );
-    // Any inline `<style>` tags Jekyll would render into the page
-    // head. marked would otherwise emit them into #content and they'd
-    // leak into the rendered body as visible text on some pages.
     md = md.replace(/<style[\s\S]*?<\/style>/g, '');
 
     var content = document.getElementById('content');

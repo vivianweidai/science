@@ -14,8 +14,6 @@ project: 离心分离
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">随机切换照片</button>
 
-<script src="/research/layouts/shuffle.js"></script>
-
 <div class="project-meta">2026年4月11日<br>Thermo Scientific Sorvall RT3 Centrifuge, DiaMed ID-Centrifuge, Sartorius CP225D Analytical Balance, VWR pHenomenal pH 1100 L, Scientific Industries Vortex-Genie 2, Canlab Magnetic Stirrer, Gilson Pipetman Pipettes</div>
 
 ## 概述
@@ -51,7 +49,7 @@ project: 离心分离
 
 ## 数据
 
-pH读数从VWR pHenomenal pH 1100 L显示屏的照片中记录。实验室中还有一些神秘溶液也被测量以进行额外的pH练习。原始数据照片在<a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260411%20Centrifuge/photos">photos</a>目录中。
+pH读数从VWR pHenomenal pH 1100 L显示屏的照片中记录。实验室中还有一些神秘溶液也被测量以进行额外的pH练习。原始数据照片在<a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260411%20Centrifuge/photos" rel="noopener">photos</a>目录中。
 
 | 样品 | pH | 照片 | 备注 |
 |------|:--:|:----:|------|

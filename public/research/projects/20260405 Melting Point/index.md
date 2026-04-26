@@ -15,15 +15,13 @@ project: Melting Point
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script src="/research/layouts/shuffle.js"></script>
-
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 5th 2026</span></div>
 
 Melting point determination is a fundamental technique for identifying and assessing the purity of solid compounds. A pure substance melts sharply at a characteristic temperature, while impurities broaden the melting range and depress the onset temperature. This experiment aimed to measure the melting points of caffeine and aspirin using the capillary tube method on the OptiMelt. Project on hold pending broken instrument.
 
 ## Setup
 
-<div class="setup-highlight" markdown="1">
+<div class="setup-highlight">
 
 | Toolkit | Details |
 |----------|---------|
@@ -67,9 +65,7 @@ This project connects to the broader thermal analysis series — the next steps 
   <img src="/research/archives/photos/chemistry-hughes-welder.jpg" alt="Hughes Aircraft HRW 250B">
 </div>
 
-<style>.instrument-table.no-highlight tbody tr td { background: transparent; }</style>
-
-<div class="instrument-table no-highlight" markdown="1">
+<div class="instrument-table no-highlight">
 
 | Instrument | Extension | Description |
 |------------|-----------|-------------|

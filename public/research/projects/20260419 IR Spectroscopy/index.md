@@ -15,8 +15,6 @@ project: IR Spectroscopy
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script src="/research/layouts/shuffle.js"></script>
-
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 19th 2026</span></div>
 
 Twenty-one everyday materials, one instrument, one question: which bonds are in there?
@@ -27,9 +25,7 @@ IR Spectroscopy identifies the polar covalent bonds in a material by measuring w
 
 <div class="hero-single"><img src="photos/setup/setup8.jpeg" alt="IR setup"></div>
 
-<style>.instrument-table tbody tr td { background: #fff44f; }</style>
-
-<div class="instrument-table" markdown="1">
+<div class="instrument-table">
 
 | Instrument | Role | Range |
 |------------|------|-------|
@@ -61,13 +57,13 @@ A background spectrum was collected first. The IR beam reflects inside the diamo
 
 ## Method
 
-The Nicolet 380 applies background correction automatically — non-absorbing regions read ~100% transmittance. Raw spectra export to <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260419%20IR%20Spectroscopy/data">CSV</a>, two columns per row (wavenumber in cm⁻¹, transmittance in %). The data-cleaning <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260419%20IR%20Spectroscopy/output/clean_data.py">pipeline</a>:
+The Nicolet 380 applies background correction automatically — non-absorbing regions read ~100% transmittance. Raw spectra export to <a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260419%20IR%20Spectroscopy/data" rel="noopener">CSV</a>, two columns per row (wavenumber in cm⁻¹, transmittance in %). The data-cleaning <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260419%20IR%20Spectroscopy/output/clean_data.py" rel="noopener">pipeline</a>:
 
 1. **Parse** — raw CSVs use scientific notation with no headers; each file was parsed into numeric wavenumber and transmittance columns.
 2. **Convert to absorbance** — transmittance was converted using A = −log₁₀(T/100), where T is transmittance in percent. Absorbance is dimensionless and directly proportional to concentration via the Beer-Lambert law.
-3. **Export** — all 21 samples were saved as individual cleaned CSVs with headers (wavenumber, transmittance, absorbance) into a single <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260419%20IR%20Spectroscopy/output/scrubbed">scrubbed</a> folder.
+3. **Export** — all 21 samples were saved as individual cleaned CSVs with headers (wavenumber, transmittance, absorbance) into a single <a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260419%20IR%20Spectroscopy/output/scrubbed" rel="noopener">scrubbed</a> folder.
 
-All spectra plots, peak identification, and category overlays were generated from the cleaned data using Python libraries in the analysis <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">colab</a>.
+All spectra plots, peak identification, and category overlays were generated from the cleaned data using Python libraries in the analysis <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb" rel="noopener">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb" rel="noopener">colab</a>.
 
 ## Results
 
@@ -113,7 +109,6 @@ All spectra plots, peak identification, and category overlays were generated fro
     <p>Hydroxyl-dense. Sucrose's many –OH groups give a broad 3,000–3,500 cm⁻¹ O–H band, and the fingerprint region below 1,500 cm⁻¹ is packed with glycosidic-bond and ring C–O stretches unique to each sugar.</p>
   </div>
 </div>
-
 
 ### Household Categories
 
@@ -164,7 +159,6 @@ All spectra plots, peak identification, and category overlays were generated fro
     <p>Chemically rich. <strong>Finger</strong> — keratin amide I (1,640) + amide II (1,540 cm⁻¹), plus lipid C–H and broad O–H/N–H. <strong>Leaf</strong> — cellulose backbone + cuticle-wax C–H + possible chlorophyll. <strong>Orange peel</strong> — terpene-heavy: C–H, C=O from citric acid/esters, C–O from pectin and rind sugars.</p>
   </div>
 </div>
-
 
 ### Chemical Categories
 
@@ -223,8 +217,6 @@ All spectra plots, peak identification, and category overlays were generated fro
   </div>
 </div>
 
-<script src="/research/layouts/tabs.js"></script>
-
 <h2 id="extensions">Extensions</h2>
 
 <div class="photo-grid three-col">
@@ -233,10 +225,7 @@ All spectra plots, peak identification, and category overlays were generated fro
   <img src="photos/setup/setup13.jpeg" alt="Renishaw inVia Raman Microscope">
 </div>
 
-
-<style>.instrument-table.no-highlight tbody tr td { background: transparent; }</style>
-
-<div class="instrument-table no-highlight" markdown="1">
+<div class="instrument-table no-highlight">
 
 | Instrument | Extension | Description |
 |------------|------|-------------|

@@ -21,7 +21,7 @@ Microgravity differentially reduces MYBPC3 gene expression in mutant versus wild
 
 ## Method
 
-<div class="setup-highlight" markdown="1">
+<div class="setup-highlight">
 
 | Category | Details |
 |----------|---------|
@@ -45,4 +45,4 @@ Cardiomyocyte cultures carrying both wild-type and known mutant MYBPC3 variants 
 
 ## Data
 
-See the <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260401%20Genes%20in%20Space/output/20260331%20Genes%20in%20Space.pdf">proposal document</a> and <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260401%20Genes%20in%20Space/papers">reference literature</a>.
+See the <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260401%20Genes%20in%20Space/output/20260331%20Genes%20in%20Space.pdf" rel="noopener">proposal document</a> and <a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260401%20Genes%20in%20Space/papers" rel="noopener">reference literature</a>.

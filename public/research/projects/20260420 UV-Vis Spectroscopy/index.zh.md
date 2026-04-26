@@ -14,8 +14,6 @@ project: 紫外-可见光谱
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">随机切换照片</button>
 
-<script src="/research/layouts/shuffle.js"></script>
-
 <div class="section-heading"><h2>概述</h2><span class="section-date">2026年4月20日</span></div>
 
 一组样品，三台仪器，三个问题：
@@ -28,9 +26,7 @@ project: 紫外-可见光谱
 
 ## 实验设置
 
-<style>.instrument-table tbody tr td { background: #fff44f; }</style>
-
-<div class="instrument-table" markdown="1">
+<div class="instrument-table">
 
 | 仪器 | 用途 | 范围 |
 |------|------|------|
@@ -54,18 +50,6 @@ project: 紫外-可见光谱
 
 六种荧光团加两种空白，按溶剂分组。分组也是扫描顺序：先以水基线扫描四个水样品，然后重新建立基线再运行两个乙醇提取物。每个样品都来自日常物品：奎宁来自脱气汤力水，荧光素和罗丹明类染料来自荧光笔墨水，姜黄素和叶绿素分别从姜黄和绿茶中用乙醇提取，水杨酸由阿司匹林加少许小苏打水解而成。
 
-<style>
-  .samples-tabs #s-water:checked ~ .tab-labels label[for="s-water"],
-  .samples-tabs #s-ethanol:checked ~ .tab-labels label[for="s-ethanol"] {
-    color: #5c7a10; border-bottom-color: #5c7a10; background: var(--subj-chem);
-  }
-  .samples-tabs #s-water:checked ~ #content-s-water,
-  .samples-tabs #s-ethanol:checked ~ #content-s-ethanol {
-    display: block;
-  }
-  .samples-tabs table { width: 100%; }
-</style>
-
 <div class="tabs samples-tabs">
   <input type="radio" name="samples-tab" id="s-water" checked>
   <input type="radio" name="samples-tab" id="s-ethanol">
@@ -75,7 +59,7 @@ project: 紫外-可见光谱
     <label for="s-ethanol">乙醇基</label>
   </div>
 
-  <div class="tab-content" id="content-s-water" markdown="1">
+  <div class="tab-content" id="content-s-water">
 
 | 类别 | 样品 |
 |------|------|
@@ -87,7 +71,7 @@ project: 紫外-可见光谱
 
   </div>
 
-  <div class="tab-content" id="content-s-ethanol" markdown="1">
+  <div class="tab-content" id="content-s-ethanol">
 
 | 类别 | 样品 |
 |------|------|
@@ -102,21 +86,6 @@ project: 紫外-可见光谱
 
 相同样品，三台仪器依次运行。UV-2550的结果喂给FluoroMax：其λ<sub>max</sub>设定FluoroMax的λ<sub>ex</sub>，其峰值吸光度设定稀释因子 D = A / 0.05。
 
-<style>
-  .methods-tabs #m-uv:checked ~ .tab-labels label[for="m-uv"],
-  .methods-tabs #m-flu:checked ~ .tab-labels label[for="m-flu"],
-  .methods-tabs #m-lam:checked ~ .tab-labels label[for="m-lam"] {
-    color: #5c7a10; border-bottom-color: #5c7a10; background: var(--subj-chem);
-  }
-  .methods-tabs #m-uv:checked ~ #content-m-uv,
-  .methods-tabs #m-flu:checked ~ #content-m-flu,
-  .methods-tabs #m-lam:checked ~ #content-m-lam {
-    display: block;
-  }
-  .methods-tabs table { width: 100%; }
-  .methods-tabs td:first-child, .methods-tabs th:first-child { width: 2.5em; text-align: center; }
-</style>
-
 <div class="tabs methods-tabs">
   <input type="radio" name="methods-tab" id="m-uv" checked>
   <input type="radio" name="methods-tab" id="m-flu">
@@ -128,7 +97,7 @@ project: 紫外-可见光谱
     <label for="m-lam"><span class="label-full">Lambda 750</span><span class="label-abbr">Lambda 750</span></label>
   </div>
 
-  <div class="tab-content" id="content-m-uv" markdown="1">
+  <div class="tab-content" id="content-m-uv">
 
 | # | 样品 | 稀释 |
 |---|------|------|
@@ -147,7 +116,7 @@ project: 紫外-可见光谱
 
   </div>
 
-  <div class="tab-content" id="content-m-flu" markdown="1">
+  <div class="tab-content" id="content-m-flu">
 
 | # | 样品 | 预期 λ<sub>ex</sub> | 预期 λ<sub>em</sub> |
 |---|------|------|------|
@@ -168,7 +137,7 @@ project: 紫外-可见光谱
 
   </div>
 
-  <div class="tab-content" id="content-m-lam" markdown="1">
+  <div class="tab-content" id="content-m-lam">
 
 | # | 样品 |
 |---|------|
@@ -247,7 +216,7 @@ project: 紫外-可见光谱
 
 相邻的电子/手性光学光谱仪器——波长范围与紫外-可见相同，测量内容不同。本项目均未使用。
 
-<div class="instrument-table" markdown="1">
+<div class="instrument-table">
 
 | 仪器 | 延伸方向 | 为何值得加入 |
 |------|---------|------------|
@@ -255,8 +224,6 @@ project: 紫外-可见光谱
 | 圆二色光谱仪 (CD Spectrometer) | 采用圆偏振光的 UV-Vis 变体 | 测量样品对左/右圆偏振紫外光的差异吸收——揭示蛋白质二级结构（α-螺旋与 β-折叠）及手性，普通 UV-Vis 吸收无法区分 |
 
 </div>
-
-<script src="/research/layouts/tabs.js"></script>
 
 ---
 

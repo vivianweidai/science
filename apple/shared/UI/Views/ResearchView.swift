@@ -303,7 +303,6 @@ struct ProjectDetailView: View {
                 md = MarkdownHelper.stripFrontMatter(md)
                 md = MarkdownHelper.injectPhotos(md, photos: photos)
                 md = MarkdownHelper.injectDataPhotos(md, photos: dataPhotos)
-                md = MarkdownHelper.stripJekyllSyntax(md)
                 let folderURL = indexURL.deletingLastPathComponent()
                 md = MarkdownHelper.resolveRelativeURLs(in: md, baseURL: folderURL)
                 markdown = md

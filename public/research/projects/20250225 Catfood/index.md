@@ -1,10 +1,6 @@
 ---
 layout: project
 project: Cat Food Color Preference
-data_photos:
-  - photos/data/data1.jpeg
-  - photos/data/data2.jpeg
-  - photos/data/data3.jpeg
 ---
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
@@ -19,15 +15,13 @@ data_photos:
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script src="/research/layouts/shuffle.js"></script>
-
 <div class="section-heading"><h2>Overview</h2><span class="section-date">February 25th 2025</span></div>
 
 Does a cat prefer red or green colored food? This experiment tested whether a British Shorthair cat (Mi) shows a statistically significant preference for red- or green-dyed cat food. Regular dry cat food was dyed with food coloring and presented in two side-by-side bowls over 30 days. The bowl Mi approached first was recorded as his preference for that day. A chi-squared test was used to determine whether the observed preference differed significantly from chance.
 
 ## Setup
 
-<div class="setup-highlight" markdown="1">
+<div class="setup-highlight">
 
 | Toolkit | Details |
 |----------|---------|
@@ -44,24 +38,15 @@ Colored cat food was prepared by mixing regular dry food with red and green food
 ## Data
 
 <div class="photo-grid three-col" id="data-grid">
-  <img id="data-0" alt="Data sheet">
-  <img id="data-1" alt="Data sheet">
-  <img id="data-2" alt="Data sheet">
+  <img src="photos/data/data1.jpeg" alt="Data sheet">
+  <img src="photos/data/data2.jpeg" alt="Data sheet">
+  <img src="photos/data/data3.jpeg" alt="Data sheet">
 </div>
 
-<script>
-var allData = {{ page.data_photos | jsonify }};
-(function() {
-  for (var i = 0; i < allData.length; i++) {
-    document.getElementById('data-' + i).src = allData[i];
-  }
-})();
-</script>
-
-Raw data was recorded on handwritten data sheets and photographed. Variables tracked per trial include: date, serving number, pieces served and remaining, bowl position (left/right), serving time, and food dye drops used. The original handwritten data sheets are photographed and available in <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20250225%20Catfood/photos/data">photos</a>. The preference tallies were transcribed from these handwritten records into <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_summary.csv">catfood_summary.csv</a>.
+Raw data was recorded on handwritten data sheets and photographed. Variables tracked per trial include: date, serving number, pieces served and remaining, bowl position (left/right), serving time, and food dye drops used. The original handwritten data sheets are photographed and available in <a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20250225%20Catfood/photos/data" rel="noopener">photos</a>. The preference tallies were transcribed from these handwritten records into <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20250225%20Catfood/output/catfood_summary.csv" rel="noopener">catfood_summary.csv</a>.
 
 ## Results
 
 Over 30 days, Mi chose red on 13 days and green on 17 days. A chi-squared goodness-of-fit test with one degree of freedom yielded a test statistic of 0.533, well below the critical value of 3.841 at 95% confidence. The null hypothesis (no color preference) was not rejected. Mi shows no statistically significant preference for red or green cat food.
 
-The chi-squared test and supporting plots are in the analysis <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_analysis.ipynb">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_analysis.ipynb">colab</a>. See also the full <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/20250225%20Catfood.pdf">written report</a>.
+The chi-squared test and supporting plots are in the analysis <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20250225%20Catfood/output/catfood_analysis.ipynb" rel="noopener">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20250225%20Catfood/output/catfood_analysis.ipynb" rel="noopener">colab</a>. See also the full <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20250225%20Catfood/output/20250225%20Catfood.pdf" rel="noopener">written report</a>.

@@ -393,7 +393,6 @@ private suspend fun loadProjectMarkdown(indexUrl: String): String {
     md = MarkdownHelper.stripFrontMatter(md)
     md = MarkdownHelper.injectPhotos(md, photos)
     md = MarkdownHelper.injectDataPhotos(md, dataPhotos)
-    md = MarkdownHelper.stripJekyllSyntax(md)
     val base = indexUrl.substringBeforeLast('/')
     return MarkdownHelper.resolveRelativeUrls(md, base)
 }

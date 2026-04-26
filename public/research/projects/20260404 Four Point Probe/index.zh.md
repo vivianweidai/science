@@ -14,8 +14,6 @@ project: 四探针法
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">随机切换照片</button>
 
-<script src="/research/layouts/shuffle.js"></script>
-
 <div class="project-meta">2026年4月4日<br>Jandel RM3 Four-Point Probe</div>
 
 ## 概述
@@ -49,7 +47,7 @@ project: 四探针法
 
 ## 数据
 
-原始数据为每次测量后拍摄的仪器显示屏照片，手动转录为CSV文件。原始照片在<a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260404%20Four%20Point%20Probe/photos">photos</a>目录中，清洗后的<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_readings.csv">CSV</a>在<a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260404%20Four%20Point%20Probe/output">output</a>目录中。
+原始数据为每次测量后拍摄的仪器显示屏照片，手动转录为CSV文件。原始照片在<a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260404%20Four%20Point%20Probe/photos" rel="noopener">photos</a>目录中，清洗后的<a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_readings.csv" rel="noopener">CSV</a>在<a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260404%20Four%20Point%20Probe/output" rel="noopener">output</a>目录中。
 
 ## 结果
 
@@ -75,7 +73,7 @@ project: 四探针法
 
 测量过程中读数波动显著——显示值持续漂移，即使在同一样品上不移动探针也无法完全稳定。同一物品的重复测量产生了较大的值分布，难以得出确切的定量结论。上表中的宽范围反映的是这种不稳定性而非测量点之间的真正差异。四探针法设计用于具有可控接触压力的平坦均匀样品，因此家用物品的不规则和弯曲表面可能是导致变异的原因。
 
-查看<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb">静态笔记本</a>或<a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb">自行运行可重复分析</a>。
+查看<a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb" rel="noopener">静态笔记本</a>或<a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb" rel="noopener">自行运行可重复分析</a>。
 
 ---
 

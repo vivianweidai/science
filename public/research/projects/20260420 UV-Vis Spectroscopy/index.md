@@ -15,8 +15,6 @@ project: UV-Vis Spectroscopy
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script src="/research/layouts/shuffle.js"></script>
-
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 20th 2026</span></div>
 
 One set of samples through two instruments:
@@ -28,9 +26,7 @@ The samples are all **fluorophores**: molecules that catch a photon and release 
 
 ## Setup
 
-<style>.instrument-table tbody tr td { background: #fff44f; }</style>
-
-<div class="instrument-table" markdown="1">
+<div class="instrument-table">
 
 | Instrument | Role | Range |
 |------------|------|-------|
@@ -53,18 +49,6 @@ Cuvette protocol (same on every instrument): 3× distilled water, 1× ethanol, 1
 
 Six fluorophores plus two blanks, split by solvent. The grouping is also the scan order: four water samples first against a water baseline, then re-baseline and run the two ethanol extracts. Each sample is prepared from an everyday source: quinine from de-gassed tonic water, fluorescein- and rhodamine-family dyes from highlighter ink reservoirs, curcumin and chlorophyll from turmeric and green tea extracted into ethanol, salicylate from aspirin hydrolyzed with a pinch of baking soda.
 
-<style>
-  .samples-tabs #s-water:checked ~ .tab-labels label[for="s-water"],
-  .samples-tabs #s-ethanol:checked ~ .tab-labels label[for="s-ethanol"] {
-    color: #5c7a10; border-bottom-color: #5c7a10; background: var(--subj-chem);
-  }
-  .samples-tabs #s-water:checked ~ #content-s-water,
-  .samples-tabs #s-ethanol:checked ~ #content-s-ethanol {
-    display: block;
-  }
-  .samples-tabs table { width: 100%; }
-</style>
-
 <div class="tabs samples-tabs">
   <input type="radio" name="samples-tab" id="s-water" checked>
   <input type="radio" name="samples-tab" id="s-ethanol">
@@ -74,7 +58,7 @@ Six fluorophores plus two blanks, split by solvent. The grouping is also the sca
     <label for="s-ethanol">Ethanol-based</label>
   </div>
 
-  <div class="tab-content" id="content-s-water" markdown="1">
+  <div class="tab-content" id="content-s-water">
 
 | Category | Sample |
 |----------|--------|
@@ -86,7 +70,7 @@ Six fluorophores plus two blanks, split by solvent. The grouping is also the sca
 
   </div>
 
-  <div class="tab-content" id="content-s-ethanol" markdown="1">
+  <div class="tab-content" id="content-s-ethanol">
 
 | Category | Sample |
 |----------|--------|
@@ -101,19 +85,6 @@ Six fluorophores plus two blanks, split by solvent. The grouping is also the sca
 
 The UV-2550 scan yields λ<sub>max</sub> (peak wavelength) and A (peak absorbance). Both feed the FluoroMax: λ<sub>max</sub> sets λ<sub>ex</sub>, and A sets the dilution factor D = A / 0.05 — the FluoroMax needs samples diluted to A ≈ 0.05 to avoid inner-filter effects.
 
-<style>
-  .methods-tabs #m-uv:checked ~ .tab-labels label[for="m-uv"],
-  .methods-tabs #m-flu:checked ~ .tab-labels label[for="m-flu"] {
-    color: #5c7a10; border-bottom-color: #5c7a10; background: var(--subj-chem);
-  }
-  .methods-tabs #m-uv:checked ~ #content-m-uv,
-  .methods-tabs #m-flu:checked ~ #content-m-flu {
-    display: block;
-  }
-  .methods-tabs table { width: 100%; }
-  .methods-tabs td:first-child, .methods-tabs th:first-child { width: 2.5em; text-align: center; }
-</style>
-
 <div class="tabs methods-tabs">
   <input type="radio" name="methods-tab" id="m-uv" checked>
   <input type="radio" name="methods-tab" id="m-flu">
@@ -123,7 +94,7 @@ The UV-2550 scan yields λ<sub>max</sub> (peak wavelength) and A (peak absorbanc
     <label for="m-flu"><span class="label-full">FluoroMax-3</span><span class="label-abbr">FluoroMax</span></label>
   </div>
 
-  <div class="tab-content" id="content-m-uv" markdown="1">
+  <div class="tab-content" id="content-m-uv">
 
 | # | Sample | Final Solute |
 |---|--------|----------|
@@ -142,7 +113,7 @@ One absorption scan per sample across 200–800 nm. Every baseline is immediatel
 
   </div>
 
-  <div class="tab-content" id="content-m-flu" markdown="1">
+  <div class="tab-content" id="content-m-flu">
 
 | # | Sample | Expected λ<sub>ex</sub> | Expected λ<sub>em</sub> |
 |---|--------|------|------|
@@ -167,9 +138,9 @@ Each sample goes straight from the UV-2550 into the FluoroMax using the final in
 | FluoroMax-3 | 7 `.csv` + 7 `.pdf` | quinine, yellow HL, salicylate — emission + excitation; pink HL — emission only |
 | Lambda 750 | 2 `.csv` | exploratory — water sample + baseline |
 
-Water-solvent samples only this session — ethanol block (curcumin, green tea) deferred to a later run. Raw files live under <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260420%20UV-Vis%20Spectroscopy/data">data</a>. Iterative-dilution filenames preserve the full convergence sequence for each sample in the attempt to land in the 0.3–0.8 A sweet spot. The PDF files retain the machine settings used for the scans.
+Water-solvent samples only this session — ethanol block (curcumin, green tea) deferred to a later run. Raw files live under <a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260420%20UV-Vis%20Spectroscopy/data" rel="noopener">data</a>. Iterative-dilution filenames preserve the full convergence sequence for each sample in the attempt to land in the 0.3–0.8 A sweet spot. The PDF files retain the machine settings used for the scans.
 
-All UV-Vis, fluorescence, and Lambda 750 plots were generated from the raw data using Python libraries in the analysis <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb">colab</a>.
+All UV-Vis, fluorescence, and Lambda 750 plots were generated from the raw data using Python libraries in the analysis <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb" rel="noopener">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb" rel="noopener">colab</a>.
 
 ## Results
 
@@ -264,9 +235,7 @@ Brief exploratory scan of distilled water — one pass on the PerkinElmer Lambda
   <img src="photos/setup/setup18.jpeg" alt="Jasco J-1500 CD Spectrometer">
 </div>
 
-<style>.instrument-table.no-highlight tbody tr td { background: transparent; }</style>
-
-<div class="instrument-table no-highlight" markdown="1">
+<div class="instrument-table no-highlight">
 
 | Instrument | Extension | Description |
 |------------|-----------|-------------|

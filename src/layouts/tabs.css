@@ -115,6 +115,31 @@
   display: block;
 }
 
+/* UV-Vis Spectroscopy: methods tabs (UV-2550, FluoroMax-3, Lambda 750) */
+.methods-tabs #m-uv:checked ~ .tab-labels label[for="m-uv"],
+.methods-tabs #m-flu:checked ~ .tab-labels label[for="m-flu"],
+.methods-tabs #m-lam:checked ~ .tab-labels label[for="m-lam"] {
+  color: #5c7a10; border-bottom-color: #5c7a10; background: var(--subj-chem);
+}
+.methods-tabs #m-uv:checked ~ #content-m-uv,
+.methods-tabs #m-flu:checked ~ #content-m-flu,
+.methods-tabs #m-lam:checked ~ #content-m-lam {
+  display: block;
+}
+.methods-tabs table { width: 100%; }
+.methods-tabs td:first-child, .methods-tabs th:first-child { width: 2.5em; text-align: center; }
+
+/* UV-Vis Spectroscopy: samples tabs (water, ethanol) */
+.samples-tabs #s-water:checked ~ .tab-labels label[for="s-water"],
+.samples-tabs #s-ethanol:checked ~ .tab-labels label[for="s-ethanol"] {
+  color: #5c7a10; border-bottom-color: #5c7a10; background: var(--subj-chem);
+}
+.samples-tabs #s-water:checked ~ #content-s-water,
+.samples-tabs #s-ethanol:checked ~ #content-s-ethanol {
+  display: block;
+}
+.samples-tabs table { width: 100%; }
+
 /* UV-Vis Spectroscopy: fluorescence tabs */
 #flu-quinine:checked ~ .tab-labels label[for="flu-quinine"],
 #flu-yellow:checked ~ .tab-labels label[for="flu-yellow"],
