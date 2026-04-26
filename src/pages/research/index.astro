@@ -111,7 +111,7 @@ import DefaultLayout from '../../layouts/Default.astro';
       document.getElementById('toys-content').innerHTML = html;
     }
 
-    fetch('/archives/truth/toys.json', { cache: 'no-cache' })
+    fetch('/content/truth/toys.json', { cache: 'no-cache' })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (d) {
         var topics = d.topics;

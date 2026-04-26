@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Build archives/truth/olympiads.json from the YAML source of truth.
+"""Build content/truth/olympiads.json from the YAML source of truth.
 
 Source of truth:
-  archives/truth/olympiads.yml
+  content/truth/olympiads.yml
 
 Output (consumed by olympiads/index.md client-side JS and by the iOS app):
-  archives/truth/olympiads.json
+  content/truth/olympiads.json
 
 Output shape:
     {"items": [ {id, type, subject, date, sort_key, name, highlighted,
@@ -27,7 +27,7 @@ except ImportError:
     sys.exit("PyYAML is required: pip install pyyaml")
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-CONTENT = ROOT / "archives" / "truth"
+CONTENT = ROOT / "content" / "truth"
 
 SUBJECTS = {"Mathematics", "Computing", "Physics", "Chemistry", "Biology", "Astronomy"}
 TYPES = {"olympiad", "textbook"}

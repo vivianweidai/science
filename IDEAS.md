@@ -1,12 +1,8 @@
----
-layout: default
----
+# Ideas — science
 
-# Research Ideas
+Living backlog of research ideas. Public on purpose — we target underserved areas and do not care about being scooped. Ideas graduate out of this doc by getting promoted to `content/research/projects/YYYYMMDD Name/index.md` when a pilot actually starts.
 
-Living backlog of research ideas. Public on purpose — we target underserved areas and do not care about being scooped. One file for now; promote to `research/projects/YYYYMMDD Name/` when a pilot actually starts.
-
-_Last updated 2026-04-24._
+_Last updated 2026-04-25._
 
 ## Goals
 
@@ -222,4 +218,5 @@ Regeneron ISEF · Regeneron STS · JSHS · USABO / USNCO / USAPhO Olympiads.
 
 ## Change log
 
+- **2026-04-25** — Moved from `content/research/README.md` to repo-root `IDEAS.md` per the cross-repo `IDEAS.md` convention. Stripped Jekyll layout frontmatter (Jekyll era ended; Astro doesn't consume this doc).
 - **2026-04-24** — Initial backlog seeded: chemistry (13), biology (6), physics (5), computing (5), mathematics (4), astronomy (5). Instrument + venue reference tables included.

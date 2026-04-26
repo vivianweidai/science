@@ -10,7 +10,7 @@ import kotlinx.serialization.json.Json
 
 /**
  * Read-only client for activity listings (olympiads + textbooks) and
- * research toys. The source of truth is YAML in archives/truth/, built
+ * research toys. The source of truth is YAML in content/truth/, built
  * to JSON by a Python script, then fetched straight from GitHub raw.
  * No backend, no auth, no writes.
  */
@@ -42,7 +42,7 @@ class ApiClient {
     }
 
     companion object {
-        const val BASE_URL = "https://raw.githubusercontent.com/vivianweidai/science/main/archives/truth"
+        const val BASE_URL = "https://vivianweidai.com/content/truth"
         val shared = ApiClient()
     }
 }

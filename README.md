@@ -12,17 +12,19 @@ Personal science portfolio and lab notebook — available on [web](https://vivia
 ## Structure
 
 ```
-src/                 Astro source: layouts, pages, content collections
-  pages/zh/          Chinese mirror (/zh/, /zh/research/projects/<folder>/)
-content/layout/      Site CSS/JS/icons/hero images
-pipeline/worker/     Cloudflare Worker (Static Assets passthrough)
-pipeline/scripts/    Python build scripts (truth/*.yml → truth/*.json)
-research/projects/   Project folders, English index.md + Chinese index.zh.md siblings
-curriculum/          Subject pages built from Word docs → JSON → client-side rendering
-olympiads/           Timeline page driven by olympiads.yml → olympiads.json
-archives/truth/      Generated JSON (kept here for Apple/Android app backcompat — see CLAUDE.md)
-apple/               iOS + watchOS app (SwiftUI, read-only)
-android/             Android + Wear OS port (Kotlin/Compose, read-only)
+src/                       Astro source: layouts, pages, content collections (English + zh)
+pipeline/worker/           Cloudflare Worker (Static Assets passthrough)
+pipeline/scripts/          Python build scripts (.docx → markdown, YAML → JSON)
+content/
+  layout/                  Site CSS/JS/icons/hero images
+  truth/                   YAML source + generated JSON (consumed by web + apps)
+  curriculum/notes/        Curriculum NOTES PDFs (linked from homepage)
+  curriculum/source/       Per-discipline source markdown (build_curriculum.py output)
+  olympiads/photos/        Photos referenced from olympiads.json
+  research/archives/       Reference materials (instrument photos, guides, papers)
+  research/projects/       Project folders, English index.md + Chinese index.zh.md siblings
+apple/                     iOS + watchOS app (SwiftUI, read-only)
+android/                   Android + Wear OS port (Kotlin/Compose, read-only)
 ```
 
 ## Tech Stack

@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
 /**
- * Strongly-typed mirror of `archives/truth/curriculum.json`.
+ * Strongly-typed mirror of `content/truth/curriculum.json`.
  *
  * The build script emits subjects/sections/topics/tables in a canonical
  * order (never alphabetical). We decode the JSON verbatim, then re-order

@@ -6,23 +6,27 @@ Process experimental data and build reproducible analysis pipelines. Parse raw i
 
 ## REFERENCE MATERIALS
 
-All background materials now live in the repo under `research/archives/`. Read these as needed for instrument details, context, and research planning:
+All background materials live in the repo under `content/research/archives/`. Read these as needed for instrument details, context, and research planning:
 
-- **`research/archives/technology/`** — canonical instrument list (`toys.pdf`), plus technology landscape, UNR/UBC lab and faculty catalogues, and the university comparison.
-- **`research/archives/guides/`** — instrument walk-up guides (one PDF per instrument, e.g. `Thermo Scientific Nicolet 380 FT-IR Spectrometer.pdf`).
-- **`research/archives/papers/`** — classic papers (Turing, Rosenblatt, Hubel & Wiesel, Q-Learning, Transformers, AlphaGo, etc.).
-- **`research/archives/photos/`** — reference photos.
+- **`content/research/archives/technology/`** — canonical instrument list (`toys.pdf`), plus technology landscape, UNR/UBC lab and faculty catalogues, and the university comparison.
+- **`content/research/archives/guides/`** — instrument walk-up guides (one PDF per instrument, e.g. `Thermo Scientific Nicolet 380 FT-IR Spectrometer.pdf`).
+- **`content/research/archives/papers/`** — classic papers (Turing, Rosenblatt, Hubel & Wiesel, Q-Learning, Transformers, AlphaGo, etc.).
+- **`content/research/archives/photos/`** — reference photos.
 
-All instrument names in code and prose must exactly match what's in `research/archives/technology/toys.pdf`.
+`IDEAS.md` at the repo root is a living backlog of research project ideas — promote one to `content/research/projects/YYYYMMDD Name/` when a pilot starts.
+
+All instrument names in code and prose must exactly match what's in `content/research/archives/technology/toys.pdf`.
 
 ## STACK
 
 - **Astro 5** — static site generator. Builds to `dist/`.
-- **Cloudflare Workers + Static Assets** — serves `dist/` at `vivianweidai.com`. The Worker is a near-passthrough to the `ASSETS` binding plus one URL rewrite for backwards compat (see below).
+- **Cloudflare Workers + Static Assets** — serves `dist/` at `vivianweidai.com`. The Worker is a true passthrough to the `ASSETS` binding (no edge logic).
 - **GitHub** — source control only. Push triggers nothing.
-- **Apple/Android** — native apps in `apple/` and `android/` consume `archives/truth/*.json` directly via `raw.githubusercontent.com`.
+- **Apple/Android** — native apps in `apple/` and `android/` consume `vivianweidai.com/content/truth/*.json` (and per-discipline markdown under `vivianweidai.com/content/curriculum/source/`).
 
 ## REPO STRUCTURE
+
+Top-level matches the cross-repo vanilla template (Astro variant): `apple/ android/ content/ pipeline/ scripts/ src/` plus the Astro config files.
 
 ```
 science/
@@ -30,6 +34,7 @@ science/
 ├── package.json            # Astro deps + dev/build scripts
 ├── tsconfig.json           # Astro strict TS preset
 ├── pnpm-lock.yaml
+│
 ├── src/                    # Astro source
 │   ├── content.config.ts   # Content collections: projects (English) + zhProjects (Chinese)
 │   ├── layouts/            # Default.astro + Project.astro
@@ -41,49 +46,48 @@ science/
 │       ├── privacy.md      # /privacy/
 │       └── zh/             # Chinese mirror at /zh/...
 │           └── research/projects/[slug]/   # /zh/research/projects/<folder>/
+│
 ├── pipeline/
-│   ├── worker/             # Cloudflare Worker
+│   ├── worker/             # Cloudflare Worker (ASSETS passthrough)
 │   │   ├── wrangler.toml   # name=science, [assets] dir=../../dist
-│   │   ├── package.json    # wrangler dep + deploy script
-│   │   └── src/index.js    # ASSETS passthrough + /archives/layout/* → /content/layout/* shim
-│   └── scripts/            # Python utilities
-│       ├── build_olympiads.py / build_toys.py  # truth/*.yml → truth/*.json
-│       └── build_curriculum.py                 # curriculum/content/*.md → truth/curriculum.json
-├── content/                # Source-of-truth presentation assets (per cross-repo convention)
-│   └── layout/
-│       ├── base.css / tabs.css / curriculum.css
-│       ├── curriculum.js / curriculum.zh.js / shuffle.js / tabs.js
-│       ├── favicon.svg / cat.svg / spikey.png      # Icons
-│       └── science.jpeg / curriculum.png           # Hero images
-├── public/                 # Synced from canonical dirs by scripts/sync-public.sh (gitignored)
-├── scripts/sync-public.sh  # Mirrors content/, archives/truth/, curriculum/archives/,
-│                           #   olympiads/photos/, research/archives/, and per-project assets
-│                           #   into public/ before each build.
-├── curriculum/
-│   ├── archives/           # Curriculum NOTES PDFs (linked from homepage)
-│   └── content/            # Per-discipline source markdown (consumed by build_curriculum.py)
-├── olympiads/photos/       # Photos referenced from olympiads.json photo_url fields
-├── research/
-│   ├── README.md           # Research ideas backlog
-│   ├── projects/<folder>/
-│   │   ├── index.md        # English project page (Content Collection 'projects')
-│   │   ├── index.zh.md     # Chinese sibling (Content Collection 'zhProjects')
-│   │   ├── data/           # Raw instrument data
-│   │   ├── photos/         # setup/, samples/, data/ (data excluded from shuffle)
-│   │   ├── papers/         # Background papers
-│   │   └── output/         # Analysis scripts, notebooks, plots
-│   └── archives/           # Background reference materials (see REFERENCE MATERIALS)
+│   │   ├── package.json
+│   │   └── src/index.js    # `env.ASSETS.fetch(request)`
+│   └── scripts/            # Python build scripts
+│       ├── build_olympiads.py / build_toys.py  # YAML → JSON
+│       └── build_curriculum.py                 # .docx → markdown + curriculum.json
+│
+├── content/                # ALL source-of-truth content (per cross-repo convention)
+│   ├── layout/             # Site CSS/JS/icons/hero images (served at /content/layout/)
+│   ├── truth/              # YAML source + generated JSON manifests
+│   │   ├── olympiads.yml / toys.yml                       # Edit these, then rebuild
+│   │   └── olympiads.json / toys.json / curriculum.json   # Generated — DO NOT EDIT BY HAND
+│   ├── curriculum/
+│   │   ├── notes/          # Per-discipline DOCX + PDF (curriculum NOTES, linked from homepage)
+│   │   └── source/         # Per-discipline markdown (output of build_curriculum.py;
+│   │                       #   ALSO fetched by Apple+Android apps for in-app rendering)
+│   ├── olympiads/
+│   │   └── photos/         # Photos referenced from olympiads.json photo_url fields
+│   └── research/
+│       ├── archives/       # Background reference materials (instrument photos, walk-up
+│       │                   #   guides, classic papers, lab/faculty catalogues, etc.)
+│       └── projects/<folder>/   # YYYYMMDD Project Name
+│           ├── index.md        # English project page (Content Collection 'projects')
+│           ├── index.zh.md     # Chinese sibling (Content Collection 'zhProjects')
+│           ├── data/           # Raw instrument data
+│           ├── photos/         # setup/, samples/, data/ (data excluded from shuffle)
+│           ├── papers/         # Background papers
+│           └── output/         # Analysis scripts, notebooks, plots
+│
+├── public/                 # Synced from content/ by scripts/sync-public.sh (gitignored)
+├── scripts/sync-public.sh  # `rsync -a content/ public/content/` — that's it.
+│
 ├── apple/                  # iOS + watchOS app source (SwiftPM + XcodeGen)
-├── android/                # Android + Wear OS source (Gradle multi-module)
-└── archives/
-    └── truth/              # Science content: YAML source + generated JSON
-        ├── olympiads.yml / toys.yml                       # Edit these, then rebuild
-        └── olympiads.json / toys.json / curriculum.json   # Generated — DO NOT EDIT BY HAND
+└── android/                # Android + Wear OS source (Gradle multi-module)
 ```
 
-**Convention deviation note (`archives/truth/`).** Per the cross-repo convention, source-of-truth files belong under `content/` (which we now have). `archives/truth/` is the documented exception: the Apple and Android apps fetch these JSON files via hardcoded `https://raw.githubusercontent.com/vivianweidai/science/main/archives/truth/...` URLs, and GitHub raw URLs do not support redirects. Renaming would 404 every shipped app install. We can migrate this later if/when we update the apps to fetch from `vivianweidai.com` instead.
+**URL ↔ disk mapping.** Pages have clean URLs (`/`, `/curriculum/`, `/research/projects/<folder>/`, etc.). Static assets follow `/content/<path>` matching `content/<path>` on disk 1:1 — no rewrites, no shims.
 
-**Activities workflow:** `archives/truth/olympiads.yml` is the single source of truth for all olympiads and textbooks. After editing, run `python pipeline/scripts/build_olympiads.py` to regenerate `archives/truth/olympiads.json`, then `cd pipeline/worker && pnpm run deploy` to ship. The website (`/olympiads/` via client-side JS) and the Apple/Android apps both fetch the same JSON. No database, no API, no admin endpoint.
+**Activities workflow.** `content/truth/olympiads.yml` is the single source of truth for olympiads and textbooks. After editing, run `python pipeline/scripts/build_olympiads.py` to regenerate `content/truth/olympiads.json`, then `cd pipeline/worker && pnpm run deploy` to ship. The website (`/olympiads/` via client-side JS) and the Apple/Android apps both fetch the same JSON via `https://vivianweidai.com/content/truth/olympiads.json`. No database, no API, no admin endpoint.
 
 Each research project lives in a date-prefixed folder under `research/projects/`:
 

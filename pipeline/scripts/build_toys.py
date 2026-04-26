@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Build archives/truth/toys.json from the YAML source of truth.
+"""Build content/truth/toys.json from the YAML source of truth.
 
-Source of truth:  archives/truth/toys.yml
-Output:           archives/truth/toys.json
+Source of truth:  content/truth/toys.yml
+Output:           content/truth/toys.json
 
 Three-level schema:
   topics[] → technologies[] → toys[]
@@ -28,7 +28,7 @@ except ImportError:
     sys.exit("PyYAML is required: pip install pyyaml")
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-CONTENT = ROOT / "archives" / "truth"
+CONTENT = ROOT / "content" / "truth"
 PROJECTS = ROOT / "research" / "projects"
 
 SCIENCES = {"Biology", "Chemistry", "Physics", "Computing", "Mathematics", "Astronomy"}

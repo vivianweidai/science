@@ -3,7 +3,7 @@ import ScienceCore
 
 /// Toy browser matching the webapp /research/ page. Topics are grouped
 /// cards with a subject chip, each containing rows of technologies and
-/// their toys. Source of truth: archives/truth/toys.json.
+/// their toys. Source of truth: content/truth/toys.json.
 struct ResearchView: View {
     @State private var store = ContentStore.shared
     @State private var subject: SubjectFilter = SubjectFilter.randomResearchSubject()

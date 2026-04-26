@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 import java.net.URI
 import java.net.URLEncoder
 
-/** Strongly-typed mirror of `archives/truth/toys.json`. */
+/** Strongly-typed mirror of `content/truth/toys.json`. */
 @Serializable
 data class ResearchTopic(
     val id: Int,
@@ -42,7 +42,9 @@ data class ResearchToy(
             val path = projectUrl ?: return null
             val trimmed = if (path.startsWith("/")) path.drop(1) else path
             val withIndex = if (trimmed.endsWith("/")) trimmed + "index.md" else "$trimmed/index.md"
-            return "https://raw.githubusercontent.com/vivianweidai/science/main/$withIndex"
+            // project_url is a page URL like "/research/projects/<folder>/"; the raw
+            // markdown lives at /content/research/projects/<folder>/index.md.
+            return "https://vivianweidai.com/content/$withIndex"
         }
 
     /** External URL to open (Wolfram, GitHub, Colab) — or resolved to a raw
@@ -55,7 +57,7 @@ data class ResearchToy(
             val encoded = trimmed.split("/").joinToString("/") {
                 URLEncoder.encode(it, "UTF-8").replace("+", "%20")
             }
-            return "https://raw.githubusercontent.com/vivianweidai/science/main/$encoded"
+            return "https://vivianweidai.com/$encoded"
         }
 }
 

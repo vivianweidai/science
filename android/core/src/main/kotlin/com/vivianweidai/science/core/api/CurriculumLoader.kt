@@ -26,7 +26,7 @@ class CurriculumLoader {
     suspend fun invalidate() = mutex.withLock { cachedManifest = null }
 
     /** Fetch raw markdown body for a given table. `path` is relative to
-     *  the curriculum/content/ folder on GitHub. */
+     *  the content/curriculum/source/ folder on GitHub. */
     suspend fun body(table: CurriculumTable): String {
         val encoded = table.path.split("/").joinToString("/") {
             URLEncoder.encode(it, "UTF-8").replace("+", "%20")
@@ -36,9 +36,9 @@ class CurriculumLoader {
 
     companion object {
         private const val MANIFEST_URL =
-            "https://raw.githubusercontent.com/vivianweidai/science/main/archives/truth/curriculum.json"
+            "https://vivianweidai.com/content/truth/curriculum.json"
         private const val RAW_BASE_URL =
-            "https://raw.githubusercontent.com/vivianweidai/science/main/curriculum/content/"
+            "https://vivianweidai.com/content/curriculum/source/"
         val shared = CurriculumLoader()
     }
 }

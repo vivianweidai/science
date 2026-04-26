@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Regenerate curriculum markdown files and archives/truth/curriculum.json
-from the Word (.docx) source documents in curriculum/archives/.
+"""Regenerate curriculum markdown files and content/truth/curriculum.json
+from the Word (.docx) source documents in content/curriculum/notes/.
 
 Single source of truth: each subject's .docx file contains the complete
 curriculum with tables, LaTeX formulas (as Office Math), and yellow
@@ -375,12 +375,12 @@ def write_table_md(path: Path, subject: str, section: str, topic: str,
 # --------------------------------------------------------------------------
 
 def build_all(root: Path) -> dict:
-    archives = root / "curriculum" / "archives"
-    curr = root / "curriculum"
+    notes_dir = root / "content" / "curriculum" / "notes"
+    source_dir = root / "content" / "curriculum" / "source"
     manifest: dict = {}
 
     for subj_slug, subj_name in SUBJECT_NAMES.items():
-        docx_path = archives / f"{subj_slug}.docx"
+        docx_path = notes_dir / f"{subj_slug}.docx"
         if not docx_path.exists():
             print(f"  skipping {subj_slug}: no docx found", file=sys.stderr)
             continue
@@ -406,7 +406,7 @@ def build_all(root: Path) -> dict:
             order += 1
 
             # Write markdown file
-            md_path = curr / subj_slug / section_slug / f"{topic_table_slug}.md"
+            md_path = source_dir / subj_slug / section_slug / f"{topic_table_slug}.md"
             write_table_md(md_path, subj_name, section_name, topic_name,
                            td["table_name"], order, td["rows"])
 
@@ -458,7 +458,7 @@ def main() -> None:
     root = Path(__file__).resolve().parent.parent.parent
     manifest = build_all(root)
 
-    out_path = root / "archives" / "truth" / "curriculum.json"
+    out_path = root / "content" / "truth" / "curriculum.json"
     out_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
     total_tables = 0

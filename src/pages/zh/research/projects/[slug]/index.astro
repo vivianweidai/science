@@ -11,8 +11,8 @@ export async function getStaticPaths() {
   return sorted.map((entry, idx) => {
     const folder = entry.id;
 
-    // Photos live with the English project; same auto-discovery as English route.
-    const photosRoot = join(process.cwd(), 'research', 'projects', folder, 'photos');
+    // Photos live with the English project under content/; same auto-discovery as English route.
+    const photosRoot = join(process.cwd(), 'content', 'research', 'projects', folder, 'photos');
     const photos: string[] = [];
     if (existsSync(photosRoot)) {
       const walk = (dir: string) => {
@@ -23,9 +23,7 @@ export async function getStaticPaths() {
             if (relative(photosRoot, full) === 'data') continue;
             walk(full);
           } else if (/\.(jpg|jpeg|png)$/i.test(name)) {
-            // Absolute path — photos live with the English project at /research/projects/<folder>/photos/,
-            // not under /zh/. The shuffle script sets img.src directly, so absolute is the right call.
-            photos.push(`/research/projects/${folder}/photos/` + relative(photosRoot, full));
+            photos.push(`/content/research/projects/${folder}/photos/` + relative(photosRoot, full));
           }
         }
       };

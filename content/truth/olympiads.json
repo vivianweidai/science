@@ -135,7 +135,7 @@
       "sort_key": "2024-05",
       "name": "Advanced Placement Precalculus Exam",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/ap.jpeg"
+      "photo_url": "/content/olympiads/photos/ap.jpeg"
     },
     {
       "id": 16,
@@ -145,7 +145,7 @@
       "sort_key": "2024-05",
       "name": "The Art of Problem Solving Book Series by Richard Rusczyk et al",
       "highlighted": 1,
-      "photo_url": "/olympiads/photos/aops.jpeg"
+      "photo_url": "/content/olympiads/photos/aops.jpeg"
     },
     {
       "id": 17,
@@ -155,7 +155,7 @@
       "sort_key": "2023-09",
       "name": "Precalculus Mathematics in a Nutshell by George F. Simmons",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/precalculus.jpeg"
+      "photo_url": "/content/olympiads/photos/precalculus.jpeg"
     },
     {
       "id": 18,
@@ -273,7 +273,7 @@
       "sort_key": "2024-05",
       "name": "Advanced Placement Computer Science A Exam",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/ap.jpeg"
+      "photo_url": "/content/olympiads/photos/ap.jpeg"
     },
     {
       "id": 31,
@@ -283,7 +283,7 @@
       "sort_key": "2024-05",
       "name": "Advanced Placement Computer Science Principles Exam",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/ap.jpeg"
+      "photo_url": "/content/olympiads/photos/ap.jpeg"
     },
     {
       "id": 32,
@@ -302,7 +302,7 @@
       "sort_key": "2023-12",
       "name": "USA Computing Olympiad Bronze Exam",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/usaco.jpeg"
+      "photo_url": "/content/olympiads/photos/usaco.jpeg"
     },
     {
       "id": 34,
@@ -506,7 +506,7 @@
       "sort_key": "2024-05",
       "name": "Advanced Placement Physics 1 Exam",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/ap.jpeg"
+      "photo_url": "/content/olympiads/photos/ap.jpeg"
     },
     {
       "id": 54,
@@ -525,7 +525,7 @@
       "sort_key": "2024-03",
       "name": "Johns Hopkins University Center for Talented Youth AP Physics 1",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/ctyphysics.jpeg"
+      "photo_url": "/content/olympiads/photos/ctyphysics.jpeg"
     },
     {
       "id": 56,
@@ -654,7 +654,7 @@
       "sort_key": "2025-04",
       "name": "Washington University Chemistry Tournament",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/wuct.jpeg"
+      "photo_url": "/content/olympiads/photos/wuct.jpeg"
     },
     {
       "id": 70,
@@ -664,7 +664,7 @@
       "sort_key": "2025-03",
       "name": "United States National Chemistry Olympiad Local Exam",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/usnco.jpeg"
+      "photo_url": "/content/olympiads/photos/usnco.jpeg"
     },
     {
       "id": 71,
@@ -674,7 +674,7 @@
       "sort_key": "2025-03",
       "name": "University of California Berkeley Chemistry Tournament",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/bct.jpeg"
+      "photo_url": "/content/olympiads/photos/bct.jpeg"
     },
     {
       "id": 72,
@@ -684,7 +684,7 @@
       "sort_key": "2024-05",
       "name": "Advanced Placement Chemistry Exam",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/ap.jpeg"
+      "photo_url": "/content/olympiads/photos/ap.jpeg"
     },
     {
       "id": 73,
@@ -703,7 +703,7 @@
       "sort_key": "2024-03",
       "name": "Johns Hopkins University Center for Talented Youth AP Chemistry",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/ctychemistry.jpeg"
+      "photo_url": "/content/olympiads/photos/ctychemistry.jpeg"
     },
     {
       "id": 75,
@@ -722,7 +722,7 @@
       "sort_key": "2026-04",
       "name": "Canadian Biology Olympiad Competition Exam",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/cbo2026.jpeg"
+      "photo_url": "/content/olympiads/photos/cbo2026.jpeg"
     },
     {
       "id": 77,
@@ -769,7 +769,7 @@
       "sort_key": "2025-02",
       "name": "USA Biology Olympiad Open Exam",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/usabo.jpeg"
+      "photo_url": "/content/olympiads/photos/usabo.jpeg"
     },
     {
       "id": 82,
@@ -779,7 +779,7 @@
       "sort_key": "2024-05",
       "name": "Advanced Placement Biology Exam",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/ap.jpeg"
+      "photo_url": "/content/olympiads/photos/ap.jpeg"
     },
     {
       "id": 83,
@@ -798,7 +798,7 @@
       "sort_key": "2024-04",
       "name": "Canadian Biology Olympiad Competition Exam",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/cbo2024.jpeg"
+      "photo_url": "/content/olympiads/photos/cbo2024.jpeg"
     },
     {
       "id": 85,
@@ -808,7 +808,7 @@
       "sort_key": "2024-03",
       "name": "Johns Hopkins University Center for Talented Youth AP Biology",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/ctybiology.jpeg"
+      "photo_url": "/content/olympiads/photos/ctybiology.jpeg"
     },
     {
       "id": 86,
@@ -920,7 +920,7 @@
       "sort_key": "2024-03",
       "name": "Canadian Astronomy and Astrophysics Olympiad Senior Exam",
       "highlighted": 0,
-      "photo_url": "/olympiads/photos/caao.jpeg"
+      "photo_url": "/content/olympiads/photos/caao.jpeg"
     },
     {
       "id": 98,

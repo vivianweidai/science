@@ -1,6 +1,6 @@
 import Foundation
 
-/// Strongly-typed mirror of `archives/truth/toys.json`, the source of
+/// Strongly-typed mirror of `content/truth/toys.json`, the source of
 /// truth for the Research page's toy browser.
 public struct ResearchTopic: Codable, Identifiable, Hashable, Sendable {
     public let id: Int
@@ -47,7 +47,9 @@ public struct ResearchToy: Codable, Identifiable, Hashable, Sendable {
         guard let path = projectUrl else { return nil }
         let trimmed = path.hasPrefix("/") ? String(path.dropFirst()) : path
         let withIndex = trimmed.hasSuffix("/") ? trimmed + "index.md" : trimmed + "/index.md"
-        return URL(string: "https://raw.githubusercontent.com/vivianweidai/science/main/" + withIndex)
+        // project_url is a page URL like "/research/projects/<folder>/"; the raw
+        // markdown lives at /content/research/projects/<folder>/index.md.
+        return URL(string: "https://vivianweidai.com/content/" + withIndex)
     }
 
     /// External URL to open in Safari (Wolfram, GitHub, Colab) — or
@@ -63,7 +65,7 @@ public struct ResearchToy: Codable, Identifiable, Hashable, Sendable {
         }
         let trimmed = raw.hasPrefix("/") ? String(raw.dropFirst()) : raw
         let encoded = trimmed.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? trimmed
-        return URL(string: "https://raw.githubusercontent.com/vivianweidai/science/main/" + encoded)
+        return URL(string: "https://vivianweidai.com/" + encoded)
     }
 }
 

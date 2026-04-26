@@ -61,13 +61,13 @@ A background spectrum was collected first. The IR beam reflects inside the diamo
 
 ## Method
 
-The Nicolet 380 applies background correction automatically — non-absorbing regions read ~100% transmittance. Raw spectra export to <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260419%20IR%20Spectroscopy/data">CSV</a>, two columns per row (wavenumber in cm⁻¹, transmittance in %). The data-cleaning <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260419%20IR%20Spectroscopy/output/clean_data.py">pipeline</a>:
+The Nicolet 380 applies background correction automatically — non-absorbing regions read ~100% transmittance. Raw spectra export to <a href="https://github.com/vivianweidai/science/tree/main/content/research/projects/20260419%20IR%20Spectroscopy/data">CSV</a>, two columns per row (wavenumber in cm⁻¹, transmittance in %). The data-cleaning <a href="https://github.com/vivianweidai/science/blob/main/content/research/projects/20260419%20IR%20Spectroscopy/output/clean_data.py">pipeline</a>:
 
 1. **Parse** — raw CSVs use scientific notation with no headers; each file was parsed into numeric wavenumber and transmittance columns.
 2. **Convert to absorbance** — transmittance was converted using A = −log₁₀(T/100), where T is transmittance in percent. Absorbance is dimensionless and directly proportional to concentration via the Beer-Lambert law.
-3. **Export** — all 21 samples were saved as individual cleaned CSVs with headers (wavenumber, transmittance, absorbance) into a single <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260419%20IR%20Spectroscopy/output/scrubbed">scrubbed</a> folder.
+3. **Export** — all 21 samples were saved as individual cleaned CSVs with headers (wavenumber, transmittance, absorbance) into a single <a href="https://github.com/vivianweidai/science/tree/main/content/research/projects/20260419%20IR%20Spectroscopy/output/scrubbed">scrubbed</a> folder.
 
-All spectra plots, peak identification, and category overlays were generated from the cleaned data using Python libraries in the analysis <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">colab</a>.
+All spectra plots, peak identification, and category overlays were generated from the cleaned data using Python libraries in the analysis <a href="https://github.com/vivianweidai/science/blob/main/content/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/content/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">colab</a>.
 
 ## Results
 

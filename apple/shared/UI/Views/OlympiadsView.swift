@@ -293,7 +293,7 @@ private struct ActivityRow: View {
         .padding(.vertical, 8)
         // Canonical curriculum highlight yellow — #fff056, matching
         // --highlight-bg in archives/apple/shared/UI/Rendering/katex-shell.html
-        // and archives/layout/curriculum.css. Keep these in sync.
+        // and content/layout/curriculum.css. Keep these in sync.
         .background(
             highlighted
                 ? Color(red: 1.0, green: 0.941, blue: 0.337)

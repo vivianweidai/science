@@ -40,7 +40,7 @@ data_photos:
 
 ## 数据
 
-原始数据记录在手写数据表上并拍照。每次实验追踪的变量包括：日期、份数、投放和剩余粒数、碗的位置（左/右）、进食时间和色素滴数。原始手写数据表的照片可在<a href="https://github.com/vivianweidai/science/tree/main/research/projects/20250225%20Catfood/data">data</a>中查看。偏好计数从手写记录转录到<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_summary.csv">catfood_summary.csv</a>。
+原始数据记录在手写数据表上并拍照。每次实验追踪的变量包括：日期、份数、投放和剩余粒数、碗的位置（左/右）、进食时间和色素滴数。原始手写数据表的照片可在<a href="https://github.com/vivianweidai/science/tree/main/content/research/projects/20250225%20Catfood/data">data</a>中查看。偏好计数从手写记录转录到<a href="https://github.com/vivianweidai/science/blob/main/content/research/projects/20250225%20Catfood/output/catfood_summary.csv">catfood_summary.csv</a>。
 
 <div class="photo-grid three-col" id="data-grid">
   <img id="data-0" alt="数据表">
@@ -63,7 +63,7 @@ var allData = {{ page.data_photos | jsonify }};
 
 **注意 — 书面报告的更正：** Claude发现了原始PDF报告中的算术错误。报告将每个 (O − E)² 项除以30（观察总数）计算出 χ² = 0.266。正确的卡方公式应将每项除以该类别的期望计数（15），而非总数N。修正值为 χ² = (13 − 15)² / 15 + (17 − 15)² / 15 = 0.267 + 0.267 = **0.533**，如可重复笔记本中的计算所示。结论不变——两个值都远低于临界值3.841——但0.533是正确的检验统计量。
 
-查看<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/20250225%20Catfood.pdf">书面报告</a>、<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_analysis.ipynb">静态笔记本</a>或<a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20250225%20Catfood/output/catfood_analysis.ipynb">自行运行可重复分析</a>。
+查看<a href="https://github.com/vivianweidai/science/blob/main/content/research/projects/20250225%20Catfood/output/20250225%20Catfood.pdf">书面报告</a>、<a href="https://github.com/vivianweidai/science/blob/main/content/research/projects/20250225%20Catfood/output/catfood_analysis.ipynb">静态笔记本</a>或<a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/content/research/projects/20250225%20Catfood/output/catfood_analysis.ipynb">自行运行可重复分析</a>。
 
 ---
 

@@ -12,7 +12,7 @@
   ], throwOnError: false });"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
 <style>
-  /* Table styling mirrors archives/layout/curriculum.css .curr-topic-body
+  /* Table styling mirrors content/layout/curriculum.css .curr-topic-body
      so iOS curriculum tables feel like the webapp: gray headers, bordered
      cells, centered text, zebra stripes, and a highlighted first column.
      Colors use CSS variables so dark mode tones down rather than inverts. */
@@ -115,7 +115,7 @@
   }
 
   /* Highlighted rows from curriculum.json `highlighted_rows` — mirror
-     .curr-topic-body tr.highlight from archives/layout/curriculum.css.
+     .curr-topic-body tr.highlight from content/layout/curriculum.css.
      Canonical highlight yellow (#fff056) in both light and dark mode;
      force near-black text on the wash so it stays readable in dark mode
      (default body text is near-white there). Matches the native
@@ -127,7 +127,7 @@
 
   /* Subject chip pills used by research project pages (e.g.
      `<span class="chip math">Mathematics</span>`). Mirrors the webapp
-     rule in archives/layout/base.css so project headers render with
+     rule in content/layout/base.css so project headers render with
      the same colored pills as the site. Subject color variables
      match the pastel palette from base.css :root. */
   :root {

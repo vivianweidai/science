@@ -24,7 +24,7 @@ data class Activity(
     val photoAbsoluteUrl: String?
         get() = photoUrl?.takeIf { it.isNotEmpty() }?.let {
             val trimmed = if (it.startsWith("/")) it.drop(1) else it
-            "https://raw.githubusercontent.com/vivianweidai/science/main/$trimmed"
+            "https://vivianweidai.com/$trimmed"
         }
 }
 

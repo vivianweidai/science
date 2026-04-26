@@ -151,7 +151,7 @@ private fun ActivityRow(a: Activity, onPhoto: (String, String) -> Unit) {
     val chips = a.subjects?.takeIf { it.isNotEmpty() } ?: listOf(a.subject)
     // Canonical curriculum highlight yellow — #fff056, matching
     // --highlight-bg in archives/android/ui/src/main/assets/katex-shell.html
-    // and archives/layout/curriculum.css. Keep these in sync.
+    // and content/layout/curriculum.css. Keep these in sync.
     val highlighted = a.highlighted == 1
     val photoUrl = a.photoAbsoluteUrl
     val hasPhoto = photoUrl != null

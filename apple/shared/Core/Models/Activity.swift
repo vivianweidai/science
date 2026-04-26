@@ -28,7 +28,7 @@ public struct Activity: Identifiable, Hashable, Codable, Sendable {
     public var photoURL: URL? {
         guard let raw = photoUrl, !raw.isEmpty else { return nil }
         let trimmed = raw.hasPrefix("/") ? String(raw.dropFirst()) : raw
-        return URL(string: "https://raw.githubusercontent.com/vivianweidai/science/main/" + trimmed)
+        return URL(string: "https://vivianweidai.com/" + trimmed)
     }
 }
 

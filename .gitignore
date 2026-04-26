@@ -19,15 +19,10 @@ venv/
 .env
 .env.local
 .wrangler/
-archives/apple/.build/
-archives/apple/.swiftpm/
-archives/apple/Science.xcodeproj/
+apple/.build/
+apple/.swiftpm/
+apple/Science.xcodeproj/
 *.DS_Store
-
-# Jekyll
-_site/
-.jekyll-cache/
-.jekyll-metadata
 
 # Astro / Node
 node_modules/
