@@ -38,9 +38,10 @@ science/
 │
 ├── src/                    # Astro source
 │   ├── content.config.ts   # Content collections: projects (English) + zhProjects (Chinese)
-│   ├── layouts/            # Default.astro + Project.astro (Astro components)
-│   ├── styles/             # base.css / tabs.css / curriculum.css (imported by layouts/pages)
-│   ├── scripts/            # curriculum.js / curriculum.zh.js (imported via ?url)
+│   ├── layouts/            # Astro components AND their associated CSS/JS:
+│   │                       #   Default.astro + Project.astro
+│   │                       #   base.css / tabs.css / curriculum.css   (imported by .astro)
+│   │                       #   curriculum.js / curriculum.zh.js       (imported via ?url)
 │   └── pages/              # File-based routing
 │       ├── index.astro     # /
 │       ├── curriculum/     # /curriculum/
