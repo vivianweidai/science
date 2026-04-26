@@ -15,7 +15,7 @@ project: UV-Vis Spectroscopy
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script src="/content/research/shuffle.js"></script>
+<script src="/content/research/layouts/shuffle.js"></script>
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 20th 2026</span></div>
 
