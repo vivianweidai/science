@@ -4,7 +4,7 @@ import { glob } from 'astro/loaders';
 const projects = defineCollection({
   loader: glob({
     pattern: '*/index.md',
-    base: './content/research/projects',
+    base: './public/content/research/projects',
     // Preserve the original folder name as the id so URLs like
     // /research/projects/20260420%20UV-Vis%20Spectroscopy/ keep working.
     generateId: ({ entry }) => entry.replace(/\/index\.md$/, ''),
@@ -22,7 +22,7 @@ const projects = defineCollection({
 const zhProjects = defineCollection({
   loader: glob({
     pattern: '*/index.zh.md',
-    base: './content/research/projects',
+    base: './public/content/research/projects',
     generateId: ({ entry }) => entry.replace(/\/index\.zh\.md$/, ''),
   }),
   schema: z.object({

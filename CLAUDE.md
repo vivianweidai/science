@@ -6,16 +6,16 @@ Process experimental data and build reproducible analysis pipelines. Parse raw i
 
 ## REFERENCE MATERIALS
 
-All background materials live in the repo under `content/research/archives/`. Read these as needed for instrument details, context, and research planning:
+All background materials live in the repo under `public/content/research/archives/`. Read these as needed for instrument details, context, and research planning:
 
-- **`content/research/archives/technology/`** — canonical instrument list (`toys.pdf`), plus technology landscape, UNR/UBC lab and faculty catalogues, and the university comparison.
-- **`content/research/archives/guides/`** — instrument walk-up guides (one PDF per instrument, e.g. `Thermo Scientific Nicolet 380 FT-IR Spectrometer.pdf`).
-- **`content/research/archives/papers/`** — classic papers (Turing, Rosenblatt, Hubel & Wiesel, Q-Learning, Transformers, AlphaGo, etc.).
-- **`content/research/archives/photos/`** — reference photos.
+- **`public/content/research/archives/technology/`** — canonical instrument list (`toys.pdf`), plus technology landscape, UNR/UBC lab and faculty catalogues, and the university comparison.
+- **`public/content/research/archives/guides/`** — instrument walk-up guides (one PDF per instrument, e.g. `Thermo Scientific Nicolet 380 FT-IR Spectrometer.pdf`).
+- **`public/content/research/archives/papers/`** — classic papers (Turing, Rosenblatt, Hubel & Wiesel, Q-Learning, Transformers, AlphaGo, etc.).
+- **`public/content/research/archives/photos/`** — reference photos.
 
-`IDEAS.md` at the repo root is a living backlog of research project ideas — promote one to `content/research/projects/YYYYMMDD Name/` when a pilot starts.
+`IDEAS.md` at the repo root is a living backlog of research project ideas — promote one to `public/content/research/projects/YYYYMMDD Name/` when a pilot starts.
 
-All instrument names in code and prose must exactly match what's in `content/research/archives/technology/toys.pdf`.
+All instrument names in code and prose must exactly match what's in `public/content/research/archives/technology/toys.pdf`.
 
 ## STACK
 

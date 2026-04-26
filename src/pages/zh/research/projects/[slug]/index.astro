@@ -11,8 +11,8 @@ export async function getStaticPaths() {
   return sorted.map((entry, idx) => {
     const folder = entry.id;
 
-    // Photos live with the English project under content/; same auto-discovery as English route.
-    const photosRoot = join(process.cwd(), 'content', 'research', 'projects', folder, 'photos');
+    // Photos live with the English project under public/content/; same auto-discovery as English route.
+    const photosRoot = join(process.cwd(), 'public', 'content', 'research', 'projects', folder, 'photos');
     const photos: string[] = [];
     if (existsSync(photosRoot)) {
       const walk = (dir: string) => {

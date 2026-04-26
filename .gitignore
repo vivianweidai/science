@@ -28,7 +28,3 @@ apple/Science.xcodeproj/
 node_modules/
 dist/
 .astro/
-
-# public/ is fully derived — synced from canonical source dirs by
-# scripts/sync-public.sh on every build. Nothing here is committed.
-public/

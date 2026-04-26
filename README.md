@@ -15,7 +15,7 @@ Personal science portfolio and lab notebook — available on [web](https://vivia
 src/                       Astro source: layouts, pages, content collections (English + zh)
 pipeline/worker/           Cloudflare Worker (Static Assets passthrough)
 pipeline/scripts/          Python build scripts (.docx → markdown, YAML → JSON)
-content/
+public/content/            Source-of-truth (lives inside Astro's public/ — see CLAUDE.md)
   layout/                  Site CSS/JS/icons/hero images
   truth/                   YAML source + generated JSON (consumed by web + apps)
   curriculum/notes/        Curriculum NOTES PDFs (linked from homepage)
