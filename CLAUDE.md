@@ -17,6 +17,16 @@ All background materials live in the repo under `public/research/archives/`. Rea
 
 All instrument names in code and prose must exactly match what's in `public/research/archives/technology/toys.pdf`.
 
+## LANGUAGE PRIORITY
+
+**English is the primary language. Chinese is a secondary mirror at `/zh/`.** When making changes that affect both:
+
+- **Never break English to make Chinese work.** If a refactor would require regressing the English experience to fix a Chinese-side issue, fix Chinese after, even if it lags.
+- **English is the authoritative content.** Chinese pages are translations/mirrors of English pages — when content diverges, English is the source of truth.
+- **Verify English first, then Chinese.** Smoke-test the English path through any change before checking the Chinese mirror.
+- **Scientific/mathematical content stays in its original (usually English) language** in both versions. Chinese pages translate UI labels and prose, not formulas, instrument names, or technical terms.
+- The Apple+Android apps are English-only. Chinese only ever appears on the website.
+
 ## STACK
 
 - **Astro 5** — static site generator. Builds to `pipeline/worker/dist/` (co-located with the Worker that serves it).
