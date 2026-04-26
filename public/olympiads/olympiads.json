@@ -816,20 +816,31 @@
       "subject": "Astronomy",
       "date": "May 2026",
       "sort_key": "2026-05",
-      "name": "Canadian Astronomy and Astrophysics Olympiad Junior Exam",
-      "highlighted": 0
+      "name": "Canadian Astronomy and Astrophysics Olympiad Senior National Camp",
+      "highlighted": 0,
+      "invited": 1
     },
     {
       "id": 87,
       "type": "olympiad",
       "subject": "Astronomy",
-      "date": "March 2026",
-      "sort_key": "2026-03",
-      "name": "Canadian Astronomy and Astrophysics Olympiad Senior Exam",
+      "date": "May 2026",
+      "sort_key": "2026-05",
+      "name": "Canadian Astronomy and Astrophysics Olympiad Junior Exam",
       "highlighted": 0
     },
     {
       "id": 88,
+      "type": "olympiad",
+      "subject": "Astronomy",
+      "date": "March 2026",
+      "sort_key": "2026-03",
+      "name": "Canadian Astronomy and Astrophysics Olympiad Senior Exam",
+      "highlighted": 0,
+      "competitive": 1
+    },
+    {
+      "id": 89,
       "type": "textbook",
       "subject": "Astronomy",
       "date": "March 2026",
@@ -838,7 +849,7 @@
       "highlighted": 1
     },
     {
-      "id": 89,
+      "id": 90,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "February 2026",
@@ -848,7 +859,7 @@
       "borderline": 1
     },
     {
-      "id": 90,
+      "id": 91,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "October 2025",
@@ -858,7 +869,7 @@
       "invited": 1
     },
     {
-      "id": 91,
+      "id": 92,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "May 2025",
@@ -868,7 +879,7 @@
       "borderline": 1
     },
     {
-      "id": 92,
+      "id": 93,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "March 2025",
@@ -877,7 +888,7 @@
       "highlighted": 0
     },
     {
-      "id": 93,
+      "id": 94,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "February 2025",
@@ -886,7 +897,7 @@
       "highlighted": 0
     },
     {
-      "id": 94,
+      "id": 95,
       "type": "textbook",
       "subject": "Astronomy",
       "date": "August 2024",
@@ -895,7 +906,7 @@
       "highlighted": 0
     },
     {
-      "id": 95,
+      "id": 96,
       "type": "textbook",
       "subject": "Astronomy",
       "date": "July 2024",
@@ -904,7 +915,7 @@
       "highlighted": 0
     },
     {
-      "id": 96,
+      "id": 97,
       "type": "textbook",
       "subject": "Astronomy",
       "date": "June 2024",
@@ -913,7 +924,7 @@
       "highlighted": 0
     },
     {
-      "id": 97,
+      "id": 98,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "March 2024",
@@ -923,7 +934,7 @@
       "photo_url": "/olympiads/photos/caao.jpeg"
     },
     {
-      "id": 98,
+      "id": 99,
       "type": "olympiad",
       "subject": "Astronomy",
       "date": "February 2024",
