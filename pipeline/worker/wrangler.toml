@@ -1,0 +1,12 @@
+name = "science"
+main = "src/index.js"
+compatibility_date = "2025-04-01"
+workers_dev = false
+
+routes = [
+  { pattern = "vivianweidai.com", custom_domain = true }
+]
+
+[assets]
+directory = "../../dist"
+binding = "ASSETS"

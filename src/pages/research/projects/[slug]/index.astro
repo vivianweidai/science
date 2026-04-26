@@ -1,0 +1,69 @@
+---
+import { getCollection, render } from 'astro:content';
+import { readdirSync, statSync, existsSync } from 'node:fs';
+import { join, relative } from 'node:path';
+import ProjectLayout from '../../../../layouts/Project.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+
+  // Sort by id (folder name) — project folders are date-prefixed (YYYYMMDD).
+  const sorted = [...projects].sort((a, b) => a.id.localeCompare(b.id));
+
+  return sorted.map((entry, idx) => {
+    // generateId in content.config.ts preserves the original folder name as id.
+    const folder = entry.id;
+
+    // Discover photos under research/projects/<folder>/photos/, excluding photos/data/
+    const photosRoot = join(process.cwd(), 'research', 'projects', folder, 'photos');
+    const photos: string[] = [];
+    if (existsSync(photosRoot)) {
+      const walk = (dir: string) => {
+        for (const name of readdirSync(dir)) {
+          const full = join(dir, name);
+          const st = statSync(full);
+          if (st.isDirectory()) {
+            // Skip photos/data/ — data sheets are surfaced separately, not in shuffle.
+            if (relative(photosRoot, full) === 'data') continue;
+            walk(full);
+          } else if (/\.(jpg|jpeg|png)$/i.test(name)) {
+            // Path relative to project root, e.g. "photos/setup/setup1.jpeg"
+            photos.push('photos/' + relative(photosRoot, full));
+          }
+        }
+      };
+      walk(photosRoot);
+    }
+
+    // Wrap-around prev/next neighbors (matches Jekyll project.html behavior).
+    const last = sorted.length - 1;
+    const newerIdx = idx === last ? 0 : idx + 1;
+    const olderIdx = idx === 0 ? last : idx - 1;
+    const newer = sorted[newerIdx];
+    const older = sorted[olderIdx];
+    const linkFor = (e: typeof entry) => {
+      return {
+        url: `/research/projects/${encodeURI(e.id)}/`,
+        title: e.data.project || e.data.title || e.id,
+      };
+    };
+
+    return {
+      params: { slug: folder },
+      props: { entry, photos, newer: linkFor(newer), older: linkFor(older) },
+    };
+  });
+}
+
+const { entry, photos, newer, older } = Astro.props;
+const { Content } = await render(entry);
+---
+<ProjectLayout
+  project={entry.data.project}
+  title={entry.data.title}
+  photos={photos}
+  newer={newer}
+  older={older}
+>
+  <Content />
+</ProjectLayout>

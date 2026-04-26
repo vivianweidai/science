@@ -9,7 +9,7 @@ data_photos:
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
-<div class="project-title"><h1>Red or Green, What Colored Cat Food does Mi Prefer? <img src="/archives/layout/cat.svg" alt="" aria-hidden="true" style="height:0.85em;vertical-align:-0.12em;"></h1><span class="project-chips"><span class="chip math">Mathematics</span> <span class="chip comp">Computing</span></span></div>
+<div class="project-title"><h1>Red or Green, What Colored Cat Food does Mi Prefer? <img src="/content/layout/cat.svg" alt="" aria-hidden="true" style="height:0.85em;vertical-align:-0.12em;"></h1><span class="project-chips"><span class="chip math">Mathematics</span> <span class="chip comp">Computing</span></span></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
@@ -19,7 +19,7 @@ data_photos:
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script src="/archives/layout/shuffle.js"></script>
+<script src="/content/layout/shuffle.js"></script>
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">February 25th 2025</span></div>
 
@@ -31,7 +31,7 @@ Does a cat prefer red or green colored food? This experiment tested whether a Br
 
 | Toolkit | Details |
 |----------|---------|
-| Subject | British Shorthair cat (Mi) <img src="/archives/layout/cat.svg" alt="" aria-hidden="true" style="height:1em;vertical-align:-0.18em;"> |
+| Subject | British Shorthair cat (Mi) <img src="/content/layout/cat.svg" alt="" aria-hidden="true" style="height:1em;vertical-align:-0.18em;"> |
 | Food | Regular dry cat food |
 | Dye | Red and green food coloring |
 | Serving | 10 pieces per bowl per trial |

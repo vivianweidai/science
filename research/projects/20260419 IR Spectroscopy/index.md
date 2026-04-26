@@ -15,7 +15,7 @@ project: IR Spectroscopy
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script src="/archives/layout/shuffle.js"></script>
+<script src="/content/layout/shuffle.js"></script>
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 19th 2026</span></div>
 
@@ -223,7 +223,7 @@ All spectra plots, peak identification, and category overlays were generated fro
   </div>
 </div>
 
-<script src="/archives/layout/tabs.js"></script>
+<script src="/content/layout/tabs.js"></script>
 
 <h2 id="extensions">Extensions</h2>
 

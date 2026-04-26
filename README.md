@@ -12,20 +12,22 @@ Personal science portfolio and lab notebook — available on [web](https://vivia
 ## Structure
 
 ```
-research/            Individual project folders (DATA/, PHOTOS/, OUTPUT/)
+src/                 Astro source: layouts, pages, content collections
+  pages/zh/          Chinese mirror (/zh/, /zh/research/projects/<folder>/)
+content/layout/      Site CSS/JS/icons/hero images
+pipeline/worker/     Cloudflare Worker (Static Assets passthrough)
+pipeline/scripts/    Python build scripts (truth/*.yml → truth/*.json)
+research/projects/   Project folders, English index.md + Chinese index.zh.md siblings
 curriculum/          Subject pages built from Word docs → JSON → client-side rendering
 olympiads/           Timeline page driven by olympiads.yml → olympiads.json
-archives/
-  CONTENT/           Source data (olympiads.yml, curriculum.json, images)
-  LAYOUT/            CSS, JS, and Python build scripts
-  APPLE/             iOS + watchOS app (SwiftUI, read-only)
-  ANDROID/           Android + Wear OS port (Kotlin/Compose, read-only)
-  CHINESE/           Chinese language mirror
+archives/truth/      Generated JSON (kept here for Apple/Android app backcompat — see CLAUDE.md)
+apple/               iOS + watchOS app (SwiftUI, read-only)
+android/             Android + Wear OS port (Kotlin/Compose, read-only)
 ```
 
 ## Tech Stack
 
-- **Site** — Jekyll, HTML/CSS/JS, KaTeX
+- **Site** — Astro 5, HTML/CSS/JS, KaTeX
 - **Analysis** — Python (pandas, numpy, scipy, matplotlib), Jupyter Notebooks
 - **Data** — YAML/JSON source of truth, Word docs for curriculum
-- **Hosting** — GitHub Pages with custom domain
+- **Hosting** — Cloudflare Workers + Static Assets (custom domain `vivianweidai.com`)

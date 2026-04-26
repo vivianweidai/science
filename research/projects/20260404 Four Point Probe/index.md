@@ -15,7 +15,7 @@ project: Four-Point Probe
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script src="/archives/layout/shuffle.js"></script>
+<script src="/content/layout/shuffle.js"></script>
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 4th 2026</span></div>
 

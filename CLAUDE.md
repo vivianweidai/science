@@ -15,48 +15,75 @@ All background materials now live in the repo under `research/archives/`. Read t
 
 All instrument names in code and prose must exactly match what's in `research/archives/technology/toys.pdf`.
 
+## STACK
+
+- **Astro 5** — static site generator. Builds to `dist/`.
+- **Cloudflare Workers + Static Assets** — serves `dist/` at `vivianweidai.com`. The Worker is a near-passthrough to the `ASSETS` binding plus one URL rewrite for backwards compat (see below).
+- **GitHub** — source control only. Push triggers nothing.
+- **Apple/Android** — native apps in `apple/` and `android/` consume `archives/truth/*.json` directly via `raw.githubusercontent.com`.
+
 ## REPO STRUCTURE
 
 ```
 science/
-├── _layouts/               # Jekyll layouts (default.html, project.html)
-├── _config.yml             # Jekyll config (title, baseurl)
-├── index.md                # Landing page (vivianweidai.com)
-├── CNAME                   # Custom domain: vivianweidai.com
-├── curriculum/             # Curriculum page + NOTES PDFs
-├── olympiads/              # Olympiads page (renders from archives/truth/*.json)
-├── research/               # Research projects
-│   ├── index.md            # Research landing with tabbed project table
-│   ├── archives/           # Background reference materials (see REFERENCE MATERIALS)
-│   │   ├── technology/     # Instrument list, lab/faculty catalogues
-│   │   ├── guides/         # Instrument walk-up guides
-│   │   ├── papers/         # Classic papers
-│   │   └── photos/         # Reference photos
-│   └── projects/           # Individual projects
-│       └── YYYYMMDD Project/   # (see below)
-└── archives/               # Shared assets (all subfolders lowercase)
-    ├── apple/              # iOS + watchOS app (read-only consumer of archives/truth/*.json)
-    │   ├── Package.swift   # SwiftPM: ScienceCore + ScienceCoreUI libraries
-    │   ├── project.yml     # XcodeGen spec for Science (iOS) + ScienceWatch (watchOS)
-    │   ├── shared/Core/    # Platform-neutral Models, API, Grouping, SubjectPaletteRGB
-    │   ├── shared/UI/      # iOS-only Views + KaTeX MarkdownWebView
-    │   ├── ios/            # @main for iPhone/iPad target
-    │   └── watch/          # @main + views for watchOS companion (olympiads-only)
-    ├── chinese/            # Chinese-language mirror of the public pages
-    ├── truth/              # Science content: YAML source + generated JSON
-    │   ├── olympiads.yml / toys.yml                       # Edit these, then rebuild
-    │   └── olympiads.json / toys.json / curriculum.json   # Generated — DO NOT EDIT BY HAND
-    ├── layout/             # CSS, JS, build scripts, and presentation assets
-    │   ├── base.css / tabs.css / curriculum.css
-    │   ├── curriculum.js / shuffle.js / tabs.js
-    │   ├── favicon.svg / cat.svg / spikey.png   # Icons
-    │   ├── science.jpeg / curriculum.png         # Hero images
-    │   ├── build_olympiads.py            # truth/*.yml → truth/*.json
-    │   └── build_curriculum.py          # curriculum/content/*.md → truth/curriculum.json
-    └── privacy/            # Privacy policy page
+├── astro.config.mjs        # Astro config (trailingSlash: 'always', site: vivianweidai.com)
+├── package.json            # Astro deps + dev/build scripts
+├── tsconfig.json           # Astro strict TS preset
+├── pnpm-lock.yaml
+├── src/                    # Astro source
+│   ├── content.config.ts   # Content collections: projects (English) + zhProjects (Chinese)
+│   ├── layouts/            # Default.astro + Project.astro
+│   └── pages/              # File-based routing
+│       ├── index.astro     # /
+│       ├── curriculum/     # /curriculum/
+│       ├── olympiads/      # /olympiads/
+│       ├── research/       # /research/ + dynamic /research/projects/[slug]/
+│       ├── privacy.md      # /privacy/
+│       └── zh/             # Chinese mirror at /zh/...
+│           └── research/projects/[slug]/   # /zh/research/projects/<folder>/
+├── pipeline/
+│   ├── worker/             # Cloudflare Worker
+│   │   ├── wrangler.toml   # name=science, [assets] dir=../../dist
+│   │   ├── package.json    # wrangler dep + deploy script
+│   │   └── src/index.js    # ASSETS passthrough + /archives/layout/* → /content/layout/* shim
+│   └── scripts/            # Python utilities
+│       ├── build_olympiads.py / build_toys.py  # truth/*.yml → truth/*.json
+│       └── build_curriculum.py                 # curriculum/content/*.md → truth/curriculum.json
+├── content/                # Source-of-truth presentation assets (per cross-repo convention)
+│   └── layout/
+│       ├── base.css / tabs.css / curriculum.css
+│       ├── curriculum.js / curriculum.zh.js / shuffle.js / tabs.js
+│       ├── favicon.svg / cat.svg / spikey.png      # Icons
+│       └── science.jpeg / curriculum.png           # Hero images
+├── public/                 # Synced from canonical dirs by scripts/sync-public.sh (gitignored)
+├── scripts/sync-public.sh  # Mirrors content/, archives/truth/, curriculum/archives/,
+│                           #   olympiads/photos/, research/archives/, and per-project assets
+│                           #   into public/ before each build.
+├── curriculum/
+│   ├── archives/           # Curriculum NOTES PDFs (linked from homepage)
+│   └── content/            # Per-discipline source markdown (consumed by build_curriculum.py)
+├── olympiads/photos/       # Photos referenced from olympiads.json photo_url fields
+├── research/
+│   ├── README.md           # Research ideas backlog
+│   ├── projects/<folder>/
+│   │   ├── index.md        # English project page (Content Collection 'projects')
+│   │   ├── index.zh.md     # Chinese sibling (Content Collection 'zhProjects')
+│   │   ├── data/           # Raw instrument data
+│   │   ├── photos/         # setup/, samples/, data/ (data excluded from shuffle)
+│   │   ├── papers/         # Background papers
+│   │   └── output/         # Analysis scripts, notebooks, plots
+│   └── archives/           # Background reference materials (see REFERENCE MATERIALS)
+├── apple/                  # iOS + watchOS app source (SwiftPM + XcodeGen)
+├── android/                # Android + Wear OS source (Gradle multi-module)
+└── archives/
+    └── truth/              # Science content: YAML source + generated JSON
+        ├── olympiads.yml / toys.yml                       # Edit these, then rebuild
+        └── olympiads.json / toys.json / curriculum.json   # Generated — DO NOT EDIT BY HAND
 ```
 
-**Activities workflow:** `archives/truth/olympiads.yml` is the single source of truth for all olympiads and textbooks. After editing, run `python archives/layout/build_olympiads.py` to regenerate `archives/truth/olympiads.json`, then commit both the YAML and the JSON. GitHub Pages builds Jekyll natively in "Deploy from a branch" mode and redeploys within ~1 minute of a push — no CI workflow, so it's on the editor to remember the rebuild step. Both the webapp (`olympiads/index.md` via client-side JS) and the Apple apps (`archives/apple/shared/Core/API/APIClient.swift`) fetch the JSON directly — there is no database, no API, no admin endpoint.
+**Convention deviation note (`archives/truth/`).** Per the cross-repo convention, source-of-truth files belong under `content/` (which we now have). `archives/truth/` is the documented exception: the Apple and Android apps fetch these JSON files via hardcoded `https://raw.githubusercontent.com/vivianweidai/science/main/archives/truth/...` URLs, and GitHub raw URLs do not support redirects. Renaming would 404 every shipped app install. We can migrate this later if/when we update the apps to fetch from `vivianweidai.com` instead.
+
+**Activities workflow:** `archives/truth/olympiads.yml` is the single source of truth for all olympiads and textbooks. After editing, run `python pipeline/scripts/build_olympiads.py` to regenerate `archives/truth/olympiads.json`, then `cd pipeline/worker && pnpm run deploy` to ship. The website (`/olympiads/` via client-side JS) and the Apple/Android apps both fetch the same JSON. No database, no API, no admin endpoint.
 
 Each research project lives in a date-prefixed folder under `research/projects/`:
 
@@ -80,15 +107,14 @@ YYYYMMDD Project Name/
 - **Photo subfolders.** All experiment images live under `photos/`, split by purpose: `photos/setup/` (and optionally `photos/samples/`) for shots that should rotate through the top-of-page shuffle, and `photos/data/` for handwritten data sheets that are surfaced explicitly via the `data_photos` frontmatter and the in-page `#data-grid`. The `project.html` layout filters `photos/data/` out of the shuffle pool so data sheets never appear in the hero — keep this contract intact when adding new subfolders.
 - **Photo naming.** Within each subfolder, name files sequentially by chronological order: `setup1.jpeg`, `setup2.jpeg`, … and `data1.jpeg`, `data2.jpeg`, …. The numeric suffix encodes capture order (oldest = 1). Don't keep the original camera names like `20240920 Catfood G.jpeg` once a project is being committed — rename with `git mv` so the index.md frontmatter and any in-prose references stay short and stable.
 
-## LOCAL PREVIEWS (scratchpad)
+## DEV WORKFLOW
 
-Use this workflow whenever the user asks to see something rendered — "show me", "preview", "give me choices", design comps — AND also as the default verification step after any change that's observable in the browser (a page edit, CSS tweak, new asset, etc.). The user works locally and reviews in Safari before committing.
-
-- **Location:** all preview/scratchpad work — one-off HTML comps and Jekyll-layout mockups — lives in `science/scratch/`. The folder is gitignored so nothing here is ever committed. Don't create parallel scratchpad folders (e.g. `research/mockup/`, `draft/`, `preview/`) — consolidate into `scratch/`.
-- **File shapes:** plain HTML (`scratch/<topic>.html`) for self-contained design comps, or a Jekyll-frontmatter page (`scratch/<topic>/index.md` with `layout: default`) when the mockup needs to pull in site styles or data.
-- **Serving:** the Jekyll preview (`.claude/launch.json` → `science-jekyll`, port 4321) serves the whole `science/` tree, so `scratch/` files are reachable at `http://127.0.0.1:4321/scratch/...`. Start it with `preview_start` (name: `science-jekyll`) if it's not already running. Jekyll's compiled output is written to `scratch/_site/` (also gitignored via `scratch/`) — all preview-related artifacts stay inside `scratch/`.
-- **Showing the user — default is Safari.** After a change, open the relevant URL in Safari (`open -a Safari 'http://127.0.0.1:4321/<path>'`) so the user sees the real rendering natively. Do not default to the in-IDE preview viewer or to `qlmanage` thumbnails. `qlmanage -t -s 1200 -o /tmp <file>.html` is only an inline-in-chat fallback if you need to show the user something without switching apps.
-- **Promoting to the site:** if the user picks an option and wants it live, move the chosen asset into the appropriate tracked path (e.g. `archives/layout/`, `archives/truth/`, or a project's `output/`). Never commit from `scratch/`.
+- **Build & deploy** — `cd pipeline/worker && pnpm run deploy`. The deploy script triggers `pnpm prebuild` (sync-public.sh → mirrors source dirs into `public/`), then `astro build` (writes to `dist/`), then `wrangler deploy` (ships dist via Static Assets binding). GitHub push is backup only.
+- **Local preview** — `pnpm dev` from the repo root (port 4321). Astro serves on save with hot reload. Use Safari for visual checks.
+- **One-off HTML mockups (non-Astro)** — keep in `~/GITHUB/scratch/<topic>.html` per the global convention; serve with `live-server` if needed. Don't recreate the in-repo `scratch/` Jekyll preview folder — Astro's dev server replaces it.
+- **Layout-aware Astro mockups** — drop a temp `.astro` file under `src/pages/scratch-<topic>.astro`, view via `pnpm dev`, then `git restore` to remove. Same exception pattern as other Astro repos.
+- **Showing the user — default is Safari.** After a change, open the relevant URL in Safari (`open -a Safari 'http://127.0.0.1:4321/<path>'`) so the user sees the real rendering natively. `qlmanage -t -s 1200 -o /tmp <file>.html` is only an inline-in-chat fallback.
+- **Promoting from scratch to site** — move the chosen asset into the appropriate tracked path (e.g. `archives/layout/`, `archives/truth/`, or a project's `output/`).
 
 ## ANALYSIS GUIDELINES
 
@@ -134,14 +160,14 @@ Existing pages that model this style: `20260419 IR Spectroscopy/index.md` and `2
 This repo is synced to GitHub at `vivianweidai/science` and served at `vivianweidai.com`. Everything is publicly viewable. Keep this in mind:
 - Do not commit sensitive or personal information.
 - **Never include researcher names or lab location in any public-facing files.** Project pages should include Date and Instrument but not Researchers or Location.
-- **Always resize images before committing.** No image may be committed over ~500 KB or wider than 1600 px — resize it first (`sips -Z 1600 -s formatOptions 82 file.jpeg --out file.jpeg`). The 1600 px cap is intentional for this repo: photos here are decorative illustrations inside research reports, not hero content that readers zoom into. (Compare: `domains/` uses 2560 px because it serves full-screen wallpapers where retina sharpness matters. Different caps, different jobs.) For photos saved as PNG without transparency, convert to JPEG (`sips -s format jpeg`) and update every markdown reference. For PNGs with transparency that must stay PNG, run `pngquant --quality=65-85 --ext .png --force file.png`. This rule applies to **all** directories including `data/` and `photos/` — "never modify raw data files" refers to analysis outputs, not repo hygiene. **Before every commit**, run `find . -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) -size +500k -not -path './.git/*' -not -path './_site/*'` and shrink anything that surfaces.
+- **Always resize images before committing.** No image may be committed over ~500 KB or wider than 1600 px — resize it first (`sips -Z 1600 -s formatOptions 82 file.jpeg --out file.jpeg`). The 1600 px cap is intentional for this repo: photos here are decorative illustrations inside research reports, not hero content that readers zoom into. (Compare: `domains/` uses 2560 px because it serves full-screen wallpapers where retina sharpness matters. Different caps, different jobs.) For photos saved as PNG without transparency, convert to JPEG (`sips -s format jpeg`) and update every markdown reference. For PNGs with transparency that must stay PNG, run `pngquant --quality=65-85 --ext .png --force file.png`. This rule applies to **all** directories including `data/` and `photos/` — "never modify raw data files" refers to analysis outputs, not repo hygiene. **Before every commit**, run `find . -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) -size +500k -not -path './.git/*' -not -path './dist/*' -not -path './public/*' -not -path './node_modules/*'` and shrink anything that surfaces.
 - **Always compress every PDF before committing — even small ones.** Small PDFs still shrink (often 30–50 %) at zero quality cost; this batches up to meaningful repo-history savings. Use Ghostscript (`gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=out.pdf in.pdf`) on **every** new or modified PDF in the staging set; use `/screen` (72 DPI) for huge image-heavy manuals, `/ebook` (150 DPI) when text fidelity matters. Always **verify a mid-document page renders** after compression (`pdftoppm -r 60 -f 50 -l 50 out.pdf /tmp/check`) — some sources have parser-broken streams that silently produce blank pages. Keep the compressed version only if (a) it shrunk, (b) page count matches the original, and (c) `gs` reported zero "Page drawing error" warnings. The pre-commit hook in `.githooks/pre-commit` only warns at 5 MB — it's a safety net, not the rule. On a fresh Mac, install the tools first: `brew install ghostscript poppler` (poppler provides `pdftoppm` and `pdfinfo`).
 - **Pre-commit warning hook is in `.githooks/pre-commit`.** It scans staged files and prints a warning (does NOT block) when an image is over 500 KB or a PDF is over 5 MB. To activate after a fresh clone, run once: `git config core.hooksPath .githooks`. Treat warnings case-by-case — sometimes a large file is genuinely intentional (e.g. a scanned classic paper), sometimes it needs compression first.
 - **Photos:** If a project has 4+ photos, use the 2x2 photo grid with shuffle button. **The shuffle pool is auto-populated by the `project.html` layout** — it scans every `.jpg`/`.jpeg`/`.png` file under the project's `photos/` subtree (both `photos/setup/` and `photos/samples/`) and injects them as `window._pagePhotos`. Do not list photos in front matter; do not add a per-page `<script>var _pagePhotos = ...</script>` line. Just include the `<div class="photo-grid">` + `<button class="shuffle-btn">` markup and the `<script src="/archives/layout/shuffle.js"></script>` tag. The page gets every new photo automatically when you drop it into the right folder. If a project has only 1 photo, use a single hero image with `<div class="hero-single">` for rounded styling and controlled height.
 - **Date/Instrument metadata** should be right-aligned below the photos using `<div class="project-meta">`. Put Instrument on a new line with `<br>`.
 - **Results links** should point to the GitHub blob URL (e.g. `https://github.com/vivianweidai/science/blob/main/...`) so files render inside GitHub.
 - Ensure all code, data, and documentation is presentable and well-organized.
-- Each project's `index.md` (not README.md) serves as the public-facing overview — Jekyll requires `index.md` for subdirectory pages.
+- Each project's `index.md` (not README.md) serves as the public-facing overview. Astro's content collection loader globs `*/index.md` (and `*/index.zh.md` for Chinese) under `research/projects/`, so the filename matters.
 - **When creating a new project**, always add it to the tabbed project table in `research/index.md` under the appropriate discipline tab (Mathematics, Computing, Physics, Chemistry, Biology, Astronomy). Also add any new instruments to the Instruments section in `research/index.md`.
 - **Do not auto-commit or push.** The user reviews and commits locally. After finishing a change, show the change in Safari (see LOCAL PREVIEWS) and stop there — no `git commit` or `git push` unless explicitly asked. Before the user commits, scan for oversized images (see the resize rule above) and shrink any offenders — once a large blob is in git history it stays there forever.
 

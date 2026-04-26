@@ -1,0 +1,15 @@
+{
+  "name": "science",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "predev": "scripts/sync-public.sh",
+    "dev": "astro dev --port 4321",
+    "prebuild": "scripts/sync-public.sh",
+    "build": "astro build",
+    "preview": "astro preview --port 4321"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  }
+}
