@@ -19,8 +19,8 @@ All instrument names in code and prose must exactly match what's in `public/cont
 
 ## STACK
 
-- **Astro 5** — static site generator. Builds to `dist/`.
-- **Cloudflare Workers + Static Assets** — serves `dist/` at `vivianweidai.com`. The Worker is a true passthrough to the `ASSETS` binding (no edge logic).
+- **Astro 5** — static site generator. Builds to `pipeline/worker/dist/` (co-located with the Worker that serves it).
+- **Cloudflare Workers + Static Assets** — serves the build output at `vivianweidai.com`. The Worker is a true passthrough to the `ASSETS` binding (no edge logic).
 - **GitHub** — source control only. Push triggers nothing.
 - **Apple/Android** — native apps in `apple/` and `android/` consume `vivianweidai.com/content/truth/*.json` (and per-discipline markdown under `vivianweidai.com/content/curriculum/source/`).
 
@@ -50,7 +50,7 @@ science/
 │
 ├── pipeline/
 │   ├── worker/             # Cloudflare Worker (ASSETS passthrough)
-│   │   ├── wrangler.toml   # name=science, [assets] dir=../../dist
+│   │   ├── wrangler.toml   # name=science, [assets] dir=./dist (Astro outputs here)
 │   │   ├── package.json
 │   │   └── src/index.js    # `env.ASSETS.fetch(request)`
 │   └── scripts/            # Python build scripts
@@ -86,7 +86,7 @@ science/
 
 **Convention deviation: `content/` lives inside `public/`.** The cross-repo convention puts source-of-truth in a top-level `content/` dir. We deviate because Astro already has a special `public/` dir (served verbatim at the site root). Keeping `content/` separate would require a sync step to mirror it into `public/` on every build. Putting it directly inside `public/` makes Astro's natural mechanism do the work — no sync script, no top-level `content/`, no top-level `scripts/` (which only existed for the sync helper). Net: 2 fewer top-level dirs and zero build-time copying. The Astro Content Collection loader points at `public/content/research/projects/`; the dynamic route's photo discovery walks the same path. Apple/Android still see the same `vivianweidai.com/content/...` URLs.
 
-**URL ↔ disk mapping.** Pages have clean URLs (`/`, `/curriculum/`, `/research/projects/<folder>/`, etc.). Everything under `public/content/<path>` serves at `/content/<path>` — Astro just copies `public/` to `dist/` verbatim.
+**URL ↔ disk mapping.** Pages have clean URLs (`/`, `/curriculum/`, `/research/projects/<folder>/`, etc.). Everything under `public/content/<path>` serves at `/content/<path>` — Astro just copies `public/` to its build output (`pipeline/worker/dist/`) verbatim.
 
 **Activities workflow.** `public/content/truth/olympiads.yml` is the single source of truth for olympiads and textbooks. After editing, run `python pipeline/scripts/build_olympiads.py` to regenerate `public/content/truth/olympiads.json`, then `cd pipeline/worker && pnpm run deploy` to ship. The website (`/olympiads/` via client-side JS) and the Apple/Android apps both fetch the same JSON via `https://vivianweidai.com/content/truth/olympiads.json`. No database, no API, no admin endpoint.
 
@@ -114,7 +114,7 @@ YYYYMMDD Project Name/
 
 ## DEV WORKFLOW
 
-- **Build & deploy** — `cd pipeline/worker && pnpm run deploy`. The deploy script triggers `pnpm prebuild` (sync-public.sh → mirrors source dirs into `public/`), then `astro build` (writes to `dist/`), then `wrangler deploy` (ships dist via Static Assets binding). GitHub push is backup only.
+- **Build & deploy** — `pnpm build` from repo root (writes Astro output to `pipeline/worker/dist/`), then `cd pipeline/worker && pnpm run deploy` (wrangler ships dist via Static Assets binding). GitHub push is backup only.
 - **Local preview** — `pnpm dev` from the repo root (port 4321). Astro serves on save with hot reload. Use Safari for visual checks.
 - **One-off HTML mockups (non-Astro)** — keep in `~/GITHUB/scratch/<topic>.html` per the global convention; serve with `live-server` if needed. Don't recreate the in-repo `scratch/` Jekyll preview folder — Astro's dev server replaces it.
 - **Layout-aware Astro mockups** — drop a temp `.astro` file under `src/pages/scratch-<topic>.astro`, view via `pnpm dev`, then `git restore` to remove. Same exception pattern as other Astro repos.
@@ -165,7 +165,7 @@ Existing pages that model this style: `20260419 IR Spectroscopy/index.md` and `2
 This repo is synced to GitHub at `vivianweidai/science` and served at `vivianweidai.com`. Everything is publicly viewable. Keep this in mind:
 - Do not commit sensitive or personal information.
 - **Never include researcher names or lab location in any public-facing files.** Project pages should include Date and Instrument but not Researchers or Location.
-- **Always resize images before committing.** No image may be committed over ~500 KB or wider than 1600 px — resize it first (`sips -Z 1600 -s formatOptions 82 file.jpeg --out file.jpeg`). The 1600 px cap is intentional for this repo: photos here are decorative illustrations inside research reports, not hero content that readers zoom into. (Compare: `domains/` uses 2560 px because it serves full-screen wallpapers where retina sharpness matters. Different caps, different jobs.) For photos saved as PNG without transparency, convert to JPEG (`sips -s format jpeg`) and update every markdown reference. For PNGs with transparency that must stay PNG, run `pngquant --quality=65-85 --ext .png --force file.png`. This rule applies to **all** directories including `data/` and `photos/` — "never modify raw data files" refers to analysis outputs, not repo hygiene. **Before every commit**, run `find . -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) -size +500k -not -path './.git/*' -not -path './dist/*' -not -path './public/*' -not -path './node_modules/*'` and shrink anything that surfaces.
+- **Always resize images before committing.** No image may be committed over ~500 KB or wider than 1600 px — resize it first (`sips -Z 1600 -s formatOptions 82 file.jpeg --out file.jpeg`). The 1600 px cap is intentional for this repo: photos here are decorative illustrations inside research reports, not hero content that readers zoom into. (Compare: `domains/` uses 2560 px because it serves full-screen wallpapers where retina sharpness matters. Different caps, different jobs.) For photos saved as PNG without transparency, convert to JPEG (`sips -s format jpeg`) and update every markdown reference. For PNGs with transparency that must stay PNG, run `pngquant --quality=65-85 --ext .png --force file.png`. This rule applies to **all** directories including `data/` and `photos/` — "never modify raw data files" refers to analysis outputs, not repo hygiene. **Before every commit**, run `find . -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) -size +500k -not -path './.git/*' -not -path '*/dist/*' -not -path './node_modules/*'` and shrink anything that surfaces.
 - **Always compress every PDF before committing — even small ones.** Small PDFs still shrink (often 30–50 %) at zero quality cost; this batches up to meaningful repo-history savings. Use Ghostscript (`gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=out.pdf in.pdf`) on **every** new or modified PDF in the staging set; use `/screen` (72 DPI) for huge image-heavy manuals, `/ebook` (150 DPI) when text fidelity matters. Always **verify a mid-document page renders** after compression (`pdftoppm -r 60 -f 50 -l 50 out.pdf /tmp/check`) — some sources have parser-broken streams that silently produce blank pages. Keep the compressed version only if (a) it shrunk, (b) page count matches the original, and (c) `gs` reported zero "Page drawing error" warnings. The pre-commit hook in `.githooks/pre-commit` only warns at 5 MB — it's a safety net, not the rule. On a fresh Mac, install the tools first: `brew install ghostscript poppler` (poppler provides `pdftoppm` and `pdfinfo`).
 - **Pre-commit warning hook is in `.githooks/pre-commit`.** It scans staged files and prints a warning (does NOT block) when an image is over 500 KB or a PDF is over 5 MB. To activate after a fresh clone, run once: `git config core.hooksPath .githooks`. Treat warnings case-by-case — sometimes a large file is genuinely intentional (e.g. a scanned classic paper), sometimes it needs compression first.
 - **Photos:** If a project has 4+ photos, use the 2x2 photo grid with shuffle button. **The shuffle pool is auto-populated by the `project.html` layout** — it scans every `.jpg`/`.jpeg`/`.png` file under the project's `photos/` subtree (both `photos/setup/` and `photos/samples/`) and injects them as `window._pagePhotos`. Do not list photos in front matter; do not add a per-page `<script>var _pagePhotos = ...</script>` line. Just include the `<div class="photo-grid">` + `<button class="shuffle-btn">` markup and the `<script src="/archives/layout/shuffle.js"></script>` tag. The page gets every new photo automatically when you drop it into the right folder. If a project has only 1 photo, use a single hero image with `<div class="hero-single">` for rounded styling and controlled height.
