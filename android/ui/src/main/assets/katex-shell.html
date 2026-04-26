@@ -208,7 +208,7 @@
   ///   { markdown: string, tableName?: string, highlightedRows?: [int] }
   ///
   /// For curriculum tables (tableName given) we:
-  ///   1. Strip the Jekyll YAML front matter (`---\n...\n---`) so it
+  ///   1. Strip the YAML front matter (`---\n...\n---`) so it
   ///      doesn't render as prose above the table.
   ///   2. Hide the leading <h1> that duplicates the table name.
   ///   3. Remove the original column-header row (Label / Formula / Description).
@@ -224,7 +224,7 @@
     var tableName = (typeof arg === 'object' && arg && arg.tableName) || null;
     var highlightedRows = (typeof arg === 'object' && arg && arg.highlightedRows) || [];
 
-    // Strip YAML front matter. The webapp's Jekyll layer does this; iOS
+    // Strip YAML front matter. Astro consumes it server-side; iOS
     // fetches raw markdown directly so we have to do it here.
     md = md.replace(/^---\s*\n[\s\S]*?\n---\s*\n?/, '');
 

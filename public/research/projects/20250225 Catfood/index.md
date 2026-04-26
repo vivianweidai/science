@@ -1,5 +1,4 @@
 ---
-layout: project
 project: Cat Food Color Preference
 ---
 

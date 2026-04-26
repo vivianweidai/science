@@ -126,7 +126,7 @@ YYYYMMDD Project Name/
 
 - **Never modify raw data files.** Read from `data/`; write all generated outputs to `output/`.
 - Create subdirectories (`data/`, `photos/`, `papers/`, `output/`) as needed when setting up or processing a project — existing projects use these names; follow the existing pattern rather than inventing new ones.
-- **Photo subfolders.** All experiment images live under `photos/`, split by purpose: `photos/setup/` (and optionally `photos/samples/`) for shots that should rotate through the top-of-page shuffle, and `photos/data/` for handwritten data sheets that are surfaced explicitly via the `data_photos` frontmatter and the in-page `#data-grid`. The `project.html` layout filters `photos/data/` out of the shuffle pool so data sheets never appear in the hero — keep this contract intact when adding new subfolders.
+- **Photo subfolders.** All experiment images live under `photos/`, split by purpose: `photos/setup/` (and optionally `photos/samples/`) for shots that should rotate through the top-of-page shuffle, and `photos/data/` for handwritten data sheets that are surfaced explicitly via the `data_photos` frontmatter and the in-page `#data-grid`. The `[slug]/index.astro` route filters `photos/data/` out of the shuffle pool so data sheets never appear in the hero — keep this contract intact when adding new subfolders.
 - **Photo naming.** Within each subfolder, name files sequentially by chronological order: `setup1.jpeg`, `setup2.jpeg`, … and `data1.jpeg`, `data2.jpeg`, …. The numeric suffix encodes capture order (oldest = 1). Don't keep the original camera names like `20240920 Catfood G.jpeg` once a project is being committed — rename with `git mv` so the index.md frontmatter and any in-prose references stay short and stable.
 
 ## DEV WORKFLOW
@@ -201,7 +201,6 @@ When creating a new project README, use this template:
 
 ```markdown
 ---
-layout: project
 project: [Short Project Name]
 ---
 
@@ -218,13 +217,12 @@ project: [Short Project Name]
 <div class="project-meta">[Month Dayth Year]<br>[Instrument name]</div>
 ```
 
-The shuffle pool is populated automatically by `project.html` — it scans every image file under `photos/` (both `setup/` and `samples/` subfolders). No `photos:` array, no `_pagePhotos` inline script. Drop a new photo into `photos/` and it joins the shuffle on next page load.
+The shuffle pool is populated automatically by `src/pages/research/projects/[slug]/index.astro` — it scans every image file under `photos/` (both `setup/` and `samples/` subfolders). No `photos:` array, no `_pagePhotos` inline script. Drop a new photo into `photos/` and it joins the shuffle on next page load.
 
 ### Template B: Single photo
 
 ```markdown
 ---
-layout: project
 project: [Short Project Name]
 ---
 

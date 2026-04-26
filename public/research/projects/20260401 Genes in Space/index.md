@@ -1,5 +1,4 @@
 ---
-layout: project
 project: Genes in Space
 ---
 
