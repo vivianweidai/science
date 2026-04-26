@@ -292,10 +292,10 @@ struct ProjectDetailView: View {
                 var photos = MarkdownHelper.extractPhotos(from: md, key: "photos")
                 let dataPhotos = MarkdownHelper.extractPhotos(from: md, key: "data_photos")
 
-                // Modern projects rely on the Jekyll layout scanning
-                // photos/setup + photos/samples. Replicate that by
-                // querying the GitHub contents API so the in-app grid
-                // has sources to show, matching the webapp behavior.
+                // Modern projects don't list photos in front matter — the
+                // Astro layout scans photos/setup + photos/samples at build
+                // time. Replicate that by querying the GitHub contents
+                // API so the in-app grid has sources to show.
                 if photos.isEmpty {
                     photos = await Self.scanProjectPhotos(indexURL: indexURL).shuffled()
                 }
@@ -319,22 +319,25 @@ struct ProjectDetailView: View {
     /// they resolve through `MarkdownHelper.resolveRelativeURLs` with
     /// the project folder as base. Silent on failure — photos are
     /// decorative; a broken network should not crash the page.
+    ///
+    /// `indexURL` here is the deployed-site URL (`https://vivianweidai.com/research/projects/{folder}/index.md`),
+    /// not a GitHub raw URL — we fetch markdown over the website. The
+    /// repo + branch are hardcoded since this app only ever reads its
+    /// own repo.
     private static func scanProjectPhotos(indexURL: URL) async -> [String] {
-        // indexURL path: /vivianweidai/science/main/research/projects/{folder}/index.md
         let parts = indexURL.path.split(separator: "/").map(String.init)
-        guard parts.count >= 4,
-              let idxPos = parts.firstIndex(of: "index.md") else { return [] }
-        let owner = parts[0]
-        let repo = parts[1]
-        let branch = parts[2]
-        let folderParts = Array(parts[3..<idxPos])
-        let folderPath = folderParts.joined(separator: "/")
+        guard let idxPos = parts.firstIndex(of: "index.md"),
+              idxPos > 0 else { return [] }
+        let folder = parts[idxPos - 1]
+        // public/ is the on-disk root mapped to the site root; that's
+        // what the GitHub Contents API needs to see.
+        let folderPath = "public/research/projects/\(folder)"
 
         var all: [String] = []
         for sub in ["photos/setup", "photos/samples"] {
             let apiPath = "\(folderPath)/\(sub)"
             let encoded = apiPath.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? apiPath
-            guard let url = URL(string: "https://api.github.com/repos/\(owner)/\(repo)/contents/\(encoded)?ref=\(branch)") else {
+            guard let url = URL(string: "https://api.github.com/repos/vivianweidai/science/contents/\(encoded)?ref=main") else {
                 continue
             }
             var req = URLRequest(url: url)

@@ -168,8 +168,11 @@
      wide highlight yellow (#fff056), matching the curriculum table
      highlight and olympiad row highlight. `.no-highlight` (Extensions
      sections) opts out. */
-  .instrument-table tbody tr td { background: #fff056; color: #1f2328; }
-  .instrument-table.no-highlight tbody tr td { background: transparent; color: inherit; }
+  /* `!important` on both properties so the (more-specific) zebra rule
+     above can't strip the yellow off even rows and leave dark text on
+     dark zebra-bg in dark mode. Same trick as `.highlight` above. */
+  .instrument-table tbody tr td { background: #fff056 !important; color: #1f2328 !important; }
+  .instrument-table.no-highlight tbody tr td { background: transparent !important; color: inherit !important; }
   .hero-single img { max-width: 100%; height: auto; max-height: 300px; object-fit: cover; border-radius: 8px; }
   .shuffle-btn { display: none; }
 

@@ -6,11 +6,17 @@ import ScienceCore
 /// Astronomy last). Tapping a subject cascades into sections → topics →
 /// tables, each level preserving the order that `build_curriculum.py`
 /// writes into `content/curriculum/curriculum.json`.
+///
+/// Navigation is value-driven (`NavigationStack(path:)`) so the
+/// breadcrumb in `CurriculumTopicView` can pop multiple levels at once
+/// when the user taps an upstream segment ("Physics" from inside a
+/// Harmonics topic).
 struct CurriculumView: View {
     @State private var store = ContentStore.shared
+    @State private var path: [CurriculumDestination] = []
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             Group {
                 if let manifest = store.manifest {
                     subjectList(manifest)
@@ -25,6 +31,16 @@ struct CurriculumView: View {
             }
             .navigationTitle("Curriculum")
             .refreshable { await store.refreshAll() }
+            .navigationDestination(for: CurriculumDestination.self) { dest in
+                switch dest {
+                case .subject(let subject):
+                    CurriculumSubjectView(subject: subject, path: $path)
+                case .section(let subject, let section):
+                    CurriculumSectionView(subject: subject, section: section, path: $path)
+                case .topic(let subject, let section, let topic):
+                    CurriculumTopicView(subject: subject, section: section, topic: topic, path: $path)
+                }
+            }
         }
     }
 
@@ -32,9 +48,7 @@ struct CurriculumView: View {
         ScrollView {
             LazyVStack(spacing: 12) {
                 ForEach(manifest.subjects) { subject in
-                    NavigationLink {
-                        CurriculumSubjectView(subject: subject)
-                    } label: {
+                    NavigationLink(value: CurriculumDestination.subject(subject)) {
                         SubjectRow(subject: subject)
                     }
                     .buttonStyle(.plain)
@@ -44,6 +58,16 @@ struct CurriculumView: View {
         }
     }
 
+}
+
+/// Push targets in the curriculum cascade. Each case carries every
+/// upstream model needed to render that level, so a tap on the
+/// breadcrumb can build a fresh path slice (e.g. `[.subject(s)]`)
+/// without round-tripping through `ContentStore`.
+enum CurriculumDestination: Hashable {
+    case subject(CurriculumSubject)
+    case section(CurriculumSubject, CurriculumSection)
+    case topic(CurriculumSubject, CurriculumSection, CurriculumTopic)
 }
 
 /// Single colored row on the curriculum landing page.
@@ -89,15 +113,14 @@ private struct SubjectRow: View {
 /// all three curriculum levels visually consistent.
 struct CurriculumSubjectView: View {
     let subject: CurriculumSubject
+    @Binding var path: [CurriculumDestination]
 
     var body: some View {
         VStack(spacing: 0) {
-            SubjectBreadcrumb(subject: subject, trail: [])
+            SubjectBreadcrumb(subject: subject, trail: [], onTapSubject: nil, onTapTrail: [])
             List {
                 ForEach(subject.sections) { section in
-                    NavigationLink {
-                        CurriculumSectionView(subject: subject, section: section)
-                    } label: {
+                    NavigationLink(value: CurriculumDestination.section(subject, section)) {
                         Text(section.name)
                             .font(.system(size: 16, weight: .semibold))
                             .padding(.vertical, 4)
@@ -125,15 +148,19 @@ struct CurriculumSubjectView: View {
 struct CurriculumSectionView: View {
     let subject: CurriculumSubject
     let section: CurriculumSection
+    @Binding var path: [CurriculumDestination]
 
     var body: some View {
         VStack(spacing: 0) {
-            SubjectBreadcrumb(subject: subject, trail: [section.name])
+            SubjectBreadcrumb(
+                subject: subject,
+                trail: [section.name],
+                onTapSubject: { path = [.subject(subject)] },
+                onTapTrail: []
+            )
             List {
                 ForEach(section.topics) { topic in
-                    NavigationLink {
-                        CurriculumTopicView(subject: subject, section: section, topic: topic)
-                    } label: {
+                    NavigationLink(value: CurriculumDestination.topic(subject, section, topic)) {
                         VStack(alignment: .leading, spacing: 2) {
                             Text(topic.name)
                                 .font(.system(size: 16, weight: .semibold))
@@ -158,22 +185,38 @@ struct CurriculumSectionView: View {
 /// Colored banner placed immediately below the navigation bar showing
 /// the active subject (and optional trail). Mirrors the `breadcrumb`
 /// inside `CurriculumTopicView` so levels 2, 3, and 4 all look alike.
+///
+/// Each segment can be made tappable by passing a non-nil callback —
+/// the segment is wrapped in a `Button` whose action pops the
+/// `NavigationStack` to the corresponding level. Pass `nil` to leave
+/// a segment as plain text (e.g. the leaf segment, which is already
+/// the active page).
 private struct SubjectBreadcrumb: View {
     let subject: CurriculumSubject
     /// Extra path segments after the subject name. Empty on the
-    /// subject landing view, `[section.name]` on the section view.
+    /// subject landing view, `[section.name]` on the section view,
+    /// `[section.name, topic.name]` on the topic view.
     let trail: [String]
+    /// Tapping the subject segment runs this — typically pops the
+    /// stack back to that subject. Nil = render as plain text.
+    let onTapSubject: (() -> Void)?
+    /// One callback per `trail` segment, in order. Each entry is
+    /// either a closure (segment is tappable) or nil (plain text).
+    /// The leaf is conventionally nil since it's the current page.
+    let onTapTrail: [(() -> Void)?]
 
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: 6) {
-            Text(subject.name)
-                .fontWeight(.semibold)
-            ForEach(trail, id: \.self) { piece in
+            segment(text: subject.name, bold: true, action: onTapSubject)
+            ForEach(Array(trail.enumerated()), id: \.offset) { idx, piece in
                 Text("/")
                     .foregroundStyle(.secondary)
-                Text(piece)
-                    .lineLimit(1)
-                    .truncationMode(.tail)
+                let action = idx < onTapTrail.count ? onTapTrail[idx] : nil
+                // Last trail segment is the active page — bold it
+                // even when it isn't tappable, matching the topic
+                // breadcrumb convention.
+                let isLeaf = idx == trail.count - 1
+                segment(text: piece, bold: isLeaf, action: action)
             }
             Spacer(minLength: 0)
         }
@@ -182,6 +225,20 @@ private struct SubjectBreadcrumb: View {
         .padding(.horizontal, 14)
         .padding(.vertical, 10)
         .background(SubjectPalette.color(for: subject.name))
+    }
+
+    @ViewBuilder
+    private func segment(text: String, bold: Bool, action: (() -> Void)?) -> some View {
+        let label = Text(text)
+            .fontWeight(bold ? .semibold : .regular)
+            .lineLimit(1)
+            .truncationMode(.tail)
+        if let action {
+            Button(action: action) { label }
+                .buttonStyle(.plain)
+        } else {
+            label
+        }
     }
 }
 
@@ -194,10 +251,19 @@ struct CurriculumTopicView: View {
     let subject: CurriculumSubject
     let section: CurriculumSection
     let topic: CurriculumTopic
+    @Binding var path: [CurriculumDestination]
 
     var body: some View {
         VStack(spacing: 0) {
-            breadcrumb
+            SubjectBreadcrumb(
+                subject: subject,
+                trail: [section.name, topic.name],
+                onTapSubject: { path = [.subject(subject)] },
+                onTapTrail: [
+                    { path = [.subject(subject), .section(subject, section)] },
+                    nil, // leaf — the page we're on
+                ]
+            )
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 24) {
                     ForEach(topic.tables) { table in
@@ -213,28 +279,6 @@ struct CurriculumTopicView: View {
         .toolbarBackground(SubjectPalette.color(for: subject.name), for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         #endif
-    }
-
-    private var breadcrumb: some View {
-        HStack(alignment: .firstTextBaseline, spacing: 6) {
-            Text(subject.name)
-                .fontWeight(.semibold)
-            Text("/")
-                .foregroundStyle(.secondary)
-            Text(section.name)
-            Text("/")
-                .foregroundStyle(.secondary)
-            Text(topic.name)
-                .fontWeight(.semibold)
-                .lineLimit(1)
-                .truncationMode(.tail)
-            Spacer(minLength: 0)
-        }
-        .font(.system(size: 12))
-        .foregroundStyle(Color.black.opacity(0.82))
-        .padding(.horizontal, 14)
-        .padding(.vertical, 10)
-        .background(SubjectPalette.color(for: subject.name))
     }
 }
 
