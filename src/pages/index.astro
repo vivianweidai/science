@@ -1,12 +1,14 @@
 ---
 import DefaultLayout from '../layouts/Default.astro';
+import scienceJpeg from '../layouts/science.jpeg?url';
+import curriculumPng from '../layouts/curriculum.png?url';
 ---
 <DefaultLayout title="Vivian Dai">
   <div class="page-header"><h2>Science</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
-  <img src="/content/science.jpeg" alt="Science" width="100%" />
+  <img src={scienceJpeg} alt="Science" width="100%" />
 
-  <a href="/curriculum/"><img src="/content/curriculum/curriculum.png" alt="Curriculum" width="100%" /></a>
+  <a href="/curriculum/"><img src={curriculumPng} alt="Curriculum" width="100%" /></a>
 
   <div class="nav-links">
     <a href="/content/curriculum/notes/mathematics.pdf">Mathematics</a>
