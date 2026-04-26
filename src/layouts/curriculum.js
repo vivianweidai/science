@@ -15,8 +15,8 @@
   var widget = document.getElementById('curriculum-widget');
   if (!widget) return;
 
-  var RAW_BASE = 'https://raw.githubusercontent.com/vivianweidai/science/main/curriculum/content/';
-  var MANIFEST_URL = '/archives/truth/curriculum.json';
+  var RAW_BASE = 'https://vivianweidai.com/curriculum/source/';
+  var MANIFEST_URL = '/curriculum/curriculum.json';
 
   var manifest = null;
   var state = parseHash() || { view: 'grid' };

@@ -6,23 +6,23 @@ Process experimental data and build reproducible analysis pipelines. Parse raw i
 
 ## REFERENCE MATERIALS
 
-All background materials live in the repo under `public/content/research/archives/`. Read these as needed for instrument details, context, and research planning:
+All background materials live in the repo under `public/research/archives/`. Read these as needed for instrument details, context, and research planning:
 
-- **`public/content/research/archives/technology/`** — canonical instrument list (`toys.pdf`), plus technology landscape, UNR/UBC lab and faculty catalogues, and the university comparison.
-- **`public/content/research/archives/guides/`** — instrument walk-up guides (one PDF per instrument, e.g. `Thermo Scientific Nicolet 380 FT-IR Spectrometer.pdf`).
-- **`public/content/research/archives/papers/`** — classic papers (Turing, Rosenblatt, Hubel & Wiesel, Q-Learning, Transformers, AlphaGo, etc.).
-- **`public/content/research/archives/photos/`** — reference photos.
+- **`public/research/archives/technology/`** — canonical instrument list (`toys.pdf`), plus technology landscape, UNR/UBC lab and faculty catalogues, and the university comparison.
+- **`public/research/archives/guides/`** — instrument walk-up guides (one PDF per instrument, e.g. `Thermo Scientific Nicolet 380 FT-IR Spectrometer.pdf`).
+- **`public/research/archives/papers/`** — classic papers (Turing, Rosenblatt, Hubel & Wiesel, Q-Learning, Transformers, AlphaGo, etc.).
+- **`public/research/archives/photos/`** — reference photos.
 
-`IDEAS.md` at the repo root is a living backlog of research project ideas — promote one to `public/content/research/projects/YYYYMMDD Name/` when a pilot starts.
+`IDEAS.md` at the repo root is a living backlog of research project ideas — promote one to `public/research/projects/YYYYMMDD Name/` when a pilot starts.
 
-All instrument names in code and prose must exactly match what's in `public/content/research/archives/technology/toys.pdf`.
+All instrument names in code and prose must exactly match what's in `public/research/archives/technology/toys.pdf`.
 
 ## STACK
 
 - **Astro 5** — static site generator. Builds to `pipeline/worker/dist/` (co-located with the Worker that serves it).
 - **Cloudflare Workers + Static Assets** — serves the build output at `vivianweidai.com`. The Worker is a true passthrough to the `ASSETS` binding (no edge logic).
 - **GitHub** — source control only. Push triggers nothing.
-- **Apple/Android** — native apps in `apple/` and `android/` consume `vivianweidai.com/content/truth/*.json` (and per-discipline markdown under `vivianweidai.com/content/curriculum/source/`).
+- **Apple/Android** — native apps in `apple/` and `android/` consume `vivianweidai.com/{olympiads,research,curriculum}/*.json` (and per-discipline markdown under `vivianweidai.com/curriculum/source/`).
 
 ## REPO STRUCTURE
 
@@ -60,47 +60,41 @@ science/
 │       ├── build_olympiads.py / build_toys.py  # YAML → JSON
 │       └── build_curriculum.py                 # .docx → markdown + curriculum.json
 │
-├── public/                 # Astro public/ — served at site root, also our source-of-truth dir
-│   ├── favicon.svg         # standard root location
-│   └── content/            # All content lives here (see deviation note below);
-│       │                   #   organized by page rather than by file type
-│       ├── science.jpeg    # Site hero image (homepage)
-│       ├── curriculum/
-│       │   ├── notes/                # Per-discipline DOCX + PDF (linked from homepage)
-│       │   ├── source/               # Per-discipline markdown (output of build_curriculum.py;
-│       │   │                         #   ALSO fetched by Apple+Android apps for in-app rendering)
-│       │   ├── curriculum.json       # Generated manifest — DO NOT EDIT BY HAND
-│       │   └── curriculum.png        # Curriculum hero image (homepage link)
-│       ├── olympiads/
-│       │   ├── photos/               # Photos referenced from olympiads.json photo_url fields
-│       │   ├── olympiads.yml         # Source of truth — edit, then rebuild
-│       │   └── olympiads.json        # Generated — DO NOT EDIT BY HAND
-│       └── research/
-│           ├── archives/             # Background reference materials (instrument photos,
-│           │                         #   walk-up guides, classic papers, lab catalogues)
-│           ├── projects/<folder>/    # YYYYMMDD Project Name
-│           │   ├── index.md          # English project page (Content Collection 'projects')
-│           │   ├── index.zh.md       # Chinese sibling (Content Collection 'zhProjects')
-│           │   ├── data/             # Raw instrument data
-│           │   ├── photos/           # setup/, samples/, data/ (data excluded from shuffle)
-│           │   ├── papers/           # Background papers
-│           │   └── output/           # Analysis scripts, notebooks, plots
-│           ├── toys.yml              # Source of truth — edit, then rebuild
-│           ├── toys.json             # Generated — DO NOT EDIT BY HAND
-│           ├── shuffle.js            # Project page photo shuffle (referenced from .md)
-│           ├── tabs.js               # Project page tab UI (referenced from .md)
-│           ├── cat.svg               # Cat icon (referenced from .md + homepage updates)
-│           └── spikey.png            # Wolfram icon (referenced from research/index.astro JS)
+├── public/                 # Astro public/ — served at site root; our source-of-truth lives directly here
+│   ├── curriculum/
+│   │   ├── notes/                # Per-discipline DOCX + PDF (linked from homepage)
+│   │   ├── source/               # Per-discipline markdown (build_curriculum.py output;
+│   │   │                         #   ALSO fetched by Apple+Android apps for in-app rendering)
+│   │   └── curriculum.json       # Generated manifest — DO NOT EDIT BY HAND
+│   ├── olympiads/
+│   │   ├── photos/               # Photos referenced from olympiads.json photo_url fields
+│   │   ├── olympiads.yml         # Source of truth — edit, then rebuild
+│   │   └── olympiads.json        # Generated — DO NOT EDIT BY HAND
+│   └── research/
+│       ├── archives/             # Background reference materials (instrument photos,
+│       │                         #   walk-up guides, classic papers, lab catalogues)
+│       ├── projects/<folder>/    # YYYYMMDD Project Name
+│       │   ├── index.md          # English project page (Content Collection 'projects')
+│       │   ├── index.zh.md       # Chinese sibling (Content Collection 'zhProjects')
+│       │   ├── data/             # Raw instrument data
+│       │   ├── photos/           # setup/, samples/, data/ (data excluded from shuffle)
+│       │   ├── papers/           # Background papers
+│       │   └── output/           # Analysis scripts, notebooks, plots
+│       ├── layouts/              # JS/SVG/PNG referenced from project markdown
+│       │                         #   (shuffle.js, tabs.js, cat.svg, spikey.png — must
+│       │                         #    stay in public/ since Vite doesn't transform .md URLs)
+│       ├── toys.yml              # Source of truth — edit, then rebuild
+│       └── toys.json             # Generated — DO NOT EDIT BY HAND
 │
 ├── apple/                  # iOS + watchOS app source (SwiftPM + XcodeGen)
 └── android/                # Android + Wear OS source (Gradle multi-module)
 ```
 
-**Convention deviation: `content/` lives inside `public/`.** The cross-repo convention puts source-of-truth in a top-level `content/` dir. We deviate because Astro already has a special `public/` dir (served verbatim at the site root). Keeping `content/` separate would require a sync step to mirror it into `public/` on every build. Putting it directly inside `public/` makes Astro's natural mechanism do the work — no sync script, no top-level `content/`, no top-level `scripts/` (which only existed for the sync helper). Net: 2 fewer top-level dirs and zero build-time copying. The Astro Content Collection loader points at `public/content/research/projects/`; the dynamic route's photo discovery walks the same path. Apple/Android still see the same `vivianweidai.com/content/...` URLs.
+**Convention deviation: no top-level `content/`; everything goes directly under `public/`.** The cross-repo convention puts source-of-truth in a top-level `content/` dir. We deviate because Astro already has a special `public/` dir (served verbatim at the site root). With our setup, `public/` IS the content dir — files at `public/X/Y` serve at `/X/Y`. No `content/` layer, no `/content/` URL prefix, no sync step. The Astro Content Collection loader points at `public/research/projects/`; the dynamic route's photo discovery walks the same path. Apple/Android fetch from `vivianweidai.com/{olympiads,research,curriculum}/...`.
 
-**URL ↔ disk mapping.** Pages have clean URLs (`/`, `/curriculum/`, `/research/projects/<folder>/`, etc.). Everything under `public/content/<path>` serves at `/content/<path>` — Astro just copies `public/` to its build output (`pipeline/worker/dist/`) verbatim.
+**URL ↔ disk mapping.** Pages have clean URLs (`/`, `/curriculum/`, `/research/projects/<folder>/`, etc.). Files under `public/<path>` serve at `/<path>` — 1:1 mapping, no rewrites. Page URLs and asset URLs coexist under the same prefix (e.g., `/research/projects/<folder>/` is the rendered HTML page; `/research/projects/<folder>/index.md` is the raw markdown the apps fetch; `/research/projects/<folder>/photos/...` are the photos).
 
-**Activities workflow.** `public/content/olympiads/olympiads.yml` is the single source of truth for olympiads and textbooks. After editing, run `python pipeline/scripts/build_olympiads.py` to regenerate `public/content/olympiads/olympiads.json`, then `pnpm build && cd pipeline/worker && pnpm run deploy` to ship. The website (`/olympiads/` via client-side JS) and the Apple/Android apps both fetch the same JSON via `https://vivianweidai.com/content/olympiads/olympiads.json`. Same pattern for `toys.yml` (research) and the curriculum `.docx` sources. No database, no API, no admin endpoint.
+**Activities workflow.** `public/olympiads/olympiads.yml` is the single source of truth for olympiads and textbooks. After editing, run `python pipeline/scripts/build_olympiads.py` to regenerate `public/olympiads/olympiads.json`, then `pnpm build && cd pipeline/worker && pnpm run deploy` to ship. The website (`/olympiads/` via client-side JS) and the Apple/Android apps both fetch the same JSON via `https://vivianweidai.com/olympiads/olympiads.json`. Same pattern for `toys.yml` (research) and the curriculum `.docx` sources. No database, no API, no admin endpoint.
 
 Each research project lives in a date-prefixed folder under `research/projects/`:
 

@@ -12,7 +12,7 @@ export async function getStaticPaths() {
     const folder = entry.id;
 
     // Photos live with the English project under public/content/; same auto-discovery as English route.
-    const photosRoot = join(process.cwd(), 'public', 'content', 'research', 'projects', folder, 'photos');
+    const photosRoot = join(process.cwd(), 'public', 'research', 'projects', folder, 'photos');
     const photos: string[] = [];
     if (existsSync(photosRoot)) {
       const walk = (dir: string) => {
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
             if (relative(photosRoot, full) === 'data') continue;
             walk(full);
           } else if (/\.(jpg|jpeg|png)$/i.test(name)) {
-            photos.push(`/content/research/projects/${folder}/photos/` + relative(photosRoot, full));
+            photos.push(`/research/projects/${folder}/photos/` + relative(photosRoot, full));
           }
         }
       };

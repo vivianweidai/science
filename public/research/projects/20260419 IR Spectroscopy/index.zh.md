@@ -14,7 +14,7 @@ project: 红外光谱
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">随机切换照片</button>
 
-<script src="/content/research/layouts/shuffle.js"></script>
+<script src="/research/layouts/shuffle.js"></script>
 
 <div class="project-meta">2026年4月19日<br>Thermo Scientific Nicolet 380 FT-IR Spectrometer（ATR模式）</div>
 
@@ -33,7 +33,7 @@ project: 红外光谱
 | 样品数 | 21 |
 | 软件 | Thermo Scientific OMNIC 8 |
 
-首先采集背景光谱以建立基线。每个样品直接放置在ATR晶体上——在ATR模式下，红外光束在晶体内部全反射，倏逝波穿透样品表面几微米，因此无需任何样品制备即可直接测量。在中红外范围内采集光谱，并从OMNIC 8导出<a href="https://github.com/vivianweidai/science/tree/main/content/research/projects/20260419%20IR%20Spectroscopy/data">原始CSV数据</a>。
+首先采集背景光谱以建立基线。每个样品直接放置在ATR晶体上——在ATR模式下，红外光束在晶体内部全反射，倏逝波穿透样品表面几微米，因此无需任何样品制备即可直接测量。在中红外范围内采集光谱，并从OMNIC 8导出<a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260419%20IR%20Spectroscopy/data">原始CSV数据</a>。
 
 ## 样品
 
@@ -51,17 +51,17 @@ project: 红外光谱
 
 ## 数据
 
-原始光谱以<a href="https://github.com/vivianweidai/science/tree/main/content/research/projects/20260419%20IR%20Spectroscopy/data">CSV文件</a>形式保存，每个文件包含两列（波数cm⁻¹和透射率%），每个光谱约7,150个数据点。
+原始光谱以<a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260419%20IR%20Spectroscopy/data">CSV文件</a>形式保存，每个文件包含两列（波数cm⁻¹和透射率%），每个光谱约7,150个数据点。
 
 ## 方法
 
-仪器（Nicolet 380）自动进行背景校正——每个样品的透射率已相对于背景光谱测量，因此非吸收区域读数约为100%透射率。<a href="https://github.com/vivianweidai/science/blob/main/content/research/projects/20260419%20IR%20Spectroscopy/output/clean_data.py">数据清洗流程</a>：
+仪器（Nicolet 380）自动进行背景校正——每个样品的透射率已相对于背景光谱测量，因此非吸收区域读数约为100%透射率。<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260419%20IR%20Spectroscopy/output/clean_data.py">数据清洗流程</a>：
 
 1. **解析** — 原始CSV使用科学计数法且无表头；每个文件被解析为波数和透射率数值列。
 2. **转换为吸光度** — 使用 A = −log₁₀(T/100) 将透射率转换为吸光度，其中T为百分透射率。吸光度无量纲，通过Beer-Lambert定律与浓度成正比。
-3. **导出** — 所有23个样品保存为带表头（波数、透射率、吸光度）的清洗CSV文件，存入<a href="https://github.com/vivianweidai/science/tree/main/content/research/projects/20260419%20IR%20Spectroscopy/output/SCRUBBED">SCRUBBED</a>文件夹。
+3. **导出** — 所有23个样品保存为带表头（波数、透射率、吸光度）的清洗CSV文件，存入<a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260419%20IR%20Spectroscopy/output/SCRUBBED">SCRUBBED</a>文件夹。
 
-所有光谱图、峰值鉴定和分类叠加图均使用清洗数据通过Python库在<a href="https://github.com/vivianweidai/science/blob/main/content/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">分析笔记本</a>中生成。
+所有光谱图、峰值鉴定和分类叠加图均使用清洗数据通过Python库在<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">分析笔记本</a>中生成。
 
 ## 结果
 
@@ -218,9 +218,9 @@ project: 红外光谱
 </div>
 
 
-<script src="/content/research/layouts/tabs.js"></script>
+<script src="/research/layouts/tabs.js"></script>
 
-查看<a href="https://github.com/vivianweidai/science/blob/main/content/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">静态笔记本</a>或<a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/content/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">自行运行可重复分析</a>。
+查看<a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">静态笔记本</a>或<a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">自行运行可重复分析</a>。
 
 ---
 

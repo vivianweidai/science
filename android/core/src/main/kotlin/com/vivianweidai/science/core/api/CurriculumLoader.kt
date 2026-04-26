@@ -36,9 +36,9 @@ class CurriculumLoader {
 
     companion object {
         private const val MANIFEST_URL =
-            "https://vivianweidai.com/content/curriculum/curriculum.json"
+            "https://vivianweidai.com/curriculum/curriculum.json"
         private const val RAW_BASE_URL =
-            "https://vivianweidai.com/content/curriculum/source/"
+            "https://vivianweidai.com/curriculum/source/"
         val shared = CurriculumLoader()
     }
 }

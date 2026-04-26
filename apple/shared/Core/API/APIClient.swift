@@ -11,10 +11,10 @@ public actor APIClient {
     public static let shared = APIClient()
 
     public static let olympiadsURL = URL(
-        string: "https://vivianweidai.com/content/olympiads/olympiads.json"
+        string: "https://vivianweidai.com/olympiads/olympiads.json"
     )!
     public static let toysURL = URL(
-        string: "https://vivianweidai.com/content/research/toys.json"
+        string: "https://vivianweidai.com/research/toys.json"
     )!
 
     private let session: URLSession

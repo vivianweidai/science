@@ -15,7 +15,7 @@ project: UV-Vis Spectroscopy
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">Shuffle Photos</button>
 
-<script src="/content/research/layouts/shuffle.js"></script>
+<script src="/research/layouts/shuffle.js"></script>
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 20th 2026</span></div>
 
@@ -167,9 +167,9 @@ Each sample goes straight from the UV-2550 into the FluoroMax using the final in
 | FluoroMax-3 | 7 `.csv` + 7 `.pdf` | quinine, yellow HL, salicylate — emission + excitation; pink HL — emission only |
 | Lambda 750 | 2 `.csv` | exploratory — water sample + baseline |
 
-Water-solvent samples only this session — ethanol block (curcumin, green tea) deferred to a later run. Raw files live under <a href="https://github.com/vivianweidai/science/tree/main/content/research/projects/20260420%20UV-Vis%20Spectroscopy/data">data</a>. Iterative-dilution filenames preserve the full convergence sequence for each sample in the attempt to land in the 0.3–0.8 A sweet spot. The PDF files retain the machine settings used for the scans.
+Water-solvent samples only this session — ethanol block (curcumin, green tea) deferred to a later run. Raw files live under <a href="https://github.com/vivianweidai/science/tree/main/research/projects/20260420%20UV-Vis%20Spectroscopy/data">data</a>. Iterative-dilution filenames preserve the full convergence sequence for each sample in the attempt to land in the 0.3–0.8 A sweet spot. The PDF files retain the machine settings used for the scans.
 
-All UV-Vis, fluorescence, and Lambda 750 plots were generated from the raw data using Python libraries in the analysis <a href="https://github.com/vivianweidai/science/blob/main/content/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/content/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb">colab</a>.
+All UV-Vis, fluorescence, and Lambda 750 plots were generated from the raw data using Python libraries in the analysis <a href="https://github.com/vivianweidai/science/blob/main/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb">colab</a>.
 
 ## Results
 

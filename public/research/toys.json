@@ -146,7 +146,7 @@
               "toy": "Jupyter",
               "specs": "Notebooks combining code, figures and narrative",
               "available": 1,
-              "url": "https://colab.research.google.com/github/vivianweidai/science/blob/main/content/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb"
+              "url": "https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb"
             }
           ]
         },
@@ -304,7 +304,7 @@
               "toy": "NMR Spectroscopy",
               "specs": "Chemical shifts and couplings — full structural fingerprint",
               "available": 0,
-              "url": "/content/research/archives/photos/chemistry-nmr.jpg"
+              "url": "/research/archives/photos/chemistry-nmr.jpg"
             }
           ]
         },
@@ -318,14 +318,14 @@
               "toy": "GC-MS",
               "specs": "Volatile molecules — fragment fingerprints via electron ionization",
               "available": 1,
-              "url": "/content/research/archives/photos/chemistry-gc-ms.jpg"
+              "url": "/research/archives/photos/chemistry-gc-ms.jpg"
             },
             {
               "id": 26,
               "toy": "LC-MS",
               "specs": "Nonvolatile molecules — intact weight via electrospray",
               "available": 1,
-              "url": "/content/research/archives/photos/chemistry-lc-ms.jpg"
+              "url": "/research/archives/photos/chemistry-lc-ms.jpg"
             }
           ]
         }
@@ -348,7 +348,7 @@
               "toy": "Liquid Chromatography",
               "specs": "Partition in solution — HPLC workhorse for analytical separations",
               "available": 1,
-              "url": "/content/research/archives/photos/chemistry-hplc.jpg"
+              "url": "/research/archives/photos/chemistry-hplc.jpg"
             },
             {
               "id": 28,
@@ -368,7 +368,7 @@
               "toy": "X-Ray Diffraction",
               "specs": "Phase identification — fingerprint crystalline materials by peak positions",
               "available": 0,
-              "url": "/content/research/archives/photos/chemistry-xrd.jpg"
+              "url": "/research/archives/photos/chemistry-xrd.jpg"
             }
           ]
         },
@@ -382,14 +382,14 @@
               "toy": "Thermogravimetry",
               "specs": "Mass loss with heating — decomposition and moisture",
               "available": 1,
-              "url": "/content/research/archives/photos/chemistry-tga.jpg"
+              "url": "/research/archives/photos/chemistry-tga.jpg"
             },
             {
               "id": 31,
               "toy": "Calorimetry",
               "specs": "Energy flow with heating — phase transitions and heat capacity",
               "available": 1,
-              "url": "/content/research/archives/photos/chemistry-dsc.jpg"
+              "url": "/research/archives/photos/chemistry-dsc.jpg"
             }
           ]
         }
@@ -556,7 +556,7 @@
               "toy": "Earth",
               "specs": "Meter-class ground telescope at a dark site",
               "available": 0,
-              "url": "/content/research/archives/photos/astronomy-refractor-a.jpg"
+              "url": "/research/archives/photos/astronomy-refractor-a.jpg"
             }
           ]
         },
@@ -610,7 +610,7 @@
               "toy": "Spectroscopy",
               "specs": "What — wavelengths reveal composition, temperature and radial velocity",
               "available": 0,
-              "url": "/content/research/archives/photos/astronomy-orion-nebula.jpg"
+              "url": "/research/archives/photos/astronomy-orion-nebula.jpg"
             }
           ]
         },

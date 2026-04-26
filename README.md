@@ -13,16 +13,15 @@ Personal science portfolio and lab notebook — available on [web](https://vivia
 
 ```
 src/
-  layouts/                 Astro layout components
-  styles/ + scripts/       Site-wide CSS + JS (bundled by Astro)
+  layouts/                 Astro components + their CSS/JS/images (bundled)
   pages/                   File-based routing (English + /zh/ mirror)
+  content.config.ts        Content collection config
 pipeline/worker/           Cloudflare Worker (Static Assets passthrough)
 pipeline/scripts/          Python build scripts (.docx → markdown, YAML → JSON)
-public/                    Astro public/ (served at site root)
-  content/                 Source-of-truth — organized by page, not by type
-    curriculum/            notes/ + source/ + curriculum.json + curriculum.png
-    olympiads/             photos/ + olympiads.{yml,json}
-    research/              archives/ + projects/ + toys.{yml,json} + shuffle.js / cat.svg / etc.
+public/                    Source-of-truth — served at site root, organized by page
+  curriculum/              notes/ + source/ + curriculum.json
+  olympiads/               photos/ + olympiads.{yml,json}
+  research/                archives/ + projects/ + layouts/ + toys.{yml,json}
 apple/                     iOS + watchOS app (SwiftUI, read-only)
 android/                   Android + Wear OS port (Kotlin/Compose, read-only)
 ```

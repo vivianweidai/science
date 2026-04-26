@@ -43,8 +43,8 @@ data class ResearchToy(
             val trimmed = if (path.startsWith("/")) path.drop(1) else path
             val withIndex = if (trimmed.endsWith("/")) trimmed + "index.md" else "$trimmed/index.md"
             // project_url is a page URL like "/research/projects/<folder>/"; the raw
-            // markdown lives at /content/research/projects/<folder>/index.md.
-            return "https://vivianweidai.com/content/$withIndex"
+            // markdown lives at /research/projects/<folder>/index.md.
+            return "https://vivianweidai.com/$withIndex"
         }
 
     /** External URL to open (Wolfram, GitHub, Colab) — or resolved to a raw

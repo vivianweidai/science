@@ -14,9 +14,9 @@ export async function getStaticPaths() {
     // generateId in content.config.ts preserves the original folder name as id.
     const folder = entry.id;
 
-    // Discover photos under public/content/research/projects/<folder>/photos/, excluding photos/data/.
-    // Photos serve at /content/research/projects/<folder>/photos/... (Astro public/ → URL root).
-    const photosRoot = join(process.cwd(), 'public', 'content', 'research', 'projects', folder, 'photos');
+    // Discover photos under public/research/projects/<folder>/photos/, excluding photos/data/.
+    // Photos serve at /research/projects/<folder>/photos/... (Astro public/ → URL root).
+    const photosRoot = join(process.cwd(), 'public', 'research', 'projects', folder, 'photos');
     const photos: string[] = [];
     if (existsSync(photosRoot)) {
       const walk = (dir: string) => {
@@ -29,7 +29,7 @@ export async function getStaticPaths() {
             walk(full);
           } else if (/\.(jpg|jpeg|png)$/i.test(name)) {
             // Absolute URL since file path (under /content/) differs from page URL (/research/projects/<folder>/).
-            photos.push(`/content/research/projects/${folder}/photos/` + relative(photosRoot, full));
+            photos.push(`/research/projects/${folder}/photos/` + relative(photosRoot, full));
           }
         }
       };

@@ -13,10 +13,10 @@ public actor CurriculumLoader {
     public static let shared = CurriculumLoader()
 
     private static let manifestURL = URL(
-        string: "https://vivianweidai.com/content/curriculum/curriculum.json"
+        string: "https://vivianweidai.com/curriculum/curriculum.json"
     )!
     private static let rawBaseURL = URL(
-        string: "https://vivianweidai.com/content/curriculum/source/"
+        string: "https://vivianweidai.com/curriculum/source/"
     )!
 
     private let session: URLSession

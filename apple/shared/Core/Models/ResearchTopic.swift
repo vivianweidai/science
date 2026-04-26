@@ -48,8 +48,8 @@ public struct ResearchToy: Codable, Identifiable, Hashable, Sendable {
         let trimmed = path.hasPrefix("/") ? String(path.dropFirst()) : path
         let withIndex = trimmed.hasSuffix("/") ? trimmed + "index.md" : trimmed + "/index.md"
         // project_url is a page URL like "/research/projects/<folder>/"; the raw
-        // markdown lives at /content/research/projects/<folder>/index.md.
-        return URL(string: "https://vivianweidai.com/content/" + withIndex)
+        // markdown lives at /research/projects/<folder>/index.md.
+        return URL(string: "https://vivianweidai.com/" + withIndex)
     }
 
     /// External URL to open in Safari (Wolfram, GitHub, Colab) — or

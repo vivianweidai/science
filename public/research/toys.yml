@@ -98,7 +98,7 @@
         - toy: Jupyter
           specs: Notebooks combining code, figures and narrative
           available: true
-          url: https://colab.research.google.com/github/vivianweidai/science/blob/main/content/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb
+          url: https://colab.research.google.com/github/vivianweidai/science/blob/main/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb
     - technology: Reproducibility
       description: Freeze environments and archive results
       toys:
@@ -173,18 +173,18 @@
           completed: "20260420 UV-Vis Spectroscopy"
         - toy: NMR Spectroscopy
           specs: Chemical shifts and couplings — full structural fingerprint
-          url: /content/research/archives/photos/chemistry-nmr.jpg
+          url: /research/archives/photos/chemistry-nmr.jpg
     - technology: Mass Spectrometry
       description: Measure molecular mass
       toys:
         - toy: GC-MS
           specs: Volatile molecules — fragment fingerprints via electron ionization
           available: true
-          url: /content/research/archives/photos/chemistry-gc-ms.jpg
+          url: /research/archives/photos/chemistry-gc-ms.jpg
         - toy: LC-MS
           specs: Nonvolatile molecules — intact weight via electrospray
           available: true
-          url: /content/research/archives/photos/chemistry-lc-ms.jpg
+          url: /research/archives/photos/chemistry-lc-ms.jpg
 - science: Chemistry
   topic: Physical
   description: Separate, scatter and transform — non-spectroscopic characterization
@@ -195,7 +195,7 @@
         - toy: Liquid Chromatography
           specs: Partition in solution — HPLC workhorse for analytical separations
           available: true
-          url: /content/research/archives/photos/chemistry-hplc.jpg
+          url: /research/archives/photos/chemistry-hplc.jpg
         - toy: Gel Electrophoresis
           specs: Migration in an electric field — DNA and protein size separation
     - technology: Diffraction
@@ -203,18 +203,18 @@
       toys:
         - toy: X-Ray Diffraction
           specs: Phase identification — fingerprint crystalline materials by peak positions
-          url: /content/research/archives/photos/chemistry-xrd.jpg
+          url: /research/archives/photos/chemistry-xrd.jpg
     - technology: Thermal Analysis
       description: Watch samples change with heat
       toys:
         - toy: Thermogravimetry
           specs: Mass loss with heating — decomposition and moisture
           available: true
-          url: /content/research/archives/photos/chemistry-tga.jpg
+          url: /research/archives/photos/chemistry-tga.jpg
         - toy: Calorimetry
           specs: Energy flow with heating — phase transitions and heat capacity
           available: true
-          url: /content/research/archives/photos/chemistry-dsc.jpg
+          url: /research/archives/photos/chemistry-dsc.jpg
 
 # ═══════════════════════════════════════════════════════════════
 # BIOLOGY
@@ -291,7 +291,7 @@
           available: true
         - toy: Earth
           specs: Meter-class ground telescope at a dark site
-          url: /content/research/archives/photos/astronomy-refractor-a.jpg
+          url: /research/archives/photos/astronomy-refractor-a.jpg
     - technology: Invisible
       description: Wavelengths outside the visible — radio through X-ray
       toys:
@@ -313,7 +313,7 @@
           specs: Where — positions and proper motions reveal parallax and orbits
         - toy: Spectroscopy
           specs: What — wavelengths reveal composition, temperature and radial velocity
-          url: /content/research/archives/photos/astronomy-orion-nebula.jpg
+          url: /research/archives/photos/astronomy-orion-nebula.jpg
     - technology: Classification
       description: Label sources with machine learning
       toys:
