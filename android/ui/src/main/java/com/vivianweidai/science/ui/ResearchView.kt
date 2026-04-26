@@ -376,15 +376,14 @@ private fun ProjectDetailScreen(
 }
 
 /** Fetch + transform an `index.md` into renderable markdown: strip
- *  front-matter, strip Jekyll templates, resolve relative URLs, inject
- *  photos declared in the front matter. Mirrors iOS ProjectDetailView. */
+ *  front-matter, resolve relative URLs, inject photos declared in the
+ *  front matter. Mirrors iOS ProjectDetailView. */
 private suspend fun loadProjectMarkdown(indexUrl: String): String {
     var md = Http.getString(indexUrl)
-    // Legacy projects declare photos explicitly; modern projects rely
-    // on the Jekyll layout auto-scanning `photos/setup/` +
-    // `photos/samples/`. Replicate that by querying the GitHub
-    // contents API when the front matter is empty, matching iOS
-    // ProjectDetailView.scanProjectPhotos.
+    // Modern projects don't list photos in front matter — the Astro
+    // layout scans `photos/setup/` + `photos/samples/` at build time.
+    // Replicate that by querying the GitHub contents API when the
+    // front matter is empty, matching iOS ProjectDetailView.scanProjectPhotos.
     var photos = MarkdownHelper.extractPhotos(md, "photos")
     if (photos.isEmpty()) {
         photos = scanProjectPhotos(indexUrl).shuffled()
@@ -407,28 +406,31 @@ private val githubJson = Json { ignoreUnknownKeys = true }
  *  Returns relative paths (e.g. `photos/setup/setup1.jpeg`) so they
  *  resolve through MarkdownHelper.resolveRelativeUrls. Silent on
  *  failure — photos are decorative; a broken network must not crash
- *  the page. */
+ *  the page.
+ *
+ *  `indexUrl` here is the deployed-site URL
+ *  (`https://vivianweidai.com/research/projects/{folder}/index.md`),
+ *  not a GitHub raw URL — we fetch markdown over the website. The repo
+ *  + branch are hardcoded since this app only ever reads its own repo. */
 private suspend fun scanProjectPhotos(indexUrl: String): List<String> {
-    // indexUrl path: /vivianweidai/science/main/research/projects/{folder}/index.md
     val parts = indexUrl.substringAfter("://").substringAfter('/').split('/')
-    val idxPos = parts.indexOf("index.md").takeIf { it > 3 } ?: return emptyList()
-    val owner = parts[0]
-    val repo = parts[1]
-    val branch = parts[2]
+    val idxPos = parts.indexOf("index.md").takeIf { it > 0 } ?: return emptyList()
     // indexUrl segments may already be percent-encoded (the toy's
-    // project_url in toys.json carries `%20` for spaces). Decode to raw
-    // names before we re-encode them for the GitHub contents API — a
-    // double-encode would turn `%20` into `%2520` and the API 404s.
-    val folderParts = parts.subList(3, idxPos).map {
-        java.net.URLDecoder.decode(it, "UTF-8")
-    }
+    // project_url in toys.json carries `%20` for spaces). Decode the
+    // folder name to its raw form before re-encoding it for the GitHub
+    // contents API — a double-encode would turn `%20` into `%2520` and
+    // the API 404s.
+    val folder = java.net.URLDecoder.decode(parts[idxPos - 1], "UTF-8")
+    // public/ is the on-disk root mapped to the site root; that's
+    // what the GitHub Contents API needs to see.
+    val folderParts = listOf("public", "research", "projects", folder)
 
     val all = mutableListOf<String>()
     for (sub in listOf("photos/setup", "photos/samples")) {
         val apiPath = (folderParts + sub.split("/")).joinToString("/") {
             java.net.URLEncoder.encode(it, "UTF-8").replace("+", "%20")
         }
-        val url = "https://api.github.com/repos/$owner/$repo/contents/$apiPath?ref=$branch"
+        val url = "https://api.github.com/repos/vivianweidai/science/contents/$apiPath?ref=main"
         runCatching {
             val body = Http.getString(url)
             val entries = githubJson.decodeFromString<List<GitHubContentEntry>>(body)
