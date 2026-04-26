@@ -14,7 +14,7 @@ project: 离心分离
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">随机切换照片</button>
 
-<script src="/content/layout/shuffle.js"></script>
+<script src="/content/research/shuffle.js"></script>
 
 <div class="project-meta">2026年4月11日<br>Thermo Scientific Sorvall RT3 Centrifuge, DiaMed ID-Centrifuge, Sartorius CP225D Analytical Balance, VWR pHenomenal pH 1100 L, Scientific Industries Vortex-Genie 2, Canlab Magnetic Stirrer, Gilson Pipetman Pipettes</div>
 

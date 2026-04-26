@@ -1,9 +1,9 @@
 import Foundation
 
-/// Strongly-typed mirror of `content/truth/curriculum.json`, which is
+/// Strongly-typed mirror of `content/curriculum/curriculum.json`, which is
 /// the single source of truth for curriculum structure and ordering.
 ///
-/// The build script (`content/layout/build_curriculum.py`) emits subjects,
+/// The build script (`content/research/build_curriculum.py`) emits subjects,
 /// sections, topics, and tables in a canonical order — never alphabetical
 /// — and attaches `highlighted_rows` for each table so the render layer
 /// knows which data rows to highlight. We decode the JSON verbatim and

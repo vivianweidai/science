@@ -14,7 +14,7 @@ project: 紫外-可见光谱
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">随机切换照片</button>
 
-<script src="/content/layout/shuffle.js"></script>
+<script src="/content/research/shuffle.js"></script>
 
 <div class="section-heading"><h2>概述</h2><span class="section-date">2026年4月20日</span></div>
 
@@ -256,7 +256,7 @@ project: 紫外-可见光谱
 
 </div>
 
-<script src="/content/layout/tabs.js"></script>
+<script src="/content/research/tabs.js"></script>
 
 ---
 

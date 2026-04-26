@@ -179,7 +179,7 @@ import DefaultLayout from '../../layouts/Default.astro';
       document.getElementById('timeline').innerHTML = html;
     }
 
-    fetch('/content/truth/olympiads.json', { cache: 'no-cache' })
+    fetch('/content/olympiads/olympiads.json', { cache: 'no-cache' })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (d) {
         var items = d.items;

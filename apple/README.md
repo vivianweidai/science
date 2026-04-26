@@ -19,14 +19,14 @@ imports only `ScienceCore` and owns its own views under `watch/`.
 Three tabs:
 
 - **Curriculum** — cascading subject → section → topic → table browser
-  driven by `content/truth/curriculum.json` (the same manifest the
+  driven by `content/curriculum/curriculum.json` (the same manifest the
   webapp uses). Individual tables are fetched from GitHub raw URLs and
   rendered with KaTeX in a `WKWebView`, including highlighted rows from
   the manifest.
 - **Olympiads** — contests tracker plus unified textbooks list, read
-  from `content/truth/olympiads.json` (built from
-  `olympiads.yml` via `content/layout/build_olympiads.py`).
-- **Research** — toy browser driven by `content/truth/toys.json`
+  from `content/olympiads/olympiads.json` (built from
+  `olympiads.yml` via `content/research/build_olympiads.py`).
+- **Research** — toy browser driven by `content/research/toys.json`
   (topics → technologies → toys). Project links open an in-app markdown
   render of the project's `index.md`; photo placeholder links open in
   an in-app `PhotoViewer`; GitHub / Colab / Wolfram links hand off to

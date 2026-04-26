@@ -14,7 +14,7 @@ project: 四探针法
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">随机切换照片</button>
 
-<script src="/content/layout/shuffle.js"></script>
+<script src="/content/research/shuffle.js"></script>
 
 <div class="project-meta">2026年4月4日<br>Jandel RM3 Four-Point Probe</div>
 

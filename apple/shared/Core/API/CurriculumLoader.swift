@@ -1,6 +1,6 @@
 import Foundation
 
-/// Loads the curriculum manifest from `content/truth/curriculum.json`
+/// Loads the curriculum manifest from `content/curriculum/curriculum.json`
 /// and fetches individual table markdown files on demand. Replaces the
 /// older `NotesLoader` which walked the GitHub contents API and therefore
 /// got section/topic ordering wrong (alphabetical instead of the canonical
@@ -13,7 +13,7 @@ public actor CurriculumLoader {
     public static let shared = CurriculumLoader()
 
     private static let manifestURL = URL(
-        string: "https://vivianweidai.com/content/truth/curriculum.json"
+        string: "https://vivianweidai.com/content/curriculum/curriculum.json"
     )!
     private static let rawBaseURL = URL(
         string: "https://vivianweidai.com/content/curriculum/source/"

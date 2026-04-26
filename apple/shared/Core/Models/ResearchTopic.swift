@@ -1,6 +1,6 @@
 import Foundation
 
-/// Strongly-typed mirror of `content/truth/toys.json`, the source of
+/// Strongly-typed mirror of `content/research/toys.json`, the source of
 /// truth for the Research page's toy browser.
 public struct ResearchTopic: Codable, Identifiable, Hashable, Sendable {
     public let id: Int

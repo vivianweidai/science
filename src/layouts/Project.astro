@@ -1,4 +1,7 @@
 ---
+import '../styles/base.css';
+import '../styles/tabs.css';
+
 interface ProjectLink {
   url: string;
   title: string;
@@ -27,10 +30,8 @@ const {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" href="/content/layout/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <title>{project || title || 'Vivian Dai'}</title>
-  <link rel="stylesheet" href="/content/layout/base.css" />
-  <link rel="stylesheet" href="/content/layout/tabs.css" />
   <script is:inline set:html={`window._pagePhotos = ${JSON.stringify(photos)};`} />
   <style is:global>
     /* Project layout specific styles */

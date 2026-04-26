@@ -1,4 +1,7 @@
 ---
+import '../styles/base.css';
+import '../styles/tabs.css';
+
 interface Props {
   title?: string;
   htmlLang?: string;
@@ -10,10 +13,8 @@ const { title = 'Vivian Dai', htmlLang = 'en' } = Astro.props;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" href="/content/layout/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <title>{title}</title>
-  <link rel="stylesheet" href="/content/layout/base.css" />
-  <link rel="stylesheet" href="/content/layout/tabs.css" />
   <style is:global>
     /* Nav link cards (default layout only) */
     .nav-links {

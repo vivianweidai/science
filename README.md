@@ -12,17 +12,17 @@ Personal science portfolio and lab notebook — available on [web](https://vivia
 ## Structure
 
 ```
-src/                       Astro source: layouts, pages, content collections (English + zh)
+src/
+  layouts/                 Astro layout components
+  styles/ + scripts/       Site-wide CSS + JS (bundled by Astro)
+  pages/                   File-based routing (English + /zh/ mirror)
 pipeline/worker/           Cloudflare Worker (Static Assets passthrough)
 pipeline/scripts/          Python build scripts (.docx → markdown, YAML → JSON)
-public/content/            Source-of-truth (lives inside Astro's public/ — see CLAUDE.md)
-  layout/                  Site CSS/JS/icons/hero images
-  truth/                   YAML source + generated JSON (consumed by web + apps)
-  curriculum/notes/        Curriculum NOTES PDFs (linked from homepage)
-  curriculum/source/       Per-discipline source markdown (build_curriculum.py output)
-  olympiads/photos/        Photos referenced from olympiads.json
-  research/archives/       Reference materials (instrument photos, guides, papers)
-  research/projects/       Project folders, English index.md + Chinese index.zh.md siblings
+public/                    Astro public/ (served at site root)
+  content/                 Source-of-truth — organized by page, not by type
+    curriculum/            notes/ + source/ + curriculum.json + curriculum.png
+    olympiads/             photos/ + olympiads.{yml,json}
+    research/              archives/ + projects/ + toys.{yml,json} + shuffle.js / cat.svg / etc.
 apple/                     iOS + watchOS app (SwiftUI, read-only)
 android/                   Android + Wear OS port (Kotlin/Compose, read-only)
 ```

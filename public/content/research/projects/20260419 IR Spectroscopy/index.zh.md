@@ -14,7 +14,7 @@ project: 红外光谱
 </div>
 <button class="shuffle-btn" onclick="shufflePhotos()">随机切换照片</button>
 
-<script src="/content/layout/shuffle.js"></script>
+<script src="/content/research/shuffle.js"></script>
 
 <div class="project-meta">2026年4月19日<br>Thermo Scientific Nicolet 380 FT-IR Spectrometer（ATR模式）</div>
 
@@ -218,7 +218,7 @@ project: 红外光谱
 </div>
 
 
-<script src="/content/layout/tabs.js"></script>
+<script src="/content/research/tabs.js"></script>
 
 查看<a href="https://github.com/vivianweidai/science/blob/main/content/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">静态笔记本</a>或<a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/content/research/projects/20260419%20IR%20Spectroscopy/output/ir_analysis.ipynb">自行运行可重复分析</a>。
 

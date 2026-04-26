@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 import java.net.URI
 import java.net.URLEncoder
 
-/** Strongly-typed mirror of `content/truth/toys.json`. */
+/** Strongly-typed mirror of `content/research/toys.json`. */
 @Serializable
 data class ResearchTopic(
     val id: Int,

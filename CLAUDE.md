@@ -38,7 +38,9 @@ science/
 │
 ├── src/                    # Astro source
 │   ├── content.config.ts   # Content collections: projects (English) + zhProjects (Chinese)
-│   ├── layouts/            # Default.astro + Project.astro
+│   ├── layouts/            # Default.astro + Project.astro (Astro components)
+│   ├── styles/             # base.css / tabs.css / curriculum.css (imported by layouts/pages)
+│   ├── scripts/            # curriculum.js / curriculum.zh.js (imported via ?url)
 │   └── pages/              # File-based routing
 │       ├── index.astro     # /
 │       ├── curriculum/     # /curriculum/
@@ -58,27 +60,36 @@ science/
 │       └── build_curriculum.py                 # .docx → markdown + curriculum.json
 │
 ├── public/                 # Astro public/ — served at site root, also our source-of-truth dir
-│   └── content/            # All content lives here (see deviation note below)
-│       ├── layout/         # Site CSS/JS/icons/hero images (served at /content/layout/)
-│       ├── truth/          # YAML source + generated JSON manifests
-│       │   ├── olympiads.yml / toys.yml                       # Edit these, then rebuild
-│       │   └── olympiads.json / toys.json / curriculum.json   # Generated — DO NOT EDIT BY HAND
+│   ├── favicon.svg         # standard root location
+│   └── content/            # All content lives here (see deviation note below);
+│       │                   #   organized by page rather than by file type
+│       ├── science.jpeg    # Site hero image (homepage)
 │       ├── curriculum/
-│       │   ├── notes/      # Per-discipline DOCX + PDF (curriculum NOTES, linked from homepage)
-│       │   └── source/     # Per-discipline markdown (output of build_curriculum.py;
-│       │                   #   ALSO fetched by Apple+Android apps for in-app rendering)
+│       │   ├── notes/                # Per-discipline DOCX + PDF (linked from homepage)
+│       │   ├── source/               # Per-discipline markdown (output of build_curriculum.py;
+│       │   │                         #   ALSO fetched by Apple+Android apps for in-app rendering)
+│       │   ├── curriculum.json       # Generated manifest — DO NOT EDIT BY HAND
+│       │   └── curriculum.png        # Curriculum hero image (homepage link)
 │       ├── olympiads/
-│       │   └── photos/     # Photos referenced from olympiads.json photo_url fields
+│       │   ├── photos/               # Photos referenced from olympiads.json photo_url fields
+│       │   ├── olympiads.yml         # Source of truth — edit, then rebuild
+│       │   └── olympiads.json        # Generated — DO NOT EDIT BY HAND
 │       └── research/
-│           ├── archives/   # Background reference materials (instrument photos, walk-up
-│           │               #   guides, classic papers, lab/faculty catalogues, etc.)
-│           └── projects/<folder>/   # YYYYMMDD Project Name
-│               ├── index.md        # English project page (Content Collection 'projects')
-│               ├── index.zh.md     # Chinese sibling (Content Collection 'zhProjects')
-│               ├── data/           # Raw instrument data
-│               ├── photos/         # setup/, samples/, data/ (data excluded from shuffle)
-│               ├── papers/         # Background papers
-│               └── output/         # Analysis scripts, notebooks, plots
+│           ├── archives/             # Background reference materials (instrument photos,
+│           │                         #   walk-up guides, classic papers, lab catalogues)
+│           ├── projects/<folder>/    # YYYYMMDD Project Name
+│           │   ├── index.md          # English project page (Content Collection 'projects')
+│           │   ├── index.zh.md       # Chinese sibling (Content Collection 'zhProjects')
+│           │   ├── data/             # Raw instrument data
+│           │   ├── photos/           # setup/, samples/, data/ (data excluded from shuffle)
+│           │   ├── papers/           # Background papers
+│           │   └── output/           # Analysis scripts, notebooks, plots
+│           ├── toys.yml              # Source of truth — edit, then rebuild
+│           ├── toys.json             # Generated — DO NOT EDIT BY HAND
+│           ├── shuffle.js            # Project page photo shuffle (referenced from .md)
+│           ├── tabs.js               # Project page tab UI (referenced from .md)
+│           ├── cat.svg               # Cat icon (referenced from .md + homepage updates)
+│           └── spikey.png            # Wolfram icon (referenced from research/index.astro JS)
 │
 ├── apple/                  # iOS + watchOS app source (SwiftPM + XcodeGen)
 └── android/                # Android + Wear OS source (Gradle multi-module)
@@ -88,7 +99,7 @@ science/
 
 **URL ↔ disk mapping.** Pages have clean URLs (`/`, `/curriculum/`, `/research/projects/<folder>/`, etc.). Everything under `public/content/<path>` serves at `/content/<path>` — Astro just copies `public/` to its build output (`pipeline/worker/dist/`) verbatim.
 
-**Activities workflow.** `public/content/truth/olympiads.yml` is the single source of truth for olympiads and textbooks. After editing, run `python pipeline/scripts/build_olympiads.py` to regenerate `public/content/truth/olympiads.json`, then `cd pipeline/worker && pnpm run deploy` to ship. The website (`/olympiads/` via client-side JS) and the Apple/Android apps both fetch the same JSON via `https://vivianweidai.com/content/truth/olympiads.json`. No database, no API, no admin endpoint.
+**Activities workflow.** `public/content/olympiads/olympiads.yml` is the single source of truth for olympiads and textbooks. After editing, run `python pipeline/scripts/build_olympiads.py` to regenerate `public/content/olympiads/olympiads.json`, then `pnpm build && cd pipeline/worker && pnpm run deploy` to ship. The website (`/olympiads/` via client-side JS) and the Apple/Android apps both fetch the same JSON via `https://vivianweidai.com/content/olympiads/olympiads.json`. Same pattern for `toys.yml` (research) and the curriculum `.docx` sources. No database, no API, no admin endpoint.
 
 Each research project lives in a date-prefixed folder under `research/projects/`:
 

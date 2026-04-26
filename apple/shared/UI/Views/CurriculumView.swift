@@ -5,7 +5,7 @@ import ScienceCore
 /// vertical list of the six subjects in canonical order (Mathematics first,
 /// Astronomy last). Tapping a subject cascades into sections → topics →
 /// tables, each level preserving the order that `build_curriculum.py`
-/// writes into `content/truth/curriculum.json`.
+/// writes into `content/curriculum/curriculum.json`.
 struct CurriculumView: View {
     @State private var store = ContentStore.shared
 

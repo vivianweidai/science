@@ -1,15 +1,20 @@
 import Foundation
 
-/// Read-only client for activity listings (olympiads + textbooks).
+/// Read-only client for activity listings (olympiads + textbooks) and
+/// research toys.
 ///
-/// The source of truth is content/truth/olympiads.yml. A Python build
-/// script generates content/truth/olympiads.json which we fetch directly
-/// from GitHub's raw content host. No database, no API layer, no writes.
+/// Source of truth: YAML files under public/content/{olympiads,research}/.
+/// A Python build script generates the corresponding .json files in the
+/// same dirs, which we fetch from vivianweidai.com directly. No database,
+/// no API layer, no writes.
 public actor APIClient {
     public static let shared = APIClient()
 
-    public static let baseURL = URL(
-        string: "https://vivianweidai.com/content/truth"
+    public static let olympiadsURL = URL(
+        string: "https://vivianweidai.com/content/olympiads/olympiads.json"
+    )!
+    public static let toysURL = URL(
+        string: "https://vivianweidai.com/content/research/toys.json"
     )!
 
     private let session: URLSession
@@ -29,14 +34,14 @@ public actor APIClient {
     /// already-loaded list instantly.
     public func listActivities() async throws -> [Activity] {
         if let cachedActivities { return cachedActivities }
-        let items = try await get(file: "olympiads.json", as: ActivityList.self).items
+        let items = try await get(url: Self.olympiadsURL, as: ActivityList.self).items
         cachedActivities = items
         return items
     }
 
     public func listResearchTopics() async throws -> [ResearchTopic] {
         if let cachedTopics { return cachedTopics }
-        let topics = try await get(file: "toys.json", as: ResearchToysResponse.self).topics
+        let topics = try await get(url: Self.toysURL, as: ResearchToysResponse.self).topics
         cachedTopics = topics
         return topics
     }
@@ -50,8 +55,7 @@ public actor APIClient {
 
     // MARK: - Private
 
-    private func get<T: Decodable>(file: String, as: T.Type) async throws -> T {
-        let url = Self.baseURL.appending(path: file)
+    private func get<T: Decodable>(url: URL, as: T.Type) async throws -> T {
         var request = URLRequest(url: url)
         request.cachePolicy = .reloadRevalidatingCacheData
         let (data, response) = try await session.data(for: request)

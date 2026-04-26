@@ -28,7 +28,7 @@ except ImportError:
     sys.exit("PyYAML is required: pip install pyyaml")
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-CONTENT = ROOT / "public" / "content" / "truth"
+CONTENT = ROOT / "public" / "content" / "research"
 PROJECTS = ROOT / "research" / "projects"
 
 SCIENCES = {"Biology", "Chemistry", "Physics", "Computing", "Mathematics", "Astronomy"}
