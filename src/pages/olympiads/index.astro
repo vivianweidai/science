@@ -1,7 +1,7 @@
 ---
 import DefaultLayout from '../../layouts/Default.astro';
 ---
-<DefaultLayout>
+<DefaultLayout title="Olympiads">
   <div class="page-header"><h2>Olympiads</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a class="active" href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
   <div class="tabs">
@@ -212,7 +212,7 @@ import DefaultLayout from '../../layouts/Default.astro';
             + '<div class="type-cell">' + icon + '</div>'
             + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
             + '</div>'
-            + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="status-emoji status-emoji-invited" title="Invited">🎟️</span>' : '') + (e.borderline ? ' <span class="status-emoji status-emoji-competitive" title="Close to cutoff">🎯</span>' : '') + (e.competitive ? ' <span class="status-emoji status-emoji-competitive" title="Competitive field">🎯</span>' : '') + (e.photo_url ? ' <a class="photo-icon" href="' + e.photo_url + '" title="View photo">📷</a>' : '') + '</div>'
+            + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="status-emoji status-emoji-invited">🎟️</span>' : '') + (e.borderline ? ' <span class="status-emoji status-emoji-competitive">🎯</span>' : '') + (e.competitive ? ' <span class="status-emoji status-emoji-competitive">🎯</span>' : '') + (e.photo_url ? ' <a class="photo-icon" href="' + e.photo_url + '" title="View photo">📷</a>' : '') + '</div>'
             + '</div>';
         });
       });
