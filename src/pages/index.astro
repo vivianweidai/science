@@ -51,7 +51,10 @@ const SUBJECTS = ['astronomy', 'biology', 'chemistry', 'physics', 'computing', '
       align-items: center;
       border-bottom: 1px solid #eaecef;
       font-size: 0.9em;
+      transition: background 0.15s ease;
     }
+    .curr-rows-row:nth-child(even) { background: #f6f8fa; }
+    .curr-rows-row:hover { background: #eef1f4; }
     .curr-rows-row:last-child { border-bottom: none; }
     .curr-rows-subj {
       flex: 0 0 130px;
@@ -140,7 +143,8 @@ const SUBJECTS = ['astronomy', 'biology', 'chemistry', 'physics', 'computing', '
       transition: background 0.15s ease;
     }
     .updates-list li:last-child { border-bottom: none; }
-    .updates-list li:hover { background: #f6f8fa; }
+    .updates-list li:nth-child(even) { background: #f6f8fa; }
+    .updates-list li:hover { background: #eef1f4; }
     .updates-list li::before {
       content: '';
       position: absolute;

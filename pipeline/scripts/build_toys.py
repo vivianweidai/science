@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Build public/content/truth/toys.json from the YAML source of truth.
+"""Build public/research/toys.json from the YAML source of truth.
 
-Source of truth:  public/content/truth/toys.yml
-Output:           public/content/truth/toys.json
+Source of truth:  public/research/toys.yml
+Output:           public/research/toys.json
 
 Three-level schema:
   topics[] → technologies[] → toys[]
@@ -29,7 +29,7 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 CONTENT = ROOT / "public" / "research"
-PROJECTS = ROOT / "research" / "projects"
+PROJECTS = CONTENT / "projects"
 
 SCIENCES = {"Biology", "Chemistry", "Physics", "Computing", "Mathematics", "Astronomy"}
 SCIENCE_SLUGS = {

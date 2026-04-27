@@ -30,7 +30,8 @@
               "id": 2,
               "toy": "NumPy",
               "specs": "Array foundation — linear algebra and vectorized math",
-              "available": 1
+              "available": 1,
+              "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/"
             },
             {
               "id": 3,
@@ -60,7 +61,8 @@
               "id": 4,
               "toy": "Matplotlib",
               "specs": "Python 2D and 3D plotting",
-              "available": 1
+              "available": 1,
+              "url": "/research/projects/20260404%20Four%20Point%20Probe/"
             }
           ]
         },
@@ -73,7 +75,8 @@
               "id": 5,
               "toy": "LaTeX",
               "specs": "Equations, references and bibliographies",
-              "available": 1
+              "available": 1,
+              "url": "/curriculum/"
             }
           ]
         }
@@ -294,7 +297,7 @@
             {
               "id": 23,
               "toy": "UV-Vis Spectroscopy",
-              "specs": "UV-Vis absorption — concentration and conjugation",
+              "specs": "Light absorption — concentration and conjugation",
               "available": 1,
               "completed": "20260420 UV-Vis Spectroscopy",
               "project_url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/"
@@ -302,7 +305,7 @@
             {
               "id": 24,
               "toy": "NMR Spectroscopy",
-              "specs": "Chemical shifts and couplings — full structural fingerprint",
+              "specs": "¹H and ¹³C environments — full structural fingerprint",
               "available": 0,
               "url": "/research/archives/photos/chemistry-nmr.jpg"
             }
@@ -382,14 +385,14 @@
               "toy": "Thermogravimetry",
               "specs": "Mass loss with heating — decomposition and moisture",
               "available": 1,
-              "url": "/research/archives/photos/chemistry-tga.jpg"
+              "url": "/research/projects/20260405%20Melting%20Point/"
             },
             {
               "id": 31,
               "toy": "Calorimetry",
               "specs": "Energy flow with heating — phase transitions and heat capacity",
               "available": 1,
-              "url": "/research/archives/photos/chemistry-dsc.jpg"
+              "url": "/research/projects/20260405%20Melting%20Point/"
             }
           ]
         }

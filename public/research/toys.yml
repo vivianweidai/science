@@ -37,6 +37,7 @@
         - toy: NumPy
           specs: Array foundation — linear algebra and vectorized math
           available: true
+          url: /research/projects/20260420%20UV-Vis%20Spectroscopy/
         - toy: SciPy
           specs: Scientific routines — ODEs, optimizers and Fourier transforms
           available: true
@@ -52,12 +53,14 @@
         - toy: Matplotlib
           specs: Python 2D and 3D plotting
           available: true
+          url: /research/projects/20260404%20Four%20Point%20Probe/
     - technology: Typesetting
       description: Documents and equations
       toys:
         - toy: LaTeX
           specs: Equations, references and bibliographies
           available: true
+          url: /curriculum/
 
 # ═══════════════════════════════════════════════════════════════
 # COMPUTING
@@ -168,11 +171,11 @@
           available: true
           completed: "20260419 IR Spectroscopy"
         - toy: UV-Vis Spectroscopy
-          specs: UV-Vis absorption — concentration and conjugation
+          specs: Light absorption — concentration and conjugation
           available: true
           completed: "20260420 UV-Vis Spectroscopy"
         - toy: NMR Spectroscopy
-          specs: Chemical shifts and couplings — full structural fingerprint
+          specs: ¹H and ¹³C environments — full structural fingerprint
           url: /research/archives/photos/chemistry-nmr.jpg
     - technology: Mass Spectrometry
       description: Measure molecular mass
@@ -210,11 +213,11 @@
         - toy: Thermogravimetry
           specs: Mass loss with heating — decomposition and moisture
           available: true
-          url: /research/archives/photos/chemistry-tga.jpg
+          url: /research/projects/20260405%20Melting%20Point/
         - toy: Calorimetry
           specs: Energy flow with heating — phase transitions and heat capacity
           available: true
-          url: /research/archives/photos/chemistry-dsc.jpg
+          url: /research/projects/20260405%20Melting%20Point/
 
 # ═══════════════════════════════════════════════════════════════
 # BIOLOGY

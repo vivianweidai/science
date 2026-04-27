@@ -25,6 +25,11 @@ The samples are all **fluorophores**: molecules that catch a photon and release 
 
 ## Setup
 
+<div class="photo-grid">
+  <img src="photos/setup/setup2.jpeg" alt="Shimadzu UV-2550 UV/Vis Spectrophotometer">
+  <img src="photos/setup/setup8.jpeg" alt="Horiba Jobin Yvon FluoroMax-3 Spectrofluorometer">
+</div>
+
 <div class="instrument-table">
 
 | Instrument | Role | Range |
@@ -205,19 +210,19 @@ All UV-Vis, fluorescence, and Lambda 750 plots were generated from the raw data 
 
   <div class="tab-content" id="content-flu-quinine">
     <img src="output/images/fluoromax_quinine.png" alt="Quinine excitation and emission spectra" class="result-img">
-    <p>Textbook quinine fluorescence. λ<sub>ex</sub> = **350 nm** (matches UV-2550 and prediction), λ<sub>em</sub> = **445 nm**, Stokes shift **95 nm** — typical for a rigid quinoline framework. The blue glow you see when tonic water sits under a UV lamp.</p>
+    <p>Textbook quinine fluorescence. λ<sub>ex</sub> = <strong>350 nm</strong> (matches UV-2550 and prediction), λ<sub>em</sub> = <strong>445 nm</strong>, Stokes shift <strong>95 nm</strong> — typical for a rigid quinoline framework. The blue glow you see when tonic water sits under a UV lamp.</p>
   </div>
   <div class="tab-content" id="content-flu-yellow">
     <img src="output/images/fluoromax_yellow.png" alt="Yellow highlighter excitation and emission spectra" class="result-img">
-    <p>λ<sub>ex</sub> = **403 nm**, λ<sub>em</sub> = **512 nm**, Stokes shift **109 nm** — much larger than pure fluorescein's ~30 nm, confirming a perturbed xanthene variant. Spikes around 450–500 nm are Rayleigh scatter from the excitation beam bleeding into the detector.</p>
+    <p>λ<sub>ex</sub> = <strong>403 nm</strong>, λ<sub>em</sub> = <strong>512 nm</strong>, Stokes shift <strong>109 nm</strong> — much larger than pure fluorescein's ~30 nm, confirming a perturbed xanthene variant. Spikes around 450–500 nm are Rayleigh scatter from the excitation beam bleeding into the detector.</p>
   </div>
   <div class="tab-content" id="content-flu-pink">
     <img src="output/images/fluoromax_pink.png" alt="Pink highlighter emission only" class="result-img">
-    <p>**Emission only** — excitation scan not collected (plan next session). λ<sub>em</sub> = **582 nm** near the 585 prediction; orange-red rhodamine glow. Broad tail toward longer wavelengths may indicate dimer formation — rhodamines self-quench above ~10 μM.</p>
+    <p><strong>Emission only</strong> — excitation scan not collected (plan next session). λ<sub>em</sub> = <strong>582 nm</strong> near the 585 prediction; orange-red rhodamine glow. Broad tail toward longer wavelengths may indicate dimer formation — rhodamines self-quench above ~10 μM.</p>
   </div>
   <div class="tab-content" id="content-flu-salicylate">
     <img src="output/images/fluoromax_salicylate.png" alt="Salicylate excitation and emission spectra" class="result-img">
-    <p>**ESIPT in action.** λ<sub>ex</sub> = 301, λ<sub>em</sub> = 409 (both match predictions). Stokes shift **108 nm** — unusually large for a small aromatic. The fingerprint of excited-state intramolecular proton transfer: the excited state shuffles a proton from the ortho-OH to the carboxylate before emitting.</p>
+    <p><strong>ESIPT in action.</strong> λ<sub>ex</sub> = 301, λ<sub>em</sub> = 409 (both match predictions). Stokes shift <strong>108 nm</strong> — unusually large for a small aromatic. The fingerprint of excited-state intramolecular proton transfer: the excited state shuffles a proton from the ortho-OH to the carboxylate before emitting.</p>
   </div>
 </div>
 

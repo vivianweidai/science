@@ -16,9 +16,7 @@ project: IR Spectroscopy
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 19th 2026</span></div>
 
-Twenty-one everyday materials, one instrument, one question: which bonds are in there?
-
-IR Spectroscopy identifies the polar covalent bonds in a material by measuring which infrared frequencies it absorbs. Different functional groups — O-H, C=O, C-H, N-H — vibrate at characteristic frequencies, producing a unique absorption fingerprint for each compound.
+IR Spectroscopy identifies polar covalent bonds in a sample by measuring which infrared frequencies it absorbs. Different functional groups — O-H, C=O, C-H, N-H — vibrate at characteristic frequencies, producing a unique absorption fingerprint for each compound.
 
 ## Setup
 

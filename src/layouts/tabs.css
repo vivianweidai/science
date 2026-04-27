@@ -102,9 +102,8 @@
 #uv-yellow:checked ~ .tab-labels label[for="uv-yellow"],
 #uv-pink:checked ~ .tab-labels label[for="uv-pink"],
 #uv-salicylate:checked ~ .tab-labels label[for="uv-salicylate"] {
-  color: #5c7a10;
-  border-bottom-color: #5c7a10;
-  background: var(--subj-chem);
+  color: #0969da;
+  border-bottom-color: #0969da;
 }
 #uv-overlay:checked ~ #content-uv-overlay,
 #uv-baseline:checked ~ #content-uv-baseline,
@@ -119,7 +118,7 @@
 .methods-tabs #m-uv:checked ~ .tab-labels label[for="m-uv"],
 .methods-tabs #m-flu:checked ~ .tab-labels label[for="m-flu"],
 .methods-tabs #m-lam:checked ~ .tab-labels label[for="m-lam"] {
-  color: #5c7a10; border-bottom-color: #5c7a10; background: var(--subj-chem);
+  color: #0969da; border-bottom-color: #0969da;
 }
 .methods-tabs #m-uv:checked ~ #content-m-uv,
 .methods-tabs #m-flu:checked ~ #content-m-flu,
@@ -132,7 +131,7 @@
 /* UV-Vis Spectroscopy: samples tabs (water, ethanol) */
 .samples-tabs #s-water:checked ~ .tab-labels label[for="s-water"],
 .samples-tabs #s-ethanol:checked ~ .tab-labels label[for="s-ethanol"] {
-  color: #5c7a10; border-bottom-color: #5c7a10; background: var(--subj-chem);
+  color: #0969da; border-bottom-color: #0969da;
 }
 .samples-tabs #s-water:checked ~ #content-s-water,
 .samples-tabs #s-ethanol:checked ~ #content-s-ethanol {
@@ -145,9 +144,8 @@
 #flu-yellow:checked ~ .tab-labels label[for="flu-yellow"],
 #flu-pink:checked ~ .tab-labels label[for="flu-pink"],
 #flu-salicylate:checked ~ .tab-labels label[for="flu-salicylate"] {
-  color: #5c7a10;
-  border-bottom-color: #5c7a10;
-  background: var(--subj-chem);
+  color: #0969da;
+  border-bottom-color: #0969da;
 }
 #flu-quinine:checked ~ #content-flu-quinine,
 #flu-yellow:checked ~ #content-flu-yellow,

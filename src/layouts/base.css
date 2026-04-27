@@ -135,9 +135,9 @@ a.chip:hover { filter: brightness(0.94) saturate(1.2); }
   display: flex;
   justify-content: center;
   border-bottom: 2px solid #d1d9e0;
-  border-image: var(--gradient-pastel) 1;
   margin-bottom: 0;
 }
+.subject-tabs > .tab-labels { border-image: var(--gradient-pastel) 1; }
 .tab-labels label {
   padding: 0.6em 1.2em;
   cursor: pointer;

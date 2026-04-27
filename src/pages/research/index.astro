@@ -4,7 +4,7 @@ import DefaultLayout from '../../layouts/Default.astro';
 <DefaultLayout title="Research">
   <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a class="active" href="/research/">Research</a></div></div>
 
-  <div class="tabs" id="toys-tabs">
+  <div class="tabs subject-tabs" id="toys-tabs">
     <input type="radio" name="toys-view" id="toys-all" />
     <input type="radio" name="toys-view" id="toys-math" />
     <input type="radio" name="toys-view" id="toys-comp" />
@@ -15,11 +15,11 @@ import DefaultLayout from '../../layouts/Default.astro';
     <script is:inline>
       (function(){
         var picks = ['toys-chem','toys-bio','toys-phys','toys-comp'];
-        var saved = sessionStorage.getItem('res-tab');
+        var saved = sessionStorage.getItem('subj-tab');
         var pick = saved && document.getElementById('toys-' + saved) ? 'toys-' + saved
           : picks[Math.floor(Math.random() * picks.length)];
         document.getElementById(pick).checked = true;
-        sessionStorage.setItem('res-tab', pick.replace('toys-', ''));
+        sessionStorage.setItem('subj-tab', pick.replace('toys-', ''));
       })();
     </script>
     <div class="tab-labels">
@@ -129,7 +129,7 @@ import DefaultLayout from '../../layouts/Default.astro';
         document.querySelectorAll('input[name="toys-view"]').forEach(function (r) {
           r.addEventListener('change', function () {
             var filter = this.id.replace('toys-', '');
-            sessionStorage.setItem('res-tab', filter);
+            sessionStorage.setItem('subj-tab', filter);
             renderToys(topics, filter);
           });
         });

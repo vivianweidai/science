@@ -4,7 +4,7 @@ import DefaultLayout from '../../layouts/Default.astro';
 <DefaultLayout title="Olympiads">
   <div class="page-header"><h2>Olympiads</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a class="active" href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
-  <div class="tabs">
+  <div class="tabs subject-tabs">
     <input type="radio" name="view" id="view-all" />
     <input type="radio" name="view" id="view-math" />
     <input type="radio" name="view" id="view-comp" />
@@ -15,11 +15,11 @@ import DefaultLayout from '../../layouts/Default.astro';
     <script is:inline>
       (function(){
         var tabs = ['view-math','view-comp','view-phys','view-chem','view-bio','view-astro'];
-        var saved = sessionStorage.getItem('oly-tab');
+        var saved = sessionStorage.getItem('subj-tab');
         var pick = saved && document.getElementById('view-' + saved) ? 'view-' + saved
           : tabs[Math.floor(Math.random() * tabs.length)];
         document.getElementById(pick).checked = true;
-        sessionStorage.setItem('oly-tab', pick.replace('view-', ''));
+        sessionStorage.setItem('subj-tab', pick.replace('view-', ''));
       })();
     </script>
 
@@ -102,6 +102,9 @@ import DefaultLayout from '../../layouts/Default.astro';
       pointer-events: none;
     }
     .timeline .entry:hover::after { opacity: 1; }
+    .timeline .entry { transition: background 0.15s ease; }
+    .timeline .entry:nth-child(even of .entry) { background: #f6f8fa; }
+    .timeline .entry:hover { background: #eef1f4; }
 
     .chip {
       display: inline-block;
@@ -232,7 +235,7 @@ import DefaultLayout from '../../layouts/Default.astro';
         radios.forEach(function (radio) {
           radio.addEventListener('change', function () {
             var filter = this.id.replace('view-', '');
-            sessionStorage.setItem('oly-tab', filter);
+            sessionStorage.setItem('subj-tab', filter);
             renderTimeline(items, filter);
           });
         });

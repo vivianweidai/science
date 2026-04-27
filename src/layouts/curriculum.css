@@ -47,9 +47,9 @@
 .curr-section.curr-section-highlighted,
 .curr-col .curr-section:hover,
 .curr-subject-sections:not(:has(.curr-section-highlighted)) .curr-section:hover {
-  background: #fff8c5;
+  background: #fff44f;
   border-radius: 6px;
-  box-shadow: 0 0 0 8px #fff8c5;
+  box-shadow: 0 0 0 8px #fff44f;
 }
 
 a.curr-col-head,
