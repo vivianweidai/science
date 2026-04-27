@@ -4,7 +4,7 @@ project: Centrifuge
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
-<div class="project-title"><h1>Centrifugation and pH of Everyday Liquids</h1><span class="project-chips"><span class="chip chem">Chemistry</span> <span class="chip bio">Biology</span></span></div>
+<div class="project-title"><h1>Centrifugation and pH of Everyday Liquids</h1><span class="project-chips"><a class="chip chem" href="/curriculum/#chemistry">Chemistry</a> <a class="chip bio" href="/curriculum/#biology">Biology</a></span></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">

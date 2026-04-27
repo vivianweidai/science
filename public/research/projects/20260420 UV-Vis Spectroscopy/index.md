@@ -4,7 +4,7 @@ project: UV-Vis Spectroscopy
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
-<div class="project-title"><h1>UV-Vis Spectroscopy of Everyday Fluorophores</h1><span class="chip chem">Chemistry</span></div>
+<div class="project-title"><h1>UV-Vis Spectroscopy of Everyday Fluorophores</h1><a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">

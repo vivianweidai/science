@@ -4,7 +4,7 @@ project: Genes in Space
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
-<div class="project-title"><h1>Meow to Mars — Will Space Help or Hurt Mi's Heart? <img src="/research/layouts/cat.svg" alt="" aria-hidden="true" style="height:0.85em;vertical-align:-0.12em;"></h1><span class="chip bio">Biology</span></div>
+<div class="project-title"><h1>Meow to Mars — Will Space Help or Hurt Mi's Heart? <img src="/research/layouts/cat.svg" alt="" aria-hidden="true" style="height:0.85em;vertical-align:-0.12em;"></h1><a class="chip bio" href="/curriculum/#biology">Biology</a></div>
 
 <div class="hero-single"><img src="photos/photo.jpeg" alt="Mi the astronaut cat" style="object-position: center 70%;"></div>
 

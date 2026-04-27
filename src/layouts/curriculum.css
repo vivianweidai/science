@@ -19,6 +19,7 @@
 .curr-col:last-child { border-right: none; }
 
 .curr-col-head {
+  display: block;
   font-weight: 700;
   text-align: center;
   background: #f0f2f4;
@@ -27,8 +28,12 @@
   border-bottom: 1px solid #d1d9e0;
   font-size: 0.92em;
   cursor: pointer;
+  transition: filter 0.18s ease;
 }
-.curr-col-head:hover { opacity: 0.85; }
+.curr-col-head:hover {
+  filter: brightness(0.94) saturate(1.2);
+  text-decoration: underline;
+}
 
 .curr-col-head[data-subj="mathematics"] { background: var(--subj-math); }
 .curr-col-head[data-subj="computing"]   { background: var(--subj-comp); }
@@ -39,6 +44,19 @@
 
 .curr-section { margin-bottom: 1em; }
 .curr-section:last-child { margin-bottom: 0; }
+.curr-section.curr-section-highlighted,
+.curr-col .curr-section:hover,
+.curr-subject-sections:not(:has(.curr-section-highlighted)) .curr-section:hover {
+  background: #fff8c5;
+  border-radius: 6px;
+  box-shadow: 0 0 0 8px #fff8c5;
+}
+
+a.curr-col-head,
+a.curr-col-head:hover {
+  color: #1f2328;
+  text-decoration: none;
+}
 
 .curr-section-name {
   display: inline-block;
@@ -49,8 +67,19 @@
   margin-bottom: 0.35em;
   cursor: pointer;
 }
+.curr-section a.curr-section-name,
+.curr-section a.curr-section-name:hover {
+  text-decoration: none;
+}
 .curr-section-name:hover {
   color: #0969da;
+}
+
+/* Homepage-only compact variant: lighter weights, no section-name underline. */
+.curr-widget-mini .curr-col-head { font-weight: 600; }
+.curr-widget-mini .curr-section-name {
+  font-weight: 500;
+  border-bottom: none;
 }
 
 /* Subject view (single subject expanded) */

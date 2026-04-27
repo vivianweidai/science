@@ -2,6 +2,7 @@
 import './base.css';
 import './tabs.css';
 import faviconSvg from './favicon.svg?url';
+import photoPreviewJs from './photo-preview.js?url';
 
 interface Props {
   title?: string;
@@ -84,6 +85,7 @@ const { title = 'Vivian Dai', htmlLang = 'en' } = Astro.props;
 </head>
 <body>
   <slot />
+  <script src={photoPreviewJs} is:inline></script>
   <script>
     /* Fix tab-switching jump: preserve scroll position on label click so
        reflow from shorter/taller panels doesn't shift the viewport. */

@@ -4,7 +4,7 @@ project: Cat Food Color Preference
 
 <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
-<div class="project-title"><h1>Red or Green, What Colored Cat Food does Mi Prefer? <img src="/research/layouts/cat.svg" alt="" aria-hidden="true" style="height:0.85em;vertical-align:-0.12em;"></h1><span class="project-chips"><span class="chip math">Mathematics</span> <span class="chip comp">Computing</span></span></div>
+<div class="project-title"><h1>Red or Green, What Colored Cat Food does Mi Prefer? <img src="/research/layouts/cat.svg" alt="" aria-hidden="true" style="height:0.85em;vertical-align:-0.12em;"></h1><span class="project-chips"><a class="chip math" href="/curriculum/#mathematics">Mathematics</a> <a class="chip comp" href="/curriculum/#computing">Computing</a></span></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">

@@ -59,9 +59,49 @@ import DefaultLayout from '../../../layouts/Default.astro';
     .timeline .entry .type-cell { text-align: center; }
     .timeline .entry .chips-cell { white-space: nowrap; display: flex; gap: 2px; align-items: center; }
     .timeline .entry .name-cell { }
-    .status-emoji { font-size: 1em; margin-left: .3em; position: relative; top: -.05em; }
+    .status-emoji {
+      font-size: 1em;
+      margin-left: .3em;
+      position: relative;
+      top: -.05em;
+      display: inline-block;
+      cursor: default;
+    }
+    .status-emoji-competitive { transform-origin: center 80%; }
+    .status-emoji-competitive:hover { animation: status-wiggle 0.55s ease; }
+    @keyframes status-wiggle {
+      0%   { transform: rotate(0); }
+      20%  { transform: rotate(-15deg); }
+      40%  { transform: rotate(12deg); }
+      60%  { transform: rotate(-8deg); }
+      80%  { transform: rotate(5deg); }
+      100% { transform: rotate(0); }
+    }
+    .status-emoji-invited { transition: transform 0.6s ease; }
+    .status-emoji-invited:hover { transform: rotate(360deg) scale(1.15); }
+    .timeline .photo-icon { cursor: default; }
     .timeline .entry.hl { position: relative; }
     .timeline .entry.hl::before { content: ''; position: absolute; inset: -.1em -.4em; background: #fff44f; border-radius: 6px; z-index: -1; }
+    /* Hover: paint the section of the timeline bar in the entry's primary subject color. */
+    .timeline .entry { --bar-color: transparent; }
+    .timeline .entry:has(.chip:first-child.math)  { --bar-color: var(--subj-math); }
+    .timeline .entry:has(.chip:first-child.comp)  { --bar-color: var(--subj-comp); }
+    .timeline .entry:has(.chip:first-child.phys)  { --bar-color: var(--subj-phys); }
+    .timeline .entry:has(.chip:first-child.chem)  { --bar-color: var(--subj-chem); }
+    .timeline .entry:has(.chip:first-child.bio)   { --bar-color: var(--subj-bio); }
+    .timeline .entry:has(.chip:first-child.astro) { --bar-color: var(--subj-astro); }
+    .timeline .entry::after {
+      content: '';
+      position: absolute;
+      left: calc(-1.2em - 2px);
+      top: -3px; bottom: -3px;
+      width: 6px;
+      background: var(--bar-color);
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      pointer-events: none;
+    }
+    .timeline .entry:hover::after { opacity: 1; }
 
     .chip {
       display: inline-block;
@@ -84,8 +124,7 @@ import DefaultLayout from '../../../layouts/Default.astro';
 
     .type-icon { font-size: .85em; }
     .rings-icon { vertical-align: middle; }
-    .name-link { color: #0969da; text-decoration: none; }
-    .name-link:hover { text-decoration: underline; }
+    a.photo-icon, a.photo-icon:hover { color: inherit; text-decoration: none; }
     .photo-icon { font-size: .8em; margin-left: .3em; position: relative; top: -.1em; }
 
     @media (max-width: 600px) {
@@ -124,7 +163,7 @@ import DefaultLayout from '../../../layouts/Default.astro';
     function chip(subj) {
       var slug = SUBJECT_SLUGS[subj];
       var label = SUBJECT_ZH[subj] || subj;
-      return '<span class="chip ' + slug + '">' + label + '</span>';
+      return '<a class="chip ' + slug + '" href="/zh/curriculum/#' + subj.toLowerCase() + '">' + label + '</a>';
     }
     function chipsForEntry(e) {
       var subjects = e.subjects || [e.subject];
@@ -146,8 +185,9 @@ import DefaultLayout from '../../../layouts/Default.astro';
         years[y].push(e);
       });
       var html = '<div class="timeline">';
-      yearOrder.forEach(function (y) {
-        html += '<div class="year-marker">' + y + '</div>';
+      var entryIdx = 0;
+      yearOrder.forEach(function (y, yi) {
+        html += '<div class="year-marker fade-in" style="animation-delay:' + (yi * 0.04).toFixed(2) + 's">' + y + '</div>';
         years[y].forEach(function (e) {
           var month = e.date === 'Future' ? '' : e.date.split(' ')[0];
           var monthZh = MONTH_ZH[month] || month;
@@ -155,13 +195,15 @@ import DefaultLayout from '../../../layouts/Default.astro';
             ? '<svg class="rings-icon" viewBox="0 0 50 24" width="20" height="10"><circle cx="8" cy="8" r="6" fill="none" stroke="#0081C8" stroke-width="1.5"/><circle cx="18" cy="8" r="6" fill="none" stroke="#000" stroke-width="1.5"/><circle cx="28" cy="8" r="6" fill="none" stroke="#EE334E" stroke-width="1.5"/><circle cx="13" cy="14" r="6" fill="none" stroke="#FCB131" stroke-width="1.5"/><circle cx="23" cy="14" r="6" fill="none" stroke="#00A651" stroke-width="1.5"/></svg>'
             : '<span class="type-icon">📖</span>';
           var cls = e.highlighted ? ' hl' : '';
-          html += '<div class="entry' + cls + '" data-subject="' + SUBJECT_SLUGS[e.subject] + '">'
+          var delay = (0.05 + entryIdx * 0.025).toFixed(2);
+          entryIdx++;
+          html += '<div class="entry fade-in' + cls + '" data-subject="' + SUBJECT_SLUGS[e.subject] + '" style="animation-delay:' + delay + 's">'
             + '<div class="top-line">'
             + '<div class="month">' + monthZh + '</div>'
             + '<div class="type-cell">' + icon + '</div>'
             + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
             + '</div>'
-            + '<div class="name-cell">' + (e.photo_url ? '<a class="name-link" href="' + e.photo_url + '">' + esc(e.name) + '</a>' : esc(e.name)) + (e.invited ? ' <span class="status-emoji" title="受邀">🎟️</span>' : '') + (e.borderline ? ' <span class="status-emoji" title="接近分数线">🎯</span>' : '') + (e.photo_url ? ' <span class="photo-icon" title="照片">📷</span>' : '') + '</div>'
+            + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="status-emoji status-emoji-invited" title="受邀">🎟️</span>' : '') + (e.borderline ? ' <span class="status-emoji status-emoji-competitive" title="接近分数线">🎯</span>' : '') + (e.photo_url ? ' <a class="photo-icon" href="' + e.photo_url + '" title="查看照片">📷</a>' : '') + '</div>'
             + '</div>';
         });
       });

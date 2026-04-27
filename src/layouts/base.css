@@ -14,6 +14,9 @@
   --subj-chem:  #d4e8a0;
   --subj-bio:   #a8ddd4;
   --subj-astro: #f4c2cb;
+  --gradient-pastel: linear-gradient(to right,
+    var(--subj-math), var(--subj-comp), var(--subj-phys),
+    var(--subj-chem), var(--subj-bio), var(--subj-astro));
 }
 
 /* Shared base styles */
@@ -95,6 +98,9 @@ hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0 0.5em 0; }
   text-align: center; white-space: nowrap; line-height: 1.6;
   vertical-align: middle;
 }
+a.chip, a.chip:hover { text-decoration: none; color: #1f2328; }
+a.chip { transition: filter 0.15s ease; }
+a.chip:hover { filter: brightness(0.94) saturate(1.2); }
 .chip.math  { background: var(--subj-math); }
 .chip.comp  { background: var(--subj-comp); }
 .chip.phys  { background: var(--subj-phys); }
@@ -129,6 +135,7 @@ hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0 0.5em 0; }
   display: flex;
   justify-content: center;
   border-bottom: 2px solid #d1d9e0;
+  border-image: var(--gradient-pastel) 1;
   margin-bottom: 0;
 }
 .tab-labels label {
@@ -146,3 +153,55 @@ hr { border: none; border-top: 1px solid #d1d9e0; margin: 2em 0 0.5em 0; }
 
 /* Result images (used in project pages) */
 .result-img { width: 100%; border-radius: 6px; }
+
+/* Shared fade-up load-in. Apply `.fade-in` to any element; stagger via
+ * inline `style="animation-delay: …"`. Used on the homepage and re-applied
+ * by JS-rendered content (olympiads timeline, research toy cards, curriculum
+ * widget) on every render so tab changes replay the animation. */
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp 0.6s ease forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { animation: none; opacity: 1; transform: none; }
+}
+
+/* Shared photo-preview hover popup (see src/layouts/photo-preview.js). */
+#photo-preview {
+  position: absolute;
+  z-index: 1000;
+  background: #fff;
+  border: 1px solid #d1d9e0;
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.15);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+#photo-preview.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#photo-preview img {
+  display: block;
+  max-width: 320px;
+  max-height: 240px;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+}
+[data-photo] { cursor: zoom-in; }
+a.photo-icon, a.photo-icon:hover {
+  color: inherit;
+  text-decoration: none;
+  font-size: .9em;
+  margin-left: .15em;
+  position: relative;
+  top: -.05em;
+}

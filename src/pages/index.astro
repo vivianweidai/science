@@ -1,45 +1,159 @@
 ---
 import DefaultLayout from '../layouts/Default.astro';
 import scienceJpeg from '../layouts/science.jpeg?url';
-import curriculumPng from '../layouts/curriculum.png?url';
+import curriculumData from '../../public/curriculum/curriculum.json';
+
+// Top → bottom matches the science pyramid: astronomy at the apex,
+// mathematics as the foundation. Each row builds on the ones below.
+const SUBJECTS = ['astronomy', 'biology', 'chemistry', 'physics', 'computing', 'mathematics'];
 ---
 <DefaultLayout title="Vivian Dai">
   <div class="page-header"><h2>Science</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
-  <img src={scienceJpeg} alt="Science" width="100%" />
+  <a class="fade-in" href="/curriculum/"><img class="hero-img" src={scienceJpeg} alt="Science" width="100%" /></a>
 
-  <a href="/curriculum/"><img src={curriculumPng} alt="Curriculum" width="100%" /></a>
-
-  <div class="nav-links">
-    <a href="/curriculum/notes/mathematics.pdf">Mathematics</a>
-    <a href="/curriculum/notes/computing.pdf">Computing</a>
-    <a href="/curriculum/notes/physics.pdf">Physics</a>
-    <a href="/curriculum/notes/chemistry.pdf">Chemistry</a>
-    <a href="/curriculum/notes/biology.pdf">Biology</a>
-    <a href="/curriculum/notes/astronomy.pdf">Astronomy</a>
+  <div class="curr-rows">
+    {SUBJECTS.map((subjSlug, i) => {
+      const subj = curriculumData[subjSlug];
+      return (
+        <div class="curr-rows-row fade-in" style={`animation-delay: ${0.1 + i * 0.08}s`}>
+          <a class="curr-rows-subj" data-subj={subjSlug} href={`/curriculum/#${subjSlug}`}>{subj.name}</a>
+          <div class="curr-rows-secs">
+            {subj.sections.map((sec, j) => (
+              <>
+                {j > 0 && <span class="sep">·</span>}
+                <a href={`/curriculum/#${subjSlug}/${sec.slug}`}>{sec.name}</a>
+              </>
+            ))}
+          </div>
+          <a class="curr-rows-pdf" href={`/curriculum/notes/${subjSlug}.pdf`}>pdf</a>
+        </div>
+      );
+    })}
   </div>
 
-  <hr />
+  <style>
+    .hero-img {
+      display: block;
+      margin-top: 1em;
+      border-radius: 8px;
+    }
+    .curr-rows {
+      margin: 2em 0;
+      border: 1px solid #d1d9e0;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .curr-rows-row {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eaecef;
+      font-size: 0.9em;
+    }
+    .curr-rows-row:last-child { border-bottom: none; }
+    .curr-rows-subj {
+      flex: 0 0 130px;
+      padding: 0.55em 0.9em;
+      font-weight: 600;
+      color: #1f2328;
+      text-decoration: none;
+    }
+    .curr-rows-subj {
+      transition: filter 0.18s ease;
+    }
+    .curr-rows-subj:hover {
+      filter: brightness(0.94) saturate(1.2);
+      text-decoration: underline;
+    }
+    .curr-rows-subj[data-subj="mathematics"] { background: var(--subj-math); }
+    .curr-rows-subj[data-subj="computing"]   { background: var(--subj-comp); }
+    .curr-rows-subj[data-subj="physics"]     { background: var(--subj-phys); }
+    .curr-rows-subj[data-subj="chemistry"]   { background: var(--subj-chem); }
+    .curr-rows-subj[data-subj="biology"]     { background: var(--subj-bio); }
+    .curr-rows-subj[data-subj="astronomy"]   { background: var(--subj-astro); }
+    .curr-rows-secs {
+      flex: 1;
+      padding: 0.55em 1em;
+    }
+    .curr-rows-secs a {
+      color: #1f2328;
+      text-decoration: none;
+      padding: 0 0.18em;
+    }
+    .curr-rows-secs a:hover { color: #0969da; text-decoration: underline; }
+    .curr-rows-secs .sep { color: #b1b7be; padding: 0 0.15em; }
+    .curr-rows-pdf {
+      flex: 0 0 auto;
+      margin-right: 0.7em;
+      padding: 0.18em 0.65em;
+      border: 1px solid #d1d9e0;
+      border-radius: 999px;
+      background: #f6f8fa;
+      color: #57606a;
+      font-size: 0.82em;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .curr-rows-pdf:hover {
+      background: #eaeef2;
+      color: #1f2328;
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      .curr-rows-row { flex-direction: column; align-items: stretch; }
+      .curr-rows-subj { flex: none; text-align: center; }
+      .curr-rows-pdf { margin: 0 0.9em 0.55em; align-self: flex-start; }
+    }
+  </style>
 
   <ul class="updates-list">
-    <li><span class="update-date">April 20th 2026</span> <span class="update-body"><a href="/research/projects/20260420%20UV-Vis%20Spectroscopy/">UV-Vis Spectroscopy of Everyday Fluorophores</a> <span class="chip chem">Chemistry</span></span></li>
-    <li><span class="update-date">April 19th 2026</span> <span class="update-body"><a href="/research/projects/20260419%20IR%20Spectroscopy/">IR Spectroscopy of Everyday Materials</a> <span class="chip chem">Chemistry</span></span></li>
-    <li><span class="update-date">April 11th 2026</span> <span class="update-body"><a href="/research/projects/20260411%20Centrifuge/">Centrifugation and pH of Everyday Liquids</a> <span class="chip chem">Chemistry</span> <span class="chip bio">Biology</span></span></li>
-    <li><span class="update-date">April 5th 2026</span> <span class="update-body"><a href="/research/projects/20260405%20Melting%20Point/">Melting Point of Everyday Compounds</a> <span class="chip chem">Chemistry</span></span></li>
-    <li><span class="update-date">April 4th 2026</span> <span class="update-body"><a href="/research/projects/20260404%20Four%20Point%20Probe/">Four-Point Probe Sheet Resistance Measurements</a> <span class="chip phys">Physics</span></span></li>
-    <li><span class="update-date">March 31st 2026</span> <span class="update-body"><a href="/research/projects/20260401%20Genes%20in%20Space/">Meow to Mars — Will Space Help or Hurt Mi's Heart? <img src="/research/layouts/cat.svg" alt="" aria-hidden="true" style="height:0.9em;vertical-align:-0.12em;" /></a> <span class="chip bio">Biology</span></span></li>
-    <li><span class="update-date">February 25th 2025</span> <span class="update-body"><a href="/research/projects/20250225%20Catfood/">Red or Green, What Colored Cat Food does Mi Prefer? <img src="/research/layouts/cat.svg" alt="" aria-hidden="true" style="height:0.9em;vertical-align:-0.12em;" /></a> <span class="chip math">Mathematics</span> <span class="chip comp">Computing</span></span></li>
+    <li class="fade-in" data-subj="chem" style="animation-delay:0.05s"><span class="update-date">April 20th 2026</span> <span class="update-body"><a href="/research/projects/20260420%20UV-Vis%20Spectroscopy/">UV-Vis Spectroscopy of Everyday Fluorophores</a> <a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></span></li>
+    <li class="fade-in" data-subj="chem" style="animation-delay:0.10s"><span class="update-date">April 19th 2026</span> <span class="update-body"><a href="/research/projects/20260419%20IR%20Spectroscopy/">IR Spectroscopy of Everyday Materials</a> <a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></span></li>
+    <li class="fade-in" data-subj="chem" style="animation-delay:0.15s"><span class="update-date">April 11th 2026</span> <span class="update-body"><a href="/research/projects/20260411%20Centrifuge/">Centrifugation and pH of Everyday Liquids</a> <a class="chip chem" href="/curriculum/#chemistry">Chemistry</a> <a class="chip bio" href="/curriculum/#biology">Biology</a></span></li>
+    <li class="fade-in" data-subj="chem" style="animation-delay:0.20s"><span class="update-date">April 5th 2026</span> <span class="update-body"><a href="/research/projects/20260405%20Melting%20Point/">Melting Point of Everyday Compounds</a> <a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></span></li>
+    <li class="fade-in" data-subj="phys" style="animation-delay:0.25s"><span class="update-date">April 4th 2026</span> <span class="update-body"><a href="/research/projects/20260404%20Four%20Point%20Probe/">Four-Point Probe Sheet Resistance Measurements</a> <a class="chip phys" href="/curriculum/#physics">Physics</a></span></li>
+    <li class="fade-in" data-subj="bio" style="animation-delay:0.30s"><span class="update-date">March 31st 2026</span> <span class="update-body"><a href="/research/projects/20260401%20Genes%20in%20Space/">Meow to Mars — Will Space Help or Hurt Mi's Heart?</a> <a class="photo-icon" href="/olympiads/photos/ctyphysics.jpeg"><img src="/research/layouts/cat.svg" alt="Mi" style="height:0.9em;vertical-align:-0.12em;" /></a> <a class="chip bio" href="/curriculum/#biology">Biology</a></span></li>
+    <li class="fade-in" data-subj="math" style="animation-delay:0.35s"><span class="update-date">February 25th 2025</span> <span class="update-body"><a href="/research/projects/20250225%20Catfood/">Red or Green, What Colored Cat Food does Mi Prefer?</a> <a class="photo-icon" href="/olympiads/photos/ctyphysics.jpeg"><img src="/research/layouts/cat.svg" alt="Mi" style="height:0.9em;vertical-align:-0.12em;" /></a> <a class="chip math" href="/curriculum/#mathematics">Mathematics</a> <a class="chip comp" href="/curriculum/#computing">Computing</a></span></li>
   </ul>
 
   <style is:global>
-    .updates-list { list-style: none; padding-left: 0; }
+    .updates-list {
+      list-style: none;
+      padding: 0;
+      margin: 1em 0 0;
+      border: 1px solid #d1d9e0;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+    }
     .updates-list li {
       display: flex;
       gap: 1em;
       align-items: baseline;
-      margin: 0.4em 0;
-      line-height: 1.8;
+      padding: 0.55em 1em 0.55em 1.4em;
+      border-bottom: 1px solid #eaecef;
+      line-height: 1.6;
+      position: relative;
+      transition: background 0.15s ease;
     }
+    .updates-list li:last-child { border-bottom: none; }
+    .updates-list li:hover { background: #f6f8fa; }
+    .updates-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 5px;
+      background: var(--accent, #d1d9e0);
+    }
+    .updates-list li[data-subj="math"]  { --accent: var(--subj-math); }
+    .updates-list li[data-subj="comp"]  { --accent: var(--subj-comp); }
+    .updates-list li[data-subj="phys"]  { --accent: var(--subj-phys); }
+    .updates-list li[data-subj="chem"]  { --accent: var(--subj-chem); }
+    .updates-list li[data-subj="bio"]   { --accent: var(--subj-bio); }
+    .updates-list li[data-subj="astro"] { --accent: var(--subj-astro); }
     .updates-list .update-date {
       flex-shrink: 0;
       min-width: 9em;

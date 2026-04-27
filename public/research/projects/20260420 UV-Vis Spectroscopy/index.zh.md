@@ -4,7 +4,7 @@ project: 紫外-可见光谱
 
 <div class="page-header"><h2>研究</h2><div class="header-nav"><a href="/zh/curriculum/">课程</a><a href="/zh/olympiads/">竞赛</a><a class="active" href="/zh/research/">研究</a></div></div>
 
-<div class="project-title"><h1>日常荧光团的紫外-可见光谱分析</h1><span class="chip chem">化学</span></div>
+<div class="project-title"><h1>日常荧光团的紫外-可见光谱分析</h1><a class="chip chem" href="/zh/curriculum/#chemistry">化学</a></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="实验照片">

@@ -19,46 +19,104 @@
   var MANIFEST_URL = '/curriculum/curriculum.json';
 
   var manifest = null;
-  var state = parseHash() || { view: 'grid' };
+  var pendingHash = parseHash();
+  var state = { view: 'grid' };
 
   widget.classList.add('curr-widget');
   widget.innerHTML = '<div class="curr-loading">Loading curriculum…</div>';
 
   fetch(MANIFEST_URL)
     .then(function (r) { return r.json(); })
-    .then(function (m) { manifest = m; render(); })
+    .then(function (m) {
+      manifest = m;
+      if (pendingHash) state = resolveState(pendingHash);
+      pendingHash = null;
+      render();
+    })
     .catch(function (e) {
       widget.innerHTML = '<div class="curr-loading">Failed to load curriculum: ' + e + '</div>';
     });
 
   window.addEventListener('popstate', function () {
-    state = parseHash() || { view: 'grid' };
+    var raw = parseHash();
+    state = raw && manifest ? resolveState(raw) : (raw || { view: 'grid' });
     if (manifest) render();
   });
 
   function pushState() {
     var hash = '#';
-    if (state.view === 'subject') hash += state.subject;
-    else if (state.view === 'section') hash += state.subject + '/' + state.sectionIdx;
-    else if (state.view === 'topic') hash += state.subject + '/' + state.sectionIdx + '/' + state.topicIdx;
-    else hash = '#';
+    if (state.view === 'subject') {
+      hash += state.subject;
+      if (state.highlightSectionIdx != null) {
+        var hsec = manifest[state.subject].sections[state.highlightSectionIdx];
+        hash += '/' + slugify(hsec.name);
+      }
+    } else if (state.view === 'topic') {
+      var sec2 = manifest[state.subject].sections[state.sectionIdx];
+      var topic = sec2.topics[state.topicIdx];
+      hash += state.subject + '/' + slugify(sec2.name) + '/' + slugify(topic.name);
+    } else hash = '#';
     if (location.hash !== hash) history.pushState(null, '', hash);
   }
 
+  /* parseHash returns RAW slug-or-number tokens. Numeric → index lookup;
+     slug → name match. Resolved into actual indices by resolveState once
+     the manifest has loaded.
+     - 1 part:  subject view (no highlight)
+     - 2 parts: subject view with that section highlighted (clicked section
+                names land here so users see the broader subject context
+                instead of a cramped section-only view).
+     - 3 parts: topic table view (clicked leaf topics land here). */
   function parseHash() {
     var h = location.hash.replace(/^#/, '');
     if (!h) return null;
-    var parts = h.split('/');
+    var parts = h.split('/').map(decodeURIComponent);
     if (parts.length === 1) return { view: 'subject', subject: parts[0] };
-    if (parts.length === 2) return { view: 'section', subject: parts[0], sectionIdx: parseInt(parts[1], 10) };
-    if (parts.length === 3) return { view: 'topic', subject: parts[0], sectionIdx: parseInt(parts[1], 10), topicIdx: parseInt(parts[2], 10) };
+    if (parts.length === 2) return { view: 'subject', subject: parts[0], highlightSection: parts[1] };
+    if (parts.length === 3) return { view: 'topic', subject: parts[0], section: parts[1], topic: parts[2] };
     return null;
+  }
+
+  function resolveState(raw) {
+    if (raw.view === 'subject') {
+      var subj0 = manifest[raw.subject];
+      if (!subj0) return { view: 'grid' };
+      if (!raw.highlightSection) return { view: 'subject', subject: raw.subject };
+      var hIdx = lookupIdx(subj0.sections, raw.highlightSection);
+      if (hIdx < 0) return { view: 'subject', subject: raw.subject };
+      return { view: 'subject', subject: raw.subject, highlightSectionIdx: hIdx };
+    }
+    var subj = manifest[raw.subject];
+    if (!subj) return { view: 'grid' };
+    var sectionIdx = lookupIdx(subj.sections, raw.section);
+    if (sectionIdx < 0) return { view: 'grid' };
+    var topicIdx = lookupIdx(subj.sections[sectionIdx].topics, raw.topic);
+    if (topicIdx < 0) return { view: 'grid' };
+    return { view: 'topic', subject: raw.subject, sectionIdx: sectionIdx, topicIdx: topicIdx };
+  }
+
+  /* Resolve a raw URL token to an index in the given list of {name} objects.
+     Pure digits → numeric index (legacy URLs); otherwise slug match. */
+  function lookupIdx(list, key) {
+    if (/^\d+$/.test(key)) {
+      var n = parseInt(key, 10);
+      return n >= 0 && n < list.length ? n : -1;
+    }
+    for (var i = 0; i < list.length; i++) {
+      if (slugify(list[i].name) === key) return i;
+    }
+    return -1;
+  }
+
+  function slugify(s) {
+    return String(s).toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
   }
 
   function render() {
     pushState();
     if (state.view === 'topic') renderTopic();
-    else if (state.view === 'section') renderSection();
     else if (state.view === 'subject') renderSubject();
     else renderGrid();
   }
@@ -66,10 +124,10 @@
   function renderGrid() {
     var subjects = ['mathematics', 'computing', 'physics', 'chemistry', 'biology', 'astronomy'];
     var html = '<div class="curr-grid">';
-    subjects.forEach(function (subjSlug) {
+    subjects.forEach(function (subjSlug, i) {
       var subj = manifest[subjSlug];
       if (!subj) return;
-      html += '<div class="curr-col">';
+      html += '<div class="curr-col fade-in" style="animation-delay:' + (i * 0.06).toFixed(2) + 's">';
       html += '<div class="curr-col-head" data-subj="' + subjSlug + '">' + escapeHtml(subj.name) + '</div>';
       subj.sections.forEach(function (sec, secIdx) {
         html += '<div class="curr-section">';
@@ -111,9 +169,9 @@
     widget.querySelectorAll('.curr-section-name').forEach(function (s) {
       s.addEventListener('click', function () {
         state = {
-          view: 'section',
+          view: 'subject',
           subject: s.dataset.subj,
-          sectionIdx: parseInt(s.dataset.sec, 10),
+          highlightSectionIdx: parseInt(s.dataset.sec, 10),
         };
         render();
       });
@@ -123,14 +181,21 @@
 
   function renderSubject() {
     var subj = manifest[state.subject];
+    var hasHighlight = state.highlightSectionIdx != null;
     var html = '<div class="curr-subject">';
     html += '<div class="curr-breadcrumb" data-subj="' + state.subject + '">'
          + '<a href="#" data-action="grid">Science</a>'
-         + '<span class="sep">/</span><strong>' + escapeHtml(subj.name) + '</strong>'
+         + '<span class="sep">/</span>'
+         + (hasHighlight
+           ? '<a href="#" data-action="subject">' + escapeHtml(subj.name) + '</a>'
+             + '<span class="sep">/</span><strong>'
+             + escapeHtml(subj.sections[state.highlightSectionIdx].name) + '</strong>'
+           : '<strong>' + escapeHtml(subj.name) + '</strong>')
          + '</div>';
     html += '<div class="curr-subject-sections">';
     subj.sections.forEach(function (sec, secIdx) {
-      html += '<div class="curr-section">';
+      var hl = state.highlightSectionIdx === secIdx ? ' curr-section-highlighted' : '';
+      html += '<div class="curr-section fade-in' + hl + '" data-secidx="' + secIdx + '" style="animation-delay:' + (secIdx * 0.05).toFixed(2) + 's">';
       html += '<div class="curr-section-name" data-subj="' + state.subject + '" data-sec="' + secIdx + '">' + escapeHtml(sec.name) + '</div>';
       html += '<ul>';
       sec.topics.forEach(function (topic, topicIdx) {
@@ -150,6 +215,15 @@
       render();
     });
 
+    var subjectLink = widget.querySelector('[data-action="subject"]');
+    if (subjectLink) {
+      subjectLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        state = { view: 'subject', subject: state.subject };
+        render();
+      });
+    }
+
     widget.querySelectorAll('.curr-section a').forEach(function (a) {
       a.addEventListener('click', function (e) {
         e.preventDefault();
@@ -166,57 +240,22 @@
     widget.querySelectorAll('.curr-section-name').forEach(function (s) {
       s.addEventListener('click', function () {
         state = {
-          view: 'section',
+          view: 'subject',
           subject: s.dataset.subj,
-          sectionIdx: parseInt(s.dataset.sec, 10),
+          highlightSectionIdx: parseInt(s.dataset.sec, 10),
         };
         render();
       });
     });
-  }
 
-  function renderSection() {
-    var subj = manifest[state.subject];
-    var sec = subj.sections[state.sectionIdx];
-    var html = '<div class="curr-subject">';
-    html += '<div class="curr-breadcrumb" data-subj="' + state.subject + '">'
-         + '<a href="#" data-action="grid">Science</a>'
-         + '<span class="sep">/</span><a href="#" data-action="subject">' + escapeHtml(subj.name) + '</a>'
-         + '<span class="sep">/</span><strong>' + escapeHtml(sec.name) + '</strong>'
-         + '</div>';
-    html += '<div class="curr-section"><ul>';
-    sec.topics.forEach(function (topic, topicIdx) {
-      html += '<li><a href="#" data-subj="' + state.subject
-           + '" data-sec="' + state.sectionIdx
-           + '" data-topic="' + topicIdx + '">'
-           + escapeHtml(topic.name.toLowerCase()) + '</a></li>';
-    });
-    html += '</ul></div></div>';
-    widget.innerHTML = html;
-
-    widget.querySelector('[data-action="grid"]').addEventListener('click', function (e) {
-      e.preventDefault();
-      state = { view: 'grid' };
-      render();
-    });
-    widget.querySelector('[data-action="subject"]').addEventListener('click', function (e) {
-      e.preventDefault();
-      state = { view: 'subject', subject: state.subject };
-      render();
-      scrollToWidget();
-    });
-    widget.querySelectorAll('.curr-section a').forEach(function (a) {
-      a.addEventListener('click', function (e) {
-        e.preventDefault();
-        state = {
-          view: 'topic',
-          subject: a.dataset.subj,
-          sectionIdx: parseInt(a.dataset.sec, 10),
-          topicIdx: parseInt(a.dataset.topic, 10),
-        };
-        render();
-      });
-    });
+    if (state.highlightSectionIdx != null) {
+      var target = widget.querySelector('.curr-section-highlighted');
+      if (target) {
+        requestAnimationFrame(function () {
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+    }
   }
 
   function renderTopic() {
@@ -224,7 +263,7 @@
     var sec = subj.sections[state.sectionIdx];
     var topic = sec.topics[state.topicIdx];
 
-    var html = '<div class="curr-topic">';
+    var html = '<div class="curr-topic fade-in">';
     html += '<div class="curr-breadcrumb" data-subj="' + state.subject + '">'
          + '<a href="#" data-action="grid">Science</a>'
          + '<span class="sep">/</span><a href="#" data-action="subject">' + escapeHtml(subj.name) + '</a>'
@@ -287,9 +326,12 @@
     });
     widget.querySelector('[data-action="section-view"]').addEventListener('click', function (e) {
       e.preventDefault();
-      state = { view: 'section', subject: state.subject, sectionIdx: state.sectionIdx };
+      state = {
+        view: 'subject',
+        subject: state.subject,
+        highlightSectionIdx: state.sectionIdx,
+      };
       render();
-      scrollToWidget();
     });
 
     // Prev/next within the section (flat topic list).
