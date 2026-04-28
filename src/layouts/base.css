@@ -125,7 +125,10 @@ a.chip:hover { filter: brightness(0.94) saturate(1.2); }
   text-decoration: none;
 }
 @media (max-width: 600px) {
-  .page-header .header-nav { display: none; }
+  /* Keep nav on the same line as the title; drop the back-to-Science link
+     so the three section links fit alongside the H2. */
+  .page-header .header-nav { font-size: 0.8em; gap: 0.6em; margin-left: 0.5em; }
+  .page-header .header-nav a[data-nav="home"] { display: none; }
 }
 
 /* CSS-only tabs */

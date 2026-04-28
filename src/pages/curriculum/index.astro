@@ -1,10 +1,12 @@
 ---
 import DefaultLayout from '../../layouts/Default.astro';
+import PageHeader from '../../layouts/PageHeader.astro';
+import PageFooter from '../../layouts/PageFooter.astro';
 import '../../layouts/curriculum.css';
 import curriculumJs from '../../layouts/curriculum.js?url';
 ---
 <DefaultLayout title="Curriculum">
-  <div class="page-header"><h2>Curriculum</h2><div class="header-nav"><a class="active" href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+  <PageHeader active="curriculum" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
 
@@ -17,5 +19,5 @@ import curriculumJs from '../../layouts/curriculum.js?url';
 
   <hr />
 
-  <div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a class="active" href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+  <PageFooter active="curriculum" />
 </DefaultLayout>

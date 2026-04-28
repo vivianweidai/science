@@ -188,13 +188,13 @@ a.curr-col-head:hover {
 .curr-topic-body tr:hover td:first-child {
   background: #eef1f4 !important;
 }
+.curr-topic-body td.curr-group-hover {
+  background: #eef1f4 !important;
+}
 .curr-topic-body tr.highlight td:not(:first-child) {
   background: #fff056 !important;
 }
 .curr-topic-body tr.highlight:hover td:not(:first-child) {
-  background: #ffe839 !important;
-}
-.curr-topic-body tr.highlight:hover td:first-child {
   background: #ffe839 !important;
 }
 .curr-topic-body td.curr-group-cell {

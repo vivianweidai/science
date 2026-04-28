@@ -1,5 +1,7 @@
 ---
 import DefaultLayout from '../layouts/Default.astro';
+import PageHeader from '../layouts/PageHeader.astro';
+import PageFooter from '../layouts/PageFooter.astro';
 import scienceJpeg from '../layouts/science.jpeg?url';
 import curriculumData from '../../public/curriculum/curriculum.json';
 
@@ -8,7 +10,7 @@ import curriculumData from '../../public/curriculum/curriculum.json';
 const SUBJECTS = ['astronomy', 'biology', 'chemistry', 'physics', 'computing', 'mathematics'];
 ---
 <DefaultLayout title="Science">
-  <div class="page-header"><h2>Science</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+  <PageHeader active="home" />
 
   <a class="fade-in" href="/curriculum/"><img class="hero-img" src={scienceJpeg} alt="Science" width="100%" /></a>
 
@@ -37,6 +39,12 @@ const SUBJECTS = ['astronomy', 'biology', 'chemistry', 'physics', 'computing', '
       display: block;
       margin-top: 1em;
       border-radius: 8px;
+      transition: transform 0.5s cubic-bezier(.2,.8,.2,1), box-shadow 0.5s ease, filter 0.5s ease;
+    }
+    .fade-in:hover .hero-img {
+      transform: scale(1.01);
+      filter: brightness(1.02);
+      box-shadow: 0 5px 14px rgba(0,0,0,.06);
     }
     .curr-rows {
       margin: 2em 0;
@@ -111,18 +119,20 @@ const SUBJECTS = ['astronomy', 'biology', 'chemistry', 'physics', 'computing', '
     @media (max-width: 600px) {
       .curr-rows-row { flex-direction: column; align-items: stretch; }
       .curr-rows-subj { flex: none; text-align: center; }
-      .curr-rows-pdf { margin: 0 0.9em 0.55em; align-self: flex-start; }
+      .curr-rows-secs, .curr-rows-pdf { display: none; }
     }
   </style>
 
   <ul class="updates-list">
-    <li class="fade-in" data-subj="chem" style="animation-delay:0.05s"><span class="update-date">April 20th 2026</span> <span class="update-body"><a href="/research/projects/20260420%20UV-Vis%20Spectroscopy/">UV-Vis Spectroscopy of Everyday Fluorophores</a> <a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></span></li>
-    <li class="fade-in" data-subj="chem" style="animation-delay:0.10s"><span class="update-date">April 19th 2026</span> <span class="update-body"><a href="/research/projects/20260419%20IR%20Spectroscopy/">IR Spectroscopy of Everyday Materials</a> <a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></span></li>
-    <li class="fade-in" data-subj="chem" style="animation-delay:0.15s"><span class="update-date">April 11th 2026</span> <span class="update-body"><a href="/research/projects/20260411%20Centrifuge/">Centrifugation and pH of Everyday Liquids</a> <a class="chip chem" href="/curriculum/#chemistry">Chemistry</a> <a class="chip bio" href="/curriculum/#biology">Biology</a></span></li>
-    <li class="fade-in" data-subj="chem" style="animation-delay:0.20s"><span class="update-date">April 5th 2026</span> <span class="update-body"><a href="/research/projects/20260405%20Melting%20Point/">Melting Point of Everyday Compounds</a> <a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></span></li>
-    <li class="fade-in" data-subj="phys" style="animation-delay:0.25s"><span class="update-date">April 4th 2026</span> <span class="update-body"><a href="/research/projects/20260404%20Four%20Point%20Probe/">Four-Point Probe Sheet Resistance Measurements</a> <a class="chip phys" href="/curriculum/#physics">Physics</a></span></li>
-    <li class="fade-in" data-subj="bio" style="animation-delay:0.30s"><span class="update-date">March 31st 2026</span> <span class="update-body"><a href="/research/projects/20260401%20Genes%20in%20Space/">Meow to Mars — Will Space Help or Hurt Mi's Heart?</a> <a class="photo-icon" href="/olympiads/photos/ctyphysics.jpeg"><img src="/research/layouts/cat.svg" alt="Mi" style="height:0.9em;vertical-align:-0.12em;" /></a> <a class="chip bio" href="/curriculum/#biology">Biology</a></span></li>
-    <li class="fade-in" data-subj="math" style="animation-delay:0.35s"><span class="update-date">February 25th 2025</span> <span class="update-body"><a href="/research/projects/20250225%20Catfood/">Red or Green, What Colored Cat Food does Mi Prefer?</a> <a class="photo-icon" href="/olympiads/photos/ctyphysics.jpeg"><img src="/research/layouts/cat.svg" alt="Mi" style="height:0.9em;vertical-align:-0.12em;" /></a> <a class="chip math" href="/curriculum/#mathematics">Mathematics</a> <a class="chip comp" href="/curriculum/#computing">Computing</a></span></li>
+    <li class="fade-in" data-subj="chem" style="animation-delay:0.05s"><span class="update-date">April 27th 2026</span> <span class="update-body"><a href="/research/projects/20260427%20Liquid%20Chromatography/">Liquid Chromatography — Dry Run</a> <a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></span></li>
+    <li class="fade-in" data-subj="chem" style="animation-delay:0.10s"><span class="update-date">April 27th 2026</span> <span class="update-body"><a href="/research/projects/20260427%20Mass%20Spectrometry/">Mass Spectrometry — Dry Run</a> <a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></span></li>
+    <li class="fade-in" data-subj="chem" style="animation-delay:0.15s"><span class="update-date">April 20th 2026</span> <span class="update-body"><a href="/research/projects/20260420%20UV-Vis%20Spectroscopy/">UV-Vis Spectroscopy of Everyday Fluorophores</a> <a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></span></li>
+    <li class="fade-in" data-subj="chem" style="animation-delay:0.20s"><span class="update-date">April 19th 2026</span> <span class="update-body"><a href="/research/projects/20260419%20IR%20Spectroscopy/">IR Spectroscopy of Everyday Materials</a> <a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></span></li>
+    <li class="fade-in" data-subj="chem" style="animation-delay:0.25s"><span class="update-date">April 11th 2026</span> <span class="update-body"><a href="/research/projects/20260411%20Centrifuge/">Centrifugation and pH of Everyday Liquids</a> <a class="chip chem" href="/curriculum/#chemistry">Chemistry</a> <a class="chip bio" href="/curriculum/#biology">Biology</a></span></li>
+    <li class="fade-in" data-subj="chem" style="animation-delay:0.30s"><span class="update-date">April 5th 2026</span> <span class="update-body"><a href="/research/projects/20260405%20Melting%20Point/">Melting Point of Everyday Compounds</a> <a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></span></li>
+    <li class="fade-in" data-subj="phys" style="animation-delay:0.35s"><span class="update-date">April 4th 2026</span> <span class="update-body"><a href="/research/projects/20260404%20Four%20Point%20Probe/">Four-Point Probe Sheet Resistance Measurements</a> <a class="chip phys" href="/curriculum/#physics">Physics</a></span></li>
+    <li class="fade-in" data-subj="bio" style="animation-delay:0.40s"><span class="update-date">March 31st 2026</span> <span class="update-body"><a href="/research/projects/20260401%20Genes%20in%20Space/">Meow to Mars — Will Space Help or Hurt Mi's Heart?</a> <a class="photo-icon" href="/olympiads/photos/ctyphysics.jpeg"><img src="/research/layouts/cat.svg" alt="Mi" style="height:0.9em;vertical-align:-0.12em;" /></a> <a class="chip bio" href="/curriculum/#biology">Biology</a></span></li>
+    <li class="fade-in" data-subj="math" style="animation-delay:0.45s"><span class="update-date">February 25th 2025</span> <span class="update-body"><a href="/research/projects/20250225%20Catfood/">Red or Green, What Colored Cat Food does Mi Prefer?</a> <a class="photo-icon" href="/olympiads/photos/ctyphysics.jpeg"><img src="/research/layouts/cat.svg" alt="Mi" style="height:0.9em;vertical-align:-0.12em;" /></a> <a class="chip math" href="/curriculum/#mathematics">Mathematics</a> <a class="chip comp" href="/curriculum/#computing">Computing</a></span></li>
   </ul>
 
   <style is:global>
@@ -176,5 +186,10 @@ const SUBJECTS = ['astronomy', 'biology', 'chemistry', 'physics', 'computing', '
 
   <hr />
 
-  <div class="footer"><div class="footer-links" style="display: inline; gap: 0;"><a href="https://apps.apple.com/app/id6762091743">Apple</a> <span style="color: #8c959f;">Google</span></div><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+  <PageFooter active="home">
+    <div slot="lead" class="footer-links" style="display: inline; gap: 0;">
+      <a href="https://apps.apple.com/app/id6762091743">Apple</a>
+      <span style="color: #8c959f;">Google</span>
+    </div>
+  </PageFooter>
 </DefaultLayout>

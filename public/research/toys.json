@@ -9,37 +9,37 @@
       "technologies": [
         {
           "id": 1,
-          "technology": "Symbolic",
-          "description": "Exact answers in closed form",
-          "toys": [
-            {
-              "id": 1,
-              "toy": "Wolfram Alpha",
-              "specs": "Symbolic engine with built-in mathematical knowledge",
-              "available": 1,
-              "url": "https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb"
-            }
-          ]
-        },
-        {
-          "id": 2,
           "technology": "Numerical",
           "description": "Approximate answers at scale",
           "toys": [
             {
-              "id": 2,
+              "id": 1,
               "toy": "NumPy",
               "specs": "Array foundation — linear algebra and vectorized math",
               "available": 1,
               "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/"
             },
             {
-              "id": 3,
+              "id": 2,
               "toy": "SciPy",
               "specs": "Scientific routines — ODEs, optimizers and Fourier transforms",
               "available": 1,
               "completed": "20250225 Catfood",
               "project_url": "/research/projects/20250225%20Catfood/"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "technology": "Symbolic",
+          "description": "Exact answers in closed form",
+          "toys": [
+            {
+              "id": 3,
+              "toy": "Wolfram Alpha",
+              "specs": "Symbolic engine with built-in mathematical knowledge",
+              "available": 1,
+              "url": "https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb"
             }
           ]
         }
@@ -91,35 +91,35 @@
       "technologies": [
         {
           "id": 5,
-          "technology": "Machine Learning",
-          "description": "Learn patterns to predict",
-          "toys": [
-            {
-              "id": 6,
-              "toy": "scikit-learn",
-              "specs": "Classical models for tabular data — regression, classification, clustering",
-              "available": 1
-            },
-            {
-              "id": 7,
-              "toy": "PyTorch",
-              "specs": "Neural networks for images, text and signals — GPU-accelerated",
-              "available": 1
-            }
-          ]
-        },
-        {
-          "id": 6,
           "technology": "Statistics",
           "description": "Quantify uncertainty in claims",
           "toys": [
             {
-              "id": 8,
+              "id": 6,
               "toy": "SciPy",
               "specs": "Hypothesis tests, distributions and confidence intervals",
               "available": 1,
               "completed": "20250225 Catfood",
               "project_url": "/research/projects/20250225%20Catfood/"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "technology": "Machine Learning",
+          "description": "Learn patterns to predict",
+          "toys": [
+            {
+              "id": 7,
+              "toy": "scikit-learn",
+              "specs": "Classic models for training and prediction",
+              "available": 1
+            },
+            {
+              "id": 8,
+              "toy": "PyTorch",
+              "specs": "Neural networks for GPU-accelerated deep learning",
+              "available": 1
             }
           ]
         }
@@ -140,7 +140,7 @@
             {
               "id": 9,
               "toy": "GitHub",
-              "specs": "Git repos, pull requests and issue tracking",
+              "specs": "Data and source code repositories",
               "available": 1,
               "url": "https://github.com/vivianweidai"
             },
@@ -243,7 +243,9 @@
               "id": 18,
               "toy": "Multimeter",
               "specs": "Steady-state values — voltage, current and resistance",
-              "available": 0
+              "available": 1,
+              "completed": "20260404 Four Point Probe",
+              "project_url": "/research/projects/20260404%20Four%20Point%20Probe/"
             }
           ]
         },
@@ -321,14 +323,16 @@
               "toy": "GC-MS",
               "specs": "Volatile molecules — fragment fingerprints via electron ionization",
               "available": 1,
-              "url": "/research/archives/photos/chemistry-gc-ms.jpg"
+              "completed": "20260427 Mass Spectrometry",
+              "project_url": "/research/projects/20260427%20Mass%20Spectrometry/"
             },
             {
               "id": 26,
               "toy": "LC-MS",
               "specs": "Nonvolatile molecules — intact weight via electrospray",
               "available": 1,
-              "url": "/research/archives/photos/chemistry-lc-ms.jpg"
+              "completed": "20260427 Mass Spectrometry",
+              "project_url": "/research/projects/20260427%20Mass%20Spectrometry/"
             }
           ]
         }
@@ -339,49 +343,38 @@
       "science": "Chemistry",
       "science_slug": "chem",
       "topic": "Physical",
-      "description": "Separate, scatter and transform — non-spectroscopic characterization",
+      "description": "Separate and transform — non-spectroscopic characterization",
       "technologies": [
         {
           "id": 15,
           "technology": "Separation",
-          "description": "Pull mixtures apart — by phase partitioning or electric field",
+          "description": "Pull mixtures apart — by density or chemistry",
           "toys": [
             {
               "id": 27,
-              "toy": "Liquid Chromatography",
-              "specs": "Partition in solution — HPLC workhorse for analytical separations",
+              "toy": "Centrifugation",
+              "specs": "Spin samples — separate by density at high g-forces",
               "available": 1,
-              "url": "/research/archives/photos/chemistry-hplc.jpg"
+              "completed": "20260411 Centrifuge",
+              "project_url": "/research/projects/20260411%20Centrifuge/"
             },
             {
               "id": 28,
-              "toy": "Gel Electrophoresis",
-              "specs": "Migration in an electric field — DNA and protein size separation",
-              "available": 0
+              "toy": "Liquid Chromatography",
+              "specs": "Partition in solution — HPLC workhorse for analytical separations",
+              "available": 1,
+              "completed": "20260427 Liquid Chromatography",
+              "project_url": "/research/projects/20260427%20Liquid%20Chromatography/"
             }
           ]
         },
         {
           "id": 16,
-          "technology": "Diffraction",
-          "description": "Scatter X-rays off a crystal lattice — atomic-level structure",
-          "toys": [
-            {
-              "id": 29,
-              "toy": "X-Ray Diffraction",
-              "specs": "Phase identification — fingerprint crystalline materials by peak positions",
-              "available": 0,
-              "url": "/research/archives/photos/chemistry-xrd.jpg"
-            }
-          ]
-        },
-        {
-          "id": 17,
           "technology": "Thermal Analysis",
           "description": "Watch samples change with heat",
           "toys": [
             {
-              "id": 30,
+              "id": 29,
               "toy": "Thermogravimetry",
               "specs": "Mass loss with heating — decomposition and moisture",
               "available": 1,
@@ -389,7 +382,7 @@
               "project_url": "/research/projects/20260405%20Melting%20Point/"
             },
             {
-              "id": 31,
+              "id": 30,
               "toy": "Calorimetry",
               "specs": "Energy flow with heating — phase transitions and heat capacity",
               "available": 1,
@@ -408,12 +401,12 @@
       "description": "Read and write DNA and proteins",
       "technologies": [
         {
-          "id": 18,
+          "id": 17,
           "technology": "Amplification",
           "description": "Copy DNA for detection",
           "toys": [
             {
-              "id": 32,
+              "id": 31,
               "toy": "PCR",
               "specs": "Endpoint amplification — cycle temperature until enough copies exist",
               "available": 0,
@@ -421,7 +414,7 @@
               "project_url": "/research/projects/20260401%20Genes%20in%20Space/"
             },
             {
-              "id": 33,
+              "id": 32,
               "toy": "qPCR",
               "specs": "Real-time quantitation — count copies as they are made",
               "available": 0
@@ -429,18 +422,18 @@
           ]
         },
         {
-          "id": 19,
+          "id": 18,
           "technology": "Sequencing",
           "description": "Read the DNA code",
           "toys": [
             {
-              "id": 34,
+              "id": 33,
               "toy": "Short-Read",
               "specs": "Many short sequences in parallel — Illumina",
               "available": 0
             },
             {
-              "id": 35,
+              "id": 34,
               "toy": "Long-Read",
               "specs": "One long sequence end to end — Nanopore, PacBio",
               "available": 0
@@ -448,12 +441,12 @@
           ]
         },
         {
-          "id": 20,
+          "id": 19,
           "technology": "Expression",
           "description": "Make and see proteins",
           "toys": [
             {
-              "id": 36,
+              "id": 35,
               "toy": "Cell-Free",
               "specs": "Produce protein from DNA without living cells",
               "available": 0,
@@ -461,7 +454,7 @@
               "project_url": "/research/projects/20260401%20Genes%20in%20Space/"
             },
             {
-              "id": 37,
+              "id": 36,
               "toy": "Fluorescence",
               "specs": "Visualize protein glow under UV light",
               "available": 0,
@@ -480,18 +473,18 @@
       "description": "See and record living systems",
       "technologies": [
         {
-          "id": 21,
+          "id": 20,
           "technology": "Phenotyping",
           "description": "Sort and profile living cells",
           "toys": [
             {
-              "id": 38,
+              "id": 37,
               "toy": "Flow Cytometer",
               "specs": "Count and sort cells by fluorescent labels",
               "available": 0
             },
             {
-              "id": 39,
+              "id": 38,
               "toy": "Metabolic Analyzer",
               "specs": "Watch cells burn sugar and use oxygen in real time",
               "available": 0
@@ -499,18 +492,18 @@
           ]
         },
         {
-          "id": 22,
+          "id": 21,
           "technology": "Microscopy",
           "description": "Image cells at every scale",
           "toys": [
             {
-              "id": 40,
+              "id": 39,
               "toy": "Confocal",
               "specs": "Photons — sharp 3D optical images of cells and tissue",
               "available": 0
             },
             {
-              "id": 41,
+              "id": 40,
               "toy": "SEM",
               "specs": "Electrons — surface topography at nanometer resolution",
               "available": 0
@@ -518,18 +511,18 @@
           ]
         },
         {
-          "id": 23,
+          "id": 22,
           "technology": "Systems Imaging",
           "description": "Record brain activity",
           "toys": [
             {
-              "id": 42,
+              "id": 41,
               "toy": "EEG",
               "specs": "Scalp electrodes — millisecond electrical activity",
               "available": 0
             },
             {
-              "id": 43,
+              "id": 42,
               "toy": "fNIRS",
               "specs": "Near-infrared light — cortical blood flow",
               "available": 0
@@ -546,18 +539,18 @@
       "description": "Where the light comes from — capture photons across the spectrum",
       "technologies": [
         {
-          "id": 24,
+          "id": 23,
           "technology": "Visible",
           "description": "Optical wavelengths from backyards to mountaintop observatories",
           "toys": [
             {
-              "id": 44,
+              "id": 43,
               "toy": "Household",
               "specs": "Amateur reflector with motorized mount and CCD",
               "available": 1
             },
             {
-              "id": 45,
+              "id": 44,
               "toy": "Earth",
               "specs": "Meter-class ground telescope at a dark site",
               "available": 0,
@@ -566,18 +559,18 @@
           ]
         },
         {
-          "id": 25,
+          "id": 24,
           "technology": "Invisible",
           "description": "Wavelengths outside the visible — radio through X-ray",
           "toys": [
             {
-              "id": 46,
+              "id": 45,
               "toy": "Radio",
               "specs": "Many dishes synthesized into one high-resolution image",
               "available": 0
             },
             {
-              "id": 47,
+              "id": 46,
               "toy": "Space",
               "specs": "Above the atmosphere — UV, infrared and X-ray wavelengths blocked by air",
               "available": 0
@@ -594,24 +587,24 @@
       "description": "What the light tells you — extract measurements and classify sources",
       "technologies": [
         {
-          "id": 26,
+          "id": 25,
           "technology": "Analysis",
           "description": "Extract measurements from raw images",
           "toys": [
             {
-              "id": 48,
+              "id": 47,
               "toy": "Photometry",
               "specs": "How bright — light curves reveal variability, transits and distance",
               "available": 0
             },
             {
-              "id": 49,
+              "id": 48,
               "toy": "Astrometry",
               "specs": "Where — positions and proper motions reveal parallax and orbits",
               "available": 0
             },
             {
-              "id": 50,
+              "id": 49,
               "toy": "Spectroscopy",
               "specs": "What — wavelengths reveal composition, temperature and radial velocity",
               "available": 0,
@@ -620,18 +613,18 @@
           ]
         },
         {
-          "id": 27,
+          "id": 26,
           "technology": "Classification",
           "description": "Label sources with machine learning",
           "toys": [
             {
-              "id": 51,
+              "id": 50,
               "toy": "Transient",
               "specs": "Classical ML on light curves — supernovae, variable stars",
               "available": 0
             },
             {
-              "id": 52,
+              "id": 51,
               "toy": "Galaxy Morphology",
               "specs": "Deep CNN on galaxy images — spirals, ellipticals, mergers",
               "available": 0

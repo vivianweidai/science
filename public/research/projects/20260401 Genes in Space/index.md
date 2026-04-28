@@ -2,7 +2,6 @@
 project: Genes in Space
 ---
 
-<div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
 <div class="project-title"><h1>Meow to Mars — Will Space Help or Hurt Mi's Heart? <a class="photo-icon" href="/olympiads/photos/ctyphysics.jpeg"><img src="/research/layouts/cat.svg" alt="Mi" style="height:0.85em;vertical-align:-0.12em;"></a></h1><a class="chip bio" href="/curriculum/#biology">Biology</a></div>
 
@@ -35,6 +34,8 @@ Microgravity differentially reduces MYBPC3 gene expression in mutant versus wild
 
 Cardiomyocyte cultures carrying both wild-type and known mutant MYBPC3 variants are prepared on Earth. Identical sample sets are sent to the ISS and processed in parallel on the ground as controls. On the ISS, mRNA transcripts of MYBPC3 are amplified using the **miniPCR Thermal Cycler** and detected with the **P51 Fluorescence Viewer**, comparing band intensity between ISS and Earth samples. The **BioBits Cell Free System** is used to express cMyBP-C protein from the amplified cDNA, testing whether microgravity affects protein translation as well as transcription.
 
+See the <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260401%20Genes%20in%20Space/output/20260331%20Genes%20in%20Space.pdf" rel="noopener">proposal document</a> and <a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260401%20Genes%20in%20Space/papers" rel="noopener">reference literature</a>.
+
 ## References
 
 1. Granstrom, S. et al. (2011). Prevalence of hypertrophic cardiomyopathy in a cohort of British Shorthair cats in Denmark. *J Vet Intern Med*, 25(4), 866-871. [doi:10.1111/j.1939-1676.2011.0751.x](https://doi.org/10.1111/j.1939-1676.2011.0751.x)
@@ -42,6 +43,15 @@ Cardiomyocyte cultures carrying both wild-type and known mutant MYBPC3 variants 
 3. Carrier, L. et al. (2015). Cardiac myosin-binding protein C (MYBPC3) in cardiac pathophysiology. *Gene*, 573(2), 188-197. [doi:10.1016/j.gene.2015.09.008](https://doi.org/10.1016/j.gene.2015.09.008)
 4. Sy, M. R. et al. (2023). Cardiac function, structural, and electrical remodeling by microgravity exposure. *Am J Physiol Heart Circ Physiol*, 324(1), H1-H13. [doi:10.1152/ajpheart.00611.2022](https://doi.org/10.1152/ajpheart.00611.2022)
 
-## Data
+<h2 id="extensions">Extensions</h2>
 
-See the <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260401%20Genes%20in%20Space/output/20260331%20Genes%20in%20Space.pdf" rel="noopener">proposal document</a> and <a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260401%20Genes%20in%20Space/papers" rel="noopener">reference literature</a>.
+<div class="instrument-table no-highlight">
+
+| Technique | Extension | Description |
+|-----------|-----------|-------------|
+| Reverse Transcription | Sample prep | mRNA → cDNA so PCR reads expression, not copy number |
+| Gel Electrophoresis | Visualization | Size PCR products on agarose — visual band check |
+| Western Blot | Protein detection | Antibody probe of expressed protein — protein-level readout |
+| CRISPR-Cas9 | Variant engineering | Engineer specific mutations rather than rely on natural variants |
+
+</div>

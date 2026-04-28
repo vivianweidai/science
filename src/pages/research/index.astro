@@ -1,8 +1,10 @@
 ---
 import DefaultLayout from '../../layouts/Default.astro';
+import PageHeader from '../../layouts/PageHeader.astro';
+import PageFooter from '../../layouts/PageFooter.astro';
 ---
 <DefaultLayout title="Research">
-  <div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a class="active" href="/research/">Research</a></div></div>
+  <PageHeader active="research" />
 
   <div class="tabs subject-tabs" id="toys-tabs">
     <input type="radio" name="toys-view" id="toys-all" />
@@ -57,7 +59,11 @@ import DefaultLayout from '../../layouts/Default.astro';
       var html = '';
       filtered.forEach(function (topic, i) {
         var delay = (i * 0.06).toFixed(2);
-        html += '<div class="toys-card fade-in toys-accent-' + topic.science_slug + '" style="animation-delay:' + delay + 's">';
+        // Outer wrapper holds the hover hit-region; inner card is what translates.
+        // Wrapper's bottom/right padding catches the cursor when the card lifts up-and-left,
+        // so the :hover state doesn't drop and re-fire (the bug we hit before).
+        html += '<div class="toys-card-wrap fade-in" style="animation-delay:' + delay + 's">';
+        html += '<div class="toys-card toys-accent-' + topic.science_slug + '">';
         html += '<div class="toys-card-header">'
           + '<span class="toys-topic-title">' + esc(topic.topic)
           + ' <a class="chip ' + topic.science_slug + '" href="/curriculum/#' + topic.science.toLowerCase() + '">' + topic.science + '</a></span>'
@@ -114,7 +120,7 @@ import DefaultLayout from '../../layouts/Default.astro';
           });
         });
 
-        html += '</tbody></table></div>';
+        html += '</tbody></table></div></div>';
       });
 
       document.getElementById('toys-content').innerHTML = html;
@@ -138,25 +144,32 @@ import DefaultLayout from '../../layouts/Default.astro';
   </script>
 
   <style is:global>
+    /* Hover hit-region wrapper. Adds 2px of padding on the bottom and right
+       so when the card translates up-and-left on hover, the cursor stays
+       inside the wrapper's :hover region. */
+    .toys-card-wrap {
+      margin: 1em 0;
+      padding: 0 2px 2px 0;
+    }
     .toys-card {
       border: 1px solid #d1d9e0;
       border-left: 4px solid #d1d9e0;
       border-radius: 8px;
-      margin: 1em 0;
       overflow: hidden;
       background: #fff;
       transition: transform 0.2s ease-out, box-shadow 0.18s ease;
     }
-    .toys-card:hover {
+    .toys-card-wrap:hover .toys-card {
       transform: translate(-2px, -2px);
-      box-shadow: 0 4px 14px rgba(0,0,0,.06);
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
     }
-    .toys-accent-math  { border-left-color: #6ba3e8; }
-    .toys-accent-comp  { border-left-color: #9b7ed8; }
-    .toys-accent-phys  { border-left-color: #e8915a; }
-    .toys-accent-chem  { border-left-color: #8db849; }
-    .toys-accent-bio   { border-left-color: #5bbfb0; }
-    .toys-accent-astro { border-left-color: #e86088; }
+    .toys-card { --card-tint: #d1d9e0; }
+    .toys-accent-math  { border-left-color: #6ba3e8; --card-tint: var(--subj-math); }
+    .toys-accent-comp  { border-left-color: #9b7ed8; --card-tint: var(--subj-comp); }
+    .toys-accent-phys  { border-left-color: #e8915a; --card-tint: var(--subj-phys); }
+    .toys-accent-chem  { border-left-color: #8db849; --card-tint: var(--subj-chem); }
+    .toys-accent-bio   { border-left-color: #5bbfb0; --card-tint: var(--subj-bio); }
+    .toys-accent-astro { border-left-color: #e86088; --card-tint: var(--subj-astro); }
 
     .toys-card-header {
       font-weight: 700;
@@ -184,7 +197,17 @@ import DefaultLayout from '../../layouts/Default.astro';
       color: #1f2328;
       -webkit-text-fill-color: #1f2328;
     }
-    .toys-card-header:hover { background: #eef1f4; }
+    .toys-card-header { transition: background 0.18s ease; }
+    .toys-card:hover .toys-card-header {
+      background: var(--card-tint);
+    }
+    .toys-card .toys-card-header:hover {
+      background: color-mix(in srgb, var(--card-tint), #1f2328 8%);
+    }
+    .toys-card:hover .toys-card-header .chip {
+      background: #1f2328;
+      color: var(--card-tint);
+    }
 
     .toys-table {
       width: 100%;
@@ -254,15 +277,15 @@ import DefaultLayout from '../../layouts/Default.astro';
 
     @media (max-width: 600px) {
       .tabs .tab-labels label { padding: 0.45em 0.7em; font-size: 0.8em; }
-      .toys-card-header { padding-left: .7em; }
+      .toys-card-header { padding-left: .8rem; }
       .toys-topic-desc { display: none; }
       .toys-table { table-layout: auto; }
       .toys-table colgroup { display: none; }
-      .toys-table td { display: block; padding: .2em .7em; }
-      .toys-tech-row td { display: block; padding: .7em !important; font-size: 1em; }
+      .toys-table td { display: block; padding: .2em .8rem; }
+      .toys-tech-row td { display: block; padding: .7em .8rem !important; font-size: 1em; }
       .toys-tech-desc { display: none !important; }
-      .toys-toy-row td:first-child { padding: .4em .7em 0 .7em !important; }
-      .toys-toy-specs { padding: 0 .7em .4em .7em; font-size: .88em; color: #656d76; }
+      .toys-toy-row td:first-child { padding: .4em .8rem 0 .8rem !important; }
+      .toys-toy-specs { padding: 0 .8rem .4em .8rem; font-size: .88em; color: #656d76; }
       .toys-toy-access { display: none !important; height: 0; padding: 0 !important; margin: 0; overflow: hidden; }
       tr.toys-toy-row { border-bottom: 1px solid #f0f0f0; }
       tr.toys-toy-row:last-child { border-bottom: none; }
@@ -279,5 +302,5 @@ import DefaultLayout from '../../layouts/Default.astro';
 
   <hr />
 
-  <div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a class="active" href="/research/">Research</a></div></div>
+  <PageFooter active="research" />
 </DefaultLayout>

@@ -3,6 +3,8 @@ import './base.css';
 import './tabs.css';
 import faviconSvg from './favicon.svg?url';
 import photoPreviewJs from './photo-preview.js?url';
+import PageHeader from './PageHeader.astro';
+import PageFooter from './PageFooter.astro';
 
 interface ProjectLink {
   url: string;
@@ -150,6 +152,8 @@ const {
   </style>
 </head>
 <body>
+  <PageHeader title="Research" />
+
   {newer && older && (
     <nav class="project-nav project-nav-top">
       <a href={newer.url}>← {newer.title}</a>
@@ -168,14 +172,7 @@ const {
     </nav>
   )}
 
-  <div class="footer">
-    <a class="footer-github" href="/">Science</a>
-    <div class="footer-nav">
-      <a href="/curriculum/">Curriculum</a>
-      <a href="/olympiads/">Olympiads</a>
-      <a href="/research/">Research</a>
-    </div>
-  </div>
+  <PageFooter />
 
   <script>
     // Move project-nav-top below page-header on hydration so the back/forward

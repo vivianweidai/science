@@ -427,9 +427,13 @@
           if (i + span < dataRows.length) {
             cell.classList.add('curr-group-cell');
           }
-          for (var k = i + 1; k < i + span; k++) {
-            var hidden = dataRows[k].querySelector('td');
-            hidden.style.display = 'none';
+          for (var k = i; k < i + span; k++) {
+            var row = dataRows[k];
+            if (k > i) row.querySelector('td').style.display = 'none';
+            (function (groupCell) {
+              row.addEventListener('mouseenter', function () { groupCell.classList.add('curr-group-hover'); });
+              row.addEventListener('mouseleave', function () { groupCell.classList.remove('curr-group-hover'); });
+            })(cell);
           }
         }
         i += span;

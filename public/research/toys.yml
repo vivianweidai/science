@@ -1,5 +1,5 @@
 # Toys (scientific instruments & technologies) — single source of truth.
-# Run `python archives/layout/build_toys.py` after edits to regenerate JSON.
+# Run `python pipeline/scripts/build_toys.py` after edits to regenerate JSON.
 #
 # Three-level schema:
 #   science:      Biology | Chemistry | Physics | Computing |        (required)
@@ -24,13 +24,6 @@
   topic: Compute
   description: Compute the answer — algebra, integrals and linear systems
   technologies:
-    - technology: Symbolic
-      description: Exact answers in closed form
-      toys:
-        - toy: Wolfram Alpha
-          specs: Symbolic engine with built-in mathematical knowledge
-          available: true
-          url: https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb
     - technology: Numerical
       description: Approximate answers at scale
       toys:
@@ -42,6 +35,13 @@
           specs: Scientific routines — ODEs, optimizers and Fourier transforms
           available: true
           completed: "20250225 Catfood"
+    - technology: Symbolic
+      description: Exact answers in closed form
+      toys:
+        - toy: Wolfram Alpha
+          specs: Symbolic engine with built-in mathematical knowledge
+          available: true
+          url: https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb
 
 - science: Mathematics
   topic: Communicate
@@ -70,15 +70,6 @@
   topic: Analyze
   description: Analyze the data — find patterns and test claims
   technologies:
-    - technology: Machine Learning
-      description: Learn patterns to predict
-      toys:
-        - toy: scikit-learn
-          specs: Classical models for tabular data — regression, classification, clustering
-          available: true
-        - toy: PyTorch
-          specs: Neural networks for images, text and signals — GPU-accelerated
-          available: true
     - technology: Statistics
       description: Quantify uncertainty in claims
       toys:
@@ -86,6 +77,15 @@
           specs: Hypothesis tests, distributions and confidence intervals
           available: true
           completed: "20250225 Catfood"
+    - technology: Machine Learning
+      description: Learn patterns to predict
+      toys:
+        - toy: scikit-learn
+          specs: Classic models for training and prediction
+          available: true
+        - toy: PyTorch
+          specs: Neural networks for GPU-accelerated deep learning
+          available: true
 
 - science: Computing
   topic: Publish
@@ -95,7 +95,7 @@
       description: Where code and notebooks live
       toys:
         - toy: GitHub
-          specs: Git repos, pull requests and issue tracking
+          specs: Data and source code repositories
           available: true
           url: https://github.com/vivianweidai
         - toy: Jupyter
@@ -145,6 +145,8 @@
           specs: Time-varying signals — waveforms and transients
         - toy: Multimeter
           specs: Steady-state values — voltage, current and resistance
+          available: true
+          completed: "20260404 Four Point Probe"
     - technology: Optics
       description: Electromagnetic radiation, visible and beyond
       toys:
@@ -183,30 +185,26 @@
         - toy: GC-MS
           specs: Volatile molecules — fragment fingerprints via electron ionization
           available: true
-          url: /research/archives/photos/chemistry-gc-ms.jpg
+          completed: "20260427 Mass Spectrometry"
         - toy: LC-MS
           specs: Nonvolatile molecules — intact weight via electrospray
           available: true
-          url: /research/archives/photos/chemistry-lc-ms.jpg
+          completed: "20260427 Mass Spectrometry"
 - science: Chemistry
   topic: Physical
-  description: Separate, scatter and transform — non-spectroscopic characterization
+  description: Separate and transform — non-spectroscopic characterization
   technologies:
     - technology: Separation
-      description: Pull mixtures apart — by phase partitioning or electric field
+      description: Pull mixtures apart — by density or chemistry
       toys:
+        - toy: Centrifugation
+          specs: Spin samples — separate by density at high g-forces
+          available: true
+          completed: "20260411 Centrifuge"
         - toy: Liquid Chromatography
           specs: Partition in solution — HPLC workhorse for analytical separations
           available: true
-          url: /research/archives/photos/chemistry-hplc.jpg
-        - toy: Gel Electrophoresis
-          specs: Migration in an electric field — DNA and protein size separation
-    - technology: Diffraction
-      description: Scatter X-rays off a crystal lattice — atomic-level structure
-      toys:
-        - toy: X-Ray Diffraction
-          specs: Phase identification — fingerprint crystalline materials by peak positions
-          url: /research/archives/photos/chemistry-xrd.jpg
+          completed: "20260427 Liquid Chromatography"
     - technology: Thermal Analysis
       description: Watch samples change with heat
       toys:

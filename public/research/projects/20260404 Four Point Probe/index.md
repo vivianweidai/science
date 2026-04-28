@@ -2,7 +2,6 @@
 project: Four-Point Probe
 ---
 
-<div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
 <div class="project-title"><h1>Four-Point Probe Sheet Resistance Measurements</h1><a class="chip phys" href="/curriculum/#physics">Physics</a></div>
 

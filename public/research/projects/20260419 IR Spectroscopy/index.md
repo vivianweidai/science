@@ -2,7 +2,6 @@
 project: IR Spectroscopy
 ---
 
-<div class="page-header"><h2>Research</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
 
 <div class="project-title"><h1>IR Spectroscopy of Everyday Materials</h1><a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></div>
 

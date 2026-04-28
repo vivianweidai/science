@@ -1,8 +1,10 @@
 ---
 import DefaultLayout from '../../layouts/Default.astro';
+import PageHeader from '../../layouts/PageHeader.astro';
+import PageFooter from '../../layouts/PageFooter.astro';
 ---
 <DefaultLayout title="Olympiads">
-  <div class="page-header"><h2>Olympiads</h2><div class="header-nav"><a href="/curriculum/">Curriculum</a><a class="active" href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+  <PageHeader active="olympiads" />
 
   <div class="tabs subject-tabs">
     <input type="radio" name="view" id="view-all" />
@@ -67,6 +69,12 @@ import DefaultLayout from '../../layouts/Default.astro';
       vertical-align: middle;
       cursor: default;
     }
+    .status-emoji .glyph,
+    .photo-icon .glyph {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+    }
     .timeline .photo-icon { cursor: default; }
     .status-emoji-competitive { transform-origin: center 80%; }
     .status-emoji-competitive:hover,
@@ -80,34 +88,7 @@ import DefaultLayout from '../../layouts/Default.astro';
       100% { transform: rotate(0); }
     }
     .status-emoji-invited { position: relative; }
-    .status-emoji-invited .invited-glyph {
-      display: inline-block;
-      position: relative;
-      overflow: hidden;
-    }
-    .status-emoji-invited::before,
-    .status-emoji-invited::after {
-      content: '✨';
-      position: absolute;
-      font-size: 0.55em;
-      opacity: 0;
-      pointer-events: none;
-    }
-    .status-emoji-invited::before { top: -0.55em; left: -0.45em; }
-    .status-emoji-invited::after  { bottom: -0.5em; right: -0.45em; }
-    .status-emoji-invited:hover::before,
-    .timeline .entry:hover .status-emoji-invited::before {
-      animation: status-twinkle 0.9s ease-in-out;
-    }
-    .status-emoji-invited:hover::after,
-    .timeline .entry:hover .status-emoji-invited::after {
-      animation: status-twinkle 0.9s ease-in-out 0.45s;
-    }
-    @keyframes status-twinkle {
-      0%, 100% { opacity: 0; transform: scale(0.4) rotate(0deg); }
-      50%      { opacity: 1; transform: scale(1.1) rotate(20deg); }
-    }
-    .status-emoji-invited .invited-glyph::after {
+    .status-emoji-invited .glyph::after {
       content: '';
       position: absolute;
       inset: 0;
@@ -116,8 +97,8 @@ import DefaultLayout from '../../layouts/Default.astro';
       pointer-events: none;
       mix-blend-mode: screen;
     }
-    .status-emoji-invited:hover .invited-glyph::after,
-    .timeline .entry:hover .status-emoji-invited .invited-glyph::after {
+    .status-emoji-invited:hover .glyph::after,
+    .timeline .entry:hover .status-emoji-invited .glyph::after {
       animation: status-shimmer 1.0s ease-in-out;
     }
     @keyframes status-shimmer {
@@ -185,7 +166,7 @@ import DefaultLayout from '../../layouts/Default.astro';
     .timeline .entry:hover::after { opacity: 1; }
     .timeline .entry { transition: background 0.15s ease; }
     .timeline .entry:nth-child(even of .entry) { background: #f6f8fa; }
-    .timeline .entry:hover { background: #eef1f4; }
+    .timeline .entry:hover { background: #eef1f4 !important; }
 
     .chip {
       display: inline-block;
@@ -209,7 +190,7 @@ import DefaultLayout from '../../layouts/Default.astro';
     .type-icon { font-size: .85em; }
     .rings-icon { vertical-align: middle; }
     a.photo-icon, a.photo-icon:hover { color: inherit; text-decoration: none; }
-    .photo-icon { font-size: .8em; margin-left: .3em; position: relative; vertical-align: middle; }
+    .photo-icon { font-size: .8em; margin-left: .3em; position: relative; display: inline-block; vertical-align: middle; overflow: hidden; }
 
     .legend { font-size: .82em; color: #656d76; margin: .3em 0 1em; line-height: 2; }
     .legend .chip { margin-right: .3em; }
@@ -220,7 +201,7 @@ import DefaultLayout from '../../layouts/Default.astro';
         display: flex;
         flex-direction: column;
         gap: .15em;
-        padding: .5em 0;
+        padding: .5em .7em;
       }
       .timeline .entry .top-line {
         display: flex;
@@ -296,7 +277,7 @@ import DefaultLayout from '../../layouts/Default.astro';
             + '<div class="type-cell">' + icon + '</div>'
             + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
             + '</div>'
-            + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="status-emoji status-emoji-invited"><span class="invited-glyph">🎟️</span></span>' : '') + (e.borderline ? ' <span class="status-emoji status-emoji-competitive">🎯</span>' : '') + (e.competitive ? ' <span class="status-emoji status-emoji-competitive">🎯</span>' : '') + (e.photo_url ? ' <a class="photo-icon" href="' + e.photo_url + '" title="View photo">📷</a>' : '') + '</div>'
+            + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="status-emoji status-emoji-invited"><span class="glyph">🎟️</span></span>' : '') + (e.borderline ? ' <span class="status-emoji status-emoji-competitive"><span class="glyph">🎯</span></span>' : '') + (e.competitive ? ' <span class="status-emoji status-emoji-competitive"><span class="glyph">🎯</span></span>' : '') + (e.photo_url ? ' <a class="photo-icon" href="' + e.photo_url + '" title="View photo"><span class="glyph">📷</span></a>' : '') + '</div>'
             + (e.highlighted ? '<span class="foundation-badge">FOUNDATION</span>' : '')
             + '</div>';
         });
@@ -327,5 +308,5 @@ import DefaultLayout from '../../layouts/Default.astro';
 
   <hr />
 
-  <div class="footer"><a class="footer-github" href="/">Science</a><div class="footer-nav"><a href="/curriculum/">Curriculum</a><a class="active" href="/olympiads/">Olympiads</a><a href="/research/">Research</a></div></div>
+  <PageFooter active="olympiads" />
 </DefaultLayout>

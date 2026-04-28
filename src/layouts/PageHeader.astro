@@ -1,0 +1,39 @@
+---
+type Section = 'home' | 'curriculum' | 'olympiads' | 'research';
+
+interface Props {
+  // Marks one nav link as active. Omit on sub-pages (like a project page)
+  // where the section nav link should still navigate, not scroll-to-top.
+  active?: Section;
+  // Explicit H2 text. Defaults to the active section's label, or "Science".
+  title?: string;
+}
+
+const { active, title } = Astro.props;
+
+// On the home page itself, the H2 already says "Science" — skip the duplicate
+// nav entry. On every other page, the "Science" link is the way back home.
+const allLinks: Array<{ id: Section; href: string; label: string }> = [
+  { id: 'home',       href: '/',            label: 'Science' },
+  { id: 'curriculum', href: '/curriculum/', label: 'Curriculum' },
+  { id: 'olympiads',  href: '/olympiads/',  label: 'Olympiads' },
+  { id: 'research',   href: '/research/',   label: 'Research' },
+];
+const links = active === 'home' ? allLinks.filter((l) => l.id !== 'home') : allLinks;
+
+const titles: Record<Section, string> = {
+  home: 'Science',
+  curriculum: 'Curriculum',
+  olympiads: 'Olympiads',
+  research: 'Research',
+};
+const heading = title ?? (active ? titles[active] : 'Science');
+---
+<div class="page-header">
+  <h2>{heading}</h2>
+  <div class="header-nav">
+    {links.map((l) => (
+      <a class={l.id === active ? 'active' : ''} href={l.href} data-nav={l.id}>{l.label}</a>
+    ))}
+  </div>
+</div>

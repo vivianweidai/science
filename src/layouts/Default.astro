@@ -66,7 +66,6 @@ const { title = 'Vivian Dai', htmlLang = 'en' } = Astro.props;
     }
     @media (max-width: 600px) {
       .footer .footer-links { display: none; }
-      .page-header .header-nav { display: none; }
     }
     .footer .footer-links a.inactive {
       color: #8c959f;
@@ -95,6 +94,7 @@ const { title = 'Vivian Dai', htmlLang = 'en' } = Astro.props;
         requestAnimationFrame(() => window.scrollTo(0, y));
       });
     });
+
   </script>
 </body>
 </html>
