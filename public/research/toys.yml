@@ -213,11 +213,11 @@
         - toy: Thermogravimetry
           specs: Mass loss with heating — decomposition and moisture
           available: true
-          url: /research/projects/20260405%20Melting%20Point/
+          completed: "20260405 Melting Point"
         - toy: Calorimetry
           specs: Energy flow with heating — phase transitions and heat capacity
           available: true
-          url: /research/projects/20260405%20Melting%20Point/
+          completed: "20260405 Melting Point"
 
 # ═══════════════════════════════════════════════════════════════
 # BIOLOGY

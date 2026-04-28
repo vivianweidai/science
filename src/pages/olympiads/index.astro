@@ -49,7 +49,7 @@ import DefaultLayout from '../../layouts/Default.astro';
       display: grid;
       grid-template-columns: 6.5em 1.8em auto 1fr;
       gap: 0 .5em;
-      padding: .35em 0;
+      padding: .35em .6em;
       position: relative;
       font-size: .95em;
       align-items: first baseline;
@@ -63,13 +63,14 @@ import DefaultLayout from '../../layouts/Default.astro';
       font-size: 1em;
       margin-left: .3em;
       position: relative;
-      top: -.05em;
       display: inline-block;
+      vertical-align: middle;
       cursor: default;
     }
     .timeline .photo-icon { cursor: default; }
     .status-emoji-competitive { transform-origin: center 80%; }
-    .status-emoji-competitive:hover { animation: status-wiggle 0.55s ease; }
+    .status-emoji-competitive:hover,
+    .timeline .entry:hover .status-emoji-competitive { animation: status-wiggle 0.55s ease; }
     @keyframes status-wiggle {
       0%   { transform: rotate(0); }
       20%  { transform: rotate(-15deg); }
@@ -78,10 +79,90 @@ import DefaultLayout from '../../layouts/Default.astro';
       80%  { transform: rotate(5deg); }
       100% { transform: rotate(0); }
     }
-    .status-emoji-invited { transition: transform 0.6s ease; }
-    .status-emoji-invited:hover { transform: rotate(360deg) scale(1.15); }
-    .timeline .entry.hl { position: relative; }
-    .timeline .entry.hl::before { content: ''; position: absolute; inset: -.1em -.4em; background: #fff44f; border-radius: 6px; z-index: -1; }
+    .status-emoji-invited { position: relative; }
+    .status-emoji-invited .invited-glyph {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+    }
+    .status-emoji-invited::before,
+    .status-emoji-invited::after {
+      content: '✨';
+      position: absolute;
+      font-size: 0.55em;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .status-emoji-invited::before { top: -0.55em; left: -0.45em; }
+    .status-emoji-invited::after  { bottom: -0.5em; right: -0.45em; }
+    .status-emoji-invited:hover::before,
+    .timeline .entry:hover .status-emoji-invited::before {
+      animation: status-twinkle 0.9s ease-in-out;
+    }
+    .status-emoji-invited:hover::after,
+    .timeline .entry:hover .status-emoji-invited::after {
+      animation: status-twinkle 0.9s ease-in-out 0.45s;
+    }
+    @keyframes status-twinkle {
+      0%, 100% { opacity: 0; transform: scale(0.4) rotate(0deg); }
+      50%      { opacity: 1; transform: scale(1.1) rotate(20deg); }
+    }
+    .status-emoji-invited .invited-glyph::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(115deg, transparent 35%, rgba(255,255,255,0.85) 50%, transparent 65%);
+      transform: translateX(-120%);
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+    .status-emoji-invited:hover .invited-glyph::after,
+    .timeline .entry:hover .status-emoji-invited .invited-glyph::after {
+      animation: status-shimmer 1.0s ease-in-out;
+    }
+    @keyframes status-shimmer {
+      from { transform: translateX(-120%); }
+      to   { transform: translateX(120%); }
+    }
+    .timeline .entry.hl { position: relative; isolation: isolate; }
+    .timeline .entry.hl::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: #fff44f;
+      background-image: linear-gradient(100deg, transparent 0%, rgba(255,255,255,0.7) 50%, transparent 100%);
+      background-size: 50% 100%;
+      background-repeat: no-repeat;
+      background-position: -100% 0;
+      z-index: -1;
+    }
+    .timeline .entry.hl:hover::before { animation: hl-ripple 1.0s ease-out; }
+    @keyframes hl-ripple {
+      from { background-position: -60% 0; }
+      to   { background-position: 200% 0; }
+    }
+    .foundation-badge {
+      position: absolute;
+      right: 0.6em;
+      top: 50%;
+      font-size: 0.6em;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      background: #1f2328;
+      color: #fff44f;
+      padding: 0.25em 0.55em;
+      border-radius: 3px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-0.5em, -50%);
+    }
+    .timeline .entry.hl:hover .foundation-badge { animation: foundation-flash 1.0s ease-out; }
+    @keyframes foundation-flash {
+      0%   { opacity: 0; transform: translate(-0.5em, -50%); }
+      20%  { opacity: 1; transform: translate(0, -50%); }
+      70%  { opacity: 1; transform: translate(0, -50%); }
+      100% { opacity: 0; transform: translate(0.5em, -50%); }
+    }
     /* Hover: paint the section of the timeline bar in the entry's primary subject color. */
     .timeline .entry { --bar-color: transparent; }
     .timeline .entry:has(.chip:first-child.math)  { --bar-color: var(--subj-math); }
@@ -128,7 +209,7 @@ import DefaultLayout from '../../layouts/Default.astro';
     .type-icon { font-size: .85em; }
     .rings-icon { vertical-align: middle; }
     a.photo-icon, a.photo-icon:hover { color: inherit; text-decoration: none; }
-    .photo-icon { font-size: .8em; margin-left: .3em; position: relative; top: -.1em; }
+    .photo-icon { font-size: .8em; margin-left: .3em; position: relative; vertical-align: middle; }
 
     .legend { font-size: .82em; color: #656d76; margin: .3em 0 1em; line-height: 2; }
     .legend .chip { margin-right: .3em; }
@@ -215,7 +296,8 @@ import DefaultLayout from '../../layouts/Default.astro';
             + '<div class="type-cell">' + icon + '</div>'
             + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
             + '</div>'
-            + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="status-emoji status-emoji-invited">🎟️</span>' : '') + (e.borderline ? ' <span class="status-emoji status-emoji-competitive">🎯</span>' : '') + (e.competitive ? ' <span class="status-emoji status-emoji-competitive">🎯</span>' : '') + (e.photo_url ? ' <a class="photo-icon" href="' + e.photo_url + '" title="View photo">📷</a>' : '') + '</div>'
+            + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="status-emoji status-emoji-invited"><span class="invited-glyph">🎟️</span></span>' : '') + (e.borderline ? ' <span class="status-emoji status-emoji-competitive">🎯</span>' : '') + (e.competitive ? ' <span class="status-emoji status-emoji-competitive">🎯</span>' : '') + (e.photo_url ? ' <a class="photo-icon" href="' + e.photo_url + '" title="View photo">📷</a>' : '') + '</div>'
+            + (e.highlighted ? '<span class="foundation-badge">FOUNDATION</span>' : '')
             + '</div>';
         });
       });

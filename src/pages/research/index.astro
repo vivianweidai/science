@@ -145,10 +145,10 @@ import DefaultLayout from '../../layouts/Default.astro';
       margin: 1em 0;
       overflow: hidden;
       background: #fff;
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      transition: transform 0.2s ease-out, box-shadow 0.18s ease;
     }
     .toys-card:hover {
-      transform: translateY(-1px);
+      transform: translate(-2px, -2px);
       box-shadow: 0 4px 14px rgba(0,0,0,.06);
     }
     .toys-accent-math  { border-left-color: #6ba3e8; }
@@ -184,6 +184,7 @@ import DefaultLayout from '../../layouts/Default.astro';
       color: #1f2328;
       -webkit-text-fill-color: #1f2328;
     }
+    .toys-card-header:hover { background: #eef1f4; }
 
     .toys-table {
       width: 100%;
@@ -217,6 +218,7 @@ import DefaultLayout from '../../layouts/Default.astro';
       color: #1f2328;
       -webkit-text-fill-color: #1f2328;
     }
+    .toys-tech-row:hover td { background: #eef1f4; }
 
     .toys-toy-name {
       word-wrap: break-word;
@@ -226,6 +228,7 @@ import DefaultLayout from '../../layouts/Default.astro';
     .toys-toy-name a:hover { text-decoration: underline; }
     .toys-toy-specs { color: #1f2328; }
     .toys-toy-access { width: 2em; text-align: center; }
+    .toys-toy-row:hover td { background: #eef1f4; }
     .toys-avail { color: #1a7f37; font-size: .85em; }
 
     .toys-wip {
