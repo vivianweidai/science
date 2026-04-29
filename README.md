@@ -1,6 +1,6 @@
 # Science
 
-Personal science portfolio and lab notebook — available on [web](https://vivianweidai.com), on the [App Store](https://apps.apple.com/app/id6762091743) for iPhone and iPad (with an embedded Apple Watch companion), and as an Android / Wear OS port under `archives/android/`.
+Personal science portfolio and lab notebook — available on [web](https://vivianweidai.com), the [App Store](https://apps.apple.com/app/id6762091743) for iPhone and iPad (with an embedded Apple Watch companion), and [Google Play](https://play.google.com/store/apps/details?id=com.vivianweidai.science) for Android phones and Wear OS.
 
 ## What's Inside
 
