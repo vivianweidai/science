@@ -172,7 +172,15 @@ import PageFooter from '../../layouts/PageFooter.astro';
       align-items: center;
       gap: 1em;
     }
-    .toys-card-header .chip { vertical-align: middle; margin-left: .3em; position: relative; top: -.1em; }
+    .toys-card-header .chip {
+      vertical-align: middle;
+      margin-left: .3em;
+      position: relative;
+      top: -.1em;
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+    .toys-card-wrap:hover .toys-card-header .chip { opacity: 1; }
     .toys-topic-title { white-space: nowrap; flex-shrink: 0; }
     .toys-topic-desc {
       font-weight: 400;
