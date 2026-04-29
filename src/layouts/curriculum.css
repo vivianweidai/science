@@ -230,31 +230,26 @@ a.curr-col-head:hover {
 .curr-topic-body td:last-child { border-right: none; }
 .curr-topic-body tr:last-child td { border-bottom: none; }
 .curr-topic-body th {
-  background: color-mix(in srgb, var(--card-tint, #d1d9e0) 50%, white);
+  background: #fff;
   font-weight: 700;
   font-size: 0.95em;
 }
 
 .curr-topic-body td:first-child {
-  background: color-mix(in srgb, var(--card-tint, #d1d9e0) 30%, white) !important;
+  background: #fff !important;
   font-weight: 600;
   width: 25%;
 }
 .curr-topic-body td:nth-child(2) { width: 37.5%; }
 .curr-topic-body td:nth-child(3) { width: 37.5%; }
-/* Per-science tinted zebra. Yellow .highlight rule keeps !important
-   so highlighted rows still win. */
-.curr-topic-body tr:nth-child(odd) td:not(:first-child) {
-  background: color-mix(in srgb, var(--card-tint, #d1d9e0) 8%, white);
-}
-.curr-topic-body tr:nth-child(even) td:not(:first-child) {
-  background: color-mix(in srgb, var(--card-tint, #d1d9e0) 18%, white);
-}
+/* No zebra at rest — only yellow highlights show. Row hover applies a
+   per-science tint across the whole row (first column included). */
+.curr-topic-body tr td:not(:first-child) { background: #fff; }
 .curr-topic-body tr:hover td:not(:first-child) {
-  background: color-mix(in srgb, var(--card-tint, #d1d9e0) 32%, white);
+  background: color-mix(in srgb, var(--card-tint, #d1d9e0) 28%, white);
 }
 .curr-topic-body tr:hover td:first-child {
-  background: color-mix(in srgb, var(--card-tint, #d1d9e0) 42%, white) !important;
+  background: color-mix(in srgb, var(--card-tint, #d1d9e0) 28%, white) !important;
 }
 .curr-topic-body td.curr-group-hover {
   background: #eef1f4 !important;
