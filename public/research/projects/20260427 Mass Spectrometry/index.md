@@ -70,9 +70,10 @@ Flat baseline across 500–3000 m/z — no analyte, no matrix, no peaks; if peak
 
 <h2 id="extensions">Extensions</h2>
 
-<div class="photo-grid three-col">
+<div class="photo-grid">
   <img src="photos/setup/setup2.jpeg" alt="Agilent 7890A GC 5975C Inert MSD">
   <img src="photos/setup/setup3.jpeg" alt="Agilent 1200 Series HPLC 6230A TOF LC-MS">
+  <img src="photos/setup/setup46.jpeg" alt="Waters Micromass ZQ Alliance e2695 LC-MS">
   <img src="photos/setup/setup14.jpeg" alt="Agilent 7890 GC-FID Chiral">
 </div>
 
@@ -81,7 +82,8 @@ Flat baseline across 500–3000 m/z — no analyte, no matrix, no peaks; if peak
 | Instrument | Extension | Description |
 |------------|-----------|-------------|
 | Agilent 7890A GC 5975C Inert MSD | Volatiles | GC + EI MS — small molecules, fragmented |
-| Agilent 1200 Series HPLC 6230A TOF LC-MS | Nonvolatiles | LC + ESI TOF MS — large molecules, intact |
+| Agilent 1200 Series HPLC 6230A TOF LC-MS | Nonvolatiles, exact mass | LC + ESI TOF MS — large molecules, intact |
+| Waters Micromass ZQ Alliance e2695 LC-MS | Nonvolatiles, unit mass | LC + ESI quad MS — known targets, fast quant |
 | Agilent 7890 GC-FID Chiral | Enantiomers | GC + FID, chiral column — R/S separation, no MS |
 
 </div>
