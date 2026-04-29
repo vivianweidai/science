@@ -264,7 +264,7 @@ a.curr-col-head:hover {
   background: #ffe839 !important;
 }
 .curr-topic-body td.curr-group-cell {
-  border-bottom: 1px solid #b0b4b8;
+  border-bottom: 1px solid #eaecef;
 }
 .curr-topic-body .katex { font-size: 1em; }
 
