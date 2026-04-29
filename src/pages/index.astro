@@ -8,19 +8,58 @@ import curriculumData from '../../public/curriculum/curriculum.json';
 // Top → bottom matches the science pyramid: astronomy at the apex,
 // mathematics as the foundation. Each row builds on the ones below.
 const SUBJECTS = ['astronomy', 'biology', 'chemistry', 'physics', 'computing', 'mathematics'];
+const SUBJ_ANCHOR = {
+  mathematics: 'math', computing: 'comp', physics: 'phys',
+  chemistry: 'chem', biology: 'bio', astronomy: 'astro',
+};
+// Latest olympiad result per subject, picked from public/olympiads/olympiads.yml.
+// kind mirrors the olympiads page: 'invited' (🎟️ shimmer) | 'competitive' (🎯 wiggle) | ''.
+const OLYMPIAD_LATEST = {
+  mathematics: { name: 'American Mathematics Competition 12',                                 icon: '🎯',  kind: 'competitive', date: 'November 2025' },
+  computing:   { name: 'North American Computational Linguistics Open Exam',                  icon: '',    kind: '',            date: 'January 2026'  },
+  physics:     { name: 'Junior Science Olympiad of Canada Exam',                              icon: '🎯',  kind: 'competitive', date: 'March 2026'    },
+  chemistry:   { name: 'United States National Chemistry Olympiad Local Exam',                icon: '🎯',  kind: 'competitive', date: 'March 2026'    },
+  biology:     { name: 'USA Biology Olympiad Open Exam',                                      icon: '🎯',  kind: 'competitive', date: 'February 2026' },
+  astronomy:   { name: 'Canadian Astronomy and Astrophysics Olympiad Senior National Camp',   icon: '🎟️', kind: 'invited',     date: 'May 2026'      },
+};
+const RESEARCH_LATEST = {
+  mathematics: { name: 'Red or Green, What Colored Cat Food does Mi Prefer?', url: '/research/projects/20250225%20Catfood/',                            date: 'February 2025', mi: true },
+  computing:   { name: 'Red or Green, What Colored Cat Food does Mi Prefer?', url: '/research/projects/20250225%20Catfood/',                            date: 'February 2025', mi: true },
+  physics:     { name: 'Four-Point Probe Sheet Resistance Measurements',      url: '/research/projects/20260404%20Four%20Point%20Probe/',               date: 'April 2026'                },
+  chemistry:   { name: 'IR Spectroscopy of Everyday Materials',               url: '/research/projects/20260419%20IR%20Spectroscopy/',                  date: 'April 2026'                },
+  biology:     { name: 'Meow to Mars — Will Space Help or Hurt Mi’s Heart?',  url: '/research/projects/20260401%20Genes%20in%20Space/',                 date: 'March 2026',    mi: true },
+  astronomy:   { name: 'Wolfram Alpha — Dry Run',                             url: 'https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb', date: 'April 2026'                },
+};
+const TABS = [
+  { key: 'curriculum', label: 'Curriculum' },
+  { key: 'olympiads',  label: 'Olympiads'  },
+  { key: 'research',   label: 'Research'   },
+];
 ---
 <DefaultLayout title="Science">
   <PageHeader active="home" />
 
-  <a class="fade-in" href="/curriculum/"><img class="hero-img" src={scienceJpeg} alt="Science" width="100%" /></a>
+  <div class="hero-pool fade-in">
+    <img class="hero-img" src={scienceJpeg} alt="Science" width="100%" />
+    <canvas class="hero-canvas"></canvas>
+  </div>
 
-  <div class="curr-rows">
+  <div class="curr-rows" data-active="curriculum">
+    <div class="curr-rows-tabs">
+      {TABS.map(t => (
+        <button class="curr-rows-tab" data-target={t.key} type="button">{t.label}</button>
+      ))}
+      <div class="curr-rows-progress"></div>
+    </div>
     {SUBJECTS.map((subjSlug, i) => {
       const subj = curriculumData[subjSlug];
       return (
         <div class="curr-rows-row fade-in" style={`animation-delay: ${0.1 + i * 0.08}s`}>
-          <a class="curr-rows-subj" data-subj={subjSlug} href={`/curriculum/#${subjSlug}`}>{subj.name}</a>
-          <div class="curr-rows-secs">
+          <a class="curr-rows-subj" data-subj={subjSlug} data-tab="curriculum" href={`/curriculum/#${subjSlug}`}>{subj.name}</a>
+          <a class="curr-rows-subj" data-subj={subjSlug} data-tab="olympiads"  href={`/olympiads/#${SUBJ_ANCHOR[subjSlug]}`}>{subj.name}</a>
+          <a class="curr-rows-subj" data-subj={subjSlug} data-tab="research"   href={`/research/#${SUBJ_ANCHOR[subjSlug]}`}>{subj.name}</a>
+
+          <div class="curr-rows-secs" data-tab="curriculum">
             {subj.sections.map((sec, j) => (
               <>
                 {j > 0 && <span class="sep">·</span>}
@@ -28,20 +67,50 @@ const SUBJECTS = ['astronomy', 'biology', 'chemistry', 'physics', 'computing', '
               </>
             ))}
           </div>
-          <a class="curr-rows-pdf" href={`/curriculum/notes/${subjSlug}.pdf`}>pdf</a>
+          <div class="curr-rows-secs" data-tab="olympiads">
+            <a href={`/olympiads/#${SUBJ_ANCHOR[subjSlug]}`}>{OLYMPIAD_LATEST[subjSlug].name}</a>
+            {OLYMPIAD_LATEST[subjSlug].icon && (
+              <span class={`status-emoji status-emoji-${OLYMPIAD_LATEST[subjSlug].kind}`}>
+                <span class="glyph">{OLYMPIAD_LATEST[subjSlug].icon}</span>
+              </span>
+            )}
+          </div>
+          <div class="curr-rows-secs" data-tab="research">
+            <a href={RESEARCH_LATEST[subjSlug].url}>{RESEARCH_LATEST[subjSlug].name}</a>
+            {RESEARCH_LATEST[subjSlug].mi && (
+              <a class="photo-icon mi-icon" href="/olympiads/photos/ctyphysics.jpeg">
+                <img src="/cat.svg" alt="Mi" />
+              </a>
+            )}
+          </div>
+
+          <a class="curr-rows-pdf" data-tab="curriculum" href={`/curriculum/notes/${subjSlug}.pdf`}>pdf</a>
+          <span class="curr-rows-date" data-tab="olympiads">{OLYMPIAD_LATEST[subjSlug].date}</span>
+          <span class="curr-rows-date" data-tab="research">{RESEARCH_LATEST[subjSlug].date}</span>
         </div>
       );
     })}
   </div>
 
   <style>
-    .hero-img {
+    .hero-pool {
+      position: relative;
       display: block;
       margin-top: 1em;
       border-radius: 8px;
+      overflow: hidden;
       transition: transform 0.5s cubic-bezier(.2,.8,.2,1), box-shadow 0.5s ease, filter 0.5s ease;
     }
-    .fade-in:hover .hero-img {
+    .hero-img {
+      display: block;
+      width: 100%;
+    }
+    .hero-canvas {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .fade-in:hover .hero-pool {
       transform: scale(1.01);
       filter: brightness(1.02);
       box-shadow: 0 5px 14px rgba(0,0,0,.06);
@@ -53,19 +122,71 @@ const SUBJECTS = ['astronomy', 'biology', 'chemistry', 'physics', 'computing', '
       overflow: hidden;
       background: #fff;
     }
+    .curr-rows-tabs {
+      display: flex;
+      position: relative;
+      background: #f6f8fa;
+      border-bottom: 1px solid #d1d9e0;
+    }
+    .curr-rows-tab {
+      flex: 1;
+      display: block;
+      padding: 1.1em 0.9em;
+      background: transparent;
+      border: none;
+      border-right: 1px solid #eaecef;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.82em;
+      color: #57606a;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .curr-rows-tab:last-of-type { border-right: none; }
+    .curr-rows-tab:hover { background: #eaeef2; color: #1f2328; }
+    .curr-rows[data-active="curriculum"] .curr-rows-tab[data-target="curriculum"],
+    .curr-rows[data-active="olympiads"]  .curr-rows-tab[data-target="olympiads"],
+    .curr-rows[data-active="research"]   .curr-rows-tab[data-target="research"] {
+      color: #1f2328;
+      background: #fff;
+    }
+
+    .curr-rows-progress {
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      height: 1.5px;
+      width: 0%;
+      background: #b1b7be;
+      pointer-events: none;
+    }
+
+    /* Tab visibility: hide rows-content not matching active tab */
+    .curr-rows[data-active="curriculum"] .curr-rows-row [data-tab]:not([data-tab="curriculum"]),
+    .curr-rows[data-active="olympiads"]  .curr-rows-row [data-tab]:not([data-tab="olympiads"]),
+    .curr-rows[data-active="research"]   .curr-rows-row [data-tab]:not([data-tab="research"]) {
+      display: none;
+    }
 
     .curr-rows-row {
       display: flex;
       align-items: center;
       border-bottom: 1px solid #eaecef;
       font-size: 0.9em;
+      min-height: 3.3em;
       transition: background 0.15s ease;
     }
-    .curr-rows-row:nth-child(even) { background: #f6f8fa; }
+    .curr-rows-row:nth-child(odd) { background: #f6f8fa; }
     .curr-rows-row:hover { background: #eef1f4; }
     .curr-rows-row:last-child { border-bottom: none; }
     .curr-rows-subj {
       flex: 0 0 130px;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
       padding: 0.55em 0.9em;
       font-weight: 600;
       color: #1f2328;
@@ -98,6 +219,15 @@ const SUBJECTS = ['astronomy', 'biology', 'chemistry', 'physics', 'computing', '
     }
     .curr-rows-secs a:hover { color: #0969da; text-decoration: underline; }
     .curr-rows-secs .sep { color: #b1b7be; padding: 0 0.15em; }
+    .curr-rows-secs .mi-icon {
+      margin-left: 0.35em;
+      display: inline-flex;
+      align-items: center;
+      vertical-align: middle;
+      cursor: default;
+    }
+    .curr-rows-secs .mi-icon img { height: 0.95em; }
+    .curr-rows-secs .mi-icon:hover { text-decoration: none; }
     .curr-rows-pdf {
       flex: 0 0 auto;
       margin-right: 0.7em;
@@ -116,6 +246,76 @@ const SUBJECTS = ['astronomy', 'biology', 'chemistry', 'physics', 'computing', '
       color: #1f2328;
       text-decoration: none;
     }
+
+    .curr-rows-date {
+      flex: 0 0 auto;
+      margin-right: 0.9em;
+      color: #57606a;
+      font-size: 0.85em;
+      white-space: nowrap;
+    }
+
+    /* Olympiad row content uses flex so the achievement icon sits on the
+       same vertical centerline as the text instead of dropping below the
+       baseline (emoji glyphs have their own metrics that don't center
+       naturally). */
+    .curr-rows-secs[data-tab="olympiads"] {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Olympiad achievement icons — same wiggle/shimmer treatment as
+       /olympiads/ timeline. The icon sits OUTSIDE the link so the
+       underline doesn't extend over the glyph. */
+    .status-emoji {
+      font-size: 1em;
+      margin-left: 0.4em;
+      display: inline-flex;
+      align-items: center;
+      cursor: default;
+      transform: translateY(-0.08em); /* nudge to optical center; emojis sit below the text baseline by default */
+    }
+    .status-emoji .glyph {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+    }
+    /* overflow: hidden only on the invited variant so the diagonal shimmer
+       gets masked. Competitive 🎯 wiggles freely without being clipped. */
+    .status-emoji-invited .glyph {
+      overflow: hidden;
+    }
+    .status-emoji-competitive { transform-origin: center 80%; }
+    .status-emoji-competitive:hover,
+    .curr-rows-row:hover .status-emoji-competitive {
+      animation: status-wiggle 0.55s ease;
+    }
+    @keyframes status-wiggle {
+      0%   { transform: rotate(0); }
+      20%  { transform: rotate(-15deg); }
+      40%  { transform: rotate(12deg); }
+      60%  { transform: rotate(-8deg); }
+      80%  { transform: rotate(5deg); }
+      100% { transform: rotate(0); }
+    }
+    .status-emoji-invited { position: relative; }
+    .status-emoji-invited .glyph::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(115deg, transparent 35%, rgba(255,255,255,0.85) 50%, transparent 65%);
+      transform: translateX(-120%);
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+    .status-emoji-invited:hover .glyph::after,
+    .curr-rows-row:hover .status-emoji-invited .glyph::after {
+      animation: status-shimmer 1.0s ease-in-out;
+    }
+    @keyframes status-shimmer {
+      from { transform: translateX(-120%); }
+      to   { transform: translateX(120%); }
+    }
     @media (max-width: 600px) {
       .curr-rows-row { flex-direction: column; align-items: stretch; }
       .curr-rows-subj { flex: none; text-align: center; }
@@ -123,67 +323,174 @@ const SUBJECTS = ['astronomy', 'biology', 'chemistry', 'physics', 'computing', '
     }
   </style>
 
-  <ul class="updates-list">
-    <li class="fade-in" data-subj="chem" style="animation-delay:0.05s"><span class="update-date">April 27th 2026</span> <span class="update-body"><a href="/research/projects/20260427%20Liquid%20Chromatography/">Liquid Chromatography — Dry Run</a> <a class="chip chem" href="/research/#chem">Chemistry</a></span></li>
-    <li class="fade-in" data-subj="chem" style="animation-delay:0.10s"><span class="update-date">April 27th 2026</span> <span class="update-body"><a href="/research/projects/20260427%20Mass%20Spectrometry/">Mass Spectrometry — Dry Run</a> <a class="chip chem" href="/research/#chem">Chemistry</a></span></li>
-    <li class="fade-in" data-subj="chem" style="animation-delay:0.15s"><span class="update-date">April 20th 2026</span> <span class="update-body"><a href="/research/projects/20260420%20UV-Vis%20Spectroscopy/">UV-Vis Spectroscopy of Everyday Fluorophores</a> <a class="chip chem" href="/research/#chem">Chemistry</a></span></li>
-    <li class="fade-in" data-subj="chem" style="animation-delay:0.20s"><span class="update-date">April 19th 2026</span> <span class="update-body"><a href="/research/projects/20260419%20IR%20Spectroscopy/">IR Spectroscopy of Everyday Materials</a> <a class="chip chem" href="/research/#chem">Chemistry</a></span></li>
-    <li class="fade-in" data-subj="chem" style="animation-delay:0.25s"><span class="update-date">April 11th 2026</span> <span class="update-body"><a href="/research/projects/20260411%20Centrifuge/">Centrifugation and pH of Everyday Liquids</a> <a class="chip chem" href="/research/#chem">Chemistry</a> <a class="chip bio" href="/research/#bio">Biology</a></span></li>
-    <li class="fade-in" data-subj="chem" style="animation-delay:0.30s"><span class="update-date">April 5th 2026</span> <span class="update-body"><a href="/research/projects/20260405%20Melting%20Point/">Melting Point of Everyday Compounds</a> <a class="chip chem" href="/research/#chem">Chemistry</a></span></li>
-    <li class="fade-in" data-subj="phys" style="animation-delay:0.35s"><span class="update-date">April 4th 2026</span> <span class="update-body"><a href="/research/projects/20260404%20Four%20Point%20Probe/">Four-Point Probe Sheet Resistance Measurements</a> <a class="chip phys" href="/research/#phys">Physics</a></span></li>
-    <li class="fade-in" data-subj="astro" style="animation-delay:0.40s"><span class="update-date">April 1st 2026</span> <span class="update-body"><a href="https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb">Wolfram Alpha — Dry Run</a> <a class="chip astro" href="/research/#astro">Astronomy</a></span></li>
-    <li class="fade-in" data-subj="bio" style="animation-delay:0.45s"><span class="update-date">March 31st 2026</span> <span class="update-body"><a href="/research/projects/20260401%20Genes%20in%20Space/">Meow to Mars — Will Space Help or Hurt Mi's Heart?</a> <a class="photo-icon" href="/olympiads/photos/ctyphysics.jpeg"><img src="/cat.svg" alt="Mi" style="height:0.9em;vertical-align:-0.12em;" /></a> <a class="chip bio" href="/research/#bio">Biology</a></span></li>
-    <li class="fade-in" data-subj="math" style="animation-delay:0.50s"><span class="update-date">February 25th 2025</span> <span class="update-body"><a href="/research/projects/20250225%20Catfood/">Red or Green, What Colored Cat Food does Mi Prefer?</a> <a class="photo-icon" href="/olympiads/photos/ctyphysics.jpeg"><img src="/cat.svg" alt="Mi" style="height:0.9em;vertical-align:-0.12em;" /></a> <a class="chip math" href="/research/#math">Mathematics</a> <a class="chip comp" href="/research/#comp">Computing</a></span></li>
-  </ul>
+  <script is:inline>
+    // Hero pool: cursor-trail particles + click ripples in the six subject colors.
+    (function () {
+      var pool = document.querySelector('.hero-pool');
+      if (!pool) return;
+      var canvas = pool.querySelector('.hero-canvas');
+      var ctx = canvas.getContext('2d');
+      var COLORS = ['#c5d9f7', '#d9ccee', '#f9c4a8', '#d4e8a0', '#a8ddd4', '#f4c2cb'];
+      var particles = [];
+      var ripples = [];
+      var dpr = Math.max(1, window.devicePixelRatio || 1);
 
-  <style is:global>
-    .updates-list {
-      list-style: none;
-      padding: 0;
-      margin: 1em 0 0;
-      border: 1px solid #d1d9e0;
-      border-radius: 10px;
-      overflow: hidden;
-      background: #fff;
-    }
-    .updates-list li {
-      display: flex;
-      gap: 1em;
-      align-items: baseline;
-      padding: 0.55em 1em 0.55em 1.4em;
-      border-bottom: 1px solid #eaecef;
-      line-height: 1.6;
-      position: relative;
-      transition: background 0.15s ease;
-    }
-    .updates-list li:last-child { border-bottom: none; }
-    .updates-list li:nth-child(even) { background: #f6f8fa; }
-    .updates-list li:hover { background: #eef1f4; }
-    .updates-list li::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 5px;
-      background: var(--accent, #d1d9e0);
-    }
-    .updates-list li[data-subj="math"]  { --accent: var(--subj-math); }
-    .updates-list li[data-subj="comp"]  { --accent: var(--subj-comp); }
-    .updates-list li[data-subj="phys"]  { --accent: var(--subj-phys); }
-    .updates-list li[data-subj="chem"]  { --accent: var(--subj-chem); }
-    .updates-list li[data-subj="bio"]   { --accent: var(--subj-bio); }
-    .updates-list li[data-subj="astro"] { --accent: var(--subj-astro); }
-    .updates-list .update-date {
-      flex-shrink: 0;
-      min-width: 9em;
-      color: #656d76;
-      font-size: 0.9em;
-    }
-    .updates-list .update-body { flex: 1; }
-    .updates-list .chip { margin-left: 0.2em; }
-    @media (max-width: 600px) {
-      .updates-list .update-date { display: none; }
-    }
-  </style>
+      function resize() {
+        var rect = pool.getBoundingClientRect();
+        if (rect.width === 0 || rect.height === 0) return; // hero img not loaded yet
+        canvas.width = Math.round(rect.width * dpr);
+        canvas.height = Math.round(rect.height * dpr);
+        canvas.style.width = rect.width + 'px';
+        canvas.style.height = rect.height + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      resize();
+      window.addEventListener('resize', resize);
+      // Image may load after the script runs; resize once it has real dimensions.
+      var heroImg = pool.querySelector('img');
+      if (heroImg && !heroImg.complete) heroImg.addEventListener('load', resize);
+      if (typeof ResizeObserver !== 'undefined') new ResizeObserver(resize).observe(pool);
+
+      var lastBubble = 0;
+      var colorIdx = 0;
+      pool.addEventListener('mousemove', function (e) {
+        var rect = pool.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        var now = performance.now();
+        // Bubble trail — long-lived particles form a visible tail behind the cursor.
+        if (now - lastBubble >= 14 + Math.random() * 10) {
+          lastBubble = now;
+          colorIdx = (colorIdx + 1) % COLORS.length;
+          particles.push({
+            x: x + (Math.random() - 0.5) * 4,
+            y: y + (Math.random() - 0.5) * 4,
+            vx: (Math.random() - 0.5) * 0.3,
+            vy: (Math.random() - 0.5) * 0.3 - 0.05,
+            r: 9 + Math.random() * 9,
+            color: COLORS[colorIdx],
+            life: 1,
+            decay: 0.0065 + Math.random() * 0.0075, // ~2-3s lifespan → real tail
+            glow: 16 + Math.random() * 12
+          });
+        }
+      });
+
+      pool.addEventListener('click', function (e) {
+        var rect = pool.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        var color = COLORS[Math.floor(Math.random() * COLORS.length)];
+        var minSide = Math.min(rect.width, rect.height);
+        // Click ripple — random ellipse, smaller max diameter than before.
+        // Stroke is thick at spawn and thins as the ellipse expands (renderer
+        // ties lineWidth to remaining progress (1 - t)^2).
+        ripples.push({
+          x: x, y: y,
+          t: 0,
+          growT: 0.012 + Math.random() * 0.008,
+          rxMax: minSide * (0.14 + Math.random() * 0.10),
+          ryMax: minSide * (0.12 + Math.random() * 0.10),
+          rotation: Math.random() * Math.PI * 2,
+          color: color,
+          lw: 20 + Math.random() * 10
+        });
+        // Smaller echo ring for the water-drop feel.
+        setTimeout(function () {
+          ripples.push({
+            x: x, y: y,
+            t: 0,
+            growT: 0.013 + Math.random() * 0.007,
+            rxMax: minSide * (0.08 + Math.random() * 0.08),
+            ryMax: minSide * (0.07 + Math.random() * 0.08),
+            rotation: Math.random() * Math.PI * 2,
+            color: color,
+            lw: 13 + Math.random() * 6
+          });
+        }, 110 + Math.random() * 110);
+      });
+
+      function tick() {
+        var rect = pool.getBoundingClientRect();
+        ctx.clearRect(0, 0, rect.width, rect.height);
+
+        for (var i = particles.length - 1; i >= 0; i--) {
+          var p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.life -= p.decay;
+          if (p.life <= 0) { particles.splice(i, 1); continue; }
+          var ls = p.life * p.life; // quadratic falloff → strong fade with distance
+          ctx.globalAlpha = ls * 0.95;
+          ctx.shadowColor = p.color;
+          ctx.shadowBlur = p.glow * p.life;
+          ctx.fillStyle = p.color;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r * Math.sqrt(p.life), 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.shadowBlur = 0;
+
+        for (var j = ripples.length - 1; j >= 0; j--) {
+          var rp = ripples[j];
+          rp.t += rp.growT;
+          if (rp.t >= 1) { ripples.splice(j, 1); continue; }
+          var remaining = 1 - rp.t;
+          ctx.globalAlpha = remaining * 0.9;
+          ctx.strokeStyle = rp.color;
+          var tt = rp.t * rp.t;
+          ctx.lineWidth = rp.lw * (1 - tt * tt * tt); // (1 - t^6) — holds full thickness almost to the end, then drops sharply
+          ctx.beginPath();
+          ctx.ellipse(rp.x, rp.y, rp.rxMax * rp.t, rp.ryMax * rp.t, rp.rotation, 0, Math.PI * 2);
+          ctx.stroke();
+        }
+        ctx.globalAlpha = 1;
+
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+
+    (function () {
+      var container = document.querySelector('.curr-rows[data-active]');
+      if (!container) return;
+      var fill = container.querySelector('.curr-rows-progress');
+      var tabs = ['curriculum', 'olympiads', 'research'];
+      var tabMs = 5000;
+      var cycleMs = tabs.length * tabMs;
+      var cycleStart = performance.now();
+      var rafId = 0;
+      var stopped = false;
+
+      function tick(now) {
+        if (stopped) return;
+        var elapsed = (now - cycleStart) % cycleMs;
+        fill.style.width = ((elapsed / cycleMs) * 100) + '%';
+        var idx = Math.floor(elapsed / tabMs);
+        var target = tabs[idx];
+        if (container.dataset.active !== target) {
+          container.dataset.active = target;
+        }
+        rafId = requestAnimationFrame(tick);
+      }
+      rafId = requestAnimationFrame(tick);
+
+      function stop() {
+        if (stopped) return;
+        stopped = true;
+        cancelAnimationFrame(rafId);
+        fill.style.width = '0%';
+      }
+      container.addEventListener('mouseenter', stop);
+
+      container.querySelectorAll('.curr-rows-tab').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          stop();
+          container.dataset.active = btn.dataset.target;
+        });
+      });
+    })();
+  </script>
 
   <hr />
 

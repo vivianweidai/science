@@ -175,7 +175,7 @@ const nextMeta = navMeta(nextToy);
 <DefaultLayout title={`${toy} — ${science}`}>
   <PageHeader title="Research" researchHref={`/research/#${science_slug}`} />
 
-  <div class="toy-prevnext toy-prevnext-top">
+  <div class="toy-prevnext" data-prev-href={prevMeta?.toy_url} data-next-href={nextMeta?.toy_url}>
     {prevMeta ? (
       <span class="toy-prevnext-side prev">
         <span class="toy-prevnext-arrow">←</span>
@@ -242,29 +242,6 @@ const nextMeta = navMeta(nextToy);
   </article>
   </div>
 
-  <div class="toy-prevnext toy-prevnext-bottom">
-    {prevMeta ? (
-      <span class="toy-prevnext-side prev">
-        <span class="toy-prevnext-arrow">←</span>
-        <a href={prevMeta.toy_url}>{prevMeta.toy}</a>
-        {prevMeta.crossScience && (<>
-          <span class="toy-prevnext-sep">·</span>
-          <a class={`chip ${prevMeta.science_slug}`} href={`/research/#${prevMeta.science_slug}`}>{prevMeta.science}</a>
-        </>)}
-      </span>
-    ) : (<span class="toy-prevnext-side spacer">←</span>)}
-    {nextMeta ? (
-      <span class="toy-prevnext-side next">
-        {nextMeta.crossScience && (<>
-          <a class={`chip ${nextMeta.science_slug}`} href={`/research/#${nextMeta.science_slug}`}>{nextMeta.science}</a>
-          <span class="toy-prevnext-sep">·</span>
-        </>)}
-        <a href={nextMeta.toy_url}>{nextMeta.toy}</a>
-        <span class="toy-prevnext-arrow">→</span>
-      </span>
-    ) : (<span class="toy-prevnext-side spacer">→</span>)}
-  </div>
-
   <hr />
 
   <PageFooter researchHref={`/research/#${science_slug}`} />
@@ -310,8 +287,7 @@ const nextMeta = navMeta(nextToy);
     .toy-prevnext-arrow { color: #0969da; }
     .toy-prevnext-sep   { color: #1f2328; opacity: 0.4; }
     .toy-prevnext-side.spacer { visibility: hidden; }
-    .toy-prevnext-top    { margin: 1em 0 0.7em 0; }
-    .toy-prevnext-bottom { margin: 0.7em 0 0 0; }
+    .toy-prevnext { margin: 1em 0 0.7em 0; }
 
     /* Hover hit-region wrapper — 2 px of bottom/right padding catches the
        cursor when the article lifts up-and-left on hover (same trick as
@@ -490,4 +466,24 @@ const nextMeta = navMeta(nextToy);
       .toy-page .updates-list .update-date { display: none; }
     }
   </style>
+
+  <script is:inline>
+    // Arrow-key shortcuts: ← → cycle through toys via the prev/next nav
+    // hrefs baked into .toy-prevnext. Skipped when the user is typing in
+    // a form field or holding a modifier key.
+    (function () {
+      var nav = document.querySelector('.toy-prevnext');
+      if (!nav) return;
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+        if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+        var t = e.target;
+        if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+        var href = e.key === 'ArrowLeft' ? nav.dataset.prevHref : nav.dataset.nextHref;
+        if (!href) return;
+        e.preventDefault();
+        window.location.href = href;
+      });
+    })();
+  </script>
 </DefaultLayout>

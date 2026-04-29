@@ -129,9 +129,41 @@
   // animation per user feedback — animated reflow on every click was
   // distracting once you were already on the page.
   var hasRendered = false;
+  // Topic body cache + render token. Topic→topic navigation defers the
+  // visual swap until new tables have been fetched, so the user never
+  // sees a "Loading…" placeholder followed by a shrink-grow as tables
+  // arrive — they see the old card, then atomically the new card. The
+  // token lets a fast second arrow press cancel a stale fetch handler
+  // before it overwrites the (newer) target topic.
+  var topicBodyCache = {};
+  var topicRenderToken = 0;
 
   widget.classList.add('curr-widget');
   widget.innerHTML = '<div class="curr-loading">Loading curriculum…</div>';
+
+  // Arrow-key shortcuts cycle through topics when on a topic view. No
+  // effect on the grid view, and no effect when the user is typing in
+  // an input or holding a modifier key.
+  document.addEventListener('keydown', function (e) {
+    if (state.view !== 'topic' || !manifest) return;
+    if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+    var t = e.target;
+    if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+    var direction = 0;
+    if (e.key === 'ArrowLeft') direction = -1;
+    else if (e.key === 'ArrowRight') direction = 1;
+    else return;
+    var adj = findAdjacent(state.subject, state.sectionIdx, state.topicIdx, direction);
+    if (!adj) return;
+    e.preventDefault();
+    state = {
+      view: 'topic',
+      subject: adj.subject,
+      sectionIdx: adj.sectionIdx,
+      topicIdx: adj.topicIdx,
+    };
+    render();
+  });
 
   fetch(MANIFEST_URL)
     .then(function (r) { return r.json(); })
@@ -377,91 +409,153 @@
     });
   }
 
+  /* Renders the topic view. The visual swap is split into two phases so
+     topic→topic navigation never shows an empty Loading placeholder
+     followed by a shrink-grow as tables stream in:
+
+     1. Coming from grid (or first paint with no card yet): build the
+        shell immediately with a Loading placeholder, kick off fetches,
+        and populate the body once they resolve. Acceptable here because
+        the user is transitioning view types, so a brief load state is
+        expected.
+
+     2. Topic → topic (a card already exists): keep the OLD card on
+        screen, fetch the new tables, then atomically rebuild the whole
+        topic with full content. The card-pop-in animation plays exactly
+        once on the new card; the prev/next nav and breadcrumb update in
+        the same frame as the body. No Loading placeholder, no shrink-
+        grow — matches the smoothness of the toy nav's full-page reload.
+
+     A render token guards against a stale fetch from an earlier press
+     overwriting the user's latest target after a fast double-tap. */
   function renderTopic() {
+    var token = ++topicRenderToken;
     var subj = manifest[state.subject];
     var sec = subj.sections[state.sectionIdx];
     var topic = sec.topics[state.topicIdx];
+    var snap = {
+      subject: state.subject,
+      sectionIdx: state.sectionIdx,
+      topicIdx: state.topicIdx,
+    };
 
-    // Prev/next now sit OUTSIDE the .curr-topic card (above and below it),
-    // and span the full curriculum so they cycle across section + subject
-    // boundaries. card-pop-in fires every render (not just first paint)
-    // so prev/next clicks visibly swap the card in.
-    var html = '<div class="curr-prevnext curr-prevnext-top"></div>';
+    var hadCard = !!widget.querySelector('.curr-topic');
+    var bodiesPromise = fetchTopicBodies(topic);
+
+    if (!hadCard) {
+      mountTopicShell(snap, null);
+      bodiesPromise.then(function (bodies) {
+        if (token !== topicRenderToken) return;
+        populateTopicBody(bodies, topic);
+      }).catch(function (e) {
+        if (token !== topicRenderToken) return;
+        var body = widget.querySelector('.curr-topic-body');
+        if (body) body.innerHTML = '<div class="curr-loading">Failed to load topic: ' + e + '</div>';
+      });
+    } else {
+      bodiesPromise.then(function (bodies) {
+        if (token !== topicRenderToken) return;
+        mountTopicShell(snap, bodies);
+      }).catch(function (e) {
+        if (token !== topicRenderToken) return;
+        mountTopicShell(snap, null);
+        var body = widget.querySelector('.curr-topic-body');
+        if (body) body.innerHTML = '<div class="curr-loading">Failed to load topic: ' + e + '</div>';
+      });
+    }
+  }
+
+  function fetchTopicBodies(topic) {
+    var key = topic.tables.map(function (t) { return t.path; }).join('|');
+    if (topicBodyCache[key]) return Promise.resolve(topicBodyCache[key]);
+    return Promise.all(topic.tables.map(function (t) {
+      return fetch(RAW_BASE + t.path)
+        .then(function (r) { return r.text(); })
+        .then(stripFrontMatter);
+    })).then(function (bodies) {
+      topicBodyCache[key] = bodies;
+      return bodies;
+    });
+  }
+
+  /* Build the topic shell (prev/next nav + card with breadcrumb + body)
+     and mount it. If `bodies` is provided, the body is populated with
+     rendered tables in the same DOM mutation — atomic swap, no Loading
+     state. If null, a Loading placeholder is shown instead. */
+  function mountTopicShell(snap, bodies) {
+    var subj = manifest[snap.subject];
+    var sec = subj.sections[snap.sectionIdx];
+    var topic = sec.topics[snap.topicIdx];
+
+    var html = '<div class="curr-prevnext"></div>';
     html += '<div class="curr-topic-wrap">';
-    html += '<div class="curr-topic card-pop-in" data-subj="' + state.subject + '">';
-    html += '<div class="curr-breadcrumb" data-subj="' + state.subject + '">'
+    html += '<div class="curr-topic card-pop-in" data-subj="' + snap.subject + '">';
+    html += '<div class="curr-breadcrumb" data-subj="' + snap.subject + '">'
          + '<span class="curr-breadcrumb-title">' + escapeHtml(topic.name) + '</span>'
          + '<span class="curr-breadcrumb-meta">'
-         +   '<a class="chip ' + SHORT_SLUGS[state.subject] + '" data-action="subject" href="/curriculum/#' + state.subject + '">' + escapeHtml(subj.name) + '</a>'
+         +   '<a class="chip ' + SHORT_SLUGS[snap.subject] + '" data-action="subject" href="/curriculum/#' + snap.subject + '">' + escapeHtml(subj.name) + '</a>'
          +   '<span class="sep">·</span><a href="#" data-action="section-view">' + escapeHtml(sec.name) + '</a>'
          + '</span>'
          + '</div>';
-    html += '<div class="curr-topic-body"><div class="curr-loading">Loading…</div></div>';
+    html += '<div class="curr-topic-body">';
+    html += bodies ? '' : '<div class="curr-loading">Loading…</div>';
+    html += '</div>';
     html += '</div></div>';
-    html += '<div class="curr-prevnext curr-prevnext-bottom"></div>';
     widget.innerHTML = html;
 
-    // Fetch all tables for this topic in parallel, then render in order.
-    var fetches = topic.tables.map(function (t) {
-      return fetch(RAW_BASE + t.path)
-        .then(function (r) { return r.text(); })
-        .then(function (raw) { return stripFrontMatter(raw); });
-    });
+    if (bodies) populateTopicBody(bodies, topic);
+    wireTopicHandlers(snap);
+  }
 
-    Promise.all(fetches).then(function (bodies) {
-      var body = widget.querySelector('.curr-topic-body');
-      // Render each table's markdown separately into its own container so
-      // we can apply per-table highlight rows before concatenating into
-      // the topic body.
-      body.innerHTML = '';
-      bodies.forEach(function (md, i) {
-        var wrap = document.createElement('div');
-        wrap.className = 'curr-table-wrap';
-        wrap.innerHTML = marked.parse(md);
-        applyHighlights(wrap, topic.tables[i].highlighted_rows || []);
-        mergeHeaders(wrap);
-        mergeFirstColumn(wrap);
-        body.appendChild(wrap);
-      });
-      whenKatexReady(function () {
-        window.renderMathInElement(body, {
-          delimiters: [
-            { left: '$$', right: '$$', display: true },
-            { left: '$',  right: '$',  display: false }
-          ],
-          throwOnError: false
-        });
-      });
-    }).catch(function (e) {
-      widget.querySelector('.curr-topic-body').innerHTML =
-        '<div class="curr-loading">Failed to load topic: ' + e + '</div>';
+  function populateTopicBody(bodies, topic) {
+    var body = widget.querySelector('.curr-topic-body');
+    if (!body) return;
+    body.innerHTML = '';
+    bodies.forEach(function (md, i) {
+      var wrap = document.createElement('div');
+      wrap.className = 'curr-table-wrap';
+      wrap.innerHTML = marked.parse(md);
+      applyHighlights(wrap, topic.tables[i].highlighted_rows || []);
+      mergeHeaders(wrap);
+      mergeFirstColumn(wrap);
+      body.appendChild(wrap);
     });
+    whenKatexReady(function () {
+      window.renderMathInElement(body, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$',  right: '$',  display: false }
+        ],
+        throwOnError: false
+      });
+    });
+  }
 
+  function wireTopicHandlers(snap) {
     // Breadcrumb clicks
     widget.querySelector('[data-action="subject"]').addEventListener('click', function (e) {
       e.preventDefault();
-      state = { view: 'grid', highlightSubject: state.subject };
+      state = { view: 'grid', highlightSubject: snap.subject };
       render();
-      scrollToWidget();
     });
     widget.querySelector('[data-action="section-view"]').addEventListener('click', function (e) {
       e.preventDefault();
       state = {
         view: 'grid',
-        highlightSubject: state.subject,
-        highlightSectionIdx: state.sectionIdx,
+        highlightSubject: snap.subject,
+        highlightSectionIdx: snap.sectionIdx,
       };
       render();
     });
 
-    // Prev/next walk the entire curriculum: same section first, then
+    // Prev/next walks the entire curriculum: same section first, then
     // adjacent section, then adjacent subject. Each link carries the
     // target (subject, section, topic) so a single handler can jump
     // anywhere — no stepwise increment of state.topicIdx.
-    var prev = findAdjacent(state.subject, state.sectionIdx, state.topicIdx, -1);
-    var next = findAdjacent(state.subject, state.sectionIdx, state.topicIdx, +1);
-    var navHtml = buildNavLink(prev, state.subject, state.sectionIdx, -1)
-                + buildNavLink(next, state.subject, state.sectionIdx, +1);
+    var prev = findAdjacent(snap.subject, snap.sectionIdx, snap.topicIdx, -1);
+    var next = findAdjacent(snap.subject, snap.sectionIdx, snap.topicIdx, +1);
+    var navHtml = buildNavLink(prev, snap.subject, snap.sectionIdx, -1)
+                + buildNavLink(next, snap.subject, snap.sectionIdx, +1);
     widget.querySelectorAll('.curr-prevnext').forEach(function (nav) {
       nav.innerHTML = navHtml;
       nav.querySelectorAll('a').forEach(function (a) {
@@ -488,7 +582,6 @@
             };
           }
           render();
-          scrollToWidget();
         });
       });
     });
