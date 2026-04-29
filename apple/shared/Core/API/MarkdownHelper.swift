@@ -119,10 +119,27 @@ public enum MarkdownHelper {
     /// Idempotent: returns the input unchanged when the section is
     /// missing.
     public static func stripTechnologySection(_ md: String) -> String {
-        guard let h = md.range(of: "## Technology") else { return md }
-        let tail = md[h.lowerBound...]
-        guard let end = tail.range(of: "</ul>") else { return md }
-        return String(md[..<h.lowerBound]) + String(tail[end.upperBound...])
+        // Legacy markdown form: ## Technology ... </ul>
+        if let h = md.range(of: "## Technology") {
+            let tail = md[h.lowerBound...]
+            if let end = tail.range(of: "</ul>") {
+                return String(md[..<h.lowerBound]) + String(tail[end.upperBound...])
+            }
+        }
+        // Current HTML div form: <div id="technology" class="tech-table-wrap"> ... </div></div>
+        if let divStart = md.range(of: "<div id=\"technology\"") {
+            let afterStart = md[divStart.lowerBound...]
+            if let ulEnd = afterStart.range(of: "</ul>") {
+                let afterUl = afterStart[ulEnd.upperBound...]
+                if let firstClose = afterUl.range(of: "</div>") {
+                    let afterFirst = afterUl[firstClose.upperBound...]
+                    if let secondClose = afterFirst.range(of: "</div>") {
+                        return String(md[..<divStart.lowerBound]) + String(afterFirst[secondClose.upperBound...])
+                    }
+                }
+            }
+        }
+        return md
     }
 
     // MARK: - Photo injection

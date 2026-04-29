@@ -102,11 +102,27 @@ object MarkdownHelper {
      *  links). Idempotent: returns the input unchanged when the section
      *  is missing. */
     fun stripTechnologySection(md: String): String {
+        // Legacy markdown form: ## Technology ... </ul>
         val h = md.indexOf("## Technology")
-        if (h < 0) return md
-        val end = md.indexOf("</ul>", startIndex = h)
-        if (end < 0) return md
-        return md.substring(0, h) + md.substring(end + "</ul>".length)
+        if (h >= 0) {
+            val end = md.indexOf("</ul>", startIndex = h)
+            if (end >= 0) return md.substring(0, h) + md.substring(end + "</ul>".length)
+        }
+        // Current HTML div form: <div id="technology" class="tech-table-wrap"> ... </div></div>
+        val divStart = md.indexOf("<div id=\"technology\"")
+        if (divStart >= 0) {
+            val ulEnd = md.indexOf("</ul>", startIndex = divStart)
+            if (ulEnd >= 0) {
+                val firstClose = md.indexOf("</div>", startIndex = ulEnd)
+                if (firstClose >= 0) {
+                    val secondClose = md.indexOf("</div>", startIndex = firstClose + "</div>".length)
+                    if (secondClose >= 0) {
+                        return md.substring(0, divStart) + md.substring(secondClose + "</div>".length)
+                    }
+                }
+            }
+        }
+        return md
     }
 
     // ---------- Photo injection ----------
