@@ -125,20 +125,20 @@ const heroUrl = resolveHero(hero, scienceFolder, toy);
 <DefaultLayout title={`${toy} — ${science}`}>
   <PageHeader title="Research" researchHref={`/research/#${science_slug}`} />
 
-  <article class="toy-page">
+  <div class="toy-page-wrap">
+  <article class={`toy-page toy-accent-${science_slug} fade-in`}>
     <div class="toy-title">
-      <div class="toy-title-left">
-        <h1>{toy}</h1>
-        <a class={`chip ${science_slug}`} href={`/research/#${science_slug}`}>{science}</a>
-      </div>
+      <h1>{toy}</h1>
       <span class="toy-context">
+        <a class={`chip ${science_slug}`} href={`/research/#${science_slug}`}>{science}</a>
+        <span class="toy-context-sep"> · </span>
         <span class="toy-tip" data-tip={topicDesc}>{topic}</span>
         <span class="toy-context-sep"> · </span>
         <span class="toy-tip" data-tip={techDesc}>{technology}</span>
       </span>
     </div>
     {heroUrl && (
-      <div class="hero-single fade-in">
+      <div class="hero-single">
         <img src={heroUrl} alt={toy} style={hero_position ? `object-position: ${hero_position};` : undefined} />
       </div>
     )}
@@ -167,6 +167,7 @@ const heroUrl = resolveHero(hero, scienceFolder, toy);
       </ul>
     )}
   </article>
+  </div>
 
   <hr />
 
@@ -178,30 +179,61 @@ const heroUrl = resolveHero(hero, scienceFolder, toy);
        width — H1's own underline is suppressed so the divisor doesn't end
        at the title text (image 22). align-items: center keeps the chip
        vertically centered with the H1. */
+    /* Toy page reads as a "spec sheet card" — distinct from the
+       project-page document layout. Mirrors the /research/ topic
+       cards: 1 px gray border + 4 px science-colored left accent +
+       a very soft science-tinted wash so the page signals "you're
+       on a reference card" at a glance. */
+    /* Hover hit-region wrapper — 2 px of bottom/right padding catches the
+       cursor when the article lifts up-and-left on hover (same trick as
+       .toys-card-wrap). */
+    .toy-page-wrap {
+      margin: 1em 0;
+      padding: 0 2px 2px 0;
+    }
+    .toy-page {
+      border: 1px solid #d1d9e0;
+      border-left: 4px solid #d1d9e0;
+      border-radius: 8px;
+      padding: 1em 1.4em 1.4em;
+      background: color-mix(in srgb, var(--card-tint, #d1d9e0) 18%, white);
+      transition: transform 0.2s ease-out, box-shadow 0.18s ease;
+    }
+    .toy-page-wrap:hover .toy-page {
+      transform: translate(-2px, -2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    }
+    .toy-page.toy-accent-math  { border-left-color: #6ba3e8; --card-tint: var(--subj-math); }
+    .toy-page.toy-accent-comp  { border-left-color: #9b7ed8; --card-tint: var(--subj-comp); }
+    .toy-page.toy-accent-phys  { border-left-color: #e8915a; --card-tint: var(--subj-phys); }
+    .toy-page.toy-accent-chem  { border-left-color: #8db849; --card-tint: var(--subj-chem); }
+    .toy-page.toy-accent-bio   { border-left-color: #5bbfb0; --card-tint: var(--subj-bio); }
+    .toy-page.toy-accent-astro { border-left-color: #e86088; --card-tint: var(--subj-astro); }
+
     .toy-page .toy-title {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1em;
       flex-wrap: wrap;
-      margin: .5em 0 .8em 0;
-      padding-bottom: .3em;
-      border-bottom: 1px solid #d1d9e0;
-    }
-    .toy-page .toy-title-left {
-      display: inline-flex;
-      align-items: center;
-      gap: .55em;
+      margin: .2em 0 .8em 0;
     }
     .toy-page .toy-title h1 {
+      font-size: 1.6em;
       margin: 0;
       border-bottom: none;
       padding-bottom: 0;
     }
     .toy-page .toy-context {
+      display: inline-flex;
+      align-items: center;
+      gap: .35em;
       color: #656d76;
       font-size: .92em;
       white-space: nowrap;
+    }
+    .toy-page .toy-context .chip {
+      margin-right: .15em;
     }
 
     /* Hover tooltip on topic/technology — descriptions live in toys.json

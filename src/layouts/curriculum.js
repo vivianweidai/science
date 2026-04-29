@@ -145,18 +145,31 @@
     }
 
     var subjects = ['mathematics', 'computing', 'physics', 'chemistry', 'biology', 'astronomy'];
+    /* `fade-in` is only added on the very first paint. Once each column
+       finishes its fadeUp animation we strip the class (see animationend
+       listener at the end of this function). Otherwise later class
+       toggles like add/remove curr-pulse would force the animation
+       cascade to re-evaluate, restarting fadeUp from t=0 — which the
+       user sees as the column fading out and back in. */
     var fade = hasRendered ? '' : ' fade-in';
     var html = '<div class="curr-grid">';
     subjects.forEach(function (subjSlug, i) {
       var subj = manifest[subjSlug];
       if (!subj) return;
+      // pulse only on click-driven re-renders (after the first paint)
+      // so the URL-hash entry doesn't ride two animations at once.
+      var pulse = hasRendered ? ' curr-pulse' : '';
       var colHl = state.highlightSubject === subjSlug && state.highlightSectionIdx == null
-        ? ' curr-col-highlighted' : '';
-      html += '<div class="curr-col' + fade + colHl + '" data-subj="' + subjSlug + '" style="animation-delay:' + (i * 0.06).toFixed(2) + 's">';
+        ? ' curr-col-highlighted' + pulse : '';
+      // Inline animation-delay is only meaningful for the first-render
+      // staggered fade-in. On click re-renders (hasRendered = true) we
+      // omit it so it doesn't delay the click-pulse animation.
+      var delayAttr = hasRendered ? '' : ' style="animation-delay:' + (i * 0.06).toFixed(2) + 's"';
+      html += '<div class="curr-col' + fade + colHl + '" data-subj="' + subjSlug + '"' + delayAttr + '>';
       html += '<div class="curr-col-head" data-subj="' + subjSlug + '">' + escapeHtml(subj.name) + '</div>';
       subj.sections.forEach(function (sec, secIdx) {
         var secHl = state.highlightSubject === subjSlug && state.highlightSectionIdx === secIdx
-          ? ' curr-section-highlighted' : '';
+          ? ' curr-section-highlighted' + pulse : '';
         html += '<div class="curr-section' + secHl + '" data-secidx="' + secIdx + '">';
         html += '<div class="curr-section-name" data-subj="' + subjSlug + '" data-sec="' + secIdx + '">' + escapeHtml(sec.name) + '</div>';
         html += '<ul>';
@@ -204,24 +217,55 @@
       });
     });
 
+    /* Strip fade-in (and its inline stagger delay) once the first-paint
+       animation finishes on each column. Without this, removing curr-pulse
+       later forces the animation cascade to re-evaluate and fadeUp restarts
+       from t=0 — visible as a column fade-out-and-in. */
+    widget.querySelectorAll('.curr-col.fade-in').forEach(function (el) {
+      el.addEventListener('animationend', function done(e) {
+        if (e.animationName !== 'fadeUp') return;
+        el.classList.remove('fade-in');
+        el.style.animationDelay = '';
+        el.removeEventListener('animationend', done);
+      });
+    });
+
     maybeScrollToHighlight();
   }
 
   /* In-place highlight swap on an already-mounted grid. Toggles the two
      highlight classes and triggers the section-into-view scroll without
-     replacing any nodes — preserves listeners and skips the fade-in. */
+     replacing any nodes — preserves listeners and skips the fade-in.
+     Always retrigger the pulse for elements that are in the highlighted
+     state (not just on transitions in) so a second click on the same
+     header/section gives the same pop-and-down feedback as the first. */
   function applyGridHighlights() {
     widget.querySelectorAll('.curr-col').forEach(function (col) {
       var subjSlug = col.dataset.subj;
       var isCol = state.highlightSubject === subjSlug && state.highlightSectionIdx == null;
       col.classList.toggle('curr-col-highlighted', isCol);
+      if (isCol) retriggerPulse(col);
+      else col.classList.remove('curr-pulse');
       col.querySelectorAll('.curr-section').forEach(function (sec) {
         var secIdx = parseInt(sec.dataset.secidx, 10);
         var isSec = state.highlightSubject === subjSlug && state.highlightSectionIdx === secIdx;
         sec.classList.toggle('curr-section-highlighted', isSec);
+        if (isSec) retriggerPulse(sec);
+        else sec.classList.remove('curr-pulse');
       });
     });
     maybeScrollToHighlight();
+  }
+
+  /* Remove → force reflow → re-add. The reflow is what makes the browser
+     restart the keyframes; without it the no-op toggle gets coalesced and
+     the animation doesn't replay. The fade-in cleanup at the end of
+     renderGrid has already stripped the inline stagger delay before any
+     click can reach this function, so we don't need to clear it here. */
+  function retriggerPulse(el) {
+    el.classList.remove('curr-pulse');
+    void el.offsetWidth;
+    el.classList.add('curr-pulse');
   }
 
   /* Section-level highlight scrolls the yellow block into view so a
@@ -243,7 +287,7 @@
     var topic = sec.topics[state.topicIdx];
 
     var fade = hasRendered ? '' : ' fade-in';
-    var html = '<div class="curr-topic' + fade + '">';
+    var html = '<div class="curr-topic' + fade + '" data-subj="' + state.subject + '">';
     html += '<div class="curr-breadcrumb" data-subj="' + state.subject + '">'
          + '<a class="chip ' + SHORT_SLUGS[state.subject] + '" data-action="subject" href="/curriculum/#' + state.subject + '">' + escapeHtml(subj.name) + '</a>'
          + '<span class="sep">·</span><a href="#" data-action="section-view">' + escapeHtml(sec.name) + '</a>'

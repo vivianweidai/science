@@ -50,16 +50,51 @@ import PageFooter from '../../layouts/PageFooter.astro';
     </div>
   </div>
 
-  <div id="timeline"></div>
+  <div class="timeline-card-wrap">
+    <div id="timeline"></div>
+  </div>
 
   <style is:global>
-    .timeline { border-left: 2px solid #d1d9e0; margin-left: .8em; padding-left: 1.2em; }
+    /* Tab-content card wrapper. Mirrors the research-page topic card and
+       the toy/curriculum leaf-card treatment: 1 px gray border + 4 px
+       science-colored left accent (changes with the active tab) + a
+       soft science-tinted wash. Default stays gray for the All tab. */
+    /* Hover hit-region wrapper. 2 px of bottom/right padding catches the
+       cursor when #timeline lifts up-and-left on hover so the :hover
+       state doesn't drop and re-fire (same trick as .toys-card-wrap). */
+    .timeline-card-wrap {
+      margin: 1em 0;
+      padding: 0 2px 2px 0;
+    }
+    #timeline {
+      border: 1px solid #d1d9e0;
+      border-left: 4px solid #d1d9e0;
+      border-radius: 8px;
+      padding: 0.6em 1.2em 1.2em;
+      background: color-mix(in srgb, var(--card-tint, #d1d9e0) 18%, white);
+      transition: transform 0.2s ease-out, box-shadow 0.18s ease;
+    }
+    .timeline-card-wrap:hover #timeline {
+      transform: translate(-2px, -2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    }
+    body:has(#view-math:checked)  #timeline { border-left-color: #6ba3e8; --card-tint: var(--subj-math); }
+    body:has(#view-comp:checked)  #timeline { border-left-color: #9b7ed8; --card-tint: var(--subj-comp); }
+    body:has(#view-phys:checked)  #timeline { border-left-color: #e8915a; --card-tint: var(--subj-phys); }
+    body:has(#view-chem:checked)  #timeline { border-left-color: #8db849; --card-tint: var(--subj-chem); }
+    body:has(#view-bio:checked)   #timeline { border-left-color: #5bbfb0; --card-tint: var(--subj-bio); }
+    body:has(#view-astro:checked) #timeline { border-left-color: #e86088; --card-tint: var(--subj-astro); }
+
+    .timeline { padding-left: 0; margin-left: 0; }
     .timeline .year-marker {
       font-weight: 700; font-size: 1.1em;
       margin: 1.2em 0 .4em 0;
-      background: #fff;
+      /* Flush-align the year with the month column below it. .entry has
+         font-size: .95em + padding-left: .6em → ~0.57em parent-relative.
+         Year-marker is 1.1em, so we scale down to (.95/1.1)*.6 ≈ .52em
+         to land on the same absolute x-offset. */
+      padding-left: .52em;
       display: inline-block;
-      position: relative;
     }
     .timeline .entry {
       display: grid;
@@ -158,29 +193,14 @@ import PageFooter from '../../layouts/PageFooter.astro';
       70%  { opacity: 1; transform: translate(0, -50%); }
       100% { opacity: 0; transform: translate(0.5em, -50%); }
     }
-    /* Hover: paint the section of the timeline bar in the entry's primary subject color. */
-    .timeline .entry { --bar-color: transparent; }
-    .timeline .entry:has(.chip:first-child.math)  { --bar-color: var(--subj-math); }
-    .timeline .entry:has(.chip:first-child.comp)  { --bar-color: var(--subj-comp); }
-    .timeline .entry:has(.chip:first-child.phys)  { --bar-color: var(--subj-phys); }
-    .timeline .entry:has(.chip:first-child.chem)  { --bar-color: var(--subj-chem); }
-    .timeline .entry:has(.chip:first-child.bio)   { --bar-color: var(--subj-bio); }
-    .timeline .entry:has(.chip:first-child.astro) { --bar-color: var(--subj-astro); }
-    .timeline .entry::after {
-      content: '';
-      position: absolute;
-      left: calc(-1.2em - 2px);
-      top: -3px; bottom: -3px;
-      width: 6px;
-      background: var(--bar-color);
-      opacity: 0;
-      transition: opacity 0.15s ease;
-      pointer-events: none;
+    .timeline .entry { transition: background 0.15s ease; border-radius: 4px; }
+    /* Hover shades the row in the active tab's science tint (deeper than
+       the surrounding card wash) so the row visibly lifts inside its
+       parent card without resorting to a neutral gray. Falls back to gray
+       on the All tab where no card-tint is set. */
+    .timeline .entry:hover {
+      background: color-mix(in srgb, var(--card-tint, #d1d9e0) 35%, white);
     }
-    .timeline .entry:hover::after { opacity: 1; }
-    .timeline .entry { transition: background 0.15s ease; }
-    .timeline .entry:nth-child(even of .entry) { background: #f6f8fa; }
-    .timeline .entry:hover { background: #eef1f4 !important; }
 
     .chip {
       display: inline-block;

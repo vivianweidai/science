@@ -101,7 +101,13 @@ fun ResearchView(store: ContentStore, modifier: Modifier = Modifier) {
                         topics != null -> TopicList(
                             topics = topics!!.filterBy(filter),
                             onToy = { name ->
-                                nav.navigate("toy/${URLEncoder.encode(name, "UTF-8")}")
+                                // URLEncoder uses '+' for spaces, but NavHost path
+                                // args decode with %20 semantics — so swap '+'
+                                // back to %20 to keep "Liquid Chromatography" intact
+                                // through the route round-trip.
+                                val encoded = URLEncoder.encode(name, "UTF-8")
+                                    .replace("+", "%20")
+                                nav.navigate("toy/$encoded")
                             },
                             onPhoto = { title, url ->
                                 val encoded = URLEncoder.encode(url, "UTF-8")
@@ -149,7 +155,8 @@ fun ResearchView(store: ContentStore, modifier: Modifier = Modifier) {
                 indexUrl = url,
                 onBack = { nav.popBackStack() },
                 onToy = { name ->
-                    nav.navigate("toy/${URLEncoder.encode(name, "UTF-8")}")
+                    val encoded = URLEncoder.encode(name, "UTF-8").replace("+", "%20")
+                    nav.navigate("toy/$encoded")
                 },
                 onImageTap = { imageUrl ->
                     // Use the same push-from-right viewer that the main

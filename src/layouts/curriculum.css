@@ -1,6 +1,13 @@
 /* Curriculum widget: 6-column grid that drills into topic content in place. */
 
-.curr-widget { margin: 1.5em 0; }
+/* #curriculum-widget gets 2 px of bottom/right padding so .curr-topic
+   has room to lift up-and-left on hover without dropping the :hover
+   state (same trick as .toys-card-wrap). The grid view doesn't get the
+   lift — it's a 6-column reading layout, not a single discrete card. */
+.curr-widget {
+  margin: 1.5em 0;
+  padding: 0 2px 2px 0;
+}
 
 .curr-grid {
   display: grid;
@@ -61,6 +68,33 @@
   background: #fff44f;
 }
 
+/* Click-feedback pulse — JS adds .curr-pulse alongside the highlight
+   class on click-driven re-renders so the user gets a quick "popup
+   and down" bounce. Uses a translateY lift (more visible than a tiny
+   scale on a tall column) plus a brief slight scale for the section. */
+@keyframes curr-click-pulse {
+  0%   { transform: translateY(0); }
+  40%  { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+.curr-pulse { animation: curr-click-pulse 280ms ease-out; }
+.curr-section.curr-pulse {
+  /* Section pulse: slightly larger lift + a small scale, since the
+     section block is a smaller element and benefits from the extra. */
+  animation: curr-click-pulse-section 280ms ease-out;
+}
+@keyframes curr-click-pulse-section {
+  /* Lift past the 8 px yellow halo so the section visibly "pops" out
+     of its flat highlighted state instead of nudging inside it. */
+  0%   { transform: translateY(0) scale(1); }
+  40%  { transform: translateY(-5px) scale(1.03); }
+  100% { transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .curr-pulse,
+  .curr-section.curr-pulse { animation: none; }
+}
+
 a.curr-col-head,
 a.curr-col-head:hover {
   color: #1f2328;
@@ -108,19 +142,34 @@ a.curr-col-head:hover {
   text-decoration: underline;
 }
 
-/* Topic (drill-in) view */
+/* Topic (drill-in) view — reference card with a canonical-colored title
+   band (.curr-breadcrumb) and a white body. Matches the research-page
+   discipline cards (e.g. "Cells | Biology"). 4 px science-colored left
+   accent stays for the "you're on a leaf reference page" signal. */
 .curr-topic {
   border: 1px solid #d1d9e0;
+  border-left: 4px solid #d1d9e0;
   border-radius: 8px;
   background: #fff;
   padding: 1em 1.4em 1.4em;
+  transition: transform 0.2s ease-out, box-shadow 0.18s ease;
 }
+.curr-widget:hover > .curr-topic {
+  transform: translate(-2px, -2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+.curr-topic[data-subj="mathematics"] { border-left-color: #6ba3e8; --card-tint: var(--subj-math); }
+.curr-topic[data-subj="computing"]   { border-left-color: #9b7ed8; --card-tint: var(--subj-comp); }
+.curr-topic[data-subj="physics"]     { border-left-color: #e8915a; --card-tint: var(--subj-phys); }
+.curr-topic[data-subj="chemistry"]   { border-left-color: #8db849; --card-tint: var(--subj-chem); }
+.curr-topic[data-subj="biology"]     { border-left-color: #5bbfb0; --card-tint: var(--subj-bio); }
+.curr-topic[data-subj="astronomy"]   { border-left-color: #e86088; --card-tint: var(--subj-astro); }
 
 .curr-breadcrumb {
   font-size: 0.95em;
   color: #1f2328;
-  padding: 0.55em 0.7em;
-  border-bottom: 1px solid #eaecef;
+  padding: 0.55em 0.9em;
+  background: var(--card-tint, #d1d9e0);
   margin: -1em -1.4em 1em;
   border-radius: 7px 7px 0 0;
   display: flex;
@@ -131,9 +180,16 @@ a.curr-col-head:hover {
   color: #1f2328;
   text-decoration: none;
 }
-.curr-breadcrumb a:not(.chip):hover { text-decoration: underline; color: #0969da; }
-.curr-breadcrumb .sep { color: #b1b7be; }
-.curr-breadcrumb strong { color: #1f2328; font-weight: 700; }
+.curr-breadcrumb a:not(.chip) { color: #0969da; }
+.curr-breadcrumb a:not(.chip):hover { text-decoration: underline; }
+.curr-breadcrumb .sep { color: #1f2328; opacity: 0.5; }
+.curr-breadcrumb strong { color: #1f2328; font-weight: 400; }
+/* Dark-inverted chip — the canonical-colored band already carries the
+   science signal, so the chip stays readable instead of blending in. */
+.curr-breadcrumb .chip {
+  background: #1f2328;
+  color: #fff;
+}
 
 .curr-topic-body h1 { display: none; }
 .curr-topic-body table {
@@ -162,6 +218,12 @@ a.curr-col-head:hover {
 }
 .curr-topic-body td:nth-child(2) { width: 37.5%; }
 .curr-topic-body td:nth-child(3) { width: 37.5%; }
+/* Explicit white on odd rows so the tinted .curr-topic background
+   doesn't bleed through. Yellow .highlight rule keeps !important
+   so the highlighted rows still win. */
+.curr-topic-body tr:nth-child(odd) td:not(:first-child) {
+  background: #fff;
+}
 .curr-topic-body tr:nth-child(even) td:not(:first-child) {
   background: #f6f8fa;
 }
@@ -190,8 +252,6 @@ a.curr-col-head:hover {
   justify-content: space-between;
   gap: 1em;
   margin-top: 1.2em;
-  padding-top: 0.8em;
-  border-top: 1px solid #eaecef;
   font-size: 0.9em;
 }
 .curr-prevnext a {
@@ -203,11 +263,7 @@ a.curr-col-head:hover {
 .curr-prevnext .spacer { visibility: hidden; }
 .curr-prevnext-top {
   margin-top: 0;
-  padding-top: 0;
-  border-top: none;
   margin-bottom: 0.8em;
-  padding-bottom: 0.8em;
-  border-bottom: 1px solid #eaecef;
 }
 
 .curr-loading {
