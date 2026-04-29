@@ -107,8 +107,10 @@
       toys:
         - toy: Docker
           specs: Containers that freeze every dependency
+          available: true
         - toy: Zenodo
           specs: Permanent DOI archive for datasets and code
+          available: true
 
 # ═══════════════════════════════════════════════════════════════
 # PHYSICS
@@ -162,6 +164,32 @@
 # ═══════════════════════════════════════════════════════════════
 
 - science: Chemistry
+  topic: Physical
+  description: Separate and transform — non-spectroscopic characterization
+  technologies:
+    - technology: Separation
+      description: Pull mixtures apart — by density or chemistry
+      toys:
+        - toy: Centrifugation
+          specs: Spin samples — separate by density at high g-forces
+          available: true
+          completed: "20260411 Centrifuge"
+        - toy: Liquid Chromatography
+          specs: Flow through packed column — separate by chemical affinity
+          available: true
+          completed: "20260427 Liquid Chromatography"
+    - technology: Thermal Analysis
+      description: Watch samples change with heat
+      toys:
+        - toy: Thermogravimetry
+          specs: Mass loss with heating — decomposition and moisture
+          available: true
+          completed: "20260405 Melting Point"
+        - toy: Calorimetry
+          specs: Energy flow with heating — phase transitions and heat capacity
+          available: true
+          completed: "20260405 Melting Point"
+- science: Chemistry
   topic: Spectroscopic
   description: Probe intact molecules — electromagnetic, magnetic and mass spectra
   technologies:
@@ -180,7 +208,7 @@
           specs: ¹H and ¹³C environments — full structural fingerprint
           url: /research/archives/photos/chemistry-nmr.jpg
     - technology: Mass Spectrometry
-      description: Measure molecular mass
+      description: Ionize and weigh — intact mass and fragment fingerprints
       toys:
         - toy: GC-MS
           specs: Volatile molecules — fragment fingerprints via electron ionization
@@ -190,36 +218,34 @@
           specs: Nonvolatile molecules — intact weight via electrospray
           available: true
           completed: "20260427 Mass Spectrometry"
-- science: Chemistry
-  topic: Physical
-  description: Separate and transform — non-spectroscopic characterization
-  technologies:
-    - technology: Separation
-      description: Pull mixtures apart — by density or chemistry
-      toys:
-        - toy: Centrifugation
-          specs: Spin samples — separate by density at high g-forces
-          available: true
-          completed: "20260411 Centrifuge"
-        - toy: Liquid Chromatography
-          specs: Partition in solution — HPLC workhorse for analytical separations
-          available: true
-          completed: "20260427 Liquid Chromatography"
-    - technology: Thermal Analysis
-      description: Watch samples change with heat
-      toys:
-        - toy: Thermogravimetry
-          specs: Mass loss with heating — decomposition and moisture
-          available: true
-          completed: "20260405 Melting Point"
-        - toy: Calorimetry
-          specs: Energy flow with heating — phase transitions and heat capacity
-          available: true
-          completed: "20260405 Melting Point"
 
 # ═══════════════════════════════════════════════════════════════
 # BIOLOGY
 # ═══════════════════════════════════════════════════════════════
+
+- science: Biology
+  topic: Cells
+  description: See and record living systems
+  technologies:
+    - technology: Microscopy
+      description: Image cells at every scale
+      toys:
+        - toy: Handheld
+          specs: Mobile scope — surface inspection without sample prep
+          available: true
+        - toy: Stereo
+          specs: Reflected light — whole specimens in 3D at low magnification
+          available: true
+        - toy: Compound
+          specs: Transmitted light — cells through a slide at high magnification
+          available: true
+    - technology: Systems Imaging
+      description: Record brain activity
+      toys:
+        - toy: EEG
+          specs: Scalp electrodes — Muse
+        - toy: fNIRS
+          specs: Near-infrared light — cortical blood flow
 
 - science: Biology
   topic: Molecules
@@ -230,51 +256,28 @@
       toys:
         - toy: PCR
           specs: Endpoint amplification — cycle temperature until enough copies exist
+          available: true
           completed: "20260401 Genes in Space"
         - toy: qPCR
           specs: Real-time quantitation — count copies as they are made
     - technology: Sequencing
       description: Read the DNA code
       toys:
-        - toy: Short-Read
-          specs: Many short sequences in parallel — Illumina
         - toy: Long-Read
-          specs: One long sequence end to end — Nanopore, PacBio
+          specs: One long sequence end to end — MinION
+        - toy: Short-Read
+          specs: Many short sequences in parallel
     - technology: Expression
       description: Make and see proteins
       toys:
         - toy: Cell-Free
           specs: Produce protein from DNA without living cells
+          available: true
           completed: "20260401 Genes in Space"
         - toy: Fluorescence
           specs: Visualize protein glow under UV light
+          available: true
           completed: "20260401 Genes in Space"
-
-- science: Biology
-  topic: Cells
-  description: See and record living systems
-  technologies:
-    - technology: Phenotyping
-      description: Sort and profile living cells
-      toys:
-        - toy: Flow Cytometer
-          specs: Count and sort cells by fluorescent labels
-        - toy: Metabolic Analyzer
-          specs: Watch cells burn sugar and use oxygen in real time
-    - technology: Microscopy
-      description: Image cells at every scale
-      toys:
-        - toy: Confocal
-          specs: Photons — sharp 3D optical images of cells and tissue
-        - toy: SEM
-          specs: Electrons — surface topography at nanometer resolution
-    - technology: Systems Imaging
-      description: Record brain activity
-      toys:
-        - toy: EEG
-          specs: Scalp electrodes — millisecond electrical activity
-        - toy: fNIRS
-          specs: Near-infrared light — cortical blood flow
 
 # ═══════════════════════════════════════════════════════════════
 # ASTRONOMY
@@ -288,16 +291,18 @@
       description: Optical wavelengths from backyards to mountaintop observatories
       toys:
         - toy: Household
-          specs: Amateur reflector with motorized mount and CCD
+          specs: Amateur smart telescope — motorized mount and integrated camera
           available: true
         - toy: Earth
           specs: Meter-class ground telescope at a dark site
+          available: true
           url: /research/archives/photos/astronomy-refractor-a.jpg
     - technology: Invisible
       description: Wavelengths outside the visible — radio through X-ray
       toys:
         - toy: Radio
-          specs: Many dishes synthesized into one high-resolution image
+          specs: Backyard antenna to synthesized array — Jupiter bursts to galactic structure
+          available: true
         - toy: Space
           specs: Above the atmosphere — UV, infrared and X-ray wavelengths blocked by air
 
@@ -310,10 +315,13 @@
       toys:
         - toy: Photometry
           specs: How bright — light curves reveal variability, transits and distance
+          available: true
         - toy: Astrometry
           specs: Where — positions and proper motions reveal parallax and orbits
+          available: true
         - toy: Spectroscopy
           specs: What — wavelengths reveal composition, temperature and radial velocity
+          available: true
           url: /research/archives/photos/astronomy-orion-nebula.jpg
     - technology: Classification
       description: Label sources with machine learning

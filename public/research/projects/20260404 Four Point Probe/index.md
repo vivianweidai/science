@@ -1,9 +1,15 @@
 ---
 project: Four-Point Probe
+toys:
+  - Multimeter
+  - NumPy
+  - Matplotlib
+  - Jupyter
+  - GitHub
+title: "Four-Point Probe Sheet Resistance Measurements"
+sciences:
+  - Physics
 ---
-
-
-<div class="project-title"><h1>Four-Point Probe Sheet Resistance Measurements</h1><a class="chip phys" href="/curriculum/#physics">Physics</a></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
@@ -75,3 +81,13 @@ The quarter and spoon were the most conductive samples, while the brass house ke
 Readings fluctuated significantly during measurement — the display value drifted continuously and never fully stabilized, even on the same sample without moving the probes. Repeated measurements of the same item produced a wide spread of values, making it difficult to draw firm quantitative conclusions. The broad ranges in the table above reflect this instability rather than true differences between measurement points. Four-point probes are designed for flat, uniform samples with controlled contact pressure, so the irregular and curved surfaces of household objects likely contributed to the variability.
 
 All sheet-resistance calculations and per-sample plots are in the analysis <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb" rel="noopener">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb" rel="noopener">colab</a>.
+
+## Technology
+
+<ul class="updates-list">
+  <li class="fade-in" data-subj="math"><span class="update-date">Numerical</span> <span class="update-name"><a href="/research/toys/mathematics/NumPy/" data-photo="/research/toys/mathematics/NumPy/numpy.jpeg">NumPy</a></span> <span class="update-desc">Array foundation — linear algebra and vectorized math</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li class="fade-in" data-subj="math"><span class="update-date">Graphing</span> <span class="update-name"><a href="/research/toys/mathematics/Matplotlib/" data-photo="/research/toys/mathematics/Matplotlib/matplotlib.jpeg">Matplotlib</a></span> <span class="update-desc">Python 2D and 3D plotting</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/GitHub/" data-photo="/research/toys/computing/GitHub/github.jpeg">GitHub</a></span> <span class="update-desc">Data and source code repositories</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/Jupyter/" data-photo="/research/toys/computing/Jupyter/jupyter.jpeg">Jupyter</a></span> <span class="update-desc">Notebooks combining code, figures and narrative</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li class="fade-in" data-subj="phys"><span class="update-date">Circuits</span> <span class="update-name"><a href="/research/toys/physics/Multimeter/" data-photo="/research/toys/physics/Multimeter/multimeter.jpeg">Multimeter</a></span> <span class="update-desc">Steady-state values — voltage, current and resistance</span> <a class="chip phys" href="/research/#phys">Physics</a></li>
+</ul>

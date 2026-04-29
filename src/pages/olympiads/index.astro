@@ -17,11 +17,25 @@ import PageFooter from '../../layouts/PageFooter.astro';
     <script is:inline>
       (function(){
         var tabs = ['view-math','view-comp','view-phys','view-chem','view-bio','view-astro'];
+        // Hash takes precedence so a chip click on another page can deep-link
+        // straight to the right tab. Fall through to the saved tab, then
+        // a random pick.
+        var hash = (location.hash || '').replace(/^#/, '');
         var saved = sessionStorage.getItem('subj-tab');
-        var pick = saved && document.getElementById('view-' + saved) ? 'view-' + saved
-          : tabs[Math.floor(Math.random() * tabs.length)];
+        var pick;
+        if (hash && document.getElementById('view-' + hash)) pick = 'view-' + hash;
+        else if (saved && document.getElementById('view-' + saved)) pick = 'view-' + saved;
+        else pick = tabs[Math.floor(Math.random() * tabs.length)];
         document.getElementById(pick).checked = true;
         sessionStorage.setItem('subj-tab', pick.replace('view-', ''));
+        window.addEventListener('hashchange', function(){
+          var h = (location.hash || '').replace(/^#/, '');
+          var el = document.getElementById('view-' + h);
+          if (!el) return;
+          el.checked = true;
+          sessionStorage.setItem('subj-tab', h);
+          el.dispatchEvent(new Event('change', { bubbles: true }));
+        });
       })();
     </script>
 
@@ -233,7 +247,7 @@ import PageFooter from '../../layouts/PageFooter.astro';
 
     function chip(subj) {
       var slug = SUBJECT_SLUGS[subj];
-      return '<a class="chip ' + slug + '" href="/curriculum/#' + subj.toLowerCase() + '">' + subj + '</a>';
+      return '<a class="chip ' + slug + '" href="/olympiads/#' + slug + '">' + subj + '</a>';
     }
 
     function chipsForEntry(e) {

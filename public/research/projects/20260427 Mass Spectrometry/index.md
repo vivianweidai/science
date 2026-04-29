@@ -1,9 +1,12 @@
 ---
 project: Mass Spectrometry
+toys:
+  - GC-MS
+  - LC-MS
+title: "Mass Spectrometry — Dry Run"
+sciences:
+  - Chemistry
 ---
-
-
-<div class="project-title"><h1>Mass Spectrometry — Dry Run</h1><a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
@@ -15,12 +18,12 @@ project: Mass Spectrometry
 
 <div class="section-heading"><h2>Overview</h2><span class="section-date">April 27th 2026</span></div>
 
-Mass spectrometry weighs molecules. A short laser pulse vaporizes and ionizes the sample off a metal target plate; ions accelerate down a vacuum flight tube and the time of flight maps to mass-to-charge (m/z) — heavier ions arrive later. The output is a mass spectrum: peaks at the m/z of every detected ion.
+Mass spectrometry weighs molecules. A UV laser pulse vaporizes and ionizes the sample off a steel target plate; ions fly down a vacuum tube and time-of-flight maps to m/z.
 
-- **MALDI** — solid sample dried on a plate, ionized directly by a UV laser (matrix-assisted in production, neat for this dry run). No column upstream.
-- **GC-MS / LC-MS** — same idea, but the ion source sits at the end of a chromatograph: each peak that elutes off the column is ionized and weighed in turn. MALDI trades that separation dimension for speed and minimal sample prep.
+- **MALDI** — dry sample on a plate, laser-ionized direct, **no column**. Fast, minimal prep — trades chromatographic separation for speed.
+- **GC-MS / LC-MS** — same TOF idea but with a chromatograph in front; each eluting peak is ionized in turn.
 
-This page is the **clickthrough dry run** — load an empty plate, fire the laser at a clean spot, save the spectrum. No analyte, no matrix. The point is to verify the full path end-to-end before introducing real samples.
+Clickthrough dry run — empty plate, clean spot, save the spectrum. Verifies the path before real samples.
 
 ## Setup
 
@@ -37,12 +40,12 @@ This page is the **clickthrough dry run** — load an empty plate, fire the lase
 | Toolkit | Details |
 |---------|---------|
 | Mode | Linear positive ion |
-| Vacuum | Built-in pump — pumpdown ~3–5 min (vs ~15–20 on older AXIMA) |
+| Vacuum | Built-in pump — pumpdown ~3–5 min |
 | Software | MALDIsolutions |
-| Method | Default Linear Positive · laser power 30/180 · 50 shots · 1 profile |
+| Method | Default Linear Positive · laser 30/180 · 50 shots · 1 profile |
 | Output | `.lcd` / `.run` to USB |
 
-The MALDI-8020 is the SIL's walk-up benchtop — single-button vent/pumpdown, no separate roughing pump to babysit, no source bake-out. Plate cleaned with methanol on a lint-free wipe; loaded gloved; venting and pumping driven entirely from MALDIsolutions.
+Single-button vent/pumpdown, no roughing pump, no source bake-out. Plate wiped with methanol, loaded gloved.
 
 ## Samples
 
@@ -50,33 +53,20 @@ The MALDI-8020 is the SIL's walk-up benchtop — single-button vent/pumpdown, no
 |----------|--------|
 | Blank | Clean target plate, no analyte, no matrix |
 
-A real session would deposit 1 µL of analyte onto a target spot, dry, overlay 1 µL of matrix solution (sinapinic acid for proteins, CHCA for peptides, DHB for small molecules), dry again, then load. The dry run skips matrix entirely — the laser fires onto bare polished steel.
+A real session deposits 1 µL analyte + 1 µL matrix (sinapinic acid for proteins, CHCA for peptides, DHB for small molecules), dries, then loads. The dry run skips matrix — laser fires onto bare polished steel.
 
 ## Method
 
-The clickthrough, in order:
-
-1. **Power up** — rear switch on; status LED steady (~2 min); MALDIsolutions launched; instrument shows "Ready"; laser interlock confirms "Safe" with chamber lid closed.
-2. **Load plate** — Sample → Vent (~30–60 s to atmosphere); drawer open; clean target slid in; drawer closed; Sample → Pump Down (~3–5 min back to operating vacuum).
-3. **Method** — Method Editor → load default Linear Positive · laser 30/180 · 50 shots · 1 profile · 500–3000 m/z.
-4. **Acquire** — Acquisition window; camera view; pick a clean spot on the empty plate; click Acquire — laser fires, spectrum window populates.
-5. **Save** — File → Save → `.lcd`/`.run` to USB.
-6. **Shutdown** — Vent, remove plate, pump back down (instrument is happiest stored under vacuum); leave instrument powered.
+1. **Power up** — rear switch on, status LED steady (~2 min), MALDIsolutions launched, "Ready", lid closed.
+2. **Load plate** — Vent (~30–60 s), drawer open, target in, drawer closed, Pump Down (~3–5 min).
+3. **Method** — Method Editor → default Linear Positive · 30/180 · 50 shots · 500–3000 m/z.
+4. **Acquire** — pick clean spot in camera view, click Acquire.
+5. **Save** — `.lcd`/`.run` to USB.
+6. **Shutdown** — Vent, remove plate, pump back down, leave powered.
 
 ## Expected Results
 
-A flat baseline across 500–3000 m/z. No analyte, no matrix → no real peaks. What we are checking:
-
-| Check | Pass criterion | Failure mode |
-|-------|----------------|--------------|
-| Vacuum reaches operating pressure | Pumpdown completes in ~3–5 min, MALDIsolutions clears the "venting" / "pumping" indicator | Stuck pumping → seal leak or chamber not seated |
-| Laser fires on command | Spectrum window populates after Acquire; detector trace updates | Static window → laser interlock or HV not enabled |
-| Detector alive | Baseline shows expected electronic noise floor across 500–3000 m/z | Dead-flat zero or pinned saturation → detector or amplifier fault |
-| File write | `.lcd`/`.run` saves to USB and re-opens cleanly | Format mismatch → check MALDIsolutions export preset |
-
-If real peaks appear, the plate isn't clean — note it, re-wipe with methanol, retry. Not blocking for the dry run.
-
-The next session deposits a calibration peptide standard (e.g. bradykinin / angiotensin mix) with CHCA matrix, switches to Reflectron mode for sub-Da resolution, and recalibrates the m/z axis from the known peptide masses.
+Flat baseline across 500–3000 m/z — no analyte, no matrix, no peaks; if peaks appear, the plate isn't clean (re-wipe with methanol and retry). Next session deposits a calibration peptide standard (bradykinin / angiotensin) with CHCA matrix, switches to Reflectron mode for sub-Da resolution, and recalibrates the m/z axis.
 
 <h2 id="extensions">Extensions</h2>
 
@@ -89,8 +79,14 @@ The next session deposits a calibration peptide standard (e.g. bradykinin / angi
 
 | Instrument | Extension | Description |
 |------------|-----------|-------------|
-| [Agilent 7890A GC 5975C Inert MSD](photos/setup/setup2.jpeg) 📷 | Volatiles | GC column upstream, electron-impact ionization — fragment fingerprints for small volatile molecules |
-| [Agilent 6230A TOF LC-MS](photos/setup/setup3.jpeg) 📷 | Nonvolatiles | LC column upstream, electrospray ionization — intact mass for nonvolatile and thermally fragile compounds |
+| [Agilent 7890A GC 5975C Inert MSD](photos/setup/setup2.jpeg) 📷 | Volatiles | GC + EI — small molecules, fragmented |
+| [Agilent 6230A TOF LC-MS](photos/setup/setup3.jpeg) 📷 | Nonvolatiles | LC + ESI — large molecules, intact |
 
 </div>
 
+## Technology
+
+<ul class="updates-list">
+  <li class="fade-in" data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/GC-MS/" data-photo="/research/archives/photos/chemistry-gc-ms.jpg">GC-MS</a></span> <span class="update-desc">Volatile molecules — fragment fingerprints via electron ionization</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li class="fade-in" data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/LC-MS/" data-photo="/research/archives/photos/chemistry-lc-ms.jpg">LC-MS</a></span> <span class="update-desc">Nonvolatile molecules — intact weight via electrospray</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+</ul>

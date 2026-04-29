@@ -30,12 +30,43 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent.parent
 CONTENT = ROOT / "public" / "research"
 PROJECTS = CONTENT / "projects"
+TOYS_DIR = CONTENT / "toys"
 
 SCIENCES = {"Biology", "Chemistry", "Physics", "Computing", "Mathematics", "Astronomy"}
+# Short slug — used for chip styling and the /research/#<slug> column anchor.
 SCIENCE_SLUGS = {
     "Biology": "bio", "Chemistry": "chem", "Physics": "phys",
     "Computing": "comp", "Mathematics": "math", "Astronomy": "astro",
 }
+# Folder name on disk and in URLs — full word, matching public/curriculum/source.
+SCIENCE_FOLDERS = {
+    "Biology": "biology", "Chemistry": "chemistry", "Physics": "physics",
+    "Computing": "computing", "Mathematics": "mathematics", "Astronomy": "astronomy",
+}
+
+
+def hero_for_toy(science_folder: str, toy_name: str) -> str | None:
+    """Return absolute hero-image URL for a toy by reading its index.md
+    frontmatter (`hero:` field). Returns None when no toy folder exists yet
+    or when the frontmatter has no hero. Relative paths in frontmatter are
+    resolved against the toy folder's URL."""
+    md = TOYS_DIR / science_folder / toy_name / "index.md"
+    if not md.is_file():
+        return None
+    text = md.read_text()
+    if not text.startswith("---\n"):
+        return None
+    end = text.find("\n---", 4)
+    if end < 0:
+        return None
+    fm = yaml.safe_load(text[4:end]) or {}
+    hero = fm.get("hero")
+    if not hero:
+        return None
+    if hero.startswith(("/", "http://", "https://")):
+        return hero
+    base = f"/research/toys/{science_folder}/{urllib.parse.quote(toy_name)}/"
+    return base + urllib.parse.quote(hero)
 
 
 def build() -> list[dict]:
@@ -63,12 +94,20 @@ def build() -> list[dict]:
                     if f not in toy:
                         raise ValueError(f"topic[{i}].tech[{j}].toy[{k}] missing {f!r}")
                 toy_id += 1
+                folder = SCIENCE_FOLDERS[e["science"]]
                 t: dict = {
                     "id": toy_id,
                     "toy": toy["toy"],
                     "specs": toy["specs"],
                     "available": 1 if toy.get("available") else 0,
+                    "toy_url": (
+                        f"/research/toys/{folder}/"
+                        f"{urllib.parse.quote(toy['toy'])}/"
+                    ),
                 }
+                hero = hero_for_toy(folder, toy["toy"])
+                if hero:
+                    t["hero"] = hero
                 if toy.get("url"):
                     t["url"] = toy["url"]
                 if toy.get("completed"):

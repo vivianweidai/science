@@ -14,7 +14,7 @@ Personal science portfolio and lab notebook — available on [web](https://vivia
 ```
 src/
   layouts/                 Astro components + their CSS/JS/images (bundled)
-  pages/                   File-based routing (English + /zh/ mirror)
+  pages/                   File-based routing
   content.config.ts        Content collection config
 pipeline/worker/           Cloudflare Worker (Static Assets passthrough)
 pipeline/scripts/          Python build scripts (.docx → markdown, YAML → JSON)

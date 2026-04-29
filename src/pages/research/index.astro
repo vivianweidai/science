@@ -16,10 +16,16 @@ import PageFooter from '../../layouts/PageFooter.astro';
     <input type="radio" name="toys-view" id="toys-astro" />
     <script is:inline>
       (function(){
+        // Hash takes precedence (e.g. /research/#math arrives from a toy
+        // page's "Research" header link), then session storage, then a
+        // random science. "all" / "home" hashes fall through to random.
         var picks = ['toys-chem','toys-bio','toys-phys','toys-comp'];
+        var hash = (location.hash || '').replace(/^#/, '');
+        var fromHash = hash && document.getElementById('toys-' + hash) ? 'toys-' + hash : null;
         var saved = sessionStorage.getItem('subj-tab');
-        var pick = saved && document.getElementById('toys-' + saved) ? 'toys-' + saved
-          : picks[Math.floor(Math.random() * picks.length)];
+        var pick = fromHash
+          || (saved && document.getElementById('toys-' + saved) ? 'toys-' + saved : null)
+          || picks[Math.floor(Math.random() * picks.length)];
         document.getElementById(pick).checked = true;
         sessionStorage.setItem('subj-tab', pick.replace('toys-', ''));
       })();
@@ -66,7 +72,7 @@ import PageFooter from '../../layouts/PageFooter.astro';
         html += '<div class="toys-card toys-accent-' + topic.science_slug + '">';
         html += '<div class="toys-card-header">'
           + '<span class="toys-topic-title">' + esc(topic.topic)
-          + ' <a class="chip ' + topic.science_slug + '" href="/curriculum/#' + topic.science.toLowerCase() + '">' + topic.science + '</a></span>'
+          + ' <a class="chip ' + topic.science_slug + '" href="/research/#' + topic.science_slug + '">' + topic.science + '</a></span>'
           + '<span class="toys-topic-desc">' + esc(topic.description || '') + '</span>'
           + '</div>';
         html += '<table class="toys-table"><colgroup><col style="width:28%"><col><col style="width:2em"></colgroup><tbody>';
@@ -81,36 +87,16 @@ import PageFooter from '../../layouts/PageFooter.astro';
             var name = esc(toy.toy);
             var url = toy.url || '';
             var isPhotoUrl = /\.(jpe?g|png|gif|webp)$/i.test(url);
-            // Photo URLs no longer link the title — only project_url does. The 📷 icon
-            // becomes the clickable link to the full image.
-            var link = toy.project_url || (isPhotoUrl ? null : toy.url);
-            if (link) name = '<a href="' + link + '">' + name + '</a>';
-            if (toy.url) {
-              var icon = '';
-              var iconTitle = '';
-              if (isPhotoUrl) {
-                icon = '📷';
-                iconTitle = 'Photo / work in progress';
-              } else if (toy.toy === 'Jupyter' || /\.ipynb($|\?)/i.test(toy.url)) {
-                icon = '📓';
-                iconTitle = 'Jupyter notebook';
-              } else if (/wolframcloud\.com|\.nb($|\?)/i.test(toy.url) || toy.toy === 'Wolfram Alpha') {
-                icon = '<img src="/research/layouts/spikey.png" width="14" height="14" style="vertical-align:-0.15em" alt="">';
-                iconTitle = 'Wolfram';
-              } else if (/colab\.research/i.test(toy.url)) {
-                icon = '📓';
-                iconTitle = 'Colab notebook';
-              } else if (/github\.com/i.test(toy.url)) {
-                icon = '<svg viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="vertical-align:-0.15em" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>';
-                iconTitle = 'GitHub';
-              }
-              if (icon) {
-                name += isPhotoUrl
-                  ? ' <a class="toys-wip" href="' + url + '" title="' + iconTitle + '">' + icon + '</a>'
-                  : ' <span class="toys-wip" title="' + iconTitle + '">' + icon + '</span>';
-              }
+            // Toy names always link to the toy's template page. The 📷 / 📓 / GitHub
+            // icon (when present) is a separate link to the external resource.
+            // When the toy page has a hero photo, expose it via data-photo so
+            // photo-preview.js shows the same hover popup used on olympiads.
+            if (toy.toy_url) {
+              var attrs = 'href="' + toy.toy_url + '"';
+              if (toy.hero) attrs += ' data-photo="' + esc(toy.hero) + '"';
+              name = '<a ' + attrs + '>' + name + '</a>';
             }
-            var access = toy.available ? '<span class="toys-avail">&#10003;</span>' : '';
+            var access = toy.available ? '<span class="toys-avail" title="Access granted">&#10003;</span>' : '';
 
             html += '<tr class="toys-toy-row">'
               + '<td style="padding-left:2.8em">' + name + '</td>'
@@ -136,6 +122,10 @@ import PageFooter from '../../layouts/PageFooter.astro';
           r.addEventListener('change', function () {
             var filter = this.id.replace('toys-', '');
             sessionStorage.setItem('subj-tab', filter);
+            // Reflect the active tab in the URL hash so a back-navigation
+            // from a toy page lands on the right tab instead of re-randomizing.
+            // replaceState keeps history clean (one entry per page visit).
+            history.replaceState(null, '', '#' + filter);
             renderToys(topics, filter);
           });
         });

@@ -1,9 +1,12 @@
 ---
 project: Melting Point
+toys:
+  - Calorimetry
+  - Thermogravimetry
+title: "Melting Point of Everyday Compounds"
+sciences:
+  - Chemistry
 ---
-
-
-<div class="project-title"><h1>Melting Point of Everyday Compounds</h1><a class="chip chem" href="/curriculum/#chemistry">Chemistry</a></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
@@ -75,3 +78,10 @@ This project connects to the broader thermal analysis series — the next steps 
 | [Hughes Aircraft HRW 250B](/research/archives/photos/chemistry-hughes-welder.jpg) 📷 | Repair | Welds new thermocouple tips |
 
 </div>
+
+## Technology
+
+<ul class="updates-list">
+  <li class="fade-in" data-subj="chem"><span class="update-date">Thermal Analysis</span> <span class="update-name"><a href="/research/toys/chemistry/Thermogravimetry/" data-photo="/research/archives/photos/chemistry-tga-q50.jpg">Thermogravimetry</a></span> <span class="update-desc">Mass loss with heating — decomposition and moisture</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li class="fade-in" data-subj="chem"><span class="update-date">Thermal Analysis</span> <span class="update-name"><a href="/research/toys/chemistry/Calorimetry/" data-photo="/research/archives/photos/chemistry-dsc-q100.jpg">Calorimetry</a></span> <span class="update-desc">Energy flow with heating — phase transitions and heat capacity</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+</ul>

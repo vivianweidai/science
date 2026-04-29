@@ -18,9 +18,21 @@
   var RAW_BASE = 'https://vivianweidai.com/curriculum/source/';
   var MANIFEST_URL = '/curriculum/curriculum.json';
 
+  // Short slug for chip styling (.chip.bio, .chip.math, …). Folder names
+  // and hash slugs use the full word; chips need the abbreviated tone.
+  var SHORT_SLUGS = {
+    mathematics: 'math', computing: 'comp', physics: 'phys',
+    chemistry: 'chem', biology: 'bio', astronomy: 'astro',
+  };
+
   var manifest = null;
   var pendingHash = parseHash();
   var state = { view: 'grid' };
+  // Fade-in only fires on the first render after a hard load. All
+  // in-page transitions (grid ↔ topic, topic ↔ topic) skip the
+  // animation per user feedback — animated reflow on every click was
+  // distracting once you were already on the page.
+  var hasRendered = false;
 
   widget.classList.add('curr-widget');
   widget.innerHTML = '<div class="curr-loading">Loading curriculum…</div>';
@@ -45,10 +57,10 @@
 
   function pushState() {
     var hash = '#';
-    if (state.view === 'subject') {
-      hash += state.subject;
+    if (state.view === 'grid' && state.highlightSubject) {
+      hash += state.highlightSubject;
       if (state.highlightSectionIdx != null) {
-        var hsec = manifest[state.subject].sections[state.highlightSectionIdx];
+        var hsec = manifest[state.highlightSubject].sections[state.highlightSectionIdx];
         hash += '/' + slugify(hsec.name);
       }
     } else if (state.view === 'topic') {
@@ -62,29 +74,30 @@
   /* parseHash returns RAW slug-or-number tokens. Numeric → index lookup;
      slug → name match. Resolved into actual indices by resolveState once
      the manifest has loaded.
-     - 1 part:  subject view (no highlight)
-     - 2 parts: subject view with that section highlighted (clicked section
-                names land here so users see the broader subject context
-                instead of a cramped section-only view).
+     - 1 part:  grid view with that subject's column highlighted.
+     - 2 parts: grid view with that subject's section highlighted (clicked
+                section names land here — same yellow block treatment as
+                a single topic, but without leaving the 6-column grid).
      - 3 parts: topic table view (clicked leaf topics land here). */
   function parseHash() {
     var h = location.hash.replace(/^#/, '');
     if (!h) return null;
     var parts = h.split('/').map(decodeURIComponent);
-    if (parts.length === 1) return { view: 'subject', subject: parts[0] };
-    if (parts.length === 2) return { view: 'subject', subject: parts[0], highlightSection: parts[1] };
+    if (parts.length === 1) return { view: 'grid', subject: parts[0] };
+    if (parts.length === 2) return { view: 'grid', subject: parts[0], section: parts[1] };
     if (parts.length === 3) return { view: 'topic', subject: parts[0], section: parts[1], topic: parts[2] };
     return null;
   }
 
   function resolveState(raw) {
-    if (raw.view === 'subject') {
+    if (raw.view === 'grid') {
+      if (!raw.subject) return { view: 'grid' };
       var subj0 = manifest[raw.subject];
       if (!subj0) return { view: 'grid' };
-      if (!raw.highlightSection) return { view: 'subject', subject: raw.subject };
-      var hIdx = lookupIdx(subj0.sections, raw.highlightSection);
-      if (hIdx < 0) return { view: 'subject', subject: raw.subject };
-      return { view: 'subject', subject: raw.subject, highlightSectionIdx: hIdx };
+      if (!raw.section) return { view: 'grid', highlightSubject: raw.subject };
+      var hIdx = lookupIdx(subj0.sections, raw.section);
+      if (hIdx < 0) return { view: 'grid', highlightSubject: raw.subject };
+      return { view: 'grid', highlightSubject: raw.subject, highlightSectionIdx: hIdx };
     }
     var subj = manifest[raw.subject];
     if (!subj) return { view: 'grid' };
@@ -117,20 +130,34 @@
   function render() {
     pushState();
     if (state.view === 'topic') renderTopic();
-    else if (state.view === 'subject') renderSubject();
     else renderGrid();
+    hasRendered = true;
   }
 
   function renderGrid() {
+    // If a grid is already mounted, just adjust highlight classes in place
+    // — no DOM rebuild, no fade-in replay, listeners stay attached. This
+    // covers all in-page navigation between sciences/sections. A full
+    // rebuild only happens on first paint or when returning from a topic.
+    if (widget.querySelector('.curr-grid')) {
+      applyGridHighlights();
+      return;
+    }
+
     var subjects = ['mathematics', 'computing', 'physics', 'chemistry', 'biology', 'astronomy'];
+    var fade = hasRendered ? '' : ' fade-in';
     var html = '<div class="curr-grid">';
     subjects.forEach(function (subjSlug, i) {
       var subj = manifest[subjSlug];
       if (!subj) return;
-      html += '<div class="curr-col fade-in" style="animation-delay:' + (i * 0.06).toFixed(2) + 's">';
+      var colHl = state.highlightSubject === subjSlug && state.highlightSectionIdx == null
+        ? ' curr-col-highlighted' : '';
+      html += '<div class="curr-col' + fade + colHl + '" data-subj="' + subjSlug + '" style="animation-delay:' + (i * 0.06).toFixed(2) + 's">';
       html += '<div class="curr-col-head" data-subj="' + subjSlug + '">' + escapeHtml(subj.name) + '</div>';
       subj.sections.forEach(function (sec, secIdx) {
-        html += '<div class="curr-section">';
+        var secHl = state.highlightSubject === subjSlug && state.highlightSectionIdx === secIdx
+          ? ' curr-section-highlighted' : '';
+        html += '<div class="curr-section' + secHl + '" data-secidx="' + secIdx + '">';
         html += '<div class="curr-section-name" data-subj="' + subjSlug + '" data-sec="' + secIdx + '">' + escapeHtml(sec.name) + '</div>';
         html += '<ul>';
         sec.topics.forEach(function (topic, topicIdx) {
@@ -161,7 +188,7 @@
 
     widget.querySelectorAll('.curr-col-head').forEach(function (h) {
       h.addEventListener('click', function () {
-        state = { view: 'subject', subject: h.dataset.subj };
+        state = { view: 'grid', highlightSubject: h.dataset.subj };
         render();
       });
     });
@@ -169,93 +196,45 @@
     widget.querySelectorAll('.curr-section-name').forEach(function (s) {
       s.addEventListener('click', function () {
         state = {
-          view: 'subject',
-          subject: s.dataset.subj,
+          view: 'grid',
+          highlightSubject: s.dataset.subj,
           highlightSectionIdx: parseInt(s.dataset.sec, 10),
         };
         render();
       });
     });
+
+    maybeScrollToHighlight();
   }
 
-
-  function renderSubject() {
-    var subj = manifest[state.subject];
-    var hasHighlight = state.highlightSectionIdx != null;
-    var html = '<div class="curr-subject">';
-    html += '<div class="curr-breadcrumb" data-subj="' + state.subject + '">'
-         + '<a href="#" data-action="grid">Science</a>'
-         + '<span class="sep">/</span>'
-         + (hasHighlight
-           ? '<a href="#" data-action="subject">' + escapeHtml(subj.name) + '</a>'
-             + '<span class="sep">/</span><strong>'
-             + escapeHtml(subj.sections[state.highlightSectionIdx].name) + '</strong>'
-           : '<strong>' + escapeHtml(subj.name) + '</strong>')
-         + '</div>';
-    html += '<div class="curr-subject-sections">';
-    subj.sections.forEach(function (sec, secIdx) {
-      var hl = state.highlightSectionIdx === secIdx ? ' curr-section-highlighted' : '';
-      html += '<div class="curr-section fade-in' + hl + '" data-secidx="' + secIdx + '" style="animation-delay:' + (secIdx * 0.05).toFixed(2) + 's">';
-      html += '<div class="curr-section-name" data-subj="' + state.subject + '" data-sec="' + secIdx + '">' + escapeHtml(sec.name) + '</div>';
-      html += '<ul>';
-      sec.topics.forEach(function (topic, topicIdx) {
-        html += '<li><a href="#" data-subj="' + state.subject
-             + '" data-sec="' + secIdx
-             + '" data-topic="' + topicIdx + '">'
-             + escapeHtml(topic.name.toLowerCase()) + '</a></li>';
-      });
-      html += '</ul></div>';
-    });
-    html += '</div></div>';
-    widget.innerHTML = html;
-
-    widget.querySelector('[data-action="grid"]').addEventListener('click', function (e) {
-      e.preventDefault();
-      state = { view: 'grid' };
-      render();
-    });
-
-    var subjectLink = widget.querySelector('[data-action="subject"]');
-    if (subjectLink) {
-      subjectLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        state = { view: 'subject', subject: state.subject };
-        render();
-      });
-    }
-
-    widget.querySelectorAll('.curr-section a').forEach(function (a) {
-      a.addEventListener('click', function (e) {
-        e.preventDefault();
-        state = {
-          view: 'topic',
-          subject: a.dataset.subj,
-          sectionIdx: parseInt(a.dataset.sec, 10),
-          topicIdx: parseInt(a.dataset.topic, 10),
-        };
-        render();
+  /* In-place highlight swap on an already-mounted grid. Toggles the two
+     highlight classes and triggers the section-into-view scroll without
+     replacing any nodes — preserves listeners and skips the fade-in. */
+  function applyGridHighlights() {
+    widget.querySelectorAll('.curr-col').forEach(function (col) {
+      var subjSlug = col.dataset.subj;
+      var isCol = state.highlightSubject === subjSlug && state.highlightSectionIdx == null;
+      col.classList.toggle('curr-col-highlighted', isCol);
+      col.querySelectorAll('.curr-section').forEach(function (sec) {
+        var secIdx = parseInt(sec.dataset.secidx, 10);
+        var isSec = state.highlightSubject === subjSlug && state.highlightSectionIdx === secIdx;
+        sec.classList.toggle('curr-section-highlighted', isSec);
       });
     });
+    maybeScrollToHighlight();
+  }
 
-    widget.querySelectorAll('.curr-section-name').forEach(function (s) {
-      s.addEventListener('click', function () {
-        state = {
-          view: 'subject',
-          subject: s.dataset.subj,
-          highlightSectionIdx: parseInt(s.dataset.sec, 10),
-        };
-        render();
-      });
+  /* Section-level highlight scrolls the yellow block into view so a
+     mid-page section isn't off-screen. Column-level highlight does NOT
+     auto-scroll — the column already starts at the page top, and
+     centering a tall column would push the viewport halfway down. */
+  function maybeScrollToHighlight() {
+    if (state.highlightSubject == null || state.highlightSectionIdx == null) return;
+    var target = widget.querySelector('.curr-section-highlighted');
+    if (!target) return;
+    requestAnimationFrame(function () {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
-
-    if (state.highlightSectionIdx != null) {
-      var target = widget.querySelector('.curr-section-highlighted');
-      if (target) {
-        requestAnimationFrame(function () {
-          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        });
-      }
-    }
   }
 
   function renderTopic() {
@@ -263,12 +242,12 @@
     var sec = subj.sections[state.sectionIdx];
     var topic = sec.topics[state.topicIdx];
 
-    var html = '<div class="curr-topic fade-in">';
+    var fade = hasRendered ? '' : ' fade-in';
+    var html = '<div class="curr-topic' + fade + '">';
     html += '<div class="curr-breadcrumb" data-subj="' + state.subject + '">'
-         + '<a href="#" data-action="grid">Science</a>'
-         + '<span class="sep">/</span><a href="#" data-action="subject">' + escapeHtml(subj.name) + '</a>'
-         + '<span class="sep">/</span><a href="#" data-action="section-view">' + escapeHtml(sec.name) + '</a>'
-         + '<span class="sep">/</span><strong>' + escapeHtml(topic.name) + '</strong>'
+         + '<a class="chip ' + SHORT_SLUGS[state.subject] + '" data-action="subject" href="/curriculum/#' + state.subject + '">' + escapeHtml(subj.name) + '</a>'
+         + '<span class="sep">·</span><a href="#" data-action="section-view">' + escapeHtml(sec.name) + '</a>'
+         + '<span class="sep">·</span><strong>' + escapeHtml(topic.name) + '</strong>'
          + '</div>';
     html += '<div class="curr-prevnext curr-prevnext-top"></div>';
     html += '<div class="curr-topic-body"><div class="curr-loading">Loading…</div></div>';
@@ -313,22 +292,17 @@
     });
 
     // Breadcrumb clicks
-    widget.querySelector('[data-action="grid"]').addEventListener('click', function (e) {
-      e.preventDefault();
-      state = { view: 'grid' };
-      render();
-    });
     widget.querySelector('[data-action="subject"]').addEventListener('click', function (e) {
       e.preventDefault();
-      state = { view: 'subject', subject: state.subject };
+      state = { view: 'grid', highlightSubject: state.subject };
       render();
       scrollToWidget();
     });
     widget.querySelector('[data-action="section-view"]').addEventListener('click', function (e) {
       e.preventDefault();
       state = {
-        view: 'subject',
-        subject: state.subject,
+        view: 'grid',
+        highlightSubject: state.subject,
         highlightSectionIdx: state.sectionIdx,
       };
       render();

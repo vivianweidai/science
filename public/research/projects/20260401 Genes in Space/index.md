@@ -1,9 +1,14 @@
 ---
 project: Genes in Space
+toys:
+  - PCR
+  - Cell-Free
+  - Fluorescence
+title: "Meow to Mars — Will Space Help or Hurt Mi's Heart?"
+sciences:
+  - Biology
+mi: true
 ---
-
-
-<div class="project-title"><h1>Meow to Mars — Will Space Help or Hurt Mi's Heart? <a class="photo-icon" href="/olympiads/photos/ctyphysics.jpeg"><img src="/research/layouts/cat.svg" alt="Mi" style="height:0.85em;vertical-align:-0.12em;"></a></h1><a class="chip bio" href="/curriculum/#biology">Biology</a></div>
 
 <div class="hero-single"><img src="photos/photo.jpeg" alt="Mi the astronaut cat" style="object-position: center 70%;"></div>
 
@@ -36,22 +41,10 @@ Cardiomyocyte cultures carrying both wild-type and known mutant MYBPC3 variants 
 
 See the <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260401%20Genes%20in%20Space/output/20260331%20Genes%20in%20Space.pdf" rel="noopener">proposal document</a> and <a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260401%20Genes%20in%20Space/papers" rel="noopener">reference literature</a>.
 
-## References
+## Technology
 
-1. Granstrom, S. et al. (2011). Prevalence of hypertrophic cardiomyopathy in a cohort of British Shorthair cats in Denmark. *J Vet Intern Med*, 25(4), 866-871. [doi:10.1111/j.1939-1676.2011.0751.x](https://doi.org/10.1111/j.1939-1676.2011.0751.x)
-2. Maron, B. J. et al. (1995). Prevalence of hypertrophic cardiomyopathy in a general population of young adults. *Circulation*, 92(4), 785-789. [doi:10.1161/01.CIR.92.4.785](https://doi.org/10.1161/01.CIR.92.4.785)
-3. Carrier, L. et al. (2015). Cardiac myosin-binding protein C (MYBPC3) in cardiac pathophysiology. *Gene*, 573(2), 188-197. [doi:10.1016/j.gene.2015.09.008](https://doi.org/10.1016/j.gene.2015.09.008)
-4. Sy, M. R. et al. (2023). Cardiac function, structural, and electrical remodeling by microgravity exposure. *Am J Physiol Heart Circ Physiol*, 324(1), H1-H13. [doi:10.1152/ajpheart.00611.2022](https://doi.org/10.1152/ajpheart.00611.2022)
-
-<h2 id="extensions">Extensions</h2>
-
-<div class="instrument-table no-highlight">
-
-| Technique | Extension | Description |
-|-----------|-----------|-------------|
-| Reverse Transcription | Sample prep | mRNA → cDNA so PCR reads expression, not copy number |
-| Gel Electrophoresis | Visualization | Size PCR products on agarose — visual band check |
-| Western Blot | Protein detection | Antibody probe of expressed protein — protein-level readout |
-| CRISPR-Cas9 | Variant engineering | Engineer specific mutations rather than rely on natural variants |
-
-</div>
+<ul class="updates-list">
+  <li class="fade-in" data-subj="bio"><span class="update-date">Amplification</span> <span class="update-name"><a href="/research/toys/biology/PCR/" data-photo="/research/toys/biology/PCR/pcr.jpeg">PCR</a></span> <span class="update-desc">Endpoint amplification — cycle temperature until enough copies exist</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
+  <li class="fade-in" data-subj="bio"><span class="update-date">Expression</span> <span class="update-name"><a href="/research/toys/biology/Cell-Free/" data-photo="/research/toys/biology/Cell-Free/cell-free.jpeg">Cell-Free</a></span> <span class="update-desc">Produce protein from DNA without living cells</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
+  <li class="fade-in" data-subj="bio"><span class="update-date">Expression</span> <span class="update-name"><a href="/research/toys/biology/Fluorescence/" data-photo="/research/toys/biology/Fluorescence/fluorescence.jpeg">Fluorescence</a></span> <span class="update-desc">Visualize protein glow under UV light</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
+</ul>

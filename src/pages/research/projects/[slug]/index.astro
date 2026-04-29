@@ -7,10 +7,7 @@ import ProjectLayout from '../../../../layouts/Project.astro';
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
 
-  // Sort by id (folder name) — project folders are date-prefixed (YYYYMMDD).
-  const sorted = [...projects].sort((a, b) => a.id.localeCompare(b.id));
-
-  return sorted.map((entry, idx) => {
+  return projects.map((entry) => {
     // generateId in content.config.ts preserves the original folder name as id.
     const folder = entry.id;
 
@@ -36,35 +33,22 @@ export async function getStaticPaths() {
       walk(photosRoot);
     }
 
-    // Wrap-around prev/next neighbors.
-    const last = sorted.length - 1;
-    const newerIdx = idx === last ? 0 : idx + 1;
-    const olderIdx = idx === 0 ? last : idx - 1;
-    const newer = sorted[newerIdx];
-    const older = sorted[olderIdx];
-    const linkFor = (e: typeof entry) => {
-      return {
-        url: `/research/projects/${encodeURI(e.id)}/`,
-        title: e.data.project || e.data.title || e.id,
-      };
-    };
-
     return {
       params: { slug: folder },
-      props: { entry, photos, newer: linkFor(newer), older: linkFor(older) },
+      props: { entry, photos },
     };
   });
 }
 
-const { entry, photos, newer, older } = Astro.props;
+const { entry, photos } = Astro.props;
 const { Content } = await render(entry);
 ---
 <ProjectLayout
   project={entry.data.project}
   title={entry.data.title}
+  sciences={entry.data.sciences}
+  mi={entry.data.mi}
   photos={photos}
-  newer={newer}
-  older={older}
 >
   <Content />
 </ProjectLayout>

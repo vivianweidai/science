@@ -1,9 +1,12 @@
 ---
 project: Centrifuge
+toys:
+  - Centrifugation
+title: "Centrifugation and pH of Everyday Liquids"
+sciences:
+  - Chemistry
+  - Biology
 ---
-
-
-<div class="project-title"><h1>Centrifugation and pH of Everyday Liquids</h1><span class="project-chips"><a class="chip chem" href="/curriculum/#chemistry">Chemistry</a> <a class="chip bio" href="/curriculum/#biology">Biology</a></span></div>
 
 <div class="photo-grid" id="photo-grid">
   <img id="photo-0" alt="Experiment photo">
@@ -76,3 +79,9 @@ Four samples were loaded into the Thermo Scientific Sorvall RT3 Centrifuge to ba
 - **Tube 4 — Milk + vinegar mixture** — white casein pellet with clear whey above, the acid curdled the milk proteins and centrifugation concentrated them at the bottom (<a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data21.jpeg">Data 21</a>, <a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data22.jpeg">Data 22</a> and <a href="https://vivianweidai.com/research/projects/20260411%20Centrifuge/photos/data/data23.jpeg">Data 23</a>)
 
 The experiment demonstrated that centrifugation is most effective on emulsions and suspensions (milk, yogurt, unfiltered vinegar) where particles of different densities are physically mixed but not dissolved.
+
+## Technology
+
+<ul class="updates-list">
+  <li class="fade-in" data-subj="chem"><span class="update-date">Separation</span> <span class="update-name"><a href="/research/toys/chemistry/Centrifugation/" data-photo="/research/toys/chemistry/Centrifugation/centrifugation.jpeg">Centrifugation</a></span> <span class="update-desc">Spin samples — separate by density at high g-forces</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+</ul>

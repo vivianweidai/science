@@ -2,8 +2,8 @@
  *
  * Six pastel tones used everywhere we distinguish the six disciplines:
  * curriculum column headers, olympiad tab pills, olympiad chips on
- * research project cards, and the chinese mirror of the same pages.
- * Defined once here so a future tweak only lands in one file. The
+ * research project cards. Defined once here so a future tweak only
+ * lands in one file. The
  * Swift apps under archives/apple/ have their own copy in
  * SubjectPaletteRGB (different language — unavoidable duplication).
  */
@@ -198,7 +198,6 @@ a.chip:hover { filter: brightness(0.94) saturate(1.2); }
   height: auto;
   border-radius: 5px;
 }
-[data-photo] { cursor: zoom-in; }
 a.photo-icon, a.photo-icon:hover {
   color: inherit;
   text-decoration: none;

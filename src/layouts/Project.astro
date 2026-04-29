@@ -6,28 +6,29 @@ import photoPreviewJs from './photo-preview.js?url';
 import PageHeader from './PageHeader.astro';
 import PageFooter from './PageFooter.astro';
 
-interface ProjectLink {
-  url: string;
-  title: string;
-}
-
 interface Props {
   project: string;
-  title?: string;
+  title: string;
+  sciences: string[];
+  mi?: boolean;
   htmlLang?: string;
-  newer?: ProjectLink | null;
-  older?: ProjectLink | null;
   photos?: string[];
 }
 
 const {
   project,
   title,
+  sciences,
+  mi = false,
   htmlLang = 'en',
-  newer = null,
-  older = null,
   photos = [],
 } = Astro.props;
+
+// Full → short slug for chip class names. Same map used by toys.json.
+const SLUG: Record<string, string> = {
+  Mathematics: 'math', Computing: 'comp', Physics: 'phys',
+  Chemistry: 'chem', Biology: 'bio', Astronomy: 'astro',
+};
 ---
 <!DOCTYPE html>
 <html lang={htmlLang}>
@@ -130,57 +131,96 @@ const {
     .setup-highlight-all tbody tr td { background: #fff44f; }
     .instrument-table tbody tr td { background: #fff44f; }
     .instrument-table.no-highlight tbody tr td { background: transparent; }
-    .project-nav {
+
+    /* Updates-list (homepage match). Used here for the Technology section
+       on a project page — list of toys used, in the same row format as the
+       homepage's project list. */
+    .updates-list {
+      list-style: none;
+      padding: 0;
+      margin: 1em 0 0;
+      border: 1px solid #d1d9e0;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .updates-list li {
       display: flex;
-      justify-content: space-between;
       gap: 1em;
+      align-items: baseline;
+      padding: 0.55em 1em 0.55em 1.4em;
+      border-bottom: 1px solid #eaecef;
+      line-height: 1.6;
+      position: relative;
+      transition: background 0.15s ease;
+    }
+    .updates-list li:last-child { border-bottom: none; }
+    .updates-list li:nth-child(even) { background: #f6f8fa; }
+    .updates-list li:hover { background: #eef1f4; }
+    .updates-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 5px;
+      background: var(--accent, #d1d9e0);
+    }
+    .updates-list li[data-subj="math"]  { --accent: var(--subj-math); }
+    .updates-list li[data-subj="comp"]  { --accent: var(--subj-comp); }
+    .updates-list li[data-subj="phys"]  { --accent: var(--subj-phys); }
+    .updates-list li[data-subj="chem"]  { --accent: var(--subj-chem); }
+    .updates-list li[data-subj="bio"]   { --accent: var(--subj-bio); }
+    .updates-list li[data-subj="astro"] { --accent: var(--subj-astro); }
+    .updates-list .update-date {
+      flex: 0 0 9em;
+      color: #656d76;
       font-size: 0.9em;
-      margin-top: 0.3em;
     }
-    hr + .project-nav { margin-top: 0.8em; }
-    .project-nav a { color: #0969da; text-decoration: none; }
-    .project-nav a:hover { text-decoration: underline; }
-    .project-nav .spacer { flex: 1; }
-    body:has(.project-nav-top) .page-header { border-bottom: none; padding-bottom: 0; }
-    .project-nav.project-nav-top {
-      margin-top: 0.3em;
-      padding-bottom: 0.3em;
-      border-bottom: 1px solid #d1d9e0;
-      margin-bottom: 0.5em;
+    .updates-list .update-name { flex: 0 0 9em; }
+    .updates-list .update-desc {
+      flex: 1;
+      color: #57606a;
+      font-size: 0.92em;
     }
-    .project-nav + hr { margin-top: 0.5em; }
+    .updates-list .update-body { flex: 1; }
+    .updates-list .chip { margin-left: 0.2em; }
+    @media (max-width: 600px) {
+      .updates-list .update-date,
+      .updates-list .update-desc { display: none; }
+    }
   </style>
 </head>
 <body>
   <PageHeader title="Research" />
 
-  {newer && older && (
-    <nav class="project-nav project-nav-top">
-      <a href={newer.url}>← {newer.title}</a>
-      <a href={older.url}>{older.title} →</a>
-    </nav>
-  )}
+  <div class="project-title">
+    <h1>
+      {title}
+      {mi && (
+        <a class="photo-icon" href="/olympiads/photos/ctyphysics.jpeg">
+          <img src="/cat.svg" alt="Mi" style="height:0.85em;vertical-align:-0.12em;" />
+        </a>
+      )}
+    </h1>
+    {sciences.length === 1 ? (
+      <a class={`chip ${SLUG[sciences[0]]}`} href={`/research/#${SLUG[sciences[0]]}`}>{sciences[0]}</a>
+    ) : (
+      <span class="project-chips">
+        {sciences.map((s, i) => (
+          <>
+            {i > 0 && ' '}
+            <a class={`chip ${SLUG[s]}`} href={`/research/#${SLUG[s]}`}>{s}</a>
+          </>
+        ))}
+      </span>
+    )}
+  </div>
 
   <slot />
 
   <hr />
 
-  {newer && older && (
-    <nav class="project-nav">
-      <a href={newer.url}>← {newer.title}</a>
-      <a href={older.url}>{older.title} →</a>
-    </nav>
-  )}
-
   <PageFooter />
 
-  <script>
-    // Move project-nav-top below page-header on hydration so the back/forward
-    // strip sits flush under the header instead of above the page title.
-    const topNav = document.querySelector('.project-nav-top');
-    const header = document.querySelector('.page-header');
-    if (header && topNav) header.insertAdjacentElement('afterend', topNav);
-  </script>
   <script src={photoPreviewJs} is:inline></script>
   <script is:inline>
     // Top photo grid: shuffle on load and expose the function for the Shuffle button.

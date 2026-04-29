@@ -17,6 +17,8 @@
               "toy": "NumPy",
               "specs": "Array foundation — linear algebra and vectorized math",
               "available": 1,
+              "toy_url": "/research/toys/mathematics/NumPy/",
+              "hero": "/research/toys/mathematics/NumPy/numpy.jpeg",
               "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/"
             },
             {
@@ -24,6 +26,8 @@
               "toy": "SciPy",
               "specs": "Scientific routines — ODEs, optimizers and Fourier transforms",
               "available": 1,
+              "toy_url": "/research/toys/mathematics/SciPy/",
+              "hero": "/research/toys/mathematics/SciPy/scipy.jpeg",
               "completed": "20250225 Catfood",
               "project_url": "/research/projects/20250225%20Catfood/"
             }
@@ -39,6 +43,8 @@
               "toy": "Wolfram Alpha",
               "specs": "Symbolic engine with built-in mathematical knowledge",
               "available": 1,
+              "toy_url": "/research/toys/mathematics/Wolfram%20Alpha/",
+              "hero": "/research/toys/mathematics/Wolfram%20Alpha/wolframalpha.jpeg",
               "url": "https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb"
             }
           ]
@@ -62,6 +68,8 @@
               "toy": "Matplotlib",
               "specs": "Python 2D and 3D plotting",
               "available": 1,
+              "toy_url": "/research/toys/mathematics/Matplotlib/",
+              "hero": "/research/toys/mathematics/Matplotlib/matplotlib.jpeg",
               "url": "/research/projects/20260404%20Four%20Point%20Probe/"
             }
           ]
@@ -76,6 +84,8 @@
               "toy": "LaTeX",
               "specs": "Equations, references and bibliographies",
               "available": 1,
+              "toy_url": "/research/toys/mathematics/LaTeX/",
+              "hero": "/research/toys/mathematics/LaTeX/latex.jpeg",
               "url": "/curriculum/"
             }
           ]
@@ -99,6 +109,8 @@
               "toy": "SciPy",
               "specs": "Hypothesis tests, distributions and confidence intervals",
               "available": 1,
+              "toy_url": "/research/toys/computing/SciPy/",
+              "hero": "/research/toys/computing/SciPy/scipy.jpeg",
               "completed": "20250225 Catfood",
               "project_url": "/research/projects/20250225%20Catfood/"
             }
@@ -113,13 +125,17 @@
               "id": 7,
               "toy": "scikit-learn",
               "specs": "Classic models for training and prediction",
-              "available": 1
+              "available": 1,
+              "toy_url": "/research/toys/computing/scikit-learn/",
+              "hero": "/research/toys/computing/scikit-learn/scikit-learn.jpeg"
             },
             {
               "id": 8,
               "toy": "PyTorch",
               "specs": "Neural networks for GPU-accelerated deep learning",
-              "available": 1
+              "available": 1,
+              "toy_url": "/research/toys/computing/PyTorch/",
+              "hero": "/research/toys/computing/PyTorch/pytorch.jpeg"
             }
           ]
         }
@@ -142,6 +158,8 @@
               "toy": "GitHub",
               "specs": "Data and source code repositories",
               "available": 1,
+              "toy_url": "/research/toys/computing/GitHub/",
+              "hero": "/research/toys/computing/GitHub/github.jpeg",
               "url": "https://github.com/vivianweidai"
             },
             {
@@ -149,6 +167,8 @@
               "toy": "Jupyter",
               "specs": "Notebooks combining code, figures and narrative",
               "available": 1,
+              "toy_url": "/research/toys/computing/Jupyter/",
+              "hero": "/research/toys/computing/Jupyter/jupyter.jpeg",
               "url": "https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb"
             }
           ]
@@ -162,13 +182,17 @@
               "id": 11,
               "toy": "Docker",
               "specs": "Containers that freeze every dependency",
-              "available": 0
+              "available": 1,
+              "toy_url": "/research/toys/computing/Docker/",
+              "hero": "/research/toys/computing/Docker/docker.jpeg"
             },
             {
               "id": 12,
               "toy": "Zenodo",
               "specs": "Permanent DOI archive for datasets and code",
-              "available": 0
+              "available": 1,
+              "toy_url": "/research/toys/computing/Zenodo/",
+              "hero": "/research/toys/computing/Zenodo/zenodo.jpeg"
             }
           ]
         }
@@ -190,13 +214,17 @@
               "id": 13,
               "toy": "Thermocouple",
               "specs": "Contact probe — point measurement at a junction",
-              "available": 0
+              "available": 0,
+              "toy_url": "/research/toys/physics/Thermocouple/",
+              "hero": "/research/toys/physics/Thermocouple/thermocouple.jpeg"
             },
             {
               "id": 14,
               "toy": "IR Camera",
               "specs": "Non-contact imaging — full thermal field at once",
-              "available": 0
+              "available": 0,
+              "toy_url": "/research/toys/physics/IR%20Camera/",
+              "hero": "/research/toys/physics/IR%20Camera/ircamera.jpeg"
             }
           ]
         },
@@ -209,13 +237,17 @@
               "id": 15,
               "toy": "Stirling Engine",
               "specs": "Heat to work — classical engine cycle",
-              "available": 0
+              "available": 0,
+              "toy_url": "/research/toys/physics/Stirling%20Engine/",
+              "hero": "/research/toys/physics/Stirling%20Engine/stirlingengine.jpeg"
             },
             {
               "id": 16,
               "toy": "Peltier",
               "specs": "Work to heat — semiconductor heat pump",
-              "available": 0
+              "available": 0,
+              "toy_url": "/research/toys/physics/Peltier/",
+              "hero": "/research/toys/physics/Peltier/peltier.jpeg"
             }
           ]
         }
@@ -237,13 +269,17 @@
               "id": 17,
               "toy": "Oscilloscope",
               "specs": "Time-varying signals — waveforms and transients",
-              "available": 0
+              "available": 0,
+              "toy_url": "/research/toys/physics/Oscilloscope/",
+              "hero": "/research/toys/physics/Oscilloscope/oscilloscope.jpeg"
             },
             {
               "id": 18,
               "toy": "Multimeter",
               "specs": "Steady-state values — voltage, current and resistance",
               "available": 1,
+              "toy_url": "/research/toys/physics/Multimeter/",
+              "hero": "/research/toys/physics/Multimeter/multimeter.jpeg",
               "completed": "20260404 Four Point Probe",
               "project_url": "/research/projects/20260404%20Four%20Point%20Probe/"
             }
@@ -258,19 +294,25 @@
               "id": 19,
               "toy": "Laser",
               "specs": "Produce — coherent monochromatic light",
-              "available": 0
+              "available": 0,
+              "toy_url": "/research/toys/physics/Laser/",
+              "hero": "/research/toys/physics/Laser/laser.jpeg"
             },
             {
               "id": 20,
               "toy": "Spectrometer",
               "specs": "Analyze — disperse light by wavelength",
-              "available": 0
+              "available": 0,
+              "toy_url": "/research/toys/physics/Spectrometer/",
+              "hero": "/research/toys/physics/Spectrometer/spectrometer.jpeg"
             },
             {
               "id": 21,
               "toy": "Interferometer",
               "specs": "Interfere — combine beams to reveal phase",
-              "available": 0
+              "available": 0,
+              "toy_url": "/research/toys/physics/Interferometer/",
+              "hero": "/research/toys/physics/Interferometer/interferometer.jpeg"
             }
           ]
         }
@@ -280,59 +322,60 @@
       "id": 7,
       "science": "Chemistry",
       "science_slug": "chem",
-      "topic": "Spectroscopic",
-      "description": "Probe intact molecules — electromagnetic, magnetic and mass spectra",
+      "topic": "Physical",
+      "description": "Separate and transform — non-spectroscopic characterization",
       "technologies": [
         {
           "id": 13,
-          "technology": "Molecular Spectroscopy",
-          "description": "Absorb EM radiation — vibrational, electronic and nuclear transitions",
+          "technology": "Separation",
+          "description": "Pull mixtures apart — by density or chemistry",
           "toys": [
             {
               "id": 22,
-              "toy": "IR Spectroscopy",
-              "specs": "Polar bonds — functional-group fingerprints",
+              "toy": "Centrifugation",
+              "specs": "Spin samples — separate by density at high g-forces",
               "available": 1,
-              "completed": "20260419 IR Spectroscopy",
-              "project_url": "/research/projects/20260419%20IR%20Spectroscopy/"
+              "toy_url": "/research/toys/chemistry/Centrifugation/",
+              "hero": "/research/toys/chemistry/Centrifugation/centrifugation.jpeg",
+              "completed": "20260411 Centrifuge",
+              "project_url": "/research/projects/20260411%20Centrifuge/"
             },
             {
               "id": 23,
-              "toy": "UV-Vis Spectroscopy",
-              "specs": "Light absorption — concentration and conjugation",
+              "toy": "Liquid Chromatography",
+              "specs": "Flow through packed column — separate by chemical affinity",
               "available": 1,
-              "completed": "20260420 UV-Vis Spectroscopy",
-              "project_url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/"
-            },
-            {
-              "id": 24,
-              "toy": "NMR Spectroscopy",
-              "specs": "¹H and ¹³C environments — full structural fingerprint",
-              "available": 0,
-              "url": "/research/archives/photos/chemistry-nmr.jpg"
+              "toy_url": "/research/toys/chemistry/Liquid%20Chromatography/",
+              "hero": "/research/archives/photos/chemistry-hplc.jpg",
+              "completed": "20260427 Liquid Chromatography",
+              "project_url": "/research/projects/20260427%20Liquid%20Chromatography/"
             }
           ]
         },
         {
           "id": 14,
-          "technology": "Mass Spectrometry",
-          "description": "Measure molecular mass",
+          "technology": "Thermal Analysis",
+          "description": "Watch samples change with heat",
           "toys": [
             {
-              "id": 25,
-              "toy": "GC-MS",
-              "specs": "Volatile molecules — fragment fingerprints via electron ionization",
+              "id": 24,
+              "toy": "Thermogravimetry",
+              "specs": "Mass loss with heating — decomposition and moisture",
               "available": 1,
-              "completed": "20260427 Mass Spectrometry",
-              "project_url": "/research/projects/20260427%20Mass%20Spectrometry/"
+              "toy_url": "/research/toys/chemistry/Thermogravimetry/",
+              "hero": "/research/archives/photos/chemistry-tga-q50.jpg",
+              "completed": "20260405 Melting Point",
+              "project_url": "/research/projects/20260405%20Melting%20Point/"
             },
             {
-              "id": 26,
-              "toy": "LC-MS",
-              "specs": "Nonvolatile molecules — intact weight via electrospray",
+              "id": 25,
+              "toy": "Calorimetry",
+              "specs": "Energy flow with heating — phase transitions and heat capacity",
               "available": 1,
-              "completed": "20260427 Mass Spectrometry",
-              "project_url": "/research/projects/20260427%20Mass%20Spectrometry/"
+              "toy_url": "/research/toys/chemistry/Calorimetry/",
+              "hero": "/research/archives/photos/chemistry-dsc-q100.jpg",
+              "completed": "20260405 Melting Point",
+              "project_url": "/research/projects/20260405%20Melting%20Point/"
             }
           ]
         }
@@ -342,52 +385,69 @@
       "id": 8,
       "science": "Chemistry",
       "science_slug": "chem",
-      "topic": "Physical",
-      "description": "Separate and transform — non-spectroscopic characterization",
+      "topic": "Spectroscopic",
+      "description": "Probe intact molecules — electromagnetic, magnetic and mass spectra",
       "technologies": [
         {
           "id": 15,
-          "technology": "Separation",
-          "description": "Pull mixtures apart — by density or chemistry",
+          "technology": "Molecular Spectroscopy",
+          "description": "Absorb EM radiation — vibrational, electronic and nuclear transitions",
           "toys": [
             {
-              "id": 27,
-              "toy": "Centrifugation",
-              "specs": "Spin samples — separate by density at high g-forces",
+              "id": 26,
+              "toy": "IR Spectroscopy",
+              "specs": "Polar bonds — functional-group fingerprints",
               "available": 1,
-              "completed": "20260411 Centrifuge",
-              "project_url": "/research/projects/20260411%20Centrifuge/"
+              "toy_url": "/research/toys/chemistry/IR%20Spectroscopy/",
+              "hero": "/research/toys/chemistry/IR%20Spectroscopy/irspectroscopy.jpeg",
+              "completed": "20260419 IR Spectroscopy",
+              "project_url": "/research/projects/20260419%20IR%20Spectroscopy/"
+            },
+            {
+              "id": 27,
+              "toy": "UV-Vis Spectroscopy",
+              "specs": "Light absorption — concentration and conjugation",
+              "available": 1,
+              "toy_url": "/research/toys/chemistry/UV-Vis%20Spectroscopy/",
+              "hero": "/research/archives/photos/chemistry-spectrophotometer.jpeg",
+              "completed": "20260420 UV-Vis Spectroscopy",
+              "project_url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/"
             },
             {
               "id": 28,
-              "toy": "Liquid Chromatography",
-              "specs": "Partition in solution — HPLC workhorse for analytical separations",
-              "available": 1,
-              "completed": "20260427 Liquid Chromatography",
-              "project_url": "/research/projects/20260427%20Liquid%20Chromatography/"
+              "toy": "NMR Spectroscopy",
+              "specs": "¹H and ¹³C environments — full structural fingerprint",
+              "available": 0,
+              "toy_url": "/research/toys/chemistry/NMR%20Spectroscopy/",
+              "hero": "/research/archives/photos/chemistry-nmr.jpg",
+              "url": "/research/archives/photos/chemistry-nmr.jpg"
             }
           ]
         },
         {
           "id": 16,
-          "technology": "Thermal Analysis",
-          "description": "Watch samples change with heat",
+          "technology": "Mass Spectrometry",
+          "description": "Ionize and weigh — intact mass and fragment fingerprints",
           "toys": [
             {
               "id": 29,
-              "toy": "Thermogravimetry",
-              "specs": "Mass loss with heating — decomposition and moisture",
+              "toy": "GC-MS",
+              "specs": "Volatile molecules — fragment fingerprints via electron ionization",
               "available": 1,
-              "completed": "20260405 Melting Point",
-              "project_url": "/research/projects/20260405%20Melting%20Point/"
+              "toy_url": "/research/toys/chemistry/GC-MS/",
+              "hero": "/research/archives/photos/chemistry-gc-ms.jpg",
+              "completed": "20260427 Mass Spectrometry",
+              "project_url": "/research/projects/20260427%20Mass%20Spectrometry/"
             },
             {
               "id": 30,
-              "toy": "Calorimetry",
-              "specs": "Energy flow with heating — phase transitions and heat capacity",
+              "toy": "LC-MS",
+              "specs": "Nonvolatile molecules — intact weight via electrospray",
               "available": 1,
-              "completed": "20260405 Melting Point",
-              "project_url": "/research/projects/20260405%20Melting%20Point/"
+              "toy_url": "/research/toys/chemistry/LC-MS/",
+              "hero": "/research/archives/photos/chemistry-lc-ms.jpg",
+              "completed": "20260427 Mass Spectrometry",
+              "project_url": "/research/projects/20260427%20Mass%20Spectrometry/"
             }
           ]
         }
@@ -397,69 +457,60 @@
       "id": 9,
       "science": "Biology",
       "science_slug": "bio",
-      "topic": "Molecules",
-      "description": "Read and write DNA and proteins",
+      "topic": "Cells",
+      "description": "See and record living systems",
       "technologies": [
         {
           "id": 17,
-          "technology": "Amplification",
-          "description": "Copy DNA for detection",
+          "technology": "Microscopy",
+          "description": "Image cells at every scale",
           "toys": [
             {
               "id": 31,
-              "toy": "PCR",
-              "specs": "Endpoint amplification — cycle temperature until enough copies exist",
-              "available": 0,
-              "completed": "20260401 Genes in Space",
-              "project_url": "/research/projects/20260401%20Genes%20in%20Space/"
+              "toy": "Handheld",
+              "specs": "Mobile scope — surface inspection without sample prep",
+              "available": 1,
+              "toy_url": "/research/toys/biology/Handheld/",
+              "hero": "/research/toys/biology/Handheld/handheld.jpeg"
             },
             {
               "id": 32,
-              "toy": "qPCR",
-              "specs": "Real-time quantitation — count copies as they are made",
-              "available": 0
+              "toy": "Stereo",
+              "specs": "Reflected light — whole specimens in 3D at low magnification",
+              "available": 1,
+              "toy_url": "/research/toys/biology/Stereo/",
+              "hero": "/research/toys/biology/Stereo/stereo.jpeg"
+            },
+            {
+              "id": 33,
+              "toy": "Compound",
+              "specs": "Transmitted light — cells through a slide at high magnification",
+              "available": 1,
+              "toy_url": "/research/toys/biology/Compound/",
+              "hero": "/research/toys/biology/Compound/compound.jpeg"
             }
           ]
         },
         {
           "id": 18,
-          "technology": "Sequencing",
-          "description": "Read the DNA code",
+          "technology": "Systems Imaging",
+          "description": "Record brain activity",
           "toys": [
-            {
-              "id": 33,
-              "toy": "Short-Read",
-              "specs": "Many short sequences in parallel — Illumina",
-              "available": 0
-            },
             {
               "id": 34,
-              "toy": "Long-Read",
-              "specs": "One long sequence end to end — Nanopore, PacBio",
-              "available": 0
-            }
-          ]
-        },
-        {
-          "id": 19,
-          "technology": "Expression",
-          "description": "Make and see proteins",
-          "toys": [
-            {
-              "id": 35,
-              "toy": "Cell-Free",
-              "specs": "Produce protein from DNA without living cells",
+              "toy": "EEG",
+              "specs": "Scalp electrodes — Muse",
               "available": 0,
-              "completed": "20260401 Genes in Space",
-              "project_url": "/research/projects/20260401%20Genes%20in%20Space/"
+              "toy_url": "/research/toys/biology/EEG/",
+              "hero": "/research/toys/biology/EEG/eeg.jpeg"
             },
             {
-              "id": 36,
-              "toy": "Fluorescence",
-              "specs": "Visualize protein glow under UV light",
+              "id": 35,
+              "toy": "fNIRS",
+              "specs": "Near-infrared light — cortical blood flow",
               "available": 0,
-              "completed": "20260401 Genes in Space",
-              "project_url": "/research/projects/20260401%20Genes%20in%20Space/"
+              "toy_url": "/research/toys/biology/fNIRS/",
+              "hero": "/research/toys/biology/fNIRS/fnirs.jpeg"
             }
           ]
         }
@@ -469,63 +520,81 @@
       "id": 10,
       "science": "Biology",
       "science_slug": "bio",
-      "topic": "Cells",
-      "description": "See and record living systems",
+      "topic": "Molecules",
+      "description": "Read and write DNA and proteins",
       "technologies": [
         {
-          "id": 20,
-          "technology": "Phenotyping",
-          "description": "Sort and profile living cells",
+          "id": 19,
+          "technology": "Amplification",
+          "description": "Copy DNA for detection",
           "toys": [
             {
-              "id": 37,
-              "toy": "Flow Cytometer",
-              "specs": "Count and sort cells by fluorescent labels",
-              "available": 0
+              "id": 36,
+              "toy": "PCR",
+              "specs": "Endpoint amplification — cycle temperature until enough copies exist",
+              "available": 1,
+              "toy_url": "/research/toys/biology/PCR/",
+              "hero": "/research/toys/biology/PCR/pcr.jpeg",
+              "completed": "20260401 Genes in Space",
+              "project_url": "/research/projects/20260401%20Genes%20in%20Space/"
             },
             {
+              "id": 37,
+              "toy": "qPCR",
+              "specs": "Real-time quantitation — count copies as they are made",
+              "available": 0,
+              "toy_url": "/research/toys/biology/qPCR/",
+              "hero": "/research/toys/biology/qPCR/qpcr.jpeg"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "technology": "Sequencing",
+          "description": "Read the DNA code",
+          "toys": [
+            {
               "id": 38,
-              "toy": "Metabolic Analyzer",
-              "specs": "Watch cells burn sugar and use oxygen in real time",
-              "available": 0
+              "toy": "Long-Read",
+              "specs": "One long sequence end to end — MinION",
+              "available": 0,
+              "toy_url": "/research/toys/biology/Long-Read/",
+              "hero": "/research/toys/biology/Long-Read/long-read.jpeg"
+            },
+            {
+              "id": 39,
+              "toy": "Short-Read",
+              "specs": "Many short sequences in parallel",
+              "available": 0,
+              "toy_url": "/research/toys/biology/Short-Read/",
+              "hero": "/research/toys/biology/Short-Read/short-read.jpeg"
             }
           ]
         },
         {
           "id": 21,
-          "technology": "Microscopy",
-          "description": "Image cells at every scale",
+          "technology": "Expression",
+          "description": "Make and see proteins",
           "toys": [
-            {
-              "id": 39,
-              "toy": "Confocal",
-              "specs": "Photons — sharp 3D optical images of cells and tissue",
-              "available": 0
-            },
             {
               "id": 40,
-              "toy": "SEM",
-              "specs": "Electrons — surface topography at nanometer resolution",
-              "available": 0
-            }
-          ]
-        },
-        {
-          "id": 22,
-          "technology": "Systems Imaging",
-          "description": "Record brain activity",
-          "toys": [
-            {
-              "id": 41,
-              "toy": "EEG",
-              "specs": "Scalp electrodes — millisecond electrical activity",
-              "available": 0
+              "toy": "Cell-Free",
+              "specs": "Produce protein from DNA without living cells",
+              "available": 1,
+              "toy_url": "/research/toys/biology/Cell-Free/",
+              "hero": "/research/toys/biology/Cell-Free/cell-free.jpeg",
+              "completed": "20260401 Genes in Space",
+              "project_url": "/research/projects/20260401%20Genes%20in%20Space/"
             },
             {
-              "id": 42,
-              "toy": "fNIRS",
-              "specs": "Near-infrared light — cortical blood flow",
-              "available": 0
+              "id": 41,
+              "toy": "Fluorescence",
+              "specs": "Visualize protein glow under UV light",
+              "available": 1,
+              "toy_url": "/research/toys/biology/Fluorescence/",
+              "hero": "/research/toys/biology/Fluorescence/fluorescence.jpeg",
+              "completed": "20260401 Genes in Space",
+              "project_url": "/research/projects/20260401%20Genes%20in%20Space/"
             }
           ]
         }
@@ -539,41 +608,49 @@
       "description": "Where the light comes from — capture photons across the spectrum",
       "technologies": [
         {
-          "id": 23,
+          "id": 22,
           "technology": "Visible",
           "description": "Optical wavelengths from backyards to mountaintop observatories",
           "toys": [
             {
-              "id": 43,
+              "id": 42,
               "toy": "Household",
-              "specs": "Amateur reflector with motorized mount and CCD",
-              "available": 1
+              "specs": "Amateur smart telescope — motorized mount and integrated camera",
+              "available": 1,
+              "toy_url": "/research/toys/astronomy/Household/",
+              "hero": "/research/toys/astronomy/Household/household.jpeg"
             },
             {
-              "id": 44,
+              "id": 43,
               "toy": "Earth",
               "specs": "Meter-class ground telescope at a dark site",
-              "available": 0,
+              "available": 1,
+              "toy_url": "/research/toys/astronomy/Earth/",
+              "hero": "/research/toys/astronomy/Earth/earth.jpeg",
               "url": "/research/archives/photos/astronomy-refractor-a.jpg"
             }
           ]
         },
         {
-          "id": 24,
+          "id": 23,
           "technology": "Invisible",
           "description": "Wavelengths outside the visible — radio through X-ray",
           "toys": [
             {
-              "id": 45,
+              "id": 44,
               "toy": "Radio",
-              "specs": "Many dishes synthesized into one high-resolution image",
-              "available": 0
+              "specs": "Backyard antenna to synthesized array — Jupiter bursts to galactic structure",
+              "available": 1,
+              "toy_url": "/research/toys/astronomy/Radio/",
+              "hero": "/research/toys/astronomy/Radio/radio.jpeg"
             },
             {
-              "id": 46,
+              "id": 45,
               "toy": "Space",
               "specs": "Above the atmosphere — UV, infrared and X-ray wavelengths blocked by air",
-              "available": 0
+              "available": 0,
+              "toy_url": "/research/toys/astronomy/Space/",
+              "hero": "/research/toys/astronomy/Space/space.jpeg"
             }
           ]
         }
@@ -587,47 +664,57 @@
       "description": "What the light tells you — extract measurements and classify sources",
       "technologies": [
         {
-          "id": 25,
+          "id": 24,
           "technology": "Analysis",
           "description": "Extract measurements from raw images",
           "toys": [
             {
-              "id": 47,
+              "id": 46,
               "toy": "Photometry",
               "specs": "How bright — light curves reveal variability, transits and distance",
-              "available": 0
+              "available": 1,
+              "toy_url": "/research/toys/astronomy/Photometry/",
+              "hero": "/research/toys/astronomy/Photometry/photometry.jpeg"
+            },
+            {
+              "id": 47,
+              "toy": "Astrometry",
+              "specs": "Where — positions and proper motions reveal parallax and orbits",
+              "available": 1,
+              "toy_url": "/research/toys/astronomy/Astrometry/",
+              "hero": "/research/toys/astronomy/Astrometry/astrometry.jpeg"
             },
             {
               "id": 48,
-              "toy": "Astrometry",
-              "specs": "Where — positions and proper motions reveal parallax and orbits",
-              "available": 0
-            },
-            {
-              "id": 49,
               "toy": "Spectroscopy",
               "specs": "What — wavelengths reveal composition, temperature and radial velocity",
-              "available": 0,
+              "available": 1,
+              "toy_url": "/research/toys/astronomy/Spectroscopy/",
+              "hero": "/research/toys/astronomy/Spectroscopy/spectroscopy.jpeg",
               "url": "/research/archives/photos/astronomy-orion-nebula.jpg"
             }
           ]
         },
         {
-          "id": 26,
+          "id": 25,
           "technology": "Classification",
           "description": "Label sources with machine learning",
           "toys": [
             {
-              "id": 50,
+              "id": 49,
               "toy": "Transient",
               "specs": "Classical ML on light curves — supernovae, variable stars",
-              "available": 0
+              "available": 0,
+              "toy_url": "/research/toys/astronomy/Transient/",
+              "hero": "/research/toys/astronomy/Transient/transient.jpeg"
             },
             {
-              "id": 51,
+              "id": 50,
               "toy": "Galaxy Morphology",
               "specs": "Deep CNN on galaxy images — spirals, ellipticals, mergers",
-              "available": 0
+              "available": 0,
+              "toy_url": "/research/toys/astronomy/Galaxy%20Morphology/",
+              "hero": "/research/toys/astronomy/Galaxy%20Morphology/galaxymorphology.jpeg"
             }
           ]
         }

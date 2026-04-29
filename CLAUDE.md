@@ -17,16 +17,6 @@ All background materials live in the repo under `public/research/archives/`. Rea
 
 All instrument names in code and prose must exactly match what's in `public/research/archives/technology/toys.pdf`.
 
-## LANGUAGE PRIORITY
-
-**English is the primary language. Chinese is a secondary mirror at `/zh/`.** When making changes that affect both:
-
-- **Never break English to make Chinese work.** If a refactor would require regressing the English experience to fix a Chinese-side issue, fix Chinese after, even if it lags.
-- **English is the authoritative content.** Chinese pages are translations/mirrors of English pages — when content diverges, English is the source of truth.
-- **Verify English first, then Chinese.** Smoke-test the English path through any change before checking the Chinese mirror.
-- **Scientific/mathematical content stays in its original (usually English) language** in both versions. Chinese pages translate UI labels and prose, not formulas, instrument names, or technical terms.
-- The Apple+Android apps are English-only. Chinese only ever appears on the website.
-
 ## STACK
 
 - **Astro 5** — static site generator. Builds to `pipeline/worker/dist/` (co-located with the Worker that serves it).
@@ -47,19 +37,17 @@ science/
 ├── CLAUDE.md · README.md · IDEAS.md · .gitignore
 │
 ├── src/                    # Astro source
-│   ├── content.config.ts   # Content collections: projects (English) + zhProjects (Chinese)
+│   ├── content.config.ts   # Content collections: projects + toys
 │   ├── layouts/            # Astro components AND their associated CSS/JS:
 │   │                       #   Default.astro + Project.astro
 │   │                       #   base.css / tabs.css / curriculum.css   (imported by .astro)
-│   │                       #   curriculum.js / curriculum.zh.js       (imported via ?url)
+│   │                       #   curriculum.js                          (imported via ?url)
 │   └── pages/              # File-based routing
 │       ├── index.astro     # /
 │       ├── curriculum/     # /curriculum/
 │       ├── olympiads/      # /olympiads/
-│       ├── research/       # /research/ + dynamic /research/projects/[slug]/
-│       ├── privacy.md      # /privacy/
-│       └── zh/             # Chinese mirror at /zh/...
-│           └── research/projects/[slug]/   # /zh/research/projects/<folder>/
+│       ├── research/       # /research/ + dynamic /research/projects/[slug]/ + /research/toys/[science]/[toy]/
+│       └── privacy.md      # /privacy/
 │
 ├── pipeline/
 │   ├── worker/             # Cloudflare Worker (ASSETS passthrough)
@@ -84,16 +72,16 @@ science/
 │       ├── archives/             # Background reference materials (instrument photos,
 │       │                         #   walk-up guides, classic papers, lab catalogues)
 │       ├── projects/<folder>/    # YYYYMMDD Project Name
-│       │   ├── index.md          # English project page (Content Collection 'projects')
-│       │   ├── index.zh.md       # Chinese sibling (Content Collection 'zhProjects')
+│       │   ├── index.md          # Project page (Content Collection 'projects')
 │       │   ├── data/             # Raw instrument data
 │       │   ├── photos/           # setup/, samples/, data/ (data excluded from shuffle)
 │       │   ├── papers/           # Background papers
 │       │   └── output/           # Analysis scripts, notebooks, plots
-│       ├── layouts/              # SVG/PNG referenced from project markdown
-│       │                         #   (cat.svg, spikey.png — must stay in public/
-│       │                         #    since Vite doesn't transform .md URLs).
-│       │                         #   Project shuffle + tab JS live in src/layouts/Project.astro.
+│       ├── toys/<science>/<Toy>/ # Per-toy template page (Content Collection 'toys');
+│       │                         #   <science> is the full word (mathematics, computing,
+│       │                         #   etc.) to mirror public/curriculum/source/
+│       │   ├── index.md          # Frontmatter `hero:` points to a sibling file
+│       │   └── *.jpeg / *.jpg    # Photos sit flat next to index.md (no photos/)
 │       ├── toys.yml              # Source of truth — edit, then rebuild
 │       └── toys.json             # Generated — DO NOT EDIT BY HAND
 │
@@ -189,7 +177,7 @@ This repo is synced to GitHub at `vivianweidai/science` and served at `vivianwei
 - **Date/Instrument metadata** should be right-aligned below the photos using `<div class="project-meta">`. Put Instrument on a new line with `<br>`.
 - **Results links** should point to the GitHub blob URL (e.g. `https://github.com/vivianweidai/science/blob/main/...`) so files render inside GitHub.
 - Ensure all code, data, and documentation is presentable and well-organized.
-- Each project's `index.md` (not README.md) serves as the public-facing overview. Astro's content collection loader globs `*/index.md` (and `*/index.zh.md` for Chinese) under `research/projects/`, so the filename matters.
+- Each project's `index.md` (not README.md) serves as the public-facing overview. Astro's content collection loader globs `*/index.md` under `research/projects/`, so the filename matters.
 - **When creating a new project**, always add it to the tabbed project table in `research/index.md` under the appropriate discipline tab (Mathematics, Computing, Physics, Chemistry, Biology, Astronomy). Also add any new instruments to the Instruments section in `research/index.md`.
 - **Do not auto-commit or push.** The user reviews and commits locally. After finishing a change, show the change in Safari (see LOCAL PREVIEWS) and stop there — no `git commit` or `git push` unless explicitly asked. Before the user commits, scan for oversized images (see the resize rule above) and shrink any offenders — once a large blob is in git history it stays there forever.
 

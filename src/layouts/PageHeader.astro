@@ -7,17 +7,23 @@ interface Props {
   active?: Section;
   // Explicit H2 text. Defaults to the active section's label, or "Science".
   title?: string;
+  // Override per-section href. Sub-pages use this to land back on the
+  // index with a hash — e.g. a toy page sends Research to
+  // /research/#math so the matching column is highlighted on arrival.
+  curriculumHref?: string;
+  olympiadsHref?: string;
+  researchHref?: string;
 }
 
-const { active, title } = Astro.props;
+const { active, title, curriculumHref, olympiadsHref, researchHref } = Astro.props;
 
 // On the home page itself, the H2 already says "Science" — skip the duplicate
 // nav entry. On every other page, the "Science" link is the way back home.
 const allLinks: Array<{ id: Section; href: string; label: string }> = [
-  { id: 'home',       href: '/',            label: 'Science' },
-  { id: 'curriculum', href: '/curriculum/', label: 'Curriculum' },
-  { id: 'olympiads',  href: '/olympiads/',  label: 'Olympiads' },
-  { id: 'research',   href: '/research/',   label: 'Research' },
+  { id: 'home',       href: '/',                              label: 'Science' },
+  { id: 'curriculum', href: curriculumHref ?? '/curriculum/', label: 'Curriculum' },
+  { id: 'olympiads',  href: olympiadsHref  ?? '/olympiads/',  label: 'Olympiads' },
+  { id: 'research',   href: researchHref   ?? '/research/',   label: 'Research' },
 ];
 const links = active === 'home' ? allLinks.filter((l) => l.id !== 'home') : allLinks;
 

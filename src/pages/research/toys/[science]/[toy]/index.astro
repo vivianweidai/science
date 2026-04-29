@@ -1,0 +1,332 @@
+---
+import { getCollection, render } from 'astro:content';
+import DefaultLayout from '../../../../../layouts/Default.astro';
+import PageHeader from '../../../../../layouts/PageHeader.astro';
+import PageFooter from '../../../../../layouts/PageFooter.astro';
+import toysData from '../../../../../../public/research/toys.json';
+
+export async function getStaticPaths() {
+  const toys = await getCollection('toys');
+  return toys.map((entry) => {
+    // id is "<science_folder>/<Toy Name>", e.g. "chemistry/IR Spectroscopy".
+    const [science, toy] = entry.id.split('/');
+    return {
+      params: { science, toy },
+      props: { entry },
+    };
+  });
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { toy, science, science_slug, topic, technology, hero, hero_position } = entry.data;
+
+// Topic + technology descriptions and the toy spec all live in toys.json
+// (built from toys.yml — single source of truth for toy text). Pull them
+// out so the toy-context spans show topic/tech on hover and the centered
+// description renders the toy spec.
+let topicDesc = '';
+let techDesc = '';
+let specs = '';
+for (const t of toysData.topics) {
+  if (t.science_slug !== science_slug || t.topic !== topic) continue;
+  topicDesc = t.description;
+  for (const tech of t.technologies) {
+    if (tech.technology !== technology) continue;
+    techDesc = tech.description;
+    for (const tt of tech.toys) {
+      if (tt.toy === toy) specs = tt.specs;
+    }
+  }
+}
+
+// Reverse-lookup every project that uses this toy. Source of truth is
+// each project's `toys:` frontmatter array — the toys.yml completed/
+// extension_of fields are too narrow (one project per toy) to capture the
+// foundation libraries (NumPy, Matplotlib, etc.) that show up across many
+// projects.
+const projects = await getCollection('projects');
+const matched = projects.filter((p) => (p.data.toys ?? []).includes(toy));
+
+const MONTHS = ['January','February','March','April','May','June',
+                'July','August','September','October','November','December'];
+function ordinal(d: number): string {
+  const j = d % 10, k = d % 100;
+  if (j === 1 && k !== 11) return d + 'st';
+  if (j === 2 && k !== 12) return d + 'nd';
+  if (j === 3 && k !== 13) return d + 'rd';
+  return d + 'th';
+}
+
+type ProjRow = {
+  sortKey: string;        // YYYYMMDD for chronological sort, newest first
+  href: string;           // local /research/... or external https://...
+  date: string;           // human-formatted ("April 27th 2026")
+  title: string;
+  chips: { slug: string; label: string }[];
+};
+const projList: ProjRow[] = [];
+
+// Title + chips both come from project frontmatter — no more regex parsing
+// of the markdown body's <div class="project-title">…</div> block.
+const SCIENCE_SHORT: Record<string, string> = {
+  Mathematics: 'math', Computing: 'comp', Physics: 'phys',
+  Chemistry: 'chem', Biology: 'bio', Astronomy: 'astro',
+};
+
+for (const proj of matched) {
+  const folder = proj.id;
+  const m = folder.match(/^(\d{4})(\d{2})(\d{2})/);
+  if (!m) continue;
+  const date = `${MONTHS[parseInt(m[2]) - 1]} ${ordinal(parseInt(m[3]))} ${m[1]}`;
+  const chips = (proj.data.sciences ?? [])
+    .map((s) => ({ slug: SCIENCE_SHORT[s] ?? '', label: s }))
+    .filter((c) => c.slug);
+  projList.push({
+    sortKey: m[1] + m[2] + m[3],
+    href: `/research/projects/${encodeURIComponent(folder)}/`,
+    date,
+    title: proj.data.title,
+    chips,
+  });
+}
+
+// Placeholder projects from this toy's frontmatter (no local page yet).
+for (const x of entry.data.extra_projects ?? []) {
+  const m = x.date.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!m) continue;
+  const date = `${MONTHS[parseInt(m[2]) - 1]} ${ordinal(parseInt(m[3]))} ${m[1]}`;
+  const chips = x.sciences
+    .map((s) => ({ slug: SCIENCE_SHORT[s] ?? '', label: s }))
+    .filter((c) => c.slug);
+  projList.push({
+    sortKey: m[1] + m[2] + m[3],
+    href: x.url,
+    date,
+    title: x.title,
+    chips,
+  });
+}
+
+projList.sort((a, b) => b.sortKey.localeCompare(a.sortKey));
+
+// Resolve hero path. Frontmatter usually has a relative path like
+// `numpy.jpeg`; turn it into an absolute URL the browser can fetch.
+// Uses the route's folder param (full science name, e.g. "mathematics") —
+// not science_slug (short, "math"), which is for chip styling only.
+const scienceFolder = Astro.params.science!;
+function resolveHero(h: string | undefined, folder: string, name: string): string | null {
+  if (!h) return null;
+  if (h.startsWith('/') || h.startsWith('http://') || h.startsWith('https://')) return h;
+  return `/research/toys/${folder}/${encodeURIComponent(name)}/${h.split('/').map(encodeURIComponent).join('/')}`;
+}
+const heroUrl = resolveHero(hero, scienceFolder, toy);
+---
+<DefaultLayout title={`${toy} — ${science}`}>
+  <PageHeader title="Research" researchHref={`/research/#${science_slug}`} />
+
+  <article class="toy-page">
+    <div class="toy-title">
+      <div class="toy-title-left">
+        <h1>{toy}</h1>
+        <a class={`chip ${science_slug}`} href={`/research/#${science_slug}`}>{science}</a>
+      </div>
+      <span class="toy-context">
+        <span class="toy-tip" data-tip={topicDesc}>{topic}</span>
+        <span class="toy-context-sep"> · </span>
+        <span class="toy-tip" data-tip={techDesc}>{technology}</span>
+      </span>
+    </div>
+    {heroUrl && (
+      <div class="hero-single fade-in">
+        <img src={heroUrl} alt={toy} style={hero_position ? `object-position: ${hero_position};` : undefined} />
+      </div>
+    )}
+    <div class="toy-description">
+      <p>{specs}.</p>
+    </div>
+
+    <Content />
+
+    <h2>Projects</h2>
+    {projList.length === 0 ? (
+      <p class="toy-no-projects">No projects yet.</p>
+    ) : (
+      <ul class="updates-list">
+        {projList.map((p, i) => (
+          <li class="fade-in" data-subj={p.chips[0]?.slug ?? ''} style={`animation-delay: ${0.05 + i * 0.05}s`}>
+            <span class="update-date">{p.date}</span>
+            <span class="update-body">
+              <a href={p.href}>{p.title}</a>
+              {p.chips.map((c) => (
+                <a class={`chip ${c.slug}`} href={`/research/#${c.slug}`}>{c.label}</a>
+              ))}
+            </span>
+          </li>
+        ))}
+      </ul>
+    )}
+  </article>
+
+  <hr />
+
+  <PageFooter researchHref={`/research/#${science_slug}`} />
+
+  <style is:global>
+    /* Title row: H1 + science chip on the left, topic · technology on the
+       right. Single border-bottom on the row itself spans the full body
+       width — H1's own underline is suppressed so the divisor doesn't end
+       at the title text (image 22). align-items: center keeps the chip
+       vertically centered with the H1. */
+    .toy-page .toy-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1em;
+      flex-wrap: wrap;
+      margin: .5em 0 .8em 0;
+      padding-bottom: .3em;
+      border-bottom: 1px solid #d1d9e0;
+    }
+    .toy-page .toy-title-left {
+      display: inline-flex;
+      align-items: center;
+      gap: .55em;
+    }
+    .toy-page .toy-title h1 {
+      margin: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .toy-page .toy-context {
+      color: #656d76;
+      font-size: .92em;
+      white-space: nowrap;
+    }
+
+    /* Hover tooltip on topic/technology — descriptions live in toys.json
+       (topic.description, technology.description) and are wired in via
+       data-tip. No cursor change per the standing rule. */
+    .toy-page .toy-tip {
+      position: relative;
+      border-bottom: 1px dotted #b1b7be;
+      cursor: default;
+    }
+    .toy-page .toy-tip:hover::after {
+      content: attr(data-tip);
+      position: absolute;
+      bottom: calc(100% + 6px);
+      right: 0;
+      width: max-content;
+      max-width: 320px;
+      padding: .45em .7em;
+      background: #1f2328;
+      color: #fff;
+      font-size: .85em;
+      line-height: 1.4;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+      z-index: 50;
+      white-space: normal;
+      pointer-events: none;
+    }
+
+    /* Hero — same dimensions as the research project pages so a toy page
+       and a project page read at the same scale. Border + drop shadow let
+       mostly-white screenshots (NumPy code, etc.) sit visually separate
+       from the white page background. */
+    .toy-page .hero-single img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid #d1d9e0;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, .12), 0 1px 3px rgba(0, 0, 0, .08);
+      margin: 1em 0 .5em 0;
+      display: block;
+    }
+
+    /* Toy description sits centered below the hero (image 24). */
+    .toy-page .toy-description {
+      text-align: center;
+      max-width: 640px;
+      margin: 1.2em auto 1.5em;
+    }
+    .toy-page .toy-description p {
+      margin: 0;
+    }
+
+    .toy-page h2 { margin-top: 1.6em; }
+
+    /* Photo grid for optional Instruments / Results / etc. sections in the
+       toy markdown body. 2-column by default, .three-col override for triplets. */
+    .toy-page .toy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5em;
+      margin: 1em 0 0.5em 0;
+    }
+    .toy-page .toy-grid.three-col { grid-template-columns: 1fr 1fr 1fr; }
+    .toy-page .toy-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .toy-page .toy-no-projects {
+      color: #8c959f;
+      font-style: italic;
+    }
+
+    /* Projects list — homepage updates-list format (image 25). Scoped to
+       .toy-page so it doesn't leak into other consumers; rules mirror
+       /index.astro's .updates-list. */
+    .toy-page .updates-list {
+      list-style: none;
+      padding: 0;
+      margin: 1em 0 0;
+      border: 1px solid #d1d9e0;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .toy-page .updates-list li {
+      display: flex;
+      gap: 1em;
+      align-items: baseline;
+      padding: 0.55em 1em 0.55em 1.4em;
+      border-bottom: 1px solid #eaecef;
+      line-height: 1.6;
+      position: relative;
+      transition: background 0.15s ease;
+    }
+    .toy-page .updates-list li:last-child { border-bottom: none; }
+    .toy-page .updates-list li:nth-child(even) { background: #f6f8fa; }
+    .toy-page .updates-list li:hover { background: #eef1f4; }
+    .toy-page .updates-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 5px;
+      background: var(--accent, #d1d9e0);
+    }
+    .toy-page .updates-list li[data-subj="math"]  { --accent: var(--subj-math); }
+    .toy-page .updates-list li[data-subj="comp"]  { --accent: var(--subj-comp); }
+    .toy-page .updates-list li[data-subj="phys"]  { --accent: var(--subj-phys); }
+    .toy-page .updates-list li[data-subj="chem"]  { --accent: var(--subj-chem); }
+    .toy-page .updates-list li[data-subj="bio"]   { --accent: var(--subj-bio); }
+    .toy-page .updates-list li[data-subj="astro"] { --accent: var(--subj-astro); }
+    .toy-page .updates-list .update-date {
+      flex-shrink: 0;
+      min-width: 9em;
+      color: #656d76;
+      font-size: 0.9em;
+    }
+    .toy-page .updates-list .update-body { flex: 1; }
+    .toy-page .updates-list .chip { margin-left: 0.2em; }
+    @media (max-width: 600px) {
+      .toy-page .updates-list .update-date { display: none; }
+    }
+  </style>
+</DefaultLayout>
