@@ -1,8 +1,9 @@
 ---
 project: Mass Spectrometry
 toys:
-  - GC-MS
-  - LC-MS
+  - MALDI
+  - Gas Chromatography MS
+  - Liquid Chromatography MS
 title: "Mass Spectrometry — Dry Run"
 sciences:
   - Chemistry
@@ -20,7 +21,7 @@ sciences:
 
 Mass spectrometry weighs molecules. A UV laser pulse vaporizes and ionizes the sample off a steel target plate; ions fly down a vacuum tube and time-of-flight maps to m/z.
 
-- **MALDI** — dry sample on a plate, laser-ionized direct, **no column**. Fast, minimal prep — trades chromatographic separation for speed.
+- **MALDI** — sample dried on a plate, laser-ionized direct, **no chromatograph in front**. Fast, minimal prep — the whole mixture hits the MS at once instead of being separated first.
 - **GC-MS / LC-MS** — same TOF idea but with a chromatograph in front; each eluting peak is ionized in turn.
 
 Clickthrough dry run — empty plate, clean spot, save the spectrum. Verifies the path before real samples.
@@ -70,21 +71,19 @@ Flat baseline across 500–3000 m/z — no analyte, no matrix, no peaks; if peak
 
 <h2 id="extensions">Extensions</h2>
 
-<div class="photo-grid">
+<div class="photo-grid three-col">
   <img src="photos/setup/setup2.jpeg" alt="Agilent 7890A GC 5975C Inert MSD">
-  <img src="photos/setup/setup3.jpeg" alt="Agilent 1200 Series HPLC 6230A TOF LC-MS">
   <img src="photos/setup/setup46.jpeg" alt="Waters Micromass ZQ Alliance e2695 LC-MS">
-  <img src="photos/setup/setup14.jpeg" alt="Agilent 7890 GC-FID Chiral">
+  <img src="photos/setup/setup3.jpeg" alt="Agilent 1200 Series HPLC 6230A TOF LC-MS">
 </div>
 
 <div class="instrument-table no-highlight">
 
 | Instrument | Extension | Description |
 |------------|-----------|-------------|
-| Agilent 7890A GC 5975C Inert MSD | Volatiles | GC + EI MS — small molecules, fragmented |
-| Agilent 1200 Series HPLC 6230A TOF LC-MS | Nonvolatiles, exact mass | LC + ESI TOF MS — large molecules, intact |
-| Waters Micromass ZQ Alliance e2695 LC-MS | Nonvolatiles, unit mass | LC + ESI quad MS — known targets, fast quant |
-| Agilent 7890 GC-FID Chiral | Enantiomers | GC + FID, chiral column — R/S separation, no MS |
+| Agilent 7890A GC 5975C Inert MSD | Volatiles | GC + EI MS — small fragmented molecules |
+| Waters Micromass ZQ Alliance e2695 LC-MS | Nonvolatiles, unit mass | LC + ESI quad MS — known targets |
+| Agilent 1200 Series HPLC 6230A TOF LC-MS | Nonvolatiles, exact mass | LC + ESI TOF MS — large intact molecules |
 
 </div>
 
@@ -92,8 +91,9 @@ Flat baseline across 500–3000 m/z — no analyte, no matrix, no peaks; if peak
 <div class="tech-table">
 <div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/GC-MS/">GC-MS</a></span> <span class="update-desc">Volatile molecules — fragment fingerprints via electron ionization</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
-  <li data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/LC-MS/">LC-MS</a></span> <span class="update-desc">Nonvolatile molecules — intact weight via electrospray</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/MALDI/">MALDI</a></span> <span class="update-desc">Direct ionization from a plate — no chromatograph, intact biomolecules via laser + matrix</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/Gas Chromatography MS/">Gas Chromatography MS</a></span> <span class="update-desc">Volatile molecules — fragment fingerprints via electron ionization</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/Liquid Chromatography MS/">Liquid Chromatography MS</a></span> <span class="update-desc">Nonvolatile molecules — intact weight via electrospray</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
 </ul>
 </div>
 </div>

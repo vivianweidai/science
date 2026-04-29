@@ -1,5 +1,5 @@
 ---
-toy: Liquid Chromatography
+toy: Gas Chromatography
 science: Chemistry
 science_slug: chem
 topic: Physical

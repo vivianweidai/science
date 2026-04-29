@@ -568,21 +568,42 @@
             {
               "id": 23,
               "toy": "Liquid Chromatography",
-              "specs": "Flow through packed column — separate by chemical affinity",
+              "specs": "Liquid through packed column — soluble analytes",
               "available": 1,
               "toy_url": "/research/toys/chemistry/Liquid%20Chromatography/",
-              "hero": "/research/toys/chemistry/Liquid%20Chromatography/hplc.jpg",
-              "completed": "20260427 Liquid Chromatography",
-              "project_url": "/research/projects/20260427%20Liquid%20Chromatography/",
+              "hero": "/research/toys/chemistry/Liquid%20Chromatography/hero.jpg",
+              "completed": "20260427 Chromatography",
+              "project_url": "/research/projects/20260427%20Chromatography/",
               "projects": [
                 {
                   "date": "2026-04-27",
-                  "title": "Liquid Chromatography — Dry Run",
-                  "url": "/research/projects/20260427%20Liquid%20Chromatography/",
+                  "title": "Chromatography — Dry Run",
+                  "url": "/research/projects/20260427%20Chromatography/",
                   "sciences": [
                     "Chemistry"
                   ],
-                  "folder": "20260427 Liquid Chromatography"
+                  "folder": "20260427 Chromatography"
+                }
+              ]
+            },
+            {
+              "id": 24,
+              "toy": "Gas Chromatography",
+              "specs": "Gas through heated capillary — volatile analytes",
+              "available": 1,
+              "toy_url": "/research/toys/chemistry/Gas%20Chromatography/",
+              "hero": "/research/toys/chemistry/Gas%20Chromatography/hero.jpg",
+              "completed": "20260427 Chromatography",
+              "project_url": "/research/projects/20260427%20Chromatography/",
+              "projects": [
+                {
+                  "date": "2026-04-27",
+                  "title": "Chromatography — Dry Run",
+                  "url": "/research/projects/20260427%20Chromatography/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260427 Chromatography"
                 }
               ]
             }
@@ -594,7 +615,7 @@
           "description": "Watch samples change with heat",
           "toys": [
             {
-              "id": 24,
+              "id": 25,
               "toy": "Thermogravimetry",
               "specs": "Mass loss with heating — decomposition and moisture",
               "available": 1,
@@ -615,7 +636,7 @@
               ]
             },
             {
-              "id": 25,
+              "id": 26,
               "toy": "Calorimetry",
               "specs": "Energy flow with heating — phase transitions and heat capacity",
               "available": 1,
@@ -652,7 +673,7 @@
           "description": "Absorb EM radiation — vibrational, electronic and nuclear transitions",
           "toys": [
             {
-              "id": 26,
+              "id": 27,
               "toy": "IR Spectroscopy",
               "specs": "Polar bonds — functional-group fingerprints",
               "available": 1,
@@ -673,7 +694,7 @@
               ]
             },
             {
-              "id": 27,
+              "id": 28,
               "toy": "UV-Vis Spectroscopy",
               "specs": "Light absorption — concentration and conjugation",
               "available": 1,
@@ -694,7 +715,7 @@
               ]
             },
             {
-              "id": 28,
+              "id": 29,
               "toy": "NMR Spectroscopy",
               "specs": "¹H and ¹³C environments — full structural fingerprint",
               "available": 0,
@@ -709,12 +730,12 @@
           "description": "Ionize and weigh — intact mass and fragment fingerprints",
           "toys": [
             {
-              "id": 29,
-              "toy": "GC-MS",
-              "specs": "Volatile molecules — fragment fingerprints via electron ionization",
+              "id": 30,
+              "toy": "MALDI",
+              "specs": "Large molecules — intact mass via laser + matrix",
               "available": 1,
-              "toy_url": "/research/toys/chemistry/GC-MS/",
-              "hero": "/research/toys/chemistry/GC-MS/gc-ms.jpg",
+              "toy_url": "/research/toys/chemistry/MALDI/",
+              "hero": "/research/toys/chemistry/MALDI/hero.jpg",
               "completed": "20260427 Mass Spectrometry",
               "project_url": "/research/projects/20260427%20Mass%20Spectrometry/",
               "projects": [
@@ -730,12 +751,33 @@
               ]
             },
             {
-              "id": 30,
-              "toy": "LC-MS",
+              "id": 31,
+              "toy": "Liquid Chromatography MS",
               "specs": "Nonvolatile molecules — intact weight via electrospray",
               "available": 1,
-              "toy_url": "/research/toys/chemistry/LC-MS/",
-              "hero": "/research/toys/chemistry/LC-MS/lc-ms.jpg",
+              "toy_url": "/research/toys/chemistry/Liquid%20Chromatography%20MS/",
+              "hero": "/research/toys/chemistry/Liquid%20Chromatography%20MS/hero.jpg",
+              "completed": "20260427 Mass Spectrometry",
+              "project_url": "/research/projects/20260427%20Mass%20Spectrometry/",
+              "projects": [
+                {
+                  "date": "2026-04-27",
+                  "title": "Mass Spectrometry — Dry Run",
+                  "url": "/research/projects/20260427%20Mass%20Spectrometry/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260427 Mass Spectrometry"
+                }
+              ]
+            },
+            {
+              "id": 32,
+              "toy": "Gas Chromatography MS",
+              "specs": "Volatile molecules — fragment fingerprints via electron ionization",
+              "available": 1,
+              "toy_url": "/research/toys/chemistry/Gas%20Chromatography%20MS/",
+              "hero": "/research/toys/chemistry/Gas%20Chromatography%20MS/hero.jpg",
               "completed": "20260427 Mass Spectrometry",
               "project_url": "/research/projects/20260427%20Mass%20Spectrometry/",
               "projects": [
@@ -767,7 +809,7 @@
           "description": "Image cells at every scale",
           "toys": [
             {
-              "id": 31,
+              "id": 33,
               "toy": "Handheld",
               "specs": "Mobile scope — surface inspection without sample prep",
               "available": 1,
@@ -775,7 +817,7 @@
               "hero": "/research/toys/biology/Handheld/handheld.jpeg"
             },
             {
-              "id": 32,
+              "id": 34,
               "toy": "Stereo",
               "specs": "Reflected light — whole specimens in 3D at low magnification",
               "available": 1,
@@ -783,7 +825,7 @@
               "hero": "/research/toys/biology/Stereo/stereo.jpeg"
             },
             {
-              "id": 33,
+              "id": 35,
               "toy": "Compound",
               "specs": "Transmitted light — cells through a slide at high magnification",
               "available": 1,
@@ -798,7 +840,7 @@
           "description": "Record brain activity",
           "toys": [
             {
-              "id": 34,
+              "id": 36,
               "toy": "EEG",
               "specs": "Scalp electrodes — Muse",
               "available": 0,
@@ -806,7 +848,7 @@
               "hero": "/research/toys/biology/EEG/eeg.jpeg"
             },
             {
-              "id": 35,
+              "id": 37,
               "toy": "fNIRS",
               "specs": "Near-infrared light — cortical blood flow",
               "available": 0,
@@ -830,7 +872,7 @@
           "description": "Copy DNA for detection",
           "toys": [
             {
-              "id": 36,
+              "id": 38,
               "toy": "PCR",
               "specs": "Endpoint amplification — cycle temperature until enough copies exist",
               "available": 1,
@@ -851,7 +893,7 @@
               ]
             },
             {
-              "id": 37,
+              "id": 39,
               "toy": "qPCR",
               "specs": "Real-time quantitation — count copies as they are made",
               "available": 0,
@@ -866,7 +908,7 @@
           "description": "Read the DNA code",
           "toys": [
             {
-              "id": 38,
+              "id": 40,
               "toy": "Long-Read",
               "specs": "One long sequence end to end — MinION",
               "available": 0,
@@ -874,7 +916,7 @@
               "hero": "/research/toys/biology/Long-Read/long-read.jpeg"
             },
             {
-              "id": 39,
+              "id": 41,
               "toy": "Short-Read",
               "specs": "Many short sequences in parallel",
               "available": 0,
@@ -889,7 +931,7 @@
           "description": "Make and see proteins",
           "toys": [
             {
-              "id": 40,
+              "id": 42,
               "toy": "Cell-Free",
               "specs": "Produce protein from DNA without living cells",
               "available": 1,
@@ -910,7 +952,7 @@
               ]
             },
             {
-              "id": 41,
+              "id": 43,
               "toy": "Fluorescence",
               "specs": "Visualize protein glow under UV light",
               "available": 1,
@@ -947,7 +989,7 @@
           "description": "Optical wavelengths from backyards to mountaintop observatories",
           "toys": [
             {
-              "id": 42,
+              "id": 44,
               "toy": "Household",
               "specs": "Amateur smart telescope — motorized mount and integrated camera",
               "available": 1,
@@ -955,7 +997,7 @@
               "hero": "/research/toys/astronomy/Household/household.jpeg"
             },
             {
-              "id": 43,
+              "id": 45,
               "toy": "Earth",
               "specs": "Meter-class ground telescope at a dark site",
               "available": 1,
@@ -970,7 +1012,7 @@
           "description": "Wavelengths outside the visible — radio through X-ray",
           "toys": [
             {
-              "id": 44,
+              "id": 46,
               "toy": "Radio",
               "specs": "Backyard antenna to synthesized array — Jupiter bursts to galactic structure",
               "available": 1,
@@ -978,7 +1020,7 @@
               "hero": "/research/toys/astronomy/Radio/radio.jpeg"
             },
             {
-              "id": 45,
+              "id": 47,
               "toy": "Space",
               "specs": "Above the atmosphere — UV, infrared and X-ray wavelengths blocked by air",
               "available": 0,
@@ -1002,7 +1044,7 @@
           "description": "Extract measurements from raw images",
           "toys": [
             {
-              "id": 46,
+              "id": 48,
               "toy": "Photometry",
               "specs": "How bright — light curves reveal variability, transits and distance",
               "available": 1,
@@ -1010,7 +1052,7 @@
               "hero": "/research/toys/astronomy/Photometry/photometry.jpeg"
             },
             {
-              "id": 47,
+              "id": 49,
               "toy": "Astrometry",
               "specs": "Where — positions and proper motions reveal parallax and orbits",
               "available": 1,
@@ -1018,7 +1060,7 @@
               "hero": "/research/toys/astronomy/Astrometry/astrometry.jpeg"
             },
             {
-              "id": 48,
+              "id": 50,
               "toy": "Spectroscopy",
               "specs": "What — wavelengths reveal composition, temperature and radial velocity",
               "available": 1,
@@ -1033,7 +1075,7 @@
           "description": "Label sources with machine learning",
           "toys": [
             {
-              "id": 49,
+              "id": 51,
               "toy": "Transient",
               "specs": "Classical ML on light curves — supernovae, variable stars",
               "available": 0,
@@ -1041,7 +1083,7 @@
               "hero": "/research/toys/astronomy/Transient/transient.jpeg"
             },
             {
-              "id": 50,
+              "id": 52,
               "toy": "Galaxy Morphology",
               "specs": "Deep CNN on galaxy images — spirals, ellipticals, mergers",
               "available": 0,

@@ -228,13 +228,12 @@ import PageFooter from '../../layouts/PageFooter.astro';
 
     .toys-tech-desc {
       font-weight: 400;
-      color: #1f2328;
-      opacity: 0;
-      transition: opacity .2s ease;
+      color: transparent;
+      transition: color .2s ease;
       text-align: right;
     }
     .toys-card-wrap:hover .toys-tech-desc {
-      opacity: 1;
+      color: #1f2328;
     }
     .toys-tech-row:hover td { background: #eef1f4; }
 

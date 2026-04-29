@@ -175,9 +175,13 @@
           available: true
           completed: "20260411 Centrifuge"
         - toy: Liquid Chromatography
-          specs: Flow through packed column — separate by chemical affinity
+          specs: Liquid through packed column — soluble analytes
           available: true
-          completed: "20260427 Liquid Chromatography"
+          completed: "20260427 Chromatography"
+        - toy: Gas Chromatography
+          specs: Gas through heated capillary — volatile analytes
+          available: true
+          completed: "20260427 Chromatography"
     - technology: Thermal Analysis
       description: Watch samples change with heat
       toys:
@@ -209,12 +213,16 @@
     - technology: Mass Spectrometry
       description: Ionize and weigh — intact mass and fragment fingerprints
       toys:
-        - toy: GC-MS
-          specs: Volatile molecules — fragment fingerprints via electron ionization
+        - toy: MALDI
+          specs: Large molecules — intact mass via laser + matrix
           available: true
           completed: "20260427 Mass Spectrometry"
-        - toy: LC-MS
+        - toy: Liquid Chromatography MS
           specs: Nonvolatile molecules — intact weight via electrospray
+          available: true
+          completed: "20260427 Mass Spectrometry"
+        - toy: Gas Chromatography MS
+          specs: Volatile molecules — fragment fingerprints via electron ionization
           available: true
           completed: "20260427 Mass Spectrometry"
 
