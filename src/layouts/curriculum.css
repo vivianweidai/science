@@ -230,32 +230,31 @@ a.curr-col-head:hover {
 .curr-topic-body td:last-child { border-right: none; }
 .curr-topic-body tr:last-child td { border-bottom: none; }
 .curr-topic-body th {
-  background: #e1e4e8;
+  background: color-mix(in srgb, var(--card-tint, #d1d9e0) 50%, white);
   font-weight: 700;
   font-size: 0.95em;
 }
 
 .curr-topic-body td:first-child {
-  background: #f6f8fa !important;
+  background: color-mix(in srgb, var(--card-tint, #d1d9e0) 30%, white) !important;
   font-weight: 600;
   width: 25%;
 }
 .curr-topic-body td:nth-child(2) { width: 37.5%; }
 .curr-topic-body td:nth-child(3) { width: 37.5%; }
-/* Explicit white on odd rows so the tinted .curr-topic background
-   doesn't bleed through. Yellow .highlight rule keeps !important
-   so the highlighted rows still win. */
+/* Per-science tinted zebra. Yellow .highlight rule keeps !important
+   so highlighted rows still win. */
 .curr-topic-body tr:nth-child(odd) td:not(:first-child) {
-  background: #fff;
+  background: color-mix(in srgb, var(--card-tint, #d1d9e0) 8%, white);
 }
 .curr-topic-body tr:nth-child(even) td:not(:first-child) {
-  background: #f6f8fa;
+  background: color-mix(in srgb, var(--card-tint, #d1d9e0) 18%, white);
 }
 .curr-topic-body tr:hover td:not(:first-child) {
-  background: #eef1f4;
+  background: color-mix(in srgb, var(--card-tint, #d1d9e0) 32%, white);
 }
 .curr-topic-body tr:hover td:first-child {
-  background: #eef1f4 !important;
+  background: color-mix(in srgb, var(--card-tint, #d1d9e0) 42%, white) !important;
 }
 .curr-topic-body td.curr-group-hover {
   background: #eef1f4 !important;
