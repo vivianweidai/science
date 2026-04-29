@@ -220,8 +220,8 @@ a.curr-col-head:hover {
 }
 .curr-topic-body th,
 .curr-topic-body td {
-  border-right: 1px solid #d1d9e0;
-  border-bottom: 1px solid #d1d9e0;
+  border-right: 1px solid #eaecef;
+  border-bottom: 1px solid #eaecef;
   padding: 0.45em 0.7em;
   text-align: center;
   vertical-align: middle;
