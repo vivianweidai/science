@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Solar System
-topic: Planets
-table: history
-order: 30
----
-
 # history
 
 <table>

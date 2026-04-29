@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Coordinates
-topic: Time
-table: time
-order: 17
----
-
 # time
 
 <table>

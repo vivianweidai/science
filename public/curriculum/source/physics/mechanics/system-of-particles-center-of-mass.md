@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Mechanics
-topic: System Of Particles
-table: center of mass
-order: 7
----
-
 # center of mass
 
 <table>

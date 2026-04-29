@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Cognition
-table: cognition
-order: 88
----
-
 # cognition
 
 <table>

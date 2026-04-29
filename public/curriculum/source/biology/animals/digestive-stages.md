@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Animals
-topic: Digestive
-table: stages
-order: 76
----
-
 # stages
 
 <table>

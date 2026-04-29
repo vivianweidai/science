@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Sequences And Series
-table: arithmetic
-order: 26
----
-
 # arithmetic
 
 <table>

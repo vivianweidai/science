@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Natural Selection
-table: evidence
-order: 38
----
-
 # evidence
 
 <table>

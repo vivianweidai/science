@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Alkali
-table: alkali
-order: 85
----
-
 # alkali
 
 <table>

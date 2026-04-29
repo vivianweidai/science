@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Enthalpy
-table: enthalpy
-order: 49
----
-
 # enthalpy
 
 <table>

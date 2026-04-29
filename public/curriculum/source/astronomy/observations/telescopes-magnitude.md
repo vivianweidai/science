@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Observations
-topic: Telescopes
-table: magnitude
-order: 6
----
-
 # magnitude
 
 <table>

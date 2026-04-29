@@ -1,6 +1,6 @@
 import Foundation
 
-/// Strongly-typed mirror of `content/research/toys.json`, the source of
+/// Strongly-typed mirror of `public/research/toys.json`, the source of
 /// truth for the Research page's toy browser.
 public struct ResearchTopic: Codable, Identifiable, Hashable, Sendable {
     public let id: Int
@@ -31,13 +31,11 @@ public struct ResearchToy: Codable, Identifiable, Hashable, Sendable {
     public let url: String?
     public let hero: String?
     public let toyUrl: String?
-    public let projectUrl: String?
     public let projects: [ResearchToyProject]?
 
     enum CodingKeys: String, CodingKey {
         case id, toy, specs, available, url, hero, projects
         case toyUrl = "toy_url"
-        case projectUrl = "project_url"
     }
 
     /// Absolute URL for the toy's hero image. Resolves relative paths
@@ -66,17 +64,6 @@ public struct ResearchToy: Codable, Identifiable, Hashable, Sendable {
             String($0).addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? String($0)
         }.joined(separator: "/")
         let withIndex = encoded.hasSuffix("/") ? encoded + "index.md" : encoded + "/index.md"
-        return URL(string: "https://vivianweidai.com/" + withIndex)
-    }
-
-    /// Raw URL for the project's `index.md`, when the toy points
-    /// to an in-repo research project. Kept for callers that want to
-    /// jump straight to the project page from a toy; the default toy
-    /// tap now lands on `toyIndexURL`.
-    public var projectIndexURL: URL? {
-        guard let path = projectUrl else { return nil }
-        let trimmed = path.hasPrefix("/") ? String(path.dropFirst()) : path
-        let withIndex = trimmed.hasSuffix("/") ? trimmed + "index.md" : trimmed + "/index.md"
         return URL(string: "https://vivianweidai.com/" + withIndex)
     }
 

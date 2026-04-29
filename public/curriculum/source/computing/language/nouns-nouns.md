@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Language
-topic: Nouns
-table: nouns
-order: 26
----
-
 # nouns
 
 <table>

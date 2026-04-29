@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Combinatorics
-topic: Counting
-table: combinations
-order: 9
----
-
 # combinations
 
 <table>

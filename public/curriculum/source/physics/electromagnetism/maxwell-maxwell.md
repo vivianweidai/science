@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Electromagnetism
-topic: Maxwell
-table: Maxwell
-order: 28
----
-
 # Maxwell
 
 <table>

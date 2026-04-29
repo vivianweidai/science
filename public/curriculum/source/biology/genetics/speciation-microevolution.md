@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Speciation
-table: microevolution
-order: 42
----
-
 # microevolution
 
 <table>

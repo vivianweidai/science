@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Mechanics
-topic: Energy
-table: energy
-order: 5
----
-
 # energy
 
 <table>

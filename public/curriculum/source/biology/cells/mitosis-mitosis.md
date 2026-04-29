@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Mitosis
-table: mitosis
-order: 15
----
-
 # mitosis
 
 <table>

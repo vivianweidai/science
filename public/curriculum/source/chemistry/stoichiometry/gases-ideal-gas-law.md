@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Stoichiometry
-topic: Gases
-table: ideal gas law
-order: 25
----
-
 # ideal gas law
 
 <table>

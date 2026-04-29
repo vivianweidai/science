@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Equilibrium
-table: multiple equilibria
-order: 35
----
-
 # multiple equilibria
 
 <table>

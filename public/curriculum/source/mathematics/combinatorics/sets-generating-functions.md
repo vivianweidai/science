@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Combinatorics
-topic: Sets
-table: generating functions
-order: 15
----
-
 # generating functions
 
 <table>

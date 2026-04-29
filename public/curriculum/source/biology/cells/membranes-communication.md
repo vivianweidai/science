@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Membranes
-table: communication
-order: 8
----
-
 # communication
 
 <table>

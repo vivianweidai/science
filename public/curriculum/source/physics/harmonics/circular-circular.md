@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Harmonics
-topic: Circular
-table: circular
-order: 10
----
-
 # circular
 
 <table>

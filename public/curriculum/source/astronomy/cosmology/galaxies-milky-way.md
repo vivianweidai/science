@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Galaxies
-table: Milky Way
-order: 62
----
-
 # Milky Way
 
 <table>

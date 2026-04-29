@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Ecology
-topic: Population
-table: ethology
-order: 47
----
-
 # ethology
 
 <table>

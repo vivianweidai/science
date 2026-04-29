@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Optics
-topic: Physical
-table: interference
-order: 45
----
-
 # interference
 
 <table>

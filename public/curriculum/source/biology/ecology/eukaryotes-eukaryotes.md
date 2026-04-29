@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Ecology
-topic: Eukaryotes
-table: eukaryotes
-order: 53
----
-
 # eukaryotes
 
 <table>

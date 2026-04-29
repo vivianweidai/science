@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Animals
-topic: Transport
-table: respiratory
-order: 78
----
-
 # respiratory
 
 <table>

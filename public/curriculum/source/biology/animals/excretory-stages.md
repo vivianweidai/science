@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Animals
-topic: Excretory
-table: stages
-order: 80
----
-
 # stages
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Animals
-topic: Reproductive
-table: gestation
-order: 81
----
-
 # gestation
 
 <table>

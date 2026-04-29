@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Mutations
-table: genetic variation
-order: 35
----
-
 # genetic variation
 
 <table>

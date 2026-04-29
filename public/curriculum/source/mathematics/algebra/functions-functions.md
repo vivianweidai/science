@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Functions
-table: functions
-order: 24
----
-
 # functions
 
 <table>

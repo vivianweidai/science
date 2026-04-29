@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Senses
-table: vision
-order: 95
----
-
 # vision
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Spectroscopy
-table: NMR
-order: 72
----
-
 # NMR
 
 <table>

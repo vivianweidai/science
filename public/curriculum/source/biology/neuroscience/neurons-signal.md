@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Neurons
-table: signal
-order: 90
----
-
 # signal
 
 <table>

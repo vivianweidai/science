@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Coordinates
-topic: Celestial
-table: galactic
-order: 16
----
-
 # galactic
 
 <table>

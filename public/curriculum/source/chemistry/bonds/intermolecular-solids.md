@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Bonds
-topic: Intermolecular
-table: solids
-order: 17
----
-
 # solids
 
 <table>

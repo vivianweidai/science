@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Halogens
-table: halides
-order: 95
----
-
 # halides
 
 <table>

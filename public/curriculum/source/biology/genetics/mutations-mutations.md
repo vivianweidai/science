@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Mutations
-table: mutations
-order: 34
----
-
 # mutations
 
 <table>

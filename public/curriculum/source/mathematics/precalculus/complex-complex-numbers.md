@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Precalculus
-topic: Complex
-table: complex numbers
-order: 44
----
-
 # complex numbers
 
 <table>

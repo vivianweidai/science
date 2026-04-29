@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Remnants
-table: white dwarf
-order: 58
----
-
 # white dwarf
 
 <table>

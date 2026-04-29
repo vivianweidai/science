@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Bonds
-topic: States
-table: states
-order: 19
----
-
 # states
 
 <table>

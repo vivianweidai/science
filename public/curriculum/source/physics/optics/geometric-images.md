@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Optics
-topic: Geometric
-table: images
-order: 43
----
-
 # images
 
 <table>

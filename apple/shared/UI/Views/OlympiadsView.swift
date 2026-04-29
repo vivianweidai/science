@@ -271,7 +271,7 @@ private struct ActivityRow: View {
                     if activity.invited == 1 {
                         Text("🎟️").font(.system(size: 12))
                     }
-                    if activity.borderline == 1 || activity.competitive == 1 {
+                    if activity.competitive == 1 {
                         Text("🎯").font(.system(size: 12))
                     }
                 }

@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Mechanics
-topic: Kinematics
-table: problems
-order: 2
----
-
 # problems
 
 <table>

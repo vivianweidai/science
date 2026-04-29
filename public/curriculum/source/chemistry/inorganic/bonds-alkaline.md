@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Bonds
-table: alkaline
-order: 88
----
-
 # alkaline
 
 <table>

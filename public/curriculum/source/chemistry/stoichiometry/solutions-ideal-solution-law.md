@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Stoichiometry
-topic: Solutions
-table: ideal solution law
-order: 27
----
-
 # ideal solution law
 
 <table>

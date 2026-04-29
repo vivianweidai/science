@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Mechanics
-topic: System Of Particles
-table: momentum
-order: 8
----
-
 # momentum
 
 <table>

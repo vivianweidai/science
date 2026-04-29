@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Plants
-topic: Nutrition
-table: adaptations
-order: 67
----
-
 # adaptations
 
 <table>

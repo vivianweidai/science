@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Harmonics
-topic: Circular
-table: Kepler
-order: 11
----
-
 # Kepler
 
 <table>

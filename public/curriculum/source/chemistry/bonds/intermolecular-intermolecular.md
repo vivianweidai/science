@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Bonds
-topic: Intermolecular
-table: intermolecular
-order: 16
----
-
 # intermolecular
 
 <table>

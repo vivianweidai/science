@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Bonds
-topic: Quantum
-table: diatomic
-order: 15
----
-
 # diatomic
 
 <table>

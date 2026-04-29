@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Ecology
-topic: Eukaryotes
-table: plants
-order: 54
----
-
 # plants
 
 <table>

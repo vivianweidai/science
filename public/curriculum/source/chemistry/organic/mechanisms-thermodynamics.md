@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Mechanisms
-table: thermodynamics
-order: 58
----
-
 # thermodynamics
 
 <table>

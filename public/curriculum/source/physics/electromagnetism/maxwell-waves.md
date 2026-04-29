@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Electromagnetism
-topic: Maxwell
-table: waves
-order: 29
----
-
 # waves
 
 <table>

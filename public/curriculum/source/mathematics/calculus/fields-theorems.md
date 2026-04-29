@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Fields
-table: theorems
-order: 62
----
-
 # theorems
 
 <table>

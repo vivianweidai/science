@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Active Nucleus
-table: active galaxies
-order: 64
----
-
 # active galaxies
 
 <table>

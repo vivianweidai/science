@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Thermodynamics
-topic: Second Law
-table: entropy
-order: 40
----
-
 # entropy
 
 <table>

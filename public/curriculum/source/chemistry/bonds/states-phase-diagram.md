@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Bonds
-topic: States
-table: phase diagram
-order: 20
----
-
 # phase diagram
 
 <table>

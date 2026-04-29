@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Meiosis
-table: meiosis
-order: 18
----
-
 # meiosis
 
 <table>

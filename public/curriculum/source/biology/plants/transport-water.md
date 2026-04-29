@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Plants
-topic: Transport
-table: water
-order: 64
----
-
 # water
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Thermodynamics
-topic: First Law
-table: isothermal
-order: 35
----
-
 # isothermal
 
 <table>

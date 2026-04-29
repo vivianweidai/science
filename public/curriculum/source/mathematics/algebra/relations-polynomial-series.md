@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Relations
-table: polynomial series
-order: 39
----
-
 # polynomial series
 
 <table>

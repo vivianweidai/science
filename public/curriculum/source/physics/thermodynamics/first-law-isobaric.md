@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Thermodynamics
-topic: First Law
-table: isobaric
-order: 37
----
-
 # isobaric
 
 <table>

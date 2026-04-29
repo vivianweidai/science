@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Structure
-table: organic chemistry
-order: 54
----
-
 # organic chemistry
 
 <table>

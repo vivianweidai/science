@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Optics
-topic: Geometric
-table: refraction
-order: 42
----
-
 # refraction
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Coordinates
-topic: Celestial
-table: ecliptical
-order: 15
----
-
 # ecliptical
 
 <table>

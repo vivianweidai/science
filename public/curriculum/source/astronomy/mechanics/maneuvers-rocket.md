@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Mechanics
-topic: Maneuvers
-table: rocket
-order: 27
----
-
 # rocket
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Ecology
-topic: Eukaryotes
-table: animals
-order: 56
----
-
 # animals
 
 <table>

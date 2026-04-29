@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Language
-topic: Verbs
-table: verbs
-order: 29
----
-
 # verbs
 
 <table>

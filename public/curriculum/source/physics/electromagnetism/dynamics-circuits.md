@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Electromagnetism
-topic: Dynamics
-table: circuits
-order: 19
----
-
 # circuits
 
 <table>

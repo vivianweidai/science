@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Vectors
-table: multivariable
-order: 60
----
-
 # multivariable
 
 <table>

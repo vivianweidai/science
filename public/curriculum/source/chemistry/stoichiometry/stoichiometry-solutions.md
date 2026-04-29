@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Stoichiometry
-topic: Stoichiometry
-table: solutions
-order: 22
----
-
 # solutions
 
 <table>

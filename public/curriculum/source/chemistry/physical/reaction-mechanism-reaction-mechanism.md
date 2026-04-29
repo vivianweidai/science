@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Reaction Mechanism
-table: reaction mechanism
-order: 31
----
-
 # reaction mechanism
 
 <table>

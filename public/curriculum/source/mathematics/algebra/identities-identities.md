@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Identities
-table: identities
-order: 35
----
-
 # identities
 
 <table>

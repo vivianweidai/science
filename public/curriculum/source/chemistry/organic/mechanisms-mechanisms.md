@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Mechanisms
-table: mechanisms
-order: 57
----
-
 # mechanisms
 
 <table>

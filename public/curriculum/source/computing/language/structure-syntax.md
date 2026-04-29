@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Language
-topic: Structure
-table: syntax
-order: 32
----
-
 # syntax
 
 <table>

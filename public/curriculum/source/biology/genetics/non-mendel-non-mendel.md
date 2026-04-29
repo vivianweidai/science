@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Non Mendel
-table: non Mendel
-order: 24
----
-
 # non Mendel
 
 <table>

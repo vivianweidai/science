@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Coordination
-table: isomers
-order: 74
----
-
 # isomers
 
 <table>

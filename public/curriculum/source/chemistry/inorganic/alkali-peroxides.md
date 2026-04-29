@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Alkali
-table: peroxides
-order: 87
----
-
 # peroxides
 
 <table>

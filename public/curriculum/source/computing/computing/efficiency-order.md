@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Efficiency
-table: order
-order: 36
----
-
 # order
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Natural Selection
-table: natural selection
-order: 37
----
-
 # natural selection
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Brightness
-table: temperature
-order: 43
----
-
 # temperature
 
 <table>

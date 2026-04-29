@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Geometry
-topic: Circles
-table: inscriptions
-order: 20
----
-
 # inscriptions
 
 <table>

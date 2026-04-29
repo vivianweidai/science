@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Language
-topic: Writing
-table: systems
-order: 23
----
-
 # systems
 
 <table>

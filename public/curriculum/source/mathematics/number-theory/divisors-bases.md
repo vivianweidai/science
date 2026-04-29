@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Number Theory
-topic: Divisors
-table: bases
-order: 3
----
-
 # bases
 
 <table>

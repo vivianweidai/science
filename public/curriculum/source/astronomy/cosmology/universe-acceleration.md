@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Universe
-table: acceleration
-order: 70
----
-
 # acceleration
 
 <table>

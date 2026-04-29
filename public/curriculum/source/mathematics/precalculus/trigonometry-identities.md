@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Precalculus
-topic: Trigonometry
-table: identities
-order: 42
----
-
 # identities
 
 <table>

@@ -1,7 +1,7 @@
 /* Curriculum widget.
  *
- * Loads archives/truth/curriculum.json (built by
- * archives/layout/build_curriculum.py) and renders a 6-column grid of
+ * Loads /curriculum/curriculum.json (built by
+ * pipeline/scripts/build_curriculum.py) and renders a 6-column grid of
  * subjects -> sections -> topics. Clicking a topic drills into a single
  * view that fetches the raw markdown files for that topic's tables from
  * GitHub raw, renders them with marked + KaTeX, and provides breadcrumb

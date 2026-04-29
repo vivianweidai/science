@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Language
-topic: Structure
-table: semantics
-order: 33
----
-
 # semantics
 
 <table>

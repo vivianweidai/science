@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Spectroscopy
-table: IR
-order: 71
----
-
 # IR
 
 <table>

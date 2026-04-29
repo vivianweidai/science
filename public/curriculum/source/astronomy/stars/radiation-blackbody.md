@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Radiation
-table: blackbody
-order: 40
----
-
 # blackbody
 
 <table>

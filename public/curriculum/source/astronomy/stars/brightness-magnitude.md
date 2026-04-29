@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Brightness
-table: magnitude
-order: 42
----
-
 # magnitude
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Plants
-topic: Reproduction
-table: sexual
-order: 68
----
-
 # sexual
 
 <table>

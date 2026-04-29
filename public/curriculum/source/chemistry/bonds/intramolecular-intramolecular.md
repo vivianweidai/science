@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Bonds
-topic: Intramolecular
-table: intramolecular
-order: 9
----
-
 # intramolecular
 
 <table>

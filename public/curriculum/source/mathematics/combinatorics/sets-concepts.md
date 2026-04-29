@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Combinatorics
-topic: Sets
-table: concepts
-order: 13
----
-
 # concepts
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Mechanics
-topic: Dynamics
-table: problems
-order: 4
----
-
 # problems
 
 <table>

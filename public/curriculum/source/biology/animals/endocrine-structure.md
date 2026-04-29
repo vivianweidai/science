@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Animals
-topic: Endocrine
-table: structure
-order: 72
----
-
 # structure
 
 <table>

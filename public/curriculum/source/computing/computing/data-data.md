@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Data
-table: data
-order: 38
----
-
 # data
 
 <table>

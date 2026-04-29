@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Observations
-topic: Telescopes
-table: telescope
-order: 5
----
-
 # telescope
 
 <table>

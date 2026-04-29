@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Plants
-topic: Behaviour
-table: stimuli
-order: 71
----
-
 # stimuli
 
 <table>

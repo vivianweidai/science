@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Modern
-topic: Modern
-table: relativity
-order: 46
----
-
 # relativity
 
 <table>

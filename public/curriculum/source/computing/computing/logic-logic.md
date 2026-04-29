@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Logic
-table: logic
-order: 40
----
-
 # logic
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Interior
-table: transport
-order: 52
----
-
 # transport
 
 <table>

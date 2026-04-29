@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Atoms
-topic: Radioactivity
-table: half life
-order: 6
----
-
 # half life
 
 <table>

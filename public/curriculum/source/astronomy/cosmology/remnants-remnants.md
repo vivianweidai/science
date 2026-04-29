@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Remnants
-table: remnants
-order: 57
----
-
 # remnants
 
 <table>

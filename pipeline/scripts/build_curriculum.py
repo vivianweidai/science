@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Regenerate curriculum markdown files and public/content/truth/curriculum.json
-from the Word (.docx) source documents in public/content/curriculum/notes/.
+"""Regenerate curriculum markdown files and public/curriculum/curriculum.json
+from the Word (.docx) source documents in public/curriculum/notes/.
 
 Single source of truth: each subject's .docx file contains the complete
 curriculum with tables, LaTeX formulas (as Office Math), and yellow
@@ -332,17 +332,8 @@ def escape_html(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def write_table_md(path: Path, subject: str, section: str, topic: str,
-                   table_name: str, order: int, rows: list[dict]) -> None:
+def write_table_md(path: Path, table_name: str, rows: list[dict]) -> None:
     lines = [
-        "---",
-        f"subject: {subject}",
-        f"section: {section}",
-        f"topic: {topic}",
-        f"table: {table_name}",
-        f"order: {order}",
-        "---",
-        "",
         f"# {table_name}",
         "",
         "<table>",
@@ -407,10 +398,11 @@ def build_all(root: Path) -> dict:
 
             # Write markdown file
             md_path = source_dir / subj_slug / section_slug / f"{topic_table_slug}.md"
-            write_table_md(md_path, subj_name, section_name, topic_name,
-                           td["table_name"], order, td["rows"])
+            write_table_md(md_path, td["table_name"], td["rows"])
 
-            # Build manifest entry
+            # Build manifest entry. `order` stays as a local sort key so
+            # topics within a section come out in document order, but it's
+            # not emitted in the JSON — the array order preserves it.
             if section_slug not in sections:
                 sections[section_slug] = {
                     "slug": section_slug,
@@ -423,10 +415,10 @@ def build_all(root: Path) -> dict:
                     "slug": topic_slug,
                     "name": topic_name,
                     "tables": [],
+                    "_first_order": order,
                 }
             topics[topic_slug]["tables"].append({
                 "name": td["table_name"],
-                "order": order,
                 "path": f"{subj_slug}/{section_slug}/{topic_table_slug}.md",
                 "highlighted_rows": td["highlighted_rows"],
             })
@@ -440,10 +432,11 @@ def build_all(root: Path) -> dict:
         for sec in ordered_sections:
             topics_dict = sec.pop("topics")
             sec["topics"] = sorted(
-                [{"slug": t["slug"], "name": t["name"], "tables": t["tables"]}
-                 for t in topics_dict.values()],
-                key=lambda t: (t["tables"][0]["order"], t["name"]),
+                topics_dict.values(),
+                key=lambda t: (t["_first_order"], t["name"]),
             )
+            for t in sec["topics"]:
+                t.pop("_first_order")
 
         manifest[subj_slug] = {
             "slug": subj_slug,

@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Foundation
-table: anhydrides
-order: 84
----
-
 # anhydrides
 
 <table>

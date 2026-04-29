@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Interior
-table: generation
-order: 53
----
-
 # generation
 
 <table>

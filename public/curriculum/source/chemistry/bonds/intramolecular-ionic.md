@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Bonds
-topic: Intramolecular
-table: ionic
-order: 10
----
-
 # ionic
 
 <table>

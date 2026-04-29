@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Macromolecules
-table: macromolecules
-order: 1
----
-
 # macromolecules
 
 <table>

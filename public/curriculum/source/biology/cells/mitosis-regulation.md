@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Mitosis
-table: regulation
-order: 17
----
-
 # regulation
 
 <table>

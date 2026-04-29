@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Stoichiometry
-topic: Solutions
-table: colligative
-order: 28
----
-
 # colligative
 
 <table>

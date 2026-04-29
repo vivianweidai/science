@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Mechanics
-topic: Maneuvers
-table: Oberth
-order: 28
----
-
 # Oberth
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Plants
-topic: Growth
-table: growth
-order: 58
----
-
 # growth
 
 <table>

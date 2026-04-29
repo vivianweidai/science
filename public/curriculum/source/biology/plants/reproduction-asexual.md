@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Plants
-topic: Reproduction
-table: asexual
-order: 69
----
-
 # asexual
 
 <table>

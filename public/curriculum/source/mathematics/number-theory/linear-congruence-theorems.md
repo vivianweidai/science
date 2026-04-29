@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Number Theory
-topic: Linear Congruence
-table: theorems
-order: 7
----
-
 # theorems
 
 <table>

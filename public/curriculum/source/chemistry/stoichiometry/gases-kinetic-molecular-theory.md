@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Stoichiometry
-topic: Gases
-table: kinetic molecular theory
-order: 26
----
-
 # kinetic molecular theory
 
 <table>

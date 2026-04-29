@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Universe
-table: universe
-order: 66
----
-
 # universe
 
 <table>

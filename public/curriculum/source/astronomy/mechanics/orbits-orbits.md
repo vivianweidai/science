@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Mechanics
-topic: Orbits
-table: orbits
-order: 21
----
-
 # orbits
 
 <table>

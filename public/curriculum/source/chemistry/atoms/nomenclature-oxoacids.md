@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Atoms
-topic: Nomenclature
-table: oxoacids
-order: 8
----
-
 # oxoacids
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Atmosphere
-table: temperature
-order: 49
----
-
 # temperature
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Statistics
-topic: Measurement
-table: compound
-order: 2
----
-
 # compound
 
 <table>

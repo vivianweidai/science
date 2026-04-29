@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Atmosphere
-table: luminosity
-order: 50
----
-
 # luminosity
 
 <table>

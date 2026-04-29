@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Ecology
-topic: Community
-table: interactions
-order: 45
----
-
 # interactions
 
 <table>

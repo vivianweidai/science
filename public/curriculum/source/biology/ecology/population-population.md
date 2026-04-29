@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Ecology
-topic: Population
-table: population
-order: 46
----
-
 # population
 
 <table>

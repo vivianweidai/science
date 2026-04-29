@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Plants
-topic: Growth
-table: development
-order: 62
----
-
 # development
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Coordinates
-topic: Time
-table: year
-order: 20
----
-
 # year
 
 <table>

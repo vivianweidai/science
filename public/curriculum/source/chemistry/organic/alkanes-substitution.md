@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Alkanes
-table: substitution
-order: 61
----
-
 # substitution
 
 <table>

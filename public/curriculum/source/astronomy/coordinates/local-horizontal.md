@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Coordinates
-topic: Local
-table: horizontal
-order: 10
----
-
 # horizontal
 
 <table>

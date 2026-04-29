@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Animals
-topic: Digestive
-table: digestive
-order: 75
----
-
 # digestive
 
 <table>

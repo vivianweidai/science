@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Electromagnetism
-topic: Statics
-table: statics
-order: 16
----
-
 # statics
 
 <table>

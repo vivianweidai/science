@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Atoms
-topic: Electrons
-table: configuration
-order: 4
----
-
 # configuration
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Problems
-table: preprocessing
-order: 49
----
-
 # preprocessing
 
 <table>

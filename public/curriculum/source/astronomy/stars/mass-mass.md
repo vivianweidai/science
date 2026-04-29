@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Mass
-table: mass
-order: 45
----
-
 # mass
 
 <table>

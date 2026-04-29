@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Inference
-topic: Significance Test
-table: chi square
-order: 21
----
-
 # chi square
 
 <table>

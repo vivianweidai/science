@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Remnants
-table: variables
-order: 61
----
-
 # variables
 
 <table>

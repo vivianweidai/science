@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Organelles
-table: endomembrane
-order: 4
----
-
 # endomembrane
 
 <table>

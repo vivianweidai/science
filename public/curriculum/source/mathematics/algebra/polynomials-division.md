@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Polynomials
-table: division
-order: 30
----
-
 # division
 
 <table>

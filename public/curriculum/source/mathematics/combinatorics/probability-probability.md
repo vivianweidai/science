@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Combinatorics
-topic: Probability
-table: probability
-order: 11
----
-
 # probability
 
 <table>

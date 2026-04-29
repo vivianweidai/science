@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Atoms
-topic: Elements
-table: matter
-order: 1
----
-
 # matter
 
 <table>

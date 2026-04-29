@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Meiosis
-table: disorders
-order: 20
----
-
 # disorders
 
 <table>

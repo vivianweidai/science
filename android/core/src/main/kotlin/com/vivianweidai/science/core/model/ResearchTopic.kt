@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 import java.net.URI
 import java.net.URLEncoder
 
-/** Strongly-typed mirror of `content/research/toys.json`. */
+/** Strongly-typed mirror of `public/research/toys.json`. */
 @Serializable
 data class ResearchTopic(
     val id: Int,
@@ -33,7 +33,6 @@ data class ResearchToy(
     val url: String? = null,
     val hero: String? = null,
     @SerialName("toy_url") val toyUrl: String? = null,
-    @SerialName("project_url") val projectUrl: String? = null,
     val projects: List<ResearchToyProject>? = null,
 ) {
     val isAvailable: Boolean get() = (available ?: 0) == 1

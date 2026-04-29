@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Aromatics
-table: reactions
-order: 70
----
-
 # reactions
 
 <table>

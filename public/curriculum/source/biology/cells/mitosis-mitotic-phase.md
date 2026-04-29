@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Mitosis
-table: mitotic phase
-order: 16
----
-
 # mitotic phase
 
 <table>

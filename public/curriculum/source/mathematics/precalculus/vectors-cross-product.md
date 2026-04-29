@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Precalculus
-topic: Vectors
-table: cross product
-order: 48
----
-
 # cross product
 
 <table>

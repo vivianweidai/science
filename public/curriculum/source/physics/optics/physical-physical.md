@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Optics
-topic: Physical
-table: physical
-order: 44
----
-
 # physical
 
 <table>

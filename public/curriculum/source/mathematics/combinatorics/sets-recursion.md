@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Combinatorics
-topic: Sets
-table: recursion
-order: 14
----
-
 # recursion
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Thermodynamics
-topic: First Law
-table: isometric
-order: 36
----
-
 # isometric
 
 <table>

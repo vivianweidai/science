@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Problems
-table: greedy
-order: 50
----
-
 # greedy
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Receptors
-table: receptors
-order: 92
----
-
 # receptors
 
 <table>

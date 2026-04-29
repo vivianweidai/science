@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Plants
-topic: Growth
-table: primary
-order: 59
----
-
 # primary
 
 <table>

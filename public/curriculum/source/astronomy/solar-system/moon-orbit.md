@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Solar System
-topic: Moon
-table: orbit
-order: 36
----
-
 # orbit
 
 <table>

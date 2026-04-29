@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Mechanics
-topic: System Of Particles
-table: collisions
-order: 9
----
-
 # collisions
 
 <table>

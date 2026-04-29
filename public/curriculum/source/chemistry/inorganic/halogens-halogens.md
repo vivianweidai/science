@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Halogens
-table: halogens
-order: 94
----
-
 # halogens
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Animals
-topic: Endocrine
-table: homeostasis
-order: 73
----
-
 # homeostasis
 
 <table>

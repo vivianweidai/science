@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Solar System
-topic: Moon
-table: distortions
-order: 35
----
-
 # distortions
 
 <table>

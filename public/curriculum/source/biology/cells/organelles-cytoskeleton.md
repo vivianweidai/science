@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Organelles
-table: cytoskeleton
-order: 5
----
-
 # cytoskeleton
 
 <table>

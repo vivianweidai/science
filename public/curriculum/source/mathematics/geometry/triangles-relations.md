@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Geometry
-topic: Triangles
-table: relations
-order: 17
----
-
 # relations
 
 <table>

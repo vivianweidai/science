@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Active Nucleus
-table: clusters
-order: 65
----
-
 # clusters
 
 <table>

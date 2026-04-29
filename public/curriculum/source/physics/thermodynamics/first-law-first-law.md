@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Thermodynamics
-topic: First Law
-table: first law
-order: 34
----
-
 # first law
 
 <table>

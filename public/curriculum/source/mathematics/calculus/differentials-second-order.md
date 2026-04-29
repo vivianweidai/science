@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Differentials
-table: second order
-order: 65
----
-
 # second order
 
 <table>

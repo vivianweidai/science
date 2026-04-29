@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Inequalities
-table: toolkit
-order: 37
----
-
 # toolkit
 
 <table>

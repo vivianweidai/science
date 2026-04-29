@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Bonds
-table: 3A
-order: 89
----
-
 # 3A
 
 <table>

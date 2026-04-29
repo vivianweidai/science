@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Respiration
-table: glycolysis
-order: 13
----
-
 # glycolysis
 
 <table>

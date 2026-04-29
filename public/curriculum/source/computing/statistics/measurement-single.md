@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Statistics
-topic: Measurement
-table: single
-order: 1
----
-
 # single
 
 <table>

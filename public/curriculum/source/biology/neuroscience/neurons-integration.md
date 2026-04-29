@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Neurons
-table: integration
-order: 91
----
-
 # integration
 
 <table>

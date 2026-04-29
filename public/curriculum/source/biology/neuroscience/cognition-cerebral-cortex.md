@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Cognition
-table: cerebral cortex
-order: 87
----
-
 # cerebral cortex
 
 <table>

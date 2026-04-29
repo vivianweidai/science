@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Logic
-table: references
-order: 41
----
-
 # references
 
 <table>

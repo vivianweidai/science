@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Bonds
-topic: States
-table: vapor pressure
-order: 18
----
-
 # vapor pressure
 
 <table>

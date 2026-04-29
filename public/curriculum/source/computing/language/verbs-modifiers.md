@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Language
-topic: Verbs
-table: modifiers
-order: 30
----
-
 # modifiers
 
 <table>

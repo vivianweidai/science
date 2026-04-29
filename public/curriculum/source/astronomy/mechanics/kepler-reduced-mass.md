@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Mechanics
-topic: Kepler
-table: reduced mass
-order: 23
----
-
 # reduced mass
 
 <table>

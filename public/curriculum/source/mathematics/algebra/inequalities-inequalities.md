@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Inequalities
-table: inequalities
-order: 36
----
-
 # inequalities
 
 <table>

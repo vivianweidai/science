@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Alkynes
-table: alkynes
-order: 64
----
-
 # alkynes
 
 <table>

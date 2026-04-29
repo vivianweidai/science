@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Atoms
-topic: Elements
-table: models
-order: 2
----
-
 # models
 
 <table>

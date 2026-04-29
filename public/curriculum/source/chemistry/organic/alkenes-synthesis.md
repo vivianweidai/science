@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Alkenes
-table: synthesis
-order: 63
----
-
 # synthesis
 
 <table>

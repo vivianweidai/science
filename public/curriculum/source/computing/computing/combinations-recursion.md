@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Combinations
-table: recursion
-order: 44
----
-
 # recursion
 
 <table>

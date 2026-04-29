@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Coordinates
-topic: Conversions
-table: general
-order: 13
----
-
 # general
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Geometry
-topic: Circles
-table: intersections
-order: 21
----
-
 # intersections
 
 <table>

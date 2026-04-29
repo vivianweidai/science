@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Photosynthesis
-table: light
-order: 10
----
-
 # light
 
 <table>

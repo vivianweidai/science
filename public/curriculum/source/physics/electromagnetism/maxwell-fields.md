@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Electromagnetism
-topic: Maxwell
-table: fields
-order: 27
----
-
 # fields
 
 <table>

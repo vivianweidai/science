@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Precalculus
-topic: Complex
-table: powers
-order: 45
----
-
 # powers
 
 <table>

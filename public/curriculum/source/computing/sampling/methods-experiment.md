@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Sampling
-topic: Methods
-table: experiment
-order: 11
----
-
 # experiment
 
 <table>

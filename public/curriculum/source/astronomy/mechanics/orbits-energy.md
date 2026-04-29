@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Mechanics
-topic: Orbits
-table: energy
-order: 22
----
-
 # energy
 
 <table>

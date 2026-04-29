@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Language
-topic: Verbs
-table: variables
-order: 31
----
-
 # variables
 
 <table>

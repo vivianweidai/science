@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Coordinates
-topic: Geometry
-table: Earth
-order: 9
----
-
 # Earth
 
 <table>

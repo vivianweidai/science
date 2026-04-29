@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Atoms
-topic: Nomenclature
-table: compounds
-order: 7
----
-
 # compounds
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Harmonics
-topic: Rotational
-table: rotational
-order: 12
----
-
 # rotational
 
 <table>

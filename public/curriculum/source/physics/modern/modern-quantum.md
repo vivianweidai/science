@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Modern
-topic: Modern
-table: quantum
-order: 47
----
-
 # quantum
 
 <table>

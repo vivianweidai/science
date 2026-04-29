@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Reaction Mechanism
-table: collision model
-order: 32
----
-
 # collision model
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Expression
-table: expression
-order: 29
----
-
 # expression
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Relations
-table: functional equations
-order: 40
----
-
 # functional equations
 
 <table>

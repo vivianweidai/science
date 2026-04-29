@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Observations
-topic: Constellations
-table: location
-order: 1
----
-
 # location
 
 <table>

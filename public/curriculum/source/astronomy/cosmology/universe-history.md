@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Universe
-table: history
-order: 69
----
-
 # history
 
 <table>

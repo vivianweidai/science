@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Non Mendel
-table: others
-order: 25
----
-
 # others
 
 <table>

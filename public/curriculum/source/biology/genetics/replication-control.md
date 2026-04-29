@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Replication
-table: control
-order: 28
----
-
 # control
 
 <table>

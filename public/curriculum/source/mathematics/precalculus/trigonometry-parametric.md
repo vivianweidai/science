@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Precalculus
-topic: Trigonometry
-table: parametric
-order: 43
----
-
 # parametric
 
 <table>

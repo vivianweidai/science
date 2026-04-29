@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Plants
-topic: Growth
-table: secondary
-order: 60
----
-
 # secondary
 
 <table>

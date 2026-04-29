@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Statistics
-topic: Distributions
-table: dual
-order: 4
----
-
 # dual
 
 <table>

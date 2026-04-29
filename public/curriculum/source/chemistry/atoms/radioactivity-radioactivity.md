@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Atoms
-topic: Radioactivity
-table: radioactivity
-order: 5
----
-
 # radioactivity
 
 <table>

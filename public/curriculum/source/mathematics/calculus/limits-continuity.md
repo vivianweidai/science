@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Limits
-table: continuity
-order: 51
----
-
 # continuity
 
 <table>

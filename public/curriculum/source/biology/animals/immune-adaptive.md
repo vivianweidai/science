@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Animals
-topic: Immune
-table: adaptive
-order: 84
----
-
 # adaptive
 
 <table>

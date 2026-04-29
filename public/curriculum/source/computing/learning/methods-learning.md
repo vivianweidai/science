@@ -1,19 +1,10 @@
----
-subject: Computing
-section: Learning
-topic: Methods
-table: learning
-order: 52
----
-
 # learning
 
 <table>
 <tr><th>Label</th><th>Formula / Concept</th><th>Description</th></tr>
-<tr><td>supervised</td><td>regression for numeric</td><td>linear regression tree ensemble</td></tr>
-<tr><td>supervised</td><td>classification for categoric</td><td>network tree vector ensemble</td></tr>
-<tr><td>unsupervised</td><td>unlabeled data</td><td>cluster reduce generate</td></tr>
-<tr><td>unsupervised</td><td>also preprocess data</td><td>more effecctive supervised</td></tr>
-<tr><td>reinforcement</td><td>no data</td><td>environmental response</td></tr>
-<tr><td>reinforcement</td><td>dynamic update states</td><td>exploitation vs exploration</td></tr>
+<tr><td>ai</td><td>symbolic formal logic</td><td>deterministic rules</td></tr>
+<tr><td>ai</td><td>subsymbolic unconscious</td><td>probabilistic distributions</td></tr>
+<tr><td>ml</td><td>ai decision making</td><td>mimic human processes</td></tr>
+<tr><td>ml</td><td>ml based on data</td><td>remember formulate predict</td></tr>
+<tr><td>ml</td><td>models learn then predict</td><td>labeled or unlabeled data</td></tr>
 </table>

@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Rate Laws
-table: differential
-order: 29
----
-
 # differential
 
 <table>

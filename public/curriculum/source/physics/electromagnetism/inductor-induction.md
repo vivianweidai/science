@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Electromagnetism
-topic: Inductor
-table: induction
-order: 25
----
-
 # induction
 
 <table>

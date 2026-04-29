@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Mechanisms
-table: applications
-order: 78
----
-
 # applications
 
 <table>

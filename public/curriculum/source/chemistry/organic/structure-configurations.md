@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Structure
-table: configurations
-order: 56
----
-
 # configurations
 
 <table>

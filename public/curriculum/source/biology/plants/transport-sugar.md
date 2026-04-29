@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Plants
-topic: Transport
-table: sugar
-order: 65
----
-
 # sugar
 
 <table>

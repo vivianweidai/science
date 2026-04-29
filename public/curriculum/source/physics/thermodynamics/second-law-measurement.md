@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Thermodynamics
-topic: Second Law
-table: measurement
-order: 41
----
-
 # measurement
 
 <table>

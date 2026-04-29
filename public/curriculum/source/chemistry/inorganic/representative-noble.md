@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Representative
-table: noble
-order: 93
----
-
 # noble
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Nervous
-table: brain
-order: 86
----
-
 # brain
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Plants
-topic: Transport
-table: transport
-order: 63
----
-
 # transport
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Relations
-table: relations
-order: 46
----
-
 # relations
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Remnants
-table: black hole
-order: 60
----
-
 # black hole
 
 <table>

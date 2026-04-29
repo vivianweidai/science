@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Sampling
-topic: Methods
-table: methods
-order: 12
----
-
 # methods
 
 <table>

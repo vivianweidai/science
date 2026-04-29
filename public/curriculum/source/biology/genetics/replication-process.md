@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Replication
-table: process
-order: 27
----
-
 # process
 
 <table>

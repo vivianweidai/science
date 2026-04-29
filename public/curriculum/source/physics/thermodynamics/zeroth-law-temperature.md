@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Thermodynamics
-topic: Zeroth Law
-table: temperature
-order: 33
----
-
 # temperature
 
 <table>

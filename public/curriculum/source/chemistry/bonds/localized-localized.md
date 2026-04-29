@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Bonds
-topic: Localized
-table: localized
-order: 12
----
-
 # localized
 
 <table>

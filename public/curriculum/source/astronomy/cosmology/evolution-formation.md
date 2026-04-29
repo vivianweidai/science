@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Evolution
-table: formation
-order: 55
----
-
 # formation
 
 <table>

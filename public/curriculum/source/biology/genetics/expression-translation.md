@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Expression
-table: translation
-order: 31
----
-
 # translation
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Mechanics
-topic: Dynamics
-table: dynamics
-order: 3
----
-
 # dynamics
 
 <table>

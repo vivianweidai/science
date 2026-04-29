@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Ecology
-topic: Viruses
-table: hosts
-order: 50
----
-
 # hosts
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Electromagnetism
-topic: Capacitor
-table: behaviour
-order: 21
----
-
 # behaviour
 
 <table>

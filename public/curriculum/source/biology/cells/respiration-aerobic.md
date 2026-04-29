@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Respiration
-table: aerobic
-order: 14
----
-
 # aerobic
 
 <table>

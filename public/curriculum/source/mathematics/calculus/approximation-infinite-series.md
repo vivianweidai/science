@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Approximation
-table: infinite series
-order: 56
----
-
 # infinite series
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Mechanics
-topic: Kepler
-table: period
-order: 26
----
-
 # period
 
 <table>

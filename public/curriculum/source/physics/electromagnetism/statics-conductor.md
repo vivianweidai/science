@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Electromagnetism
-topic: Statics
-table: conductor
-order: 17
----
-
 # conductor
 
 <table>

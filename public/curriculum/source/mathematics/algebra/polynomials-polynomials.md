@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Polynomials
-table: polynomials
-order: 29
----
-
 # polynomials
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Geometry
-topic: Centers
-table: centers
-order: 18
----
-
 # centers
 
 <table>

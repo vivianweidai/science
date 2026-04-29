@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Mendel
-table: recessive disorders
-order: 23
----
-
 # recessive disorders
 
 <table>

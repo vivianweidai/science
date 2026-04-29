@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Stoichiometry
-topic: Stoichiometry
-table: stoichiometry
-order: 21
----
-
 # stoichiometry
 
 <table>

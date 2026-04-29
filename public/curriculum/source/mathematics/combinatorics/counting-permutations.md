@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Combinatorics
-topic: Counting
-table: permutations
-order: 8
----
-
 # permutations
 
 <table>

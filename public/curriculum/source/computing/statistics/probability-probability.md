@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Statistics
-topic: Probability
-table: probability
-order: 5
----
-
 # probability
 
 <table>

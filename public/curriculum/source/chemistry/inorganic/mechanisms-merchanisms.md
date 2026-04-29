@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Mechanisms
-table: merchanisms
-order: 77
----
-
 # merchanisms
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Geometry
-topic: Vectors
-table: vectors
-order: 23
----
-
 # vectors
 
 <table>

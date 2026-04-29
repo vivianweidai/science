@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Solids
-table: energetics
-order: 80
----
-
 # energetics
 
 <table>

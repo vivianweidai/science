@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Coordinates
-topic: Local
-table: local equatorial
-order: 11
----
-
 # local equatorial
 
 <table>

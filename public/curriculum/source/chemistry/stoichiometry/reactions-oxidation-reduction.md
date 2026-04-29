@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Stoichiometry
-topic: Reactions
-table: oxidation reduction
-order: 24
----
-
 # oxidation reduction
 
 <table>

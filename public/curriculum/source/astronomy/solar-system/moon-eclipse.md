@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Solar System
-topic: Moon
-table: eclipse
-order: 37
----
-
 # eclipse
 
 <table>

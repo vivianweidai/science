@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Ecology
-topic: Viruses
-table: systematics
-order: 48
----
-
 # systematics
 
 <table>

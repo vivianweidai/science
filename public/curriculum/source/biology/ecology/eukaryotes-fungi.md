@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Ecology
-topic: Eukaryotes
-table: fungi
-order: 55
----
-
 # fungi
 
 <table>

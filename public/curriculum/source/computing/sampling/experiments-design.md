@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Sampling
-topic: Experiments
-table: design
-order: 15
----
-
 # design
 
 <table>

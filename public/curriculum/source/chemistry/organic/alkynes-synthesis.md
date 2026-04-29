@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Alkynes
-table: synthesis
-order: 65
----
-
 # synthesis
 
 <table>

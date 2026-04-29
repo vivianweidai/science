@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Mutations
-table: biotechnology
-order: 36
----
-
 # biotechnology
 
 <table>

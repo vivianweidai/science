@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Coordinates
-topic: Time
-table: month
-order: 19
----
-
 # month
 
 <table>

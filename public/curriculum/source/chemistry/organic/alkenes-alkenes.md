@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Alkenes
-table: alkenes
-order: 62
----
-
 # alkenes
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Differentials
-table: first order
-order: 64
----
-
 # first order
 
 <table>

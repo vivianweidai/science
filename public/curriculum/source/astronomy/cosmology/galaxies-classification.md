@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Galaxies
-table: classification
-order: 63
----
-
 # classification
 
 <table>

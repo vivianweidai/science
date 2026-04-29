@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Coordinates
-topic: Celestial
-table: equatorial
-order: 14
----
-
 # equatorial
 
 <table>

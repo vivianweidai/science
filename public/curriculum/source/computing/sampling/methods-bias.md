@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Sampling
-topic: Methods
-table: bias
-order: 13
----
-
 # bias
 
 <table>

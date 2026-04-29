@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Coordination
-table: structure
-order: 73
----
-
 # structure
 
 <table>

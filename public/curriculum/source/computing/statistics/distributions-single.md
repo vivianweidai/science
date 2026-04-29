@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Statistics
-topic: Distributions
-table: single
-order: 3
----
-
 # single
 
 <table>

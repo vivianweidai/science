@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Language
-topic: Writing
-table: structure
-order: 22
----
-
 # structure
 
 <table>

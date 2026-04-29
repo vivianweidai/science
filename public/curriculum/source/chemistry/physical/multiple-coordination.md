@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Multiple
-table: coordination
-order: 47
----
-
 # coordination
 
 <table>

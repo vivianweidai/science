@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Bonds
-topic: Quantum
-table: molecular orbital
-order: 14
----
-
 # molecular orbital
 
 <table>

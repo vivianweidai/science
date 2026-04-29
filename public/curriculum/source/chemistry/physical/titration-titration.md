@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Titration
-table: titration
-order: 42
----
-
 # titration
 
 <table>

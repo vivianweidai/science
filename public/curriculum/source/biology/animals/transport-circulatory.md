@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Animals
-topic: Transport
-table: circulatory
-order: 77
----
-
 # circulatory
 
 <table>

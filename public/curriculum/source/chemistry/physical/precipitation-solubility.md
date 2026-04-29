@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Precipitation
-table: solubility
-order: 44
----
-
 # solubility
 
 <table>

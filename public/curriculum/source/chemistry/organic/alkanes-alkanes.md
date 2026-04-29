@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Alkanes
-table: alkanes
-order: 60
----
-
 # alkanes
 
 <table>

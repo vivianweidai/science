@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Receptors
-table: hearing
-order: 93
----
-
 # hearing
 
 <table>

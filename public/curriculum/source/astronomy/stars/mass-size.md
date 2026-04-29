@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Mass
-table: size
-order: 44
----
-
 # size
 
 <table>

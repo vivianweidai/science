@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Combinatorics
-topic: Probability
-table: expected value
-order: 12
----
-
 # expected value
 
 <table>

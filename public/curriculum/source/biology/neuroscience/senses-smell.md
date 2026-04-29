@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Senses
-table: smell
-order: 97
----
-
 # smell
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Regulation
-table: regulation
-order: 32
----
-
 # regulation
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Titration
-table: weak acid strong base
-order: 43
----
-
 # weak acid strong base
 
 <table>

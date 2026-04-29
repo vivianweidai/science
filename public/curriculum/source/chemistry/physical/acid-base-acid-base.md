@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Acid Base
-table: acid base
-order: 36
----
-
 # acid base
 
 <table>

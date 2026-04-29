@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Mechanics
-topic: Kepler
-table: sweep
-order: 25
----
-
 # sweep
 
 <table>

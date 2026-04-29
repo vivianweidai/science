@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Thermodynamics
-topic: Fluids
-table: statics
-order: 30
----
-
 # statics
 
 <table>

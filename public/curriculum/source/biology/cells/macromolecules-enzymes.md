@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Macromolecules
-table: enzymes
-order: 2
----
-
 # enzymes
 
 <table>

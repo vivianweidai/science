@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Statistics
-topic: Probability
-table: multiplication
-order: 7
----
-
 # multiplication
 
 <table>

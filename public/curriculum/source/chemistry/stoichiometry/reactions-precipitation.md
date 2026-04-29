@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Stoichiometry
-topic: Reactions
-table: precipitation
-order: 23
----
-
 # precipitation
 
 <table>

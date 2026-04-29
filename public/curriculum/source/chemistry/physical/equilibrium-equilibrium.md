@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Equilibrium
-table: equilibrium
-order: 33
----
-
 # equilibrium
 
 <table>

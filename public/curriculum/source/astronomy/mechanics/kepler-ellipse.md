@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Mechanics
-topic: Kepler
-table: ellipse
-order: 24
----
-
 # ellipse
 
 <table>

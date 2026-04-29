@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Precalculus
-topic: Vectors
-table: matrices
-order: 49
----
-
 # matrices
 
 <table>

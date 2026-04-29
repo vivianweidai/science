@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Language
-topic: Structure
-table: others
-order: 34
----
-
 # others
 
 <table>

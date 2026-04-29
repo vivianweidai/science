@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Number Theory
-topic: Divisors
-table: divisors
-order: 1
----
-
 # divisors
 
 <table>

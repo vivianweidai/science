@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Ecology
-topic: Prokaryotes
-table: prokaryotes
-order: 51
----
-
 # prokaryotes
 
 <table>

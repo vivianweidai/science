@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Evolution
-table: evolution
-order: 56
----
-
 # evolution
 
 <table>

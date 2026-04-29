@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Thermodynamics
-topic: First Law
-table: adiabatic
-order: 38
----
-
 # adiabatic
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Animals
-topic: Reproductive
-table: development
-order: 82
----
-
 # development
 
 <table>

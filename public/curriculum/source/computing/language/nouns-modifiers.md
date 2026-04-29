@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Language
-topic: Nouns
-table: modifiers
-order: 27
----
-
 # modifiers
 
 <table>

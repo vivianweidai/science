@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Harmonics
-topic: Oscillatory
-table: energy
-order: 15
----
-
 # energy
 
 <table>

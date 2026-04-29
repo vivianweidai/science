@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Geometry
-topic: Centers
-table: relations
-order: 19
----
-
 # relations
 
 <table>

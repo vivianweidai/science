@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Functions
-table: characteristics
-order: 25
----
-
 # characteristics
 
 <table>

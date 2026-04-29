@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Nervous
-table: nervous
-order: 85
----
-
 # nervous
 
 <table>

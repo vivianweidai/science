@@ -14,7 +14,6 @@ data class Activity(
     val highlighted: Int,
     val subjects: List<String>? = null,
     val invited: Int? = null,
-    val borderline: Int? = null,
     val competitive: Int? = null,
 ) {
     val isOlympiad: Boolean get() = type == "olympiad"

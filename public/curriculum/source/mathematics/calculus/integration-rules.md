@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Integration
-table: rules
-order: 55
----
-
 # rules
 
 <table>

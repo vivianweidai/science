@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Phylogeny
-table: genomics
-order: 41
----
-
 # genomics
 
 <table>

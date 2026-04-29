@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Atoms
-topic: Electrons
-table: relations
-order: 3
----
-
 # relations
 
 <table>

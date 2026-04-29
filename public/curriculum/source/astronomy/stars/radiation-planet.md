@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Radiation
-table: planet
-order: 41
----
-
 # planet
 
 <table>

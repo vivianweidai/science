@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Differentiation
-table: differentiation
-order: 52
----
-
 # differentiation
 
 <table>

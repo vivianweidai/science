@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Ecology
-topic: Viruses
-table: viruses
-order: 49
----
-
 # viruses
 
 <table>

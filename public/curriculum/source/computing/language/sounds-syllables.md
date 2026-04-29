@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Language
-topic: Sounds
-table: syllables
-order: 24
----
-
 # syllables
 
 <table>

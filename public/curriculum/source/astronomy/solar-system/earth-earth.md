@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Solar System
-topic: Earth
-table: Earth
-order: 32
----
-
 # Earth
 
 <table>

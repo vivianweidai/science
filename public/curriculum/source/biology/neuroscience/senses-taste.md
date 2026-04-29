@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Senses
-table: taste
-order: 96
----
-
 # taste
 
 <table>

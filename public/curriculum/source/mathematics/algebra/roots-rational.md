@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Roots
-table: rational
-order: 31
----
-
 # rational
 
 <table>

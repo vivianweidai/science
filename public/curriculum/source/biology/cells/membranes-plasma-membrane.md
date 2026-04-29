@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Membranes
-table: plasma membrane
-order: 6
----
-
 # plasma membrane
 
 <table>

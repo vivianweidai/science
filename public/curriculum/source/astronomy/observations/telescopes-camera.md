@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Observations
-topic: Telescopes
-table: camera
-order: 4
----
-
 # camera
 
 <table>

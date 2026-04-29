@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Number Theory
-topic: Divisors
-table: factorization
-order: 2
----
-
 # factorization
 
 <table>

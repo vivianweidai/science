@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Coordinates
-topic: Time
-table: day
-order: 18
----
-
 # day
 
 <table>

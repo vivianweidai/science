@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Language
-topic: Nouns
-table: variables
-order: 28
----
-
 # variables
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Organelles
-table: cells
-order: 3
----
-
 # cells
 
 <table>

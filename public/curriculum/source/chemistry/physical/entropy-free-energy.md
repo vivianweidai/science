@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Entropy
-table: free energy
-order: 51
----
-
 # free energy
 
 <table>

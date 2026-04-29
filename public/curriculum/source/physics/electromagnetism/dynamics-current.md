@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Electromagnetism
-topic: Dynamics
-table: current
-order: 18
----
-
 # current
 
 <table>

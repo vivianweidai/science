@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Number Theory
-topic: Linear Congruence
-table: linear congruence
-order: 6
----
-
 # linear congruence
 
 <table>

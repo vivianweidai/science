@@ -311,7 +311,7 @@ import PageFooter from '../../layouts/PageFooter.astro';
             + '<div class="type-cell">' + icon + '</div>'
             + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
             + '</div>'
-            + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="status-emoji status-emoji-invited"><span class="glyph">🎟️</span></span>' : '') + (e.borderline ? ' <span class="status-emoji status-emoji-competitive"><span class="glyph">🎯</span></span>' : '') + (e.competitive ? ' <span class="status-emoji status-emoji-competitive"><span class="glyph">🎯</span></span>' : '') + '</div>'
+            + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="status-emoji status-emoji-invited"><span class="glyph">🎟️</span></span>' : '') + (e.competitive ? ' <span class="status-emoji status-emoji-competitive"><span class="glyph">🎯</span></span>' : '') + '</div>'
             + (e.highlighted ? '<span class="foundation-badge">FOUNDATION</span>' : '')
             + '</div>';
         });

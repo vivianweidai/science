@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Problems
-table: complete search
-order: 48
----
-
 # complete search
 
 <table>

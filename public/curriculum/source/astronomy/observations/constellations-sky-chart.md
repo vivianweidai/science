@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Observations
-topic: Constellations
-table: sky chart
-order: 2
----
-
 # sky chart
 
 <table>

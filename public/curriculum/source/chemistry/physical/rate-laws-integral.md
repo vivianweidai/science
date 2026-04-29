@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Rate Laws
-table: integral
-order: 30
----
-
 # integral
 
 <table>

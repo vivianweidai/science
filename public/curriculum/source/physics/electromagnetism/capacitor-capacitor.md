@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Electromagnetism
-topic: Capacitor
-table: capacitor
-order: 20
----
-
 # capacitor
 
 <table>

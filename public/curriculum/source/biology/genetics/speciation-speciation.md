@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Speciation
-table: speciation
-order: 43
----
-
 # speciation
 
 <table>

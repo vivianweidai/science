@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Solar System
-topic: Earth
-table: parallax
-order: 34
----
-
 # parallax
 
 <table>

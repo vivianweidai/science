@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Fields
-table: fields
-order: 61
----
-
 # fields
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Phylogeny
-table: phylogenetic tree
-order: 40
----
-
 # phylogenetic tree
 
 <table>

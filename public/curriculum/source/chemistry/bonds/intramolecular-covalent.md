@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Bonds
-topic: Intramolecular
-table: covalent
-order: 11
----
-
 # covalent
 
 <table>

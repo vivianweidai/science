@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Sequences And Series
-table: geometric
-order: 27
----
-
 # geometric
 
 <table>

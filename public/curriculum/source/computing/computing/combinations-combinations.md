@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Combinations
-table: combinations
-order: 43
----
-
 # combinations
 
 <table>

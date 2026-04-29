@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Statistics
-topic: Variables
-table: continuous
-order: 10
----
-
 # continuous
 
 <table>

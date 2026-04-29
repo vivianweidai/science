@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Observations
-topic: Constellations
-table: nomenclature
-order: 3
----
-
 # nomenclature
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Differentiation
-table: rules
-order: 53
----
-
 # rules
 
 <table>

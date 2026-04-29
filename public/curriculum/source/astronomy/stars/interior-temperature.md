@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Interior
-table: temperature
-order: 51
----
-
 # temperature
 
 <table>

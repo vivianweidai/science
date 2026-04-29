@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Mechanics
-topic: Maneuvers
-table: Hohmann
-order: 29
----
-
 # Hohmann
 
 <table>

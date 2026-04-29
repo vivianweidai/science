@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Regulation
-table: operons
-order: 33
----
-
 # operons
 
 <table>

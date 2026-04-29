@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Sequences And Series
-table: notation
-order: 28
----
-
 # notation
 
 <table>

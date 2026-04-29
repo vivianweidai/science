@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Sampling
-topic: Sampling Distribution
-table: sampling distribution
-order: 16
----
-
 # sampling distribution
 
 <table>

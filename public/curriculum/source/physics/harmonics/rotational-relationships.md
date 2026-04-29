@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Harmonics
-topic: Rotational
-table: relationships
-order: 13
----
-
 # relationships
 
 <table>

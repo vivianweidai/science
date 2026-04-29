@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Animals
-topic: Excretory
-table: excretory
-order: 79
----
-
 # excretory
 
 <table>

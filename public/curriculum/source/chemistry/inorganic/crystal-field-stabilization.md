@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Crystal Field
-table: stabilization
-order: 76
----
-
 # stabilization
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Weak Acid
-table: characteristics
-order: 39
----
-
 # characteristics
 
 <table>

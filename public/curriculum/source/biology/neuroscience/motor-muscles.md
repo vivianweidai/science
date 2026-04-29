@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Motor
-table: muscles
-order: 98
----
-
 # muscles
 
 <table>

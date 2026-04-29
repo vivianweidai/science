@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Approximation
-table: approximation
-order: 57
----
-
 # approximation
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Bonds
-table: 4A
-order: 90
----
-
 # 4A
 
 <table>

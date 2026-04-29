@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Electrochemistry
-table: galvanic cell
-order: 52
----
-
 # galvanic cell
 
 <table>

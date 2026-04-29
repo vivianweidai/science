@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Roots
-table: Vieta
-order: 33
----
-
 # Vieta
 
 <table>

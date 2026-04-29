@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Combinatorics
-topic: Counting
-table: identities
-order: 10
----
-
 # identities
 
 <table>

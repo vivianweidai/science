@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Electromagnetism
-topic: Magnetism
-table: field
-order: 23
----
-
 # field
 
 <table>

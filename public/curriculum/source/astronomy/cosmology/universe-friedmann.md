@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Universe
-table: Friedmann
-order: 68
----
-
 # Friedmann
 
 <table>

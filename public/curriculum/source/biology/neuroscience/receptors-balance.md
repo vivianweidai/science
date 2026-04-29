@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Receptors
-table: balance
-order: 94
----
-
 # balance
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Inequalities
-table: optimization
-order: 38
----
-
 # optimization
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Plants
-topic: Growth
-table: layers
-order: 61
----
-
 # layers
 
 <table>

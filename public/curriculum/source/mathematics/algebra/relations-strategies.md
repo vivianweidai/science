@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Relations
-table: strategies
-order: 41
----
-
 # strategies
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Precipitation
-table: qualitative
-order: 45
----
-
 # qualitative
 
 <table>

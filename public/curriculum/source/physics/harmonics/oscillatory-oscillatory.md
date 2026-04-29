@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Harmonics
-topic: Oscillatory
-table: oscillatory
-order: 14
----
-
 # oscillatory
 
 <table>

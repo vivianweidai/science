@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Differentials
-table: differentials
-order: 63
----
-
 # differentials
 
 <table>

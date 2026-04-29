@@ -8,11 +8,17 @@ Three-level schema:
   topics[] → technologies[] → toys[]
 
 Output shape:
-  {"topics": [{id, science, science_slug, topic,
+  {"topics": [{id, science, science_slug, topic, description,
     technologies: [{id, technology, description,
-      toys: [{id, toy, specs, available, completed?, project_url?}]
+      toys: [{id, toy, specs, available, toy_url, hero?, url?,
+              projects?: [{date, title, url, sciences[], folder?}]}]
     }]
   }]}
+
+The `projects[]` list is the one source for toy↔project links. It's
+assembled by reverse-scanning every research project's `index.md`
+frontmatter `toys:` array (each project declares which toys it used)
+plus each toy's own `extra_projects:` placeholder list.
 """
 
 from __future__ import annotations
@@ -177,20 +183,6 @@ def build() -> list[dict]:
                     t["hero"] = hero
                 if toy.get("url"):
                     t["url"] = toy["url"]
-                if toy.get("completed"):
-                    folder = toy["completed"]
-                    t["completed"] = folder
-                    t["project_url"] = f"/research/projects/{urllib.parse.quote(folder)}/"
-                    if not (PROJECTS / folder).is_dir():
-                        print(f"  warn: topic[{i}].tech[{j}].toy[{k}] → "
-                              f"{folder!r} not found", file=sys.stderr)
-                elif toy.get("extension_of"):
-                    folder = toy["extension_of"]
-                    t["extension_of"] = folder
-                    t["project_url"] = f"/research/projects/{urllib.parse.quote(folder)}/#extensions"
-                    if not (PROJECTS / folder).is_dir():
-                        print(f"  warn: topic[{i}].tech[{j}].toy[{k}] → extension_of "
-                              f"{folder!r} not found", file=sys.stderr)
                 # Combine reverse-scanned projects (project frontmatter
                 # `toys:` array) with the toy's own `extra_projects:`
                 # placeholder list, sort newest first by date.
@@ -231,8 +223,6 @@ def main() -> int:
     n_toys = sum(len(tech["toys"]) for t in topics for tech in t["technologies"])
     avail = sum(1 for t in topics for tech in t["technologies"]
                 for toy in tech["toys"] if toy["available"])
-    done = sum(1 for t in topics for tech in t["technologies"]
-               for toy in tech["toys"] if toy.get("completed"))
     print(f"wrote {out.relative_to(ROOT)}")
     print(f"  {len(topics)} topics, {n_tech} technologies, {n_toys} toys")
     by = {}
@@ -243,7 +233,7 @@ def main() -> int:
         by[t["science"]][2] += sum(len(tech["toys"]) for tech in t["technologies"])
     for s in sorted(by):
         print(f"    {s}: {by[s][0]} topics, {by[s][1]} techs, {by[s][2]} toys")
-    print(f"  available: {avail}  completed: {done}")
+    print(f"  available: {avail}")
     return 0
 
 

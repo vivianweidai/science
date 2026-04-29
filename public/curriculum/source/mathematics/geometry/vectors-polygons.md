@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Geometry
-topic: Vectors
-table: polygons
-order: 22
----
-
 # polygons
 
 <table>

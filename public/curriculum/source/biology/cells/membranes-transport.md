@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Membranes
-table: transport
-order: 7
----
-
 # transport
 
 <table>

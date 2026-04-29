@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Aromatics
-table: aromatics
-order: 69
----
-
 # aromatics
 
 <table>

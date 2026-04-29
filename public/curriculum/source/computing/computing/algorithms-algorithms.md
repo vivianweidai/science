@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Algorithms
-table: algorithms
-order: 45
----
-
 # algorithms
 
 <table>

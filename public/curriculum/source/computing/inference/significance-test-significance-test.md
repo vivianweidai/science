@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Inference
-topic: Significance Test
-table: significance test
-order: 20
----
-
 # significance test
 
 <table>

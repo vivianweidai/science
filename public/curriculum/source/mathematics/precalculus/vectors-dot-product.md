@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Precalculus
-topic: Vectors
-table: dot product
-order: 47
----
-
 # dot product
 
 <table>

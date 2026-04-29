@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Ideas
-table: ideas
-order: 81
----
-
 # ideas
 
 <table>

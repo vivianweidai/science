@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Mechanics
-topic: Energy
-table: problems
-order: 6
----
-
 # problems
 
 <table>

@@ -1,9 +1,9 @@
 import Foundation
 
-/// Strongly-typed mirror of `content/curriculum/curriculum.json`, which is
+/// Strongly-typed mirror of `public/curriculum/curriculum.json`, which is
 /// the single source of truth for curriculum structure and ordering.
 ///
-/// The build script (`content/research/build_curriculum.py`) emits subjects,
+/// The build script (`pipeline/scripts/build_curriculum.py`) emits subjects,
 /// sections, topics, and tables in a canonical order — never alphabetical
 /// — and attaches `highlighted_rows` for each table so the render layer
 /// knows which data rows to highlight. We decode the JSON verbatim and
@@ -63,12 +63,11 @@ public struct CurriculumTopic: Codable, Identifiable, Hashable, Sendable {
 public struct CurriculumTable: Codable, Identifiable, Hashable, Sendable {
     public var id: String { path }
     public let name: String
-    public let order: Int
     public let path: String
     public let highlightedRows: [Int]
 
     enum CodingKeys: String, CodingKey {
-        case name, order, path
+        case name, path
         case highlightedRows = "highlighted_rows"
     }
 }

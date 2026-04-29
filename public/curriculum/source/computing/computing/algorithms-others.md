@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Algorithms
-table: others
-order: 46
----
-
 # others
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Mendel
-table: inheritance
-order: 22
----
-
 # inheritance
 
 <table>

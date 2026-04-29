@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Electrochemistry
-table: equilibrium
-order: 53
----
-
 # equilibrium
 
 <table>

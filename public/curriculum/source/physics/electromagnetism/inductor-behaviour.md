@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Electromagnetism
-topic: Inductor
-table: behaviour
-order: 26
----
-
 # behaviour
 
 <table>

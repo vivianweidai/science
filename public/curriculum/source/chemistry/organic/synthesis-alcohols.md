@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Synthesis
-table: alcohols
-order: 66
----
-
 # alcohols
 
 <table>

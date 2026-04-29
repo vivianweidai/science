@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Vectors
-table: functions
-order: 59
----
-
 # functions
 
 <table>

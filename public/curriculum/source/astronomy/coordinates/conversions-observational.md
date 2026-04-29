@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Coordinates
-topic: Conversions
-table: observational
-order: 12
----
-
 # observational
 
 <table>

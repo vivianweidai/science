@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Photosynthesis
-table: photosynthesis
-order: 9
----
-
 # photosynthesis
 
 <table>

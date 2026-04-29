@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Limits
-table: limits
-order: 50
----
-
 # limits
 
 <table>

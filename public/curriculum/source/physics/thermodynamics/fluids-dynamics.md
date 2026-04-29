@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Thermodynamics
-topic: Fluids
-table: dynamics
-order: 31
----
-
 # dynamics
 
 <table>

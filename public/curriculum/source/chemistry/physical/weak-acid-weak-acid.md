@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Weak Acid
-table: weak acid
-order: 38
----
-
 # weak acid
 
 <table>

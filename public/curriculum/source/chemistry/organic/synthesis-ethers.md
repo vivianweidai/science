@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Synthesis
-table: ethers
-order: 67
----
-
 # ethers
 
 <table>

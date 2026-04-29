@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Ecology
-topic: Community
-table: ecology
-order: 44
----
-
 # ecology
 
 <table>

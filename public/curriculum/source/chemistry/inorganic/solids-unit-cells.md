@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Solids
-table: unit cells
-order: 79
----
-
 # unit cells
 
 <table>

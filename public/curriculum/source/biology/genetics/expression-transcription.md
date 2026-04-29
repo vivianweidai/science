@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Expression
-table: transcription
-order: 30
----
-
 # transcription
 
 <table>

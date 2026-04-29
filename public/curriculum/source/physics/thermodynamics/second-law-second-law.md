@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Thermodynamics
-topic: Second Law
-table: second law
-order: 39
----
-
 # second law
 
 <table>

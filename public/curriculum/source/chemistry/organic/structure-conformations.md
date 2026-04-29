@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Structure
-table: conformations
-order: 55
----
-
 # conformations
 
 <table>

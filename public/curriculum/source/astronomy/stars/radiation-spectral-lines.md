@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Radiation
-table: spectral lines
-order: 39
----
-
 # spectral lines
 
 <table>

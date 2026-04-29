@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Roots
-table: non-rational
-order: 32
----
-
 # non-rational
 
 <table>

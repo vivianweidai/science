@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Solar System
-topic: Planets
-table: planets
-order: 31
----
-
 # planets
 
 <table>

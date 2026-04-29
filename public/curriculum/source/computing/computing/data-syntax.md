@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Data
-table: syntax
-order: 39
----
-
 # syntax
 
 <table>

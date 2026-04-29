@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Statistics
-topic: Probability
-table: addition
-order: 6
----
-
 # addition
 
 <table>

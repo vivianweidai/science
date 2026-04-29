@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Motor
-table: skeleton
-order: 99
----
-
 # skeleton
 
 <table>

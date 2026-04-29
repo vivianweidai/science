@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Efficiency
-table: sub array sum
-order: 37
----
-
 # sub array sum
 
 <table>

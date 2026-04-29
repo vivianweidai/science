@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Acid Base
-table: water
-order: 37
----
-
 # water
 
 <table>

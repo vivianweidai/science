@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Radiation
-table: orbits
-order: 38
----
-
 # orbits
 
 <table>

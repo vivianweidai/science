@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Animals
-topic: Immune
-table: immune
-order: 83
----
-
 # immune
 
 <table>

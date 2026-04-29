@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Inference
-topic: Confidence Interval
-table: confidence interval
-order: 19
----
-
 # confidence interval
 
 <table>

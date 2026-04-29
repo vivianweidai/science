@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Enthalpy
-table: first law
-order: 48
----
-
 # first law
 
 <table>

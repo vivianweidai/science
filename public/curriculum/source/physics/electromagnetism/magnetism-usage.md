@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Electromagnetism
-topic: Magnetism
-table: usage
-order: 24
----
-
 # usage
 
 <table>

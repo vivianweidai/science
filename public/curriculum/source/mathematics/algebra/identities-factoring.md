@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Algebra
-topic: Identities
-table: factoring
-order: 34
----
-
 # factoring
 
 <table>

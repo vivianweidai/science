@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Equilibrium
-table: Le Chatelier
-order: 34
----
-
 # Le Chatelier
 
 <table>

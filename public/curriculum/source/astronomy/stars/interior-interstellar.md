@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Interior
-table: interstellar
-order: 54
----
-
 # interstellar
 
 <table>

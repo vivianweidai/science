@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Cosmology
-topic: Universe
-table: scale factor
-order: 67
----
-
 # scale factor
 
 <table>

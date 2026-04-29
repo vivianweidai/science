@@ -1,11 +1,3 @@
----
-subject: Physics
-section: Mechanics
-topic: Kinematics
-table: kinematics
-order: 1
----
-
 # kinematics
 
 <table>

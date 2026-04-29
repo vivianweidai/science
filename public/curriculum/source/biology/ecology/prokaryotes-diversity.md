@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Ecology
-topic: Prokaryotes
-table: diversity
-order: 52
----
-
 # diversity
 
 <table>

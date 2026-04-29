@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Replication
-table: replication
-order: 26
----
-
 # replication
 
 <table>

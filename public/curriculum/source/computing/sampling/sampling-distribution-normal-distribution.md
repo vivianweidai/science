@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Sampling
-topic: Sampling Distribution
-table: normal distribution
-order: 17
----
-
 # normal distribution
 
 <table>

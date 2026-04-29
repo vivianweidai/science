@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Precalculus
-topic: Complex
-table: roots
-order: 46
----
-
 # roots
 
 <table>

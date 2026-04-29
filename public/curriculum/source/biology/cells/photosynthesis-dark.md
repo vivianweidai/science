@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Photosynthesis
-table: dark
-order: 11
----
-
 # dark
 
 <table>

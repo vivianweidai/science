@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Neuroscience
-topic: Cognition
-table: function
-order: 89
----
-
 # function
 
 <table>

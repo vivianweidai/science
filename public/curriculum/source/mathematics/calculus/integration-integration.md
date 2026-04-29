@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Integration
-table: integration
-order: 54
----
-
 # integration
 
 <table>

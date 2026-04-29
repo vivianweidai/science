@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Mendel
-table: Mendel
-order: 21
----
-
 # Mendel
 
 <table>

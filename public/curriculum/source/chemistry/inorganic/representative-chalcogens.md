@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Representative
-table: chalcogens
-order: 92
----
-
 # chalcogens
 
 <table>

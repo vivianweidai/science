@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Buffers
-table: buffer
-order: 41
----
-
 # buffer
 
 <table>

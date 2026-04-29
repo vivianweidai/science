@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Atmosphere
-table: atmosphere
-order: 48
----
-
 # atmosphere
 
 <table>

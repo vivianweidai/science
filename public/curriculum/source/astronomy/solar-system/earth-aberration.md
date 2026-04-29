@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Solar System
-topic: Earth
-table: aberration
-order: 33
----
-
 # aberration
 
 <table>

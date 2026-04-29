@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Statistics
-topic: Variables
-table: random variable
-order: 8
----
-
 # random variable
 
 <table>

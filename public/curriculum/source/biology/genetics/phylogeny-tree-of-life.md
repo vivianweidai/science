@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Genetics
-topic: Phylogeny
-table: tree of life
-order: 39
----
-
 # tree of life
 
 <table>

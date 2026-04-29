@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Buffers
-table: common ions
-order: 40
----
-
 # common ions
 
 <table>

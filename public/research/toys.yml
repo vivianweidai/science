@@ -12,9 +12,11 @@
 #         - toy:          string — instrument name                    (required)
 #           specs:        string — key specs                          (required)
 #           available:    true                                        (optional)
-#           completed:    "YYYYMMDD Project Name"                     (optional — links to project page)
-#           extension_of: "YYYYMMDD Project Name"                     (optional — links to that project's #extensions section, for second-tier toys documented but not yet run)
 #           url:          string — external URL                       (optional — links toy name to any URL)
+#
+# Toy ↔ project links are populated via reverse-scan: declare the toy in
+# the project's `index.md` frontmatter `toys:` array and it shows up on
+# the toy page automatically.
 
 # ═══════════════════════════════════════════════════════════════
 # MATHEMATICS
@@ -34,7 +36,6 @@
         - toy: SciPy
           specs: Scientific routines — ODEs, optimizers and Fourier transforms
           available: true
-          completed: "20250225 Catfood"
     - technology: Symbolic
       description: Exact answers in closed form
       toys:
@@ -76,7 +77,6 @@
         - toy: SciPy
           specs: Hypothesis tests, distributions and confidence intervals
           available: true
-          completed: "20250225 Catfood"
     - technology: Machine Learning
       description: Learn patterns to predict
       toys:
@@ -148,7 +148,6 @@
         - toy: Multimeter
           specs: Steady-state values — voltage, current and resistance
           available: true
-          completed: "20260404 Four Point Probe"
     - technology: Optics
       description: Electromagnetic radiation, visible and beyond
       toys:
@@ -173,26 +172,21 @@
         - toy: Centrifugation
           specs: Spin samples — separate by density at high g-forces
           available: true
-          completed: "20260411 Centrifuge"
         - toy: Liquid Chromatography
           specs: Liquid through packed column — soluble analytes
           available: true
-          completed: "20260427 Chromatography"
         - toy: Gas Chromatography
           specs: Gas through heated capillary — volatile analytes
           available: true
-          completed: "20260427 Chromatography"
     - technology: Thermal Analysis
       description: Watch samples change with heat
       toys:
         - toy: Thermogravimetry
           specs: Mass loss with heating — decomposition and moisture
           available: true
-          completed: "20260405 Melting Point"
         - toy: Calorimetry
           specs: Energy flow with heating — phase transitions and heat capacity
           available: true
-          completed: "20260405 Melting Point"
 - science: Chemistry
   topic: Spectroscopic
   description: Probe intact molecules — electromagnetic, magnetic and mass spectra
@@ -203,11 +197,9 @@
         - toy: IR Spectroscopy
           specs: Polar bonds — functional-group fingerprints
           available: true
-          completed: "20260419 IR Spectroscopy"
         - toy: UV-Vis Spectroscopy
           specs: Light absorption — concentration and conjugation
           available: true
-          completed: "20260420 UV-Vis Spectroscopy"
         - toy: NMR Spectroscopy
           specs: ¹H and ¹³C environments — full structural fingerprint
     - technology: Mass Spectrometry
@@ -216,15 +208,12 @@
         - toy: MALDI
           specs: Large molecules — intact mass via laser + matrix
           available: true
-          completed: "20260427 Mass Spectrometry"
         - toy: Liquid Chromatography MS
           specs: Nonvolatile molecules — intact weight via electrospray
           available: true
-          completed: "20260427 Mass Spectrometry"
         - toy: Gas Chromatography MS
           specs: Volatile molecules — fragment fingerprints via electron ionization
           available: true
-          completed: "20260427 Mass Spectrometry"
 
 # ═══════════════════════════════════════════════════════════════
 # BIOLOGY
@@ -264,7 +253,6 @@
         - toy: PCR
           specs: Endpoint amplification — cycle temperature until enough copies exist
           available: true
-          completed: "20260401 Genes in Space"
         - toy: qPCR
           specs: Real-time quantitation — count copies as they are made
     - technology: Sequencing
@@ -280,11 +268,9 @@
         - toy: Cell-Free
           specs: Produce protein from DNA without living cells
           available: true
-          completed: "20260401 Genes in Space"
         - toy: Fluorescence
           specs: Visualize protein glow under UV light
           available: true
-          completed: "20260401 Genes in Space"
 
 # ═══════════════════════════════════════════════════════════════
 # ASTRONOMY

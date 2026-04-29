@@ -53,7 +53,7 @@
       "sort_key": "2025-11",
       "name": "American Mathematics Competition 12",
       "highlighted": 0,
-      "borderline": 1
+      "competitive": 1
     },
     {
       "id": 7,
@@ -356,7 +356,7 @@
         "Chemistry",
         "Biology"
       ],
-      "borderline": 1
+      "competitive": 1
     },
     {
       "id": 40,
@@ -404,7 +404,7 @@
         "Chemistry",
         "Biology"
       ],
-      "borderline": 1
+      "competitive": 1
     },
     {
       "id": 44,
@@ -563,7 +563,7 @@
       "sort_key": "2026-03",
       "name": "United States National Chemistry Olympiad Local Exam",
       "highlighted": 0,
-      "borderline": 1
+      "competitive": 1
     },
     {
       "id": 61,
@@ -838,7 +838,7 @@
       "sort_key": "2026-02",
       "name": "USA Astronomy and Astrophysics Olympiad First Round Exam",
       "highlighted": 0,
-      "borderline": 1
+      "competitive": 1
     },
     {
       "id": 91,
@@ -858,7 +858,7 @@
       "sort_key": "2025-05",
       "name": "Canadian Astronomy and Astrophysics Olympiad Junior Exam",
       "highlighted": 0,
-      "borderline": 1
+      "competitive": 1
     },
     {
       "id": 93,

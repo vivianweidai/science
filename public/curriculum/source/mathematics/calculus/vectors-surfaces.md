@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Calculus
-topic: Vectors
-table: surfaces
-order: 58
----
-
 # surfaces
 
 <table>

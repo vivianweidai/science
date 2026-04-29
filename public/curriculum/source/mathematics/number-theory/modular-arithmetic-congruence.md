@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Number Theory
-topic: Modular Arithmetic
-table: congruence
-order: 4
----
-
 # congruence
 
 <table>

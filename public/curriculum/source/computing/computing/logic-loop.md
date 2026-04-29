@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Logic
-table: loop
-order: 42
----
-
 # loop
 
 <table>

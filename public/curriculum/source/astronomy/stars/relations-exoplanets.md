@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Stars
-topic: Relations
-table: exoplanets
-order: 47
----
-
 # exoplanets
 
 <table>

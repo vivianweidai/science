@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Bonds
-topic: Localized
-table: shape
-order: 13
----
-
 # shape
 
 <table>

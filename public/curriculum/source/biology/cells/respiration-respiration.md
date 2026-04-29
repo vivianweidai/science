@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Cells
-topic: Respiration
-table: respiration
-order: 12
----
-
 # respiration
 
 <table>

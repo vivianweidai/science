@@ -1,11 +1,3 @@
----
-subject: Astronomy
-section: Coordinates
-topic: Geometry
-table: spheres
-order: 8
----
-
 # spheres
 
 <table>

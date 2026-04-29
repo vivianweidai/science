@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Geometry
-topic: Triangles
-table: triangles
-order: 16
----
-
 # triangles
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Statistics
-topic: Variables
-table: repeated
-order: 9
----
-
 # repeated
 
 <table>

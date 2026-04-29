@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Synthesis
-table: synthesis
-order: 68
----
-
 # synthesis
 
 <table>

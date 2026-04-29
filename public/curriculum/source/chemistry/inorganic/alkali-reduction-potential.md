@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Inorganic
-topic: Alkali
-table: reduction potential
-order: 86
----
-
 # reduction potential
 
 <table>

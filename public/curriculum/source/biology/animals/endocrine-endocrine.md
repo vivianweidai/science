@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Animals
-topic: Endocrine
-table: endocrine
-order: 74
----
-
 # endocrine
 
 <table>

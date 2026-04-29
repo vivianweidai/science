@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Organic
-topic: Mechanisms
-table: kinetics
-order: 59
----
-
 # kinetics
 
 <table>

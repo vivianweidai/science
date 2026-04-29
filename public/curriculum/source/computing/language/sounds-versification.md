@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Language
-topic: Sounds
-table: versification
-order: 25
----
-
 # versification
 
 <table>

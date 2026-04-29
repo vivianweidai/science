@@ -1,11 +1,3 @@
----
-subject: Computing
-section: Computing
-topic: Problems
-table: simulation
-order: 47
----
-
 # simulation
 
 <table>

@@ -1,11 +1,3 @@
----
-subject: Chemistry
-section: Physical
-topic: Entropy
-table: second law
-order: 50
----
-
 # second law
 
 <table>

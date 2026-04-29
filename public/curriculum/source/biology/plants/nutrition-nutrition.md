@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Plants
-topic: Nutrition
-table: nutrition
-order: 66
----
-
 # nutrition
 
 <table>

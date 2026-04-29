@@ -1,11 +1,3 @@
----
-subject: Biology
-section: Plants
-topic: Behaviour
-table: behaviour
-order: 70
----
-
 # behaviour
 
 <table>

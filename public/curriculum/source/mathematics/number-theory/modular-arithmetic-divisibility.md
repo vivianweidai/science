@@ -1,11 +1,3 @@
----
-subject: Mathematics
-section: Number Theory
-topic: Modular Arithmetic
-table: divisibility
-order: 5
----
-
 # divisibility
 
 <table>

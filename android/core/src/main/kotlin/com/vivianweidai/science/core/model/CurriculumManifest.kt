@@ -5,11 +5,12 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
 /**
- * Strongly-typed mirror of `content/curriculum/curriculum.json`.
+ * Strongly-typed mirror of `public/curriculum/curriculum.json`.
  *
- * The build script emits subjects/sections/topics/tables in a canonical
- * order (never alphabetical). We decode the JSON verbatim, then re-order
- * subjects into the canonical webapp sequence.
+ * The build script (`pipeline/scripts/build_curriculum.py`) emits
+ * subjects/sections/topics/tables in a canonical order (never
+ * alphabetical). We decode the JSON verbatim, then re-order subjects into
+ * the canonical webapp sequence.
  */
 data class CurriculumManifest(val subjects: List<CurriculumSubject>) {
     fun subject(slug: String): CurriculumSubject? = subjects.firstOrNull { it.slug == slug }
@@ -61,7 +62,6 @@ data class CurriculumTopic(
 @Serializable
 data class CurriculumTable(
     val name: String,
-    val order: Int,
     val path: String,
     @SerialName("highlighted_rows") val highlightedRows: List<Int>,
 )
