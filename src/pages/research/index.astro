@@ -85,16 +85,8 @@ import PageFooter from '../../layouts/PageFooter.astro';
 
           tech.toys.forEach(function (toy) {
             var name = esc(toy.toy);
-            var url = toy.url || '';
-            var isPhotoUrl = /\.(jpe?g|png|gif|webp)$/i.test(url);
-            // Toy names always link to the toy's template page. The 📷 / 📓 / GitHub
-            // icon (when present) is a separate link to the external resource.
-            // When the toy page has a hero photo, expose it via data-photo so
-            // photo-preview.js shows the same hover popup used on olympiads.
             if (toy.toy_url) {
-              var attrs = 'href="' + toy.toy_url + '"';
-              if (toy.hero) attrs += ' data-photo="' + esc(toy.hero) + '"';
-              name = '<a ' + attrs + '>' + name + '</a>';
+              name = '<a href="' + toy.toy_url + '">' + name + '</a>';
             }
             var access = toy.available ? '<span class="toys-avail" title="Access granted">&#10003;</span>' : '';
 
