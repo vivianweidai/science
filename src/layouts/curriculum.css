@@ -209,18 +209,26 @@ a.curr-col-head:hover {
 
 .curr-topic-body h1 { display: none; }
 .curr-topic-body table {
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   width: 100%;
   margin: 0.6em 0 1.2em;
   font-size: 0.92em;
+  border: 1px solid #d1d9e0;
+  border-radius: 8px;
+  overflow: hidden;
 }
 .curr-topic-body th,
 .curr-topic-body td {
-  border: 1px solid #d1d9e0;
+  border-right: 1px solid #d1d9e0;
+  border-bottom: 1px solid #d1d9e0;
   padding: 0.45em 0.7em;
   text-align: center;
   vertical-align: middle;
 }
+.curr-topic-body th:last-child,
+.curr-topic-body td:last-child { border-right: none; }
+.curr-topic-body tr:last-child td { border-bottom: none; }
 .curr-topic-body th {
   background: #e1e4e8;
   font-weight: 700;
