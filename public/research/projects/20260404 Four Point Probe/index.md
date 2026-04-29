@@ -82,12 +82,15 @@ Readings fluctuated significantly during measurement — the display value drift
 
 All sheet-resistance calculations and per-sample plots are in the analysis <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb" rel="noopener">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb" rel="noopener">colab</a>.
 
-## Technology
-
+<div id="technology" class="tech-table-wrap">
+<div class="tech-table">
+<div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li class="fade-in" data-subj="math"><span class="update-date">Numerical</span> <span class="update-name"><a href="/research/toys/mathematics/NumPy/" data-photo="/research/toys/mathematics/NumPy/numpy.jpeg">NumPy</a></span> <span class="update-desc">Array foundation — linear algebra and vectorized math</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li class="fade-in" data-subj="math"><span class="update-date">Graphing</span> <span class="update-name"><a href="/research/toys/mathematics/Matplotlib/" data-photo="/research/toys/mathematics/Matplotlib/matplotlib.jpeg">Matplotlib</a></span> <span class="update-desc">Python 2D and 3D plotting</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/GitHub/" data-photo="/research/toys/computing/GitHub/github.jpeg">GitHub</a></span> <span class="update-desc">Data and source code repositories</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
-  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/Jupyter/" data-photo="/research/toys/computing/Jupyter/jupyter.jpeg">Jupyter</a></span> <span class="update-desc">Notebooks combining code, figures and narrative</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
-  <li class="fade-in" data-subj="phys"><span class="update-date">Circuits</span> <span class="update-name"><a href="/research/toys/physics/Multimeter/" data-photo="/research/toys/physics/Multimeter/multimeter.jpeg">Multimeter</a></span> <span class="update-desc">Steady-state values — voltage, current and resistance</span> <a class="chip phys" href="/research/#phys">Physics</a></li>
+  <li class="fade-in" data-subj="math"><span class="update-date">Numerical</span> <span class="update-name"><a href="/research/toys/mathematics/NumPy/">NumPy</a></span> <span class="update-desc">Array foundation — linear algebra and vectorized math</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li class="fade-in" data-subj="math"><span class="update-date">Graphing</span> <span class="update-name"><a href="/research/toys/mathematics/Matplotlib/">Matplotlib</a></span> <span class="update-desc">Python 2D and 3D plotting</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/GitHub/">GitHub</a></span> <span class="update-desc">Data and source code repositories</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/Jupyter/">Jupyter</a></span> <span class="update-desc">Notebooks combining code, figures and narrative</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li class="fade-in" data-subj="phys"><span class="update-date">Circuits</span> <span class="update-name"><a href="/research/toys/physics/Multimeter/">Multimeter</a></span> <span class="update-desc">Steady-state values — voltage, current and resistance</span> <a class="chip phys" href="/research/#phys">Physics</a></li>
 </ul>
+</div>
+</div>

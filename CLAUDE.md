@@ -9,9 +9,7 @@ Process experimental data and build reproducible analysis pipelines. Parse raw i
 All background materials live in the repo under `public/research/archives/`. Read these as needed for instrument details, context, and research planning:
 
 - **`public/research/archives/technology/`** — canonical instrument list (`toys.pdf`), plus technology landscape, UNR/UBC lab and faculty catalogues, and the university comparison.
-- **`public/research/archives/guides/`** — instrument walk-up guides (one PDF per instrument, e.g. `Thermo Scientific Nicolet 380 FT-IR Spectrometer.pdf`).
-- **`public/research/archives/papers/`** — classic papers (Turing, Rosenblatt, Hubel & Wiesel, Q-Learning, Transformers, AlphaGo, etc.).
-- **`public/research/archives/photos/`** — reference photos.
+- **`public/research/archives/toys/<Toy>/`** — per-instrument folder of reference photos and the walk-up guide PDF (flat layout — `photo1.jpeg`, …, `<Toy>.pdf`).
 
 `IDEAS.md` at the repo root is a living backlog of research project ideas — promote one to `public/research/projects/YYYYMMDD Name/` when a pilot starts.
 
@@ -69,8 +67,8 @@ science/
 │   │   ├── olympiads.yml         # Source of truth — edit, then rebuild
 │   │   └── olympiads.json        # Generated — DO NOT EDIT BY HAND
 │   └── research/
-│       ├── archives/             # Background reference materials (instrument photos,
-│       │                         #   walk-up guides, classic papers, lab catalogues)
+│       ├── archives/             # Per-instrument reference (photos + walk-up guide PDF)
+│       │                         #   plus lab catalogues in technology/
 │       ├── projects/<folder>/    # YYYYMMDD Project Name
 │       │   ├── index.md          # Project page (Content Collection 'projects')
 │       │   ├── data/             # Raw instrument data

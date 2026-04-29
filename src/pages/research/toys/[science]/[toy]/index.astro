@@ -203,11 +203,11 @@ const nextMeta = navMeta(nextToy);
     <div class="toy-title">
       <h1>{toy}</h1>
       <span class="toy-context">
-        <a class={`chip ${science_slug}`} href={`/research/#${science_slug}`}>{science}</a>
+        <span class="toy-tip" data-tip={techDesc}>{technology}</span>
         <span class="toy-context-sep"> · </span>
         <span class="toy-tip" data-tip={topicDesc}>{topic}</span>
         <span class="toy-context-sep"> · </span>
-        <span class="toy-tip" data-tip={techDesc}>{technology}</span>
+        <a class={`chip ${science_slug}`} href={`/research/#${science_slug}`}>{science}</a>
       </span>
     </div>
     {heroUrl && (
@@ -287,7 +287,7 @@ const nextMeta = navMeta(nextToy);
     .toy-prevnext-arrow { color: #0969da; }
     .toy-prevnext-sep   { color: #1f2328; opacity: 0.4; }
     .toy-prevnext-side.spacer { visibility: hidden; }
-    .toy-prevnext { margin: 1em 0 0.7em 0; }
+    .toy-prevnext { margin: 1.5em 0; }
 
     /* Hover hit-region wrapper — 2 px of bottom/right padding catches the
        cursor when the article lifts up-and-left on hover (same trick as
@@ -352,7 +352,7 @@ const nextMeta = navMeta(nextToy);
     .toy-page .toy-tip:hover::after {
       content: attr(data-tip);
       position: absolute;
-      bottom: calc(100% + 6px);
+      top: calc(100% + 6px);
       right: 0;
       width: max-content;
       max-width: 320px;

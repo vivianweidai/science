@@ -292,7 +292,7 @@ a.curr-col-head:hover {
 .curr-prevnext-arrow { color: #0969da; }
 .curr-prevnext-sep   { color: #1f2328; opacity: 0.4; }
 .curr-prevnext-side.spacer { visibility: hidden; }
-.curr-prevnext { margin: 0 0 0.7em 0; }
+.curr-prevnext { margin: 1.5em 0; }
 
 .curr-loading {
   color: #8c959f;

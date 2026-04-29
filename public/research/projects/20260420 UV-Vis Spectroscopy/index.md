@@ -248,18 +248,21 @@ Brief exploratory scan of distilled water — one pass on the PerkinElmer Lambda
 
 | Instrument | Extension | Description |
 |------------|-----------|-------------|
-| [PerkinElmer Lambda 750 UV/Vis/NIR Spectrophotometer](photos/setup/setup12.jpeg) 📷 | Range | More definition and extend into near-infrared (200–2500 nm) for solvent overtones |
-| [Jasco J-1500 CD Spectrometer](photos/setup/setup18.jpeg) 📷 | Chirality | Detect chiral molecules and protein secondary structure |
+| PerkinElmer Lambda 750 UV/Vis/NIR Spectrophotometer | Range | More definition and extend into near-infrared (200–2500 nm) for solvent overtones |
+| Jasco J-1500 CD Spectrometer | Chirality | Detect chiral molecules and protein secondary structure |
 | VTSYIQI Visible Spectrophotometer | Portability | Take-home absorbance scans — 320–1020 nm |
 
 </div>
 
-## Technology
-
+<div id="technology" class="tech-table-wrap">
+<div class="tech-table">
+<div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li class="fade-in" data-subj="math"><span class="update-date">Numerical</span> <span class="update-name"><a href="/research/toys/mathematics/NumPy/" data-photo="/research/toys/mathematics/NumPy/numpy.jpeg">NumPy</a></span> <span class="update-desc">Array foundation — linear algebra and vectorized math</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li class="fade-in" data-subj="math"><span class="update-date">Graphing</span> <span class="update-name"><a href="/research/toys/mathematics/Matplotlib/" data-photo="/research/toys/mathematics/Matplotlib/matplotlib.jpeg">Matplotlib</a></span> <span class="update-desc">Python 2D and 3D plotting</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/GitHub/" data-photo="/research/toys/computing/GitHub/github.jpeg">GitHub</a></span> <span class="update-desc">Data and source code repositories</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
-  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/Jupyter/" data-photo="/research/toys/computing/Jupyter/jupyter.jpeg">Jupyter</a></span> <span class="update-desc">Notebooks combining code, figures and narrative</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
-  <li class="fade-in" data-subj="chem"><span class="update-date">Molecular Spectroscopy</span> <span class="update-name"><a href="/research/toys/chemistry/UV-Vis Spectroscopy/" data-photo="/research/archives/photos/chemistry-spectrophotometer.jpeg">UV-Vis Spectroscopy</a></span> <span class="update-desc">Light absorption — concentration and conjugation</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li class="fade-in" data-subj="math"><span class="update-date">Numerical</span> <span class="update-name"><a href="/research/toys/mathematics/NumPy/">NumPy</a></span> <span class="update-desc">Array foundation — linear algebra and vectorized math</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li class="fade-in" data-subj="math"><span class="update-date">Graphing</span> <span class="update-name"><a href="/research/toys/mathematics/Matplotlib/">Matplotlib</a></span> <span class="update-desc">Python 2D and 3D plotting</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/GitHub/">GitHub</a></span> <span class="update-desc">Data and source code repositories</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/Jupyter/">Jupyter</a></span> <span class="update-desc">Notebooks combining code, figures and narrative</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li class="fade-in" data-subj="chem"><span class="update-date">Molecular Spectroscopy</span> <span class="update-name"><a href="/research/toys/chemistry/UV-Vis Spectroscopy/">UV-Vis Spectroscopy</a></span> <span class="update-desc">Light absorption — concentration and conjugation</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
 </ul>
+</div>
+</div>

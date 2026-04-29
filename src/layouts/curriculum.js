@@ -493,8 +493,9 @@
     html += '<div class="curr-breadcrumb" data-subj="' + snap.subject + '">'
          + '<span class="curr-breadcrumb-title">' + escapeHtml(topic.name) + '</span>'
          + '<span class="curr-breadcrumb-meta">'
+         +   '<a href="#" data-action="section-view">' + escapeHtml(sec.name) + '</a>'
+         +   '<span class="sep">·</span>'
          +   '<a class="chip ' + SHORT_SLUGS[snap.subject] + '" data-action="subject" href="/curriculum/#' + snap.subject + '">' + escapeHtml(subj.name) + '</a>'
-         +   '<span class="sep">·</span><a href="#" data-action="section-view">' + escapeHtml(sec.name) + '</a>'
          + '</span>'
          + '</div>';
     html += '<div class="curr-topic-body">';

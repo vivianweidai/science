@@ -21,7 +21,7 @@ Liquid chromatography pulls a mixture apart into individual compounds in time, t
 |------------|----------|-----------|----------|
 | Agilent 1200 Series HPLC System | UV/DAD (absorbance) | Retention time + UV spectrum | Target **quant** — count what you know is there |
 | Waters Micromass ZQ Alliance e2695 LC-MS | Single-quad MS | Retention time + nominal mass (±1 Da) | Target **confirm** — mass evidence for a known target |
-| [Agilent 6230A TOF LC-MS](photos/setup/setup2.jpeg) 📷 | TOF MS | Retention time + exact mass (~ppm) | Target **discover** — find unknowns |
+| Agilent 6230A TOF LC-MS | TOF MS | Retention time + exact mass (~ppm) | Target **discover** — find unknowns |
 
 </div>
 
@@ -70,8 +70,11 @@ A real session would inject 1–10 µL from the autosampler tray, run a gradient
 
 Short flat chromatogram — no injection, no column → no peaks; pressure should sit stable around 5–20 bar at 0.5 mL/min and DAD baseline should settle within 1–2 min (0 bar = leak; >100 bar = blocked union; drift after warm-up = lamp aging or dirty flow cell). Next session installs a C18 reversed-phase column, equilibrates with a water/acetonitrile gradient, and runs a caffeine + paracetamol mix — the textbook two-peak HPLC test sample.
 
-## Technology
-
+<div id="technology" class="tech-table-wrap">
+<div class="tech-table">
+<div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li class="fade-in" data-subj="chem"><span class="update-date">Separation</span> <span class="update-name"><a href="/research/toys/chemistry/Liquid Chromatography/" data-photo="/research/archives/photos/chemistry-hplc.jpg">Liquid Chromatography</a></span> <span class="update-desc">Flow through packed column — separate by chemical affinity</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li class="fade-in" data-subj="chem"><span class="update-date">Separation</span> <span class="update-name"><a href="/research/toys/chemistry/Liquid Chromatography/">Liquid Chromatography</a></span> <span class="update-desc">Flow through packed column — separate by chemical affinity</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
 </ul>
+</div>
+</div>

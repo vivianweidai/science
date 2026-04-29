@@ -210,7 +210,7 @@ private struct YearSection: View {
                 .padding(.bottom, 4)
 
             ForEach(entries) { entry in
-                ActivityRowLink(activity: entry)
+                ActivityRow(activity: entry)
                 Divider()
                     .padding(.leading, 16)
             }
@@ -242,17 +242,10 @@ private struct ActivityRow: View {
 
     var body: some View {
         let highlighted = activity.highlighted == 1
-        let hasPhoto = activity.photoURL != nil
         // Force dark ink on highlighted rows — in dark mode the default
         // body color is near-white, which is unreadable on the yellow wash.
         // Matches Android OlympiadsView.kt.
-        // Rows with a photo_url become a tappable link to the in-app
-        // viewer; color the name in GitHub link blue (#0969da) so the
-        // affordance reads at a glance, in both modes and on both the
-        // yellow wash and the normal background.
-        let linkBlue = Color(red: 0.035, green: 0.412, blue: 0.855)
-        let nameColor: Color = hasPhoto ? linkBlue
-            : (highlighted ? Color.black.opacity(0.82) : Color.primary)
+        let nameColor: Color = highlighted ? Color.black.opacity(0.82) : Color.primary
         let monthColor: Color = highlighted ? Color.black.opacity(0.55) : Color.secondary
 
         return HStack(alignment: .firstTextBaseline, spacing: 8) {
@@ -281,9 +274,6 @@ private struct ActivityRow: View {
                     if activity.borderline == 1 || activity.competitive == 1 {
                         Text("🎯").font(.system(size: 12))
                     }
-                    if activity.photoURL != nil {
-                        Text("📷").font(.system(size: 12))
-                    }
                 }
             }
 
@@ -299,29 +289,6 @@ private struct ActivityRow: View {
                 ? Color(red: 1.0, green: 0.941, blue: 0.337)
                 : Color.clear
         )
-    }
-}
-
-// MARK: - Row wrapper that turns photo-bearing rows into NavigationLinks
-
-/// Wraps `ActivityRow` so rows with a `photo_url` become a full-width
-/// tappable link to the in-app zoomable `PhotoViewer`; rows without a
-/// photo render as-is. Keeping this separate from `ActivityRow` keeps
-/// the highlight styling and layout identical for both states.
-private struct ActivityRowLink: View {
-    let activity: Activity
-
-    var body: some View {
-        if let url = activity.photoURL {
-            NavigationLink {
-                PhotoViewer(title: activity.name, url: url)
-            } label: {
-                ActivityRow(activity: activity)
-            }
-            .buttonStyle(.plain)
-        } else {
-            ActivityRow(activity: activity)
-        }
     }
 }
 

@@ -58,30 +58,33 @@ This project connects to the broader thermal analysis series — the next steps 
 <h2 id="extensions">Extensions</h2>
 
 <div class="photo-grid" style="grid-template-columns: repeat(3, 1fr);">
-  <img src="/research/archives/photos/chemistry-dsc-q20.jpg" alt="TA Instruments DSC Q20">
-  <img src="/research/archives/photos/chemistry-dsc-q100.jpg" alt="TA Instruments DSC Q100">
-  <img src="/research/archives/photos/chemistry-tga-q50.jpg" alt="TA Instruments TGA Q50">
-  <img src="/research/archives/photos/chemistry-tzero-press.jpg" alt="TA Instruments Tzero Sample Encapsulation Press">
-  <img src="/research/archives/photos/chemistry-cem-discover.jpg" alt="CEM Discover Microwave Reactor">
-  <img src="/research/archives/photos/chemistry-hughes-welder.jpg" alt="Hughes Aircraft HRW 250B">
+  <img src="extensions/dsc-q20.jpg" alt="TA Instruments DSC Q20">
+  <img src="extensions/dsc-q100.jpg" alt="TA Instruments DSC Q100">
+  <img src="extensions/tga-q50.jpg" alt="TA Instruments TGA Q50">
+  <img src="extensions/tzero-press.jpg" alt="TA Instruments Tzero Sample Encapsulation Press">
+  <img src="extensions/cem-discover.jpg" alt="CEM Discover Microwave Reactor">
+  <img src="extensions/hughes-welder.jpg" alt="Hughes Aircraft HRW 250B">
 </div>
 
 <div class="instrument-table no-highlight">
 
 | Instrument | Extension | Description |
 |------------|-----------|-------------|
-| [TA Instruments DSC Q20](/research/archives/photos/chemistry-dsc-q20.jpg) 📷 | Energy | Heat of fusion, not just T<sub>melt</sub> |
-| [TA Instruments DSC Q100](/research/archives/photos/chemistry-dsc-q100.jpg) 📷 | Modulation | Reversing vs non-reversing heat flow (MDSC) |
-| [TA Instruments TGA Q50](/research/archives/photos/chemistry-tga-q50.jpg) 📷 | Mass | Continuous weight vs temperature |
-| [TA Instruments Tzero Sample Encapsulation Press](/research/archives/photos/chemistry-tzero-press.jpg) 📷 | Prep | Seals DSC pans |
-| [CEM Discover Microwave Reactor](/research/archives/photos/chemistry-cem-discover.jpg) 📷 | Synthesis | Microwave-driven elevated-T/P reactions |
-| [Hughes Aircraft HRW 250B](/research/archives/photos/chemistry-hughes-welder.jpg) 📷 | Repair | Welds new thermocouple tips |
+| TA Instruments DSC Q20 | Energy | Heat of fusion, not just T<sub>melt</sub> |
+| TA Instruments DSC Q100 | Modulation | Reversing vs non-reversing heat flow (MDSC) |
+| TA Instruments TGA Q50 | Mass | Continuous weight vs temperature |
+| TA Instruments Tzero Sample Encapsulation Press | Prep | Seals DSC pans |
+| CEM Discover Microwave Reactor | Synthesis | Microwave-driven elevated-T/P reactions |
+| Hughes Aircraft HRW 250B | Repair | Welds new thermocouple tips |
 
 </div>
 
-## Technology
-
+<div id="technology" class="tech-table-wrap">
+<div class="tech-table">
+<div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li class="fade-in" data-subj="chem"><span class="update-date">Thermal Analysis</span> <span class="update-name"><a href="/research/toys/chemistry/Thermogravimetry/" data-photo="/research/archives/photos/chemistry-tga-q50.jpg">Thermogravimetry</a></span> <span class="update-desc">Mass loss with heating — decomposition and moisture</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
-  <li class="fade-in" data-subj="chem"><span class="update-date">Thermal Analysis</span> <span class="update-name"><a href="/research/toys/chemistry/Calorimetry/" data-photo="/research/archives/photos/chemistry-dsc-q100.jpg">Calorimetry</a></span> <span class="update-desc">Energy flow with heating — phase transitions and heat capacity</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li class="fade-in" data-subj="chem"><span class="update-date">Thermal Analysis</span> <span class="update-name"><a href="/research/toys/chemistry/Thermogravimetry/">Thermogravimetry</a></span> <span class="update-desc">Mass loss with heating — decomposition and moisture</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li class="fade-in" data-subj="chem"><span class="update-date">Thermal Analysis</span> <span class="update-name"><a href="/research/toys/chemistry/Calorimetry/">Calorimetry</a></span> <span class="update-desc">Energy flow with heating — phase transitions and heat capacity</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
 </ul>
+</div>
+</div>

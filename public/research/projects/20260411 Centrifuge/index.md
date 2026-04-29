@@ -80,8 +80,11 @@ Four samples were loaded into the Thermo Scientific Sorvall RT3 Centrifuge to ba
 
 The experiment demonstrated that centrifugation is most effective on emulsions and suspensions (milk, yogurt, unfiltered vinegar) where particles of different densities are physically mixed but not dissolved.
 
-## Technology
-
+<div id="technology" class="tech-table-wrap">
+<div class="tech-table">
+<div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li class="fade-in" data-subj="chem"><span class="update-date">Separation</span> <span class="update-name"><a href="/research/toys/chemistry/Centrifugation/" data-photo="/research/toys/chemistry/Centrifugation/centrifugation.jpeg">Centrifugation</a></span> <span class="update-desc">Spin samples — separate by density at high g-forces</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li class="fade-in" data-subj="chem"><span class="update-date">Separation</span> <span class="update-name"><a href="/research/toys/chemistry/Centrifugation/">Centrifugation</a></span> <span class="update-desc">Spin samples — separate by density at high g-forces</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
 </ul>
+</div>
+</div>

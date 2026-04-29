@@ -571,7 +571,7 @@
               "specs": "Flow through packed column — separate by chemical affinity",
               "available": 1,
               "toy_url": "/research/toys/chemistry/Liquid%20Chromatography/",
-              "hero": "/research/archives/photos/chemistry-hplc.jpg",
+              "hero": "/research/toys/chemistry/Liquid%20Chromatography/hplc.jpg",
               "completed": "20260427 Liquid Chromatography",
               "project_url": "/research/projects/20260427%20Liquid%20Chromatography/",
               "projects": [
@@ -599,7 +599,7 @@
               "specs": "Mass loss with heating — decomposition and moisture",
               "available": 1,
               "toy_url": "/research/toys/chemistry/Thermogravimetry/",
-              "hero": "/research/archives/photos/chemistry-tga-q50.jpg",
+              "hero": "/research/toys/chemistry/Thermogravimetry/tga-q50.jpg",
               "completed": "20260405 Melting Point",
               "project_url": "/research/projects/20260405%20Melting%20Point/",
               "projects": [
@@ -620,7 +620,7 @@
               "specs": "Energy flow with heating — phase transitions and heat capacity",
               "available": 1,
               "toy_url": "/research/toys/chemistry/Calorimetry/",
-              "hero": "/research/archives/photos/chemistry-dsc-q100.jpg",
+              "hero": "/research/toys/chemistry/Calorimetry/dsc-q100.jpg",
               "completed": "20260405 Melting Point",
               "project_url": "/research/projects/20260405%20Melting%20Point/",
               "projects": [
@@ -678,7 +678,7 @@
               "specs": "Light absorption — concentration and conjugation",
               "available": 1,
               "toy_url": "/research/toys/chemistry/UV-Vis%20Spectroscopy/",
-              "hero": "/research/archives/photos/chemistry-spectrophotometer.jpeg",
+              "hero": "/research/toys/chemistry/UV-Vis%20Spectroscopy/spectrophotometer.jpeg",
               "completed": "20260420 UV-Vis Spectroscopy",
               "project_url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
               "projects": [
@@ -699,7 +699,7 @@
               "specs": "¹H and ¹³C environments — full structural fingerprint",
               "available": 0,
               "toy_url": "/research/toys/chemistry/NMR%20Spectroscopy/",
-              "hero": "/research/archives/photos/chemistry-nmr.jpg"
+              "hero": "/research/toys/chemistry/NMR%20Spectroscopy/nmr.jpg"
             }
           ]
         },
@@ -714,7 +714,7 @@
               "specs": "Volatile molecules — fragment fingerprints via electron ionization",
               "available": 1,
               "toy_url": "/research/toys/chemistry/GC-MS/",
-              "hero": "/research/archives/photos/chemistry-gc-ms.jpg",
+              "hero": "/research/toys/chemistry/GC-MS/gc-ms.jpg",
               "completed": "20260427 Mass Spectrometry",
               "project_url": "/research/projects/20260427%20Mass%20Spectrometry/",
               "projects": [
@@ -735,7 +735,7 @@
               "specs": "Nonvolatile molecules — intact weight via electrospray",
               "available": 1,
               "toy_url": "/research/toys/chemistry/LC-MS/",
-              "hero": "/research/archives/photos/chemistry-lc-ms.jpg",
+              "hero": "/research/toys/chemistry/LC-MS/lc-ms.jpg",
               "completed": "20260427 Mass Spectrometry",
               "project_url": "/research/projects/20260427%20Mass%20Spectrometry/",
               "projects": [

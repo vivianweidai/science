@@ -32,7 +32,7 @@ Does a cat prefer red or green colored food? This experiment tested whether a Br
 
 | Toolkit | Details |
 |----------|---------|
-| Subject | British Shorthair cat (Mi) <a class="photo-icon" href="/olympiads/photos/ctyphysics.jpeg"><img src="/cat.svg" alt="Mi" style="height:1em;vertical-align:-0.18em;"></a> |
+| Subject | British Shorthair cat (Mi) <a class="photo-icon" href="/mi.jpeg"><img src="/mi.svg" alt="Mi" style="height:1em;vertical-align:-0.18em;"></a> |
 | Food | Regular dry cat food |
 | Dye | Red and green food coloring |
 | Serving | 10 pieces per bowl per trial |
@@ -58,13 +58,16 @@ Over 30 days, Mi chose red on 13 days and green on 17 days. A chi-squared goodne
 
 The chi-squared test and supporting plots are in the analysis <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20250225%20Catfood/output/catfood_analysis.ipynb" rel="noopener">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20250225%20Catfood/output/catfood_analysis.ipynb" rel="noopener">colab</a>. See also the full <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20250225%20Catfood/output/20250225%20Catfood.pdf" rel="noopener">written report</a>.
 
-## Technology
-
+<div id="technology" class="tech-table-wrap">
+<div class="tech-table">
+<div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li class="fade-in" data-subj="math"><span class="update-date">Numerical</span> <span class="update-name"><a href="/research/toys/mathematics/NumPy/" data-photo="/research/toys/mathematics/NumPy/numpy.jpeg">NumPy</a></span> <span class="update-desc">Array foundation — linear algebra and vectorized math</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li class="fade-in" data-subj="math"><span class="update-date">Graphing</span> <span class="update-name"><a href="/research/toys/mathematics/Matplotlib/" data-photo="/research/toys/mathematics/Matplotlib/matplotlib.jpeg">Matplotlib</a></span> <span class="update-desc">Python 2D and 3D plotting</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li class="fade-in" data-subj="math"><span class="update-date">Typesetting</span> <span class="update-name"><a href="/research/toys/mathematics/LaTeX/" data-photo="/research/toys/mathematics/LaTeX/latex.jpeg">LaTeX</a></span> <span class="update-desc">Equations, references and bibliographies</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li class="fade-in" data-subj="comp"><span class="update-date">Statistics</span> <span class="update-name"><a href="/research/toys/computing/SciPy/" data-photo="/research/toys/computing/SciPy/scipy.jpeg">SciPy</a></span> <span class="update-desc">Hypothesis tests, distributions and confidence intervals</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
-  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/GitHub/" data-photo="/research/toys/computing/GitHub/github.jpeg">GitHub</a></span> <span class="update-desc">Data and source code repositories</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
-  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/Jupyter/" data-photo="/research/toys/computing/Jupyter/jupyter.jpeg">Jupyter</a></span> <span class="update-desc">Notebooks combining code, figures and narrative</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li class="fade-in" data-subj="math"><span class="update-date">Numerical</span> <span class="update-name"><a href="/research/toys/mathematics/NumPy/">NumPy</a></span> <span class="update-desc">Array foundation — linear algebra and vectorized math</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li class="fade-in" data-subj="math"><span class="update-date">Graphing</span> <span class="update-name"><a href="/research/toys/mathematics/Matplotlib/">Matplotlib</a></span> <span class="update-desc">Python 2D and 3D plotting</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li class="fade-in" data-subj="math"><span class="update-date">Typesetting</span> <span class="update-name"><a href="/research/toys/mathematics/LaTeX/">LaTeX</a></span> <span class="update-desc">Equations, references and bibliographies</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li class="fade-in" data-subj="comp"><span class="update-date">Statistics</span> <span class="update-name"><a href="/research/toys/computing/SciPy/">SciPy</a></span> <span class="update-desc">Hypothesis tests, distributions and confidence intervals</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/GitHub/">GitHub</a></span> <span class="update-desc">Data and source code repositories</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/Jupyter/">Jupyter</a></span> <span class="update-desc">Notebooks combining code, figures and narrative</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
 </ul>
+</div>
+</div>

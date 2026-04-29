@@ -78,8 +78,8 @@ const TABS = [
           <div class="curr-rows-secs" data-tab="research">
             <a href={RESEARCH_LATEST[subjSlug].url}>{RESEARCH_LATEST[subjSlug].name}</a>
             {RESEARCH_LATEST[subjSlug].mi && (
-              <a class="photo-icon mi-icon" href="/olympiads/photos/ctyphysics.jpeg">
-                <img src="/cat.svg" alt="Mi" />
+              <a class="photo-icon mi-icon" href="/mi.jpeg">
+                <img src="/mi.svg" alt="Mi" />
               </a>
             )}
           </div>
@@ -131,16 +131,14 @@ const TABS = [
     .curr-rows-tab {
       flex: 1;
       display: block;
-      padding: 1.1em 0.9em;
+      padding: 1em 0.9em;
       background: transparent;
       border: none;
       border-right: 1px solid #eaecef;
       font-family: inherit;
-      font-weight: 700;
-      font-size: 0.82em;
+      font-weight: 600;
+      font-size: 1em;
       color: #57606a;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
       text-align: center;
       cursor: pointer;
       transition: background 0.15s ease, color 0.15s ease;

@@ -16,16 +16,9 @@ data class Activity(
     val invited: Int? = null,
     val borderline: Int? = null,
     val competitive: Int? = null,
-    @SerialName("photo_url") val photoUrl: String? = null,
 ) {
     val isOlympiad: Boolean get() = type == "olympiad"
     val isTextbook: Boolean get() = type == "textbook"
-
-    val photoAbsoluteUrl: String?
-        get() = photoUrl?.takeIf { it.isNotEmpty() }?.let {
-            val trimmed = if (it.startsWith("/")) it.drop(1) else it
-            "https://vivianweidai.com/$trimmed"
-        }
 }
 
 @Serializable

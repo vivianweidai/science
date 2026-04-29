@@ -41,10 +41,13 @@ Cardiomyocyte cultures carrying both wild-type and known mutant MYBPC3 variants 
 
 See the <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260401%20Genes%20in%20Space/output/20260331%20Genes%20in%20Space.pdf" rel="noopener">proposal document</a> and <a href="https://github.com/vivianweidai/science/tree/main/public/research/projects/20260401%20Genes%20in%20Space/papers" rel="noopener">reference literature</a>.
 
-## Technology
-
+<div id="technology" class="tech-table-wrap">
+<div class="tech-table">
+<div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li class="fade-in" data-subj="bio"><span class="update-date">Amplification</span> <span class="update-name"><a href="/research/toys/biology/PCR/" data-photo="/research/toys/biology/PCR/pcr.jpeg">PCR</a></span> <span class="update-desc">Endpoint amplification — cycle temperature until enough copies exist</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
-  <li class="fade-in" data-subj="bio"><span class="update-date">Expression</span> <span class="update-name"><a href="/research/toys/biology/Cell-Free/" data-photo="/research/toys/biology/Cell-Free/cell-free.jpeg">Cell-Free</a></span> <span class="update-desc">Produce protein from DNA without living cells</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
-  <li class="fade-in" data-subj="bio"><span class="update-date">Expression</span> <span class="update-name"><a href="/research/toys/biology/Fluorescence/" data-photo="/research/toys/biology/Fluorescence/fluorescence.jpeg">Fluorescence</a></span> <span class="update-desc">Visualize protein glow under UV light</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
+  <li class="fade-in" data-subj="bio"><span class="update-date">Amplification</span> <span class="update-name"><a href="/research/toys/biology/PCR/">PCR</a></span> <span class="update-desc">Endpoint amplification — cycle temperature until enough copies exist</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
+  <li class="fade-in" data-subj="bio"><span class="update-date">Expression</span> <span class="update-name"><a href="/research/toys/biology/Cell-Free/">Cell-Free</a></span> <span class="update-desc">Produce protein from DNA without living cells</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
+  <li class="fade-in" data-subj="bio"><span class="update-date">Expression</span> <span class="update-name"><a href="/research/toys/biology/Fluorescence/">Fluorescence</a></span> <span class="update-desc">Visualize protein glow under UV light</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
 </ul>
+</div>
+</div>

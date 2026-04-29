@@ -231,18 +231,21 @@ All spectra plots, peak identification, and category overlays were generated fro
 
 | Instrument | Extension | Description |
 |------------|------|-------------|
-| [Bruker Tensor 27 Hyperion FT-IR Microscope](photos/setup/setup14.jpeg) 📷 | Space | Scan IR spectrum at microscopic spot |
-| [Mettler Toledo ReactIR iC10](photos/setup/setup9.jpeg) 📷 | Time | Produce IR spectrum as reaction proceeds |
-| [Renishaw inVia Raman Microscope](photos/setup/setup13.jpeg) 📷 | Chemistry | Detect non-polar bonds |
+| Bruker Tensor 27 Hyperion FT-IR Microscope | Space | Scan IR spectrum at microscopic spot |
+| Mettler Toledo ReactIR iC10 | Time | Produce IR spectrum as reaction proceeds |
+| Renishaw inVia Raman Microscope | Chemistry | Detect non-polar bonds |
 
 </div>
 
-## Technology
-
+<div id="technology" class="tech-table-wrap">
+<div class="tech-table">
+<div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li class="fade-in" data-subj="math"><span class="update-date">Numerical</span> <span class="update-name"><a href="/research/toys/mathematics/NumPy/" data-photo="/research/toys/mathematics/NumPy/numpy.jpeg">NumPy</a></span> <span class="update-desc">Array foundation — linear algebra and vectorized math</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li class="fade-in" data-subj="math"><span class="update-date">Graphing</span> <span class="update-name"><a href="/research/toys/mathematics/Matplotlib/" data-photo="/research/toys/mathematics/Matplotlib/matplotlib.jpeg">Matplotlib</a></span> <span class="update-desc">Python 2D and 3D plotting</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/GitHub/" data-photo="/research/toys/computing/GitHub/github.jpeg">GitHub</a></span> <span class="update-desc">Data and source code repositories</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
-  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/Jupyter/" data-photo="/research/toys/computing/Jupyter/jupyter.jpeg">Jupyter</a></span> <span class="update-desc">Notebooks combining code, figures and narrative</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
-  <li class="fade-in" data-subj="chem"><span class="update-date">Molecular Spectroscopy</span> <span class="update-name"><a href="/research/toys/chemistry/IR Spectroscopy/" data-photo="/research/toys/chemistry/IR%20Spectroscopy/irspectroscopy.jpeg">IR Spectroscopy</a></span> <span class="update-desc">Polar bonds — functional-group fingerprints</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li class="fade-in" data-subj="math"><span class="update-date">Numerical</span> <span class="update-name"><a href="/research/toys/mathematics/NumPy/">NumPy</a></span> <span class="update-desc">Array foundation — linear algebra and vectorized math</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li class="fade-in" data-subj="math"><span class="update-date">Graphing</span> <span class="update-name"><a href="/research/toys/mathematics/Matplotlib/">Matplotlib</a></span> <span class="update-desc">Python 2D and 3D plotting</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/GitHub/">GitHub</a></span> <span class="update-desc">Data and source code repositories</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li class="fade-in" data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/Jupyter/">Jupyter</a></span> <span class="update-desc">Notebooks combining code, figures and narrative</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li class="fade-in" data-subj="chem"><span class="update-date">Molecular Spectroscopy</span> <span class="update-name"><a href="/research/toys/chemistry/IR Spectroscopy/">IR Spectroscopy</a></span> <span class="update-desc">Polar bonds — functional-group fingerprints</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
 </ul>
+</div>
+</div>

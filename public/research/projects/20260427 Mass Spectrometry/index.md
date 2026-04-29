@@ -79,14 +79,17 @@ Flat baseline across 500–3000 m/z — no analyte, no matrix, no peaks; if peak
 
 | Instrument | Extension | Description |
 |------------|-----------|-------------|
-| [Agilent 7890A GC 5975C Inert MSD](photos/setup/setup2.jpeg) 📷 | Volatiles | GC + EI — small molecules, fragmented |
-| [Agilent 6230A TOF LC-MS](photos/setup/setup3.jpeg) 📷 | Nonvolatiles | LC + ESI — large molecules, intact |
+| Agilent 7890A GC 5975C Inert MSD | Volatiles | GC + EI — small molecules, fragmented |
+| Agilent 6230A TOF LC-MS | Nonvolatiles | LC + ESI — large molecules, intact |
 
 </div>
 
-## Technology
-
+<div id="technology" class="tech-table-wrap">
+<div class="tech-table">
+<div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li class="fade-in" data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/GC-MS/" data-photo="/research/archives/photos/chemistry-gc-ms.jpg">GC-MS</a></span> <span class="update-desc">Volatile molecules — fragment fingerprints via electron ionization</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
-  <li class="fade-in" data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/LC-MS/" data-photo="/research/archives/photos/chemistry-lc-ms.jpg">LC-MS</a></span> <span class="update-desc">Nonvolatile molecules — intact weight via electrospray</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li class="fade-in" data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/GC-MS/">GC-MS</a></span> <span class="update-desc">Volatile molecules — fragment fingerprints via electron ionization</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li class="fade-in" data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/LC-MS/">LC-MS</a></span> <span class="update-desc">Nonvolatile molecules — intact weight via electrospray</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
 </ul>
+</div>
+</div>

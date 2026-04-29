@@ -1,13 +1,10 @@
 /* Shared photo-preview hover popup.
  *
- * Listens via event delegation for mouseover/mouseout. Shows a floating
- * preview of the linked or referenced image when the cursor enters a
- * trigger element. A trigger is either:
- *   - any [data-photo="<url>"] element (used by olympiads + research
- *     where the title text is plain but should still preview the photo)
- *   - any <a href="...jpg|.jpeg|.png|.gif|.webp"> link (used by static
- *     markdown content in project pages, and for the small photo icons
- *     that link to the full image)
+ * Listens via event delegation for mouseover/mouseout and shows a
+ * floating preview when the cursor enters a trigger element. Triggers:
+ *   - any [data-photo="<url>"] element (research toy cards expose
+ *     their hero photo this way so the title stays plain text)
+ *   - any <a href="...jpg|.jpeg|.png|.gif|.webp"> link in markdown
  *
  * Positioning: placed below the trigger by default; flipped above or
  * clamped to viewport edges so the popup never falls off-screen.

@@ -177,26 +177,24 @@ import PageFooter from '../../layouts/PageFooter.astro';
     .toys-topic-desc {
       font-weight: 400;
       font-size: .9em;
-      color: #fff;
-      -webkit-text-fill-color: #fff;
-      transition: color .2s ease, -webkit-text-fill-color .2s ease;
+      color: #1f2328;
+      opacity: 0;
+      transition: opacity .2s ease;
       text-align: right;
       min-width: 0;
     }
-    .toys-card-header:hover .toys-topic-desc {
-      color: #1f2328;
-      -webkit-text-fill-color: #1f2328;
+    .toys-card-wrap:hover .toys-topic-desc {
+      opacity: 1;
     }
-    .toys-card-header { transition: background 0.18s ease; }
+    .toys-card-header {
+      background: color-mix(in srgb, var(--card-tint, #d1d9e0) 45%, white);
+      transition: background 0.18s ease;
+    }
     .toys-card:hover .toys-card-header {
-      background: var(--card-tint);
+      background: color-mix(in srgb, var(--card-tint) 60%, white);
     }
     .toys-card .toys-card-header:hover {
-      background: color-mix(in srgb, var(--card-tint), #1f2328 8%);
-    }
-    .toys-card:hover .toys-card-header .chip {
-      background: #1f2328;
-      color: var(--card-tint);
+      background: color-mix(in srgb, var(--card-tint) 70%, white);
     }
 
     .toys-table {
@@ -222,14 +220,13 @@ import PageFooter from '../../layouts/PageFooter.astro';
 
     .toys-tech-desc {
       font-weight: 400;
-      color: #f6f8fa;
-      -webkit-text-fill-color: #f6f8fa;
-      transition: color .2s ease, -webkit-text-fill-color .2s ease;
+      color: #1f2328;
+      opacity: 0;
+      transition: opacity .2s ease;
       text-align: right;
     }
-    .toys-tech-row:hover .toys-tech-desc {
-      color: #1f2328;
-      -webkit-text-fill-color: #1f2328;
+    .toys-card-wrap:hover .toys-tech-desc {
+      opacity: 1;
     }
     .toys-tech-row:hover td { background: #eef1f4; }
 
