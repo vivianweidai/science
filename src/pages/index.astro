@@ -328,6 +328,7 @@ const TABS = [
       .curr-rows-secs[data-tab="curriculum"] { display: none; }
       .curr-rows-secs { padding: 0.65em 1em; }
     }
+    .footer-store-links { display: flex; gap: 0.5em; }
   </style>
 
   <script is:inline>
@@ -501,5 +502,10 @@ const TABS = [
 
   <hr />
 
-  <PageFooter active="home"><Fragment slot="lead" /></PageFooter>
+  <PageFooter active="home">
+    <div slot="lead" class="footer-store-links">
+      <a href="https://apps.apple.com/app/id6762091743">Apple</a>
+      <a href="https://play.google.com/store/apps/details?id=com.vivianweidai.science">Google</a>
+    </div>
+  </PageFooter>
 </DefaultLayout>
