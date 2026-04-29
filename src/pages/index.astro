@@ -464,7 +464,11 @@ const TABS = [
       var tabs = ['curriculum', 'olympiads', 'research'];
       var tabMs = 5000;
       var cycleMs = tabs.length * tabMs;
-      var cycleStart = performance.now();
+      // Each page load picks a random starting tab; the timer ticks on
+      // from there (offset cycleStart so elapsed lands inside that tab).
+      var startIdx = Math.floor(Math.random() * tabs.length);
+      container.dataset.active = tabs[startIdx];
+      var cycleStart = performance.now() - startIdx * tabMs;
       var rafId = 0;
       var stopped = false;
 
