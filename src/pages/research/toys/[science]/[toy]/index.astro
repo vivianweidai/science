@@ -121,12 +121,85 @@ function resolveHero(h: string | undefined, folder: string, name: string): strin
   return `/research/toys/${folder}/${encodeURIComponent(name)}/${h.split('/').map(encodeURIComponent).join('/')}`;
 }
 const heroUrl = resolveHero(hero, scienceFolder, toy);
+
+// ----- Cross-toy prev/next nav -----
+// Flatten toys.yml's topic → technology → toy hierarchy into a single
+// canonical sequence so prev/next can cycle through every toy on the
+// site (and roll over from one science's last toy into the next
+// science's first). Only toys with a template page (toy_url present)
+// are included — placeholder toys without pages would dead-end the nav.
+type FlatToy = {
+  toy: string;
+  toy_url: string;
+  topic: string;
+  science: string;
+  science_slug: string;
+};
+const flatToys: FlatToy[] = [];
+for (const t of toysData.topics) {
+  for (const tech of t.technologies) {
+    for (const tt of tech.toys) {
+      if (!tt.toy_url) continue;
+      flatToys.push({
+        toy: tt.toy,
+        toy_url: tt.toy_url,
+        topic: t.topic,
+        science: t.science,
+        science_slug: t.science_slug,
+      });
+    }
+  }
+}
+const currentIdx = flatToys.findIndex(
+  (ft) => ft.toy === toy && ft.science_slug === science_slug,
+);
+// Wrap around at the ends so prev on the very first toy lands on the
+// last, and next on the very last toy lands on the first.
+const N = flatToys.length;
+const prevToy = currentIdx >= 0 && N > 1 ? flatToys[(currentIdx - 1 + N) % N] : null;
+const nextToy = currentIdx >= 0 && N > 1 ? flatToys[(currentIdx + 1) % N] : null;
+
+// Topic is intentionally not included in the nav since it has no landing
+// page — only Toy and the Science chip get rendered. crossScience drives
+// whether the chip appears at all.
+function navMeta(target: FlatToy | null) {
+  if (!target) return null;
+  return {
+    ...target,
+    crossScience: target.science_slug !== science_slug,
+  };
+}
+const prevMeta = navMeta(prevToy);
+const nextMeta = navMeta(nextToy);
 ---
 <DefaultLayout title={`${toy} — ${science}`}>
   <PageHeader title="Research" researchHref={`/research/#${science_slug}`} />
 
+  <div class="toy-prevnext toy-prevnext-top">
+    {prevMeta ? (
+      <span class="toy-prevnext-side prev">
+        <span class="toy-prevnext-arrow">←</span>
+        <a href={prevMeta.toy_url}>{prevMeta.toy}</a>
+        {prevMeta.crossScience && (<>
+          <span class="toy-prevnext-sep">·</span>
+          <a class={`chip ${prevMeta.science_slug}`} href={`/research/#${prevMeta.science_slug}`}>{prevMeta.science}</a>
+        </>)}
+      </span>
+    ) : (<span class="toy-prevnext-side spacer">←</span>)}
+    {nextMeta ? (
+      <span class="toy-prevnext-side next">
+        {nextMeta.crossScience && (<>
+          <a class={`chip ${nextMeta.science_slug}`} href={`/research/#${nextMeta.science_slug}`}>{nextMeta.science}</a>
+          <span class="toy-prevnext-sep">·</span>
+        </>)}
+        <a href={nextMeta.toy_url}>{nextMeta.toy}</a>
+        <span class="toy-prevnext-arrow">→</span>
+      </span>
+    ) : (<span class="toy-prevnext-side spacer">→</span>)}
+  </div>
+
   <div class="toy-page-wrap">
-  <article class={`toy-page toy-accent-${science_slug} fade-in`}>
+  <article class={`toy-page toy-accent-${science_slug} card-pop-in`}>
     <div class="toy-title">
       <h1>{toy}</h1>
       <span class="toy-context">
@@ -169,6 +242,29 @@ const heroUrl = resolveHero(hero, scienceFolder, toy);
   </article>
   </div>
 
+  <div class="toy-prevnext toy-prevnext-bottom">
+    {prevMeta ? (
+      <span class="toy-prevnext-side prev">
+        <span class="toy-prevnext-arrow">←</span>
+        <a href={prevMeta.toy_url}>{prevMeta.toy}</a>
+        {prevMeta.crossScience && (<>
+          <span class="toy-prevnext-sep">·</span>
+          <a class={`chip ${prevMeta.science_slug}`} href={`/research/#${prevMeta.science_slug}`}>{prevMeta.science}</a>
+        </>)}
+      </span>
+    ) : (<span class="toy-prevnext-side spacer">←</span>)}
+    {nextMeta ? (
+      <span class="toy-prevnext-side next">
+        {nextMeta.crossScience && (<>
+          <a class={`chip ${nextMeta.science_slug}`} href={`/research/#${nextMeta.science_slug}`}>{nextMeta.science}</a>
+          <span class="toy-prevnext-sep">·</span>
+        </>)}
+        <a href={nextMeta.toy_url}>{nextMeta.toy}</a>
+        <span class="toy-prevnext-arrow">→</span>
+      </span>
+    ) : (<span class="toy-prevnext-side spacer">→</span>)}
+  </div>
+
   <hr />
 
   <PageFooter researchHref={`/research/#${science_slug}`} />
@@ -184,11 +280,44 @@ const heroUrl = resolveHero(hero, scienceFolder, toy);
        cards: 1 px gray border + 4 px science-colored left accent +
        a very soft science-tinted wash so the page signals "you're
        on a reference card" at a glance. */
+    /* Cross-toy prev/next nav — sits OUTSIDE the .toy-page-wrap card,
+       above and below it. Each side packs three independently-clickable
+       parts (toy · topic · science chip) separated by middle dots, with
+       the arrow as a non-interactive cap. Mirrors .curr-prevnext. */
+    .toy-prevnext {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1em;
+      font-size: 0.9em;
+    }
+    .toy-prevnext-side {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.4em;
+      flex-wrap: wrap;
+      max-width: 48%;
+      line-height: 1.5;
+    }
+    .toy-prevnext-side.next { justify-content: flex-end; }
+    .toy-prevnext-side a {
+      color: #0969da;
+      text-decoration: none;
+      font-weight: 400;
+    }
+    .toy-prevnext-side a:hover { text-decoration: underline; }
+    .toy-prevnext-side a.chip:hover { text-decoration: none; }
+    .toy-prevnext-arrow { color: #0969da; }
+    .toy-prevnext-sep   { color: #1f2328; opacity: 0.4; }
+    .toy-prevnext-side.spacer { visibility: hidden; }
+    .toy-prevnext-top    { margin: 1em 0 0.7em 0; }
+    .toy-prevnext-bottom { margin: 0.7em 0 0 0; }
+
     /* Hover hit-region wrapper — 2 px of bottom/right padding catches the
        cursor when the article lifts up-and-left on hover (same trick as
        .toys-card-wrap). */
     .toy-page-wrap {
-      margin: 1em 0;
+      margin: 0;
       padding: 0 2px 2px 0;
     }
     .toy-page {

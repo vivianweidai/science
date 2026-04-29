@@ -24,6 +24,102 @@
     mathematics: 'math', computing: 'comp', physics: 'phys',
     chemistry: 'chem', biology: 'bio', astronomy: 'astro',
   };
+  // Canonical subject order for cross-topic navigation. Matches the
+  // research and curriculum chip palette order; lets prev/next on the last
+  // topic of (e.g.) Astronomy cycle into the first topic of Mathematics.
+  var SUBJECT_ORDER = ['mathematics', 'computing', 'physics', 'chemistry', 'biology', 'astronomy'];
+
+  // Find the topic immediately before/after (subject, sectionIdx, topicIdx)
+  // in the canonical subject → section → topic walk. Returns null if at
+  // the very start / end of the curriculum (no further wrap).
+  function findAdjacent(subject, sectionIdx, topicIdx, direction) {
+    var subj = manifest[subject];
+    if (!subj) return null;
+    var sec = subj.sections[sectionIdx];
+    var newTopicIdx = topicIdx + direction;
+    if (newTopicIdx >= 0 && newTopicIdx < sec.topics.length) {
+      return { subject: subject, sectionIdx: sectionIdx, topicIdx: newTopicIdx };
+    }
+    var newSectionIdx = sectionIdx + direction;
+    if (newSectionIdx >= 0 && newSectionIdx < subj.sections.length) {
+      var newSec = subj.sections[newSectionIdx];
+      return {
+        subject: subject,
+        sectionIdx: newSectionIdx,
+        topicIdx: direction > 0 ? 0 : newSec.topics.length - 1,
+      };
+    }
+    // Cross subject boundary, wrapping the curriculum so prev on the very
+    // first topic loops to the last topic, and next on the very last
+    // topic loops to the first.
+    var subjectIdx = SUBJECT_ORDER.indexOf(subject);
+    var N = SUBJECT_ORDER.length;
+    for (var step = 1; step <= N; step++) {
+      var nextIdx = ((subjectIdx + direction * step) % N + N) % N;
+      var newSubject = SUBJECT_ORDER[nextIdx];
+      var newSubj = manifest[newSubject];
+      if (newSubj && newSubj.sections.length) {
+        if (direction > 0) {
+          return { subject: newSubject, sectionIdx: 0, topicIdx: 0 };
+        }
+        var lastSec = newSubj.sections[newSubj.sections.length - 1];
+        return {
+          subject: newSubject,
+          sectionIdx: newSubj.sections.length - 1,
+          topicIdx: lastSec.topics.length - 1,
+        };
+      }
+    }
+    return null;
+  }
+
+  // Render a prev/next nav side. Three independently-clickable parts
+  // separated by middle dots: the leaf topic (jumps to that topic), the
+  // section name (only shown when crossing sections — jumps to the grid
+  // with that section highlighted), the subject chip (only shown when
+  // crossing subjects — jumps to the grid with that subject column
+  // highlighted). The arrow is a non-interactive cap.
+  function buildNavLink(adj, currentSubject, currentSectionIdx, direction) {
+    var sideClass = 'curr-prevnext-side ' + (direction > 0 ? 'next' : 'prev');
+    var arrow = direction > 0 ? '→' : '←';
+    if (!adj) return '<span class="' + sideClass + ' spacer">' + arrow + '</span>';
+
+    var subj = manifest[adj.subject];
+    var sec = subj.sections[adj.sectionIdx];
+    var topic = sec.topics[adj.topicIdx];
+    var crossSection = adj.sectionIdx !== currentSectionIdx || adj.subject !== currentSubject;
+    var crossSubject = adj.subject !== currentSubject;
+
+    var topicAttrs = ' data-action="topic"'
+                   + ' data-subject="' + adj.subject + '"'
+                   + ' data-section="' + adj.sectionIdx + '"'
+                   + ' data-topic="' + adj.topicIdx + '"';
+    var parts = ['<a href="#"' + topicAttrs + '>' + escapeHtml(topic.name) + '</a>'];
+
+    if (crossSection) {
+      var sectionAttrs = ' data-action="section"'
+                       + ' data-subject="' + adj.subject + '"'
+                       + ' data-section="' + adj.sectionIdx + '"';
+      parts.push('<a href="#"' + sectionAttrs + '>' + escapeHtml(sec.name) + '</a>');
+    }
+    if (crossSubject) {
+      var subjectAttrs = ' data-action="subject"'
+                       + ' data-subject="' + adj.subject + '"';
+      parts.push('<a class="chip ' + SHORT_SLUGS[adj.subject] + '" href="#"' + subjectAttrs + '>' + escapeHtml(subj.name) + '</a>');
+    }
+
+    // Topic always sits closest to the arrow (clicking the leaf is what
+    // advances): prev side lays out as topic · section · chip, next side
+    // reverses to chip · section · topic so the cursor stays anchored to
+    // the same screen position when clicking repeatedly.
+    var sep = '<span class="curr-prevnext-sep">·</span>';
+    var ordered = direction > 0 ? parts.slice().reverse() : parts;
+    var inside = ordered.join(sep);
+    var arrowSpan = '<span class="curr-prevnext-arrow">' + arrow + '</span>';
+    return direction > 0
+      ? '<span class="' + sideClass + '">' + inside + ' ' + arrowSpan + '</span>'
+      : '<span class="' + sideClass + '">' + arrowSpan + ' ' + inside + '</span>';
+  }
 
   var manifest = null;
   var pendingHash = parseHash();
@@ -286,17 +382,23 @@
     var sec = subj.sections[state.sectionIdx];
     var topic = sec.topics[state.topicIdx];
 
-    var fade = hasRendered ? '' : ' fade-in';
-    var html = '<div class="curr-topic' + fade + '" data-subj="' + state.subject + '">';
+    // Prev/next now sit OUTSIDE the .curr-topic card (above and below it),
+    // and span the full curriculum so they cycle across section + subject
+    // boundaries. card-pop-in fires every render (not just first paint)
+    // so prev/next clicks visibly swap the card in.
+    var html = '<div class="curr-prevnext curr-prevnext-top"></div>';
+    html += '<div class="curr-topic-wrap">';
+    html += '<div class="curr-topic card-pop-in" data-subj="' + state.subject + '">';
     html += '<div class="curr-breadcrumb" data-subj="' + state.subject + '">'
-         + '<a class="chip ' + SHORT_SLUGS[state.subject] + '" data-action="subject" href="/curriculum/#' + state.subject + '">' + escapeHtml(subj.name) + '</a>'
-         + '<span class="sep">·</span><a href="#" data-action="section-view">' + escapeHtml(sec.name) + '</a>'
-         + '<span class="sep">·</span><strong>' + escapeHtml(topic.name) + '</strong>'
+         + '<span class="curr-breadcrumb-title">' + escapeHtml(topic.name) + '</span>'
+         + '<span class="curr-breadcrumb-meta">'
+         +   '<a class="chip ' + SHORT_SLUGS[state.subject] + '" data-action="subject" href="/curriculum/#' + state.subject + '">' + escapeHtml(subj.name) + '</a>'
+         +   '<span class="sep">·</span><a href="#" data-action="section-view">' + escapeHtml(sec.name) + '</a>'
+         + '</span>'
          + '</div>';
-    html += '<div class="curr-prevnext curr-prevnext-top"></div>';
     html += '<div class="curr-topic-body"><div class="curr-loading">Loading…</div></div>';
+    html += '</div></div>';
     html += '<div class="curr-prevnext curr-prevnext-bottom"></div>';
-    html += '</div>';
     widget.innerHTML = html;
 
     // Fetch all tables for this topic in parallel, then render in order.
@@ -352,23 +454,39 @@
       render();
     });
 
-    // Prev/next within the section (flat topic list).
-    var prevTopic = state.topicIdx > 0 ? sec.topics[state.topicIdx - 1] : null;
-    var nextTopic = state.topicIdx < sec.topics.length - 1 ? sec.topics[state.topicIdx + 1] : null;
-    var navHtml =
-      (prevTopic
-        ? '<a href="#" data-action="prev">← ' + escapeHtml(prevTopic.name) + '</a>'
-        : '<span class="spacer">·</span>')
-      + (nextTopic
-        ? '<a href="#" data-action="next">' + escapeHtml(nextTopic.name) + ' →</a>'
-        : '<span class="spacer">·</span>');
+    // Prev/next walk the entire curriculum: same section first, then
+    // adjacent section, then adjacent subject. Each link carries the
+    // target (subject, section, topic) so a single handler can jump
+    // anywhere — no stepwise increment of state.topicIdx.
+    var prev = findAdjacent(state.subject, state.sectionIdx, state.topicIdx, -1);
+    var next = findAdjacent(state.subject, state.sectionIdx, state.topicIdx, +1);
+    var navHtml = buildNavLink(prev, state.subject, state.sectionIdx, -1)
+                + buildNavLink(next, state.subject, state.sectionIdx, +1);
     widget.querySelectorAll('.curr-prevnext').forEach(function (nav) {
       nav.innerHTML = navHtml;
       nav.querySelectorAll('a').forEach(function (a) {
         a.addEventListener('click', function (e) {
           e.preventDefault();
-          if (a.dataset.action === 'prev') state.topicIdx -= 1;
-          else if (a.dataset.action === 'next') state.topicIdx += 1;
+          var action = a.dataset.action;
+          if (action === 'topic') {
+            state = {
+              view: 'topic',
+              subject: a.dataset.subject,
+              sectionIdx: parseInt(a.dataset.section, 10),
+              topicIdx: parseInt(a.dataset.topic, 10),
+            };
+          } else if (action === 'section') {
+            state = {
+              view: 'grid',
+              highlightSubject: a.dataset.subject,
+              highlightSectionIdx: parseInt(a.dataset.section, 10),
+            };
+          } else if (action === 'subject') {
+            state = {
+              view: 'grid',
+              highlightSubject: a.dataset.subject,
+            };
+          }
           render();
           scrollToWidget();
         });

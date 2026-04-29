@@ -168,8 +168,21 @@ a.chip:hover { filter: brightness(0.94) saturate(1.2); }
 .fade-in {
   animation: fadeUp 0.6s ease backwards;
 }
+/* Card pop-in: slight scale-up + fade. Runs every time a leaf card
+   (curriculum topic, research toy) arrives — first paint, prev/next
+   navigation, deep link, etc. — so the swap reads as a deliberate
+   transition rather than an abrupt content replacement. */
+@keyframes cardPopIn {
+  0%   { opacity: 0; transform: scale(0.94) translateY(8px); }
+  60%  { opacity: 1; transform: scale(1.012) translateY(-1px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+.card-pop-in {
+  animation: cardPopIn 0.42s cubic-bezier(.2, .9, .3, 1.05) backwards;
+}
 @media (prefers-reduced-motion: reduce) {
-  .fade-in { animation: none; opacity: 1; transform: none; }
+  .fade-in,
+  .card-pop-in { animation: none; opacity: 1; transform: none; }
 }
 
 /* Shared photo-preview hover popup (see src/layouts/photo-preview.js). */
