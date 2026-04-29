@@ -110,7 +110,7 @@ const TABS = [
       inset: 0;
       pointer-events: none;
     }
-    .fade-in:hover .hero-pool {
+    .hero-pool:hover {
       transform: scale(1.01);
       filter: brightness(1.02);
       box-shadow: 0 5px 14px rgba(0,0,0,.06);
@@ -317,9 +317,16 @@ const TABS = [
       to   { transform: translateX(120%); }
     }
     @media (max-width: 600px) {
-      .curr-rows-row { flex-direction: column; align-items: stretch; }
+      .curr-rows-row {
+        flex-direction: column;
+        align-items: stretch;
+        min-height: 0;
+      }
       .curr-rows-subj { flex: none; text-align: center; }
-      .curr-rows-secs, .curr-rows-pdf { display: none; }
+      .curr-rows-pdf,
+      .curr-rows-date,
+      .curr-rows-secs[data-tab="curriculum"] { display: none; }
+      .curr-rows-secs { padding: 0.65em 1em; }
     }
   </style>
 
