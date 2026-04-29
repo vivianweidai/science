@@ -18,6 +18,7 @@ Output shape:
 from __future__ import annotations
 
 import json
+import re
 import sys
 import urllib.parse
 from pathlib import Path
@@ -45,21 +46,28 @@ SCIENCE_FOLDERS = {
 }
 
 
-def hero_for_toy(science_folder: str, toy_name: str) -> str | None:
-    """Return absolute hero-image URL for a toy by reading its index.md
-    frontmatter (`hero:` field). Returns None when no toy folder exists yet
-    or when the frontmatter has no hero. Relative paths in frontmatter are
-    resolved against the toy folder's URL."""
-    md = TOYS_DIR / science_folder / toy_name / "index.md"
-    if not md.is_file():
+def _read_frontmatter(md_path: Path) -> dict | None:
+    """Parse the YAML frontmatter at the top of a markdown file.
+    Returns None when the file is missing or has no `---\\n…\\n---` block."""
+    if not md_path.is_file():
         return None
-    text = md.read_text()
+    text = md_path.read_text()
     if not text.startswith("---\n"):
         return None
     end = text.find("\n---", 4)
     if end < 0:
         return None
-    fm = yaml.safe_load(text[4:end]) or {}
+    return yaml.safe_load(text[4:end]) or {}
+
+
+def hero_for_toy(science_folder: str, toy_name: str) -> str | None:
+    """Return absolute hero-image URL for a toy by reading its index.md
+    frontmatter (`hero:` field). Returns None when no toy folder exists yet
+    or when the frontmatter has no hero. Relative paths in frontmatter are
+    resolved against the toy folder's URL."""
+    fm = _read_frontmatter(TOYS_DIR / science_folder / toy_name / "index.md")
+    if not fm:
+        return None
     hero = fm.get("hero")
     if not hero:
         return None
@@ -69,10 +77,69 @@ def hero_for_toy(science_folder: str, toy_name: str) -> str | None:
     return base + urllib.parse.quote(hero)
 
 
+def extras_for_toy(science_folder: str, toy_name: str) -> list[dict]:
+    """Return the toy's `extra_projects:` frontmatter array — placeholder
+    entries for projects that don't have a local research folder yet
+    (external links, planned projects, etc.). Each entry is normalised to
+    {date, title, url, sciences[]} with `date` as YYYY-MM-DD."""
+    fm = _read_frontmatter(TOYS_DIR / science_folder / toy_name / "index.md")
+    if not fm:
+        return []
+    out = []
+    for x in fm.get("extra_projects") or []:
+        date = str(x.get("date", ""))
+        m = re.match(r"^(\d{4})-(\d{2})-(\d{2})", date)
+        if not m:
+            continue
+        out.append({
+            "date": f"{m.group(1)}-{m.group(2)}-{m.group(3)}",
+            "title": x.get("title", ""),
+            "url": x.get("url", ""),
+            "sciences": list(x.get("sciences") or []),
+        })
+    return out
+
+
+def projects_per_toy() -> dict[str, list[dict]]:
+    """Scan every research project's index.md and return a reverse map
+    from toy name to the list of projects that reference it via the
+    project's `toys:` frontmatter array. Each entry is {date, title,
+    url, sciences[], folder}, with `date` as YYYY-MM-DD parsed from the
+    folder's date prefix. Used to bake the per-toy projects list into
+    toys.json so iOS/Android can render the toy page natively without
+    re-scanning all projects at runtime."""
+    by_toy: dict[str, list[dict]] = {}
+    if not PROJECTS.is_dir():
+        return by_toy
+    for proj in sorted(PROJECTS.iterdir()):
+        if not proj.is_dir():
+            continue
+        m = re.match(r"^(\d{4})(\d{2})(\d{2})", proj.name)
+        if not m:
+            continue
+        date_iso = f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+        fm = _read_frontmatter(proj / "index.md")
+        if not fm:
+            continue
+        title = fm.get("title", fm.get("project", ""))
+        sciences = list(fm.get("sciences") or [])
+        url = f"/research/projects/{urllib.parse.quote(proj.name)}/"
+        for t in fm.get("toys") or []:
+            by_toy.setdefault(str(t), []).append({
+                "date": date_iso,
+                "title": title,
+                "url": url,
+                "sciences": sciences,
+                "folder": proj.name,
+            })
+    return by_toy
+
+
 def build() -> list[dict]:
     data = yaml.safe_load((CONTENT / "toys.yml").read_text())
     if not isinstance(data, list):
         raise ValueError("toys.yml must be a YAML list")
+    proj_index = projects_per_toy()
     topics = []
     tech_id = toy_id = 0
     for i, e in enumerate(data):
@@ -124,6 +191,15 @@ def build() -> list[dict]:
                     if not (PROJECTS / folder).is_dir():
                         print(f"  warn: topic[{i}].tech[{j}].toy[{k}] → extension_of "
                               f"{folder!r} not found", file=sys.stderr)
+                # Combine reverse-scanned projects (project frontmatter
+                # `toys:` array) with the toy's own `extra_projects:`
+                # placeholder list, sort newest first by date.
+                folder_for_extras = SCIENCE_FOLDERS[e["science"]]
+                projects = list(proj_index.get(toy["toy"], []))
+                projects.extend(extras_for_toy(folder_for_extras, toy["toy"]))
+                if projects:
+                    projects.sort(key=lambda p: p["date"], reverse=True)
+                    t["projects"] = projects
                 toys_out.append(t)
             techs_out.append({
                 "id": tech_id,

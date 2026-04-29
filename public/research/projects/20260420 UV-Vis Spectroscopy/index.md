@@ -250,7 +250,7 @@ Brief exploratory scan of distilled water — one pass on the PerkinElmer Lambda
 |------------|-----------|-------------|
 | [PerkinElmer Lambda 750 UV/Vis/NIR Spectrophotometer](photos/setup/setup12.jpeg) 📷 | Range | More definition and extend into near-infrared (200–2500 nm) for solvent overtones |
 | [Jasco J-1500 CD Spectrometer](photos/setup/setup18.jpeg) 📷 | Chirality | Detect chiral molecules and protein secondary structure |
-| VTSYIQI Visible Spectrophotometer | Portability | Repeat absorbance scans at home in Vancouver — 320–1020 nm, 4 nm bandwidth, RS232 output |
+| VTSYIQI Visible Spectrophotometer | Portability | Take-home absorbance scans — 320–1020 nm |
 
 </div>
 

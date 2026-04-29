@@ -84,7 +84,7 @@ private struct TopicCard: View {
             Divider()
             VStack(alignment: .leading, spacing: 0) {
                 ForEach(topic.technologies) { tech in
-                    TechnologyBlock(tech: tech, onImageTap: onImageTap)
+                    TechnologyBlock(topic: topic, tech: tech, onImageTap: onImageTap)
                 }
             }
         }
@@ -120,6 +120,7 @@ private struct TopicCard: View {
 }
 
 private struct TechnologyBlock: View {
+    let topic: ResearchTopic
     let tech: ResearchTechnology
     let onImageTap: (URL) -> Void
 
@@ -133,7 +134,7 @@ private struct TechnologyBlock: View {
                 .background(ResearchColors.technologyHeader)
 
             ForEach(tech.toys) { toy in
-                ToyRow(toy: toy, onImageTap: onImageTap)
+                ToyRow(topic: topic, tech: tech, toy: toy, onImageTap: onImageTap)
                 if toy.id != tech.toys.last?.id {
                     Divider().padding(.leading, 28)
                 }
@@ -143,17 +144,19 @@ private struct TechnologyBlock: View {
 }
 
 private struct ToyRow: View {
+    let topic: ResearchTopic
+    let tech: ResearchTechnology
     let toy: ResearchToy
     let onImageTap: (URL) -> Void
     @Environment(\.openURL) private var openURL
 
-    private var hasLink: Bool { toy.projectIndexURL != nil || toy.externalURL != nil }
+    private var hasLink: Bool { toy.toyUrl != nil || toy.externalURL != nil }
 
     var body: some View {
         Group {
-            if let projectURL = toy.projectIndexURL {
+            if toy.toyUrl != nil {
                 NavigationLink {
-                    ProjectDetailView(title: toy.toy, indexURL: projectURL)
+                    ToyDetailView(topic: topic, tech: tech, toy: toy, onImageTap: onImageTap)
                 } label: {
                     rowBody
                 }
@@ -224,10 +227,6 @@ private enum ToyURLIcon {
     static func icon(for toy: ResearchToy) -> String? {
         guard let url = toy.url else { return nil }
         let lower = url.lowercased()
-        if lower.hasSuffix(".jpg") || lower.hasSuffix(".jpeg")
-            || lower.hasSuffix(".png") || lower.hasSuffix(".gif") {
-            return "📷"
-        }
         if toy.toy == "Jupyter" || lower.contains(".ipynb") || lower.contains("colab.research") {
             return "📓"
         }
@@ -238,6 +237,176 @@ private enum ToyURLIcon {
             return "🐙"
         }
         return nil
+    }
+}
+
+// MARK: - Toy detail
+
+/// Native toy page — renders title, science chip, topic·technology
+/// context, hero image, spec description, and the projects list, all
+/// from `toys.json` data. Replaces the previous markdown-passthrough
+/// approach because most toy `index.md` bodies are empty by design (the
+/// data-bearing fields live in `toys.json`).
+struct ToyDetailView: View {
+    let topic: ResearchTopic
+    let tech: ResearchTechnology
+    let toy: ResearchToy
+    let onImageTap: (URL) -> Void
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 14) {
+                if let url = toy.heroURL {
+                    AsyncImage(url: url) { phase in
+                        switch phase {
+                        case .success(let image):
+                            image.resizable().aspectRatio(contentMode: .fill)
+                        case .failure:
+                            Color.clear
+                        case .empty:
+                            ResearchColors.cardBackground
+                        @unknown default:
+                            Color.clear
+                        }
+                    }
+                    .frame(height: 200)
+                    .frame(maxWidth: .infinity)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.black.opacity(0.08), lineWidth: 1)
+                    )
+                    .onTapGesture { onImageTap(url) }
+                }
+
+                HStack(spacing: 8) {
+                    Text(toy.toy)
+                        .font(.system(size: 24, weight: .bold))
+                    SubjectChip(subject: topic.science)
+                    Spacer(minLength: 0)
+                }
+
+                HStack(spacing: 6) {
+                    Text(topic.topic).fontWeight(.semibold)
+                    Text("·").foregroundStyle(.secondary)
+                    Text(tech.technology).fontWeight(.semibold)
+                }
+                .font(.system(size: 13))
+                .foregroundStyle(.secondary)
+
+                if let specs = toy.specs, !specs.isEmpty {
+                    Text(specs + ".")
+                        .font(.system(size: 14))
+                        .foregroundStyle(.primary)
+                }
+
+                Divider().padding(.vertical, 4)
+
+                Text("Projects")
+                    .font(.system(size: 17, weight: .bold))
+
+                if let projects = toy.projects, !projects.isEmpty {
+                    VStack(spacing: 0) {
+                        ForEach(projects) { p in
+                            ToyProjectRow(project: p)
+                            if p.id != projects.last?.id {
+                                Divider()
+                            }
+                        }
+                    }
+                    .background(
+                        RoundedRectangle(cornerRadius: 8)
+                            .fill(ResearchColors.cardBackground)
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.black.opacity(0.08), lineWidth: 1)
+                    )
+                } else {
+                    Text("No projects yet.")
+                        .italic()
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .padding(.horizontal, 14)
+            .padding(.vertical, 14)
+        }
+        .navigationTitle(toy.toy)
+        #if os(iOS)
+        .navigationBarTitleDisplayMode(.inline)
+        #endif
+    }
+}
+
+private struct ToyProjectRow: View {
+    let project: ResearchToyProject
+    @Environment(\.openURL) private var openURL
+
+    var body: some View {
+        Group {
+            if let indexURL = project.indexURL {
+                NavigationLink {
+                    ProjectDetailView(title: project.title, indexURL: indexURL)
+                } label: {
+                    rowBody
+                }
+                .buttonStyle(.plain)
+            } else if let ext = project.externalURL {
+                Button { openURL(ext) } label: {
+                    rowBody
+                }
+                .buttonStyle(.plain)
+            } else {
+                rowBody
+            }
+        }
+    }
+
+    private var rowBody: some View {
+        HStack(alignment: .firstTextBaseline, spacing: 10) {
+            Text(formatDate(project.date))
+                .font(.system(size: 12))
+                .foregroundStyle(.secondary)
+                .frame(width: 100, alignment: .leading)
+            VStack(alignment: .leading, spacing: 4) {
+                Text(project.title)
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundStyle(project.indexURL != nil || project.externalURL != nil
+                                     ? Color.accentColor : Color.primary)
+                if !project.sciences.isEmpty {
+                    HStack(spacing: 4) {
+                        ForEach(project.sciences, id: \.self) { s in
+                            SubjectChip(subject: s)
+                        }
+                    }
+                }
+            }
+            Spacer(minLength: 0)
+        }
+        .padding(.vertical, 8)
+        .padding(.horizontal, 12)
+        .contentShape(Rectangle())
+    }
+
+    private func formatDate(_ iso: String) -> String {
+        // "2026-04-27" → "April 27th 2026"
+        let parts = iso.split(separator: "-")
+        guard parts.count == 3,
+              let year = Int(parts[0]),
+              let month = Int(parts[1]),
+              let day = Int(parts[2]),
+              (1...12).contains(month) else { return iso }
+        let months = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"]
+        return "\(months[month - 1]) \(ordinal(day)) \(year)"
+    }
+
+    private func ordinal(_ d: Int) -> String {
+        let j = d % 10, k = d % 100
+        if j == 1 && k != 11 { return "\(d)st" }
+        if j == 2 && k != 12 { return "\(d)nd" }
+        if j == 3 && k != 13 { return "\(d)rd" }
+        return "\(d)th"
     }
 }
 
@@ -252,6 +421,7 @@ struct ProjectDetailView: View {
     @State private var markdown: String = ""
     @State private var loading = true
     @State private var presentedImage: IdentifiableURL?
+    @State private var toyNames: [String] = []
 
     var body: some View {
         Group {
@@ -260,12 +430,19 @@ struct ProjectDetailView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
                 ScrollView {
-                    MarkdownWebView(
-                        markdown: markdown,
-                        onImageTap: { url in
-                            presentedImage = IdentifiableURL(url: url)
+                    VStack(alignment: .leading, spacing: 0) {
+                        MarkdownWebView(
+                            markdown: markdown,
+                            onImageTap: { url in
+                                presentedImage = IdentifiableURL(url: url)
+                            }
+                        )
+                        if !toyNames.isEmpty {
+                            ProjectTechnologySection(toyNames: toyNames)
+                                .padding(.horizontal, 14)
+                                .padding(.bottom, 14)
                         }
-                    )
+                    }
                 }
             }
         }
@@ -300,7 +477,15 @@ struct ProjectDetailView: View {
                     photos = await Self.scanProjectPhotos(indexURL: indexURL).shuffled()
                 }
 
+                // Capture the project's `toys:` front-matter array before
+                // we strip; that's the source for the native Technology
+                // table that replaces the inline `<ul class="updates-list">`.
+                toyNames = MarkdownHelper.extractPhotos(from: md, key: "toys")
+
+                let titleBlock = MarkdownHelper.synthesizeProjectTitle(from: md)
                 md = MarkdownHelper.stripFrontMatter(md)
+                md = titleBlock + md
+                md = MarkdownHelper.stripTechnologySection(md)
                 md = MarkdownHelper.injectPhotos(md, photos: photos)
                 md = MarkdownHelper.injectDataPhotos(md, photos: dataPhotos)
                 let folderURL = indexURL.deletingLastPathComponent()
@@ -365,6 +550,116 @@ struct ProjectDetailView: View {
 private struct GitHubContentEntry: Decodable {
     let name: String
     let type: String
+}
+
+// MARK: - Project Technology section
+
+/// Native rendering of the Technology section for a project page —
+/// replaces the inline `<ul class="updates-list">` HTML that was
+/// shipped in markdown bodies. The list of toys comes from the
+/// project's `toys:` front-matter array; each toy is resolved via
+/// ContentStore (toys.json) for parent topic/technology and specs,
+/// and tapping a row navigates internally to ToyDetailView (no
+/// Safari bounce). Toys missing from ContentStore (e.g. typo or
+/// not yet in toys.yml) are silently skipped.
+private struct ResolvedToy: Identifiable {
+    let topic: ResearchTopic
+    let tech: ResearchTechnology
+    let toy: ResearchToy
+    var id: String { toy.toy }
+}
+
+private struct ProjectTechnologySection: View {
+    let toyNames: [String]
+    @State private var store = ContentStore.shared
+
+    private static let scienceRank: [String: Int] = [
+        "Mathematics": 0, "Computing": 1, "Physics": 2,
+        "Chemistry": 3, "Biology": 4, "Astronomy": 5,
+    ]
+
+    /// Resolve each toy name against ContentStore and sort:
+    /// 1. by science in math → comp → phys → chem → bio → astro order;
+    /// 2. within a science, by `toy.id` (which monotonically increases
+    ///    in toys.yml authoring order, so this preserves the
+    ///    intra-subject sequence the user laid out in the source file).
+    private var resolved: [ResolvedToy] {
+        toyNames
+            .compactMap { name -> ResolvedToy? in
+                guard let r = store.findToy(named: name) else { return nil }
+                return ResolvedToy(topic: r.topic, tech: r.tech, toy: r.toy)
+            }
+            .sorted { a, b in
+                let ra = Self.scienceRank[a.topic.science] ?? Int.max
+                let rb = Self.scienceRank[b.topic.science] ?? Int.max
+                if ra != rb { return ra < rb }
+                return a.toy.id < b.toy.id
+            }
+    }
+
+    var body: some View {
+        if !resolved.isEmpty {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Technology")
+                    .font(.system(size: 17, weight: .bold))
+                    .padding(.top, 8)
+
+                VStack(spacing: 0) {
+                    ForEach(Array(resolved.enumerated()), id: \.element.id) { idx, r in
+                        NavigationLink {
+                            ToyDetailView(
+                                topic: r.topic, tech: r.tech, toy: r.toy,
+                                onImageTap: { _ in }
+                            )
+                        } label: {
+                            ProjectTechnologyRow(resolved: r)
+                        }
+                        .buttonStyle(.plain)
+                        if idx != resolved.count - 1 {
+                            Divider()
+                        }
+                    }
+                }
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(ResearchColors.cardBackground)
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.black.opacity(0.08), lineWidth: 1)
+                )
+            }
+        }
+    }
+}
+
+private struct ProjectTechnologyRow: View {
+    let resolved: ResolvedToy
+
+    var body: some View {
+        HStack(alignment: .firstTextBaseline, spacing: 10) {
+            Text(resolved.tech.technology)
+                .font(.system(size: 12))
+                .foregroundStyle(.secondary)
+                .frame(width: 110, alignment: .leading)
+            VStack(alignment: .leading, spacing: 4) {
+                Text(resolved.toy.toy)
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundStyle(Color.accentColor)
+                if let specs = resolved.toy.specs, !specs.isEmpty {
+                    Text(specs)
+                        .font(.system(size: 12))
+                        .foregroundStyle(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+            Spacer(minLength: 6)
+            SubjectChip(subject: resolved.topic.science)
+        }
+        .padding(.vertical, 8)
+        .padding(.horizontal, 12)
+        .contentShape(Rectangle())
+    }
 }
 
 /// Wrapper so a `URL` can drive SwiftUI's `.sheet(item:)` binding,

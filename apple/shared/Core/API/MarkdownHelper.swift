@@ -62,6 +62,69 @@ public enum MarkdownHelper {
         return photos
     }
 
+    /// Extract a single-line scalar YAML value (e.g. `title: "X"` or
+    /// `project: Y`). Returns the value with surrounding quotes stripped,
+    /// or nil if the key is missing.
+    public static func extractScalar(from md: String, key: String) -> String? {
+        let trimmed = md.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard trimmed.hasPrefix("---") else { return nil }
+        let afterFirst = trimmed.dropFirst(3)
+        guard let endRange = afterFirst.range(of: "\n---") else { return nil }
+        let frontMatter = String(afterFirst[..<endRange.lowerBound])
+        for line in frontMatter.components(separatedBy: "\n") {
+            let t = line.trimmingCharacters(in: .whitespaces)
+            if t.hasPrefix("\(key):") {
+                var value = String(t.dropFirst(key.count + 1)).trimmingCharacters(in: .whitespaces)
+                if value.hasPrefix("\"") && value.hasSuffix("\"") && value.count >= 2 {
+                    value = String(value.dropFirst().dropLast())
+                }
+                return value.isEmpty ? nil : value
+            }
+        }
+        return nil
+    }
+
+    /// Synthesise the title HTML block to prepend to a project or toy
+    /// page so in-app rendering matches the website headings. Looks for:
+    ///   - **Project pages** — `title:` (scalar) + `sciences:` (array).
+    ///   - **Toy pages** — `toy:` (scalar) + `science:` (scalar).
+    /// Returns an empty string when no usable title field is present.
+    /// Call against raw front-matter-bearing markdown *before*
+    /// `stripFrontMatter`, then prepend the result to the stripped body.
+    public static func synthesizeProjectTitle(from md: String) -> String {
+        let title = extractScalar(from: md, key: "title")
+            ?? extractScalar(from: md, key: "toy")
+        guard let title else { return "" }
+        var sciences = extractPhotos(from: md, key: "sciences")
+        if sciences.isEmpty, let single = extractScalar(from: md, key: "science") {
+            sciences = [single]
+        }
+        let slugs: [String: String] = [
+            "Mathematics": "math", "Computing": "comp", "Physics": "phys",
+            "Chemistry": "chem", "Biology": "bio", "Astronomy": "astro",
+        ]
+        let chips = sciences.compactMap { s -> String? in
+            guard let slug = slugs[s] else { return nil }
+            return "<span class=\"chip \(slug)\">\(s)</span>"
+        }.joined()
+        let chipBlock = chips.isEmpty ? "" : "<span class=\"project-chips\">\(chips)</span>"
+        return "<div class=\"project-title\"><h1>\(title)</h1>\(chipBlock)</div>\n\n"
+    }
+
+    /// Remove the `## Technology` heading and its inline
+    /// `<ul class="updates-list">…</ul>` block from a project's markdown
+    /// body. Native UI renders the technology table from the project's
+    /// `toys:` front-matter array + ContentStore lookup, so the inline
+    /// list would otherwise show up twice (and with broken Safari links).
+    /// Idempotent: returns the input unchanged when the section is
+    /// missing.
+    public static func stripTechnologySection(_ md: String) -> String {
+        guard let h = md.range(of: "## Technology") else { return md }
+        let tail = md[h.lowerBound...]
+        guard let end = tail.range(of: "</ul>") else { return md }
+        return String(md[..<h.lowerBound]) + String(tail[end.upperBound...])
+    }
+
     // MARK: - Photo injection
 
     /// Replace empty `<img id="photo-N">` tags in the experiment-photo

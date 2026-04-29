@@ -19,7 +19,46 @@
               "available": 1,
               "toy_url": "/research/toys/mathematics/NumPy/",
               "hero": "/research/toys/mathematics/NumPy/numpy.jpeg",
-              "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/"
+              "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
+              "projects": [
+                {
+                  "date": "2026-04-20",
+                  "title": "UV-Vis Spectroscopy of Everyday Fluorophores",
+                  "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260420 UV-Vis Spectroscopy"
+                },
+                {
+                  "date": "2026-04-19",
+                  "title": "IR Spectroscopy of Everyday Materials",
+                  "url": "/research/projects/20260419%20IR%20Spectroscopy/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260419 IR Spectroscopy"
+                },
+                {
+                  "date": "2026-04-04",
+                  "title": "Four-Point Probe Sheet Resistance Measurements",
+                  "url": "/research/projects/20260404%20Four%20Point%20Probe/",
+                  "sciences": [
+                    "Physics"
+                  ],
+                  "folder": "20260404 Four Point Probe"
+                },
+                {
+                  "date": "2025-02-25",
+                  "title": "Red or Green, What Colored Cat Food does Mi Prefer?",
+                  "url": "/research/projects/20250225%20Catfood/",
+                  "sciences": [
+                    "Mathematics",
+                    "Computing"
+                  ],
+                  "folder": "20250225 Catfood"
+                }
+              ]
             },
             {
               "id": 2,
@@ -29,7 +68,19 @@
               "toy_url": "/research/toys/mathematics/SciPy/",
               "hero": "/research/toys/mathematics/SciPy/scipy.jpeg",
               "completed": "20250225 Catfood",
-              "project_url": "/research/projects/20250225%20Catfood/"
+              "project_url": "/research/projects/20250225%20Catfood/",
+              "projects": [
+                {
+                  "date": "2025-02-25",
+                  "title": "Red or Green, What Colored Cat Food does Mi Prefer?",
+                  "url": "/research/projects/20250225%20Catfood/",
+                  "sciences": [
+                    "Mathematics",
+                    "Computing"
+                  ],
+                  "folder": "20250225 Catfood"
+                }
+              ]
             }
           ]
         },
@@ -45,7 +96,17 @@
               "available": 1,
               "toy_url": "/research/toys/mathematics/Wolfram%20Alpha/",
               "hero": "/research/toys/mathematics/Wolfram%20Alpha/wolframalpha.jpeg",
-              "url": "https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb"
+              "url": "https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb",
+              "projects": [
+                {
+                  "date": "2026-04-01",
+                  "title": "Wolfram Alpha — Dry Run",
+                  "url": "https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb",
+                  "sciences": [
+                    "Astronomy"
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -70,7 +131,46 @@
               "available": 1,
               "toy_url": "/research/toys/mathematics/Matplotlib/",
               "hero": "/research/toys/mathematics/Matplotlib/matplotlib.jpeg",
-              "url": "/research/projects/20260404%20Four%20Point%20Probe/"
+              "url": "/research/projects/20260404%20Four%20Point%20Probe/",
+              "projects": [
+                {
+                  "date": "2026-04-20",
+                  "title": "UV-Vis Spectroscopy of Everyday Fluorophores",
+                  "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260420 UV-Vis Spectroscopy"
+                },
+                {
+                  "date": "2026-04-19",
+                  "title": "IR Spectroscopy of Everyday Materials",
+                  "url": "/research/projects/20260419%20IR%20Spectroscopy/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260419 IR Spectroscopy"
+                },
+                {
+                  "date": "2026-04-04",
+                  "title": "Four-Point Probe Sheet Resistance Measurements",
+                  "url": "/research/projects/20260404%20Four%20Point%20Probe/",
+                  "sciences": [
+                    "Physics"
+                  ],
+                  "folder": "20260404 Four Point Probe"
+                },
+                {
+                  "date": "2025-02-25",
+                  "title": "Red or Green, What Colored Cat Food does Mi Prefer?",
+                  "url": "/research/projects/20250225%20Catfood/",
+                  "sciences": [
+                    "Mathematics",
+                    "Computing"
+                  ],
+                  "folder": "20250225 Catfood"
+                }
+              ]
             }
           ]
         },
@@ -86,7 +186,19 @@
               "available": 1,
               "toy_url": "/research/toys/mathematics/LaTeX/",
               "hero": "/research/toys/mathematics/LaTeX/latex.jpeg",
-              "url": "/curriculum/"
+              "url": "/curriculum/",
+              "projects": [
+                {
+                  "date": "2025-02-25",
+                  "title": "Red or Green, What Colored Cat Food does Mi Prefer?",
+                  "url": "/research/projects/20250225%20Catfood/",
+                  "sciences": [
+                    "Mathematics",
+                    "Computing"
+                  ],
+                  "folder": "20250225 Catfood"
+                }
+              ]
             }
           ]
         }
@@ -112,7 +224,19 @@
               "toy_url": "/research/toys/computing/SciPy/",
               "hero": "/research/toys/computing/SciPy/scipy.jpeg",
               "completed": "20250225 Catfood",
-              "project_url": "/research/projects/20250225%20Catfood/"
+              "project_url": "/research/projects/20250225%20Catfood/",
+              "projects": [
+                {
+                  "date": "2025-02-25",
+                  "title": "Red or Green, What Colored Cat Food does Mi Prefer?",
+                  "url": "/research/projects/20250225%20Catfood/",
+                  "sciences": [
+                    "Mathematics",
+                    "Computing"
+                  ],
+                  "folder": "20250225 Catfood"
+                }
+              ]
             }
           ]
         },
@@ -160,7 +284,46 @@
               "available": 1,
               "toy_url": "/research/toys/computing/GitHub/",
               "hero": "/research/toys/computing/GitHub/github.jpeg",
-              "url": "https://github.com/vivianweidai"
+              "url": "https://github.com/vivianweidai",
+              "projects": [
+                {
+                  "date": "2026-04-20",
+                  "title": "UV-Vis Spectroscopy of Everyday Fluorophores",
+                  "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260420 UV-Vis Spectroscopy"
+                },
+                {
+                  "date": "2026-04-19",
+                  "title": "IR Spectroscopy of Everyday Materials",
+                  "url": "/research/projects/20260419%20IR%20Spectroscopy/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260419 IR Spectroscopy"
+                },
+                {
+                  "date": "2026-04-04",
+                  "title": "Four-Point Probe Sheet Resistance Measurements",
+                  "url": "/research/projects/20260404%20Four%20Point%20Probe/",
+                  "sciences": [
+                    "Physics"
+                  ],
+                  "folder": "20260404 Four Point Probe"
+                },
+                {
+                  "date": "2025-02-25",
+                  "title": "Red or Green, What Colored Cat Food does Mi Prefer?",
+                  "url": "/research/projects/20250225%20Catfood/",
+                  "sciences": [
+                    "Mathematics",
+                    "Computing"
+                  ],
+                  "folder": "20250225 Catfood"
+                }
+              ]
             },
             {
               "id": 10,
@@ -169,7 +332,46 @@
               "available": 1,
               "toy_url": "/research/toys/computing/Jupyter/",
               "hero": "/research/toys/computing/Jupyter/jupyter.jpeg",
-              "url": "https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb"
+              "url": "https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb",
+              "projects": [
+                {
+                  "date": "2026-04-20",
+                  "title": "UV-Vis Spectroscopy of Everyday Fluorophores",
+                  "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260420 UV-Vis Spectroscopy"
+                },
+                {
+                  "date": "2026-04-19",
+                  "title": "IR Spectroscopy of Everyday Materials",
+                  "url": "/research/projects/20260419%20IR%20Spectroscopy/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260419 IR Spectroscopy"
+                },
+                {
+                  "date": "2026-04-04",
+                  "title": "Four-Point Probe Sheet Resistance Measurements",
+                  "url": "/research/projects/20260404%20Four%20Point%20Probe/",
+                  "sciences": [
+                    "Physics"
+                  ],
+                  "folder": "20260404 Four Point Probe"
+                },
+                {
+                  "date": "2025-02-25",
+                  "title": "Red or Green, What Colored Cat Food does Mi Prefer?",
+                  "url": "/research/projects/20250225%20Catfood/",
+                  "sciences": [
+                    "Mathematics",
+                    "Computing"
+                  ],
+                  "folder": "20250225 Catfood"
+                }
+              ]
             }
           ]
         },
@@ -281,7 +483,18 @@
               "toy_url": "/research/toys/physics/Multimeter/",
               "hero": "/research/toys/physics/Multimeter/multimeter.jpeg",
               "completed": "20260404 Four Point Probe",
-              "project_url": "/research/projects/20260404%20Four%20Point%20Probe/"
+              "project_url": "/research/projects/20260404%20Four%20Point%20Probe/",
+              "projects": [
+                {
+                  "date": "2026-04-04",
+                  "title": "Four-Point Probe Sheet Resistance Measurements",
+                  "url": "/research/projects/20260404%20Four%20Point%20Probe/",
+                  "sciences": [
+                    "Physics"
+                  ],
+                  "folder": "20260404 Four Point Probe"
+                }
+              ]
             }
           ]
         },
@@ -338,7 +551,19 @@
               "toy_url": "/research/toys/chemistry/Centrifugation/",
               "hero": "/research/toys/chemistry/Centrifugation/centrifugation.jpeg",
               "completed": "20260411 Centrifuge",
-              "project_url": "/research/projects/20260411%20Centrifuge/"
+              "project_url": "/research/projects/20260411%20Centrifuge/",
+              "projects": [
+                {
+                  "date": "2026-04-11",
+                  "title": "Centrifugation and pH of Everyday Liquids",
+                  "url": "/research/projects/20260411%20Centrifuge/",
+                  "sciences": [
+                    "Chemistry",
+                    "Biology"
+                  ],
+                  "folder": "20260411 Centrifuge"
+                }
+              ]
             },
             {
               "id": 23,
@@ -348,7 +573,18 @@
               "toy_url": "/research/toys/chemistry/Liquid%20Chromatography/",
               "hero": "/research/archives/photos/chemistry-hplc.jpg",
               "completed": "20260427 Liquid Chromatography",
-              "project_url": "/research/projects/20260427%20Liquid%20Chromatography/"
+              "project_url": "/research/projects/20260427%20Liquid%20Chromatography/",
+              "projects": [
+                {
+                  "date": "2026-04-27",
+                  "title": "Liquid Chromatography — Dry Run",
+                  "url": "/research/projects/20260427%20Liquid%20Chromatography/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260427 Liquid Chromatography"
+                }
+              ]
             }
           ]
         },
@@ -365,7 +601,18 @@
               "toy_url": "/research/toys/chemistry/Thermogravimetry/",
               "hero": "/research/archives/photos/chemistry-tga-q50.jpg",
               "completed": "20260405 Melting Point",
-              "project_url": "/research/projects/20260405%20Melting%20Point/"
+              "project_url": "/research/projects/20260405%20Melting%20Point/",
+              "projects": [
+                {
+                  "date": "2026-04-05",
+                  "title": "Melting Point of Everyday Compounds",
+                  "url": "/research/projects/20260405%20Melting%20Point/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260405 Melting Point"
+                }
+              ]
             },
             {
               "id": 25,
@@ -375,7 +622,18 @@
               "toy_url": "/research/toys/chemistry/Calorimetry/",
               "hero": "/research/archives/photos/chemistry-dsc-q100.jpg",
               "completed": "20260405 Melting Point",
-              "project_url": "/research/projects/20260405%20Melting%20Point/"
+              "project_url": "/research/projects/20260405%20Melting%20Point/",
+              "projects": [
+                {
+                  "date": "2026-04-05",
+                  "title": "Melting Point of Everyday Compounds",
+                  "url": "/research/projects/20260405%20Melting%20Point/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260405 Melting Point"
+                }
+              ]
             }
           ]
         }
@@ -401,7 +659,18 @@
               "toy_url": "/research/toys/chemistry/IR%20Spectroscopy/",
               "hero": "/research/toys/chemistry/IR%20Spectroscopy/irspectroscopy.jpeg",
               "completed": "20260419 IR Spectroscopy",
-              "project_url": "/research/projects/20260419%20IR%20Spectroscopy/"
+              "project_url": "/research/projects/20260419%20IR%20Spectroscopy/",
+              "projects": [
+                {
+                  "date": "2026-04-19",
+                  "title": "IR Spectroscopy of Everyday Materials",
+                  "url": "/research/projects/20260419%20IR%20Spectroscopy/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260419 IR Spectroscopy"
+                }
+              ]
             },
             {
               "id": 27,
@@ -411,7 +680,18 @@
               "toy_url": "/research/toys/chemistry/UV-Vis%20Spectroscopy/",
               "hero": "/research/archives/photos/chemistry-spectrophotometer.jpeg",
               "completed": "20260420 UV-Vis Spectroscopy",
-              "project_url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/"
+              "project_url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
+              "projects": [
+                {
+                  "date": "2026-04-20",
+                  "title": "UV-Vis Spectroscopy of Everyday Fluorophores",
+                  "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260420 UV-Vis Spectroscopy"
+                }
+              ]
             },
             {
               "id": 28,
@@ -419,8 +699,7 @@
               "specs": "¹H and ¹³C environments — full structural fingerprint",
               "available": 0,
               "toy_url": "/research/toys/chemistry/NMR%20Spectroscopy/",
-              "hero": "/research/archives/photos/chemistry-nmr.jpg",
-              "url": "/research/archives/photos/chemistry-nmr.jpg"
+              "hero": "/research/archives/photos/chemistry-nmr.jpg"
             }
           ]
         },
@@ -437,7 +716,18 @@
               "toy_url": "/research/toys/chemistry/GC-MS/",
               "hero": "/research/archives/photos/chemistry-gc-ms.jpg",
               "completed": "20260427 Mass Spectrometry",
-              "project_url": "/research/projects/20260427%20Mass%20Spectrometry/"
+              "project_url": "/research/projects/20260427%20Mass%20Spectrometry/",
+              "projects": [
+                {
+                  "date": "2026-04-27",
+                  "title": "Mass Spectrometry — Dry Run",
+                  "url": "/research/projects/20260427%20Mass%20Spectrometry/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260427 Mass Spectrometry"
+                }
+              ]
             },
             {
               "id": 30,
@@ -447,7 +737,18 @@
               "toy_url": "/research/toys/chemistry/LC-MS/",
               "hero": "/research/archives/photos/chemistry-lc-ms.jpg",
               "completed": "20260427 Mass Spectrometry",
-              "project_url": "/research/projects/20260427%20Mass%20Spectrometry/"
+              "project_url": "/research/projects/20260427%20Mass%20Spectrometry/",
+              "projects": [
+                {
+                  "date": "2026-04-27",
+                  "title": "Mass Spectrometry — Dry Run",
+                  "url": "/research/projects/20260427%20Mass%20Spectrometry/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260427 Mass Spectrometry"
+                }
+              ]
             }
           ]
         }
@@ -536,7 +837,18 @@
               "toy_url": "/research/toys/biology/PCR/",
               "hero": "/research/toys/biology/PCR/pcr.jpeg",
               "completed": "20260401 Genes in Space",
-              "project_url": "/research/projects/20260401%20Genes%20in%20Space/"
+              "project_url": "/research/projects/20260401%20Genes%20in%20Space/",
+              "projects": [
+                {
+                  "date": "2026-04-01",
+                  "title": "Meow to Mars — Will Space Help or Hurt Mi's Heart?",
+                  "url": "/research/projects/20260401%20Genes%20in%20Space/",
+                  "sciences": [
+                    "Biology"
+                  ],
+                  "folder": "20260401 Genes in Space"
+                }
+              ]
             },
             {
               "id": 37,
@@ -584,7 +896,18 @@
               "toy_url": "/research/toys/biology/Cell-Free/",
               "hero": "/research/toys/biology/Cell-Free/cell-free.jpeg",
               "completed": "20260401 Genes in Space",
-              "project_url": "/research/projects/20260401%20Genes%20in%20Space/"
+              "project_url": "/research/projects/20260401%20Genes%20in%20Space/",
+              "projects": [
+                {
+                  "date": "2026-04-01",
+                  "title": "Meow to Mars — Will Space Help or Hurt Mi's Heart?",
+                  "url": "/research/projects/20260401%20Genes%20in%20Space/",
+                  "sciences": [
+                    "Biology"
+                  ],
+                  "folder": "20260401 Genes in Space"
+                }
+              ]
             },
             {
               "id": 41,
@@ -594,7 +917,18 @@
               "toy_url": "/research/toys/biology/Fluorescence/",
               "hero": "/research/toys/biology/Fluorescence/fluorescence.jpeg",
               "completed": "20260401 Genes in Space",
-              "project_url": "/research/projects/20260401%20Genes%20in%20Space/"
+              "project_url": "/research/projects/20260401%20Genes%20in%20Space/",
+              "projects": [
+                {
+                  "date": "2026-04-01",
+                  "title": "Meow to Mars — Will Space Help or Hurt Mi's Heart?",
+                  "url": "/research/projects/20260401%20Genes%20in%20Space/",
+                  "sciences": [
+                    "Biology"
+                  ],
+                  "folder": "20260401 Genes in Space"
+                }
+              ]
             }
           ]
         }
@@ -626,8 +960,7 @@
               "specs": "Meter-class ground telescope at a dark site",
               "available": 1,
               "toy_url": "/research/toys/astronomy/Earth/",
-              "hero": "/research/toys/astronomy/Earth/earth.jpeg",
-              "url": "/research/archives/photos/astronomy-refractor-a.jpg"
+              "hero": "/research/toys/astronomy/Earth/earth.jpeg"
             }
           ]
         },
@@ -690,8 +1023,7 @@
               "specs": "What — wavelengths reveal composition, temperature and radial velocity",
               "available": 1,
               "toy_url": "/research/toys/astronomy/Spectroscopy/",
-              "hero": "/research/toys/astronomy/Spectroscopy/spectroscopy.jpeg",
-              "url": "/research/archives/photos/astronomy-orion-nebula.jpg"
+              "hero": "/research/toys/astronomy/Spectroscopy/spectroscopy.jpeg"
             }
           ]
         },

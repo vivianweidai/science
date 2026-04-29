@@ -29,26 +29,54 @@ public struct ResearchToy: Codable, Identifiable, Hashable, Sendable {
     public let specs: String?
     public let available: Int?
     public let url: String?
+    public let hero: String?
+    public let toyUrl: String?
     public let projectUrl: String?
+    public let projects: [ResearchToyProject]?
 
     enum CodingKeys: String, CodingKey {
-        case id, toy, specs, available, url
+        case id, toy, specs, available, url, hero, projects
+        case toyUrl = "toy_url"
         case projectUrl = "project_url"
+    }
+
+    /// Absolute URL for the toy's hero image. Resolves relative paths
+    /// (the common case — frontmatter `hero: numpy.jpeg` is rewritten by
+    /// `build_toys.py` to `/research/toys/<sci>/<toy>/numpy.jpeg`)
+    /// against the site origin.
+    public var heroURL: URL? {
+        guard let hero else { return nil }
+        if hero.hasPrefix("http://") || hero.hasPrefix("https://") {
+            return URL(string: hero)
+        }
+        let trimmed = hero.hasPrefix("/") ? String(hero.dropFirst()) : hero
+        return URL(string: "https://vivianweidai.com/" + trimmed)
     }
 
     public var isAvailable: Bool { (available ?? 0) == 1 }
 
-    /// Raw GitHub URL for the project's `index.md`, when the toy points
-    /// to an in-repo research project (e.g. `project_url` =
-    /// `/research/projects/20250225%20Catfood/`). Returns `nil` if the
-    /// toy has no project link. Used to render the project in-app via
-    /// `MarkdownWebView` instead of bouncing to Safari.
+    /// Raw URL for the toy page's `index.md` — what the iOS toy tap
+    /// renders. Toy pages live at `/research/toys/<science>/<toy>/`
+    /// and carry the toy-specific equipment/results/specs body. Replaces
+    /// the project-page routing that pre-dated the toy-pages refactor.
+    public var toyIndexURL: URL? {
+        guard let path = toyUrl else { return nil }
+        let trimmed = path.hasPrefix("/") ? String(path.dropFirst()) : path
+        let encoded = trimmed.split(separator: "/").map {
+            String($0).addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? String($0)
+        }.joined(separator: "/")
+        let withIndex = encoded.hasSuffix("/") ? encoded + "index.md" : encoded + "/index.md"
+        return URL(string: "https://vivianweidai.com/" + withIndex)
+    }
+
+    /// Raw URL for the project's `index.md`, when the toy points
+    /// to an in-repo research project. Kept for callers that want to
+    /// jump straight to the project page from a toy; the default toy
+    /// tap now lands on `toyIndexURL`.
     public var projectIndexURL: URL? {
         guard let path = projectUrl else { return nil }
         let trimmed = path.hasPrefix("/") ? String(path.dropFirst()) : path
         let withIndex = trimmed.hasSuffix("/") ? trimmed + "index.md" : trimmed + "/index.md"
-        // project_url is a page URL like "/research/projects/<folder>/"; the raw
-        // markdown lives at /research/projects/<folder>/index.md.
         return URL(string: "https://vivianweidai.com/" + withIndex)
     }
 
@@ -71,4 +99,39 @@ public struct ResearchToy: Codable, Identifiable, Hashable, Sendable {
 
 public struct ResearchToysResponse: Codable, Sendable {
     public let topics: [ResearchTopic]
+}
+
+/// Per-toy project entry — combines the reverse-scanned local projects
+/// (whose frontmatter `toys:` array references this toy) with the toy's
+/// own `extra_projects:` placeholder list. Baked into `toys.json` by
+/// `build_toys.py` so iOS/Android can render the toy detail view
+/// without re-scanning every project at runtime.
+public struct ResearchToyProject: Codable, Hashable, Sendable, Identifiable {
+    public let date: String           // YYYY-MM-DD
+    public let title: String
+    public let url: String
+    public let sciences: [String]
+    public let folder: String?         // nil for `extra_projects` placeholders
+
+    public var id: String { url }
+
+    /// URL of the project's `index.md` for in-app rendering, when this
+    /// is a local in-repo project (`folder` is set). Returns nil for
+    /// placeholders — those route through `externalURL` instead.
+    public var indexURL: URL? {
+        guard folder != nil else { return nil }
+        let trimmed = url.hasPrefix("/") ? String(url.dropFirst()) : url
+        let withIndex = trimmed.hasSuffix("/") ? trimmed + "index.md" : trimmed + "/index.md"
+        return URL(string: "https://vivianweidai.com/" + withIndex)
+    }
+
+    /// External URL when the project entry points off-repo (placeholders
+    /// from `extra_projects`). Returns nil for local projects.
+    public var externalURL: URL? {
+        guard folder == nil else { return nil }
+        if url.hasPrefix("http://") || url.hasPrefix("https://") {
+            return URL(string: url)
+        }
+        return nil
+    }
 }

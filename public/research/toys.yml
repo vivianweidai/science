@@ -206,7 +206,6 @@
           completed: "20260420 UV-Vis Spectroscopy"
         - toy: NMR Spectroscopy
           specs: ¹H and ¹³C environments — full structural fingerprint
-          url: /research/archives/photos/chemistry-nmr.jpg
     - technology: Mass Spectrometry
       description: Ionize and weigh — intact mass and fragment fingerprints
       toys:
@@ -296,7 +295,6 @@
         - toy: Earth
           specs: Meter-class ground telescope at a dark site
           available: true
-          url: /research/archives/photos/astronomy-refractor-a.jpg
     - technology: Invisible
       description: Wavelengths outside the visible — radio through X-ray
       toys:
@@ -322,7 +320,6 @@
         - toy: Spectroscopy
           specs: What — wavelengths reveal composition, temperature and radial velocity
           available: true
-          url: /research/archives/photos/astronomy-orion-nebula.jpg
     - technology: Classification
       description: Label sources with machine learning
       toys:

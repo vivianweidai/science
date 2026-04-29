@@ -73,6 +73,26 @@ public final class ContentStore {
         }
     }
 
+    /// Look up a toy by name and return the topic + technology + toy
+    /// triple, or nil if the toy isn't present in `topics` (or `topics`
+    /// hasn't loaded yet). Used by ProjectDetailView to render the
+    /// native technology table from a project's `toys:` front-matter
+    /// array — each toy resolves to its parent topic for the science
+    /// chip and its parent technology for the row label.
+    public func findToy(named: String) -> (
+        topic: ResearchTopic, tech: ResearchTechnology, toy: ResearchToy
+    )? {
+        guard let topics else { return nil }
+        for topic in topics {
+            for tech in topic.technologies {
+                if let toy = tech.toys.first(where: { $0.toy == named }) {
+                    return (topic, tech, toy)
+                }
+            }
+        }
+        return nil
+    }
+
     private func loadTopics() async {
         do {
             topics = try await APIClient.shared.listResearchTopics()
