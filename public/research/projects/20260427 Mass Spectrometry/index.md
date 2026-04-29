@@ -70,17 +70,19 @@ Flat baseline across 500–3000 m/z — no analyte, no matrix, no peaks; if peak
 
 <h2 id="extensions">Extensions</h2>
 
-<div class="photo-grid">
+<div class="photo-grid three-col">
   <img src="photos/setup/setup2.jpeg" alt="Agilent 7890A GC 5975C Inert MSD">
-  <img src="photos/setup/setup3.jpeg" alt="Agilent 6230A TOF LC-MS">
+  <img src="photos/setup/setup3.jpeg" alt="Agilent 1200 Series HPLC 6230A TOF LC-MS">
+  <img src="photos/setup/setup14.jpeg" alt="Agilent 7890 GC-FID Chiral">
 </div>
 
 <div class="instrument-table no-highlight">
 
 | Instrument | Extension | Description |
 |------------|-----------|-------------|
-| Agilent 7890A GC 5975C Inert MSD | Volatiles | GC + EI — small molecules, fragmented |
-| Agilent 6230A TOF LC-MS | Nonvolatiles | LC + ESI — large molecules, intact |
+| Agilent 7890A GC 5975C Inert MSD | Volatiles | GC + EI MS — small molecules, fragmented |
+| Agilent 1200 Series HPLC 6230A TOF LC-MS | Nonvolatiles | LC + ESI TOF MS — large molecules, intact |
+| Agilent 7890 GC-FID Chiral | Enantiomers | GC + FID, chiral column — R/S separation, no MS |
 
 </div>
 
@@ -88,8 +90,8 @@ Flat baseline across 500–3000 m/z — no analyte, no matrix, no peaks; if peak
 <div class="tech-table">
 <div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li class="fade-in" data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/GC-MS/">GC-MS</a></span> <span class="update-desc">Volatile molecules — fragment fingerprints via electron ionization</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
-  <li class="fade-in" data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/LC-MS/">LC-MS</a></span> <span class="update-desc">Nonvolatile molecules — intact weight via electrospray</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/GC-MS/">GC-MS</a></span> <span class="update-desc">Volatile molecules — fragment fingerprints via electron ionization</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/toys/chemistry/LC-MS/">LC-MS</a></span> <span class="update-desc">Nonvolatile molecules — intact weight via electrospray</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
 </ul>
 </div>
 </div>

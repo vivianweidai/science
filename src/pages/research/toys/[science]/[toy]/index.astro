@@ -226,8 +226,8 @@ const nextMeta = navMeta(nextToy);
       <p class="toy-no-projects">No projects yet.</p>
     ) : (
       <ul class="updates-list">
-        {projList.map((p, i) => (
-          <li class="fade-in" data-subj={p.chips[0]?.slug ?? ''} style={`animation-delay: ${0.05 + i * 0.05}s`}>
+        {projList.map((p) => (
+          <li data-subj={p.chips[0]?.slug ?? ''}>
             <span class="update-date">{p.date}</span>
             <span class="update-body">
               <a href={p.href}>{p.title}</a>

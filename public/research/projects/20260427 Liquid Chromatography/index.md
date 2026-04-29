@@ -74,7 +74,7 @@ Short flat chromatogram — no injection, no column → no peaks; pressure shoul
 <div class="tech-table">
 <div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li class="fade-in" data-subj="chem"><span class="update-date">Separation</span> <span class="update-name"><a href="/research/toys/chemistry/Liquid Chromatography/">Liquid Chromatography</a></span> <span class="update-desc">Flow through packed column — separate by chemical affinity</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li data-subj="chem"><span class="update-date">Separation</span> <span class="update-name"><a href="/research/toys/chemistry/Liquid Chromatography/">Liquid Chromatography</a></span> <span class="update-desc">Flow through packed column — separate by chemical affinity</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
 </ul>
 </div>
 </div>
