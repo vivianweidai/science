@@ -163,8 +163,8 @@
 # ═══════════════════════════════════════════════════════════════
 
 - science: Chemistry
-  topic: Physical
-  description: Separate and transform — non-spectroscopic characterization
+  topic: Resolve
+  description: Resolve the mixture — pull components apart by density or chemistry
   technologies:
     - technology: Separation
       description: Pull mixtures apart — by density or chemistry
@@ -178,6 +178,11 @@
         - toy: Gas Chromatography
           specs: Gas through heated capillary — volatile analytes
           available: true
+
+- science: Chemistry
+  topic: Identify
+  description: Identify the molecules — apply a stimulus and read the response
+  technologies:
     - technology: Thermal Analysis
       description: Watch samples change with heat
       toys:
@@ -187,10 +192,6 @@
         - toy: Calorimetry
           specs: Energy flow with heating — phase transitions and heat capacity
           available: true
-- science: Chemistry
-  topic: Spectroscopic
-  description: Probe intact molecules — electromagnetic, magnetic and mass spectra
-  technologies:
     - technology: Molecular Spectroscopy
       description: Absorb EM radiation — vibrational, electronic and nuclear transitions
       toys:
