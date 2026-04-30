@@ -2,7 +2,7 @@
 toy: Jupyter
 science: Computing
 science_slug: comp
-topic: Publish
+topic: Reproduce
 technology: Repository
 hero: jupyter.png
 ---

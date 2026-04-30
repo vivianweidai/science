@@ -265,8 +265,8 @@
       "id": 4,
       "science": "Computing",
       "science_slug": "comp",
-      "topic": "Publish",
-      "description": "Publish the work — make it public and reproducible",
+      "topic": "Reproduce",
+      "description": "Reproduce the work — version, freeze and archive every dependency",
       "technologies": [
         {
           "id": 7,
@@ -530,7 +530,7 @@
       "science": "Chemistry",
       "science_slug": "chem",
       "topic": "Resolve",
-      "description": "Resolve the mixture — pull components apart by density or chemistry",
+      "description": "Resolve the mixture — pull components apart and characterize with heat",
       "technologies": [
         {
           "id": 13,
@@ -596,16 +596,7 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "science": "Chemistry",
-      "science_slug": "chem",
-      "topic": "Identify",
-      "description": "Identify the molecules — apply a stimulus and read the response",
-      "technologies": [
+        },
         {
           "id": 14,
           "technology": "Thermal Analysis",
@@ -650,7 +641,16 @@
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "science": "Chemistry",
+      "science_slug": "chem",
+      "topic": "Identify",
+      "description": "Identify the molecules — electromagnetic, magnetic and mass spectra",
+      "technologies": [
         {
           "id": 15,
           "technology": "Molecular Spectroscopy",

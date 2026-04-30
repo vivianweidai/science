@@ -88,8 +88,8 @@
           available: true
 
 - science: Computing
-  topic: Publish
-  description: Publish the work — make it public and reproducible
+  topic: Reproduce
+  description: Reproduce the work — version, freeze and archive every dependency
   technologies:
     - technology: Repository
       description: Where code and notebooks live
@@ -164,7 +164,7 @@
 
 - science: Chemistry
   topic: Resolve
-  description: Resolve the mixture — pull components apart by density or chemistry
+  description: Resolve the mixture — pull components apart and characterize with heat
   technologies:
     - technology: Separation
       description: Pull mixtures apart — by density or chemistry
@@ -178,11 +178,6 @@
         - toy: Gas Chromatography
           specs: Gas through heated capillary — volatile analytes
           available: true
-
-- science: Chemistry
-  topic: Identify
-  description: Identify the molecules — apply a stimulus and read the response
-  technologies:
     - technology: Thermal Analysis
       description: Watch samples change with heat
       toys:
@@ -192,6 +187,10 @@
         - toy: Calorimetry
           specs: Energy flow with heating — phase transitions and heat capacity
           available: true
+- science: Chemistry
+  topic: Identify
+  description: Identify the molecules — electromagnetic, magnetic and mass spectra
+  technologies:
     - technology: Molecular Spectroscopy
       description: Absorb EM radiation — vibrational, electronic and nuclear transitions
       toys:

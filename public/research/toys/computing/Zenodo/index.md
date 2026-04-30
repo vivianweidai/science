@@ -2,7 +2,7 @@
 toy: Zenodo
 science: Computing
 science_slug: comp
-topic: Publish
+topic: Reproduce
 technology: Reproducibility
 hero: zenodo.png
 ---
