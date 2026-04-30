@@ -21,24 +21,21 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 const { toy, science, science_slug, topic, technology, hero, hero_position } = entry.data;
 
-// Topic + technology descriptions and the toy spec all live in toys.json
-// (built from toys.yml — single source of truth for toy text). Pull them
-// out so the toy-context spans show topic/tech on hover and the centered
-// description renders the toy spec.
-let topicDesc = '';
-let techDesc = '';
+// Toy spec text comes from toys.json (built from toys.yml — single
+// source of truth for toy text).
 let specs = '';
 for (const t of toysData.topics) {
   if (t.science_slug !== science_slug || t.topic !== topic) continue;
-  topicDesc = t.description;
   for (const tech of t.technologies) {
     if (tech.technology !== technology) continue;
-    techDesc = tech.description;
     for (const tt of tech.toys) {
       if (tt.toy === toy) specs = tt.specs;
     }
   }
 }
+const slug = (s: string) => s.toLowerCase().replace(/\s+/g, '-');
+const topicSlug = slug(topic);
+const techSlug = slug(technology);
 
 // Reverse-lookup every project that uses this toy. Source of truth is
 // each project's `toys:` frontmatter array — the toys.yml completed/
@@ -203,9 +200,9 @@ const nextMeta = navMeta(nextToy);
     <div class="toy-title">
       <h1>{toy}</h1>
       <span class="toy-context">
-        <span class="toy-tip" data-tip={techDesc}>{technology}</span>
+        <a class="toy-context-link" href={`/research/#${science_slug}/${topicSlug}/${techSlug}`}>{technology}</a>
         <span class="toy-context-sep"> · </span>
-        <span class="toy-tip" data-tip={topicDesc}>{topic}</span>
+        <a class="toy-context-link" href={`/research/#${science_slug}/${topicSlug}`}>{topic}</a>
         <span class="toy-context-sep"> · </span>
         <a class={`chip ${science_slug}`} href={`/research/#${science_slug}`}>{science}</a>
       </span>
@@ -362,32 +359,13 @@ const nextMeta = navMeta(nextToy);
       margin-right: .15em;
     }
 
-    /* Hover tooltip on topic/technology — descriptions live in toys.json
-       (topic.description, technology.description) and are wired in via
-       data-tip. No cursor change per the standing rule. */
-    .toy-page .toy-tip {
-      position: relative;
-      border-bottom: 1px dotted #b1b7be;
-      cursor: default;
+    /* Topic/technology links in the title row — quiet styling, deep-link
+       into /research/ at the matching section. */
+    .toy-page .toy-context-link {
+      color: inherit;
+      text-decoration: none;
     }
-    .toy-page .toy-tip:hover::after {
-      content: attr(data-tip);
-      position: absolute;
-      top: calc(100% + 6px);
-      right: 0;
-      width: max-content;
-      max-width: 320px;
-      padding: .45em .7em;
-      background: #1f2328;
-      color: #fff;
-      font-size: .85em;
-      line-height: 1.4;
-      border-radius: 6px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
-      z-index: 50;
-      white-space: normal;
-      pointer-events: none;
-    }
+    .toy-page .toy-context-link:hover { text-decoration: underline; }
 
     /* Hero — same dimensions as the research project pages so a toy page
        and a project page read at the same scale. Border + drop shadow let

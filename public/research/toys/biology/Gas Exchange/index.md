@@ -4,7 +4,8 @@ science: Biology
 science_slug: bio
 topic: Image
 technology: Respiration
+hero: /research/toys/_generic/gas-exchange.jpg
 instruments:
-  - name: Vernier Go Direct O2 + CO2 Gas Sensor Bundle (GDX-O2-CO2)
+  - name: Vernier Go Direct O2 + CO2 Gas Sensor Bundle
     description: Optical O₂ + CO₂ probes — cellular respiration and yeast metabolism
 ---
