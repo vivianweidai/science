@@ -2,7 +2,7 @@
 toy: PCR
 science: Biology
 science_slug: bio
-topic: Molecules
+topic: Replicate
 technology: Amplification
 hero: pcr.png
 ---

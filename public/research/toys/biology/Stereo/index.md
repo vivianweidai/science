@@ -2,7 +2,7 @@
 toy: Stereo
 science: Biology
 science_slug: bio
-topic: Cells
+topic: Image
 technology: Microscopy
 hero: stereo.png
 ---

@@ -2,7 +2,7 @@
 toy: Short-Read
 science: Biology
 science_slug: bio
-topic: Molecules
+topic: Replicate
 technology: Sequencing
 hero: short-read.png
 ---

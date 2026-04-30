@@ -2,7 +2,7 @@
 toy: Compound
 science: Biology
 science_slug: bio
-topic: Cells
+topic: Image
 technology: Microscopy
 hero: compound.png
 ---

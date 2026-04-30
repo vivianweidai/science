@@ -2,7 +2,7 @@
 toy: Handheld
 science: Biology
 science_slug: bio
-topic: Cells
+topic: Image
 technology: Microscopy
 hero: handheld.png
 ---

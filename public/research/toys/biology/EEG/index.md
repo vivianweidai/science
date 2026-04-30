@@ -2,7 +2,7 @@
 toy: EEG
 science: Biology
 science_slug: bio
-topic: Cells
+topic: Image
 technology: Systems Imaging
 hero: eeg.png
 ---
