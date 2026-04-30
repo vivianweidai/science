@@ -2,7 +2,7 @@
 toy: Oscilloscope
 science: Physics
 science_slug: phys
-topic: Electromagnetism
-technology: Circuits
+topic: Wave
+technology: Electricity
 hero: oscilloscope.png
 ---

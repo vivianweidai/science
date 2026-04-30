@@ -2,7 +2,7 @@
 toy: Laser
 science: Physics
 science_slug: phys
-topic: Electromagnetism
+topic: Wave
 technology: Optics
 hero: laser.png
 ---

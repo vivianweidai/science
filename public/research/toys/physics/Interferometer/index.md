@@ -2,7 +2,7 @@
 toy: Interferometer
 science: Physics
 science_slug: phys
-topic: Electromagnetism
+topic: Wave
 technology: Optics
 hero: interferometer.png
 ---

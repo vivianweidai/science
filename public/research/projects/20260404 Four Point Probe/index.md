@@ -90,7 +90,7 @@ All sheet-resistance calculations and per-sample plots are in the analysis <a hr
   <li data-subj="math"><span class="update-date">Graphing</span> <span class="update-name"><a href="/research/toys/mathematics/Matplotlib/">Matplotlib</a></span> <span class="update-desc">Python 2D and 3D plotting</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
   <li data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/GitHub/">GitHub</a></span> <span class="update-desc">Data and source code repositories</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
   <li data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/toys/computing/Jupyter/">Jupyter</a></span> <span class="update-desc">Notebooks combining code, figures and narrative</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
-  <li data-subj="phys"><span class="update-date">Circuits</span> <span class="update-name"><a href="/research/toys/physics/Multimeter/">Multimeter</a></span> <span class="update-desc">Steady-state values — voltage, current and resistance</span> <a class="chip phys" href="/research/#phys">Physics</a></li>
+  <li data-subj="phys"><span class="update-date">Electricity</span> <span class="update-name"><a href="/research/toys/physics/Multimeter/">Multimeter</a></span> <span class="update-desc">Steady-state values — voltage, current and resistance</span> <a class="chip phys" href="/research/#phys">Physics</a></li>
 </ul>
 </div>
 </div>

@@ -2,7 +2,7 @@
 toy: Stirling Engine
 science: Physics
 science_slug: phys
-topic: Thermodynamics
-technology: Heat
+topic: Heat
+technology: Conversion
 hero: stirlingengine.png
 ---
