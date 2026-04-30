@@ -4,5 +4,5 @@ science: Biology
 science_slug: bio
 topic: Cells
 technology: Microscopy
-hero: handheld.jpeg
+hero: handheld.png
 ---

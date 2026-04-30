@@ -4,5 +4,5 @@ science: Physics
 science_slug: phys
 topic: Thermodynamics
 technology: Temperature
-hero: thermocouple.jpeg
+hero: thermocouple.png
 ---

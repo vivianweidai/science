@@ -4,5 +4,5 @@ science: Computing
 science_slug: comp
 topic: Publish
 technology: Repository
-hero: jupyter.svg
+hero: jupyter.png
 ---

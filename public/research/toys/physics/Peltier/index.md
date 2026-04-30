@@ -4,5 +4,5 @@ science: Physics
 science_slug: phys
 topic: Thermodynamics
 technology: Heat
-hero: peltier.jpeg
+hero: peltier.png
 ---

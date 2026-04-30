@@ -4,5 +4,5 @@ science: Astronomy
 science_slug: astro
 topic: Observe
 technology: Visible
-hero: earth.jpeg
+hero: earth.png
 ---

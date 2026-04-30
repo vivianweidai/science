@@ -4,5 +4,5 @@ science: Astronomy
 science_slug: astro
 topic: Decode
 technology: Classification
-hero: galaxymorphology.jpeg
+hero: galaxymorphology.png
 ---

@@ -190,14 +190,9 @@ private struct ToyRow: View {
     private var rowBody: some View {
         HStack(alignment: .firstTextBaseline, spacing: 8) {
             VStack(alignment: .leading, spacing: 2) {
-                HStack(spacing: 4) {
-                    Text(toy.toy)
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundStyle(hasLink ? Color.accentColor : Color.primary)
-                    if let icon = ToyURLIcon.icon(for: toy) {
-                        Text(icon).font(.system(size: 11))
-                    }
-                }
+                Text(toy.toy)
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundStyle(hasLink ? Color.accentColor : Color.primary)
                 if let specs = toy.specs, !specs.isEmpty {
                     Text(specs)
                         .font(.system(size: 12))
@@ -216,27 +211,6 @@ private struct ToyRow: View {
         .padding(.leading, 28)
         .padding(.trailing, 12)
         .contentShape(Rectangle())
-    }
-}
-
-/// Inline indicator next to a toy name, mirroring the webapp markup in
-/// research/index.md. Tells the user at a glance that a link is a
-/// placeholder photo, a notebook, etc. Returns `nil` when no url is set
-/// or the url doesn't match a known pattern.
-private enum ToyURLIcon {
-    static func icon(for toy: ResearchToy) -> String? {
-        guard let url = toy.url else { return nil }
-        let lower = url.lowercased()
-        if toy.toy == "Jupyter" || lower.contains(".ipynb") || lower.contains("colab.research") {
-            return "📓"
-        }
-        if toy.toy == "Wolfram Alpha" || lower.contains("wolframcloud.com") || lower.hasSuffix(".nb") {
-            return "✴️"
-        }
-        if lower.contains("github.com") {
-            return "🐙"
-        }
-        return nil
     }
 }
 
@@ -260,7 +234,7 @@ struct ToyDetailView: View {
                     AsyncImage(url: url) { phase in
                         switch phase {
                         case .success(let image):
-                            image.resizable().aspectRatio(contentMode: .fill)
+                            image.resizable().scaledToFill()
                         case .failure:
                             Color.clear
                         case .empty:
@@ -269,8 +243,8 @@ struct ToyDetailView: View {
                             Color.clear
                         }
                     }
-                    .frame(height: 200)
-                    .frame(maxWidth: .infinity)
+                    .frame(maxWidth: .infinity, maxHeight: 200)
+                    .clipped()
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                     .overlay(
                         RoundedRectangle(cornerRadius: 8)
@@ -328,6 +302,7 @@ struct ToyDetailView: View {
                         .foregroundStyle(.secondary)
                 }
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 14)
             .padding(.vertical, 14)
         }

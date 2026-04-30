@@ -4,5 +4,5 @@ science: Physics
 science_slug: phys
 topic: Electromagnetism
 technology: Circuits
-hero: oscilloscope.jpeg
+hero: oscilloscope.png
 ---

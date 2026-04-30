@@ -310,16 +310,13 @@ private fun ToyRow(
                 .padding(start = 28.dp, end = 12.dp, top = 8.dp, bottom = 8.dp),
         ) {
             Column(Modifier.weight(1f)) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(
-                        text = toy.toy,
-                        fontSize = 14.sp,
-                        fontWeight = FontWeight.SemiBold,
-                        color = if (hasLink) MaterialTheme.colorScheme.primary
-                                else MaterialTheme.colorScheme.onSurface,
-                    )
-                    toyUrlIcon(toy)?.let { Text(" $it", fontSize = 11.sp) }
-                }
+                Text(
+                    text = toy.toy,
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = if (hasLink) MaterialTheme.colorScheme.primary
+                            else MaterialTheme.colorScheme.onSurface,
+                )
                 if (!toy.specs.isNullOrEmpty()) {
                     Text(
                         text = toy.specs!!,
@@ -345,19 +342,6 @@ private fun String.isImageUrl(): Boolean {
     val l = lowercase()
     return l.endsWith(".jpg") || l.endsWith(".jpeg") ||
            l.endsWith(".png") || l.endsWith(".gif")
-}
-
-/** Inline indicator next to a toy name. Tells the user at a glance that
- *  a link is a placeholder photo, a notebook, etc. */
-private fun toyUrlIcon(toy: ResearchToy): String? {
-    val url = toy.url ?: return null
-    val l = url.lowercase()
-    if (toy.toy == "Jupyter" || l.contains(".ipynb") || l.contains("colab.research"))
-        return "📓"
-    if (toy.toy == "Wolfram Alpha" || l.contains("wolframcloud.com") || l.endsWith(".nb"))
-        return "✴\uFE0F"
-    if (l.contains("github.com")) return "🐙"
-    return null
 }
 
 // ---------- Project detail ----------

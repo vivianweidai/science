@@ -4,5 +4,5 @@ science: Computing
 science_slug: comp
 topic: Publish
 technology: Reproducibility
-hero: docker.svg
+hero: docker.png
 ---

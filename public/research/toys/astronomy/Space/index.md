@@ -4,5 +4,5 @@ science: Astronomy
 science_slug: astro
 topic: Observe
 technology: Invisible
-hero: space.jpeg
+hero: space.png
 ---

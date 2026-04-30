@@ -141,9 +141,11 @@ import PageFooter from '../../layouts/PageFooter.astro';
       background: #fff;
       transition: transform 0.2s ease-out, box-shadow 0.18s ease;
     }
-    .toys-card-wrap:hover .toys-card {
-      transform: translate(-2px, -2px);
-      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    @media (hover: hover) {
+      .toys-card-wrap:hover .toys-card {
+        transform: translate(-2px, -2px);
+        box-shadow: 0 6px 18px rgba(0,0,0,.08);
+      }
     }
     .toys-card { --card-tint: #d1d9e0; }
     .toys-accent-math  { border-left-color: #6ba3e8; --card-tint: var(--subj-math); }
@@ -172,7 +174,9 @@ import PageFooter from '../../layouts/PageFooter.astro';
       opacity: 0;
       transition: opacity .2s ease;
     }
-    .toys-card-wrap:hover .toys-card-header .chip { opacity: 1; }
+    @media (hover: hover) {
+      .toys-card-wrap:hover .toys-card-header .chip { opacity: 1; }
+    }
     .toys-topic-title { white-space: nowrap; flex-shrink: 0; }
     .toys-topic-desc {
       font-weight: 400;
@@ -183,18 +187,22 @@ import PageFooter from '../../layouts/PageFooter.astro';
       text-align: right;
       min-width: 0;
     }
-    .toys-card-wrap:hover .toys-topic-desc {
-      opacity: 1;
+    @media (hover: hover) {
+      .toys-card-wrap:hover .toys-topic-desc {
+        opacity: 1;
+      }
     }
     .toys-card-header {
       background: color-mix(in srgb, var(--card-tint, #d1d9e0) 45%, white);
       transition: background 0.18s ease;
     }
-    .toys-card:hover .toys-card-header {
-      background: color-mix(in srgb, var(--card-tint) 60%, white);
-    }
-    .toys-card .toys-card-header:hover {
-      background: color-mix(in srgb, var(--card-tint) 70%, white);
+    @media (hover: hover) {
+      .toys-card:hover .toys-card-header {
+        background: color-mix(in srgb, var(--card-tint) 60%, white);
+      }
+      .toys-card .toys-card-header:hover {
+        background: color-mix(in srgb, var(--card-tint) 70%, white);
+      }
     }
 
     .toys-table {
@@ -227,20 +235,26 @@ import PageFooter from '../../layouts/PageFooter.astro';
       transition: color .2s ease;
       text-align: right;
     }
-    .toys-card-wrap:hover td.toys-tech-desc {
-      color: #1f2328;
+    @media (hover: hover) {
+      .toys-card-wrap:hover td.toys-tech-desc {
+        color: #1f2328;
+      }
+      .toys-tech-row:hover td { background: #eef1f4; }
     }
-    .toys-tech-row:hover td { background: #eef1f4; }
 
     .toys-toy-name {
       word-wrap: break-word;
       padding-left: 2.4em;
     }
     .toys-toy-name a { color: #0969da; text-decoration: none; font-weight: 600; }
-    .toys-toy-name a:hover { text-decoration: underline; }
+    @media (hover: hover) {
+      .toys-toy-name a:hover { text-decoration: underline; }
+    }
     .toys-toy-specs { color: #1f2328; }
     .toys-toy-access { width: 2em; text-align: center; }
-    .toys-toy-row:hover td { background: #eef1f4; }
+    @media (hover: hover) {
+      .toys-toy-row:hover td { background: #eef1f4; }
+    }
     .toys-avail { color: #1a7f37; font-size: .85em; }
 
     .toys-wip {

@@ -220,7 +220,7 @@
 # ═══════════════════════════════════════════════════════════════
 
 - science: Biology
-  topic: Cells
+  topic: Image
   description: See and record living systems
   technologies:
     - technology: Microscopy
@@ -244,8 +244,8 @@
           specs: Near-infrared light — cortical blood flow
 
 - science: Biology
-  topic: Molecules
-  description: Read and write DNA and proteins
+  topic: Replicate
+  description: Copy, read, and express biological information
   technologies:
     - technology: Amplification
       description: Copy DNA for detection

@@ -4,5 +4,5 @@ science: Biology
 science_slug: bio
 topic: Molecules
 technology: Sequencing
-hero: long-read.jpeg
+hero: long-read.png
 ---
