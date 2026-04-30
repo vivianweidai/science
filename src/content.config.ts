@@ -46,6 +46,13 @@ const toys = defineCollection({
     // "top" or "center 30%"). Default is center; tweak when the
     // important part of the image is off-center.
     hero_position: z.string().optional(),
+    // Physical instruments this toy maps to. Rendered as the Technology
+    // list on the toy page; if the toy is referenced by any project, each
+    // instrument's name links to the most recent matching project.
+    instruments: z.array(z.object({
+      name: z.string(),
+      description: z.string(),
+    })).optional(),
     // Placeholder projects that don't have a local project page yet —
     // rendered in the Projects section alongside reverse-lookup hits.
     // Each entry: { date: "YYYY-MM-DD", title, url (external), science (full) }.

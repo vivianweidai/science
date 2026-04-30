@@ -23,8 +23,8 @@
 # ═══════════════════════════════════════════════════════════════
 
 - science: Mathematics
-  topic: Compute
-  description: Compute the answer — algebra, integrals and linear systems
+  topic: Calculate
+  description: Calculate the answer — algebra, integrals and linear systems
   technologies:
     - technology: Numerical
       description: Approximate answers at scale
@@ -116,10 +116,29 @@
 # PHYSICS
 # ═══════════════════════════════════════════════════════════════
 
+- science: Physics
+  topic: Move
+  description: Move and push — particles and rigid bodies under force
+  technologies:
+    - technology: Motion
+      description: Time and trace bodies in motion
+      toys:
+        - toy: Photogate
+          specs: Light-beam timer — start/stop at the millisecond for projectile and pendulum runs
+          available: true
+        - toy: Motion Detector
+          specs: Ultrasonic ranger — distance, velocity and acceleration vs. time
+          available: true
+    - technology: Force
+      description: Push, pull, accelerate
+      toys:
+        - toy: Force
+          specs: Combined force gauge and 3-axis accelerometer for dynamics experiments
+          available: true
 
 - science: Physics
-  topic: Thermodynamics
-  description: Heat, temperature and energy flow
+  topic: Heat
+  description: Heat the system — temperature, energy and pressure
   technologies:
     - technology: Temperature
       description: How hot is it?
@@ -128,25 +147,43 @@
           specs: Contact probe — point measurement at a junction
         - toy: IR Camera
           specs: Non-contact imaging — full thermal field at once
-    - technology: Heat
-      description: How does energy move?
+        - toy: Temperature Probe
+          specs: Stainless-steel thermistor — solution and ambient temperature
+          available: true
+    - technology: Conversion
+      description: Convert between heat and work
       toys:
         - toy: Stirling Engine
           specs: Heat to work — classical engine cycle
         - toy: Peltier
           specs: Work to heat — semiconductor heat pump
+    - technology: Pressure
+      description: State of a gas — pressure, volume and temperature
+      toys:
+        - toy: Gas Pressure
+          specs: Sealed-syringe pressure transducer — gas-law and vapor-pressure experiments
+          available: true
 
 - science: Physics
-  topic: Electromagnetism
-  description: Fields, currents and light
+  topic: Wave
+  description: Charge, field and light — the electromagnetic phenomena
   technologies:
-    - technology: Circuits
-      description: Electric current in wires and matter
+    - technology: Electricity
+      description: Voltage, current and resistance through matter
       toys:
         - toy: Oscilloscope
           specs: Time-varying signals — waveforms and transients
         - toy: Multimeter
           specs: Steady-state values — voltage, current and resistance
+          available: true
+        - toy: Conductivity
+          specs: Solution conductance — ionic strength and electrolyte tracking
+          available: true
+    - technology: Magnetism
+      description: Static and dynamic magnetic fields
+      toys:
+        - toy: Magnetic Field
+          specs: 3-axis Hall sensor — Earth's field, coil mapping, magnet characterization
           available: true
     - technology: Optics
       description: Electromagnetic radiation, visible and beyond
@@ -157,6 +194,9 @@
           specs: Analyze — disperse light by wavelength
         - toy: Interferometer
           specs: Interfere — combine beams to reveal phase
+        - toy: Turbidity
+          specs: 875 nm light scattering — solution clarity and reaction kinetics
+          available: true
 
 # ═══════════════════════════════════════════════════════════════
 # CHEMISTRY
@@ -164,7 +204,7 @@
 
 - science: Chemistry
   topic: Resolve
-  description: Resolve the mixture — pull components apart and characterize with heat
+  description: Resolve the sample — pull mixtures apart and probe their properties
   technologies:
     - technology: Separation
       description: Pull mixtures apart — by density or chemistry
@@ -187,9 +227,16 @@
         - toy: Calorimetry
           specs: Energy flow with heating — phase transitions and heat capacity
           available: true
+    - technology: Solution Probe
+      description: Characterize a solution — ionic and electrochemical properties
+      toys:
+        - toy: pH
+          specs: Combination glass electrode — calibrate with buffer capsules
+          available: true
+
 - science: Chemistry
   topic: Identify
-  description: Identify the molecules — electromagnetic, magnetic and mass spectra
+  description: Identify the molecules — electromagnetic, magnetic, mass and chiroptical spectra
   technologies:
     - technology: Molecular Spectroscopy
       description: Absorb EM radiation — vibrational, electronic and nuclear transitions
@@ -214,6 +261,12 @@
         - toy: Gas Chromatography MS
           specs: Volatile molecules — fragment fingerprints via electron ionization
           available: true
+    - technology: Polarimetry
+      description: Optical rotation — chiral molecules and stereochemistry
+      toys:
+        - toy: Polarimeter
+          specs: Cross-polarized cells — sucrose, fructose, optically active species
+          available: true
 
 # ═══════════════════════════════════════════════════════════════
 # BIOLOGY
@@ -221,7 +274,7 @@
 
 - science: Biology
   topic: Image
-  description: See and record living systems
+  description: See and record living systems — image, signal and breath
   technologies:
     - technology: Microscopy
       description: Image cells at every scale
@@ -236,12 +289,24 @@
           specs: Transmitted light — cells through a slide at high magnification
           available: true
     - technology: Systems Imaging
-      description: Record brain activity
+      description: Record electrical and optical signals from the body
       toys:
         - toy: EEG
           specs: Scalp electrodes — Muse
         - toy: fNIRS
           specs: Near-infrared light — cortical blood flow
+        - toy: EKG
+          specs: Three-lead chest electrodes — heart rhythm and rate
+          available: true
+    - technology: Respiration
+      description: Breath — flow, gas exchange and lung function
+      toys:
+        - toy: Spirometer
+          specs: Bacterial-filter mouthpiece — tidal volume, FVC, FEV1
+          available: true
+        - toy: Gas Exchange
+          specs: O₂ + CO₂ optical sensors — cellular respiration and yeast metabolism
+          available: true
 
 - science: Biology
   topic: Replicate

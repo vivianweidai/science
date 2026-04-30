@@ -4,8 +4,8 @@
       "id": 1,
       "science": "Mathematics",
       "science_slug": "math",
-      "topic": "Compute",
-      "description": "Compute the answer — algebra, integrals and linear systems",
+      "topic": "Calculate",
+      "description": "Calculate the answer — algebra, integrals and linear systems",
       "technologies": [
         {
           "id": 1,
@@ -400,52 +400,41 @@
       "id": 5,
       "science": "Physics",
       "science_slug": "phys",
-      "topic": "Thermodynamics",
-      "description": "Heat, temperature and energy flow",
+      "topic": "Move",
+      "description": "Move and push — particles and rigid bodies under force",
       "technologies": [
         {
           "id": 9,
-          "technology": "Temperature",
-          "description": "How hot is it?",
+          "technology": "Motion",
+          "description": "Time and trace bodies in motion",
           "toys": [
             {
               "id": 13,
-              "toy": "Thermocouple",
-              "specs": "Contact probe — point measurement at a junction",
-              "available": 0,
-              "toy_url": "/research/toys/physics/Thermocouple/",
-              "hero": "/research/toys/physics/Thermocouple/thermocouple.png"
+              "toy": "Photogate",
+              "specs": "Light-beam timer — start/stop at the millisecond for projectile and pendulum runs",
+              "available": 1,
+              "toy_url": "/research/toys/physics/Photogate/"
             },
             {
               "id": 14,
-              "toy": "IR Camera",
-              "specs": "Non-contact imaging — full thermal field at once",
-              "available": 0,
-              "toy_url": "/research/toys/physics/IR%20Camera/",
-              "hero": "/research/toys/physics/IR%20Camera/ircamera.png"
+              "toy": "Motion Detector",
+              "specs": "Ultrasonic ranger — distance, velocity and acceleration vs. time",
+              "available": 1,
+              "toy_url": "/research/toys/physics/Motion%20Detector/"
             }
           ]
         },
         {
           "id": 10,
-          "technology": "Heat",
-          "description": "How does energy move?",
+          "technology": "Force",
+          "description": "Push, pull, accelerate",
           "toys": [
             {
               "id": 15,
-              "toy": "Stirling Engine",
-              "specs": "Heat to work — classical engine cycle",
-              "available": 0,
-              "toy_url": "/research/toys/physics/Stirling%20Engine/",
-              "hero": "/research/toys/physics/Stirling%20Engine/stirlingengine.png"
-            },
-            {
-              "id": 16,
-              "toy": "Peltier",
-              "specs": "Work to heat — semiconductor heat pump",
-              "available": 0,
-              "toy_url": "/research/toys/physics/Peltier/",
-              "hero": "/research/toys/physics/Peltier/peltier.png"
+              "toy": "Force",
+              "specs": "Combined force gauge and 3-axis accelerometer for dynamics experiments",
+              "available": 1,
+              "toy_url": "/research/toys/physics/Force/"
             }
           ]
         }
@@ -455,16 +444,92 @@
       "id": 6,
       "science": "Physics",
       "science_slug": "phys",
-      "topic": "Electromagnetism",
-      "description": "Fields, currents and light",
+      "topic": "Heat",
+      "description": "Heat the system — temperature, energy and pressure",
       "technologies": [
         {
           "id": 11,
-          "technology": "Circuits",
-          "description": "Electric current in wires and matter",
+          "technology": "Temperature",
+          "description": "How hot is it?",
           "toys": [
             {
+              "id": 16,
+              "toy": "Thermocouple",
+              "specs": "Contact probe — point measurement at a junction",
+              "available": 0,
+              "toy_url": "/research/toys/physics/Thermocouple/",
+              "hero": "/research/toys/physics/Thermocouple/thermocouple.png"
+            },
+            {
               "id": 17,
+              "toy": "IR Camera",
+              "specs": "Non-contact imaging — full thermal field at once",
+              "available": 0,
+              "toy_url": "/research/toys/physics/IR%20Camera/",
+              "hero": "/research/toys/physics/IR%20Camera/ircamera.png"
+            },
+            {
+              "id": 18,
+              "toy": "Temperature Probe",
+              "specs": "Stainless-steel thermistor — solution and ambient temperature",
+              "available": 1,
+              "toy_url": "/research/toys/physics/Temperature%20Probe/"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "technology": "Conversion",
+          "description": "Convert between heat and work",
+          "toys": [
+            {
+              "id": 19,
+              "toy": "Stirling Engine",
+              "specs": "Heat to work — classical engine cycle",
+              "available": 0,
+              "toy_url": "/research/toys/physics/Stirling%20Engine/",
+              "hero": "/research/toys/physics/Stirling%20Engine/stirlingengine.png"
+            },
+            {
+              "id": 20,
+              "toy": "Peltier",
+              "specs": "Work to heat — semiconductor heat pump",
+              "available": 0,
+              "toy_url": "/research/toys/physics/Peltier/",
+              "hero": "/research/toys/physics/Peltier/peltier.png"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "technology": "Pressure",
+          "description": "State of a gas — pressure, volume and temperature",
+          "toys": [
+            {
+              "id": 21,
+              "toy": "Gas Pressure",
+              "specs": "Sealed-syringe pressure transducer — gas-law and vapor-pressure experiments",
+              "available": 1,
+              "toy_url": "/research/toys/physics/Gas%20Pressure/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "science": "Physics",
+      "science_slug": "phys",
+      "topic": "Wave",
+      "description": "Charge, field and light — the electromagnetic phenomena",
+      "technologies": [
+        {
+          "id": 14,
+          "technology": "Electricity",
+          "description": "Voltage, current and resistance through matter",
+          "toys": [
+            {
+              "id": 22,
               "toy": "Oscilloscope",
               "specs": "Time-varying signals — waveforms and transients",
               "available": 0,
@@ -472,7 +537,7 @@
               "hero": "/research/toys/physics/Oscilloscope/oscilloscope.png"
             },
             {
-              "id": 18,
+              "id": 23,
               "toy": "Multimeter",
               "specs": "Steady-state values — voltage, current and resistance",
               "available": 1,
@@ -489,16 +554,37 @@
                   "folder": "20260404 Four Point Probe"
                 }
               ]
+            },
+            {
+              "id": 24,
+              "toy": "Conductivity",
+              "specs": "Solution conductance — ionic strength and electrolyte tracking",
+              "available": 1,
+              "toy_url": "/research/toys/physics/Conductivity/"
             }
           ]
         },
         {
-          "id": 12,
+          "id": 15,
+          "technology": "Magnetism",
+          "description": "Static and dynamic magnetic fields",
+          "toys": [
+            {
+              "id": 25,
+              "toy": "Magnetic Field",
+              "specs": "3-axis Hall sensor — Earth's field, coil mapping, magnet characterization",
+              "available": 1,
+              "toy_url": "/research/toys/physics/Magnetic%20Field/"
+            }
+          ]
+        },
+        {
+          "id": 16,
           "technology": "Optics",
           "description": "Electromagnetic radiation, visible and beyond",
           "toys": [
             {
-              "id": 19,
+              "id": 26,
               "toy": "Laser",
               "specs": "Produce — coherent monochromatic light",
               "available": 0,
@@ -506,7 +592,7 @@
               "hero": "/research/toys/physics/Laser/laser.png"
             },
             {
-              "id": 20,
+              "id": 27,
               "toy": "Spectrometer",
               "specs": "Analyze — disperse light by wavelength",
               "available": 0,
@@ -514,31 +600,38 @@
               "hero": "/research/toys/physics/Spectrometer/spectrometer.png"
             },
             {
-              "id": 21,
+              "id": 28,
               "toy": "Interferometer",
               "specs": "Interfere — combine beams to reveal phase",
               "available": 0,
               "toy_url": "/research/toys/physics/Interferometer/",
               "hero": "/research/toys/physics/Interferometer/interferometer.png"
+            },
+            {
+              "id": 29,
+              "toy": "Turbidity",
+              "specs": "875 nm light scattering — solution clarity and reaction kinetics",
+              "available": 1,
+              "toy_url": "/research/toys/physics/Turbidity/"
             }
           ]
         }
       ]
     },
     {
-      "id": 7,
+      "id": 8,
       "science": "Chemistry",
       "science_slug": "chem",
       "topic": "Resolve",
-      "description": "Resolve the mixture — pull components apart and characterize with heat",
+      "description": "Resolve the sample — pull mixtures apart and probe their properties",
       "technologies": [
         {
-          "id": 13,
+          "id": 17,
           "technology": "Separation",
           "description": "Pull mixtures apart — by density or chemistry",
           "toys": [
             {
-              "id": 22,
+              "id": 30,
               "toy": "Centrifugation",
               "specs": "Spin samples — separate by density at high g-forces",
               "available": 1,
@@ -558,7 +651,7 @@
               ]
             },
             {
-              "id": 23,
+              "id": 31,
               "toy": "Liquid Chromatography",
               "specs": "Liquid through packed column — soluble analytes",
               "available": 1,
@@ -577,7 +670,7 @@
               ]
             },
             {
-              "id": 24,
+              "id": 32,
               "toy": "Gas Chromatography",
               "specs": "Gas through heated capillary — volatile analytes",
               "available": 1,
@@ -598,12 +691,12 @@
           ]
         },
         {
-          "id": 14,
+          "id": 18,
           "technology": "Thermal Analysis",
           "description": "Watch samples change with heat",
           "toys": [
             {
-              "id": 25,
+              "id": 33,
               "toy": "Thermogravimetry",
               "specs": "Mass loss with heating — decomposition and moisture",
               "available": 1,
@@ -622,7 +715,7 @@
               ]
             },
             {
-              "id": 26,
+              "id": 34,
               "toy": "Calorimetry",
               "specs": "Energy flow with heating — phase transitions and heat capacity",
               "available": 1,
@@ -641,23 +734,37 @@
               ]
             }
           ]
+        },
+        {
+          "id": 19,
+          "technology": "Solution Probe",
+          "description": "Characterize a solution — ionic and electrochemical properties",
+          "toys": [
+            {
+              "id": 35,
+              "toy": "pH",
+              "specs": "Combination glass electrode — calibrate with buffer capsules",
+              "available": 1,
+              "toy_url": "/research/toys/chemistry/pH/"
+            }
+          ]
         }
       ]
     },
     {
-      "id": 8,
+      "id": 9,
       "science": "Chemistry",
       "science_slug": "chem",
       "topic": "Identify",
-      "description": "Identify the molecules — electromagnetic, magnetic and mass spectra",
+      "description": "Identify the molecules — electromagnetic, magnetic, mass and chiroptical spectra",
       "technologies": [
         {
-          "id": 15,
+          "id": 20,
           "technology": "Molecular Spectroscopy",
           "description": "Absorb EM radiation — vibrational, electronic and nuclear transitions",
           "toys": [
             {
-              "id": 27,
+              "id": 36,
               "toy": "IR Spectroscopy",
               "specs": "Polar bonds — functional-group fingerprints",
               "available": 1,
@@ -676,7 +783,7 @@
               ]
             },
             {
-              "id": 28,
+              "id": 37,
               "toy": "UV-Vis Spectroscopy",
               "specs": "Light absorption — concentration and conjugation",
               "available": 1,
@@ -695,7 +802,7 @@
               ]
             },
             {
-              "id": 29,
+              "id": 38,
               "toy": "NMR Spectroscopy",
               "specs": "¹H and ¹³C environments — full structural fingerprint",
               "available": 0,
@@ -705,12 +812,12 @@
           ]
         },
         {
-          "id": 16,
+          "id": 21,
           "technology": "Mass Spectrometry",
           "description": "Ionize and weigh — intact mass and fragment fingerprints",
           "toys": [
             {
-              "id": 30,
+              "id": 39,
               "toy": "MALDI",
               "specs": "Large molecules — intact mass via laser + matrix",
               "available": 1,
@@ -729,7 +836,7 @@
               ]
             },
             {
-              "id": 31,
+              "id": 40,
               "toy": "Liquid Chromatography MS",
               "specs": "Nonvolatile molecules — intact weight via electrospray",
               "available": 1,
@@ -748,7 +855,7 @@
               ]
             },
             {
-              "id": 32,
+              "id": 41,
               "toy": "Gas Chromatography MS",
               "specs": "Volatile molecules — fragment fingerprints via electron ionization",
               "available": 1,
@@ -767,67 +874,18 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "science": "Biology",
-      "science_slug": "bio",
-      "topic": "Image",
-      "description": "See and record living systems",
-      "technologies": [
-        {
-          "id": 17,
-          "technology": "Microscopy",
-          "description": "Image cells at every scale",
-          "toys": [
-            {
-              "id": 33,
-              "toy": "Handheld",
-              "specs": "Mobile scope — surface inspection without sample prep",
-              "available": 1,
-              "toy_url": "/research/toys/biology/Handheld/",
-              "hero": "/research/toys/biology/Handheld/handheld.png"
-            },
-            {
-              "id": 34,
-              "toy": "Stereo",
-              "specs": "Reflected light — whole specimens in 3D at low magnification",
-              "available": 1,
-              "toy_url": "/research/toys/biology/Stereo/",
-              "hero": "/research/toys/biology/Stereo/stereo.png"
-            },
-            {
-              "id": 35,
-              "toy": "Compound",
-              "specs": "Transmitted light — cells through a slide at high magnification",
-              "available": 1,
-              "toy_url": "/research/toys/biology/Compound/",
-              "hero": "/research/toys/biology/Compound/compound.png"
-            }
-          ]
         },
         {
-          "id": 18,
-          "technology": "Systems Imaging",
-          "description": "Record brain activity",
+          "id": 22,
+          "technology": "Polarimetry",
+          "description": "Optical rotation — chiral molecules and stereochemistry",
           "toys": [
             {
-              "id": 36,
-              "toy": "EEG",
-              "specs": "Scalp electrodes — Muse",
-              "available": 0,
-              "toy_url": "/research/toys/biology/EEG/",
-              "hero": "/research/toys/biology/EEG/eeg.png"
-            },
-            {
-              "id": 37,
-              "toy": "fNIRS",
-              "specs": "Near-infrared light — cortical blood flow",
-              "available": 0,
-              "toy_url": "/research/toys/biology/fNIRS/",
-              "hero": "/research/toys/biology/fNIRS/fnirs.png"
+              "id": 42,
+              "toy": "Polarimeter",
+              "specs": "Cross-polarized cells — sucrose, fructose, optically active species",
+              "available": 1,
+              "toy_url": "/research/toys/chemistry/Polarimeter/"
             }
           ]
         }
@@ -837,16 +895,107 @@
       "id": 10,
       "science": "Biology",
       "science_slug": "bio",
+      "topic": "Image",
+      "description": "See and record living systems — image, signal and breath",
+      "technologies": [
+        {
+          "id": 23,
+          "technology": "Microscopy",
+          "description": "Image cells at every scale",
+          "toys": [
+            {
+              "id": 43,
+              "toy": "Handheld",
+              "specs": "Mobile scope — surface inspection without sample prep",
+              "available": 1,
+              "toy_url": "/research/toys/biology/Handheld/",
+              "hero": "/research/toys/biology/Handheld/handheld.png"
+            },
+            {
+              "id": 44,
+              "toy": "Stereo",
+              "specs": "Reflected light — whole specimens in 3D at low magnification",
+              "available": 1,
+              "toy_url": "/research/toys/biology/Stereo/",
+              "hero": "/research/toys/biology/Stereo/stereo.png"
+            },
+            {
+              "id": 45,
+              "toy": "Compound",
+              "specs": "Transmitted light — cells through a slide at high magnification",
+              "available": 1,
+              "toy_url": "/research/toys/biology/Compound/",
+              "hero": "/research/toys/biology/Compound/compound.png"
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "technology": "Systems Imaging",
+          "description": "Record electrical and optical signals from the body",
+          "toys": [
+            {
+              "id": 46,
+              "toy": "EEG",
+              "specs": "Scalp electrodes — Muse",
+              "available": 0,
+              "toy_url": "/research/toys/biology/EEG/",
+              "hero": "/research/toys/biology/EEG/eeg.png"
+            },
+            {
+              "id": 47,
+              "toy": "fNIRS",
+              "specs": "Near-infrared light — cortical blood flow",
+              "available": 0,
+              "toy_url": "/research/toys/biology/fNIRS/",
+              "hero": "/research/toys/biology/fNIRS/fnirs.png"
+            },
+            {
+              "id": 48,
+              "toy": "EKG",
+              "specs": "Three-lead chest electrodes — heart rhythm and rate",
+              "available": 1,
+              "toy_url": "/research/toys/biology/EKG/"
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "technology": "Respiration",
+          "description": "Breath — flow, gas exchange and lung function",
+          "toys": [
+            {
+              "id": 49,
+              "toy": "Spirometer",
+              "specs": "Bacterial-filter mouthpiece — tidal volume, FVC, FEV1",
+              "available": 1,
+              "toy_url": "/research/toys/biology/Spirometer/"
+            },
+            {
+              "id": 50,
+              "toy": "Gas Exchange",
+              "specs": "O₂ + CO₂ optical sensors — cellular respiration and yeast metabolism",
+              "available": 1,
+              "toy_url": "/research/toys/biology/Gas%20Exchange/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "science": "Biology",
+      "science_slug": "bio",
       "topic": "Replicate",
       "description": "Copy, read, and express biological information",
       "technologies": [
         {
-          "id": 19,
+          "id": 26,
           "technology": "Amplification",
           "description": "Copy DNA for detection",
           "toys": [
             {
-              "id": 38,
+              "id": 51,
               "toy": "PCR",
               "specs": "Endpoint amplification — cycle temperature until enough copies exist",
               "available": 1,
@@ -865,7 +1014,7 @@
               ]
             },
             {
-              "id": 39,
+              "id": 52,
               "toy": "qPCR",
               "specs": "Real-time quantitation — count copies as they are made",
               "available": 0,
@@ -875,12 +1024,12 @@
           ]
         },
         {
-          "id": 20,
+          "id": 27,
           "technology": "Sequencing",
           "description": "Read the DNA code",
           "toys": [
             {
-              "id": 40,
+              "id": 53,
               "toy": "Long-Read",
               "specs": "One long sequence end to end — MinION",
               "available": 0,
@@ -888,7 +1037,7 @@
               "hero": "/research/toys/biology/Long-Read/long-read.png"
             },
             {
-              "id": 41,
+              "id": 54,
               "toy": "Short-Read",
               "specs": "Many short sequences in parallel",
               "available": 0,
@@ -898,12 +1047,12 @@
           ]
         },
         {
-          "id": 21,
+          "id": 28,
           "technology": "Expression",
           "description": "Make and see proteins",
           "toys": [
             {
-              "id": 42,
+              "id": 55,
               "toy": "Cell-Free",
               "specs": "Produce protein from DNA without living cells",
               "available": 1,
@@ -922,7 +1071,7 @@
               ]
             },
             {
-              "id": 43,
+              "id": 56,
               "toy": "Fluorescence",
               "specs": "Visualize protein glow under UV light",
               "available": 1,
@@ -945,19 +1094,19 @@
       ]
     },
     {
-      "id": 11,
+      "id": 12,
       "science": "Astronomy",
       "science_slug": "astro",
       "topic": "Observe",
       "description": "Where the light comes from — capture photons across the spectrum",
       "technologies": [
         {
-          "id": 22,
+          "id": 29,
           "technology": "Visible",
           "description": "Optical wavelengths from backyards to mountaintop observatories",
           "toys": [
             {
-              "id": 44,
+              "id": 57,
               "toy": "Household",
               "specs": "Amateur smart telescope — motorized mount and integrated camera",
               "available": 1,
@@ -965,7 +1114,7 @@
               "hero": "/research/toys/astronomy/Household/household.png"
             },
             {
-              "id": 45,
+              "id": 58,
               "toy": "Earth",
               "specs": "Meter-class ground telescope at a dark site",
               "available": 1,
@@ -975,12 +1124,12 @@
           ]
         },
         {
-          "id": 23,
+          "id": 30,
           "technology": "Invisible",
           "description": "Wavelengths outside the visible — radio through X-ray",
           "toys": [
             {
-              "id": 46,
+              "id": 59,
               "toy": "Radio",
               "specs": "Backyard antenna to synthesized array — Jupiter bursts to galactic structure",
               "available": 1,
@@ -988,7 +1137,7 @@
               "hero": "/research/toys/astronomy/Radio/radio.jpeg"
             },
             {
-              "id": 47,
+              "id": 60,
               "toy": "Space",
               "specs": "Above the atmosphere — UV, infrared and X-ray wavelengths blocked by air",
               "available": 0,
@@ -1000,19 +1149,19 @@
       ]
     },
     {
-      "id": 12,
+      "id": 13,
       "science": "Astronomy",
       "science_slug": "astro",
       "topic": "Decode",
       "description": "What the light tells you — extract measurements and classify sources",
       "technologies": [
         {
-          "id": 24,
+          "id": 31,
           "technology": "Analysis",
           "description": "Extract measurements from raw images",
           "toys": [
             {
-              "id": 48,
+              "id": 61,
               "toy": "Photometry",
               "specs": "How bright — light curves reveal variability, transits and distance",
               "available": 1,
@@ -1020,7 +1169,7 @@
               "hero": "/research/toys/astronomy/Photometry/photometry.png"
             },
             {
-              "id": 49,
+              "id": 62,
               "toy": "Astrometry",
               "specs": "Where — positions and proper motions reveal parallax and orbits",
               "available": 1,
@@ -1028,7 +1177,7 @@
               "hero": "/research/toys/astronomy/Astrometry/astrometry.png"
             },
             {
-              "id": 50,
+              "id": 63,
               "toy": "Spectroscopy",
               "specs": "What — wavelengths reveal composition, temperature and radial velocity",
               "available": 1,
@@ -1038,12 +1187,12 @@
           ]
         },
         {
-          "id": 25,
+          "id": 32,
           "technology": "Classification",
           "description": "Label sources with machine learning",
           "toys": [
             {
-              "id": 51,
+              "id": 64,
               "toy": "Transient",
               "specs": "Classical ML on light curves — supernovae, variable stars",
               "available": 0,
@@ -1051,7 +1200,7 @@
               "hero": "/research/toys/astronomy/Transient/transient.png"
             },
             {
-              "id": 52,
+              "id": 65,
               "toy": "Galaxy Morphology",
               "specs": "Deep CNN on galaxy images — spirals, ellipticals, mergers",
               "available": 0,

@@ -5,6 +5,13 @@ science_slug: chem
 topic: Identify
 technology: Molecular Spectroscopy
 hero: irspectroscopy.jpeg
+instruments:
+  - name: Bruker Tensor 27 Hyperion FT-IR Microscope
+    description: FT-IR microspectroscopy — point spectra on small or heterogeneous samples
+  - name: Mettler Toledo ReactIR iC10
+    description: In-situ FT-IR — reaction monitoring through a diamond ATR probe
+  - name: Renishaw inVia Raman Microscope
+    description: Raman complement — samples that are IR-opaque (water, glass, tissue)
 ---
 
 ## Equipment

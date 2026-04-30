@@ -5,6 +5,11 @@ science_slug: chem
 topic: Resolve
 technology: Separation
 hero: centrifugation.jpeg
+instruments:
+  - name: Thermo Scientific Sorvall RT3 Centrifuge
+    description: Floor-standing swing-bucket — clinical and research samples up to 4 L
+  - name: DiaMed ID-Centrifuge
+    description: Compact card centrifuge for blood-bank ID gel cards
 ---
 
 ## Instruments

@@ -5,6 +5,13 @@ science_slug: chem
 topic: Identify
 technology: Molecular Spectroscopy
 hero: spectrophotometer.jpeg
+instruments:
+  - name: PerkinElmer Lambda 750 UV/Vis/NIR Spectrophotometer
+    description: Research-grade — 190–3300 nm with integrating sphere
+  - name: Jasco J-1500 CD Spectrometer
+    description: Circular dichroism — chiral biomolecules and protein secondary structure
+  - name: Vernier Go Direct Fluorescence/UV-VIS Spectrophotometer
+    description: Home-lab benchtop — UV/Vis absorbance plus fluorescence with 280 nm LED cartridge
 ---
 
 ## Equipment

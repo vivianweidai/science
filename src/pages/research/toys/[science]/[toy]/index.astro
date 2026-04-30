@@ -219,6 +219,27 @@ const nextMeta = navMeta(nextToy);
       <p>{specs}.</p>
     </div>
 
+    {entry.data.instruments && entry.data.instruments.length > 0 && (
+      <>
+        <h2>Technology</h2>
+        <ul class="updates-list tech-list">
+          {entry.data.instruments.map((inst) => {
+            const linkHref = projList[0]?.href;
+            return (
+              <li data-subj={science_slug}>
+                <span class="update-body">
+                  {linkHref
+                    ? <a href={linkHref}>{inst.name}</a>
+                    : <span class="tech-name">{inst.name}</span>}
+                  <span class="tech-desc">{inst.description}</span>
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      </>
+    )}
+
     <Content />
 
     <h2>Projects</h2>
@@ -462,6 +483,24 @@ const nextMeta = navMeta(nextToy);
     }
     .toy-page .updates-list .update-body { flex: 1; }
     .toy-page .updates-list .chip { margin-left: 0.2em; }
+    /* Technology list: each row is name (or link) — description on one line. */
+    .toy-page .tech-list .update-body {
+      display: flex;
+      gap: 0.6em;
+      align-items: baseline;
+    }
+    .toy-page .tech-list .tech-name { font-weight: 500; }
+    .toy-page .tech-list a { font-weight: 500; }
+    .toy-page .tech-list .tech-desc {
+      color: #57606a;
+      font-size: 0.92em;
+    }
+    @media (max-width: 600px) {
+      .toy-page .tech-list .update-body {
+        flex-direction: column;
+        gap: 0.15em;
+      }
+    }
     @media (max-width: 600px) {
       .toy-page .updates-list .update-date { display: none; }
     }

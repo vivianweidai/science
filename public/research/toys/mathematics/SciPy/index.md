@@ -2,7 +2,7 @@
 toy: SciPy
 science: Mathematics
 science_slug: math
-topic: Compute
+topic: Calculate
 technology: Numerical
 hero: scipy.jpeg
 ---

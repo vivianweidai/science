@@ -16,18 +16,24 @@ import PageFooter from '../../layouts/PageFooter.astro';
     <input type="radio" name="toys-view" id="toys-astro" />
     <script is:inline>
       (function(){
-        // Hash takes precedence (e.g. /research/#math arrives from a toy
-        // page's "Research" header link), then session storage, then a
-        // random science. "all" / "home" hashes fall through to random.
+        // Hash takes precedence. Two forms:
+        //   #math              filter to a science (legacy / from toy-page header)
+        //   #bio/replicate     filter to a science AND scroll to a topic card
+        // Then session storage, then a random science. "all" / "home"
+        // hashes fall through to random.
         var picks = ['toys-chem','toys-bio','toys-phys','toys-comp'];
-        var hash = (location.hash || '').replace(/^#/, '');
-        var fromHash = hash && document.getElementById('toys-' + hash) ? 'toys-' + hash : null;
+        var hashParts = (location.hash || '').replace(/^#/, '').split('/');
+        var hashScience = hashParts[0];
+        var hashTopic = hashParts[1] || '';
+        var fromHash = hashScience && document.getElementById('toys-' + hashScience) ? 'toys-' + hashScience : null;
         var saved = sessionStorage.getItem('subj-tab');
         var pick = fromHash
           || (saved && document.getElementById('toys-' + saved) ? 'toys-' + saved : null)
           || picks[Math.floor(Math.random() * picks.length)];
         document.getElementById(pick).checked = true;
         sessionStorage.setItem('subj-tab', pick.replace('toys-', ''));
+        // Stash for the render script — it scrolls once the cards are in the DOM.
+        if (fromHash && hashTopic) window.__pendingTopicScroll = hashTopic;
       })();
     </script>
     <div class="tab-labels">
@@ -65,10 +71,11 @@ import PageFooter from '../../layouts/PageFooter.astro';
       var html = '';
       filtered.forEach(function (topic, i) {
         var delay = (i * 0.06).toFixed(2);
+        var topicSlug = topic.topic.toLowerCase().replace(/\s+/g, '-');
         // Outer wrapper holds the hover hit-region; inner card is what translates.
         // Wrapper's bottom/right padding catches the cursor when the card lifts up-and-left,
         // so the :hover state doesn't drop and re-fire (the bug we hit before).
-        html += '<div class="toys-card-wrap fade-in" style="animation-delay:' + delay + 's">';
+        html += '<div class="toys-card-wrap fade-in" id="topic-' + topic.science_slug + '-' + topicSlug + '" style="animation-delay:' + delay + 's">';
         html += '<div class="toys-card toys-accent-' + topic.science_slug + '">';
         html += '<div class="toys-card-header">'
           + '<span class="toys-topic-title">' + esc(topic.topic)
@@ -109,7 +116,16 @@ import PageFooter from '../../layouts/PageFooter.astro';
       .then(function (d) {
         var topics = d.topics;
         var checked = document.querySelector('input[name="toys-view"]:checked');
-        renderToys(topics, checked ? checked.id.replace('toys-', '') : 'all');
+        var initialFilter = checked ? checked.id.replace('toys-', '') : 'all';
+        renderToys(topics, initialFilter);
+        // Deep-link scroll: only on the initial render, only if the URL hash
+        // was a /science/topic form. Cleared after use so radio clicks don't
+        // re-trigger it.
+        if (window.__pendingTopicScroll) {
+          var target = document.getElementById('topic-' + initialFilter + '-' + window.__pendingTopicScroll);
+          if (target) target.scrollIntoView({ block: 'start', behavior: 'instant' in window ? 'instant' : 'auto' });
+          delete window.__pendingTopicScroll;
+        }
         document.querySelectorAll('input[name="toys-view"]').forEach(function (r) {
           r.addEventListener('change', function () {
             var filter = this.id.replace('toys-', '');

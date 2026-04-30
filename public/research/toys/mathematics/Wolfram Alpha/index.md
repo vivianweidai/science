@@ -2,7 +2,7 @@
 toy: Wolfram Alpha
 science: Mathematics
 science_slug: math
-topic: Compute
+topic: Calculate
 technology: Symbolic
 hero: wolframalpha.jpeg
 extra_projects:
