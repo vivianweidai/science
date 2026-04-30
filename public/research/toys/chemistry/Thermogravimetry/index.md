@@ -2,7 +2,7 @@
 toy: Thermogravimetry
 science: Chemistry
 science_slug: chem
-topic: Physical
+topic: Identify
 technology: Thermal Analysis
 hero: tga-q50.jpg
 ---

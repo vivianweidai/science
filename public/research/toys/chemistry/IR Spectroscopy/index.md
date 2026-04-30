@@ -2,7 +2,7 @@
 toy: IR Spectroscopy
 science: Chemistry
 science_slug: chem
-topic: Spectroscopic
+topic: Identify
 technology: Molecular Spectroscopy
 hero: irspectroscopy.jpeg
 ---

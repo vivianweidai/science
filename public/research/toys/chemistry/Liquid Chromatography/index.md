@@ -2,7 +2,7 @@
 toy: Liquid Chromatography
 science: Chemistry
 science_slug: chem
-topic: Physical
+topic: Resolve
 technology: Separation
 hero: hero.jpg
 ---
