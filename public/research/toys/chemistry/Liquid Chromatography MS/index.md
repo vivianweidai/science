@@ -2,7 +2,7 @@
 toy: Liquid Chromatography MS
 science: Chemistry
 science_slug: chem
-topic: Spectroscopic
+topic: Identify
 technology: Mass Spectrometry
 hero: hero.jpg
 ---
