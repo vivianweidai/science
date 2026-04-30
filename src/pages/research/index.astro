@@ -6,51 +6,51 @@ import PageFooter from '../../layouts/PageFooter.astro';
 <DefaultLayout title="Research">
   <PageHeader active="research" />
 
-  <div class="tabs subject-tabs" id="toys-tabs">
-    <input type="radio" name="toys-view" id="toys-all" />
-    <input type="radio" name="toys-view" id="toys-math" />
-    <input type="radio" name="toys-view" id="toys-comp" />
-    <input type="radio" name="toys-view" id="toys-phys" />
-    <input type="radio" name="toys-view" id="toys-chem" />
-    <input type="radio" name="toys-view" id="toys-bio" />
-    <input type="radio" name="toys-view" id="toys-astro" />
+  <div class="tabs subject-tabs" id="tech-tabs">
+    <input type="radio" name="tech-view" id="tech-all" />
+    <input type="radio" name="tech-view" id="tech-math" />
+    <input type="radio" name="tech-view" id="tech-comp" />
+    <input type="radio" name="tech-view" id="tech-phys" />
+    <input type="radio" name="tech-view" id="tech-chem" />
+    <input type="radio" name="tech-view" id="tech-bio" />
+    <input type="radio" name="tech-view" id="tech-astro" />
     <script is:inline>
       (function(){
         // Hash takes precedence. Three forms:
         //   #math                       filter to a science
         //   #bio/replicate              filter + scroll to a topic card
-        //   #bio/image/respiration      filter + scroll to a technology row
+        //   #bio/image/respiration      filter + scroll to a category row
         // Then session storage, then a random science. "all" / "home"
         // hashes fall through to random.
-        var picks = ['toys-chem','toys-bio','toys-phys','toys-comp'];
+        var picks = ['tech-chem','tech-bio','tech-phys','tech-comp'];
         var hashParts = (location.hash || '').replace(/^#/, '').split('/');
         var hashScience = hashParts[0];
         var hashTopic = hashParts[1] || '';
-        var hashTech = hashParts[2] || '';
-        var fromHash = hashScience && document.getElementById('toys-' + hashScience) ? 'toys-' + hashScience : null;
+        var hashCategory = hashParts[2] || '';
+        var fromHash = hashScience && document.getElementById('tech-' + hashScience) ? 'tech-' + hashScience : null;
         var saved = sessionStorage.getItem('subj-tab');
         var pick = fromHash
-          || (saved && document.getElementById('toys-' + saved) ? 'toys-' + saved : null)
+          || (saved && document.getElementById('tech-' + saved) ? 'tech-' + saved : null)
           || picks[Math.floor(Math.random() * picks.length)];
         document.getElementById(pick).checked = true;
-        sessionStorage.setItem('subj-tab', pick.replace('toys-', ''));
+        sessionStorage.setItem('subj-tab', pick.replace('tech-', ''));
         // Stash for the render script — it scrolls once the cards are in the DOM.
         if (fromHash && hashTopic) window.__pendingTopicScroll = hashTopic;
-        if (fromHash && hashTech) window.__pendingTechScroll = hashTech;
+        if (fromHash && hashCategory) window.__pendingCategoryScroll = hashCategory;
       })();
     </script>
     <div class="tab-labels">
-      <label for="toys-all"><span class="label-full">All</span><span class="label-abbr">All</span></label>
-      <label for="toys-math"><span class="label-full">Mathematics</span><span class="label-abbr">Math</span></label>
-      <label for="toys-comp"><span class="label-full">Computing</span><span class="label-abbr">Comp</span></label>
-      <label for="toys-phys"><span class="label-full">Physics</span><span class="label-abbr">Phys</span></label>
-      <label for="toys-chem"><span class="label-full">Chemistry</span><span class="label-abbr">Chem</span></label>
-      <label for="toys-bio"><span class="label-full">Biology</span><span class="label-abbr">Bio</span></label>
-      <label for="toys-astro"><span class="label-full">Astronomy</span><span class="label-abbr">Astro</span></label>
+      <label for="tech-all"><span class="label-full">All</span><span class="label-abbr">All</span></label>
+      <label for="tech-math"><span class="label-full">Mathematics</span><span class="label-abbr">Math</span></label>
+      <label for="tech-comp"><span class="label-full">Computing</span><span class="label-abbr">Comp</span></label>
+      <label for="tech-phys"><span class="label-full">Physics</span><span class="label-abbr">Phys</span></label>
+      <label for="tech-chem"><span class="label-full">Chemistry</span><span class="label-abbr">Chem</span></label>
+      <label for="tech-bio"><span class="label-full">Biology</span><span class="label-abbr">Bio</span></label>
+      <label for="tech-astro"><span class="label-full">Astronomy</span><span class="label-abbr">Astro</span></label>
     </div>
   </div>
 
-  <div id="toys-content"></div>
+  <div id="tech-content"></div>
 
   <script is:inline>
   (function () {
@@ -60,14 +60,14 @@ import PageFooter from '../../layouts/PageFooter.astro';
       });
     }
 
-    function renderToys(topics, filter) {
+    function renderTech(topics, filter) {
       var filtered = filter === 'all'
         ? topics
         : topics.filter(function (t) { return t.science_slug === filter; });
 
       if (!filtered.length) {
-        document.getElementById('toys-content').innerHTML =
-          '<p style="color:#656d76;font-style:italic;margin:1em 0;">No toys yet.</p>';
+        document.getElementById('tech-content').innerHTML =
+          '<p style="color:#656d76;font-style:italic;margin:1em 0;">No tech yet.</p>';
         return;
       }
 
@@ -78,33 +78,36 @@ import PageFooter from '../../layouts/PageFooter.astro';
         // Outer wrapper holds the hover hit-region; inner card is what translates.
         // Wrapper's bottom/right padding catches the cursor when the card lifts up-and-left,
         // so the :hover state doesn't drop and re-fire (the bug we hit before).
-        html += '<div class="toys-card-wrap fade-in" id="topic-' + topic.science_slug + '-' + topicSlug + '" style="animation-delay:' + delay + 's">';
-        html += '<div class="toys-card toys-accent-' + topic.science_slug + '">';
-        html += '<div class="toys-card-header">'
-          + '<span class="toys-topic-title">' + esc(topic.topic)
-          + ' <a class="chip ' + topic.science_slug + '" href="/research/#' + topic.science_slug + '">' + topic.science + '</a></span>'
-          + '<span class="toys-topic-desc">' + esc(topic.description || '') + '</span>'
+        html += '<div class="tech-card-wrap fade-in" id="topic-' + topic.science_slug + '-' + topicSlug + '" style="animation-delay:' + delay + 's">';
+        html += '<div class="tech-card tech-accent-' + topic.science_slug + '">';
+        html += '<div class="tech-card-header">'
+          + '<span class="tech-topic-title">' + esc(topic.topic) + '</span>'
+          + '<span class="tech-topic-desc">' + esc(topic.description || '') + '</span>'
+          + '<span class="tech-topic-chip"><a class="chip ' + topic.science_slug + '" href="/research/#' + topic.science_slug + '">' + topic.science + '</a></span>'
           + '</div>';
-        html += '<table class="toys-table"><colgroup><col style="width:28%"><col><col style="width:2em"></colgroup><tbody>';
+        html += '<table class="tech-table"><colgroup><col style="width:28%"><col><col style="width:7em"></colgroup><tbody>';
 
-        topic.technologies.forEach(function (tech) {
-          var techSlug = tech.technology.toLowerCase().replace(/\s+/g, '-');
-          html += '<tr class="toys-tech-row" id="tech-' + topic.science_slug + '-' + topicSlug + '-' + techSlug + '">'
-            + '<td style="padding-left:1.4em;font-weight:700">' + esc(tech.technology) + '</td>'
-            + '<td class="toys-tech-desc" colspan="2">' + esc(tech.description) + '</td>'
+        topic.categories.forEach(function (cat) {
+          var catSlug = cat.category.toLowerCase().replace(/\s+/g, '-');
+          var catComplete = cat.techs.length > 0 && cat.techs.every(function (t) { return t.available; });
+          var catMark = catComplete ? '<span class="tech-cat-complete">COMPLETE</span>' : '';
+          html += '<tr class="tech-cat-row" id="cat-' + topic.science_slug + '-' + topicSlug + '-' + catSlug + '">'
+            + '<td style="padding-left:1.4em;font-weight:700">' + esc(cat.category) + '</td>'
+            + '<td class="tech-cat-desc">' + esc(cat.description) + '</td>'
+            + '<td class="tech-access">' + catMark + '</td>'
             + '</tr>';
 
-          tech.toys.forEach(function (toy) {
-            var name = esc(toy.toy);
-            if (toy.toy_url) {
-              name = '<a href="' + toy.toy_url + '">' + name + '</a>';
+          cat.techs.forEach(function (tech) {
+            var name = esc(tech.tech);
+            if (tech.tech_url) {
+              name = '<a href="' + tech.tech_url + '">' + name + '</a>';
             }
-            var access = toy.available ? '<span class="toys-avail" title="Access granted">&#10003;</span>' : '';
+            var access = tech.available ? '<span class="tech-avail" title="Access granted">&#10003;</span>' : '';
 
-            html += '<tr class="toys-toy-row">'
+            html += '<tr class="tech-row">'
               + '<td style="padding-left:2.8em">' + name + '</td>'
-              + '<td class="toys-toy-specs">' + esc(toy.specs) + '</td>'
-              + '<td class="toys-toy-access">' + access + '</td>'
+              + '<td class="tech-specs">' + esc(tech.specs) + '</td>'
+              + '<td class="tech-access">' + access + '</td>'
               + '</tr>';
           });
         });
@@ -112,58 +115,80 @@ import PageFooter from '../../layouts/PageFooter.astro';
         html += '</tbody></table></div></div>';
       });
 
-      document.getElementById('toys-content').innerHTML = html;
+      document.getElementById('tech-content').innerHTML = html;
     }
 
-    fetch('/research/toys.json', { cache: 'no-cache' })
+    fetch('/research/tech.json', { cache: 'no-cache' })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (d) {
         var topics = d.topics;
-        var checked = document.querySelector('input[name="toys-view"]:checked');
-        var initialFilter = checked ? checked.id.replace('toys-', '') : 'all';
-        renderToys(topics, initialFilter);
+        var checked = document.querySelector('input[name="tech-view"]:checked');
+        var initialFilter = checked ? checked.id.replace('tech-', '') : 'all';
+        renderTech(topics, initialFilter);
         // Deep-link scroll: only on the initial render, only if the URL hash
-        // included a topic (or topic + technology). Cleared after use so
-        // radio clicks don't re-trigger it. Technology wins when present —
+        // included a topic (or topic + category). Cleared after use so
+        // radio clicks don't re-trigger it. Category wins when present —
         // it lives inside the topic card, so scrolling there reveals both.
         if (window.__pendingTopicScroll) {
           var target = null;
-          if (window.__pendingTechScroll) {
-            target = document.getElementById('tech-' + initialFilter + '-' + window.__pendingTopicScroll + '-' + window.__pendingTechScroll);
+          if (window.__pendingCategoryScroll) {
+            target = document.getElementById('cat-' + initialFilter + '-' + window.__pendingTopicScroll + '-' + window.__pendingCategoryScroll);
           }
           if (!target) {
             target = document.getElementById('topic-' + initialFilter + '-' + window.__pendingTopicScroll);
           }
           if (target) target.scrollIntoView({ block: 'start', behavior: 'instant' in window ? 'instant' : 'auto' });
           delete window.__pendingTopicScroll;
-          delete window.__pendingTechScroll;
+          delete window.__pendingCategoryScroll;
         }
-        document.querySelectorAll('input[name="toys-view"]').forEach(function (r) {
+        document.querySelectorAll('input[name="tech-view"]').forEach(function (r) {
           r.addEventListener('change', function () {
-            var filter = this.id.replace('toys-', '');
+            var filter = this.id.replace('tech-', '');
             sessionStorage.setItem('subj-tab', filter);
             // Reflect the active tab in the URL hash so a back-navigation
-            // from a toy page lands on the right tab instead of re-randomizing.
+            // from a tech page lands on the right tab instead of re-randomizing.
             // replaceState keeps history clean (one entry per page visit).
             history.replaceState(null, '', '#' + filter);
-            renderToys(topics, filter);
+            renderTech(topics, filter);
           });
         });
       });
   })();
   </script>
 
+  <script is:inline>
+    // Enter opens the first tech link in the currently-rendered filter —
+    // i.e. the first tech of the first category of the first topic card —
+    // so the keyboard user can dive in to start browsing. Skipped when
+    // typing in a form field, when a link/button/label already has focus
+    // (let the browser handle Enter naturally), or with any modifier held.
+    (function () {
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Enter') return;
+        if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+        var t = e.target;
+        if (!t) return;
+        if (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable) return;
+        if (t.tagName === 'A' || t.tagName === 'BUTTON' || t.tagName === 'LABEL') return;
+        var first = document.querySelector('#tech-content .tech-row a[href]');
+        if (!first) return;
+        e.preventDefault();
+        window.location.href = first.href;
+      });
+    })();
+  </script>
+
   <style is:global>
     /* Hover hit-region wrapper. Adds 2px of padding on the bottom and right
        so when the card translates up-and-left on hover, the cursor stays
        inside the wrapper's :hover region. */
-    .toys-card-wrap {
+    .tech-card-wrap {
       margin: 1em 0;
       padding: 0 2px 2px 0;
       scroll-margin-top: 1em;
     }
-    .toys-tech-row { scroll-margin-top: 1em; }
-    .toys-card {
+    .tech-cat-row { scroll-margin-top: 1em; }
+    .tech-card {
       border: 1px solid #d1d9e0;
       border-left: 4px solid #d1d9e0;
       border-radius: 8px;
@@ -172,129 +197,134 @@ import PageFooter from '../../layouts/PageFooter.astro';
       transition: transform 0.2s ease-out, box-shadow 0.18s ease;
     }
     @media (hover: hover) {
-      .toys-card-wrap:hover .toys-card {
+      .tech-card-wrap:hover .tech-card {
         transform: translate(-2px, -2px);
         box-shadow: 0 6px 18px rgba(0,0,0,.08);
       }
     }
-    .toys-card { --card-tint: #d1d9e0; }
-    .toys-accent-math  { border-left-color: #6ba3e8; --card-tint: var(--subj-math); }
-    .toys-accent-comp  { border-left-color: #9b7ed8; --card-tint: var(--subj-comp); }
-    .toys-accent-phys  { border-left-color: #e8915a; --card-tint: var(--subj-phys); }
-    .toys-accent-chem  { border-left-color: #8db849; --card-tint: var(--subj-chem); }
-    .toys-accent-bio   { border-left-color: #5bbfb0; --card-tint: var(--subj-bio); }
-    .toys-accent-astro { border-left-color: #e86088; --card-tint: var(--subj-astro); }
+    .tech-card { --card-tint: #d1d9e0; }
+    .tech-accent-math  { border-left-color: #6ba3e8; --card-tint: var(--subj-math); }
+    .tech-accent-comp  { border-left-color: #9b7ed8; --card-tint: var(--subj-comp); }
+    .tech-accent-phys  { border-left-color: #e8915a; --card-tint: var(--subj-phys); }
+    .tech-accent-chem  { border-left-color: #8db849; --card-tint: var(--subj-chem); }
+    .tech-accent-bio   { border-left-color: #5bbfb0; --card-tint: var(--subj-bio); }
+    .tech-accent-astro { border-left-color: #e86088; --card-tint: var(--subj-astro); }
 
-    .toys-card-header {
+    .tech-card-header {
       font-weight: 700;
       font-size: 1em;
-      padding: .6em .8em;
+      padding: .6em 0;
       border-bottom: 1px solid #eaecef;
       color: #1f2328;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 28% 1fr 7em;
       align-items: center;
-      gap: 1em;
     }
-    .toys-card-header .chip {
+    .tech-card-header .chip {
       vertical-align: middle;
-      margin-left: .3em;
-      position: relative;
-      top: -.1em;
-      opacity: 0;
-      transition: opacity .2s ease;
     }
-    @media (hover: hover) {
-      .toys-card-wrap:hover .toys-card-header .chip { opacity: 1; }
-    }
-    .toys-topic-title { white-space: nowrap; flex-shrink: 0; }
-    .toys-topic-desc {
+    .tech-topic-title { white-space: nowrap; padding-left: 1.4em; }
+    .tech-topic-desc {
       font-weight: 400;
       font-size: .9em;
       color: #1f2328;
       opacity: 0;
       transition: opacity .2s ease;
-      text-align: right;
+      padding: 0 .7em;
       min-width: 0;
     }
+    .tech-topic-chip {
+      text-align: center;
+    }
     @media (hover: hover) {
-      .toys-card-wrap:hover .toys-topic-desc {
+      .tech-card-wrap:hover .tech-topic-desc {
         opacity: 1;
       }
     }
-    .toys-card-header {
+    .tech-card-header {
       background: color-mix(in srgb, var(--card-tint, #d1d9e0) 45%, white);
       transition: background 0.18s ease;
     }
     @media (hover: hover) {
-      .toys-card:hover .toys-card-header {
+      .tech-card:hover .tech-card-header {
         background: color-mix(in srgb, var(--card-tint) 60%, white);
       }
-      .toys-card .toys-card-header:hover {
+      .tech-card .tech-card-header:hover {
         background: color-mix(in srgb, var(--card-tint) 70%, white);
       }
     }
 
-    .toys-table {
+    .tech-table {
       width: 100%;
       border-collapse: collapse;
       font-size: .95em;
       table-layout: fixed;
     }
-    .toys-table td {
+    .tech-table td {
       padding: .4em .7em;
       vertical-align: middle;
       border: none;
       color: #1f2328;
     }
 
-    .toys-tech-row td {
+    .tech-cat-row td {
       background: #f6f8fa;
       border-bottom: 1px solid #eaecef;
       padding-top: .4em;
       padding-bottom: .4em;
     }
-    .toys-tech-name { font-weight: 700; }
+    .tech-cat-name { font-weight: 700; }
 
-    /* td.toys-tech-desc beats .toys-table td (both 0,1,1 specificity, but
+    /* td.tech-cat-desc beats .tech-table td (both 0,1,1 specificity, but
        this rule comes later) so the default `color: transparent` actually
        takes effect. The hover rule then bumps to 0,2,1 to win over it. */
-    td.toys-tech-desc {
+    td.tech-cat-desc {
       font-weight: 400;
       color: transparent;
       transition: color .2s ease;
-      text-align: right;
+      text-align: left;
     }
     @media (hover: hover) {
-      .toys-card-wrap:hover td.toys-tech-desc {
+      .tech-card-wrap:hover td.tech-cat-desc {
         color: #1f2328;
       }
-      .toys-tech-row:hover td { background: #eef1f4; }
+      .tech-cat-row:hover td { background: #eef1f4; }
     }
 
-    .toys-toy-name {
+    .tech-name {
       word-wrap: break-word;
       padding-left: 2.4em;
     }
-    .toys-toy-name a { color: #0969da; text-decoration: none; font-weight: 600; }
+    .tech-name a { color: #0969da; text-decoration: none; font-weight: 600; }
     @media (hover: hover) {
-      .toys-toy-name a:hover { text-decoration: underline; }
+      .tech-name a:hover { text-decoration: underline; }
     }
-    .toys-toy-specs { color: #1f2328; }
-    .toys-toy-access { width: 2em; text-align: center; }
+    .tech-specs { color: #1f2328; }
+    .tech-access { width: 7em; text-align: center; }
     @media (hover: hover) {
-      .toys-toy-row:hover td { background: #eef1f4; }
+      .tech-row:hover td { background: #eef1f4; }
     }
-    .toys-avail { color: #1a7f37; font-size: .85em; }
+    .tech-avail { color: #656d76; font-size: .85em; }
+    .tech-cat-complete {
+      display: inline-block;
+      font-size: .6em;
+      font-weight: 600;
+      letter-spacing: .12em;
+      background: #eaecef;
+      color: #656d76;
+      padding: .25em .55em;
+      border-radius: 3px;
+      vertical-align: middle;
+    }
 
-    .toys-wip {
+    .tech-wip {
       font-size: .8em;
       margin-left: .3em;
       display: inline-block;
       position: relative;
       top: -0.1em;
     }
-    a.toys-wip, a.toys-wip:hover { color: inherit; text-decoration: none; }
+    a.tech-wip, a.tech-wip:hover { color: inherit; text-decoration: none; }
 
     .chip {
       display: inline-block; padding: 1px 7px; border-radius: 999px;
@@ -310,27 +340,27 @@ import PageFooter from '../../layouts/PageFooter.astro';
 
     @media (max-width: 600px) {
       .tabs .tab-labels label { padding: 0.45em 0.7em; font-size: 0.8em; }
-      .toys-card-header { padding-left: .8rem; }
-      .toys-topic-desc { display: none; }
-      .toys-table { table-layout: auto; }
-      .toys-table colgroup { display: none; }
-      .toys-table td { display: block; padding: .2em .8rem; }
-      .toys-tech-row td { display: block; padding: .7em .8rem !important; font-size: 1em; }
-      .toys-tech-desc { display: none !important; }
-      .toys-toy-row td:first-child { padding: .4em .8rem 0 .8rem !important; }
-      .toys-toy-specs { padding: 0 .8rem .4em .8rem; font-size: .88em; color: #656d76; }
-      .toys-toy-access { display: none !important; height: 0; padding: 0 !important; margin: 0; overflow: hidden; }
-      tr.toys-toy-row { border-bottom: 1px solid #f0f0f0; }
-      tr.toys-toy-row:last-child { border-bottom: none; }
+      .tech-card-header { padding-left: .8rem; }
+      .tech-topic-desc { display: none; }
+      .tech-table { table-layout: auto; }
+      .tech-table colgroup { display: none; }
+      .tech-table td { display: block; padding: .2em .8rem; }
+      .tech-cat-row td { display: block; padding: .7em .8rem !important; font-size: 1em; }
+      .tech-cat-desc { display: none !important; }
+      .tech-row td:first-child { padding: .4em .8rem 0 .8rem !important; }
+      .tech-specs { padding: 0 .8rem .4em .8rem; font-size: .88em; color: #656d76; }
+      .tech-access { display: none !important; height: 0; padding: 0 !important; margin: 0; overflow: hidden; }
+      tr.tech-row { border-bottom: 1px solid #f0f0f0; }
+      tr.tech-row:last-child { border-bottom: none; }
     }
 
-    #toys-all:checked ~ .tab-labels label[for="toys-all"] { color: #656d76; border-bottom-color: #656d76; background: #e8e8e8; }
-    #toys-math:checked ~ .tab-labels label[for="toys-math"] { color: #2563eb; border-bottom-color: #2563eb; background: var(--subj-math); }
-    #toys-comp:checked ~ .tab-labels label[for="toys-comp"] { color: #7c3aed; border-bottom-color: #7c3aed; background: var(--subj-comp); }
-    #toys-phys:checked ~ .tab-labels label[for="toys-phys"] { color: #ea580c; border-bottom-color: #ea580c; background: var(--subj-phys); }
-    #toys-chem:checked ~ .tab-labels label[for="toys-chem"] { color: #5c7a10; border-bottom-color: #5c7a10; background: var(--subj-chem); }
-    #toys-bio:checked ~ .tab-labels label[for="toys-bio"] { color: #0e8577; border-bottom-color: #0e8577; background: var(--subj-bio); }
-    #toys-astro:checked ~ .tab-labels label[for="toys-astro"] { color: #e11d48; border-bottom-color: #e11d48; background: var(--subj-astro); }
+    #tech-all:checked ~ .tab-labels label[for="tech-all"] { color: #656d76; border-bottom-color: #656d76; background: #e8e8e8; }
+    #tech-math:checked ~ .tab-labels label[for="tech-math"] { color: #2563eb; border-bottom-color: #2563eb; background: var(--subj-math); }
+    #tech-comp:checked ~ .tab-labels label[for="tech-comp"] { color: #7c3aed; border-bottom-color: #7c3aed; background: var(--subj-comp); }
+    #tech-phys:checked ~ .tab-labels label[for="tech-phys"] { color: #ea580c; border-bottom-color: #ea580c; background: var(--subj-phys); }
+    #tech-chem:checked ~ .tab-labels label[for="tech-chem"] { color: #5c7a10; border-bottom-color: #5c7a10; background: var(--subj-chem); }
+    #tech-bio:checked ~ .tab-labels label[for="tech-bio"] { color: #0e8577; border-bottom-color: #0e8577; background: var(--subj-bio); }
+    #tech-astro:checked ~ .tab-labels label[for="tech-astro"] { color: #e11d48; border-bottom-color: #e11d48; background: var(--subj-astro); }
   </style>
 
   <hr />

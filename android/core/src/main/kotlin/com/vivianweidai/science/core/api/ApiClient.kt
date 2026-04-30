@@ -3,14 +3,14 @@ package com.vivianweidai.science.core.api
 import com.vivianweidai.science.core.model.Activity
 import com.vivianweidai.science.core.model.ActivityList
 import com.vivianweidai.science.core.model.ResearchTopic
-import com.vivianweidai.science.core.model.ResearchToysResponse
+import com.vivianweidai.science.core.model.ResearchTechResponse
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.serialization.json.Json
 
 /**
  * Read-only client for activity listings (olympiads + textbooks) and
- * research toys. Source of truth: YAML in public/content/{olympiads,research}/,
+ * research tech. Source of truth: YAML in public/content/{olympiads,research}/,
  * built to JSON by a Python script, then fetched from vivianweidai.com.
  * No backend, no auth, no writes.
  */
@@ -30,8 +30,8 @@ class ApiClient {
 
     suspend fun listResearchTopics(): List<ResearchTopic> = mutex.withLock {
         cachedTopics?.let { return it }
-        val body = Http.getString(TOYS_URL)
-        val topics = json.decodeFromString<ResearchToysResponse>(body).topics
+        val body = Http.getString(TECH_URL)
+        val topics = json.decodeFromString<ResearchTechResponse>(body).topics
         cachedTopics = topics
         topics
     }
@@ -43,7 +43,7 @@ class ApiClient {
 
     companion object {
         const val OLYMPIADS_URL = "https://vivianweidai.com/olympiads/olympiads.json"
-        const val TOYS_URL = "https://vivianweidai.com/research/toys.json"
+        const val TECH_URL = "https://vivianweidai.com/research/tech.json"
         val shared = ApiClient()
     }
 }

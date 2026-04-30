@@ -1,46 +1,46 @@
 import Foundation
 
-/// Strongly-typed mirror of `public/research/toys.json`, the source of
-/// truth for the Research page's toy browser.
+/// Strongly-typed mirror of `public/research/tech.json`, the source of
+/// truth for the Research page's tech browser.
 public struct ResearchTopic: Codable, Identifiable, Hashable, Sendable {
     public let id: Int
     public let science: String
     public let scienceSlug: String
     public let topic: String
     public let description: String?
-    public let technologies: [ResearchTechnology]
+    public let categories: [ResearchCategory]
 
     enum CodingKeys: String, CodingKey {
-        case id, science, topic, description, technologies
+        case id, science, topic, description, categories
         case scienceSlug = "science_slug"
     }
 }
 
-public struct ResearchTechnology: Codable, Identifiable, Hashable, Sendable {
+public struct ResearchCategory: Codable, Identifiable, Hashable, Sendable {
     public let id: Int
-    public let technology: String
+    public let category: String
     public let description: String?
-    public let toys: [ResearchToy]
+    public let techs: [ResearchTech]
 }
 
-public struct ResearchToy: Codable, Identifiable, Hashable, Sendable {
+public struct ResearchTech: Codable, Identifiable, Hashable, Sendable {
     public let id: Int
-    public let toy: String
+    public let tech: String
     public let specs: String?
     public let available: Int?
     public let url: String?
     public let hero: String?
-    public let toyUrl: String?
-    public let projects: [ResearchToyProject]?
+    public let techUrl: String?
+    public let projects: [ResearchTechProject]?
 
     enum CodingKeys: String, CodingKey {
-        case id, toy, specs, available, url, hero, projects
-        case toyUrl = "toy_url"
+        case id, tech, specs, available, url, hero, projects
+        case techUrl = "tech_url"
     }
 
-    /// Absolute URL for the toy's hero image. Resolves relative paths
+    /// Absolute URL for the tech's hero image. Resolves relative paths
     /// (the common case — frontmatter `hero: numpy.jpeg` is rewritten by
-    /// `build_toys.py` to `/research/toys/<sci>/<toy>/numpy.jpeg`)
+    /// `build_tech.py` to `/research/tech/<sci>/<tech>/numpy.jpeg`)
     /// against the site origin.
     public var heroURL: URL? {
         guard let hero else { return nil }
@@ -53,12 +53,12 @@ public struct ResearchToy: Codable, Identifiable, Hashable, Sendable {
 
     public var isAvailable: Bool { (available ?? 0) == 1 }
 
-    /// Raw URL for the toy page's `index.md` — what the iOS toy tap
-    /// renders. Toy pages live at `/research/toys/<science>/<toy>/`
-    /// and carry the toy-specific equipment/results/specs body. Replaces
-    /// the project-page routing that pre-dated the toy-pages refactor.
-    public var toyIndexURL: URL? {
-        guard let path = toyUrl else { return nil }
+    /// Raw URL for the tech page's `index.md` — what the iOS tech tap
+    /// renders. Tech pages live at `/research/tech/<science>/<tech>/`
+    /// and carry the tech-specific equipment/results/specs body. Replaces
+    /// the project-page routing that pre-dated the tech-pages refactor.
+    public var techIndexURL: URL? {
+        guard let path = techUrl else { return nil }
         let trimmed = path.hasPrefix("/") ? String(path.dropFirst()) : path
         let encoded = trimmed.split(separator: "/").map {
             String($0).addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? String($0)
@@ -70,7 +70,7 @@ public struct ResearchToy: Codable, Identifiable, Hashable, Sendable {
     /// External URL to open in Safari (Wolfram, GitHub, Colab) — or
     /// resolved to a raw.githubusercontent URL when `url` is a
     /// repo-relative path like `/research/archives/photos/foo.jpg`,
-    /// which is how toys.json stores placeholder image links.
+    /// which is how tech.json stores placeholder image links.
     /// AsyncImage can't fetch a schemeless path, so the resolution
     /// must happen here rather than at render time.
     public var externalURL: URL? {
@@ -84,16 +84,16 @@ public struct ResearchToy: Codable, Identifiable, Hashable, Sendable {
     }
 }
 
-public struct ResearchToysResponse: Codable, Sendable {
+public struct ResearchTechResponse: Codable, Sendable {
     public let topics: [ResearchTopic]
 }
 
-/// Per-toy project entry — combines the reverse-scanned local projects
-/// (whose frontmatter `toys:` array references this toy) with the toy's
-/// own `extra_projects:` placeholder list. Baked into `toys.json` by
-/// `build_toys.py` so iOS/Android can render the toy detail view
+/// Per-tech project entry — combines the reverse-scanned local projects
+/// (whose frontmatter `tech:` array references this tech) with the tech's
+/// own `extra_projects:` placeholder list. Baked into `tech.json` by
+/// `build_tech.py` so iOS/Android can render the tech detail view
 /// without re-scanning every project at runtime.
-public struct ResearchToyProject: Codable, Hashable, Sendable, Identifiable {
+public struct ResearchTechProject: Codable, Hashable, Sendable, Identifiable {
     public let date: String           // YYYY-MM-DD
     public let title: String
     public let url: String

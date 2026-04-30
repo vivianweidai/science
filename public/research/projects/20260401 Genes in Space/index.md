@@ -1,6 +1,6 @@
 ---
 project: Genes in Space
-toys:
+tech:
   - PCR
   - Cell-Free
   - Fluorescence
@@ -45,9 +45,9 @@ See the <a href="https://github.com/vivianweidai/science/blob/main/public/resear
 <div class="tech-table">
 <div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li data-subj="bio"><span class="update-date">Amplification</span> <span class="update-name"><a href="/research/toys/biology/PCR/">PCR</a></span> <span class="update-desc">Endpoint amplification — cycle temperature until enough copies exist</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
-  <li data-subj="bio"><span class="update-date">Expression</span> <span class="update-name"><a href="/research/toys/biology/Cell-Free/">Cell-Free</a></span> <span class="update-desc">Produce protein from DNA without living cells</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
-  <li data-subj="bio"><span class="update-date">Expression</span> <span class="update-name"><a href="/research/toys/biology/Fluorescence/">Fluorescence</a></span> <span class="update-desc">Visualize protein glow under UV light</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
+  <li data-subj="bio"><span class="update-date">Amplification</span> <span class="update-name"><a href="/research/tech/biology/PCR/">PCR</a></span> <span class="update-desc">Endpoint amplification — cycle temperature until enough copies exist</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
+  <li data-subj="bio"><span class="update-date">Expression</span> <span class="update-name"><a href="/research/tech/biology/Cell-Free/">Cell-Free</a></span> <span class="update-desc">Produce protein from DNA without living cells</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
+  <li data-subj="bio"><span class="update-date">Expression</span> <span class="update-name"><a href="/research/tech/biology/Fluorescence/">Fluorescence</a></span> <span class="update-desc">Visualize protein glow under UV light</span> <a class="chip bio" href="/research/#bio">Biology</a></li>
 </ul>
 </div>
 </div>

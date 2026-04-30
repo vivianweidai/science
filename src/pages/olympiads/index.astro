@@ -56,12 +56,12 @@ import PageFooter from '../../layouts/PageFooter.astro';
 
   <style is:global>
     /* Tab-content card wrapper. Mirrors the research-page topic card and
-       the toy/curriculum leaf-card treatment: 1 px gray border + 4 px
+       the tech/curriculum leaf-card treatment: 1 px gray border + 4 px
        science-colored left accent (changes with the active tab) + a
        soft science-tinted wash. Default stays gray for the All tab. */
     /* Hover hit-region wrapper. 2 px of bottom/right padding catches the
        cursor when #timeline lifts up-and-left on hover so the :hover
-       state doesn't drop and re-fire (same trick as .toys-card-wrap). */
+       state doesn't drop and re-fire (same trick as .tech-card-wrap). */
     .timeline-card-wrap {
       margin: 1em 0;
       padding: 0 2px 2px 0;
@@ -171,6 +171,22 @@ import PageFooter from '../../layouts/PageFooter.astro';
       from { background-position: -60% 0; }
       to   { background-position: 200% 0; }
     }
+
+    /* Hover-only ripple — same yellow sweep + badge flash as .hl, but no
+       permanent yellow background. Used for COMPETITIVE / INVITED rows. */
+    .timeline .entry.hl-hover { position: relative; isolation: isolate; }
+    .timeline .entry.hl-hover::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(100deg, transparent 0%, #fff44f 50%, transparent 100%);
+      background-size: 50% 100%;
+      background-repeat: no-repeat;
+      background-position: -100% 0;
+      z-index: -1;
+    }
+    .timeline .entry.hl-hover:hover::before { animation: hl-ripple 1.0s ease-out; }
+    .timeline .entry.hl-hover:hover .foundation-badge { animation: foundation-flash 1.0s ease-out; }
     .foundation-badge {
       position: absolute;
       right: 0.6em;
@@ -302,7 +318,8 @@ import PageFooter from '../../layouts/PageFooter.astro';
           var icon = e.type === 'olympiad'
             ? '<svg class="rings-icon" viewBox="0 0 50 24" width="20" height="10"><circle cx="8" cy="8" r="6" fill="none" stroke="#0081C8" stroke-width="1.5"/><circle cx="18" cy="8" r="6" fill="none" stroke="#000" stroke-width="1.5"/><circle cx="28" cy="8" r="6" fill="none" stroke="#EE334E" stroke-width="1.5"/><circle cx="13" cy="14" r="6" fill="none" stroke="#FCB131" stroke-width="1.5"/><circle cx="23" cy="14" r="6" fill="none" stroke="#00A651" stroke-width="1.5"/></svg>'
             : '<span class="type-icon">📖</span>';
-          var cls = e.highlighted ? ' hl' : '';
+          var cls = e.highlighted ? ' hl' : ((e.invited || e.competitive) ? ' hl-hover' : '');
+          var badgeLabel = e.highlighted ? 'FOUNDATION' : e.invited ? 'INVITED' : e.competitive ? 'COMPETITIVE' : null;
           var delay = (0.05 + entryIdx * 0.025).toFixed(2);
           entryIdx++;
           html += '<div class="entry fade-in' + cls + '" data-subject="' + SUBJECT_SLUGS[e.subject] + '" style="animation-delay:' + delay + 's">'
@@ -312,7 +329,7 @@ import PageFooter from '../../layouts/PageFooter.astro';
             + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
             + '</div>'
             + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="status-emoji status-emoji-invited"><span class="glyph">🎟️</span></span>' : '') + (e.competitive ? ' <span class="status-emoji status-emoji-competitive"><span class="glyph">🎯</span></span>' : '') + '</div>'
-            + (e.highlighted ? '<span class="foundation-badge">FOUNDATION</span>' : '')
+            + (badgeLabel ? '<span class="foundation-badge">' + badgeLabel + '</span>' : '')
             + '</div>';
         });
       });

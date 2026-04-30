@@ -4,7 +4,7 @@ import PageHeader from '../layouts/PageHeader.astro';
 import PageFooter from '../layouts/PageFooter.astro';
 import scienceJpeg from '../layouts/science.jpeg?url';
 import curriculumData from '../../public/curriculum/curriculum.json';
-import toysData from '../../public/research/toys.json';
+import techData from '../../public/research/tech.json';
 
 // Top → bottom matches the science pyramid: astronomy at the apex,
 // mathematics as the foundation. Each row builds on the ones below.
@@ -31,11 +31,11 @@ const RESEARCH_LATEST = {
   biology:     { name: 'Meow to Mars — Will Space Help or Hurt Mi’s Heart?',  url: '/research/projects/20260401%20Genes%20in%20Space/',                 mi: true },
   astronomy:   { name: 'Wolfram Alpha — Dry Run',                             url: 'https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb'           },
 };
-// Two research topics per science, sourced from toys.yml. Drives the
+// Two research topics per science, sourced from tech.yml. Drives the
 // right-hand chips in the Research tab — both link to the science's
 // filtered view at /research/#<anchor>.
 const RESEARCH_TOPICS = {};
-for (const t of toysData.topics) {
+for (const t of techData.topics) {
   const slug = t.science.toLowerCase();
   if (!RESEARCH_TOPICS[slug]) RESEARCH_TOPICS[slug] = [];
   RESEARCH_TOPICS[slug].push(t.topic);
@@ -56,15 +56,21 @@ const TABS = [
 
   <div class="curr-rows" data-active="curriculum">
     <div class="curr-rows-tabs">
-      {TABS.map(t => (
-        <button class="curr-rows-tab" data-target={t.key} type="button">{t.label}</button>
-      ))}
-      <div class="curr-rows-progress"></div>
+      <div class="curr-rows-tabs-inner">
+        {TABS.map(t => (
+          <button class="curr-rows-tab" data-target={t.key} type="button">
+            <span class="curr-rows-tab-text">{t.label}</span>
+            <span class="curr-rows-progress"></span>
+          </button>
+        ))}
+      </div>
     </div>
+    <div class="curr-rows-body">
     {SUBJECTS.map((subjSlug, i) => {
       const subj = curriculumData[subjSlug];
+      const olyKind = OLYMPIAD_LATEST[subjSlug].kind;
       return (
-        <div class="curr-rows-row fade-in" style={`animation-delay: ${0.1 + i * 0.08}s`}>
+        <div class="curr-rows-row fade-in" data-olympiad-kind={olyKind} style={`animation-delay: ${0.1 + i * 0.08}s`}>
           <a class="curr-rows-subj" data-subj={subjSlug} data-tab="curriculum" href={`/curriculum/#${subjSlug}`}>{subj.name}</a>
           <a class="curr-rows-subj" data-subj={subjSlug} data-tab="olympiads"  href={`/olympiads/#${SUBJ_ANCHOR[subjSlug]}`}>{subj.name}</a>
           <a class="curr-rows-subj" data-subj={subjSlug} data-tab="research"   href={`/research/#${SUBJ_ANCHOR[subjSlug]}`}>{subj.name}</a>
@@ -96,6 +102,9 @@ const TABS = [
 
           <a class="curr-rows-pdf" data-tab="curriculum" href={`/curriculum/notes/${subjSlug}.pdf`}>pdf</a>
           <span class="curr-rows-date" data-tab="olympiads">{OLYMPIAD_LATEST[subjSlug].date}</span>
+          {(olyKind === 'competitive' || olyKind === 'invited') && (
+            <span class="olympiad-badge" data-tab="olympiads">{olyKind.toUpperCase()}</span>
+          )}
           <span class="curr-rows-topics" data-tab="research">
             {RESEARCH_TOPICS[subjSlug].map((topic, k) => (
               <>
@@ -107,6 +116,7 @@ const TABS = [
         </div>
       );
     })}
+    </div>
   </div>
 
   <style>
@@ -134,48 +144,57 @@ const TABS = [
     }
     .curr-rows {
       margin: 2em 0;
+    }
+    .curr-rows-body {
       border: 1px solid #d1d9e0;
       border-radius: 8px;
       overflow: hidden;
-      background: #fff;
     }
     .curr-rows-tabs {
       display: flex;
-      position: relative;
-      background: #f6f8fa;
-      border-bottom: 1px solid #d1d9e0;
+      justify-content: center;
+    }
+    .curr-rows-tabs-inner {
+      display: flex;
     }
     .curr-rows-tab {
-      flex: 1;
       display: block;
-      padding: 1em 0.9em;
+      position: relative;
+      overflow: hidden;
+      padding: 0.6em 1.2em;
       background: transparent;
       border: none;
-      border-right: 1px solid #eaecef;
       font-family: inherit;
       font-weight: 600;
-      font-size: 1em;
-      color: #57606a;
+      font-size: 0.9em;
+      color: #656d76;
       text-align: center;
       cursor: pointer;
-      transition: background 0.15s ease, color 0.15s ease;
+      transition: color 0.15s, background 0.15s;
     }
-    .curr-rows-tab:last-of-type { border-right: none; }
-    .curr-rows-tab:hover { background: #eaeef2; color: #1f2328; }
+    .curr-rows-tab:hover { color: #1f2328; }
     .curr-rows[data-active="curriculum"] .curr-rows-tab[data-target="curriculum"],
     .curr-rows[data-active="olympiads"]  .curr-rows-tab[data-target="olympiads"],
     .curr-rows[data-active="research"]   .curr-rows-tab[data-target="research"] {
       color: #1f2328;
-      background: #fff;
+      background: #e8e8e8;
     }
 
+    .curr-rows-tab-text {
+      position: relative;
+      z-index: 1;
+    }
     .curr-rows-progress {
       position: absolute;
-      left: 0;
-      bottom: -1px;
-      height: 1.5px;
-      width: 0%;
-      background: #b1b7be;
+      top: 0;
+      bottom: 0;
+      left: -60%;
+      width: 60%;
+      background: linear-gradient(to right,
+        transparent 0%,
+        rgba(31,35,40,0.008) 50%,
+        rgba(31,35,40,0.025) 90%,
+        rgba(31,35,40,0.07) 100%);
       pointer-events: none;
     }
 
@@ -193,6 +212,71 @@ const TABS = [
       font-size: 0.9em;
       min-height: 3.3em;
       transition: background 0.15s ease;
+      position: relative;
+    }
+
+    /* Yellow ripple sweep + flashing badge on hover for competitive/invited
+       olympiad rows. Mirrors the .hl-hover treatment on /olympiads/. Only
+       active when the Olympiads tab is showing. */
+    .curr-rows[data-active="olympiads"] .curr-rows-row[data-olympiad-kind="competitive"],
+    .curr-rows[data-active="olympiads"] .curr-rows-row[data-olympiad-kind="invited"] {
+      isolation: isolate;
+    }
+    .curr-rows[data-active="olympiads"] .curr-rows-row[data-olympiad-kind="competitive"]::before,
+    .curr-rows[data-active="olympiads"] .curr-rows-row[data-olympiad-kind="invited"]::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(100deg, transparent 0%, #fff44f 50%, transparent 100%);
+      background-size: 50% 100%;
+      background-repeat: no-repeat;
+      background-position: -100% 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .curr-rows[data-active="olympiads"] .curr-rows-row[data-olympiad-kind="competitive"]:hover::before,
+    .curr-rows[data-active="olympiads"] .curr-rows-row[data-olympiad-kind="invited"]:hover::before {
+      animation: oly-row-ripple 1.0s ease-out;
+    }
+    @keyframes oly-row-ripple {
+      from { background-position: -60% 0; }
+      to   { background-position: 200% 0; }
+    }
+    .olympiad-badge {
+      position: absolute;
+      right: 0.6em;
+      top: 50%;
+      font-size: 0.6em;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      background: #1f2328;
+      color: #fff44f;
+      padding: 0.25em 0.55em;
+      border-radius: 3px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-0.5em, -50%);
+    }
+    .curr-rows[data-active="olympiads"] .curr-rows-row:hover .olympiad-badge {
+      animation: oly-badge-flash 1.0s ease-out;
+    }
+    @keyframes oly-badge-flash {
+      0%   { opacity: 0; transform: translate(-0.5em, -50%); }
+      20%  { opacity: 1; transform: translate(0, -50%); }
+      70%  { opacity: 1; transform: translate(0, -50%); }
+      100% { opacity: 0; transform: translate(0.5em, -50%); }
+    }
+    /* Fade the date out while the badge is on top of it (mirrors the
+       badge-flash timing exactly). Only fires for rows that have a badge. */
+    .curr-rows[data-active="olympiads"] .curr-rows-row[data-olympiad-kind="competitive"]:hover .curr-rows-date,
+    .curr-rows[data-active="olympiads"] .curr-rows-row[data-olympiad-kind="invited"]:hover .curr-rows-date {
+      animation: oly-date-mute 1.0s ease-out;
+    }
+    @keyframes oly-date-mute {
+      0%   { opacity: 1; }
+      20%  { opacity: 0; }
+      70%  { opacity: 0; }
+      100% { opacity: 1; }
     }
     .curr-rows-row:nth-child(odd) { background: #f6f8fa; }
     .curr-rows-row:hover { background: #eef1f4; }
@@ -206,8 +290,6 @@ const TABS = [
       font-weight: 600;
       color: #1f2328;
       text-decoration: none;
-    }
-    .curr-rows-subj {
       transition: filter 0.18s ease;
     }
     .curr-rows-subj:hover {
@@ -491,7 +573,7 @@ const TABS = [
     (function () {
       var container = document.querySelector('.curr-rows[data-active]');
       if (!container) return;
-      var fill = container.querySelector('.curr-rows-progress');
+      var fills = container.querySelectorAll('.curr-rows-tab .curr-rows-progress');
       var tabs = ['curriculum', 'olympiads', 'research'];
       var tabMs = 5000;
       var cycleMs = tabs.length * tabMs;
@@ -503,11 +585,17 @@ const TABS = [
       var rafId = 0;
       var stopped = false;
 
+      function clearFills() {
+        for (var i = 0; i < fills.length; i++) fills[i].style.left = '-60%';
+      }
+
       function tick(now) {
         if (stopped) return;
         var elapsed = (now - cycleStart) % cycleMs;
-        fill.style.width = ((elapsed / cycleMs) * 100) + '%';
         var idx = Math.floor(elapsed / tabMs);
+        var withinTab = (elapsed % tabMs) / tabMs;
+        clearFills();
+        if (fills[idx]) fills[idx].style.left = (withinTab * 100 - 60) + '%';
         var target = tabs[idx];
         if (container.dataset.active !== target) {
           container.dataset.active = target;
@@ -520,7 +608,7 @@ const TABS = [
         if (stopped) return;
         stopped = true;
         cancelAnimationFrame(rafId);
-        fill.style.width = '0%';
+        clearFills();
       }
       container.addEventListener('mouseenter', stop);
 

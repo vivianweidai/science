@@ -24,7 +24,7 @@ const {
   photos = [],
 } = Astro.props;
 
-// Full → short slug for chip class names. Same map used by toys.json.
+// Full → short slug for chip class names. Same map used by tech.json.
 const SLUG: Record<string, string> = {
   Mathematics: 'math', Computing: 'comp', Physics: 'phys',
   Chemistry: 'chem', Biology: 'bio', Astronomy: 'astro',
@@ -109,6 +109,11 @@ const SLUG: Record<string, string> = {
       margin: 0;
       border-bottom: none;
     }
+    .project-chips {
+      display: inline-flex;
+      gap: 0.5em;
+      flex-wrap: wrap;
+    }
     .section-heading {
       display: flex;
       justify-content: space-between;
@@ -132,9 +137,9 @@ const SLUG: Record<string, string> = {
     .instrument-table tbody tr td { background: #fff44f; }
     .instrument-table.no-highlight tbody tr td { background: transparent; }
 
-    /* Updates-list (homepage match). Used here for the Technology section
-       on a project page — list of toys used, in the same row format as the
-       homepage's project list. */
+    /* Updates-list (homepage match). Used here for the Tech section
+       on a project page — list of techs used, in the same row format as
+       the homepage's project list. */
     .updates-list {
       list-style: none;
       padding: 0;

@@ -1,6 +1,6 @@
 ---
 project: Melting Point
-toys:
+tech:
   - Calorimetry
   - Thermogravimetry
 title: "Melting Point of Everyday Compounds"
@@ -83,8 +83,8 @@ This project connects to the broader thermal analysis series — the next steps 
 <div class="tech-table">
 <div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li data-subj="chem"><span class="update-date">Thermal Analysis</span> <span class="update-name"><a href="/research/toys/chemistry/Thermogravimetry/">Thermogravimetry</a></span> <span class="update-desc">Mass loss with heating — decomposition and moisture</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
-  <li data-subj="chem"><span class="update-date">Thermal Analysis</span> <span class="update-name"><a href="/research/toys/chemistry/Calorimetry/">Calorimetry</a></span> <span class="update-desc">Energy flow with heating — phase transitions and heat capacity</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li data-subj="chem"><span class="update-date">Thermal Analysis</span> <span class="update-name"><a href="/research/tech/chemistry/Thermogravimetry/">Thermogravimetry</a></span> <span class="update-desc">Mass loss with heating — decomposition and moisture</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li data-subj="chem"><span class="update-date">Thermal Analysis</span> <span class="update-name"><a href="/research/tech/chemistry/Calorimetry/">Calorimetry</a></span> <span class="update-desc">Energy flow with heating — phase transitions and heat capacity</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
 </ul>
 </div>
 </div>

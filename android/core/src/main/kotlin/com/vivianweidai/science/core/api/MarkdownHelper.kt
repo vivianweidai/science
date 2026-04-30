@@ -70,15 +70,15 @@ object MarkdownHelper {
         return null
     }
 
-    /** Synthesise the title HTML block to prepend to a project or toy
+    /** Synthesise the title HTML block to prepend to a project or tech
      *  page so in-app rendering matches the website headings. Looks for:
      *    - **Project pages** — `title:` (scalar) + `sciences:` (array).
-     *    - **Toy pages**     — `toy:` (scalar) + `science:` (scalar).
+     *    - **Tech pages**    — `tech:` (scalar) + `science:` (scalar).
      *  Returns an empty string when no usable title field is present.
      *  Call against raw front-matter-bearing markdown *before*
      *  `stripFrontMatter`, then prepend the result to the stripped body. */
     fun synthesizeProjectTitle(md: String): String {
-        val title = extractScalar(md, "title") ?: extractScalar(md, "toy") ?: return ""
+        val title = extractScalar(md, "title") ?: extractScalar(md, "tech") ?: return ""
         var sciences = extractPhotos(md, "sciences")
         if (sciences.isEmpty()) {
             extractScalar(md, "science")?.let { sciences = listOf(it) }
@@ -97,7 +97,7 @@ object MarkdownHelper {
     /** Remove the `## Technology` heading and its inline
      *  `<ul class="updates-list">…</ul>` block from a project's markdown
      *  body. Native UI renders the technology table from the project's
-     *  `toys:` frontmatter array + ContentStore lookup, so the inline
+     *  `tech:` frontmatter array + ContentStore lookup, so the inline
      *  list would otherwise show up twice (and with broken external
      *  links). Idempotent: returns the input unchanged when the section
      *  is missing. */

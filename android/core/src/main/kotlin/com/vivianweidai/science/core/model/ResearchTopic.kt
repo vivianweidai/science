@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 import java.net.URI
 import java.net.URLEncoder
 
-/** Strongly-typed mirror of `public/research/toys.json`. */
+/** Strongly-typed mirror of `public/research/tech.json`. */
 @Serializable
 data class ResearchTopic(
     val id: Int,
@@ -13,31 +13,31 @@ data class ResearchTopic(
     @SerialName("science_slug") val scienceSlug: String,
     val topic: String,
     val description: String? = null,
-    val technologies: List<ResearchTechnology>,
+    val categories: List<ResearchCategory>,
 )
 
 @Serializable
-data class ResearchTechnology(
+data class ResearchCategory(
     val id: Int,
-    val technology: String,
+    val category: String,
     val description: String? = null,
-    val toys: List<ResearchToy>,
+    val techs: List<ResearchTech>,
 )
 
 @Serializable
-data class ResearchToy(
+data class ResearchTech(
     val id: Int,
-    val toy: String,
+    val tech: String,
     val specs: String? = null,
     val available: Int? = null,
     val url: String? = null,
     val hero: String? = null,
-    @SerialName("toy_url") val toyUrl: String? = null,
-    val projects: List<ResearchToyProject>? = null,
+    @SerialName("tech_url") val techUrl: String? = null,
+    val projects: List<ResearchTechProject>? = null,
 ) {
     val isAvailable: Boolean get() = (available ?: 0) == 1
 
-    /** Absolute URL for the toy's hero image. Resolves repo-relative
+    /** Absolute URL for the tech's hero image. Resolves repo-relative
      *  paths (the common case) against the site origin. */
     val heroUrl: String?
         get() {
@@ -47,13 +47,13 @@ data class ResearchToy(
             return "https://vivianweidai.com/$trimmed"
         }
 
-    /** Raw URL for the toy page's `index.md` — what the in-app toy tap
-     *  renders. Toy pages live at `/research/toys/<science>/<toy>/` and
-     *  carry the toy-specific equipment/results/specs body. Replaces the
-     *  project-page routing that pre-dated the toy-pages refactor. */
-    val toyIndexUrl: String?
+    /** Raw URL for the tech page's `index.md` — what the in-app tech tap
+     *  renders. Tech pages live at `/research/tech/<science>/<tech>/` and
+     *  carry the tech-specific equipment/results/specs body. Replaces the
+     *  project-page routing that pre-dated the tech-pages refactor. */
+    val techIndexUrl: String?
         get() {
-            val path = toyUrl ?: return null
+            val path = techUrl ?: return null
             val trimmed = if (path.startsWith("/")) path.drop(1) else path
             val encoded = trimmed.split("/").joinToString("/") {
                 URLEncoder.encode(it, "UTF-8").replace("+", "%20")
@@ -77,15 +77,15 @@ data class ResearchToy(
 }
 
 @Serializable
-data class ResearchToysResponse(val topics: List<ResearchTopic>)
+data class ResearchTechResponse(val topics: List<ResearchTopic>)
 
-/** Per-toy project entry baked into toys.json by build_toys.py — combines
- *  reverse-scanned local projects (whose frontmatter `toys:` references
- *  this toy) with the toy's own `extra_projects:` placeholders. Lets
- *  iOS/Android render the toy detail view without re-scanning every
+/** Per-tech project entry baked into tech.json by build_tech.py — combines
+ *  reverse-scanned local projects (whose frontmatter `tech:` references
+ *  this tech) with the tech's own `extra_projects:` placeholders. Lets
+ *  iOS/Android render the tech detail view without re-scanning every
  *  project at runtime. */
 @Serializable
-data class ResearchToyProject(
+data class ResearchTechProject(
     val date: String,                 // YYYY-MM-DD
     val title: String,
     val url: String,

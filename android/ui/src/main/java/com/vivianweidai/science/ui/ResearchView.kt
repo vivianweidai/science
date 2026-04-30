@@ -59,14 +59,14 @@ import com.vivianweidai.science.core.api.Http
 import com.vivianweidai.science.core.api.MarkdownHelper
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
-import com.vivianweidai.science.core.model.ResearchTechnology
+import com.vivianweidai.science.core.model.ResearchCategory
 import com.vivianweidai.science.core.model.ResearchTopic
-import com.vivianweidai.science.core.model.ResearchToy
-import com.vivianweidai.science.core.model.ResearchToyProject
+import com.vivianweidai.science.core.model.ResearchTech
+import com.vivianweidai.science.core.model.ResearchTechProject
 import java.net.URLEncoder
 
-/** Toy browser mirroring the webapp at /research/. Topics grouped into
- *  cards with subject chip; each card nests technologies + their toys. */
+/** Tech browser mirroring the webapp at /research/. Topics grouped into
+ *  cards with subject chip; each card nests categories + their techs. */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ResearchView(store: ContentStore, modifier: Modifier = Modifier) {
@@ -100,14 +100,14 @@ fun ResearchView(store: ContentStore, modifier: Modifier = Modifier) {
                     when {
                         topics != null -> TopicList(
                             topics = topics!!.filterBy(filter),
-                            onToy = { name ->
+                            onTech = { name ->
                                 // URLEncoder uses '+' for spaces, but NavHost path
                                 // args decode with %20 semantics — so swap '+'
                                 // back to %20 to keep "Liquid Chromatography" intact
                                 // through the route round-trip.
                                 val encoded = URLEncoder.encode(name, "UTF-8")
                                     .replace("+", "%20")
-                                nav.navigate("toy/$encoded")
+                                nav.navigate("tech/$encoded")
                             },
                             onPhoto = { title, url ->
                                 val encoded = URLEncoder.encode(url, "UTF-8")
@@ -116,7 +116,7 @@ fun ResearchView(store: ContentStore, modifier: Modifier = Modifier) {
                         )
                         error != null -> ErrorState(error!!)
                         else -> LoadingState(
-                            "Loading toys",
+                            "Loading tech",
                             "Fetching research topics from GitHub.",
                         )
                     }
@@ -130,11 +130,11 @@ fun ResearchView(store: ContentStore, modifier: Modifier = Modifier) {
         // kept marked.js from parsing `[text](url with space)` as a
         // link on research project pages (Extension tables rendered
         // their URLs as raw text instead of links).
-        composable("toy/{name}") { back ->
+        composable("tech/{name}") { back ->
             val name = back.arguments?.getString("name") ?: ""
-            ToyDetailScreen(
+            TechDetailScreen(
                 store = store,
-                toyName = name,
+                techName = name,
                 onBack = { nav.popBackStack() },
                 onProject = { title, url ->
                     val encoded = URLEncoder.encode(url, "UTF-8")
@@ -154,14 +154,14 @@ fun ResearchView(store: ContentStore, modifier: Modifier = Modifier) {
                 title = title,
                 indexUrl = url,
                 onBack = { nav.popBackStack() },
-                onToy = { name ->
+                onTech = { name ->
                     val encoded = URLEncoder.encode(name, "UTF-8").replace("+", "%20")
-                    nav.navigate("toy/$encoded")
+                    nav.navigate("tech/$encoded")
                 },
                 onImageTap = { imageUrl ->
                     // Use the same push-from-right viewer that the main
-                    // research page uses for photo-placeholder toys, so
-                    // in-page image links behave the same as toy-row
+                    // research page uses for photo-placeholder techs, so
+                    // in-page image links behave the same as tech-row
                     // image links.
                     val encoded = URLEncoder.encode(imageUrl, "UTF-8")
                     val titleSeg = URLEncoder.encode(
@@ -188,7 +188,7 @@ private fun List<ResearchTopic>.filterBy(filter: SubjectFilter): List<ResearchTo
 @Composable
 private fun TopicList(
     topics: List<ResearchTopic>,
-    onToy: (String) -> Unit,
+    onTech: (String) -> Unit,
     onPhoto: (String, String) -> Unit,
 ) {
     LazyColumn(
@@ -198,7 +198,7 @@ private fun TopicList(
         if (topics.isEmpty()) {
             item {
                 Text(
-                    text = "No toys yet.",
+                    text = "No tech yet.",
                     fontSize = 14.sp,
                     fontStyle = FontStyle.Italic,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -207,7 +207,7 @@ private fun TopicList(
             }
         }
         items(topics, key = { it.id }) { topic ->
-            TopicCard(topic, onToy, onPhoto)
+            TopicCard(topic, onTech, onPhoto)
         }
     }
 }
@@ -215,7 +215,7 @@ private fun TopicList(
 @Composable
 private fun TopicCard(
     topic: ResearchTopic,
-    onToy: (String) -> Unit,
+    onTech: (String) -> Unit,
     onPhoto: (String, String) -> Unit,
 ) {
     Surface(
@@ -225,7 +225,7 @@ private fun TopicCard(
         modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp),
     ) {
         Row {
-            // Left accent bar, mirrors webapp .toys-accent-* border.
+            // Left accent bar, mirrors webapp .tech-accent-* border.
             Box(
                 modifier = Modifier
                     .width(4.dp)
@@ -250,8 +250,8 @@ private fun TopicCard(
                     SubjectChip(topic.science)
                 }
                 HorizontalDivider()
-                topic.technologies.forEach { tech ->
-                    TechnologyBlock(tech, onToy, onPhoto)
+                topic.categories.forEach { category ->
+                    TechnologyBlock(category, onTech, onPhoto)
                 }
             }
         }
@@ -260,13 +260,13 @@ private fun TopicCard(
 
 @Composable
 private fun TechnologyBlock(
-    tech: ResearchTechnology,
-    onToy: (String) -> Unit,
+    category: ResearchCategory,
+    onTech: (String) -> Unit,
     onPhoto: (String, String) -> Unit,
 ) {
     Column {
         Text(
-            text = tech.technology,
+            text = category.category,
             fontSize = 13.sp,
             fontWeight = FontWeight.SemiBold,
             modifier = Modifier
@@ -274,9 +274,9 @@ private fun TechnologyBlock(
                 .background(MaterialTheme.colorScheme.surfaceContainer)
                 .padding(start = 14.dp, end = 12.dp, top = 6.dp, bottom = 6.dp),
         )
-        tech.toys.forEachIndexed { i, toy ->
-            ToyRow(toy, onToy, onPhoto)
-            if (i != tech.toys.lastIndex) {
+        category.techs.forEachIndexed { i, tech ->
+            TechRow(tech, onTech, onPhoto)
+            if (i != category.techs.lastIndex) {
                 HorizontalDivider(modifier = Modifier.padding(start = 28.dp))
             }
         }
@@ -284,18 +284,18 @@ private fun TechnologyBlock(
 }
 
 @Composable
-private fun ToyRow(
-    toy: ResearchToy,
-    onToy: (String) -> Unit,
+private fun TechRow(
+    tech: ResearchTech,
+    onTech: (String) -> Unit,
     onPhoto: (String, String) -> Unit,
 ) {
     val context = LocalContext.current
-    val externalUrl = toy.externalUrl
-    val hasLink = toy.toyUrl != null || externalUrl != null
+    val externalUrl = tech.externalUrl
+    val hasLink = tech.techUrl != null || externalUrl != null
 
     val onClick: (() -> Unit)? = when {
-        toy.toyUrl != null -> ({ onToy(toy.toy) })
-        externalUrl != null && externalUrl.isImageUrl() -> ({ onPhoto(toy.toy, externalUrl) })
+        tech.techUrl != null -> ({ onTech(tech.tech) })
+        externalUrl != null && externalUrl.isImageUrl() -> ({ onPhoto(tech.tech, externalUrl) })
         externalUrl != null -> ({
             context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(externalUrl)))
         })
@@ -311,21 +311,21 @@ private fun ToyRow(
         ) {
             Column(Modifier.weight(1f)) {
                 Text(
-                    text = toy.toy,
+                    text = tech.tech,
                     fontSize = 14.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = if (hasLink) MaterialTheme.colorScheme.primary
                             else MaterialTheme.colorScheme.onSurface,
                 )
-                if (!toy.specs.isNullOrEmpty()) {
+                if (!tech.specs.isNullOrEmpty()) {
                     Text(
-                        text = toy.specs!!,
+                        text = tech.specs!!,
                         fontSize = 12.sp,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
             }
-            if (toy.isAvailable) {
+            if (tech.isAvailable) {
                 Icon(
                     Icons.Filled.Check,
                     contentDescription = "Available",
@@ -353,7 +353,7 @@ private fun ProjectDetailScreen(
     title: String,
     indexUrl: String,
     onBack: () -> Unit,
-    onToy: (String) -> Unit,
+    onTech: (String) -> Unit,
     onImageTap: (String) -> Unit,
 ) {
     var loaded by remember(indexUrl) { mutableStateOf<ProjectDetail?>(null) }
@@ -362,7 +362,7 @@ private fun ProjectDetailScreen(
             .getOrElse { e ->
                 ProjectDetail(
                     markdown = "# Error\n\n${e.message ?: e::class.simpleName}",
-                    toyNames = emptyList(),
+                    techNames = emptyList(),
                 )
             }
     }
@@ -389,12 +389,12 @@ private fun ProjectDetailScreen(
                     item {
                         MarkdownWebView(markdown = detail.markdown, onImageTap = onImageTap)
                     }
-                    if (detail.toyNames.isNotEmpty()) {
+                    if (detail.techNames.isNotEmpty()) {
                         item {
                             ProjectTechnologySection(
                                 store = store,
-                                toyNames = detail.toyNames,
-                                onToy = onToy,
+                                techNames = detail.techNames,
+                                onTech = onTech,
                             )
                         }
                     }
@@ -404,28 +404,28 @@ private fun ProjectDetailScreen(
     }
 }
 
-// ---------- Toy detail ----------
+// ---------- Tech detail ----------
 
-/** Native toy page — renders title, science chip, topic·technology
+/** Native tech page — renders title, science chip, topic·category
  *  context, hero image, spec description, and the projects list, all
- *  from `toys.json` data. Replaces the previous markdown-passthrough
- *  approach because most toy `index.md` bodies are empty by design. */
+ *  from `tech.json` data. Replaces the previous markdown-passthrough
+ *  approach because most tech `index.md` bodies are empty by design. */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun ToyDetailScreen(
+private fun TechDetailScreen(
     store: ContentStore,
-    toyName: String,
+    techName: String,
     onBack: () -> Unit,
     onProject: (String, String) -> Unit,
     onPhoto: (String, String) -> Unit,
 ) {
     val topics by store.topics.collectAsStateWithLifecycle()
-    val resolved = remember(topics, toyName) { store.findToy(toyName) }
+    val resolved = remember(topics, techName) { store.findTech(techName) }
 
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(toyName) },
+                title = { Text(techName) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
@@ -441,23 +441,23 @@ private fun ToyDetailScreen(
                         androidx.compose.material3.CircularProgressIndicator()
                     } else {
                         Text(
-                            "Toy not found.",
+                            "Tech not found.",
                             fontStyle = FontStyle.Italic,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }
                 }
             } else {
-                val (topic, tech, toy) = resolved
+                val (topic, category, tech) = resolved
                 LazyColumn(
                     contentPadding = androidx.compose.foundation.layout.PaddingValues(14.dp),
                     verticalArrangement = Arrangement.spacedBy(14.dp),
                 ) {
-                    toy.heroUrl?.let { url ->
+                    tech.heroUrl?.let { url ->
                         item {
                             AsyncImage(
                                 model = url,
-                                contentDescription = toy.toy,
+                                contentDescription = tech.tech,
                                 contentScale = androidx.compose.ui.layout.ContentScale.Crop,
                                 modifier = Modifier
                                     .fillMaxWidth()
@@ -471,7 +471,7 @@ private fun ToyDetailScreen(
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.spacedBy(8.dp),
                         ) {
-                            Text(toy.toy, fontSize = 22.sp, fontWeight = FontWeight.Bold)
+                            Text(tech.tech, fontSize = 22.sp, fontWeight = FontWeight.Bold)
                             SubjectChip(topic.science)
                         }
                     }
@@ -485,19 +485,19 @@ private fun ToyDetailScreen(
                             )
                             Text("·", color = MaterialTheme.colorScheme.onSurfaceVariant)
                             Text(
-                                tech.technology,
+                                category.category,
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
                         }
                     }
-                    if (!toy.specs.isNullOrEmpty()) {
-                        item { Text("${toy.specs!!}.", fontSize = 14.sp) }
+                    if (!tech.specs.isNullOrEmpty()) {
+                        item { Text("${tech.specs!!}.", fontSize = 14.sp) }
                     }
                     item { HorizontalDivider() }
                     item { Text("Projects", fontSize = 17.sp, fontWeight = FontWeight.Bold) }
-                    val projects = toy.projects.orEmpty()
+                    val projects = tech.projects.orEmpty()
                     if (projects.isEmpty()) {
                         item {
                             Text(
@@ -515,7 +515,7 @@ private fun ToyDetailScreen(
                             ) {
                                 Column {
                                     projects.forEachIndexed { i, p ->
-                                        ToyProjectRow(p, onProject, onPhoto)
+                                        TechProjectRow(p, onProject, onPhoto)
                                         if (i != projects.lastIndex) HorizontalDivider()
                                     }
                                 }
@@ -529,8 +529,8 @@ private fun ToyDetailScreen(
 }
 
 @Composable
-private fun ToyProjectRow(
-    project: ResearchToyProject,
+private fun TechProjectRow(
+    project: ResearchTechProject,
     onProject: (String, String) -> Unit,
     onPhoto: (String, String) -> Unit,
 ) {
@@ -600,25 +600,25 @@ private fun formatProjectDate(iso: String): String {
 
 // ---------- Project Technology section ----------
 
-/** Native rendering of the Technology section for a project page —
+/** Native rendering of the Tech section for a project page —
  *  replaces the inline `<ul class="updates-list">` HTML that was
- *  shipped in markdown bodies. The list of toys comes from the
- *  project's `toys:` front-matter array; each toy is resolved via
- *  ContentStore for parent topic/technology + specs, and tapping a
- *  row navigates internally to ToyDetailScreen. */
+ *  shipped in markdown bodies. The list of techs comes from the
+ *  project's `tech:` front-matter array; each tech is resolved via
+ *  ContentStore for parent topic/category + specs, and tapping a
+ *  row navigates internally to TechDetailScreen. */
 @Composable
 private fun ProjectTechnologySection(
     store: ContentStore,
-    toyNames: List<String>,
-    onToy: (String) -> Unit,
+    techNames: List<String>,
+    onTech: (String) -> Unit,
 ) {
     val topics by store.topics.collectAsStateWithLifecycle()
-    val resolved = remember(topics, toyNames) {
+    val resolved = remember(topics, techNames) {
         val rank = mapOf(
             "Mathematics" to 0, "Computing" to 1, "Physics" to 2,
             "Chemistry" to 3, "Biology" to 4, "Astronomy" to 5,
         )
-        toyNames.mapNotNull { store.findToy(it) }
+        techNames.mapNotNull { store.findTech(it) }
             .sortedWith(compareBy(
                 { rank[it.first.science] ?: Int.MAX_VALUE },
                 { it.third.id },
@@ -637,9 +637,9 @@ private fun ProjectTechnologySection(
             border = BorderStroke(1.dp, Color.Black.copy(alpha = 0.08f)),
         ) {
             Column {
-                resolved.forEachIndexed { i, (topic, tech, toy) ->
+                resolved.forEachIndexed { i, (topic, category, tech) ->
                     Surface(
-                        onClick = { onToy(toy.toy) },
+                        onClick = { onTech(tech.tech) },
                         color = Color.Transparent,
                     ) {
                         Row(
@@ -650,21 +650,21 @@ private fun ProjectTechnologySection(
                             horizontalArrangement = Arrangement.spacedBy(10.dp),
                         ) {
                             Text(
-                                tech.technology,
+                                category.category,
                                 fontSize = 12.sp,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 modifier = Modifier.width(110.dp),
                             )
                             Column(Modifier.weight(1f)) {
                                 Text(
-                                    toy.toy,
+                                    tech.tech,
                                     fontSize = 14.sp,
                                     fontWeight = FontWeight.SemiBold,
                                     color = MaterialTheme.colorScheme.primary,
                                 )
-                                if (!toy.specs.isNullOrEmpty()) {
+                                if (!tech.specs.isNullOrEmpty()) {
                                     Text(
-                                        toy.specs!!,
+                                        tech.specs!!,
                                         fontSize = 12.sp,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     )
@@ -680,10 +680,10 @@ private fun ProjectTechnologySection(
     }
 }
 
-private data class ProjectDetail(val markdown: String, val toyNames: List<String>)
+private data class ProjectDetail(val markdown: String, val techNames: List<String>)
 
 /** Fetch + transform an `index.md` into renderable markdown plus the
- *  project's `toys:` frontmatter array (the source for the native
+ *  project's `tech:` frontmatter array (the source for the native
  *  Technology table). Strips the inline `## Technology … </ul>` block
  *  from the body so it doesn't render twice. */
 private suspend fun loadProjectMarkdown(indexUrl: String): ProjectDetail {
@@ -693,7 +693,7 @@ private suspend fun loadProjectMarkdown(indexUrl: String): ProjectDetail {
         photos = scanProjectPhotos(indexUrl).shuffled()
     }
     val dataPhotos = MarkdownHelper.extractPhotos(md, "data_photos")
-    val toyNames = MarkdownHelper.extractPhotos(md, "toys")
+    val techNames = MarkdownHelper.extractPhotos(md, "tech")
     val titleBlock = MarkdownHelper.synthesizeProjectTitle(md)
     md = MarkdownHelper.stripFrontMatter(md)
     md = titleBlock + md
@@ -703,7 +703,7 @@ private suspend fun loadProjectMarkdown(indexUrl: String): ProjectDetail {
     val base = indexUrl.substringBeforeLast('/')
     return ProjectDetail(
         markdown = MarkdownHelper.resolveRelativeUrls(md, base),
-        toyNames = toyNames,
+        techNames = techNames,
     )
 }
 
@@ -726,8 +726,8 @@ private val githubJson = Json { ignoreUnknownKeys = true }
 private suspend fun scanProjectPhotos(indexUrl: String): List<String> {
     val parts = indexUrl.substringAfter("://").substringAfter('/').split('/')
     val idxPos = parts.indexOf("index.md").takeIf { it > 0 } ?: return emptyList()
-    // indexUrl segments may already be percent-encoded (the per-toy
-    // project entry's `url` in toys.json carries `%20` for spaces).
+    // indexUrl segments may already be percent-encoded (the per-tech
+    // project entry's `url` in tech.json carries `%20` for spaces).
     // Decode the folder name to its raw form before re-encoding it for
     // the GitHub contents API — a double-encode would turn `%20` into
     // `%2520` and the API 404s.
@@ -762,7 +762,7 @@ private suspend fun scanProjectPhotos(indexUrl: String): List<String> {
 // ---------- Photo viewer ----------
 
 /// Shared pinch-to-zoom + drag-to-pan viewer used by both Research
-/// (toy placeholder photos, in-page images) and Olympiads (activity
+/// (tech placeholder photos, in-page images) and Olympiads (activity
 /// photos). `internal` so OlympiadsView.kt in the same module can reuse
 /// the route target directly. Double-tap toggles between fit and 2.5x.
 @OptIn(ExperimentalMaterial3Api::class)

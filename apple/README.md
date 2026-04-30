@@ -26,8 +26,8 @@ Three tabs:
 - **Olympiads** — contests tracker plus unified textbooks list, read
   from `content/olympiads/olympiads.json` (built from
   `olympiads.yml` via `content/research/build_olympiads.py`).
-- **Research** — toy browser driven by `content/research/toys.json`
-  (topics → technologies → toys). Project links open an in-app markdown
+- **Research** — tech browser driven by `content/research/tech.json`
+  (topics → categories → techs). Project links open an in-app markdown
   render of the project's `index.md`; photo placeholder links open in
   an in-app `PhotoViewer`; GitHub / Colab / Wolfram links hand off to
   Safari.

@@ -4,9 +4,9 @@ import com.vivianweidai.science.core.api.ApiClient
 import com.vivianweidai.science.core.api.CurriculumLoader
 import com.vivianweidai.science.core.model.Activity
 import com.vivianweidai.science.core.model.CurriculumManifest
-import com.vivianweidai.science.core.model.ResearchTechnology
+import com.vivianweidai.science.core.model.ResearchCategory
 import com.vivianweidai.science.core.model.ResearchTopic
-import com.vivianweidai.science.core.model.ResearchToy
+import com.vivianweidai.science.core.model.ResearchTech
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
@@ -97,18 +97,18 @@ class ContentStore(
             .onFailure { _activitiesError.value = it.message ?: it::class.simpleName }
     }
 
-    /** Look up a toy by name and return the topic + technology + toy
-     *  triple, or null if the toy isn't present in `topics` (or `topics`
+    /** Look up a tech by name and return the topic + category + tech
+     *  triple, or null if the tech isn't present in `topics` (or `topics`
      *  hasn't loaded yet). Used by ProjectDetailScreen to render the
-     *  native technology table from a project's `toys:` front-matter
-     *  array — each toy resolves to its parent topic for the science
-     *  chip and its parent technology for the row label. */
-    fun findToy(name: String): Triple<ResearchTopic, ResearchTechnology, ResearchToy>? {
+     *  native tech table from a project's `tech:` front-matter
+     *  array — each tech resolves to its parent topic for the science
+     *  chip and its parent category for the row label. */
+    fun findTech(name: String): Triple<ResearchTopic, ResearchCategory, ResearchTech>? {
         val all = _topics.value ?: return null
         for (topic in all) {
-            for (tech in topic.technologies) {
-                val toy = tech.toys.firstOrNull { it.toy == name }
-                if (toy != null) return Triple(topic, tech, toy)
+            for (category in topic.categories) {
+                val tech = category.techs.firstOrNull { it.tech == name }
+                if (tech != null) return Triple(topic, category, tech)
             }
         }
         return null

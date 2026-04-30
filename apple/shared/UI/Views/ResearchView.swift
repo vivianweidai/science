@@ -3,11 +3,11 @@ import ScienceCore
 
 /// Toy browser matching the webapp /research/ page. Topics are grouped
 /// cards with a subject chip, each containing rows of technologies and
-/// their toys. Source of truth: content/research/toys.json.
+/// their toys. Source of truth: content/research/tech.json.
 struct ResearchView: View {
     @State private var store = ContentStore.shared
     @State private var subject: SubjectFilter = SubjectFilter.randomResearchSubject()
-    /// Photo-placeholder toy currently being previewed. Presented as a
+    /// Photo-placeholder tech currently being previewed. Presented as a
     /// modal sheet (slide-up) to match the in-project markdown image
     /// preview — the user explicitly preferred the sheet over the
     /// NavigationLink push, so both surfaces now use this pattern.
@@ -83,8 +83,8 @@ private struct TopicCard: View {
             header
             Divider()
             VStack(alignment: .leading, spacing: 0) {
-                ForEach(topic.technologies) { tech in
-                    TechnologyBlock(topic: topic, tech: tech, onImageTap: onImageTap)
+                ForEach(topic.categories) { category in
+                    TechnologyBlock(topic: topic, category: category, onImageTap: onImageTap)
                 }
             }
         }
@@ -97,7 +97,7 @@ private struct TopicCard: View {
                 .stroke(SubjectPalette.color(for: topic.science).opacity(0.7), lineWidth: 1)
         )
         .overlay(alignment: .leading) {
-            // Left accent bar, mirrors webapp .toys-accent-* border.
+            // Left accent bar, mirrors webapp .techs-accent-* border.
             RoundedRectangle(cornerRadius: 2)
                 .fill(SubjectPalette.color(for: topic.science))
                 .frame(width: 4)
@@ -121,21 +121,21 @@ private struct TopicCard: View {
 
 private struct TechnologyBlock: View {
     let topic: ResearchTopic
-    let tech: ResearchTechnology
+    let category: ResearchCategory
     let onImageTap: (URL) -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text(tech.technology)
+            Text(category.category)
                 .font(.system(size: 13, weight: .semibold))
                 .frame(maxWidth: .infinity, minHeight: 28, alignment: .leading)
                 .padding(.leading, 14)
                 .padding(.trailing, 12)
                 .background(ResearchColors.technologyHeader)
 
-            ForEach(tech.toys) { toy in
-                ToyRow(topic: topic, tech: tech, toy: toy, onImageTap: onImageTap)
-                if toy.id != tech.toys.last?.id {
+            ForEach(category.techs) { tech in
+                TechRow(topic: topic, category: category, tech: tech, onImageTap: onImageTap)
+                if tech.id != category.techs.last?.id {
                     Divider().padding(.leading, 28)
                 }
             }
@@ -143,25 +143,25 @@ private struct TechnologyBlock: View {
     }
 }
 
-private struct ToyRow: View {
+private struct TechRow: View {
     let topic: ResearchTopic
-    let tech: ResearchTechnology
-    let toy: ResearchToy
+    let category: ResearchCategory
+    let tech: ResearchTech
     let onImageTap: (URL) -> Void
     @Environment(\.openURL) private var openURL
 
-    private var hasLink: Bool { toy.toyUrl != nil || toy.externalURL != nil }
+    private var hasLink: Bool { tech.techUrl != nil || tech.externalURL != nil }
 
     var body: some View {
         Group {
-            if toy.toyUrl != nil {
+            if tech.techUrl != nil {
                 NavigationLink {
-                    ToyDetailView(topic: topic, tech: tech, toy: toy, onImageTap: onImageTap)
+                    TechDetailView(topic: topic, category: category, tech: tech, onImageTap: onImageTap)
                 } label: {
                     rowBody
                 }
                 .buttonStyle(.plain)
-            } else if let external = toy.externalURL, Self.isImageURL(external) {
+            } else if let external = tech.externalURL, Self.isImageURL(external) {
                 // Slide-up sheet (handled by ResearchView) instead of a
                 // NavigationLink push — matches the in-project markdown
                 // image preview so both surfaces feel the same.
@@ -169,7 +169,7 @@ private struct ToyRow: View {
                     rowBody
                 }
                 .buttonStyle(.plain)
-            } else if let external = toy.externalURL {
+            } else if let external = tech.externalURL {
                 Button { openURL(external) } label: {
                     rowBody
                 }
@@ -190,10 +190,10 @@ private struct ToyRow: View {
     private var rowBody: some View {
         HStack(alignment: .firstTextBaseline, spacing: 8) {
             VStack(alignment: .leading, spacing: 2) {
-                Text(toy.toy)
+                Text(tech.tech)
                     .font(.system(size: 14, weight: .semibold))
                     .foregroundStyle(hasLink ? Color.accentColor : Color.primary)
-                if let specs = toy.specs, !specs.isEmpty {
+                if let specs = tech.specs, !specs.isEmpty {
                     Text(specs)
                         .font(.system(size: 12))
                         .foregroundStyle(.secondary)
@@ -201,7 +201,7 @@ private struct ToyRow: View {
                 }
             }
             Spacer(minLength: 0)
-            if toy.isAvailable {
+            if tech.isAvailable {
                 Image(systemName: "checkmark")
                     .font(.system(size: 12, weight: .semibold))
                     .foregroundStyle(Color(red: 0.10, green: 0.50, blue: 0.22))
@@ -214,23 +214,23 @@ private struct ToyRow: View {
     }
 }
 
-// MARK: - Toy detail
+// MARK: - Tech detail
 
-/// Native toy page — renders title, science chip, topic·technology
+/// Native tech page — renders title, science chip, topic·category
 /// context, hero image, spec description, and the projects list, all
-/// from `toys.json` data. Replaces the previous markdown-passthrough
-/// approach because most toy `index.md` bodies are empty by design (the
-/// data-bearing fields live in `toys.json`).
-struct ToyDetailView: View {
+/// from `tech.json` data. Replaces the previous markdown-passthrough
+/// approach because most tech `index.md` bodies are empty by design (the
+/// data-bearing fields live in `tech.json`).
+struct TechDetailView: View {
     let topic: ResearchTopic
-    let tech: ResearchTechnology
-    let toy: ResearchToy
+    let category: ResearchCategory
+    let tech: ResearchTech
     let onImageTap: (URL) -> Void
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 14) {
-                if let url = toy.heroURL {
+                if let url = tech.heroURL {
                     AsyncImage(url: url) { phase in
                         switch phase {
                         case .success(let image):
@@ -254,7 +254,7 @@ struct ToyDetailView: View {
                 }
 
                 HStack(spacing: 8) {
-                    Text(toy.toy)
+                    Text(tech.tech)
                         .font(.system(size: 24, weight: .bold))
                     SubjectChip(subject: topic.science)
                     Spacer(minLength: 0)
@@ -263,12 +263,12 @@ struct ToyDetailView: View {
                 HStack(spacing: 6) {
                     Text(topic.topic).fontWeight(.semibold)
                     Text("·").foregroundStyle(.secondary)
-                    Text(tech.technology).fontWeight(.semibold)
+                    Text(category.category).fontWeight(.semibold)
                 }
                 .font(.system(size: 13))
                 .foregroundStyle(.secondary)
 
-                if let specs = toy.specs, !specs.isEmpty {
+                if let specs = tech.specs, !specs.isEmpty {
                     Text(specs + ".")
                         .font(.system(size: 14))
                         .foregroundStyle(.primary)
@@ -279,10 +279,10 @@ struct ToyDetailView: View {
                 Text("Projects")
                     .font(.system(size: 17, weight: .bold))
 
-                if let projects = toy.projects, !projects.isEmpty {
+                if let projects = tech.projects, !projects.isEmpty {
                     VStack(spacing: 0) {
                         ForEach(projects) { p in
-                            ToyProjectRow(project: p)
+                            TechProjectRow(project: p)
                             if p.id != projects.last?.id {
                                 Divider()
                             }
@@ -306,15 +306,15 @@ struct ToyDetailView: View {
             .padding(.horizontal, 14)
             .padding(.vertical, 14)
         }
-        .navigationTitle(toy.toy)
+        .navigationTitle(tech.tech)
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
     }
 }
 
-private struct ToyProjectRow: View {
-    let project: ResearchToyProject
+private struct TechProjectRow: View {
+    let project: ResearchTechProject
     @Environment(\.openURL) private var openURL
 
     var body: some View {
@@ -389,14 +389,14 @@ private struct ToyProjectRow: View {
 
 /// Loads a research project's index.md from GitHub raw and renders it
 /// inside the app with the shared KaTeX markdown webview. Avoids the
-/// Safari bounce the user was seeing when tapping a project toy.
+/// Safari bounce the user was seeing when tapping a project tech.
 struct ProjectDetailView: View {
     let title: String
     let indexURL: URL
     @State private var markdown: String = ""
     @State private var loading = true
     @State private var presentedImage: IdentifiableURL?
-    @State private var toyNames: [String] = []
+    @State private var techNames: [String] = []
 
     var body: some View {
         Group {
@@ -412,8 +412,8 @@ struct ProjectDetailView: View {
                                 presentedImage = IdentifiableURL(url: url)
                             }
                         )
-                        if !toyNames.isEmpty {
-                            ProjectTechnologySection(toyNames: toyNames)
+                        if !techNames.isEmpty {
+                            ProjectTechnologySection(techNames: techNames)
                                 .padding(.horizontal, 14)
                                 .padding(.bottom, 14)
                         }
@@ -452,10 +452,10 @@ struct ProjectDetailView: View {
                     photos = await Self.scanProjectPhotos(indexURL: indexURL).shuffled()
                 }
 
-                // Capture the project's `toys:` front-matter array before
+                // Capture the project's `tech:` front-matter array before
                 // we strip; that's the source for the native Technology
                 // table that replaces the inline `<ul class="updates-list">`.
-                toyNames = MarkdownHelper.extractPhotos(from: md, key: "toys")
+                techNames = MarkdownHelper.extractPhotos(from: md, key: "tech")
 
                 let titleBlock = MarkdownHelper.synthesizeProjectTitle(from: md)
                 md = MarkdownHelper.stripFrontMatter(md)
@@ -532,20 +532,20 @@ private struct GitHubContentEntry: Decodable {
 /// Native rendering of the Technology section for a project page —
 /// replaces the inline `<ul class="updates-list">` HTML that was
 /// shipped in markdown bodies. The list of toys comes from the
-/// project's `toys:` front-matter array; each toy is resolved via
-/// ContentStore (toys.json) for parent topic/technology and specs,
-/// and tapping a row navigates internally to ToyDetailView (no
-/// Safari bounce). Toys missing from ContentStore (e.g. typo or
-/// not yet in toys.yml) are silently skipped.
-private struct ResolvedToy: Identifiable {
+/// project's `tech:` front-matter array; each tech is resolved via
+/// ContentStore (tech.json) for parent topic/category and specs,
+/// and tapping a row navigates internally to TechDetailView (no
+/// Safari bounce). Techs missing from ContentStore (e.g. typo or
+/// not yet in tech.yml) are silently skipped.
+private struct ResolvedTech: Identifiable {
     let topic: ResearchTopic
-    let tech: ResearchTechnology
-    let toy: ResearchToy
-    var id: String { toy.toy }
+    let category: ResearchCategory
+    let tech: ResearchTech
+    var id: String { tech.tech }
 }
 
 private struct ProjectTechnologySection: View {
-    let toyNames: [String]
+    let techNames: [String]
     @State private var store = ContentStore.shared
 
     private static let scienceRank: [String: Int] = [
@@ -553,22 +553,22 @@ private struct ProjectTechnologySection: View {
         "Chemistry": 3, "Biology": 4, "Astronomy": 5,
     ]
 
-    /// Resolve each toy name against ContentStore and sort:
+    /// Resolve each tech name against ContentStore and sort:
     /// 1. by science in math → comp → phys → chem → bio → astro order;
-    /// 2. within a science, by `toy.id` (which monotonically increases
-    ///    in toys.yml authoring order, so this preserves the
+    /// 2. within a science, by `tech.id` (which monotonically increases
+    ///    in tech.yml authoring order, so this preserves the
     ///    intra-subject sequence the user laid out in the source file).
-    private var resolved: [ResolvedToy] {
-        toyNames
-            .compactMap { name -> ResolvedToy? in
-                guard let r = store.findToy(named: name) else { return nil }
-                return ResolvedToy(topic: r.topic, tech: r.tech, toy: r.toy)
+    private var resolved: [ResolvedTech] {
+        techNames
+            .compactMap { name -> ResolvedTech? in
+                guard let r = store.findTech(named: name) else { return nil }
+                return ResolvedTech(topic: r.topic, category: r.category, tech: r.tech)
             }
             .sorted { a, b in
                 let ra = Self.scienceRank[a.topic.science] ?? Int.max
                 let rb = Self.scienceRank[b.topic.science] ?? Int.max
                 if ra != rb { return ra < rb }
-                return a.toy.id < b.toy.id
+                return a.tech.id < b.tech.id
             }
     }
 
@@ -582,8 +582,8 @@ private struct ProjectTechnologySection: View {
                 VStack(spacing: 0) {
                     ForEach(Array(resolved.enumerated()), id: \.element.id) { idx, r in
                         NavigationLink {
-                            ToyDetailView(
-                                topic: r.topic, tech: r.tech, toy: r.toy,
+                            TechDetailView(
+                                topic: r.topic, category: r.category, tech: r.tech,
                                 onImageTap: { _ in }
                             )
                         } label: {
@@ -609,19 +609,19 @@ private struct ProjectTechnologySection: View {
 }
 
 private struct ProjectTechnologyRow: View {
-    let resolved: ResolvedToy
+    let resolved: ResolvedTech
 
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: 10) {
-            Text(resolved.tech.technology)
+            Text(resolved.category.category)
                 .font(.system(size: 12))
                 .foregroundStyle(.secondary)
                 .frame(width: 110, alignment: .leading)
             VStack(alignment: .leading, spacing: 4) {
-                Text(resolved.toy.toy)
+                Text(resolved.tech.tech)
                     .font(.system(size: 14, weight: .semibold))
                     .foregroundStyle(Color.accentColor)
-                if let specs = resolved.toy.specs, !specs.isEmpty {
+                if let specs = resolved.tech.specs, !specs.isEmpty {
                     Text(specs)
                         .font(.system(size: 12))
                         .foregroundStyle(.secondary)

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Read-only client for activity listings (olympiads + textbooks) and
-/// research toys.
+/// research tech.
 ///
 /// Source of truth: YAML files under public/content/{olympiads,research}/.
 /// A Python build script generates the corresponding .json files in the
@@ -13,8 +13,8 @@ public actor APIClient {
     public static let olympiadsURL = URL(
         string: "https://vivianweidai.com/olympiads/olympiads.json"
     )!
-    public static let toysURL = URL(
-        string: "https://vivianweidai.com/research/toys.json"
+    public static let techURL = URL(
+        string: "https://vivianweidai.com/research/tech.json"
     )!
 
     private let session: URLSession
@@ -41,7 +41,7 @@ public actor APIClient {
 
     public func listResearchTopics() async throws -> [ResearchTopic] {
         if let cachedTopics { return cachedTopics }
-        let topics = try await get(url: Self.toysURL, as: ResearchToysResponse.self).topics
+        let topics = try await get(url: Self.techURL, as: ResearchTechResponse.self).topics
         cachedTopics = topics
         return topics
     }

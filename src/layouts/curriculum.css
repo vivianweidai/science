@@ -6,7 +6,7 @@
 
 /* The 2 px bottom/right padding (so .curr-topic has room to lift up-and-
    left on hover without dropping the :hover state — same trick as
-   .toys-card-wrap) lives on a tight wrapper around just the card, not
+   .tech-card-wrap) lives on a tight wrapper around just the card, not
    the whole widget. That keeps the prev/next nav above and below the
    card from triggering the lift. */
 .curr-topic-wrap { padding: 0 2px 2px 0; }
@@ -168,7 +168,7 @@ a.curr-col-head:hover {
 .curr-topic[data-subj="astronomy"]   { border-left-color: #e86088; --card-tint: var(--subj-astro); }
 
 /* Header band: topic name on the left, science chip + section breadcrumb
-   on the right. Mirrors the research toy header (SciPy · Computing ·
+   on the right. Mirrors the research tech header (SciPy · Computing ·
    Analyze · Statistics). The band is a lighter wash of the canonical
    science color so the canonical-color chip on the right stands out
    against it instead of blending in. */

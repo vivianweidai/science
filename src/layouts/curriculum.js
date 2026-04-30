@@ -424,7 +424,7 @@
         topic with full content. The card-pop-in animation plays exactly
         once on the new card; the prev/next nav and breadcrumb update in
         the same frame as the body. No Loading placeholder, no shrink-
-        grow — matches the smoothness of the toy nav's full-page reload.
+        grow — matches the smoothness of the tech nav's full-page reload.
 
      A render token guards against a stale fetch from an earlier press
      overwriting the user's latest target after a fast double-tap. */

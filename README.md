@@ -21,7 +21,7 @@ pipeline/scripts/          Python build scripts (.docx → markdown, YAML → JS
 public/                    Source-of-truth — served at site root, organized by page
   curriculum/              notes/ + source/ + curriculum.json
   olympiads/               photos/ + olympiads.{yml,json}
-  research/                archives/ + projects/ + layouts/ + toys.{yml,json}
+  research/                archives/ + projects/ + tech/ + tech.{yml,json}
 apple/                     iOS + watchOS app (SwiftUI, read-only)
 android/                   Android + Wear OS port (Kotlin/Compose, read-only)
 ```

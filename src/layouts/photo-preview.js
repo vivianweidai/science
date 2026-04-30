@@ -2,7 +2,7 @@
  *
  * Listens via event delegation for mouseover/mouseout and shows a
  * floating preview when the cursor enters a trigger element. Triggers:
- *   - any [data-photo="<url>"] element (research toy cards expose
+ *   - any [data-photo="<url>"] element (research tech cards expose
  *     their hero photo this way so the title stays plain text)
  *   - any <a href="...jpg|.jpeg|.png|.gif|.webp"> link in markdown
  *
@@ -105,7 +105,7 @@
     var links = document.querySelectorAll('a[href]');
     for (var i = 0; i < links.length; i++) {
       var a = links[i];
-      if (a.classList.contains('photo-icon') || a.classList.contains('toys-wip')) continue;
+      if (a.classList.contains('photo-icon') || a.classList.contains('tech-wip')) continue;
       var href = a.getAttribute('href') || '';
       if (!/\.(jpe?g|png|gif|webp)(\?|$)/i.test(href)) continue;
 

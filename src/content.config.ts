@@ -14,42 +14,42 @@ const projects = defineCollection({
     // H1 prose title. Rendered by Project.astro at the top of the page.
     title: z.string(),
     // Full science name(s) — drives chip rendering at the title row,
-    // toy-page reverse-lookup, and project-page subject coloring.
+    // tech-page reverse-lookup, and project-page subject coloring.
     sciences: z.array(z.string()),
     // Render the Mi cat icon next to the H1 — only the two cat-themed
     // projects use this.
     mi: z.boolean().optional(),
     data_photos: z.array(z.string()).optional(),
-    // Toys this project uses. Drives the auto-populated Projects section
-    // on each /research/toys/<sci>/<Toy>/ page.
-    toys: z.array(z.string()).optional(),
+    // Techs this project uses. Drives the auto-populated Projects section
+    // on each /research/tech/<sci>/<Tech>/ page.
+    tech: z.array(z.string()).optional(),
   }),
 });
 
-// Per-toy template pages — one folder per toy under
-// public/research/toys/<science_slug>/<Toy Name>/index.md.
-// id is "<science_slug>/<toy>" so the dynamic route can split params.
-const toys = defineCollection({
+// Per-tech template pages — one folder per tech under
+// public/research/tech/<science_slug>/<Tech Name>/index.md.
+// id is "<science_slug>/<tech>" so the dynamic route can split params.
+const tech = defineCollection({
   loader: glob({
     pattern: '*/*/index.md',
-    base: './public/research/toys',
+    base: './public/research/tech',
     generateId: ({ entry }) => entry.replace(/\/index\.md$/, ''),
   }),
   schema: z.object({
-    toy: z.string(),
+    tech: z.string(),
     science: z.string(),
     science_slug: z.string(),
     topic: z.string(),
-    technology: z.string(),
+    category: z.string(),
     hero: z.string().optional(),
     // Optional CSS object-position override for cropping the hero (e.g.
     // "top" or "center 30%"). Default is center; tweak when the
     // important part of the image is off-center.
     hero_position: z.string().optional(),
-    // Physical instruments this toy maps to. Rendered as the Technology
-    // list on the toy page; if the toy is referenced by any project, each
-    // instrument's name links to the most recent matching project.
-    instruments: z.array(z.object({
+    // Physical Toys this Tech maps to. Rendered as the Toys list on the
+    // tech page; if the tech is referenced by any project, each toy's
+    // name links to the most recent matching project.
+    toys: z.array(z.object({
       name: z.string(),
       description: z.string(),
     })).optional(),
@@ -65,4 +65,4 @@ const toys = defineCollection({
   }),
 });
 
-export const collections = { projects, toys };
+export const collections = { projects, tech };
