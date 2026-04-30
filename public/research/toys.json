@@ -529,8 +529,8 @@
       "id": 7,
       "science": "Chemistry",
       "science_slug": "chem",
-      "topic": "Physical",
-      "description": "Separate and transform — non-spectroscopic characterization",
+      "topic": "Resolve",
+      "description": "Resolve the mixture — pull components apart by density or chemistry",
       "technologies": [
         {
           "id": 13,
@@ -596,7 +596,16 @@
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "science": "Chemistry",
+      "science_slug": "chem",
+      "topic": "Identify",
+      "description": "Identify the molecules — apply a stimulus and read the response",
+      "technologies": [
         {
           "id": 14,
           "technology": "Thermal Analysis",
@@ -641,16 +650,7 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "science": "Chemistry",
-      "science_slug": "chem",
-      "topic": "Spectroscopic",
-      "description": "Probe intact molecules — electromagnetic, magnetic and mass spectra",
-      "technologies": [
+        },
         {
           "id": 15,
           "technology": "Molecular Spectroscopy",
