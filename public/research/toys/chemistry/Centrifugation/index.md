@@ -2,7 +2,7 @@
 toy: Centrifugation
 science: Chemistry
 science_slug: chem
-topic: Physical
+topic: Resolve
 technology: Separation
 hero: centrifugation.jpeg
 ---
