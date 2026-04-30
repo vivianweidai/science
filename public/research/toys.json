@@ -67,8 +67,6 @@
               "available": 1,
               "toy_url": "/research/toys/mathematics/SciPy/",
               "hero": "/research/toys/mathematics/SciPy/scipy.jpeg",
-              "completed": "20250225 Catfood",
-              "project_url": "/research/projects/20250225%20Catfood/",
               "projects": [
                 {
                   "date": "2025-02-25",
@@ -223,8 +221,6 @@
               "available": 1,
               "toy_url": "/research/toys/computing/SciPy/",
               "hero": "/research/toys/computing/SciPy/scipy.jpeg",
-              "completed": "20250225 Catfood",
-              "project_url": "/research/projects/20250225%20Catfood/",
               "projects": [
                 {
                   "date": "2025-02-25",
@@ -482,8 +478,6 @@
               "available": 1,
               "toy_url": "/research/toys/physics/Multimeter/",
               "hero": "/research/toys/physics/Multimeter/multimeter.jpeg",
-              "completed": "20260404 Four Point Probe",
-              "project_url": "/research/projects/20260404%20Four%20Point%20Probe/",
               "projects": [
                 {
                   "date": "2026-04-04",
@@ -550,8 +544,6 @@
               "available": 1,
               "toy_url": "/research/toys/chemistry/Centrifugation/",
               "hero": "/research/toys/chemistry/Centrifugation/centrifugation.jpeg",
-              "completed": "20260411 Centrifuge",
-              "project_url": "/research/projects/20260411%20Centrifuge/",
               "projects": [
                 {
                   "date": "2026-04-11",
@@ -572,8 +564,6 @@
               "available": 1,
               "toy_url": "/research/toys/chemistry/Liquid%20Chromatography/",
               "hero": "/research/toys/chemistry/Liquid%20Chromatography/hero.jpg",
-              "completed": "20260427 Chromatography",
-              "project_url": "/research/projects/20260427%20Chromatography/",
               "projects": [
                 {
                   "date": "2026-04-27",
@@ -593,8 +583,6 @@
               "available": 1,
               "toy_url": "/research/toys/chemistry/Gas%20Chromatography/",
               "hero": "/research/toys/chemistry/Gas%20Chromatography/hero.jpg",
-              "completed": "20260427 Chromatography",
-              "project_url": "/research/projects/20260427%20Chromatography/",
               "projects": [
                 {
                   "date": "2026-04-27",
@@ -621,8 +609,6 @@
               "available": 1,
               "toy_url": "/research/toys/chemistry/Thermogravimetry/",
               "hero": "/research/toys/chemistry/Thermogravimetry/tga-q50.jpg",
-              "completed": "20260405 Melting Point",
-              "project_url": "/research/projects/20260405%20Melting%20Point/",
               "projects": [
                 {
                   "date": "2026-04-05",
@@ -642,8 +628,6 @@
               "available": 1,
               "toy_url": "/research/toys/chemistry/Calorimetry/",
               "hero": "/research/toys/chemistry/Calorimetry/dsc-q100.jpg",
-              "completed": "20260405 Melting Point",
-              "project_url": "/research/projects/20260405%20Melting%20Point/",
               "projects": [
                 {
                   "date": "2026-04-05",
@@ -679,8 +663,6 @@
               "available": 1,
               "toy_url": "/research/toys/chemistry/IR%20Spectroscopy/",
               "hero": "/research/toys/chemistry/IR%20Spectroscopy/irspectroscopy.jpeg",
-              "completed": "20260419 IR Spectroscopy",
-              "project_url": "/research/projects/20260419%20IR%20Spectroscopy/",
               "projects": [
                 {
                   "date": "2026-04-19",
@@ -700,8 +682,6 @@
               "available": 1,
               "toy_url": "/research/toys/chemistry/UV-Vis%20Spectroscopy/",
               "hero": "/research/toys/chemistry/UV-Vis%20Spectroscopy/spectrophotometer.jpeg",
-              "completed": "20260420 UV-Vis Spectroscopy",
-              "project_url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
               "projects": [
                 {
                   "date": "2026-04-20",
@@ -736,8 +716,6 @@
               "available": 1,
               "toy_url": "/research/toys/chemistry/MALDI/",
               "hero": "/research/toys/chemistry/MALDI/hero.jpg",
-              "completed": "20260427 Mass Spectrometry",
-              "project_url": "/research/projects/20260427%20Mass%20Spectrometry/",
               "projects": [
                 {
                   "date": "2026-04-27",
@@ -757,8 +735,6 @@
               "available": 1,
               "toy_url": "/research/toys/chemistry/Liquid%20Chromatography%20MS/",
               "hero": "/research/toys/chemistry/Liquid%20Chromatography%20MS/hero.jpg",
-              "completed": "20260427 Mass Spectrometry",
-              "project_url": "/research/projects/20260427%20Mass%20Spectrometry/",
               "projects": [
                 {
                   "date": "2026-04-27",
@@ -778,8 +754,6 @@
               "available": 1,
               "toy_url": "/research/toys/chemistry/Gas%20Chromatography%20MS/",
               "hero": "/research/toys/chemistry/Gas%20Chromatography%20MS/hero.jpg",
-              "completed": "20260427 Mass Spectrometry",
-              "project_url": "/research/projects/20260427%20Mass%20Spectrometry/",
               "projects": [
                 {
                   "date": "2026-04-27",
@@ -878,8 +852,6 @@
               "available": 1,
               "toy_url": "/research/toys/biology/PCR/",
               "hero": "/research/toys/biology/PCR/pcr.jpeg",
-              "completed": "20260401 Genes in Space",
-              "project_url": "/research/projects/20260401%20Genes%20in%20Space/",
               "projects": [
                 {
                   "date": "2026-04-01",
@@ -937,8 +909,6 @@
               "available": 1,
               "toy_url": "/research/toys/biology/Cell-Free/",
               "hero": "/research/toys/biology/Cell-Free/cell-free.jpeg",
-              "completed": "20260401 Genes in Space",
-              "project_url": "/research/projects/20260401%20Genes%20in%20Space/",
               "projects": [
                 {
                   "date": "2026-04-01",
@@ -958,8 +928,6 @@
               "available": 1,
               "toy_url": "/research/toys/biology/Fluorescence/",
               "hero": "/research/toys/biology/Fluorescence/fluorescence.jpeg",
-              "completed": "20260401 Genes in Space",
-              "project_url": "/research/projects/20260401%20Genes%20in%20Space/",
               "projects": [
                 {
                   "date": "2026-04-01",

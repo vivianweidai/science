@@ -62,17 +62,6 @@ data class ResearchToy(
             return "https://vivianweidai.com/$withIndex"
         }
 
-    /** Raw URL for the project's `index.md` — kept for callers that
-     *  want to jump from a toy straight to its project page; the
-     *  default toy tap now lands on `toyIndexUrl`. */
-    val projectIndexUrl: String?
-        get() {
-            val path = projectUrl ?: return null
-            val trimmed = if (path.startsWith("/")) path.drop(1) else path
-            val withIndex = if (trimmed.endsWith("/")) trimmed + "index.md" else "$trimmed/index.md"
-            return "https://vivianweidai.com/$withIndex"
-        }
-
     /** External URL to open (Wolfram, GitHub, Colab) — or resolved to a raw
      *  GitHub URL when `url` is a repo-relative path like a photo link. */
     val externalUrl: String?

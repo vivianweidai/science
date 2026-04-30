@@ -218,13 +218,16 @@ import PageFooter from '../../layouts/PageFooter.astro';
     }
     .toys-tech-name { font-weight: 700; }
 
-    .toys-tech-desc {
+    /* td.toys-tech-desc beats .toys-table td (both 0,1,1 specificity, but
+       this rule comes later) so the default `color: transparent` actually
+       takes effect. The hover rule then bumps to 0,2,1 to win over it. */
+    td.toys-tech-desc {
       font-weight: 400;
       color: transparent;
       transition: color .2s ease;
       text-align: right;
     }
-    .toys-card-wrap:hover .toys-tech-desc {
+    .toys-card-wrap:hover td.toys-tech-desc {
       color: #1f2328;
     }
     .toys-tech-row:hover td { background: #eef1f4; }

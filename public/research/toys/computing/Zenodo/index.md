@@ -4,5 +4,5 @@ science: Computing
 science_slug: comp
 topic: Publish
 technology: Reproducibility
-hero: zenodo.jpeg
+hero: zenodo.svg
 ---

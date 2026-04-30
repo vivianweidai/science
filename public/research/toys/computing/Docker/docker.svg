@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 782" width="1600" height="782">
+  <defs>
+    <style>
+      .box       { fill:#ffffff; stroke:#cdd5df; stroke-width:1.4; }
+      .box-head  { fill:#d9ccee; opacity:0.55; }
+      .env       { fill:#1f2328; font-family:'Iowan Old Style','Charter',Georgia,serif; font-size:22px; font-style:italic; }
+      .hash      { fill:#7d6bb3; font-family:'SF Mono','Menlo',monospace; font-size:14px; }
+      .pkg-name  { fill:#1f2328; font-family:'SF Mono','Menlo',monospace; font-size:16px; }
+      .pkg-ver   { fill:#6b7280; font-family:'SF Mono','Menlo',monospace; font-size:16px; font-feature-settings:"tnum"; }
+      .equals    { fill:#9aa3af; font-family:'Iowan Old Style','Charter',Georgia,serif; font-size:64px; }
+      .title     { fill:#1f2328; font-family:'Iowan Old Style','Charter',Georgia,serif; font-style:italic; font-size:24px; }
+      .subtitle  { fill:#6b7280; font-family:'Avenir Next','SF Pro Text','Helvetica Neue',sans-serif; font-size:16px; }
+    </style>
+  </defs>
+  <rect width="1600" height="782" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text class="title"    x="800" y="170" text-anchor="middle">Build once. Run anywhere. Same hash, same behaviour.</text>
+  <text class="subtitle" x="800" y="194" text-anchor="middle">three runtimes, one immutable image — reproducibility by construction</text>
+
+  <!-- Three identical container boxes -->
+  <!-- Box positions: each 380 wide × 320 tall, gaps 60, centered -->
+
+  <!-- Box 1: laptop -->
+  <g transform="translate(170 230)">
+    <rect class="box" x="0" y="0" width="380" height="320" rx="6"/>
+    <rect class="box-head" x="1" y="1" width="378" height="46" rx="6"/>
+    <line stroke="#cdd5df" stroke-width="1" x1="0" y1="47" x2="380" y2="47"/>
+    <text class="env" x="22" y="33">your laptop</text>
+    <text class="hash" x="358" y="33" text-anchor="end">arm64 · darwin</text>
+
+    <text class="hash" x="22" y="80">sha256: c4f9b1a2 e8d7…</text>
+    <line stroke="#eceff3" stroke-width="1" x1="22" y1="98" x2="358" y2="98"/>
+
+    <text class="pkg-name" x="22"  y="128">python</text>
+    <text class="pkg-ver"  x="358" y="128" text-anchor="end">3.11.6</text>
+    <text class="pkg-name" x="22"  y="155">numpy</text>
+    <text class="pkg-ver"  x="358" y="155" text-anchor="end">1.26.4</text>
+    <text class="pkg-name" x="22"  y="182">scipy</text>
+    <text class="pkg-ver"  x="358" y="182" text-anchor="end">1.13.0</text>
+    <text class="pkg-name" x="22"  y="209">scikit-learn</text>
+    <text class="pkg-ver"  x="358" y="209" text-anchor="end">1.4.2</text>
+    <text class="pkg-name" x="22"  y="236">pandas</text>
+    <text class="pkg-ver"  x="358" y="236" text-anchor="end">2.2.1</text>
+    <text class="pkg-name" x="22"  y="263">jupyter</text>
+    <text class="pkg-ver"  x="358" y="263" text-anchor="end">1.0.0</text>
+    <text class="pkg-name" x="22"  y="290">matplotlib</text>
+    <text class="pkg-ver"  x="358" y="290" text-anchor="end">3.8.4</text>
+  </g>
+
+  <!-- Equals between box 1 and 2 -->
+  <text class="equals" x="580" y="410" text-anchor="middle">=</text>
+
+  <!-- Box 2: HPC cluster -->
+  <g transform="translate(610 230)">
+    <rect class="box" x="0" y="0" width="380" height="320" rx="6"/>
+    <rect class="box-head" x="1" y="1" width="378" height="46" rx="6"/>
+    <line stroke="#cdd5df" stroke-width="1" x1="0" y1="47" x2="380" y2="47"/>
+    <text class="env" x="22" y="33">the HPC cluster</text>
+    <text class="hash" x="358" y="33" text-anchor="end">x86_64 · linux</text>
+
+    <text class="hash" x="22" y="80">sha256: c4f9b1a2 e8d7…</text>
+    <line stroke="#eceff3" stroke-width="1" x1="22" y1="98" x2="358" y2="98"/>
+
+    <text class="pkg-name" x="22"  y="128">python</text>
+    <text class="pkg-ver"  x="358" y="128" text-anchor="end">3.11.6</text>
+    <text class="pkg-name" x="22"  y="155">numpy</text>
+    <text class="pkg-ver"  x="358" y="155" text-anchor="end">1.26.4</text>
+    <text class="pkg-name" x="22"  y="182">scipy</text>
+    <text class="pkg-ver"  x="358" y="182" text-anchor="end">1.13.0</text>
+    <text class="pkg-name" x="22"  y="209">scikit-learn</text>
+    <text class="pkg-ver"  x="358" y="209" text-anchor="end">1.4.2</text>
+    <text class="pkg-name" x="22"  y="236">pandas</text>
+    <text class="pkg-ver"  x="358" y="236" text-anchor="end">2.2.1</text>
+    <text class="pkg-name" x="22"  y="263">jupyter</text>
+    <text class="pkg-ver"  x="358" y="263" text-anchor="end">1.0.0</text>
+    <text class="pkg-name" x="22"  y="290">matplotlib</text>
+    <text class="pkg-ver"  x="358" y="290" text-anchor="end">3.8.4</text>
+  </g>
+
+  <!-- Equals between box 2 and 3 -->
+  <text class="equals" x="1020" y="410" text-anchor="middle">=</text>
+
+  <!-- Box 3: a cloud VM -->
+  <g transform="translate(1050 230)">
+    <rect class="box" x="0" y="0" width="380" height="320" rx="6"/>
+    <rect class="box-head" x="1" y="1" width="378" height="46" rx="6"/>
+    <line stroke="#cdd5df" stroke-width="1" x1="0" y1="47" x2="380" y2="47"/>
+    <text class="env" x="22" y="33">a cloud VM</text>
+    <text class="hash" x="358" y="33" text-anchor="end">x86_64 · linux</text>
+
+    <text class="hash" x="22" y="80">sha256: c4f9b1a2 e8d7…</text>
+    <line stroke="#eceff3" stroke-width="1" x1="22" y1="98" x2="358" y2="98"/>
+
+    <text class="pkg-name" x="22"  y="128">python</text>
+    <text class="pkg-ver"  x="358" y="128" text-anchor="end">3.11.6</text>
+    <text class="pkg-name" x="22"  y="155">numpy</text>
+    <text class="pkg-ver"  x="358" y="155" text-anchor="end">1.26.4</text>
+    <text class="pkg-name" x="22"  y="182">scipy</text>
+    <text class="pkg-ver"  x="358" y="182" text-anchor="end">1.13.0</text>
+    <text class="pkg-name" x="22"  y="209">scikit-learn</text>
+    <text class="pkg-ver"  x="358" y="209" text-anchor="end">1.4.2</text>
+    <text class="pkg-name" x="22"  y="236">pandas</text>
+    <text class="pkg-ver"  x="358" y="236" text-anchor="end">2.2.1</text>
+    <text class="pkg-name" x="22"  y="263">jupyter</text>
+    <text class="pkg-ver"  x="358" y="263" text-anchor="end">1.0.0</text>
+    <text class="pkg-name" x="22"  y="290">matplotlib</text>
+    <text class="pkg-ver"  x="358" y="290" text-anchor="end">3.8.4</text>
+  </g>
+
+  <!-- Caption -->
+  <text class="hash" x="800" y="600" text-anchor="middle">a 64-character digest stands in for the entire stack</text>
+</svg>

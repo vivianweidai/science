@@ -742,11 +742,11 @@ private val githubJson = Json { ignoreUnknownKeys = true }
 private suspend fun scanProjectPhotos(indexUrl: String): List<String> {
     val parts = indexUrl.substringAfter("://").substringAfter('/').split('/')
     val idxPos = parts.indexOf("index.md").takeIf { it > 0 } ?: return emptyList()
-    // indexUrl segments may already be percent-encoded (the toy's
-    // project_url in toys.json carries `%20` for spaces). Decode the
-    // folder name to its raw form before re-encoding it for the GitHub
-    // contents API — a double-encode would turn `%20` into `%2520` and
-    // the API 404s.
+    // indexUrl segments may already be percent-encoded (the per-toy
+    // project entry's `url` in toys.json carries `%20` for spaces).
+    // Decode the folder name to its raw form before re-encoding it for
+    // the GitHub contents API — a double-encode would turn `%20` into
+    // `%2520` and the API 404s.
     val folder = java.net.URLDecoder.decode(parts[idxPos - 1], "UTF-8")
     // public/ is the on-disk root mapped to the site root; that's
     // what the GitHub Contents API needs to see.
