@@ -3,6 +3,6 @@ toy: Docker
 science: Computing
 science_slug: comp
 topic: Reproduce
-technology: Reproducibility
+technology: Snapshot
 hero: docker.png
 ---

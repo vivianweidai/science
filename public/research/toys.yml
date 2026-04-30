@@ -102,8 +102,8 @@
           specs: Notebooks combining code, figures and narrative
           available: true
           url: https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb
-    - technology: Reproducibility
-      description: Freeze environments and archive results
+    - technology: Snapshot
+      description: Snapshot the environment, snapshot the bytes
       toys:
         - toy: Docker
           specs: Containers that freeze every dependency

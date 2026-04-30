@@ -373,8 +373,8 @@
         },
         {
           "id": 8,
-          "technology": "Reproducibility",
-          "description": "Freeze environments and archive results",
+          "technology": "Snapshot",
+          "description": "Snapshot the environment, snapshot the bytes",
           "toys": [
             {
               "id": 11,

@@ -3,6 +3,6 @@ toy: Zenodo
 science: Computing
 science_slug: comp
 topic: Reproduce
-technology: Reproducibility
+technology: Snapshot
 hero: zenodo.png
 ---
