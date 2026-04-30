@@ -6,6 +6,8 @@ topic: Identify
 technology: Molecular Spectroscopy
 hero: irspectroscopy.jpeg
 instruments:
+  - name: Thermo Scientific Nicolet 380 FT-IR Spectrometer
+    description: Bench FT-IR — bulk-sample transmission and ATR scans, ~550–4000 cm⁻¹
   - name: Bruker Tensor 27 Hyperion FT-IR Microscope
     description: FT-IR microspectroscopy — point spectra on small or heterogeneous samples
   - name: Mettler Toledo ReactIR iC10

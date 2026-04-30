@@ -6,12 +6,18 @@ topic: Identify
 technology: Molecular Spectroscopy
 hero: spectrophotometer.jpeg
 instruments:
-  - name: PerkinElmer Lambda 750 UV/Vis/NIR Spectrophotometer
-    description: Research-grade — 190–3300 nm with integrating sphere
+  - name: Shimadzu UV-2550 UV-Vis Spectrophotometer
+    description: Bench UV-Vis absorbance — λ_max scans across 200–800 nm
+  - name: Horiba Jobin Yvon FluoroMax-3 Spectrofluorometer
+    description: Steady-state fluorescence — emission and excitation scans, 200–800 nm
+  - name: PerkinElmer Lambda 750 UV-Vis-NIR Spectrophotometer
+    description: Research-grade — 190–3300 nm with integrating sphere, extends into NIR for solvent overtones
   - name: Jasco J-1500 CD Spectrometer
     description: Circular dichroism — chiral biomolecules and protein secondary structure
-  - name: Vernier Go Direct Fluorescence/UV-VIS Spectrophotometer
-    description: Home-lab benchtop — UV/Vis absorbance plus fluorescence with 280 nm LED cartridge
+  - name: VTSYIQI Visible Spectrophotometer
+    description: Take-home benchtop — visible absorbance, 320–1020 nm
+  - name: Vernier Go Direct Fluorescence UV-VIS Spectrophotometer
+    description: Home-lab benchtop — UV-Vis absorbance plus fluorescence with 280 nm LED cartridge
 ---
 
 ## Equipment
