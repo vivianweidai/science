@@ -386,5 +386,7 @@
       techs:
         - tech: Transient
           specs: Events
+          available: true
         - tech: Galaxy Morphology
           specs: Galaxies
+          available: true

@@ -1208,7 +1208,7 @@
               "id": 64,
               "tech": "Transient",
               "specs": "Events",
-              "available": 0,
+              "available": 1,
               "tech_url": "/research/tech/astronomy/Transient/",
               "hero": "/research/tech/astronomy/Transient/transient.png"
             },
@@ -1216,7 +1216,7 @@
               "id": 65,
               "tech": "Galaxy Morphology",
               "specs": "Galaxies",
-              "available": 0,
+              "available": 1,
               "tech_url": "/research/tech/astronomy/Galaxy%20Morphology/",
               "hero": "/research/tech/astronomy/Galaxy%20Morphology/galaxymorphology.png"
             }
