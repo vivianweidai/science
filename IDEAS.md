@@ -207,6 +207,69 @@ Four tiers, from lowest bar to highest. Aim up — a rigorous household-material
 
 Regeneron ISEF · Regeneron STS · JSHS · USABO / USNCO / USAPhO Olympiads.
 
+## Future topic structure
+
+Live structure as of 2026-05-01 — Math/Compute/Astronomy at 2 topics each (tools + special-purpose), Physics/Chemistry/Biology at 3 each (the bench-research bulk).
+
+Hold these for later — *don't add to `tech.yml` until at least one concrete project anchors each one*, otherwise they sit thin like Polarimetry did.
+
+### Chemistry — 3rd topic: **Transform**
+
+The whole point after foundational analysis. Identify / React get you to "we know what's in the sample" and "we drove a reaction to learn"; Transform is "we made something new." Without this, the chemistry section reads as a pure-analysis discipline, which understates it.
+
+```
+Topic 3: Transform  (drive chemistry to make new things)
+  Synthesis:    Electrosynthesis, Photochemistry, Mechanochemistry
+  Catalysis:    Heterogeneous, Homogeneous
+  Kinetics:     Real-time reaction monitoring
+```
+
+Triggers to promote: a planned electrosynthesis project (water splitting, Cu plating from CuSO₄), a photochemistry demo (E/Z isomerization of stilbene under UV), or a kinetics project (decomposition rate of H₂O₂ with various catalysts watched via O₂ probe). One of these falling out of a React-electrochemistry project is likely — they're adjacent.
+
+### Physics — future categories worth planning
+
+Current shape: **Measure + Build** (2 topics). Restructured 2026-05-01 to a verb-pair matching every other science. Measure has Motion / Fluids / Electromagnetism (fields + optics merged). Build has Circuits / Prototypes (3D printing). Heat moved to Chem React → Thermal where Vernier Temperature Probe enables Melting Point.
+
+Categories worth adding (within Measure or Build, when toys commit):
+
+- **Measure → Materials** — hardness, elastic modulus, fracture, viscosity. Bridges to Chem-Thermal (TGA-DSC of polymers).
+- **Measure → Acoustics** — sound waves, vibration, frequency analysis. Toys: Vernier Go Direct Sound, oscilloscope-on-mic.
+- **Build → Optics** — custom optical setups (lasers, prisms, polarization). When sustained optics work emerges.
+- **Build → Machining** — CNC, lathe, mill. Real maker capability.
+
+Topics worth adding (3rd Physics topic, when toys + projects commit):
+
+- **Modern / Quantum** — radioactivity (Geiger, cloud chamber), photoelectric effect, atomic spectra.
+- **Heat / Thermodynamics** — returns to Physics if a real physics-side thermo toy lands (IR camera, Stirling demo). Currently parked in Chem React → Thermal.
+
+Triggers to promote: cloud-chamber kit + first muon-counting project (Modern); shop hammer-test rig (Materials); CNC purchase (Machining); FLIR ONE Pro purchase (Heat returns).
+
+### Biology — 3rd topic: **Grow** (project-anchored)
+
+Bacterial Culture, Antibiotic Susceptibility, Yeast Fermentation, Plant Tissue Culture, Drosophila Genetics — these are *project areas*, not techs. Same axis distinction as the chem reaction-types (acid/base, redox, precipitation): they describe biology happening, not instruments or methods. They surface through project pages, not the Tech matrix.
+
+When a Grow project commits with real toys (Drosophila vials + food, microbiology incubator + plates), promote the relevant techs back into a Grow topic on the page. Lowest-friction first launch: **Drosophila genetics** (~$100 from Carolina Biological — vials, food, white-eye + wild-type stocks, ice-knockout). Stereoscope under Image → Microscopy already covers sorting.
+
+### Vancouver lab buildout — pre-order priorities
+
+What is and isn't needed for the summer 2026 home lab.
+
+**Not needed** (skip these):
+- **Fume hood** — basement has two cross-ventilation windows; sufficient for the chemistry we'd run at home.
+- **-80 °C / -20 °C freezer, dedicated lab incubator, laminar flow hood** — dad's lab covers these. Cold storage of bio samples and microbiology incubation runs there, not at home.
+
+**Worth pre-ordering** (cross-discipline bench bottlenecks; ~$1,000-1,500 total):
+- **Analytical balance** (0.1 mg, ~$300-500) — universal across chem and bio. The single biggest "didn't realize how often we'd reach for it" tool.
+- **Microcentrifuge** (12k rpm, 24-tube, ~$150-300) — DNA prep, sample concentration, generic spin work.
+- **Vortex mixer** (~$80-150) — sample prep universal.
+- **Hot plate / magnetic stirrer combo** (~$150-300) — make agar plates, dissolve reagents, control temperature for kinetics. Heavy crossover with React-Thermal work.
+
+**Held until project commits:**
+- Drosophila kit (~$100) — when Grow gets greenlit
+- Microbiology starter kit (~$300) — same
+- Used laminar flow hood — only if plant tissue culture becomes specifically planned
+- Real autoclave (~$500-2,000) — pressure cooker substitutes for ~95% of the time
+
 ## Status key
 
 - **raw** — idea captured, not yet scoped
@@ -218,5 +281,10 @@ Regeneron ISEF · Regeneron STS · JSHS · USABO / USNCO / USAPhO Olympiads.
 
 ## Change log
 
+- **2026-05-01** — Physics restructure (final): Move/Heat/Wave → **Measure + Build** (2 topics, verb pair matching every other science). Measure: Motion (Force, Distance, Time), Fluids (Pressure, Turbidity), Electromagnetism (Magnetic Field, Spectrometer, Interferometer — fields + optics merged). Build: Circuits (Rigol scope, TOAUTO soldering, SainSmart helping hands; Multimeter dropped as too basic), Prototypes (Bambu Lab A1 Mini placeholder for 3D Printing). Heat dropped — Vernier Temperature Probe became a toy under Chem React → Thermal → new **Melting Point** tech (with broken OptiMelt as historical toy). Vernier Conductivity Probe moved from Physics → Chem React → Conductometry (now available). Tech-name rename: Photogate→Time, Motion Detector→Distance, Gas Pressure→Pressure (toys describe the instrument, techs describe the measurement). Dropped unsupported physics tech files. Four Point Probe project relinked to new Circuits tech. All 6 sciences now at 2 topics each with verb-pair labels.
+- **2026-05-01** — Removed Bio Grow from `tech.yml`. The "techs" inside (Bacterial Culture, Drosophila Genetics, etc.) are project areas, not techs — same axis-mismatch as chem reaction types (acid/base, redox, precipitation). Bio sits at 2 topics (Image, Replicate); Grow returns when toys + project commit.
+- **2026-05-01** — Added Vancouver lab buildout pre-order list (cross-discipline bench bottlenecks: balance, microcentrifuge, vortex, hot plate). Dad's lab covers cold storage / incubation / laminar flow.
+- **2026-05-01** — Chemistry restructure: collapsed Resolve into Identify (Separation moved up), renamed Probe → React (Thermal joined Electrochemistry), Polarimetry stayed under Identify alongside CD. Chemistry now sits at 2 topics (Identify / React); Transform stays as the planned 3rd.
+- **2026-05-01** — Added "Future topic structure" section: Chemistry's planned 4th topic (Transform), Physics future categories (Acoustics, Modern, Materials, Fluids), Biology hold rationale.
 - **2026-04-25** — Moved from `content/research/README.md` to repo-root `IDEAS.md` per the cross-repo `IDEAS.md` convention. Stripped Jekyll layout frontmatter (Jekyll era ended; Astro doesn't consume this doc).
 - **2026-04-24** — Initial backlog seeded: chemistry (13), biology (6), physics (5), computing (5), mathematics (4), astronomy (5). Instrument + venue reference tables included.

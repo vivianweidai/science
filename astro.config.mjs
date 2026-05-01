@@ -10,4 +10,10 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
+  // Disable the dev toolbar's hover-source overlay (the "File display"
+  // tooltip that appears over images and elements in dev mode). Only
+  // affects local preview; production build is unaffected either way.
+  devToolbar: {
+    enabled: false,
+  },
 });

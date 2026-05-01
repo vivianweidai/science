@@ -119,8 +119,8 @@ Same family, two modes, four chromatographs. Separation differs by **mobile phas
 <div class="tech-table">
 <div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li data-subj="chem"><span class="update-date">Separation</span> <span class="update-name"><a href="/research/tech/chemistry/Liquid Chromatography/">Liquid Chromatography</a></span> <span class="update-desc">Pumped liquid solvent through packed column — for soluble, polar, thermally fragile analytes</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
-  <li data-subj="chem"><span class="update-date">Separation</span> <span class="update-name"><a href="/research/tech/chemistry/Gas Chromatography/">Gas Chromatography</a></span> <span class="update-desc">Inert carrier gas through heated capillary — for volatile, thermally stable analytes</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li data-subj="chem"><span class="update-date">Separation</span> <span class="update-name"><a href="/research/technology/chemistry/Liquid Chromatography/">Liquid Chromatography</a></span> <span class="update-desc">Pumped liquid solvent through packed column — for soluble, polar, thermally fragile analytes</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li data-subj="chem"><span class="update-date">Separation</span> <span class="update-name"><a href="/research/technology/chemistry/Gas Chromatography/">Gas Chromatography</a></span> <span class="update-desc">Inert carrier gas through heated capillary — for volatile, thermally stable analytes</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
 </ul>
 </div>
 </div>

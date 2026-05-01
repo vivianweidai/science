@@ -2,10 +2,7 @@
 project: UV-Vis Spectroscopy
 tech:
   - UV-Vis Spectroscopy
-  - NumPy
-  - Matplotlib
-  - Jupyter
-  - GitHub
+  - Graphic
 title: "UV-Vis Spectroscopy of Everyday Fluorophores"
 sciences:
   - Chemistry
@@ -258,11 +255,11 @@ Brief exploratory scan of distilled water — one pass on the PerkinElmer Lambda
 <div class="tech-table">
 <div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li data-subj="math"><span class="update-date">Numerical</span> <span class="update-name"><a href="/research/tech/mathematics/NumPy/">NumPy</a></span> <span class="update-desc">Array foundation — linear algebra and vectorized math</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li data-subj="math"><span class="update-date">Graphing</span> <span class="update-name"><a href="/research/tech/mathematics/Matplotlib/">Matplotlib</a></span> <span class="update-desc">Python 2D and 3D plotting</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/tech/computing/GitHub/">GitHub</a></span> <span class="update-desc">Data and source code repositories</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
-  <li data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/tech/computing/Jupyter/">Jupyter</a></span> <span class="update-desc">Notebooks combining code, figures and narrative</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
-  <li data-subj="chem"><span class="update-date">Molecular Spectroscopy</span> <span class="update-name"><a href="/research/tech/chemistry/UV-Vis Spectroscopy/">UV-Vis Spectroscopy</a></span> <span class="update-desc">Light absorption — concentration and conjugation</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li data-subj="math"><span class="update-date">Numerical</span> <span class="update-name"><a href="/research/technology/mathematics/NumPy/">NumPy</a></span> <span class="update-desc">Array foundation — linear algebra and vectorized math</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li data-subj="math"><span class="update-date">Graphing</span> <span class="update-name"><a href="/research/technology/mathematics/Matplotlib/">Matplotlib</a></span> <span class="update-desc">Python 2D and 3D plotting</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/technology/computing/GitHub/">GitHub</a></span> <span class="update-desc">Data and source code repositories</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/technology/computing/Jupyter/">Jupyter</a></span> <span class="update-desc">Notebooks combining code, figures and narrative</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li data-subj="chem"><span class="update-date">Molecular Spectroscopy</span> <span class="update-name"><a href="/research/technology/chemistry/UV-Vis Spectroscopy/">UV-Vis Spectroscopy</a></span> <span class="update-desc">Light absorption — concentration and conjugation</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
 </ul>
 </div>
 </div>

@@ -15,6 +15,17 @@ while IFS= read -r f; do
   [ -z "$f" ] || [ ! -f "$f" ] && continue
   size=$(wc -c < "$f" 2>/dev/null | tr -d ' ')
   [ -z "$size" ] && continue
+
+  # Tech-page hero images are exempt from the image bloat rule. They
+  # render full-width with object-fit: cover and need to stay at source
+  # resolution to be crisp on retina displays. See science/CLAUDE.md.
+  # Path pattern: public/research/technology/<science>/<Tech>/<file>.{jpg,jpeg,png}
+  case "$(printf '%s' "$f" | tr '[:upper:]' '[:lower:]')" in
+    public/research/technology/*/*/*.jpg|public/research/technology/*/*/*.jpeg|public/research/technology/*/*/*.png)
+      continue
+      ;;
+  esac
+
   case "$(printf '%s' "$f" | tr '[:upper:]' '[:lower:]')" in
     *.jpg|*.jpeg|*.png)
       if [ "$size" -gt "$IMG_LIMIT" ]; then
@@ -36,6 +47,7 @@ if [ -n "$img_warns" ] || [ -n "$pdf_warns" ]; then
   if [ -n "$img_warns" ]; then
     printf '\nImages > 500 KB (consider: sips -Z 1600 -s formatOptions 82 file --out file):\n' >&2
     printf '%b' "$img_warns" >&2
+    printf '\nNote: tech-page hero images (public/research/technology/<sci>/<Tech>/) are exempt — keep at source resolution.\n' >&2
   fi
   if [ -n "$pdf_warns" ]; then
     printf '\nPDFs > 5 MB (consider: gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=out.pdf in.pdf):\n' >&2

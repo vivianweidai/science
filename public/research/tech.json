@@ -4,32 +4,22 @@
       "id": 1,
       "science": "Mathematics",
       "science_slug": "math",
-      "topic": "Calculate",
-      "description": "Calculate the answer",
+      "topic": "Solve",
+      "description": "",
       "categories": [
         {
           "id": 1,
-          "category": "Numerical",
-          "description": "Approximate answers",
+          "category": "Calculate",
+          "description": "",
           "techs": [
             {
               "id": 1,
-              "tech": "NumPy",
-              "specs": "Arrays",
+              "tech": "Numerical",
+              "specs": "Approximate",
               "available": 1,
-              "tech_url": "/research/tech/mathematics/NumPy/",
-              "hero": "/research/tech/mathematics/NumPy/numpy.jpeg",
+              "tech_url": "/research/technology/mathematics/Numerical/",
               "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
               "projects": [
-                {
-                  "date": "2026-04-20",
-                  "title": "UV-Vis Spectroscopy of Everyday Fluorophores",
-                  "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
-                  "sciences": [
-                    "Chemistry"
-                  ],
-                  "folder": "20260420 UV-Vis Spectroscopy"
-                },
                 {
                   "date": "2026-04-19",
                   "title": "IR Spectroscopy of Everyday Materials",
@@ -38,97 +28,30 @@
                     "Chemistry"
                   ],
                   "folder": "20260419 IR Spectroscopy"
-                },
-                {
-                  "date": "2026-04-04",
-                  "title": "Four-Point Probe Sheet Resistance Measurements",
-                  "url": "/research/projects/20260404%20Four%20Point%20Probe/",
-                  "sciences": [
-                    "Physics"
-                  ],
-                  "folder": "20260404 Four Point Probe"
-                },
-                {
-                  "date": "2025-02-25",
-                  "title": "Red or Green, What Colored Cat Food does Mi Prefer?",
-                  "url": "/research/projects/20250225%20Catfood/",
-                  "sciences": [
-                    "Mathematics",
-                    "Computing"
-                  ],
-                  "folder": "20250225 Catfood"
                 }
               ]
             },
             {
               "id": 2,
-              "tech": "SciPy",
-              "specs": "Routines",
+              "tech": "Symbolic",
+              "specs": "Exact",
               "available": 1,
-              "tech_url": "/research/tech/mathematics/SciPy/",
-              "hero": "/research/tech/mathematics/SciPy/scipy.jpeg",
-              "projects": [
-                {
-                  "date": "2025-02-25",
-                  "title": "Red or Green, What Colored Cat Food does Mi Prefer?",
-                  "url": "/research/projects/20250225%20Catfood/",
-                  "sciences": [
-                    "Mathematics",
-                    "Computing"
-                  ],
-                  "folder": "20250225 Catfood"
-                }
-              ]
+              "tech_url": "/research/technology/mathematics/Symbolic/",
+              "url": "https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb"
             }
           ]
         },
         {
           "id": 2,
-          "category": "Symbolic",
-          "description": "Exact answers",
+          "category": "Communicate",
+          "description": "",
           "techs": [
             {
               "id": 3,
-              "tech": "Wolfram Alpha",
-              "specs": "Symbolic answers",
+              "tech": "Graphic",
+              "specs": "2D and 3D",
               "available": 1,
-              "tech_url": "/research/tech/mathematics/Wolfram%20Alpha/",
-              "hero": "/research/tech/mathematics/Wolfram%20Alpha/wolframalpha.jpeg",
-              "url": "https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb",
-              "projects": [
-                {
-                  "date": "2026-04-01",
-                  "title": "Wolfram Alpha — Dry Run",
-                  "url": "https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb",
-                  "sciences": [
-                    "Astronomy"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "science": "Mathematics",
-      "science_slug": "math",
-      "topic": "Communicate",
-      "description": "Communicate the answer",
-      "categories": [
-        {
-          "id": 3,
-          "category": "Graphing",
-          "description": "Data to figures",
-          "techs": [
-            {
-              "id": 4,
-              "tech": "Matplotlib",
-              "specs": "Plots",
-              "available": 1,
-              "tech_url": "/research/tech/mathematics/Matplotlib/",
-              "hero": "/research/tech/mathematics/Matplotlib/matplotlib.jpeg",
+              "tech_url": "/research/technology/mathematics/Graphic/",
               "url": "/research/projects/20260404%20Four%20Point%20Probe/",
               "projects": [
                 {
@@ -139,51 +62,15 @@
                     "Chemistry"
                   ],
                   "folder": "20260420 UV-Vis Spectroscopy"
-                },
-                {
-                  "date": "2026-04-19",
-                  "title": "IR Spectroscopy of Everyday Materials",
-                  "url": "/research/projects/20260419%20IR%20Spectroscopy/",
-                  "sciences": [
-                    "Chemistry"
-                  ],
-                  "folder": "20260419 IR Spectroscopy"
-                },
-                {
-                  "date": "2026-04-04",
-                  "title": "Four-Point Probe Sheet Resistance Measurements",
-                  "url": "/research/projects/20260404%20Four%20Point%20Probe/",
-                  "sciences": [
-                    "Physics"
-                  ],
-                  "folder": "20260404 Four Point Probe"
-                },
-                {
-                  "date": "2025-02-25",
-                  "title": "Red or Green, What Colored Cat Food does Mi Prefer?",
-                  "url": "/research/projects/20250225%20Catfood/",
-                  "sciences": [
-                    "Mathematics",
-                    "Computing"
-                  ],
-                  "folder": "20250225 Catfood"
                 }
               ]
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "category": "Typesetting",
-          "description": "Documents and equations",
-          "techs": [
+            },
             {
-              "id": 5,
-              "tech": "LaTeX",
-              "specs": "Typeset documents",
+              "id": 4,
+              "tech": "Typesetting",
+              "specs": "Equations and Reactions",
               "available": 1,
-              "tech_url": "/research/tech/mathematics/LaTeX/",
-              "hero": "/research/tech/mathematics/LaTeX/latex.jpeg",
+              "tech_url": "/research/technology/mathematics/Typesetting/",
               "url": "/curriculum/",
               "projects": [
                 {
@@ -203,24 +90,23 @@
       ]
     },
     {
-      "id": 3,
+      "id": 2,
       "science": "Computing",
       "science_slug": "comp",
-      "topic": "Analyze",
-      "description": "Analyze the data",
+      "topic": "Process",
+      "description": "",
       "categories": [
         {
-          "id": 5,
-          "category": "Statistics",
-          "description": "Quantify uncertainty",
+          "id": 3,
+          "category": "Predict",
+          "description": "",
           "techs": [
             {
-              "id": 6,
-              "tech": "SciPy",
-              "specs": "Stats tests",
+              "id": 5,
+              "tech": "Inference",
+              "specs": "Statistics",
               "available": 1,
-              "tech_url": "/research/tech/computing/SciPy/",
-              "hero": "/research/tech/computing/SciPy/scipy.jpeg",
+              "tech_url": "/research/technology/computing/Inference/",
               "projects": [
                 {
                   "date": "2025-02-25",
@@ -233,29 +119,139 @@
                   "folder": "20250225 Catfood"
                 }
               ]
+            },
+            {
+              "id": 6,
+              "tech": "Machine Learning",
+              "specs": "Classic models",
+              "available": 1,
+              "tech_url": "/research/technology/computing/Machine%20Learning/"
+            },
+            {
+              "id": 7,
+              "tech": "Deep Learning",
+              "specs": "Neural networks",
+              "available": 1,
+              "tech_url": "/research/technology/computing/Deep%20Learning/"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "category": "Reproduce",
+          "description": "",
+          "techs": [
+            {
+              "id": 8,
+              "tech": "Repository",
+              "specs": "Data code notebooks",
+              "available": 1,
+              "tech_url": "/research/technology/computing/Repository/",
+              "url": "https://github.com/vivianweidai",
+              "projects": [
+                {
+                  "date": "2026-04-04",
+                  "title": "Four-Point Probe Sheet Resistance Measurements",
+                  "url": "/research/projects/20260404%20Four%20Point%20Probe/",
+                  "sciences": [
+                    "Physics"
+                  ],
+                  "folder": "20260404 Four Point Probe"
+                }
+              ]
+            },
+            {
+              "id": 9,
+              "tech": "Snapshot",
+              "specs": "Environment and ID",
+              "available": 1,
+              "tech_url": "/research/technology/computing/Snapshot/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "science": "Physics",
+      "science_slug": "phys",
+      "topic": "Measure",
+      "description": "",
+      "categories": [
+        {
+          "id": 5,
+          "category": "Motion",
+          "description": "",
+          "techs": [
+            {
+              "id": 10,
+              "tech": "Force",
+              "specs": "Push and pull",
+              "available": 1,
+              "tech_url": "/research/technology/physics/Force/"
+            },
+            {
+              "id": 11,
+              "tech": "Distance",
+              "specs": "Ultrasonic ranger",
+              "available": 1,
+              "tech_url": "/research/technology/physics/Distance/"
+            },
+            {
+              "id": 12,
+              "tech": "Time",
+              "specs": "Beam timing",
+              "available": 1,
+              "tech_url": "/research/technology/physics/Time/"
             }
           ]
         },
         {
           "id": 6,
-          "category": "Machine Learning",
-          "description": "Predict through patterns",
+          "category": "Fluids",
+          "description": "",
           "techs": [
             {
-              "id": 7,
-              "tech": "scikit-learn",
-              "specs": "Classic models",
+              "id": 13,
+              "tech": "Pressure",
+              "specs": "Sealed pressure",
               "available": 1,
-              "tech_url": "/research/tech/computing/scikit-learn/",
-              "hero": "/research/tech/computing/scikit-learn/scikit-learn.png"
+              "tech_url": "/research/technology/physics/Pressure/"
             },
             {
-              "id": 8,
-              "tech": "PyTorch",
-              "specs": "Neural networks",
+              "id": 14,
+              "tech": "Turbidity",
+              "specs": "Light scattering",
               "available": 1,
-              "tech_url": "/research/tech/computing/PyTorch/",
-              "hero": "/research/tech/computing/PyTorch/pytorch.png"
+              "tech_url": "/research/technology/physics/Turbidity/"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "category": "Electromagnetism",
+          "description": "",
+          "techs": [
+            {
+              "id": 15,
+              "tech": "Magnetic Field",
+              "specs": "Hall effect",
+              "available": 1,
+              "tech_url": "/research/technology/physics/Magnetic%20Field/"
+            },
+            {
+              "id": 16,
+              "tech": "Spectrometer",
+              "specs": "Disperse light",
+              "available": 0,
+              "tech_url": "/research/technology/physics/Spectrometer/"
+            },
+            {
+              "id": 17,
+              "tech": "Interferometer",
+              "specs": "Phase combining",
+              "available": 0,
+              "tech_url": "/research/technology/physics/Interferometer/"
             }
           ]
         }
@@ -263,43 +259,23 @@
     },
     {
       "id": 4,
-      "science": "Computing",
-      "science_slug": "comp",
-      "topic": "Reproduce",
-      "description": "Reproduce the work",
+      "science": "Physics",
+      "science_slug": "phys",
+      "topic": "Build",
+      "description": "",
       "categories": [
         {
-          "id": 7,
-          "category": "Repository",
-          "description": "Source of truth",
+          "id": 8,
+          "category": "Circuits",
+          "description": "",
           "techs": [
             {
-              "id": 9,
-              "tech": "GitHub",
-              "specs": "Data and code",
+              "id": 18,
+              "tech": "Circuits",
+              "specs": "Voltage and waveforms",
               "available": 1,
-              "tech_url": "/research/tech/computing/GitHub/",
-              "hero": "/research/tech/computing/GitHub/github.jpeg",
-              "url": "https://github.com/vivianweidai",
+              "tech_url": "/research/technology/physics/Circuits/",
               "projects": [
-                {
-                  "date": "2026-04-20",
-                  "title": "UV-Vis Spectroscopy of Everyday Fluorophores",
-                  "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
-                  "sciences": [
-                    "Chemistry"
-                  ],
-                  "folder": "20260420 UV-Vis Spectroscopy"
-                },
-                {
-                  "date": "2026-04-19",
-                  "title": "IR Spectroscopy of Everyday Materials",
-                  "url": "/research/projects/20260419%20IR%20Spectroscopy/",
-                  "sciences": [
-                    "Chemistry"
-                  ],
-                  "folder": "20260419 IR Spectroscopy"
-                },
                 {
                   "date": "2026-04-04",
                   "title": "Four-Point Probe Sheet Resistance Measurements",
@@ -308,89 +284,22 @@
                     "Physics"
                   ],
                   "folder": "20260404 Four Point Probe"
-                },
-                {
-                  "date": "2025-02-25",
-                  "title": "Red or Green, What Colored Cat Food does Mi Prefer?",
-                  "url": "/research/projects/20250225%20Catfood/",
-                  "sciences": [
-                    "Mathematics",
-                    "Computing"
-                  ],
-                  "folder": "20250225 Catfood"
-                }
-              ]
-            },
-            {
-              "id": 10,
-              "tech": "Jupyter",
-              "specs": "Notebooks",
-              "available": 1,
-              "tech_url": "/research/tech/computing/Jupyter/",
-              "hero": "/research/tech/computing/Jupyter/jupyter.png",
-              "url": "https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb",
-              "projects": [
-                {
-                  "date": "2026-04-20",
-                  "title": "UV-Vis Spectroscopy of Everyday Fluorophores",
-                  "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
-                  "sciences": [
-                    "Chemistry"
-                  ],
-                  "folder": "20260420 UV-Vis Spectroscopy"
-                },
-                {
-                  "date": "2026-04-19",
-                  "title": "IR Spectroscopy of Everyday Materials",
-                  "url": "/research/projects/20260419%20IR%20Spectroscopy/",
-                  "sciences": [
-                    "Chemistry"
-                  ],
-                  "folder": "20260419 IR Spectroscopy"
-                },
-                {
-                  "date": "2026-04-04",
-                  "title": "Four-Point Probe Sheet Resistance Measurements",
-                  "url": "/research/projects/20260404%20Four%20Point%20Probe/",
-                  "sciences": [
-                    "Physics"
-                  ],
-                  "folder": "20260404 Four Point Probe"
-                },
-                {
-                  "date": "2025-02-25",
-                  "title": "Red or Green, What Colored Cat Food does Mi Prefer?",
-                  "url": "/research/projects/20250225%20Catfood/",
-                  "sciences": [
-                    "Mathematics",
-                    "Computing"
-                  ],
-                  "folder": "20250225 Catfood"
                 }
               ]
             }
           ]
         },
         {
-          "id": 8,
-          "category": "Snapshot",
-          "description": "Freeze the environment",
+          "id": 9,
+          "category": "Prototypes",
+          "description": "",
           "techs": [
             {
-              "id": 11,
-              "tech": "Docker",
-              "specs": "Containers",
-              "available": 1,
-              "tech_url": "/research/tech/computing/Docker/",
-              "hero": "/research/tech/computing/Docker/docker.png"
-            },
-            {
-              "id": 12,
-              "tech": "Zenodo",
-              "specs": "DOI archive",
-              "available": 1,
-              "tech_url": "/research/tech/computing/Zenodo/",
-              "hero": "/research/tech/computing/Zenodo/zenodo.png"
+              "id": 19,
+              "tech": "3D Printing",
+              "specs": "Filament fabrication",
+              "available": 0,
+              "tech_url": "/research/technology/physics/3D%20Printing/"
             }
           ]
         }
@@ -398,253 +307,22 @@
     },
     {
       "id": 5,
-      "science": "Physics",
-      "science_slug": "phys",
-      "topic": "Move",
-      "description": "Move and push",
-      "categories": [
-        {
-          "id": 9,
-          "category": "Motion",
-          "description": "Time and trace bodies in motion",
-          "techs": [
-            {
-              "id": 13,
-              "tech": "Photogate",
-              "specs": "Beam timing",
-              "available": 1,
-              "tech_url": "/research/tech/physics/Photogate/",
-              "hero": "/research/tech/physics/Photogate/photogate.jpg"
-            },
-            {
-              "id": 14,
-              "tech": "Motion Detector",
-              "specs": "Distance ranger",
-              "available": 1,
-              "tech_url": "/research/tech/physics/Motion%20Detector/",
-              "hero": "/research/tech/physics/Motion%20Detector/motion-detector.jpg"
-            }
-          ]
-        },
-        {
-          "id": 10,
-          "category": "Force",
-          "description": "Push, pull, accelerate",
-          "techs": [
-            {
-              "id": 15,
-              "tech": "Force",
-              "specs": "Push and pull",
-              "available": 1,
-              "tech_url": "/research/tech/physics/Force/",
-              "hero": "/research/tech/physics/Force/force.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "science": "Physics",
-      "science_slug": "phys",
-      "topic": "Heat",
-      "description": "Heat the system",
-      "categories": [
-        {
-          "id": 11,
-          "category": "Temperature",
-          "description": "How hot is it?",
-          "techs": [
-            {
-              "id": 16,
-              "tech": "Thermocouple",
-              "specs": "Junction probe",
-              "available": 0,
-              "tech_url": "/research/tech/physics/Thermocouple/",
-              "hero": "/research/tech/physics/Thermocouple/thermocouple.png"
-            },
-            {
-              "id": 17,
-              "tech": "IR Camera",
-              "specs": "Thermal field",
-              "available": 0,
-              "tech_url": "/research/tech/physics/IR%20Camera/",
-              "hero": "/research/tech/physics/IR%20Camera/ircamera.png"
-            },
-            {
-              "id": 18,
-              "tech": "Temperature Probe",
-              "specs": "Thermistor",
-              "available": 1,
-              "tech_url": "/research/tech/physics/Temperature%20Probe/",
-              "hero": "/research/tech/physics/Temperature%20Probe/temperature-probe.jpg"
-            }
-          ]
-        },
-        {
-          "id": 12,
-          "category": "Conversion",
-          "description": "Convert between heat and work",
-          "techs": [
-            {
-              "id": 19,
-              "tech": "Stirling Engine",
-              "specs": "Heat to work",
-              "available": 0,
-              "tech_url": "/research/tech/physics/Stirling%20Engine/",
-              "hero": "/research/tech/physics/Stirling%20Engine/stirlingengine.png"
-            },
-            {
-              "id": 20,
-              "tech": "Peltier",
-              "specs": "Work to heat",
-              "available": 0,
-              "tech_url": "/research/tech/physics/Peltier/",
-              "hero": "/research/tech/physics/Peltier/peltier.png"
-            }
-          ]
-        },
-        {
-          "id": 13,
-          "category": "Pressure",
-          "description": "State of a gas",
-          "techs": [
-            {
-              "id": 21,
-              "tech": "Gas Pressure",
-              "specs": "Sealed pressure",
-              "available": 1,
-              "tech_url": "/research/tech/physics/Gas%20Pressure/",
-              "hero": "/research/tech/physics/Gas%20Pressure/gas-pressure.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "science": "Physics",
-      "science_slug": "phys",
-      "topic": "Wave",
-      "description": "Electromagnetic phenomena",
-      "categories": [
-        {
-          "id": 14,
-          "category": "Electricity",
-          "description": "Voltage, current, resistance",
-          "techs": [
-            {
-              "id": 22,
-              "tech": "Oscilloscope",
-              "specs": "Waveforms",
-              "available": 0,
-              "tech_url": "/research/tech/physics/Oscilloscope/",
-              "hero": "/research/tech/physics/Oscilloscope/oscilloscope.png"
-            },
-            {
-              "id": 23,
-              "tech": "Multimeter",
-              "specs": "Steady values",
-              "available": 1,
-              "tech_url": "/research/tech/physics/Multimeter/",
-              "hero": "/research/tech/physics/Multimeter/multimeter.png",
-              "projects": [
-                {
-                  "date": "2026-04-04",
-                  "title": "Four-Point Probe Sheet Resistance Measurements",
-                  "url": "/research/projects/20260404%20Four%20Point%20Probe/",
-                  "sciences": [
-                    "Physics"
-                  ],
-                  "folder": "20260404 Four Point Probe"
-                }
-              ]
-            },
-            {
-              "id": 24,
-              "tech": "Conductivity",
-              "specs": "Ionic strength",
-              "available": 1,
-              "tech_url": "/research/tech/physics/Conductivity/",
-              "hero": "/research/tech/physics/Conductivity/conductivity.jpg"
-            }
-          ]
-        },
-        {
-          "id": 15,
-          "category": "Magnetism",
-          "description": "Static and dynamic magnetic fields",
-          "techs": [
-            {
-              "id": 25,
-              "tech": "Magnetic Field",
-              "specs": "3-axis Hall",
-              "available": 1,
-              "tech_url": "/research/tech/physics/Magnetic%20Field/",
-              "hero": "/research/tech/physics/Magnetic%20Field/magnetic-field.jpg"
-            }
-          ]
-        },
-        {
-          "id": 16,
-          "category": "Optics",
-          "description": "Electromagnetic radiation, visible and beyond",
-          "techs": [
-            {
-              "id": 26,
-              "tech": "Laser",
-              "specs": "Coherent light",
-              "available": 0,
-              "tech_url": "/research/tech/physics/Laser/",
-              "hero": "/research/tech/physics/Laser/laser.png"
-            },
-            {
-              "id": 27,
-              "tech": "Spectrometer",
-              "specs": "Disperse light",
-              "available": 0,
-              "tech_url": "/research/tech/physics/Spectrometer/",
-              "hero": "/research/tech/physics/Spectrometer/spectrometer.png"
-            },
-            {
-              "id": 28,
-              "tech": "Interferometer",
-              "specs": "Phase combining",
-              "available": 0,
-              "tech_url": "/research/tech/physics/Interferometer/",
-              "hero": "/research/tech/physics/Interferometer/interferometer.png"
-            },
-            {
-              "id": 29,
-              "tech": "Turbidity",
-              "specs": "Light scattering",
-              "available": 1,
-              "tech_url": "/research/tech/physics/Turbidity/",
-              "hero": "/research/tech/physics/Turbidity/turbidity.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 8,
       "science": "Chemistry",
       "science_slug": "chem",
-      "topic": "Resolve",
-      "description": "Resolve the sample",
+      "topic": "Identify",
+      "description": "",
       "categories": [
         {
-          "id": 17,
+          "id": 10,
           "category": "Separation",
-          "description": "Pull mixtures apart",
+          "description": "",
           "techs": [
             {
-              "id": 30,
+              "id": 20,
               "tech": "Centrifugation",
               "specs": "Density spin",
               "available": 1,
-              "tech_url": "/research/tech/chemistry/Centrifugation/",
-              "hero": "/research/tech/chemistry/Centrifugation/centrifugation.jpeg",
+              "tech_url": "/research/technology/chemistry/Centrifugation/",
               "projects": [
                 {
                   "date": "2026-04-11",
@@ -659,12 +337,11 @@
               ]
             },
             {
-              "id": 31,
+              "id": 21,
               "tech": "Liquid Chromatography",
               "specs": "Solubles",
               "available": 1,
-              "tech_url": "/research/tech/chemistry/Liquid%20Chromatography/",
-              "hero": "/research/tech/chemistry/Liquid%20Chromatography/hero.jpg",
+              "tech_url": "/research/technology/chemistry/Liquid%20Chromatography/",
               "projects": [
                 {
                   "date": "2026-04-27",
@@ -678,12 +355,11 @@
               ]
             },
             {
-              "id": 32,
+              "id": 22,
               "tech": "Gas Chromatography",
               "specs": "Volatiles",
               "available": 1,
-              "tech_url": "/research/tech/chemistry/Gas%20Chromatography/",
-              "hero": "/research/tech/chemistry/Gas%20Chromatography/hero.jpg",
+              "tech_url": "/research/technology/chemistry/Gas%20Chromatography/",
               "projects": [
                 {
                   "date": "2026-04-27",
@@ -699,86 +375,16 @@
           ]
         },
         {
-          "id": 18,
-          "category": "Thermal Analysis",
-          "description": "Watch samples change with heat",
+          "id": 11,
+          "category": "Spectroscopy",
+          "description": "",
           "techs": [
             {
-              "id": 33,
-              "tech": "Thermogravimetry",
-              "specs": "Mass loss",
-              "available": 1,
-              "tech_url": "/research/tech/chemistry/Thermogravimetry/",
-              "hero": "/research/tech/chemistry/Thermogravimetry/tga-q50.jpg",
-              "projects": [
-                {
-                  "date": "2026-04-05",
-                  "title": "Melting Point of Everyday Compounds",
-                  "url": "/research/projects/20260405%20Melting%20Point/",
-                  "sciences": [
-                    "Chemistry"
-                  ],
-                  "folder": "20260405 Melting Point"
-                }
-              ]
-            },
-            {
-              "id": 34,
-              "tech": "Calorimetry",
-              "specs": "Heat flow",
-              "available": 1,
-              "tech_url": "/research/tech/chemistry/Calorimetry/",
-              "hero": "/research/tech/chemistry/Calorimetry/dsc-q100.jpg",
-              "projects": [
-                {
-                  "date": "2026-04-05",
-                  "title": "Melting Point of Everyday Compounds",
-                  "url": "/research/projects/20260405%20Melting%20Point/",
-                  "sciences": [
-                    "Chemistry"
-                  ],
-                  "folder": "20260405 Melting Point"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 19,
-          "category": "Solution Probe",
-          "description": "Characterize a solution",
-          "techs": [
-            {
-              "id": 35,
-              "tech": "pH",
-              "specs": "Glass electrode",
-              "available": 1,
-              "tech_url": "/research/tech/chemistry/pH/",
-              "hero": "/research/tech/chemistry/pH/ph.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "science": "Chemistry",
-      "science_slug": "chem",
-      "topic": "Identify",
-      "description": "Identify the molecules",
-      "categories": [
-        {
-          "id": 20,
-          "category": "Molecular Spectroscopy",
-          "description": "Absorb EM radiation",
-          "techs": [
-            {
-              "id": 36,
+              "id": 23,
               "tech": "IR Spectroscopy",
               "specs": "Polar bonds",
               "available": 1,
-              "tech_url": "/research/tech/chemistry/IR%20Spectroscopy/",
-              "hero": "/research/tech/chemistry/IR%20Spectroscopy/irspectroscopy.jpeg",
+              "tech_url": "/research/technology/chemistry/IR%20Spectroscopy/",
               "projects": [
                 {
                   "date": "2026-04-19",
@@ -792,12 +398,11 @@
               ]
             },
             {
-              "id": 37,
+              "id": 24,
               "tech": "UV-Vis Spectroscopy",
               "specs": "Absorbance",
               "available": 1,
-              "tech_url": "/research/tech/chemistry/UV-Vis%20Spectroscopy/",
-              "hero": "/research/tech/chemistry/UV-Vis%20Spectroscopy/spectrophotometer.jpeg",
+              "tech_url": "/research/technology/chemistry/UV-Vis%20Spectroscopy/",
               "projects": [
                 {
                   "date": "2026-04-20",
@@ -811,91 +416,422 @@
               ]
             },
             {
-              "id": 38,
+              "id": 25,
               "tech": "NMR Spectroscopy",
               "specs": "Spin states",
               "available": 0,
-              "tech_url": "/research/tech/chemistry/NMR%20Spectroscopy/",
-              "hero": "/research/tech/chemistry/NMR%20Spectroscopy/nmr.jpg"
+              "tech_url": "/research/technology/chemistry/NMR%20Spectroscopy/"
+            },
+            {
+              "id": 26,
+              "tech": "CD Spectroscopy",
+              "specs": "Chiral structure",
+              "available": 1,
+              "tech_url": "/research/technology/chemistry/CD%20Spectroscopy/"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "category": "Spectrometry",
+          "description": "",
+          "techs": [
+            {
+              "id": 27,
+              "tech": "MALDI",
+              "specs": "Intact mass",
+              "available": 1,
+              "tech_url": "/research/technology/chemistry/MALDI/",
+              "projects": [
+                {
+                  "date": "2026-04-27",
+                  "title": "Mass Spectrometry — Dry Run",
+                  "url": "/research/projects/20260427%20Mass%20Spectrometry/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260427 Mass Spectrometry"
+                }
+              ]
+            },
+            {
+              "id": 28,
+              "tech": "Liquid Chromatography MS",
+              "specs": "Nonvolatile molecules",
+              "available": 1,
+              "tech_url": "/research/technology/chemistry/Liquid%20Chromatography%20MS/",
+              "projects": [
+                {
+                  "date": "2026-04-27",
+                  "title": "Mass Spectrometry — Dry Run",
+                  "url": "/research/projects/20260427%20Mass%20Spectrometry/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260427 Mass Spectrometry"
+                }
+              ]
+            },
+            {
+              "id": 29,
+              "tech": "Gas Chromatography MS",
+              "specs": "Volatile",
+              "available": 1,
+              "tech_url": "/research/technology/chemistry/Gas%20Chromatography%20MS/",
+              "projects": [
+                {
+                  "date": "2026-04-27",
+                  "title": "Mass Spectrometry — Dry Run",
+                  "url": "/research/projects/20260427%20Mass%20Spectrometry/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260427 Mass Spectrometry"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "category": "Polarimetry",
+          "description": "",
+          "techs": [
+            {
+              "id": 30,
+              "tech": "Polarimeter",
+              "specs": "Sample chirality",
+              "available": 1,
+              "tech_url": "/research/technology/chemistry/Polarimeter/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "science": "Chemistry",
+      "science_slug": "chem",
+      "topic": "React",
+      "description": "",
+      "categories": [
+        {
+          "id": 14,
+          "category": "Thermal",
+          "description": "",
+          "techs": [
+            {
+              "id": 31,
+              "tech": "Melting Point",
+              "specs": "Purity",
+              "available": 1,
+              "tech_url": "/research/technology/chemistry/Melting%20Point/"
+            },
+            {
+              "id": 32,
+              "tech": "Calorimetry",
+              "specs": "Heat flow",
+              "available": 1,
+              "tech_url": "/research/technology/chemistry/Calorimetry/",
+              "projects": [
+                {
+                  "date": "2026-04-05",
+                  "title": "Melting Point of Everyday Compounds",
+                  "url": "/research/projects/20260405%20Melting%20Point/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260405 Melting Point"
+                }
+              ]
+            },
+            {
+              "id": 33,
+              "tech": "Thermogravimetry",
+              "specs": "Mass loss",
+              "available": 1,
+              "tech_url": "/research/technology/chemistry/Thermogravimetry/",
+              "projects": [
+                {
+                  "date": "2026-04-05",
+                  "title": "Melting Point of Everyday Compounds",
+                  "url": "/research/projects/20260405%20Melting%20Point/",
+                  "sciences": [
+                    "Chemistry"
+                  ],
+                  "folder": "20260405 Melting Point"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "category": "Electrochemistry",
+          "description": "",
+          "techs": [
+            {
+              "id": 34,
+              "tech": "Potentiometry",
+              "specs": "Ion activity",
+              "available": 1,
+              "tech_url": "/research/technology/chemistry/Potentiometry/"
+            },
+            {
+              "id": 35,
+              "tech": "Conductometry",
+              "specs": "Ion content",
+              "available": 1,
+              "tech_url": "/research/technology/chemistry/Conductometry/"
+            },
+            {
+              "id": 36,
+              "tech": "Voltammetry",
+              "specs": "Redox species",
+              "available": 1,
+              "tech_url": "/research/technology/chemistry/Voltammetry/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "science": "Biology",
+      "science_slug": "bio",
+      "topic": "Image",
+      "description": "",
+      "categories": [
+        {
+          "id": 16,
+          "category": "Microscopy",
+          "description": "",
+          "techs": [
+            {
+              "id": 37,
+              "tech": "Handheld",
+              "specs": "Surface scope",
+              "available": 1,
+              "tech_url": "/research/technology/biology/Handheld/"
+            },
+            {
+              "id": 38,
+              "tech": "Stereo",
+              "specs": "Whole specimens",
+              "available": 1,
+              "tech_url": "/research/technology/biology/Stereo/"
+            },
+            {
+              "id": 39,
+              "tech": "Compound",
+              "specs": "High-mag cells",
+              "available": 1,
+              "tech_url": "/research/technology/biology/Compound/"
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "category": "Systems Imaging",
+          "description": "",
+          "techs": [
+            {
+              "id": 40,
+              "tech": "EEG",
+              "specs": "Scalp electrodes",
+              "available": 0,
+              "tech_url": "/research/technology/biology/EEG/"
+            },
+            {
+              "id": 41,
+              "tech": "fNIRS",
+              "specs": "Blood flow",
+              "available": 0,
+              "tech_url": "/research/technology/biology/fNIRS/"
+            },
+            {
+              "id": 42,
+              "tech": "EKG",
+              "specs": "Heart rhythm",
+              "available": 1,
+              "tech_url": "/research/technology/biology/EKG/"
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "category": "Respiration",
+          "description": "",
+          "techs": [
+            {
+              "id": 43,
+              "tech": "Spirometer",
+              "specs": "Breath volume",
+              "available": 1,
+              "tech_url": "/research/technology/biology/Spirometer/"
+            },
+            {
+              "id": 44,
+              "tech": "Gas Exchange",
+              "specs": "Respiration",
+              "available": 1,
+              "tech_url": "/research/technology/biology/Gas%20Exchange/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "science": "Biology",
+      "science_slug": "bio",
+      "topic": "Replicate",
+      "description": "",
+      "categories": [
+        {
+          "id": 19,
+          "category": "Amplification",
+          "description": "",
+          "techs": [
+            {
+              "id": 45,
+              "tech": "PCR",
+              "specs": "Endpoint amplify",
+              "available": 1,
+              "tech_url": "/research/technology/biology/PCR/",
+              "projects": [
+                {
+                  "date": "2026-04-01",
+                  "title": "Meow to Mars — Will Space Help or Hurt Mi's Heart?",
+                  "url": "/research/projects/20260401%20Genes%20in%20Space/",
+                  "sciences": [
+                    "Biology"
+                  ],
+                  "folder": "20260401 Genes in Space"
+                }
+              ]
+            },
+            {
+              "id": 46,
+              "tech": "qPCR",
+              "specs": "Real-time count",
+              "available": 0,
+              "tech_url": "/research/technology/biology/qPCR/"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "category": "Sequencing",
+          "description": "",
+          "techs": [
+            {
+              "id": 47,
+              "tech": "Long-Read",
+              "specs": "End-to-end strand",
+              "available": 0,
+              "tech_url": "/research/technology/biology/Long-Read/"
+            },
+            {
+              "id": 48,
+              "tech": "Short-Read",
+              "specs": "Parallel strands",
+              "available": 0,
+              "tech_url": "/research/technology/biology/Short-Read/"
             }
           ]
         },
         {
           "id": 21,
-          "category": "Mass Spectrometry",
-          "description": "Ionize and weigh",
+          "category": "Expression",
+          "description": "",
           "techs": [
             {
-              "id": 39,
-              "tech": "MALDI",
-              "specs": "Intact mass",
+              "id": 49,
+              "tech": "Cell-Free",
+              "specs": "Protein from DNA",
               "available": 1,
-              "tech_url": "/research/tech/chemistry/MALDI/",
-              "hero": "/research/tech/chemistry/MALDI/hero.jpg",
+              "tech_url": "/research/technology/biology/Cell-Free/",
               "projects": [
                 {
-                  "date": "2026-04-27",
-                  "title": "Mass Spectrometry — Dry Run",
-                  "url": "/research/projects/20260427%20Mass%20Spectrometry/",
+                  "date": "2026-04-01",
+                  "title": "Meow to Mars — Will Space Help or Hurt Mi's Heart?",
+                  "url": "/research/projects/20260401%20Genes%20in%20Space/",
                   "sciences": [
-                    "Chemistry"
+                    "Biology"
                   ],
-                  "folder": "20260427 Mass Spectrometry"
+                  "folder": "20260401 Genes in Space"
                 }
               ]
             },
             {
-              "id": 40,
-              "tech": "Liquid Chromatography MS",
-              "specs": "Nonvolatile molecules",
+              "id": 50,
+              "tech": "Fluorescence",
+              "specs": "Glow under UV",
               "available": 1,
-              "tech_url": "/research/tech/chemistry/Liquid%20Chromatography%20MS/",
-              "hero": "/research/tech/chemistry/Liquid%20Chromatography%20MS/hero.jpg",
+              "tech_url": "/research/technology/biology/Fluorescence/",
               "projects": [
                 {
-                  "date": "2026-04-27",
-                  "title": "Mass Spectrometry — Dry Run",
-                  "url": "/research/projects/20260427%20Mass%20Spectrometry/",
+                  "date": "2026-04-01",
+                  "title": "Meow to Mars — Will Space Help or Hurt Mi's Heart?",
+                  "url": "/research/projects/20260401%20Genes%20in%20Space/",
                   "sciences": [
-                    "Chemistry"
+                    "Biology"
                   ],
-                  "folder": "20260427 Mass Spectrometry"
-                }
-              ]
-            },
-            {
-              "id": 41,
-              "tech": "Gas Chromatography MS",
-              "specs": "Volatile",
-              "available": 1,
-              "tech_url": "/research/tech/chemistry/Gas%20Chromatography%20MS/",
-              "hero": "/research/tech/chemistry/Gas%20Chromatography%20MS/hero.jpg",
-              "projects": [
-                {
-                  "date": "2026-04-27",
-                  "title": "Mass Spectrometry — Dry Run",
-                  "url": "/research/projects/20260427%20Mass%20Spectrometry/",
-                  "sciences": [
-                    "Chemistry"
-                  ],
-                  "folder": "20260427 Mass Spectrometry"
+                  "folder": "20260401 Genes in Space"
                 }
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "science": "Astronomy",
+      "science_slug": "astro",
+      "topic": "Observe",
+      "description": "",
+      "categories": [
         {
           "id": 22,
-          "category": "Polarimetry",
-          "description": "Optical rotation",
+          "category": "Visible",
+          "description": "",
           "techs": [
             {
-              "id": 42,
-              "tech": "Polarimeter",
-              "specs": "Chirality",
+              "id": 51,
+              "tech": "Amateur",
+              "specs": "Smart telescopes",
               "available": 1,
-              "tech_url": "/research/tech/chemistry/Polarimeter/",
-              "hero": "/research/tech/chemistry/Polarimeter/polarimeter.jpg"
+              "tech_url": "/research/technology/astronomy/Amateur/"
+            },
+            {
+              "id": 52,
+              "tech": "Earth",
+              "specs": "Ground observatories",
+              "available": 1,
+              "tech_url": "/research/technology/astronomy/Earth/"
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "category": "Invisible",
+          "description": "",
+          "techs": [
+            {
+              "id": 53,
+              "tech": "Radio",
+              "specs": "Radio telescopes",
+              "available": 1,
+              "tech_url": "/research/technology/astronomy/Radio/"
+            },
+            {
+              "id": 54,
+              "tech": "Space",
+              "specs": "Space telescopes",
+              "available": 1,
+              "tech_url": "/research/technology/astronomy/Space/"
             }
           ]
         }
@@ -903,322 +839,57 @@
     },
     {
       "id": 10,
-      "science": "Biology",
-      "science_slug": "bio",
-      "topic": "Image",
-      "description": "See and record living systems",
+      "science": "Astronomy",
+      "science_slug": "astro",
+      "topic": "Decode",
+      "description": "",
       "categories": [
         {
-          "id": 23,
-          "category": "Microscopy",
-          "description": "Image cells at every scale",
-          "techs": [
-            {
-              "id": 43,
-              "tech": "Handheld",
-              "specs": "Surface scope",
-              "available": 1,
-              "tech_url": "/research/tech/biology/Handheld/",
-              "hero": "/research/tech/biology/Handheld/handheld.png"
-            },
-            {
-              "id": 44,
-              "tech": "Stereo",
-              "specs": "Whole specimens",
-              "available": 1,
-              "tech_url": "/research/tech/biology/Stereo/",
-              "hero": "/research/tech/biology/Stereo/stereo.png"
-            },
-            {
-              "id": 45,
-              "tech": "Compound",
-              "specs": "High-mag cells",
-              "available": 1,
-              "tech_url": "/research/tech/biology/Compound/",
-              "hero": "/research/tech/biology/Compound/compound.png"
-            }
-          ]
-        },
-        {
           "id": 24,
-          "category": "Systems Imaging",
-          "description": "Record body signals",
+          "category": "Analysis",
+          "description": "",
           "techs": [
             {
-              "id": 46,
-              "tech": "EEG",
-              "specs": "Scalp electrodes",
-              "available": 0,
-              "tech_url": "/research/tech/biology/EEG/",
-              "hero": "/research/tech/biology/EEG/eeg.png"
-            },
-            {
-              "id": 47,
-              "tech": "fNIRS",
-              "specs": "Blood flow",
-              "available": 0,
-              "tech_url": "/research/tech/biology/fNIRS/",
-              "hero": "/research/tech/biology/fNIRS/fnirs.png"
-            },
-            {
-              "id": 48,
-              "tech": "EKG",
-              "specs": "Heart rhythm",
+              "id": 55,
+              "tech": "Astrometry",
+              "specs": "Position catalogs",
               "available": 1,
-              "tech_url": "/research/tech/biology/EKG/",
-              "hero": "/research/tech/biology/EKG/ekg.jpg"
+              "tech_url": "/research/technology/astronomy/Astrometry/"
+            },
+            {
+              "id": 56,
+              "tech": "Photometry",
+              "specs": "Light curves",
+              "available": 1,
+              "tech_url": "/research/technology/astronomy/Photometry/"
+            },
+            {
+              "id": 57,
+              "tech": "Spectroscopy",
+              "specs": "Spectra",
+              "available": 1,
+              "tech_url": "/research/technology/astronomy/Spectroscopy/"
             }
           ]
         },
         {
           "id": 25,
-          "category": "Respiration",
-          "description": "Breath",
+          "category": "Classification",
+          "description": "",
           "techs": [
-            {
-              "id": 49,
-              "tech": "Spirometer",
-              "specs": "Breath volume",
-              "available": 1,
-              "tech_url": "/research/tech/biology/Spirometer/",
-              "hero": "/research/tech/biology/Spirometer/spirometer.jpg"
-            },
-            {
-              "id": 50,
-              "tech": "Gas Exchange",
-              "specs": "Respiration",
-              "available": 1,
-              "tech_url": "/research/tech/biology/Gas%20Exchange/",
-              "hero": "/research/tech/biology/Gas%20Exchange/gas-exchange.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 11,
-      "science": "Biology",
-      "science_slug": "bio",
-      "topic": "Replicate",
-      "description": "Copy, read, and express biological information",
-      "categories": [
-        {
-          "id": 26,
-          "category": "Amplification",
-          "description": "Copy DNA for detection",
-          "techs": [
-            {
-              "id": 51,
-              "tech": "PCR",
-              "specs": "Endpoint amplify",
-              "available": 1,
-              "tech_url": "/research/tech/biology/PCR/",
-              "hero": "/research/tech/biology/PCR/pcr.png",
-              "projects": [
-                {
-                  "date": "2026-04-01",
-                  "title": "Meow to Mars — Will Space Help or Hurt Mi's Heart?",
-                  "url": "/research/projects/20260401%20Genes%20in%20Space/",
-                  "sciences": [
-                    "Biology"
-                  ],
-                  "folder": "20260401 Genes in Space"
-                }
-              ]
-            },
-            {
-              "id": 52,
-              "tech": "qPCR",
-              "specs": "Real-time count",
-              "available": 0,
-              "tech_url": "/research/tech/biology/qPCR/",
-              "hero": "/research/tech/biology/qPCR/qpcr.png"
-            }
-          ]
-        },
-        {
-          "id": 27,
-          "category": "Sequencing",
-          "description": "Read the DNA code",
-          "techs": [
-            {
-              "id": 53,
-              "tech": "Long-Read",
-              "specs": "End-to-end strand",
-              "available": 0,
-              "tech_url": "/research/tech/biology/Long-Read/",
-              "hero": "/research/tech/biology/Long-Read/long-read.png"
-            },
-            {
-              "id": 54,
-              "tech": "Short-Read",
-              "specs": "Parallel strands",
-              "available": 0,
-              "tech_url": "/research/tech/biology/Short-Read/",
-              "hero": "/research/tech/biology/Short-Read/short-read.png"
-            }
-          ]
-        },
-        {
-          "id": 28,
-          "category": "Expression",
-          "description": "Make and see proteins",
-          "techs": [
-            {
-              "id": 55,
-              "tech": "Cell-Free",
-              "specs": "Protein from DNA",
-              "available": 1,
-              "tech_url": "/research/tech/biology/Cell-Free/",
-              "hero": "/research/tech/biology/Cell-Free/cell-free.png",
-              "projects": [
-                {
-                  "date": "2026-04-01",
-                  "title": "Meow to Mars — Will Space Help or Hurt Mi's Heart?",
-                  "url": "/research/projects/20260401%20Genes%20in%20Space/",
-                  "sciences": [
-                    "Biology"
-                  ],
-                  "folder": "20260401 Genes in Space"
-                }
-              ]
-            },
-            {
-              "id": 56,
-              "tech": "Fluorescence",
-              "specs": "Glow under UV",
-              "available": 1,
-              "tech_url": "/research/tech/biology/Fluorescence/",
-              "hero": "/research/tech/biology/Fluorescence/fluorescence.png",
-              "projects": [
-                {
-                  "date": "2026-04-01",
-                  "title": "Meow to Mars — Will Space Help or Hurt Mi's Heart?",
-                  "url": "/research/projects/20260401%20Genes%20in%20Space/",
-                  "sciences": [
-                    "Biology"
-                  ],
-                  "folder": "20260401 Genes in Space"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 12,
-      "science": "Astronomy",
-      "science_slug": "astro",
-      "topic": "Observe",
-      "description": "Capture photons",
-      "categories": [
-        {
-          "id": 29,
-          "category": "Visible",
-          "description": "Optical wavelengths",
-          "techs": [
-            {
-              "id": 57,
-              "tech": "Amateur",
-              "specs": "Smart telescopes",
-              "available": 1,
-              "tech_url": "/research/tech/astronomy/Amateur/",
-              "hero": "/research/tech/astronomy/Amateur/amateur.png"
-            },
             {
               "id": 58,
-              "tech": "Earth",
-              "specs": "Ground observatories",
-              "available": 1,
-              "tech_url": "/research/tech/astronomy/Earth/",
-              "hero": "/research/tech/astronomy/Earth/horsehead.jpeg"
-            }
-          ]
-        },
-        {
-          "id": 30,
-          "category": "Invisible",
-          "description": "Other wavelengths",
-          "techs": [
-            {
-              "id": 59,
-              "tech": "Radio",
-              "specs": "Radio telescopes",
-              "available": 1,
-              "tech_url": "/research/tech/astronomy/Radio/",
-              "hero": "/research/tech/astronomy/Radio/radio.png"
-            },
-            {
-              "id": 60,
-              "tech": "Space",
-              "specs": "Space telescopes",
-              "available": 1,
-              "tech_url": "/research/tech/astronomy/Space/",
-              "hero": "/research/tech/astronomy/Space/space.png"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "science": "Astronomy",
-      "science_slug": "astro",
-      "topic": "Decode",
-      "description": "Classify sources",
-      "categories": [
-        {
-          "id": 31,
-          "category": "Analysis",
-          "description": "Extract measurements",
-          "techs": [
-            {
-              "id": 61,
-              "tech": "Astrometry",
-              "specs": "Position catalogs",
-              "available": 1,
-              "tech_url": "/research/tech/astronomy/Astrometry/",
-              "hero": "/research/tech/astronomy/Astrometry/astrometry.png"
-            },
-            {
-              "id": 62,
-              "tech": "Photometry",
-              "specs": "Light curves",
-              "available": 1,
-              "tech_url": "/research/tech/astronomy/Photometry/",
-              "hero": "/research/tech/astronomy/Photometry/photometry.png"
-            },
-            {
-              "id": 63,
-              "tech": "Spectroscopy",
-              "specs": "Spectra",
-              "available": 1,
-              "tech_url": "/research/tech/astronomy/Spectroscopy/",
-              "hero": "/research/tech/astronomy/Spectroscopy/spectroscopy.png"
-            }
-          ]
-        },
-        {
-          "id": 32,
-          "category": "Classification",
-          "description": "Label sources",
-          "techs": [
-            {
-              "id": 64,
               "tech": "Transient",
               "specs": "Events",
               "available": 1,
-              "tech_url": "/research/tech/astronomy/Transient/",
-              "hero": "/research/tech/astronomy/Transient/transient.png"
+              "tech_url": "/research/technology/astronomy/Transient/"
             },
             {
-              "id": 65,
+              "id": 59,
               "tech": "Galaxy Morphology",
               "specs": "Galaxies",
               "available": 1,
-              "tech_url": "/research/tech/astronomy/Galaxy%20Morphology/",
-              "hero": "/research/tech/astronomy/Galaxy%20Morphology/galaxymorphology.png"
+              "tech_url": "/research/technology/astronomy/Galaxy%20Morphology/"
             }
           ]
         }

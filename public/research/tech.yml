@@ -25,43 +25,29 @@
 # ═══════════════════════════════════════════════════════════════
 
 - science: Mathematics
-  topic: Calculate
-  description: Calculate the answer
+  topic: Solve
+  description: ""
   categories:
-    - category: Numerical
-      description: Approximate answers
+    - category: Calculate
+      description: ""
       techs:
-        - tech: NumPy
-          specs: Arrays
+        - tech: Numerical
+          specs: Approximate
           available: true
           url: /research/projects/20260420%20UV-Vis%20Spectroscopy/
-        - tech: SciPy
-          specs: Routines
-          available: true
-    - category: Symbolic
-      description: Exact answers
-      techs:
-        - tech: Wolfram Alpha
-          specs: Symbolic answers
+        - tech: Symbolic
+          specs: Exact
           available: true
           url: https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb
-
-- science: Mathematics
-  topic: Communicate
-  description: Communicate the answer
-  categories:
-    - category: Graphing
-      description: Data to figures
+    - category: Communicate
+      description: ""
       techs:
-        - tech: Matplotlib
-          specs: Plots
+        - tech: Graphic
+          specs: 2D and 3D
           available: true
           url: /research/projects/20260404%20Four%20Point%20Probe/
-    - category: Typesetting
-      description: Documents and equations
-      techs:
-        - tech: LaTeX
-          specs: Typeset documents
+        - tech: Typesetting
+          specs: Equations and Reactions
           available: true
           url: /curriculum/
 
@@ -70,48 +56,30 @@
 # ═══════════════════════════════════════════════════════════════
 
 - science: Computing
-  topic: Analyze
-  description: Analyze the data
+  topic: Process
+  description: ""
   categories:
-    - category: Statistics
-      description: Quantify uncertainty
+    - category: Predict
+      description: ""
       techs:
-        - tech: SciPy
-          specs: Stats tests
+        - tech: Inference
+          specs: Statistics
           available: true
-    - category: Machine Learning
-      description: Predict through patterns
-      techs:
-        - tech: scikit-learn
+        - tech: Machine Learning
           specs: Classic models
           available: true
-        - tech: PyTorch
+        - tech: Deep Learning
           specs: Neural networks
           available: true
-
-- science: Computing
-  topic: Reproduce
-  description: Reproduce the work
-  categories:
-    - category: Repository
-      description: Source of truth
+    - category: Reproduce
+      description: ""
       techs:
-        - tech: GitHub
-          specs: Data and code
+        - tech: Repository
+          specs: Data code notebooks
           available: true
           url: https://github.com/vivianweidai
-        - tech: Jupyter
-          specs: Notebooks
-          available: true
-          url: https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20260420%20UV-Vis%20Spectroscopy/output/uv_spectroscopy.ipynb
-    - category: Snapshot
-      description: Freeze the environment
-      techs:
-        - tech: Docker
-          specs: Containers
-          available: true
-        - tech: Zenodo
-          specs: DOI archive
+        - tech: Snapshot
+          specs: Environment and ID
           available: true
 
 # ═══════════════════════════════════════════════════════════════
@@ -119,97 +87,67 @@
 # ═══════════════════════════════════════════════════════════════
 
 - science: Physics
-  topic: Move
-  description: Move and push
+  topic: Measure
+  description: ""
   categories:
     - category: Motion
-      description: Time and trace bodies in motion
-      techs:
-        - tech: Photogate
-          specs: Beam timing
-          available: true
-        - tech: Motion Detector
-          specs: Distance ranger
-          available: true
-    - category: Force
-      description: Push, pull, accelerate
+      description: ""
       techs:
         - tech: Force
           specs: Push and pull
           available: true
-
-- science: Physics
-  topic: Heat
-  description: Heat the system
-  categories:
-    - category: Temperature
-      description: How hot is it?
-      techs:
-        - tech: Thermocouple
-          specs: Junction probe
-        - tech: IR Camera
-          specs: Thermal field
-        - tech: Temperature Probe
-          specs: Thermistor
+        - tech: Distance
+          specs: Ultrasonic ranger
           available: true
-    - category: Conversion
-      description: Convert between heat and work
+        - tech: Time
+          specs: Beam timing
+          available: true
+    - category: Fluids
+      description: ""
       techs:
-        - tech: Stirling Engine
-          specs: Heat to work
-        - tech: Peltier
-          specs: Work to heat
-    - category: Pressure
-      description: State of a gas
-      techs:
-        - tech: Gas Pressure
+        - tech: Pressure
           specs: Sealed pressure
           available: true
-
-- science: Physics
-  topic: Wave
-  description: Electromagnetic phenomena
-  categories:
-    - category: Electricity
-      description: Voltage, current, resistance
-      techs:
-        - tech: Oscilloscope
-          specs: Waveforms
-        - tech: Multimeter
-          specs: Steady values
+        - tech: Turbidity
+          specs: Light scattering
           available: true
-        - tech: Conductivity
-          specs: Ionic strength
-          available: true
-    - category: Magnetism
-      description: Static and dynamic magnetic fields
+    - category: Electromagnetism
+      description: ""
       techs:
         - tech: Magnetic Field
-          specs: 3-axis Hall
+          specs: Hall effect
           available: true
-    - category: Optics
-      description: Electromagnetic radiation, visible and beyond
-      techs:
-        - tech: Laser
-          specs: Coherent light
         - tech: Spectrometer
           specs: Disperse light
         - tech: Interferometer
           specs: Phase combining
-        - tech: Turbidity
-          specs: Light scattering
+
+- science: Physics
+  topic: Build
+  description: ""
+  categories:
+    - category: Circuits
+      description: ""
+      techs:
+        - tech: Circuits
+          specs: Voltage and waveforms
           available: true
+    - category: Prototypes
+      description: ""
+      techs:
+        - tech: 3D Printing
+          specs: Filament fabrication
 
 # ═══════════════════════════════════════════════════════════════
 # CHEMISTRY
 # ═══════════════════════════════════════════════════════════════
 
 - science: Chemistry
-  topic: Resolve
-  description: Resolve the sample
+  topic: Identify
+  description: ""
   categories:
     - category: Separation
-      description: Pull mixtures apart
+      description: ""
       techs:
         - tech: Centrifugation
           specs: Density spin
@@ -220,28 +158,8 @@
         - tech: Gas Chromatography
           specs: Volatiles
           available: true
-    - category: Thermal Analysis
-      description: Watch samples change with heat
-      techs:
-        - tech: Thermogravimetry
-          specs: Mass loss
-          available: true
-        - tech: Calorimetry
-          specs: Heat flow
-          available: true
-    - category: Solution Probe
-      description: Characterize a solution
-      techs:
-        - tech: pH
-          specs: Glass electrode
-          available: true
-
-- science: Chemistry
-  topic: Identify
-  description: Identify the molecules
-  categories:
-    - category: Molecular Spectroscopy
-      description: Absorb EM radiation
+    - category: Spectroscopy
+      description: ""
       techs:
         - tech: IR Spectroscopy
           specs: Polar bonds
@@ -251,8 +169,11 @@
           available: true
         - tech: NMR Spectroscopy
           specs: Spin states
-    - category: Mass Spectrometry
-      description: Ionize and weigh
+        - tech: CD Spectroscopy
+          specs: Chiral structure
+          available: true
+    - category: Spectrometry
+      description: ""
       techs:
         - tech: MALDI
           specs: Intact mass
@@ -264,10 +185,39 @@
           specs: Volatile
           available: true
     - category: Polarimetry
-      description: Optical rotation
+      description: ""
       techs:
         - tech: Polarimeter
-          specs: Chirality
+          specs: Sample chirality
+          available: true
+
+- science: Chemistry
+  topic: React
+  description: ""
+  categories:
+    - category: Thermal
+      description: ""
+      techs:
+        - tech: Melting Point
+          specs: Purity
+          available: true
+        - tech: Calorimetry
+          specs: Heat flow
+          available: true
+        - tech: Thermogravimetry
+          specs: Mass loss
+          available: true
+    - category: Electrochemistry
+      description: ""
+      techs:
+        - tech: Potentiometry
+          specs: Ion activity
+          available: true
+        - tech: Conductometry
+          specs: Ion content
+          available: true
+        - tech: Voltammetry
+          specs: Redox species
           available: true
 
 # ═══════════════════════════════════════════════════════════════
@@ -276,10 +226,10 @@
 
 - science: Biology
   topic: Image
-  description: See and record living systems
+  description: ""
   categories:
     - category: Microscopy
-      description: Image cells at every scale
+      description: ""
       techs:
         - tech: Handheld
           specs: Surface scope
@@ -291,7 +241,7 @@
           specs: High-mag cells
           available: true
     - category: Systems Imaging
-      description: Record body signals
+      description: ""
       techs:
         - tech: EEG
           specs: Scalp electrodes
@@ -301,7 +251,7 @@
           specs: Heart rhythm
           available: true
     - category: Respiration
-      description: Breath
+      description: ""
       techs:
         - tech: Spirometer
           specs: Breath volume
@@ -312,10 +262,10 @@
 
 - science: Biology
   topic: Replicate
-  description: Copy, read, and express biological information
+  description: ""
   categories:
     - category: Amplification
-      description: Copy DNA for detection
+      description: ""
       techs:
         - tech: PCR
           specs: Endpoint amplify
@@ -323,14 +273,14 @@
         - tech: qPCR
           specs: Real-time count
     - category: Sequencing
-      description: Read the DNA code
+      description: ""
       techs:
         - tech: Long-Read
           specs: End-to-end strand
         - tech: Short-Read
           specs: Parallel strands
     - category: Expression
-      description: Make and see proteins
+      description: ""
       techs:
         - tech: Cell-Free
           specs: Protein from DNA
@@ -345,10 +295,10 @@
 
 - science: Astronomy
   topic: Observe
-  description: Capture photons
+  description: ""
   categories:
     - category: Visible
-      description: Optical wavelengths
+      description: ""
       techs:
         - tech: Amateur
           specs: Smart telescopes
@@ -357,7 +307,7 @@
           specs: Ground observatories
           available: true
     - category: Invisible
-      description: Other wavelengths
+      description: ""
       techs:
         - tech: Radio
           specs: Radio telescopes
@@ -368,10 +318,10 @@
 
 - science: Astronomy
   topic: Decode
-  description: Classify sources
+  description: ""
   categories:
     - category: Analysis
-      description: Extract measurements
+      description: ""
       techs:
         - tech: Astrometry
           specs: Position catalogs
@@ -383,7 +333,7 @@
           specs: Spectra
           available: true
     - category: Classification
-      description: Label sources
+      description: ""
       techs:
         - tech: Transient
           specs: Events

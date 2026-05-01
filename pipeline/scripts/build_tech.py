@@ -79,7 +79,7 @@ def hero_for_tech(science_folder: str, tech_name: str) -> str | None:
         return None
     if hero.startswith(("/", "http://", "https://")):
         return hero
-    base = f"/research/tech/{science_folder}/{urllib.parse.quote(tech_name)}/"
+    base = f"/research/technology/{science_folder}/{urllib.parse.quote(tech_name)}/"
     return base + urllib.parse.quote(hero)
 
 
@@ -174,7 +174,7 @@ def build() -> list[dict]:
                     "specs": tech["specs"],
                     "available": 1 if tech.get("available") else 0,
                     "tech_url": (
-                        f"/research/tech/{folder}/"
+                        f"/research/technology/{folder}/"
                         f"{urllib.parse.quote(tech['tech'])}/"
                     ),
                 }
