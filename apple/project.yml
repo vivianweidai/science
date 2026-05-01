@@ -28,7 +28,7 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.vivianweidai.science
-        MARKETING_VERSION: "1.5.1"
+        MARKETING_VERSION: "1.5.2"
         CURRENT_PROJECT_VERSION: "1"
         GENERATE_INFOPLIST_FILE: true
         SWIFT_VERSION: "5.9"
@@ -40,6 +40,7 @@ targets:
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
         INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
         INFOPLIST_KEY_CFBundleDisplayName: Science
+        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
 
   ScienceWatch:
     type: application
@@ -54,7 +55,7 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.vivianweidai.science.watchkitapp
-        MARKETING_VERSION: "1.5.1"
+        MARKETING_VERSION: "1.5.2"
         CURRENT_PROJECT_VERSION: "1"
         GENERATE_INFOPLIST_FILE: true
         SWIFT_VERSION: "5.9"
@@ -65,3 +66,4 @@ targets:
         INFOPLIST_KEY_CFBundleDisplayName: Science
         INFOPLIST_KEY_WKApplication: "YES"
         INFOPLIST_KEY_WKCompanionAppBundleIdentifier: com.vivianweidai.science
+        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO

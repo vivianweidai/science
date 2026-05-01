@@ -162,18 +162,44 @@ import PageFooter from '../../layouts/PageFooter.astro';
     // so the keyboard user can dive in to start browsing. Skipped when
     // typing in a form field, when a link/button/label already has focus
     // (let the browser handle Enter naturally), or with any modifier held.
+    //
+    // ← / → cycle through the science tabs (wrapping at the ends), Esc
+    // jumps to All. Both fire `change` on the radio so the existing
+    // listener re-renders and updates the URL hash.
     (function () {
+      var tabs = ['tech-all','tech-math','tech-comp','tech-phys','tech-chem','tech-bio','tech-astro'];
+      function selectTab(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        el.checked = true;
+        el.dispatchEvent(new Event('change', { bubbles: true }));
+      }
       document.addEventListener('keydown', function (e) {
-        if (e.key !== 'Enter') return;
         if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
         var t = e.target;
         if (!t) return;
         if (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable) return;
-        if (t.tagName === 'A' || t.tagName === 'BUTTON' || t.tagName === 'LABEL') return;
-        var first = document.querySelector('#tech-content .tech-row a[href]');
-        if (!first) return;
+        if (e.key === 'Enter') {
+          if (t.tagName === 'A' || t.tagName === 'BUTTON' || t.tagName === 'LABEL') return;
+          var first = document.querySelector('#tech-content .tech-row a[href]');
+          if (!first) return;
+          e.preventDefault();
+          window.location.href = first.href;
+          return;
+        }
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          selectTab('tech-all');
+          return;
+        }
+        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+        var checked = document.querySelector('input[name="tech-view"]:checked');
+        var idx = checked ? tabs.indexOf(checked.id) : -1;
+        if (idx < 0) return;
+        var step = e.key === 'ArrowLeft' ? -1 : 1;
+        var next = tabs[(idx + step + tabs.length) % tabs.length];
         e.preventDefault();
-        window.location.href = first.href;
+        selectTab(next);
       });
     })();
   </script>

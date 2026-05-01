@@ -141,14 +141,25 @@
   widget.classList.add('curr-widget');
   widget.innerHTML = '<div class="curr-loading">Loading curriculum…</div>';
 
-  // Arrow-key shortcuts cycle through topics when on a topic view. No
-  // effect on the grid view, and no effect when the user is typing in
-  // an input or holding a modifier key.
+  // Keyboard shortcuts on the topic view: ← → cycle through adjacent
+  // topics, Esc returns to the grid (with the originating section
+  // highlighted). No effect on the grid view, and no effect when the
+  // user is typing in an input or holding a modifier key.
   document.addEventListener('keydown', function (e) {
     if (state.view !== 'topic' || !manifest) return;
     if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
     var t = e.target;
     if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      state = {
+        view: 'grid',
+        highlightSubject: state.subject,
+        highlightSectionIdx: state.sectionIdx,
+      };
+      render();
+      return;
+    }
     var direction = 0;
     if (e.key === 'ArrowLeft') direction = -1;
     else if (e.key === 'ArrowRight') direction = 1;

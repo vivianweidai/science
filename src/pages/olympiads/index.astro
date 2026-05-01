@@ -17,6 +17,7 @@ import PageFooter from '../../layouts/PageFooter.astro';
     <script is:inline>
       (function(){
         var tabs = ['view-math','view-comp','view-phys','view-chem','view-bio','view-astro'];
+        var allTabs = ['view-all'].concat(tabs);
         // Hash takes precedence so a chip click on another page can deep-link
         // straight to the right tab. Fall through to the saved tab, then
         // a random pick.
@@ -35,6 +36,35 @@ import PageFooter from '../../layouts/PageFooter.astro';
           el.checked = true;
           sessionStorage.setItem('subj-tab', h);
           el.dispatchEvent(new Event('change', { bubbles: true }));
+        });
+        // ← / → cycle through tabs (wrapping at the ends), Esc jumps to All.
+        // Skipped when the user is typing in a form field or holding a
+        // modifier key. Each select fires `change` on the radio so the
+        // timeline re-renders and the URL hash updates.
+        function selectTab(id) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          el.checked = true;
+          sessionStorage.setItem('subj-tab', id.replace('view-', ''));
+          el.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+        document.addEventListener('keydown', function (e) {
+          if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+          var t = e.target;
+          if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+          if (e.key === 'Escape') {
+            e.preventDefault();
+            selectTab('view-all');
+            return;
+          }
+          if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+          var checked = document.querySelector('input[name="view"]:checked');
+          var idx = checked ? allTabs.indexOf(checked.id) : -1;
+          if (idx < 0) return;
+          var step = e.key === 'ArrowLeft' ? -1 : 1;
+          var next = allTabs[(idx + step + allTabs.length) % allTabs.length];
+          e.preventDefault();
+          selectTab(next);
         });
       })();
     </script>
