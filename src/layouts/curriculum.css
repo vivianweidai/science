@@ -281,13 +281,13 @@ a.curr-col-head:hover {
 .curr-prevnext {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: 1em;
   font-size: 0.9em;
 }
 .curr-prevnext-side {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.4em;
   flex-wrap: wrap;
   max-width: 48%;
