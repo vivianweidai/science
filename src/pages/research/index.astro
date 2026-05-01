@@ -83,9 +83,9 @@ import PageFooter from '../../layouts/PageFooter.astro';
         html += '<div class="tech-card-header">'
           + '<span class="tech-topic-title">' + esc(topic.topic) + '</span>'
           + '<span class="tech-topic-desc">' + esc(topic.description || '') + '</span>'
-          + '<span class="tech-topic-chip"><a class="chip ' + topic.science_slug + '" href="/research/#' + topic.science_slug + '">' + topic.science + '</a></span>'
+          + '<span class="tech-topic-chip"><a class="chip ' + topic.science_slug + '" href="/research/#' + topic.science_slug + '">' + esc(topic.science) + '</a></span>'
           + '</div>';
-        html += '<table class="tech-table"><colgroup><col style="width:28%"><col><col style="width:7em"></colgroup><tbody>';
+        html += '<table class="tech-table"><colgroup><col style="width:28%"><col><col style="width:7rem"></colgroup><tbody>';
 
         topic.categories.forEach(function (cat) {
           var catSlug = cat.category.toLowerCase().replace(/\s+/g, '-');
@@ -151,6 +151,16 @@ import PageFooter from '../../layouts/PageFooter.astro';
             history.replaceState(null, '', '#' + filter);
             renderTech(topics, filter);
           });
+        });
+        // Same-page chip clicks change only the URL hash; the radio doesn't
+        // re-init on hashchange, so wire that up explicitly.
+        window.addEventListener('hashchange', function () {
+          var slug = (location.hash || '').replace(/^#/, '').split('/')[0];
+          var radio = document.getElementById('tech-' + slug);
+          if (radio && !radio.checked) {
+            radio.checked = true;
+            radio.dispatchEvent(new Event('change', { bubbles: true }));
+          }
         });
       });
   })();
@@ -236,6 +246,7 @@ import PageFooter from '../../layouts/PageFooter.astro';
     .tech-accent-bio   { border-left-color: #5bbfb0; --card-tint: var(--subj-bio); }
     .tech-accent-astro { border-left-color: #e86088; --card-tint: var(--subj-astro); }
 
+
     .tech-card-header {
       font-weight: 700;
       font-size: 1em;
@@ -243,7 +254,7 @@ import PageFooter from '../../layouts/PageFooter.astro';
       border-bottom: 1px solid #eaecef;
       color: #1f2328;
       display: grid;
-      grid-template-columns: 28% 1fr 7em;
+      grid-template-columns: 28% 1fr 7rem;
       align-items: center;
     }
     .tech-card-header .chip {
@@ -326,7 +337,7 @@ import PageFooter from '../../layouts/PageFooter.astro';
       .tech-name a:hover { text-decoration: underline; }
     }
     .tech-specs { color: #1f2328; }
-    .tech-access { width: 7em; text-align: center; }
+    .tech-access { width: 7rem; text-align: center; }
     @media (hover: hover) {
       .tech-row:hover td { background: #eef1f4; }
     }

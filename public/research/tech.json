@@ -1153,7 +1153,7 @@
               "id": 60,
               "tech": "Space",
               "specs": "Space telescopes",
-              "available": 0,
+              "available": 1,
               "tech_url": "/research/tech/astronomy/Space/",
               "hero": "/research/tech/astronomy/Space/space.png"
             }
@@ -1175,19 +1175,19 @@
           "techs": [
             {
               "id": 61,
-              "tech": "Photometry",
-              "specs": "Light curves",
-              "available": 1,
-              "tech_url": "/research/tech/astronomy/Photometry/",
-              "hero": "/research/tech/astronomy/Photometry/photometry.png"
-            },
-            {
-              "id": 62,
               "tech": "Astrometry",
               "specs": "Position catalogs",
               "available": 1,
               "tech_url": "/research/tech/astronomy/Astrometry/",
               "hero": "/research/tech/astronomy/Astrometry/astrometry.png"
+            },
+            {
+              "id": 62,
+              "tech": "Photometry",
+              "specs": "Light curves",
+              "available": 1,
+              "tech_url": "/research/tech/astronomy/Photometry/",
+              "hero": "/research/tech/astronomy/Photometry/photometry.png"
             },
             {
               "id": 63,

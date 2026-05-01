@@ -7,7 +7,7 @@ category: Visible
 hero: horsehead.jpeg
 toys:
   - name: UBC Thunderbird South Observatory
-    description: Fully remote to Cerro Tololo Chile
+    description: Remote access to Cerro Tololo Chile
   - name: Great Basin Observatory
-    description: Fully remote to Great Basin National Park
+    description: Remote access to Great Basin National Park
 ---

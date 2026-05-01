@@ -364,6 +364,7 @@
           available: true
         - tech: Space
           specs: Space telescopes
+          available: true
 
 - science: Astronomy
   topic: Decode
@@ -372,11 +373,11 @@
     - category: Analysis
       description: Extract measurements
       techs:
-        - tech: Photometry
-          specs: Light curves
-          available: true
         - tech: Astrometry
           specs: Position catalogs
+          available: true
+        - tech: Photometry
+          specs: Light curves
           available: true
         - tech: Spectroscopy
           specs: Spectra

@@ -7,5 +7,7 @@ category: Invisible
 hero: radio.png
 toys:
   - name: NASA Radio JOVE RJK2p Antenna Kit
-    description: Radio signals from Jupiter, the Sun and the galaxy
+    description: Receive radio signals
+  - name: SDRplay RSP1B
+    description: Decode radio signals
 ---
