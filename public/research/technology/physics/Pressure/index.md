@@ -7,5 +7,5 @@ category: Fluids
 hero: gas-pressure.jpg
 toys:
   - name: Vernier Go Direct Gas Pressure Sensor
-    description: Sealed-syringe gas pressure for gas-law and vapor-pressure work
+    description: Sealed syringe gas pressure
 ---
