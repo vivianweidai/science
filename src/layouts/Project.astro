@@ -24,7 +24,7 @@ const {
   photos = [],
 } = Astro.props;
 
-// Full → short slug for chip class names. Same map used by tech.json.
+// Full → short slug for chip class names. Same map used by technology.json.
 const SLUG: Record<string, string> = {
   Mathematics: 'math', Computing: 'comp', Physics: 'phys',
   Chemistry: 'chem', Biology: 'bio', Astronomy: 'astro',
@@ -209,7 +209,7 @@ const SLUG: Record<string, string> = {
       color: #656d76;
       font-size: 0.9em;
     }
-    .updates-list .update-name { flex: 0 0 9em; }
+    .updates-list .update-name { flex: 0 0 12em; white-space: nowrap; }
     .updates-list .update-desc {
       flex: 1;
       color: #57606a;

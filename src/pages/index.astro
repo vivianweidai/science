@@ -4,7 +4,7 @@ import PageHeader from '../layouts/PageHeader.astro';
 import PageFooter from '../layouts/PageFooter.astro';
 import scienceJpeg from '../layouts/science.jpeg?url';
 import curriculumData from '../../public/curriculum/curriculum.json';
-import techData from '../../public/research/tech.json';
+import techData from '../../public/research/technology.json';
 
 // Top → bottom matches the science pyramid: astronomy at the apex,
 // mathematics as the foundation. Each row builds on the ones below.
@@ -24,14 +24,14 @@ const OLYMPIAD_LATEST = {
   astronomy:   { name: 'Canadian Astronomy and Astrophysics Olympiad Senior National Camp',   icon: '⭐', kind: 'invited',     date: 'May 2026'      },
 };
 const RESEARCH_LATEST = {
-  mathematics: { name: 'Red or Green, What Colored Cat Food does Mi Prefer?', url: '/research/projects/20250225%20Catfood/',                            mi: true },
+  mathematics: { name: 'UV-Vis Spectroscopy - Test Run',                      url: '/research/projects/20260420%20UV-Vis%20Spectroscopy/'                         },
   computing:   { name: 'Red or Green, What Colored Cat Food does Mi Prefer?', url: '/research/projects/20250225%20Catfood/',                            mi: true },
-  physics:     { name: 'Four-Point Probe Sheet Resistance Measurements',      url: '/research/projects/20260404%20Four%20Point%20Probe/'                          },
-  chemistry:   { name: 'IR Spectroscopy of Everyday Materials',               url: '/research/projects/20260419%20IR%20Spectroscopy/'                             },
-  biology:     { name: 'Meow to Mars — Will Space Help or Hurt Mi’s Heart?',  url: '/research/projects/20260401%20Genes%20in%20Space/',                 mi: true },
-  astronomy:   { name: 'Wolfram — Dry Run',                                   url: 'https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb'           },
+  physics:     { name: 'Four-Point Probe of Sheet Resistance',                url: '/research/projects/20260404%20Four%20Point%20Probe/'                          },
+  chemistry:   { name: 'IR Spectroscopy - Test Run',                          url: '/research/projects/20260419%20IR%20Spectroscopy/'                             },
+  biology:     { name: 'Centrifugation and pH of Everyday Liquids',           url: '/research/projects/20260411%20Centrifuge/'                                    },
+  astronomy:   { name: 'Meow to Mars — Will Space Help or Hurt Mi’s Heart?',  url: '/research/projects/20260401%20Genes%20in%20Space/',                 mi: true },
 };
-// Two research topics per science, sourced from tech.yml. Drives the
+// Two research topics per science, sourced from technology.yml. Drives the
 // right-hand chips in the Research tab — both link to the science's
 // filtered view at /research/#<anchor>.
 const RESEARCH_TOPICS = {};

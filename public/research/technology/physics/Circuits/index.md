@@ -4,14 +4,16 @@ science: Physics
 science_slug: phys
 topic: Build
 category: Electronics
-hero: circuits.png
+hero: circuits.jpeg
 toys:
+  - name: TOAUTO DS90 Soldering Station
+    description: Soldering iron
+  - name: SainSmart Magnetic Helping Hands Soldering Station
+    description: Soldering work holder
   - name: Digilent Analog Discovery 3
     description: Oscilloscope, generator and analyzer
   - name: Korad KA3005P
     description: Benchtop power supply
   - name: Fluke 117
     description: Handheld multimeter
-  - name: TOAUTO DS90 Soldering Station
-    description: Soldering iron
 ---

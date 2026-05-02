@@ -24,6 +24,7 @@
 
   function photoUrlFor(el) {
     if (!el) return null;
+    if (el.classList && el.classList.contains('no-preview')) return null;
     if (el.dataset && el.dataset.photo) return el.dataset.photo;
     if (el.tagName === 'A') {
       var href = el.getAttribute('href') || '';

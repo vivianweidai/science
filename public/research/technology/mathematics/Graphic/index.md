@@ -5,15 +5,9 @@ science_slug: math
 topic: Calculate
 category: Display
 hero: graphic.png
-extra_projects:
-  - date: "2026-04-01"
-    title: Wolfram — Dry Run
-    url: https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb
-    sciences:
-      - Astronomy
 toys:
   - name: Matplotlib
-    description: Python 2D and 3D plotting
+    description: 2D and 3D
   - name: Wolfram
     description: Custom rendering
 ---

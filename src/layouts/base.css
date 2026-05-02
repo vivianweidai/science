@@ -158,7 +158,8 @@ a.chip:hover { filter: brightness(0.94) saturate(1.2); }
 .tab-content { display: none; padding: 1em 0; }
 
 /* Result images (used in project pages) */
-.result-img { width: 100%; border-radius: 6px; }
+.result-img { width: 100%; border-radius: 8px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12); }
+.result-img + p { text-align: center; }
 
 /* Shared fade-up load-in. Apply `.fade-in` to any element; stagger via
  * inline `style="animation-delay: …"`. Used on the homepage and re-applied

@@ -408,7 +408,7 @@ private fun ProjectDetailScreen(
 
 /** Native tech page — renders title, science chip, topic·category
  *  context, hero image, spec description, and the projects list, all
- *  from `tech.json` data. Replaces the previous markdown-passthrough
+ *  from `technology.json` data. Replaces the previous markdown-passthrough
  *  approach because most tech `index.md` bodies are empty by design. */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -727,7 +727,7 @@ private suspend fun scanProjectPhotos(indexUrl: String): List<String> {
     val parts = indexUrl.substringAfter("://").substringAfter('/').split('/')
     val idxPos = parts.indexOf("index.md").takeIf { it > 0 } ?: return emptyList()
     // indexUrl segments may already be percent-encoded (the per-tech
-    // project entry's `url` in tech.json carries `%20` for spaces).
+    // project entry's `url` in technology.json carries `%20` for spaces).
     // Decode the folder name to its raw form before re-encoding it for
     // the GitHub contents API — a double-encode would turn `%20` into
     // `%2520` and the API 404s.

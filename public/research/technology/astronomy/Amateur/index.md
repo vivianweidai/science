@@ -7,7 +7,7 @@ category: Visible
 hero: amateur.png
 toys:
   - name: ZWO Seestar S30 Pro
-    description: Motorized scope with auto pointing and photo stacking
+    description: Smart amateur telescope
   - name: ZWO Seestar TH10 Tilting Wedge
-    description: Align to equatorial to remove field rotation
+    description: Equatorial alignment
 ---

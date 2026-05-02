@@ -89,7 +89,10 @@ import PageFooter from '../../layouts/PageFooter.astro';
         topic.categories.forEach(function (cat) {
           var catSlug = cat.category.toLowerCase().replace(/\s+/g, '-');
           var catComplete = cat.techs.length > 0 && cat.techs.every(function (t) { return t.available; });
-          var catTested = catComplete && cat.techs.every(function (t) { return t.projects && t.projects.length > 0; });
+          var techTested = function (t) {
+            return (typeof t.tested === 'boolean') ? t.tested : !!(t.projects && t.projects.length > 0);
+          };
+          var catTested = catComplete && cat.techs.every(techTested);
           var catMark = catTested
             ? '<span class="tech-cat-complete tech-cat-tested tech-tip" data-tip="Toys tested">TESTED</span>'
             : (catComplete ? '<span class="tech-cat-complete tech-tip" data-tip="Access granted">ACCESS</span>' : '');
@@ -103,7 +106,7 @@ import PageFooter from '../../layouts/PageFooter.astro';
             if (tech.tech_url) {
               name = '<a href="' + tech.tech_url + '">' + name + '</a>';
             }
-            var tested = tech.projects && tech.projects.length > 0;
+            var tested = techTested(tech);
             var access = tech.available
               ? '<span class="tech-avail tech-tip" data-tip="' + (tested ? 'Tested' : 'Accessed') + '">' + (tested ? '&#10003;' : '&ndash;') + '</span>'
               : '';
@@ -122,7 +125,7 @@ import PageFooter from '../../layouts/PageFooter.astro';
       document.getElementById('tech-content').innerHTML = html;
     }
 
-    fetch('/research/tech.json', { cache: 'no-cache' })
+    fetch('/research/technology.json', { cache: 'no-cache' })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (d) {
         var topics = d.topics;

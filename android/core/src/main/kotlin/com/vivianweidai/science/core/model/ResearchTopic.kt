@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 import java.net.URI
 import java.net.URLEncoder
 
-/** Strongly-typed mirror of `public/research/tech.json`. */
+/** Strongly-typed mirror of `public/research/technology.json`. */
 @Serializable
 data class ResearchTopic(
     val id: Int,
@@ -79,7 +79,7 @@ data class ResearchTech(
 @Serializable
 data class ResearchTechResponse(val topics: List<ResearchTopic>)
 
-/** Per-tech project entry baked into tech.json by build_tech.py — combines
+/** Per-tech project entry baked into technology.json by build_technology.py — combines
  *  reverse-scanned local projects (whose frontmatter `tech:` references
  *  this tech) with the tech's own `extra_projects:` placeholders. Lets
  *  iOS/Android render the tech detail view without re-scanning every

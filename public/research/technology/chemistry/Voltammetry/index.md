@@ -2,10 +2,10 @@
 tech: Voltammetry
 science: Chemistry
 science_slug: chem
-topic: React
+topic: Stimulate
 category: Electrochemistry
 hero: voltammetry.png
 toys:
   - name: PalmSens EmStat Pico
-    description: Compact research potentiostat for cyclic voltammetry
+    description: Sweep voltage read current - what is active
 ---

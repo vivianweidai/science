@@ -2,12 +2,17 @@
 tech: Calorimetry
 science: Chemistry
 science_slug: chem
-topic: React
+topic: Stimulate
 category: Thermal
-hero: dsc-q100.jpg
+hero: calorimetry.jpeg
+hero_position: center 75%
 toys:
-  - name: TA Instruments DSC Q100
-    description: Modulated DSC — separates reversing vs. non-reversing transitions
   - name: TA Instruments DSC Q20
-    description: DSC — heat of fusion and phase transitions
+    description: Heat flow over temperature
+  - name: TA Instruments DSC Q100
+    description: Separate reversing transitions
+  - name: TA Instruments Tzero Sample Encapsulation Press
+    description: Seal sample pans
+  - name: TA Instruments Tzero Aluminum Pan and Lid
+    description: Standard sample pans
 ---

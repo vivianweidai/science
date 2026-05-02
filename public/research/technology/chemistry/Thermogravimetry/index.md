@@ -2,10 +2,14 @@
 tech: Thermogravimetry
 science: Chemistry
 science_slug: chem
-topic: React
+topic: Stimulate
 category: Thermal
-hero: tga-q50.jpg
+hero: thermogravimetry.jpeg
 toys:
   - name: TA Instruments TGA Q50
-    description: Bench TGA — mass loss vs. temperature, Pt/Al pans
+    description: Mass loss over temperature
+  - name: TA Instruments TGA Q50 Hangdown Wire
+    description: Suspend sample pan
+  - name: TA Instruments TGA Ceramic Pan
+    description: Ceramic sample pan
 ---

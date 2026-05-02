@@ -1,6 +1,6 @@
 import Foundation
 
-/// Strongly-typed mirror of `public/research/tech.json`, the source of
+/// Strongly-typed mirror of `public/research/technology.json`, the source of
 /// truth for the Research page's tech browser.
 public struct ResearchTopic: Codable, Identifiable, Hashable, Sendable {
     public let id: Int
@@ -40,7 +40,7 @@ public struct ResearchTech: Codable, Identifiable, Hashable, Sendable {
 
     /// Absolute URL for the tech's hero image. Resolves relative paths
     /// (the common case — frontmatter `hero: numpy.jpeg` is rewritten by
-    /// `build_tech.py` to `/research/tech/<sci>/<tech>/numpy.jpeg`)
+    /// `build_technology.py` to `/research/tech/<sci>/<tech>/numpy.jpeg`)
     /// against the site origin.
     public var heroURL: URL? {
         guard let hero else { return nil }
@@ -70,7 +70,7 @@ public struct ResearchTech: Codable, Identifiable, Hashable, Sendable {
     /// External URL to open in Safari (Wolfram, GitHub, Colab) — or
     /// resolved to a raw.githubusercontent URL when `url` is a
     /// repo-relative path like `/research/archives/photos/foo.jpg`,
-    /// which is how tech.json stores placeholder image links.
+    /// which is how technology.json stores placeholder image links.
     /// AsyncImage can't fetch a schemeless path, so the resolution
     /// must happen here rather than at render time.
     public var externalURL: URL? {
@@ -90,8 +90,8 @@ public struct ResearchTechResponse: Codable, Sendable {
 
 /// Per-tech project entry — combines the reverse-scanned local projects
 /// (whose frontmatter `tech:` array references this tech) with the tech's
-/// own `extra_projects:` placeholder list. Baked into `tech.json` by
-/// `build_tech.py` so iOS/Android can render the tech detail view
+/// own `extra_projects:` placeholder list. Baked into `technology.json` by
+/// `build_technology.py` so iOS/Android can render the tech detail view
 /// without re-scanning every project at runtime.
 public struct ResearchTechProject: Codable, Hashable, Sendable, Identifiable {
     public let date: String           // YYYY-MM-DD

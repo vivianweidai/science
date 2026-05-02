@@ -3,7 +3,7 @@ import { getCollection, render } from 'astro:content';
 import DefaultLayout from '../../../../../layouts/Default.astro';
 import PageHeader from '../../../../../layouts/PageHeader.astro';
 import PageFooter from '../../../../../layouts/PageFooter.astro';
-import techData from '../../../../../../public/research/tech.json';
+import techData from '../../../../../../public/research/technology.json';
 
 export async function getStaticPaths() {
   const techs = await getCollection('tech');
@@ -21,8 +21,8 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 const { tech, science, science_slug, topic, category, hero, hero_position } = entry.data;
 
-// Tech spec text comes from tech.json (built from tech.yml — single
-// source of truth for tech text).
+// Tech spec text comes from technology.json (built from technology.yml —
+// single source of truth for tech text).
 let specs = '';
 for (const t of techData.topics) {
   if (t.science_slug !== science_slug || t.topic !== topic) continue;
@@ -38,7 +38,7 @@ const topicSlug = slug(topic);
 const catSlug = slug(category);
 
 // Reverse-lookup every project that uses this tech. Source of truth is
-// each project's `tech:` frontmatter array — the tech.yml completed/
+// each project's `tech:` frontmatter array — the technology.yml completed/
 // extension_of fields are too narrow (one project per tech) to capture the
 // foundation libraries (NumPy, Matplotlib, etc.) that show up across many
 // projects.
@@ -120,7 +120,7 @@ function resolveHero(h: string | undefined, folder: string, name: string): strin
 const heroUrl = resolveHero(hero, scienceFolder, tech);
 
 // ----- Cross-tech prev/next nav -----
-// Flatten tech.yml's topic → category → tech hierarchy into a single
+// Flatten technology.yml's topic → category → tech hierarchy into a single
 // canonical sequence so prev/next can cycle through every tech on the
 // site (and roll over from one science's last tech into the next
 // science's first). Only techs with a template page (tech_url present)

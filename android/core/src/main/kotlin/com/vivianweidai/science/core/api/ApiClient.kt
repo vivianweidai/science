@@ -43,7 +43,7 @@ class ApiClient {
 
     companion object {
         const val OLYMPIADS_URL = "https://vivianweidai.com/olympiads/olympiads.json"
-        const val TECH_URL = "https://vivianweidai.com/research/tech.json"
+        const val TECH_URL = "https://vivianweidai.com/research/technology.json"
         val shared = ApiClient()
     }
 }

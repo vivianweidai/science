@@ -3,7 +3,7 @@ import ScienceCore
 
 /// Toy browser matching the webapp /research/ page. Topics are grouped
 /// cards with a subject chip, each containing rows of technologies and
-/// their toys. Source of truth: content/research/tech.json.
+/// their toys. Source of truth: content/research/technology.json.
 struct ResearchView: View {
     @State private var store = ContentStore.shared
     @State private var subject: SubjectFilter = SubjectFilter.randomResearchSubject()
@@ -218,9 +218,9 @@ private struct TechRow: View {
 
 /// Native tech page — renders title, science chip, topic·category
 /// context, hero image, spec description, and the projects list, all
-/// from `tech.json` data. Replaces the previous markdown-passthrough
+/// from `technology.json` data. Replaces the previous markdown-passthrough
 /// approach because most tech `index.md` bodies are empty by design (the
-/// data-bearing fields live in `tech.json`).
+/// data-bearing fields live in `technology.json`).
 struct TechDetailView: View {
     let topic: ResearchTopic
     let category: ResearchCategory
@@ -533,10 +533,10 @@ private struct GitHubContentEntry: Decodable {
 /// replaces the inline `<ul class="updates-list">` HTML that was
 /// shipped in markdown bodies. The list of toys comes from the
 /// project's `tech:` front-matter array; each tech is resolved via
-/// ContentStore (tech.json) for parent topic/category and specs,
+/// ContentStore (technology.json) for parent topic/category and specs,
 /// and tapping a row navigates internally to TechDetailView (no
 /// Safari bounce). Techs missing from ContentStore (e.g. typo or
-/// not yet in tech.yml) are silently skipped.
+/// not yet in technology.yml) are silently skipped.
 private struct ResolvedTech: Identifiable {
     let topic: ResearchTopic
     let category: ResearchCategory
@@ -556,7 +556,7 @@ private struct ProjectTechnologySection: View {
     /// Resolve each tech name against ContentStore and sort:
     /// 1. by science in math → comp → phys → chem → bio → astro order;
     /// 2. within a science, by `tech.id` (which monotonically increases
-    ///    in tech.yml authoring order, so this preserves the
+    ///    in technology.yml authoring order, so this preserves the
     ///    intra-subject sequence the user laid out in the source file).
     private var resolved: [ResolvedTech] {
         techNames

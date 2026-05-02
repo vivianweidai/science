@@ -24,8 +24,6 @@ Does a cat prefer red or green colored food? This experiment tested whether a Br
 
 ## Setup
 
-<div class="setup-highlight">
-
 | Toolkit | Details |
 |----------|---------|
 | Subject | British Shorthair cat (Mi) <a class="photo-icon" href="/mi.jpeg"><img src="/mi.svg" alt="Mi" style="height:1em;vertical-align:-0.18em;"></a> |
@@ -33,8 +31,6 @@ Does a cat prefer red or green colored food? This experiment tested whether a Br
 | Dye | Red and green food coloring |
 | Serving | 10 pieces per bowl per trial |
 | Duration | 30 days (August-September 2024) |
-
-</div>
 
 Colored cat food was prepared by mixing regular dry food with red and green food coloring in separate jars. Each day, two bowls were placed side by side — one with 10 red pieces and one with 10 green pieces. Bowl positions were alternated daily to control for side bias. The color Mi approached and began eating first was recorded as his preference. Remaining pieces, serving time, and food dye concentration were also tracked. Days where Mi did not eat from either bowl were excluded. After 30 days, a chi-squared goodness-of-fit test was applied to the observed preferences.
 

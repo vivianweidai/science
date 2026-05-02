@@ -9,5 +9,5 @@ toys:
   - name: NumPy
     description: Linear algebra and vector math
   - name: SciPy
-    description: Optimization, integration and signal processing
+    description: Scientific computing
 ---

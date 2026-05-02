@@ -9,5 +9,5 @@ toys:
   - name: GitHub
     description: Version control and hosting
   - name: Jupyter
-    description: Interactive notebook environment
+    description: Interactive notebooks
 ---

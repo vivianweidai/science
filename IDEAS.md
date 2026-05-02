@@ -211,7 +211,7 @@ Regeneron ISEF · Regeneron STS · JSHS · USABO / USNCO / USAPhO Olympiads.
 
 Live structure as of 2026-05-01 — Math/Compute/Astronomy at 2 topics each (tools + special-purpose), Physics/Chemistry/Biology at 3 each (the bench-research bulk).
 
-Hold these for later — *don't add to `tech.yml` until at least one concrete project anchors each one*, otherwise they sit thin like Polarimetry did.
+Hold these for later — *don't add to `technology.yml` until at least one concrete project anchors each one*, otherwise they sit thin like Polarimetry did.
 
 ### Chemistry — 3rd topic: **Transform**
 
@@ -284,7 +284,7 @@ What is and isn't needed for the summer 2026 home lab.
 ## Change log
 
 - **2026-05-01** — Physics restructure (final): Move/Heat/Wave → **Measure + Build** (2 topics, verb pair matching every other science). Measure: Motion (Force, Distance, Time), Fluids (Pressure, Turbidity), Electromagnetism (Magnetic Field, Spectrometer, Interferometer — fields + optics merged). Build: Circuits (Rigol scope, TOAUTO soldering, SainSmart helping hands; Multimeter dropped as too basic), Prototypes (Bambu Lab A1 Mini placeholder for 3D Printing). Heat dropped — Vernier Temperature Probe became a toy under Chem React → Thermal → new **Melting Point** tech (with broken OptiMelt as historical toy). Vernier Conductivity Probe moved from Physics → Chem React → Conductometry (now available). Tech-name rename: Photogate→Time, Motion Detector→Distance, Gas Pressure→Pressure (toys describe the instrument, techs describe the measurement). Dropped unsupported physics tech files. Four Point Probe project relinked to new Circuits tech. All 6 sciences now at 2 topics each with verb-pair labels.
-- **2026-05-01** — Removed Bio Grow from `tech.yml`. The "techs" inside (Bacterial Culture, Drosophila Genetics, etc.) are project areas, not techs — same axis-mismatch as chem reaction types (acid/base, redox, precipitation). Bio sits at 2 topics (Image, Replicate); Grow returns when toys + project commit.
+- **2026-05-01** — Removed Bio Grow from `technology.yml`. The "techs" inside (Bacterial Culture, Drosophila Genetics, etc.) are project areas, not techs — same axis-mismatch as chem reaction types (acid/base, redox, precipitation). Bio sits at 2 topics (Image, Replicate); Grow returns when toys + project commit.
 - **2026-05-01** — Added Vancouver lab buildout pre-order list (cross-discipline bench bottlenecks: balance, microcentrifuge, vortex, hot plate). Dad's lab covers cold storage / incubation / laminar flow.
 - **2026-05-01** — Chemistry restructure: collapsed Resolve into Identify (Separation moved up), renamed Probe → React (Thermal joined Electrochemistry), Polarimetry stayed under Identify alongside CD. Chemistry now sits at 2 topics (Identify / React); Transform stays as the planned 3rd.
 - **2026-05-01** — Added "Future topic structure" section: Chemistry's planned 4th topic (Transform), Physics future categories (Acoustics, Modern, Materials, Fluids), Biology hold rationale.
