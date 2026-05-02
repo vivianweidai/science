@@ -2,8 +2,8 @@
 tech: Numerical
 science: Mathematics
 science_slug: math
-topic: Solve
-category: Calculate
+topic: Calculate
+category: Solve
 hero: numerical.png
 toys:
   - name: NumPy

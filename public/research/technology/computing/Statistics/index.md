@@ -1,8 +1,8 @@
 ---
-tech: Inference
+tech: Statistics
 science: Computing
 science_slug: comp
-topic: Process
+topic: Experiment
 category: Predict
 hero: inference.png
 toys:

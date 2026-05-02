@@ -9,7 +9,6 @@
 #   topic:        string — top-level heading (e.g. Vibrational Spectroscopy) (required)
 #   categories:   list of categories within this topic               (required)
 #     - category:     string — category name (e.g. Infrared)         (required)
-#       description:  string — what this category covers             (required)
 #       techs:        list of techs in this category                 (optional — omit if no techs yet)
 #         - tech:         string — tech name (a row on Research)     (required)
 #           specs:        string — key specs                         (required)
@@ -25,11 +24,9 @@
 # ═══════════════════════════════════════════════════════════════
 
 - science: Mathematics
-  topic: Solve
-  description: ""
+  topic: Calculate
   categories:
-    - category: Calculate
-      description: ""
+    - category: Solve
       techs:
         - tech: Numerical
           specs: Approximate
@@ -39,14 +36,13 @@
           specs: Exact
           available: true
           url: https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb
-    - category: Communicate
-      description: ""
+    - category: Display
       techs:
         - tech: Graphic
           specs: 2D and 3D
           available: true
           url: /research/projects/20260404%20Four%20Point%20Probe/
-        - tech: Typesetting
+        - tech: Typeset
           specs: Equations and Reactions
           available: true
           url: /curriculum/
@@ -56,14 +52,12 @@
 # ═══════════════════════════════════════════════════════════════
 
 - science: Computing
-  topic: Process
-  description: ""
+  topic: Experiment
   categories:
     - category: Predict
-      description: ""
       techs:
-        - tech: Inference
-          specs: Statistics
+        - tech: Statistics
+          specs: Inference
           available: true
         - tech: Machine Learning
           specs: Classic models
@@ -71,8 +65,7 @@
         - tech: Deep Learning
           specs: Neural networks
           available: true
-    - category: Reproduce
-      description: ""
+    - category: Produce
       techs:
         - tech: Repository
           specs: Data code notebooks
@@ -88,10 +81,8 @@
 
 - science: Physics
   topic: Measure
-  description: ""
   categories:
     - category: Motion
-      description: ""
       techs:
         - tech: Force
           specs: Push and pull
@@ -103,7 +94,6 @@
           specs: Beam timing
           available: true
     - category: Fluids
-      description: ""
       techs:
         - tech: Pressure
           specs: Sealed pressure
@@ -112,7 +102,6 @@
           specs: Light scattering
           available: true
     - category: Electromagnetism
-      description: ""
       techs:
         - tech: Magnetic Field
           specs: Hall effect
@@ -124,16 +113,13 @@
 
 - science: Physics
   topic: Build
-  description: ""
   categories:
     - category: Circuits
-      description: ""
       techs:
         - tech: Circuits
           specs: Voltage and waveforms
           available: true
     - category: Prototypes
-      description: ""
       techs:
         - tech: 3D Printing
           specs: Filament fabrication
@@ -144,10 +130,8 @@
 
 - science: Chemistry
   topic: Identify
-  description: ""
   categories:
     - category: Separation
-      description: ""
       techs:
         - tech: Centrifugation
           specs: Density spin
@@ -159,7 +143,6 @@
           specs: Volatiles
           available: true
     - category: Spectroscopy
-      description: ""
       techs:
         - tech: IR Spectroscopy
           specs: Polar bonds
@@ -173,7 +156,6 @@
           specs: Chiral structure
           available: true
     - category: Spectrometry
-      description: ""
       techs:
         - tech: MALDI
           specs: Intact mass
@@ -185,7 +167,6 @@
           specs: Volatile
           available: true
     - category: Polarimetry
-      description: ""
       techs:
         - tech: Polarimeter
           specs: Sample chirality
@@ -193,10 +174,8 @@
 
 - science: Chemistry
   topic: React
-  description: ""
   categories:
     - category: Thermal
-      description: ""
       techs:
         - tech: Melting Point
           specs: Purity
@@ -208,7 +187,6 @@
           specs: Mass loss
           available: true
     - category: Electrochemistry
-      description: ""
       techs:
         - tech: Potentiometry
           specs: Ion activity
@@ -226,10 +204,8 @@
 
 - science: Biology
   topic: Image
-  description: ""
   categories:
     - category: Microscopy
-      description: ""
       techs:
         - tech: Handheld
           specs: Surface scope
@@ -241,7 +217,6 @@
           specs: High-mag cells
           available: true
     - category: Systems Imaging
-      description: ""
       techs:
         - tech: EEG
           specs: Scalp electrodes
@@ -251,7 +226,6 @@
           specs: Heart rhythm
           available: true
     - category: Respiration
-      description: ""
       techs:
         - tech: Spirometer
           specs: Breath volume
@@ -262,10 +236,8 @@
 
 - science: Biology
   topic: Replicate
-  description: ""
   categories:
     - category: Amplification
-      description: ""
       techs:
         - tech: PCR
           specs: Endpoint amplify
@@ -273,14 +245,12 @@
         - tech: qPCR
           specs: Real-time count
     - category: Sequencing
-      description: ""
       techs:
         - tech: Long-Read
           specs: End-to-end strand
         - tech: Short-Read
           specs: Parallel strands
     - category: Expression
-      description: ""
       techs:
         - tech: Cell-Free
           specs: Protein from DNA
@@ -295,10 +265,8 @@
 
 - science: Astronomy
   topic: Observe
-  description: ""
   categories:
     - category: Visible
-      description: ""
       techs:
         - tech: Amateur
           specs: Smart telescopes
@@ -307,7 +275,6 @@
           specs: Ground observatories
           available: true
     - category: Invisible
-      description: ""
       techs:
         - tech: Radio
           specs: Radio telescopes
@@ -318,10 +285,8 @@
 
 - science: Astronomy
   topic: Decode
-  description: ""
   categories:
     - category: Analysis
-      description: ""
       techs:
         - tech: Astrometry
           specs: Position catalogs
@@ -333,7 +298,6 @@
           specs: Spectra
           available: true
     - category: Classification
-      description: ""
       techs:
         - tech: Transient
           specs: Events

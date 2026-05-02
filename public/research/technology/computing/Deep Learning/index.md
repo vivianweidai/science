@@ -2,7 +2,7 @@
 tech: Deep Learning
 science: Computing
 science_slug: comp
-topic: Process
+topic: Experiment
 category: Predict
 hero: pytorch.png
 toys:

@@ -2,8 +2,8 @@
 tech: Symbolic
 science: Mathematics
 science_slug: math
-topic: Solve
-category: Calculate
+topic: Calculate
+category: Solve
 hero: wolfram.png
 hero_position: center 30%
 extra_projects:

@@ -2,8 +2,8 @@
 tech: Graphic
 science: Mathematics
 science_slug: math
-topic: Solve
-category: Communicate
+topic: Calculate
+category: Display
 hero: graphic.png
 extra_projects:
   - date: "2026-04-01"

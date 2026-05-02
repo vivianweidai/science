@@ -82,7 +82,6 @@ import PageFooter from '../../layouts/PageFooter.astro';
         html += '<div class="tech-card tech-accent-' + topic.science_slug + '">';
         html += '<div class="tech-card-header">'
           + '<span class="tech-topic-title">' + esc(topic.topic) + '</span>'
-          + '<span class="tech-topic-desc">' + esc(topic.description || '') + '</span>'
           + '<span class="tech-topic-chip"><a class="chip ' + topic.science_slug + '" href="/research/#' + topic.science_slug + '">' + esc(topic.science) + '</a></span>'
           + '</div>';
         html += '<table class="tech-table"><colgroup><col style="width:28%"><col><col style="width:7rem"></colgroup><tbody>';
@@ -92,8 +91,7 @@ import PageFooter from '../../layouts/PageFooter.astro';
           var catComplete = cat.techs.length > 0 && cat.techs.every(function (t) { return t.available; });
           var catMark = catComplete ? '<span class="tech-cat-complete">COMPLETE</span>' : '';
           html += '<tr class="tech-cat-row" id="cat-' + topic.science_slug + '-' + topicSlug + '-' + catSlug + '">'
-            + '<td style="padding-left:1.4em;font-weight:700">' + esc(cat.category) + '</td>'
-            + '<td class="tech-cat-desc">' + esc(cat.description) + '</td>'
+            + '<td colspan="2" style="padding-left:1.4em;font-weight:700">' + esc(cat.category) + '</td>'
             + '<td class="tech-access">' + catMark + '</td>'
             + '</tr>';
 
@@ -254,29 +252,15 @@ import PageFooter from '../../layouts/PageFooter.astro';
       border-bottom: 1px solid #eaecef;
       color: #1f2328;
       display: grid;
-      grid-template-columns: 28% 1fr 7rem;
+      grid-template-columns: 1fr 7rem;
       align-items: center;
     }
     .tech-card-header .chip {
       vertical-align: middle;
     }
     .tech-topic-title { white-space: nowrap; padding-left: 1.4em; }
-    .tech-topic-desc {
-      font-weight: 400;
-      font-size: .9em;
-      color: #1f2328;
-      opacity: 0;
-      transition: opacity .2s ease;
-      padding: 0 .7em;
-      min-width: 0;
-    }
     .tech-topic-chip {
       text-align: center;
-    }
-    @media (hover: hover) {
-      .tech-card-wrap:hover .tech-topic-desc {
-        opacity: 1;
-      }
     }
     .tech-card-header {
       background: color-mix(in srgb, var(--card-tint, #d1d9e0) 45%, white);
@@ -312,19 +296,7 @@ import PageFooter from '../../layouts/PageFooter.astro';
     }
     .tech-cat-name { font-weight: 700; }
 
-    /* td.tech-cat-desc beats .tech-table td (both 0,1,1 specificity, but
-       this rule comes later) so the default `color: transparent` actually
-       takes effect. The hover rule then bumps to 0,2,1 to win over it. */
-    td.tech-cat-desc {
-      font-weight: 400;
-      color: transparent;
-      transition: color .2s ease;
-      text-align: left;
-    }
     @media (hover: hover) {
-      .tech-card-wrap:hover td.tech-cat-desc {
-        color: #1f2328;
-      }
       .tech-cat-row:hover td { background: #eef1f4; }
     }
 
@@ -377,18 +349,30 @@ import PageFooter from '../../layouts/PageFooter.astro';
 
     @media (max-width: 600px) {
       .tabs .tab-labels label { padding: 0.45em 0.7em; font-size: 0.8em; }
-      .tech-card-header { padding-left: .8rem; }
-      .tech-topic-desc { display: none; }
+
+      /* Topic header: topic title flush to .8rem (same as cells below),
+         science chip flush right. */
+      .tech-card-header { grid-template-columns: 1fr auto; padding: .6em .8rem; }
+      .tech-card-header .tech-topic-title { padding-left: 0; }
+      .tech-card-header .tech-topic-chip { text-align: right; }
+
       .tech-table { table-layout: auto; }
       .tech-table colgroup { display: none; }
       .tech-table td { display: block; padding: .2em .8rem; }
-      .tech-cat-row td { display: block; padding: .7em .8rem !important; font-size: 1em; }
-      .tech-cat-desc { display: none !important; }
-      .tech-row td:first-child { padding: .4em .8rem 0 .8rem !important; }
-      .tech-specs { padding: 0 .8rem .4em .8rem; font-size: .88em; color: #656d76; }
-      .tech-access { display: none !important; height: 0; padding: 0 !important; margin: 0; overflow: hidden; }
-      tr.tech-row { border-bottom: 1px solid #f0f0f0; }
+
+      /* Category row: flex so the COMPLETE badge stays right-aligned. */
+      tr.tech-cat-row { display: flex; align-items: center; padding: .7em .8rem; }
+      tr.tech-cat-row td { display: block !important; padding: 0 !important; font-size: 1em; }
+      tr.tech-cat-row td:first-child { flex: 1; }
+      tr.tech-cat-row td.tech-access { width: auto; height: auto; margin: 0; overflow: visible; text-align: right; }
+
+      /* Tech row: flex so the ✓ stays inline-right of the tech name; specs wrap to row 2. */
+      tr.tech-row { display: flex; flex-wrap: wrap; align-items: baseline; padding: .4em .8rem; border-bottom: 1px solid #f0f0f0; }
       tr.tech-row:last-child { border-bottom: none; }
+      tr.tech-row td { display: block !important; padding: 0 !important; }
+      tr.tech-row td:first-child { flex: 1 1 60%; min-width: 0; }
+      tr.tech-row td.tech-specs { flex-basis: 100%; font-size: .88em; color: #656d76; }
+      tr.tech-row td.tech-access { width: auto; height: auto; flex: 0 0 auto; margin: 0 0 0 .5em; overflow: visible; text-align: right; }
     }
 
     #tech-all:checked ~ .tab-labels label[for="tech-all"] { color: #656d76; border-bottom-color: #656d76; background: #e8e8e8; }

@@ -2,8 +2,8 @@
 tech: Snapshot
 science: Computing
 science_slug: comp
-topic: Process
-category: Reproduce
+topic: Experiment
+category: Produce
 hero: docker.png
 toys:
   - name: Docker

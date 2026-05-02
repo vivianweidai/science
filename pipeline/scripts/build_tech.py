@@ -8,8 +8,8 @@ Three-level schema:
   topics[] → categories[] → techs[]
 
 Output shape:
-  {"topics": [{id, science, science_slug, topic, description,
-    categories: [{id, category, description,
+  {"topics": [{id, science, science_slug, topic,
+    categories: [{id, category,
       techs: [{id, tech, specs, available, tech_url, hero?, url?,
               projects?: [{date, title, url, sciences[], folder?}]}]
     }]
@@ -157,9 +157,8 @@ def build() -> list[dict]:
 
         cats_out = []
         for j, cat in enumerate(e["categories"]):
-            for f in ("category", "description"):
-                if f not in cat:
-                    raise ValueError(f"topic[{i}].cat[{j}] missing {f!r}")
+            if "category" not in cat:
+                raise ValueError(f"topic[{i}].cat[{j}] missing 'category'")
             cat_id += 1
             techs_out = []
             for k, tech in enumerate(cat.get("techs") or []):
@@ -196,7 +195,6 @@ def build() -> list[dict]:
             cats_out.append({
                 "id": cat_id,
                 "category": cat["category"],
-                "description": cat["description"],
                 "techs": techs_out,
             })
         topics.append({
@@ -204,7 +202,6 @@ def build() -> list[dict]:
             "science": e["science"],
             "science_slug": SCIENCE_SLUGS[e["science"]],
             "topic": e["topic"],
-            "description": e.get("description", ""),
             "categories": cats_out,
         })
     return topics

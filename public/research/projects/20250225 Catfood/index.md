@@ -1,8 +1,8 @@
 ---
 project: Cat Food Color Preference
 tech:
-  - Inference
-  - Typesetting
+  - Statistics
+  - Typeset
 title: "Red or Green, What Colored Cat Food does Mi Prefer?"
 sciences:
   - Mathematics

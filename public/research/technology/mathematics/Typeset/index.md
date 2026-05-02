@@ -1,9 +1,9 @@
 ---
-tech: Typesetting
+tech: Typeset
 science: Mathematics
 science_slug: math
-topic: Solve
-category: Communicate
+topic: Calculate
+category: Display
 hero: latex.png
 toys:
   - name: LaTeX

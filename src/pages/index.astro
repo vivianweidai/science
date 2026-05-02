@@ -191,6 +191,8 @@ const TABS = [
       position: relative;
       z-index: 1;
     }
+    /* Timer wave — only rendered on the active tab. Hidden on non-active
+       tabs so they stay crisp on hover. */
     .curr-rows-progress {
       position: absolute;
       top: 0;
@@ -203,6 +205,12 @@ const TABS = [
         rgba(31,35,40,0.025) 90%,
         rgba(31,35,40,0.07) 100%);
       pointer-events: none;
+      display: none;
+    }
+    .curr-rows[data-active="curriculum"] .curr-rows-tab[data-target="curriculum"] .curr-rows-progress,
+    .curr-rows[data-active="olympiads"]  .curr-rows-tab[data-target="olympiads"]  .curr-rows-progress,
+    .curr-rows[data-active="research"]   .curr-rows-tab[data-target="research"]   .curr-rows-progress {
+      display: block;
     }
 
     /* Tab visibility: hide rows-content not matching active tab */
@@ -584,8 +592,8 @@ const TABS = [
       var tabs = ['curriculum', 'olympiads', 'research'];
       var tabMs = 5000;
       var cycleMs = tabs.length * tabMs;
-      // Each page load picks a random starting tab; the timer ticks on
-      // from there (offset cycleStart so elapsed lands inside that tab).
+      // Random starting tab on each page load; the timer ticks on from
+      // there (offset cycleStart so elapsed lands inside that tab).
       var startIdx = Math.floor(Math.random() * tabs.length);
       container.dataset.active = tabs[startIdx];
       var cycleStart = performance.now() - startIdx * tabMs;
