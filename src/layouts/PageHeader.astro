@@ -25,7 +25,17 @@ const allLinks: Array<{ id: Section; href: string; label: string }> = [
   { id: 'olympiads',  href: olympiadsHref  ?? '/olympiads/',  label: 'Olympiads' },
   { id: 'research',   href: researchHref   ?? '/research/',   label: 'Research' },
 ];
-const links = active === 'home' ? allLinks.filter((l) => l.id !== 'home') : allLinks;
+// Drop the self-link on Curriculum / Olympiads / Home pages — it just
+// re-renders the page you're already on and crowds the mobile header.
+// Keep it on Research pages: the link stays useful as a "back to top of
+// /research/" jump even on the index, and on tech sub-pages it gets a
+// hash override (e.g. /research/#math) that scrolls + filters.
+const links = allLinks.filter((l) => {
+  if (l.id === 'home' && active === 'home') return false;
+  if (l.id === 'curriculum' && active === 'curriculum') return false;
+  if (l.id === 'olympiads' && active === 'olympiads') return false;
+  return true;
+});
 
 const titles: Record<Section, string> = {
   home: 'Science',
