@@ -4,6 +4,7 @@ science: Physics
 science_slug: phys
 topic: Build
 category: Circuits
+hero: circuits.png
 toys:
   - name: Rigol DS1054Z Oscilloscope
     description: 50 MHz 4-channel benchtop scope for voltage and waveforms
