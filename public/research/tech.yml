@@ -103,7 +103,7 @@
           available: true
     - category: Electromagnetism
       techs:
-        - tech: Magnetic Field
+        - tech: Magnetism
           specs: Hall effect
           available: true
         - tech: Spectrometer

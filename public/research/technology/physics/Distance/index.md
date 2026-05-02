@@ -7,5 +7,5 @@ category: Motion
 hero: motion-detector.jpg
 toys:
   - name: Vernier Go Direct Motion Detector
-    description: Ultrasonic ranger for distance, velocity, acceleration
+    description: Distance, velocity and acceleration
 ---

@@ -224,10 +224,10 @@
           "techs": [
             {
               "id": 15,
-              "tech": "Magnetic Field",
+              "tech": "Magnetism",
               "specs": "Hall effect",
               "available": 1,
-              "tech_url": "/research/technology/physics/Magnetic%20Field/"
+              "tech_url": "/research/technology/physics/Magnetism/"
             },
             {
               "id": 16,
