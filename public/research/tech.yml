@@ -212,18 +212,18 @@
     - category: Microscopy
       techs:
         - tech: Handheld
-          specs: Surface scope
+          specs: Surfaces
           available: true
         - tech: Stereo
-          specs: Whole specimens
+          specs: Organisms
           available: true
         - tech: Compound
-          specs: High-mag cells
+          specs: Cells
           available: true
-    - category: Systems Imaging
+    - category: Vitals
       techs:
         - tech: EEG
-          specs: Scalp electrodes
+          specs: Brain waves
         - tech: fNIRS
           specs: Blood flow
         - tech: EKG
@@ -235,7 +235,7 @@
           specs: Breath volume
           available: true
         - tech: Gas Exchange
-          specs: Respiration
+          specs: Metabolic gases
           available: true
 
 - science: Biology
@@ -251,16 +251,16 @@
     - category: Sequencing
       techs:
         - tech: Long-Read
-          specs: End-to-end strand
+          specs: Entire strand
         - tech: Short-Read
-          specs: Parallel strands
+          specs: Parallel fragments
     - category: Expression
       techs:
         - tech: Cell-Free
-          specs: Protein from DNA
+          specs: DNA to proteins
           available: true
         - tech: Fluorescence
-          specs: Glow under UV
+          specs: UV glow
           available: true
 
 # ═══════════════════════════════════════════════════════════════
@@ -306,6 +306,6 @@
         - tech: Transient
           specs: Events
           available: true
-        - tech: Galaxy Morphology
-          specs: Galaxies
+        - tech: Galaxies
+          specs: Morphology
           available: true

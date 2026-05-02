@@ -37,7 +37,7 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent.parent
 CONTENT = ROOT / "public" / "research"
 PROJECTS = CONTENT / "projects"
-TECH_DIR = CONTENT / "tech"
+TECH_DIR = CONTENT / "technology"
 
 SCIENCES = {"Biology", "Chemistry", "Physics", "Computing", "Mathematics", "Astronomy"}
 # Short slug — used for chip styling and the /research/#<slug> column anchor.

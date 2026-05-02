@@ -168,7 +168,7 @@ private fun ActivityRow(a: Activity) {
                     color = nameColor,
                     modifier = Modifier.weight(1f, fill = false),
                 )
-                if (a.invited == 1) Text(" 🎟️", fontSize = 12.sp)
+                if (a.invited == 1) Text(" ⭐", fontSize = 12.sp)
                 if (a.competitive == 1) Text(" 🎯", fontSize = 12.sp)
             }
         }

@@ -16,6 +16,7 @@
               "specs": "Approximate",
               "available": 1,
               "tech_url": "/research/technology/mathematics/Numerical/",
+              "hero": "/research/technology/mathematics/Numerical/numerical.png",
               "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
               "projects": [
                 {
@@ -35,6 +36,7 @@
               "specs": "Exact",
               "available": 1,
               "tech_url": "/research/technology/mathematics/Symbolic/",
+              "hero": "/research/technology/mathematics/Symbolic/wolfram.png",
               "url": "https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb"
             }
           ]
@@ -49,16 +51,16 @@
               "specs": "2D and 3D",
               "available": 1,
               "tech_url": "/research/technology/mathematics/Graphic/",
+              "hero": "/research/technology/mathematics/Graphic/graphic.png",
               "url": "/research/projects/20260404%20Four%20Point%20Probe/",
               "projects": [
                 {
-                  "date": "2026-04-20",
-                  "title": "UV-Vis Spectroscopy of Everyday Fluorophores",
-                  "url": "/research/projects/20260420%20UV-Vis%20Spectroscopy/",
+                  "date": "2026-04-01",
+                  "title": "Wolfram — Dry Run",
+                  "url": "https://www.wolframcloud.com/obj/jamesdai/Published/exoplanets.nb",
                   "sciences": [
-                    "Chemistry"
-                  ],
-                  "folder": "20260420 UV-Vis Spectroscopy"
+                    "Astronomy"
+                  ]
                 }
               ]
             },
@@ -68,6 +70,7 @@
               "specs": "Equations and Reactions",
               "available": 1,
               "tech_url": "/research/technology/mathematics/Typeset/",
+              "hero": "/research/technology/mathematics/Typeset/latex.png",
               "url": "/curriculum/",
               "projects": [
                 {
@@ -102,6 +105,7 @@
               "specs": "Inference",
               "available": 1,
               "tech_url": "/research/technology/computing/Statistics/",
+              "hero": "/research/technology/computing/Statistics/inference.png",
               "projects": [
                 {
                   "date": "2025-02-25",
@@ -120,14 +124,16 @@
               "tech": "Machine Learning",
               "specs": "Classic models",
               "available": 1,
-              "tech_url": "/research/technology/computing/Machine%20Learning/"
+              "tech_url": "/research/technology/computing/Machine%20Learning/",
+              "hero": "/research/technology/computing/Machine%20Learning/scikit-learn.png"
             },
             {
               "id": 7,
               "tech": "Deep Learning",
               "specs": "Neural networks",
               "available": 1,
-              "tech_url": "/research/technology/computing/Deep%20Learning/"
+              "tech_url": "/research/technology/computing/Deep%20Learning/",
+              "hero": "/research/technology/computing/Deep%20Learning/pytorch.png"
             }
           ]
         },
@@ -141,6 +147,7 @@
               "specs": "Data code notebooks",
               "available": 1,
               "tech_url": "/research/technology/computing/Repository/",
+              "hero": "/research/technology/computing/Repository/github.jpeg",
               "url": "https://github.com/vivianweidai",
               "projects": [
                 {
@@ -159,7 +166,8 @@
               "tech": "Snapshot",
               "specs": "Environment and ID",
               "available": 1,
-              "tech_url": "/research/technology/computing/Snapshot/"
+              "tech_url": "/research/technology/computing/Snapshot/",
+              "hero": "/research/technology/computing/Snapshot/docker.png"
             }
           ]
         }
@@ -180,21 +188,24 @@
               "tech": "Force",
               "specs": "Push and pull",
               "available": 1,
-              "tech_url": "/research/technology/physics/Force/"
+              "tech_url": "/research/technology/physics/Force/",
+              "hero": "/research/technology/physics/Force/force.jpg"
             },
             {
               "id": 11,
               "tech": "Distance",
               "specs": "Ultrasonic ranger",
               "available": 1,
-              "tech_url": "/research/technology/physics/Distance/"
+              "tech_url": "/research/technology/physics/Distance/",
+              "hero": "/research/technology/physics/Distance/motion-detector.jpg"
             },
             {
               "id": 12,
               "tech": "Time",
               "specs": "Beam timing",
               "available": 1,
-              "tech_url": "/research/technology/physics/Time/"
+              "tech_url": "/research/technology/physics/Time/",
+              "hero": "/research/technology/physics/Time/photogate.jpg"
             }
           ]
         },
@@ -207,14 +218,16 @@
               "tech": "Pressure",
               "specs": "Sealed pressure",
               "available": 1,
-              "tech_url": "/research/technology/physics/Pressure/"
+              "tech_url": "/research/technology/physics/Pressure/",
+              "hero": "/research/technology/physics/Pressure/gas-pressure.jpg"
             },
             {
               "id": 14,
               "tech": "Turbidity",
               "specs": "Light scattering",
               "available": 1,
-              "tech_url": "/research/technology/physics/Turbidity/"
+              "tech_url": "/research/technology/physics/Turbidity/",
+              "hero": "/research/technology/physics/Turbidity/turbidity.jpg"
             }
           ]
         },
@@ -227,21 +240,24 @@
               "tech": "Magnetism",
               "specs": "Hall effect",
               "available": 1,
-              "tech_url": "/research/technology/physics/Magnetism/"
+              "tech_url": "/research/technology/physics/Magnetism/",
+              "hero": "/research/technology/physics/Magnetism/magnetic-field.jpg"
             },
             {
               "id": 16,
               "tech": "Spectrometer",
               "specs": "Disperse light",
               "available": 1,
-              "tech_url": "/research/technology/physics/Spectrometer/"
+              "tech_url": "/research/technology/physics/Spectrometer/",
+              "hero": "/research/technology/physics/Spectrometer/spectrometer.png"
             },
             {
               "id": 17,
               "tech": "Interferometer",
               "specs": "Phase combining",
               "available": 0,
-              "tech_url": "/research/technology/physics/Interferometer/"
+              "tech_url": "/research/technology/physics/Interferometer/",
+              "hero": "/research/technology/physics/Interferometer/interferometer.png"
             }
           ]
         }
@@ -263,6 +279,7 @@
               "specs": "Voltage and waveforms",
               "available": 1,
               "tech_url": "/research/technology/physics/Circuits/",
+              "hero": "/research/technology/physics/Circuits/circuits.png",
               "projects": [
                 {
                   "date": "2026-04-04",
@@ -286,7 +303,8 @@
               "tech": "3D Printing",
               "specs": "Filament fabrication",
               "available": 1,
-              "tech_url": "/research/technology/physics/3D%20Printing/"
+              "tech_url": "/research/technology/physics/3D%20Printing/",
+              "hero": "/research/technology/physics/3D%20Printing/3d-printing.png"
             }
           ]
         }
@@ -308,6 +326,7 @@
               "specs": "Density spin",
               "available": 1,
               "tech_url": "/research/technology/chemistry/Centrifugation/",
+              "hero": "/research/technology/chemistry/Centrifugation/centrifugation.jpeg",
               "projects": [
                 {
                   "date": "2026-04-11",
@@ -327,6 +346,7 @@
               "specs": "Solubles",
               "available": 1,
               "tech_url": "/research/technology/chemistry/Liquid%20Chromatography/",
+              "hero": "/research/technology/chemistry/Liquid%20Chromatography/hero.jpg",
               "projects": [
                 {
                   "date": "2026-04-27",
@@ -345,6 +365,7 @@
               "specs": "Volatiles",
               "available": 1,
               "tech_url": "/research/technology/chemistry/Gas%20Chromatography/",
+              "hero": "/research/technology/chemistry/Gas%20Chromatography/hero.jpg",
               "projects": [
                 {
                   "date": "2026-04-27",
@@ -369,6 +390,7 @@
               "specs": "Polar bonds",
               "available": 1,
               "tech_url": "/research/technology/chemistry/IR%20Spectroscopy/",
+              "hero": "/research/technology/chemistry/IR%20Spectroscopy/irspectroscopy.jpeg",
               "projects": [
                 {
                   "date": "2026-04-19",
@@ -387,6 +409,7 @@
               "specs": "Absorbance",
               "available": 1,
               "tech_url": "/research/technology/chemistry/UV-Vis%20Spectroscopy/",
+              "hero": "/research/technology/chemistry/UV-Vis%20Spectroscopy/spectrophotometer.jpeg",
               "projects": [
                 {
                   "date": "2026-04-20",
@@ -404,14 +427,16 @@
               "tech": "NMR Spectroscopy",
               "specs": "Spin states",
               "available": 0,
-              "tech_url": "/research/technology/chemistry/NMR%20Spectroscopy/"
+              "tech_url": "/research/technology/chemistry/NMR%20Spectroscopy/",
+              "hero": "/research/technology/chemistry/NMR%20Spectroscopy/nmr.jpg"
             },
             {
               "id": 26,
               "tech": "CD Spectroscopy",
               "specs": "Chiral structure",
               "available": 1,
-              "tech_url": "/research/technology/chemistry/CD%20Spectroscopy/"
+              "tech_url": "/research/technology/chemistry/CD%20Spectroscopy/",
+              "hero": "/research/technology/chemistry/CD%20Spectroscopy/cd-spectroscopy.png"
             }
           ]
         },
@@ -425,6 +450,7 @@
               "specs": "Intact mass",
               "available": 1,
               "tech_url": "/research/technology/chemistry/MALDI/",
+              "hero": "/research/technology/chemistry/MALDI/hero.jpg",
               "projects": [
                 {
                   "date": "2026-04-27",
@@ -443,6 +469,7 @@
               "specs": "Nonvolatile molecules",
               "available": 1,
               "tech_url": "/research/technology/chemistry/Liquid%20Chromatography%20MS/",
+              "hero": "/research/technology/chemistry/Liquid%20Chromatography%20MS/hero.jpg",
               "projects": [
                 {
                   "date": "2026-04-27",
@@ -461,6 +488,7 @@
               "specs": "Volatile",
               "available": 1,
               "tech_url": "/research/technology/chemistry/Gas%20Chromatography%20MS/",
+              "hero": "/research/technology/chemistry/Gas%20Chromatography%20MS/hero.jpg",
               "projects": [
                 {
                   "date": "2026-04-27",
@@ -484,7 +512,8 @@
               "tech": "Polarimeter",
               "specs": "Sample chirality",
               "available": 1,
-              "tech_url": "/research/technology/chemistry/Polarimeter/"
+              "tech_url": "/research/technology/chemistry/Polarimeter/",
+              "hero": "/research/technology/chemistry/Polarimeter/polarimeter.jpg"
             }
           ]
         }
@@ -505,7 +534,8 @@
               "tech": "Melting Point",
               "specs": "Purity",
               "available": 1,
-              "tech_url": "/research/technology/chemistry/Melting%20Point/"
+              "tech_url": "/research/technology/chemistry/Melting%20Point/",
+              "hero": "/research/technology/chemistry/Melting%20Point/melting-point.png"
             },
             {
               "id": 32,
@@ -513,6 +543,7 @@
               "specs": "Heat flow",
               "available": 1,
               "tech_url": "/research/technology/chemistry/Calorimetry/",
+              "hero": "/research/technology/chemistry/Calorimetry/dsc-q100.jpg",
               "projects": [
                 {
                   "date": "2026-04-05",
@@ -531,6 +562,7 @@
               "specs": "Mass loss",
               "available": 1,
               "tech_url": "/research/technology/chemistry/Thermogravimetry/",
+              "hero": "/research/technology/chemistry/Thermogravimetry/tga-q50.jpg",
               "projects": [
                 {
                   "date": "2026-04-05",
@@ -554,21 +586,24 @@
               "tech": "Potentiometry",
               "specs": "Ion activity",
               "available": 1,
-              "tech_url": "/research/technology/chemistry/Potentiometry/"
+              "tech_url": "/research/technology/chemistry/Potentiometry/",
+              "hero": "/research/technology/chemistry/Potentiometry/potentiometry.png"
             },
             {
               "id": 35,
               "tech": "Conductometry",
               "specs": "Ion content",
               "available": 1,
-              "tech_url": "/research/technology/chemistry/Conductometry/"
+              "tech_url": "/research/technology/chemistry/Conductometry/",
+              "hero": "/research/technology/chemistry/Conductometry/conductometry.png"
             },
             {
               "id": 36,
               "tech": "Voltammetry",
               "specs": "Redox species",
               "available": 1,
-              "tech_url": "/research/technology/chemistry/Voltammetry/"
+              "tech_url": "/research/technology/chemistry/Voltammetry/",
+              "hero": "/research/technology/chemistry/Voltammetry/voltammetry.png"
             }
           ]
         }
@@ -587,50 +622,56 @@
             {
               "id": 37,
               "tech": "Handheld",
-              "specs": "Surface scope",
+              "specs": "Surfaces",
               "available": 1,
-              "tech_url": "/research/technology/biology/Handheld/"
+              "tech_url": "/research/technology/biology/Handheld/",
+              "hero": "/research/technology/biology/Handheld/handheld.png"
             },
             {
               "id": 38,
               "tech": "Stereo",
-              "specs": "Whole specimens",
+              "specs": "Organisms",
               "available": 1,
-              "tech_url": "/research/technology/biology/Stereo/"
+              "tech_url": "/research/technology/biology/Stereo/",
+              "hero": "/research/technology/biology/Stereo/stereo.png"
             },
             {
               "id": 39,
               "tech": "Compound",
-              "specs": "High-mag cells",
+              "specs": "Cells",
               "available": 1,
-              "tech_url": "/research/technology/biology/Compound/"
+              "tech_url": "/research/technology/biology/Compound/",
+              "hero": "/research/technology/biology/Compound/compound.png"
             }
           ]
         },
         {
           "id": 17,
-          "category": "Systems Imaging",
+          "category": "Vitals",
           "techs": [
             {
               "id": 40,
               "tech": "EEG",
-              "specs": "Scalp electrodes",
+              "specs": "Brain waves",
               "available": 0,
-              "tech_url": "/research/technology/biology/EEG/"
+              "tech_url": "/research/technology/biology/EEG/",
+              "hero": "/research/technology/biology/EEG/eeg.png"
             },
             {
               "id": 41,
               "tech": "fNIRS",
               "specs": "Blood flow",
               "available": 0,
-              "tech_url": "/research/technology/biology/fNIRS/"
+              "tech_url": "/research/technology/biology/fNIRS/",
+              "hero": "/research/technology/biology/fNIRS/fnirs.png"
             },
             {
               "id": 42,
               "tech": "EKG",
               "specs": "Heart rhythm",
               "available": 1,
-              "tech_url": "/research/technology/biology/EKG/"
+              "tech_url": "/research/technology/biology/EKG/",
+              "hero": "/research/technology/biology/EKG/ekg.jpg"
             }
           ]
         },
@@ -643,14 +684,16 @@
               "tech": "Spirometer",
               "specs": "Breath volume",
               "available": 1,
-              "tech_url": "/research/technology/biology/Spirometer/"
+              "tech_url": "/research/technology/biology/Spirometer/",
+              "hero": "/research/technology/biology/Spirometer/spirometer.jpg"
             },
             {
               "id": 44,
               "tech": "Gas Exchange",
-              "specs": "Respiration",
+              "specs": "Metabolic gases",
               "available": 1,
-              "tech_url": "/research/technology/biology/Gas%20Exchange/"
+              "tech_url": "/research/technology/biology/Gas%20Exchange/",
+              "hero": "/research/technology/biology/Gas%20Exchange/gas-exchange.jpg"
             }
           ]
         }
@@ -672,6 +715,7 @@
               "specs": "Endpoint amplify",
               "available": 1,
               "tech_url": "/research/technology/biology/PCR/",
+              "hero": "/research/technology/biology/PCR/pcr.png",
               "projects": [
                 {
                   "date": "2026-04-01",
@@ -689,7 +733,8 @@
               "tech": "qPCR",
               "specs": "Real-time count",
               "available": 0,
-              "tech_url": "/research/technology/biology/qPCR/"
+              "tech_url": "/research/technology/biology/qPCR/",
+              "hero": "/research/technology/biology/qPCR/qpcr.png"
             }
           ]
         },
@@ -700,16 +745,18 @@
             {
               "id": 47,
               "tech": "Long-Read",
-              "specs": "End-to-end strand",
+              "specs": "Entire strand",
               "available": 0,
-              "tech_url": "/research/technology/biology/Long-Read/"
+              "tech_url": "/research/technology/biology/Long-Read/",
+              "hero": "/research/technology/biology/Long-Read/long-read.png"
             },
             {
               "id": 48,
               "tech": "Short-Read",
-              "specs": "Parallel strands",
+              "specs": "Parallel fragments",
               "available": 0,
-              "tech_url": "/research/technology/biology/Short-Read/"
+              "tech_url": "/research/technology/biology/Short-Read/",
+              "hero": "/research/technology/biology/Short-Read/short-read.png"
             }
           ]
         },
@@ -720,9 +767,10 @@
             {
               "id": 49,
               "tech": "Cell-Free",
-              "specs": "Protein from DNA",
+              "specs": "DNA to proteins",
               "available": 1,
               "tech_url": "/research/technology/biology/Cell-Free/",
+              "hero": "/research/technology/biology/Cell-Free/cell-free.png",
               "projects": [
                 {
                   "date": "2026-04-01",
@@ -738,9 +786,10 @@
             {
               "id": 50,
               "tech": "Fluorescence",
-              "specs": "Glow under UV",
+              "specs": "UV glow",
               "available": 1,
               "tech_url": "/research/technology/biology/Fluorescence/",
+              "hero": "/research/technology/biology/Fluorescence/fluorescence.png",
               "projects": [
                 {
                   "date": "2026-04-01",
@@ -772,14 +821,16 @@
               "tech": "Amateur",
               "specs": "Smart telescopes",
               "available": 1,
-              "tech_url": "/research/technology/astronomy/Amateur/"
+              "tech_url": "/research/technology/astronomy/Amateur/",
+              "hero": "/research/technology/astronomy/Amateur/amateur.png"
             },
             {
               "id": 52,
               "tech": "Earth",
               "specs": "Ground observatories",
               "available": 1,
-              "tech_url": "/research/technology/astronomy/Earth/"
+              "tech_url": "/research/technology/astronomy/Earth/",
+              "hero": "/research/technology/astronomy/Earth/horsehead.jpeg"
             }
           ]
         },
@@ -792,14 +843,16 @@
               "tech": "Radio",
               "specs": "Radio telescopes",
               "available": 1,
-              "tech_url": "/research/technology/astronomy/Radio/"
+              "tech_url": "/research/technology/astronomy/Radio/",
+              "hero": "/research/technology/astronomy/Radio/radio.png"
             },
             {
               "id": 54,
               "tech": "Space",
               "specs": "Space telescopes",
               "available": 1,
-              "tech_url": "/research/technology/astronomy/Space/"
+              "tech_url": "/research/technology/astronomy/Space/",
+              "hero": "/research/technology/astronomy/Space/space.png"
             }
           ]
         }
@@ -820,21 +873,24 @@
               "tech": "Astrometry",
               "specs": "Position catalogs",
               "available": 1,
-              "tech_url": "/research/technology/astronomy/Astrometry/"
+              "tech_url": "/research/technology/astronomy/Astrometry/",
+              "hero": "/research/technology/astronomy/Astrometry/astrometry.png"
             },
             {
               "id": 56,
               "tech": "Photometry",
               "specs": "Light curves",
               "available": 1,
-              "tech_url": "/research/technology/astronomy/Photometry/"
+              "tech_url": "/research/technology/astronomy/Photometry/",
+              "hero": "/research/technology/astronomy/Photometry/photometry.png"
             },
             {
               "id": 57,
               "tech": "Spectroscopy",
               "specs": "Spectra",
               "available": 1,
-              "tech_url": "/research/technology/astronomy/Spectroscopy/"
+              "tech_url": "/research/technology/astronomy/Spectroscopy/",
+              "hero": "/research/technology/astronomy/Spectroscopy/spectroscopy.png"
             }
           ]
         },
@@ -847,14 +903,16 @@
               "tech": "Transient",
               "specs": "Events",
               "available": 1,
-              "tech_url": "/research/technology/astronomy/Transient/"
+              "tech_url": "/research/technology/astronomy/Transient/",
+              "hero": "/research/technology/astronomy/Transient/transient.png"
             },
             {
               "id": 59,
-              "tech": "Galaxy Morphology",
-              "specs": "Galaxies",
+              "tech": "Galaxies",
+              "specs": "Morphology",
               "available": 1,
-              "tech_url": "/research/technology/astronomy/Galaxy%20Morphology/"
+              "tech_url": "/research/technology/astronomy/Galaxies/",
+              "hero": "/research/technology/astronomy/Galaxies/galaxies.png"
             }
           ]
         }

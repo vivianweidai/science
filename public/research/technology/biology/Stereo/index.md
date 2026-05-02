@@ -7,5 +7,5 @@ category: Microscopy
 hero: stereo.png
 toys:
   - name: AmScope SM-4TZ-144 Trinocular Stereo Microscope with 5MP Camera
-    description: 144-LED ring light, 5 MP camera
+    description: Stereo microscope
 ---

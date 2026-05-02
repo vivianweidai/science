@@ -154,7 +154,6 @@ import PageFooter from '../../layouts/PageFooter.astro';
       position: relative;
       overflow: hidden;
     }
-    .status-emoji-invited .glyph { transform: translateY(0.12em); }
     .timeline .photo-icon { cursor: default; }
     .status-emoji-competitive { transform-origin: center 80%; }
     .status-emoji-competitive:hover,
@@ -167,23 +166,17 @@ import PageFooter from '../../layouts/PageFooter.astro';
       80%  { transform: rotate(5deg); }
       100% { transform: rotate(0); }
     }
-    .status-emoji-invited { position: relative; }
-    .status-emoji-invited .glyph::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(115deg, transparent 35%, rgba(255,255,255,0.85) 50%, transparent 65%);
-      transform: translateX(-120%);
-      pointer-events: none;
-      mix-blend-mode: screen;
+    .status-emoji-invited .glyph { transform-origin: center; display: inline-block; }
+    .status-emoji-invited:hover .glyph,
+    .timeline .entry:hover .status-emoji-invited .glyph {
+      animation: status-sparkle 0.75s ease;
     }
-    .status-emoji-invited:hover .glyph::after,
-    .timeline .entry:hover .status-emoji-invited .glyph::after {
-      animation: status-shimmer 1.0s ease-in-out;
-    }
-    @keyframes status-shimmer {
-      from { transform: translateX(-120%); }
-      to   { transform: translateX(120%); }
+    @keyframes status-sparkle {
+      0%   { transform: scale(1) rotate(0); filter: none; }
+      25%  { transform: scale(1.4) rotate(-15deg); filter: drop-shadow(0 0 6px rgba(255,200,40,0.9)); }
+      55%  { transform: scale(0.92) rotate(10deg); filter: drop-shadow(0 0 2px rgba(255,200,40,0.4)); }
+      80%  { transform: scale(1.12) rotate(-4deg); filter: drop-shadow(0 0 4px rgba(255,200,40,0.6)); }
+      100% { transform: scale(1) rotate(0); filter: none; }
     }
     .timeline .entry.hl { position: relative; isolation: isolate; }
     .timeline .entry.hl::before {
@@ -359,7 +352,7 @@ import PageFooter from '../../layouts/PageFooter.astro';
             + '<div class="type-cell">' + icon + '</div>'
             + '<div class="chips-cell">' + chipsForEntry(e) + '</div>'
             + '</div>'
-            + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="status-emoji status-emoji-invited"><span class="glyph">🎟️</span></span>' : '') + (e.competitive ? ' <span class="status-emoji status-emoji-competitive"><span class="glyph">🎯</span></span>' : '') + '</div>'
+            + '<div class="name-cell">' + esc(e.name) + (e.invited ? ' <span class="status-emoji status-emoji-invited"><span class="glyph">⭐</span></span>' : '') + (e.competitive ? ' <span class="status-emoji status-emoji-competitive"><span class="glyph">🎯</span></span>' : '') + '</div>'
             + (badgeLabel ? '<span class="foundation-badge">' + badgeLabel + '</span>' : '')
             + '</div>';
         });

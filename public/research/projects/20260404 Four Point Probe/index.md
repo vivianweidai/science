@@ -73,11 +73,9 @@ The quarter and spoon were the most conductive samples, while the brass house ke
 
 <img src="output/mean_sheet_resistance.png" alt="Mean sheet resistance by sample" class="result-img">
 
-### Limitations
+## Limitations
 
-Readings fluctuated significantly during measurement — the display value drifted continuously and never fully stabilized, even on the same sample without moving the probes. Repeated measurements of the same item produced a wide spread of values, making it difficult to draw firm quantitative conclusions. The broad ranges in the table above reflect this instability rather than true differences between measurement points. Four-point probes are designed for flat, uniform samples with controlled contact pressure, so the irregular and curved surfaces of household objects likely contributed to the variability.
-
-All sheet-resistance calculations and per-sample plots are in the analysis <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb" rel="noopener">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb" rel="noopener">colab</a>.
+Readings fluctuated significantly during measurement — the display value drifted continuously and never fully stabilized, even on the same sample without moving the probes. Repeated measurements of the same item produced a wide spread of values, making it difficult to draw firm quantitative conclusions. The broad ranges in the table above reflect this instability rather than true differences between measurement points. Four-point probes are designed for flat, uniform samples with controlled contact pressure, so the irregular and curved surfaces of household objects likely contributed to the variability. All sheet-resistance calculations and per-sample plots are in the analysis <a href="https://github.com/vivianweidai/science/blob/main/public/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb" rel="noopener">notebook</a> and are reproducible on <a href="https://colab.research.google.com/github/vivianweidai/science/blob/main/public/research/projects/20260404%20Four%20Point%20Probe/output/four_point_probe_analysis.ipynb" rel="noopener">colab</a>.
 
 <div id="technology" class="tech-table-wrap">
 <div class="tech-table">
@@ -85,8 +83,6 @@ All sheet-resistance calculations and per-sample plots are in the analysis <a hr
 <ul class="updates-list">
   <li data-subj="phys"><span class="update-date">Electronics</span> <span class="update-name"><a href="/research/technology/physics/Circuits/">Circuits</a></span> <span class="update-desc">Voltage and waveforms</span> <a class="chip phys" href="/research/#phys">Physics</a></li>
   <li data-subj="comp"><span class="update-date">Produce</span> <span class="update-name"><a href="/research/technology/computing/Repository/">Repository</a></span> <span class="update-desc">Data code notebooks</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
-  <li data-subj="math"><span class="update-date">Solve</span> <span class="update-name"><a href="/research/technology/mathematics/Numerical/">Numerical</a></span> <span class="update-desc">Approximate</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li data-subj="math"><span class="update-date">Display</span> <span class="update-name"><a href="/research/technology/mathematics/Graphic/">Graphic</a></span> <span class="update-desc">2D and 3D</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
 </ul>
 </div>
 </div>

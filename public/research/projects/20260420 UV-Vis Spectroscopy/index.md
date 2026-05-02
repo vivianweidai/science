@@ -2,7 +2,6 @@
 project: UV-Vis Spectroscopy
 tech:
   - UV-Vis Spectroscopy
-  - Graphic
 title: "UV-Vis Spectroscopy of Everyday Fluorophores"
 sciences:
   - Chemistry

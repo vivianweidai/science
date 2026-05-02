@@ -269,7 +269,7 @@ private struct ActivityRow: View {
                         .foregroundStyle(nameColor)
                         .fixedSize(horizontal: false, vertical: true)
                     if activity.invited == 1 {
-                        Text("🎟️").font(.system(size: 12))
+                        Text("⭐").font(.system(size: 12))
                     }
                     if activity.competitive == 1 {
                         Text("🎯").font(.system(size: 12))

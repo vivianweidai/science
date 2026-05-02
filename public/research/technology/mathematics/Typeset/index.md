@@ -7,5 +7,5 @@ category: Display
 hero: latex.png
 toys:
   - name: LaTeX
-    description: Document typesetting system
+    description: Document typesetting
 ---

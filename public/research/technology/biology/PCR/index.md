@@ -7,5 +7,5 @@ category: Amplification
 hero: pcr.png
 toys:
   - name: miniPCR mini16 Thermal Cycler
-    description: Portable 16-tube endpoint cycler — DNA Discovery bundle
+    description: Portable cycler
 ---

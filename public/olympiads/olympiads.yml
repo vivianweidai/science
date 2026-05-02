@@ -10,7 +10,7 @@
 #   name:        string                                       (required)
 
 #   highlighted: true                                         (optional — omit when false)
-#   invited:     true                                         (optional — renders 🎟️)
+#   invited:     true                                         (optional — renders ⭐)
 #   competitive: true                                         (optional — renders 🎯, "competitive field / almost made cutoff")
 - type: textbook
   subject: Mathematics

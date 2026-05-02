@@ -89,7 +89,10 @@ import PageFooter from '../../layouts/PageFooter.astro';
         topic.categories.forEach(function (cat) {
           var catSlug = cat.category.toLowerCase().replace(/\s+/g, '-');
           var catComplete = cat.techs.length > 0 && cat.techs.every(function (t) { return t.available; });
-          var catMark = catComplete ? '<span class="tech-cat-complete">COMPLETE</span>' : '';
+          var catTested = catComplete && cat.techs.every(function (t) { return t.projects && t.projects.length > 0; });
+          var catMark = catTested
+            ? '<span class="tech-cat-complete tech-cat-tested tech-tip" data-tip="Toys tested">TESTED</span>'
+            : (catComplete ? '<span class="tech-cat-complete tech-tip" data-tip="Access granted">ACCESS</span>' : '');
           html += '<tr class="tech-cat-row" id="cat-' + topic.science_slug + '-' + topicSlug + '-' + catSlug + '">'
             + '<td colspan="2" style="padding-left:1.4em;font-weight:700">' + esc(cat.category) + '</td>'
             + '<td class="tech-access">' + catMark + '</td>'
@@ -100,7 +103,10 @@ import PageFooter from '../../layouts/PageFooter.astro';
             if (tech.tech_url) {
               name = '<a href="' + tech.tech_url + '">' + name + '</a>';
             }
-            var access = tech.available ? '<span class="tech-avail" title="Access granted">&#10003;</span>' : '';
+            var tested = tech.projects && tech.projects.length > 0;
+            var access = tech.available
+              ? '<span class="tech-avail tech-tip" data-tip="' + (tested ? 'Tested' : 'Accessed') + '">' + (tested ? '&#10003;' : '&ndash;') + '</span>'
+              : '';
 
             html += '<tr class="tech-row">'
               + '<td style="padding-left:2.8em">' + name + '</td>'
@@ -314,6 +320,31 @@ import PageFooter from '../../layouts/PageFooter.astro';
       padding: .25em .55em;
       border-radius: 3px;
       vertical-align: middle;
+    }
+
+    .tech-tip { position: relative; cursor: default; }
+    .tech-tip::after {
+      content: attr(data-tip);
+      position: absolute;
+      bottom: calc(100% + 4px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1f2328;
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      padding: .25em .55em;
+      border-radius: 4px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .1s ease-out;
+      z-index: 10;
+    }
+    @media (hover: hover) {
+      .tech-tip:hover::after { opacity: 1; }
     }
 
     .tech-wip {
