@@ -126,9 +126,12 @@ a.chip:hover { filter: brightness(0.94) saturate(1.2); }
 }
 @media (max-width: 600px) {
   /* Keep nav on the same line as the title; drop the back-to-Science link
-     so the three section links fit alongside the H2. */
+     and any active self-link so the remaining section links fit alongside
+     the H2. Tech / project sub-pages don't pass `active` to PageHeader,
+     so the Research link still appears there as a way back to /research/. */
   .page-header .header-nav { font-size: 0.8em; gap: 0.6em; margin-left: 0.5em; }
   .page-header .header-nav a[data-nav="home"] { display: none; }
+  .page-header .header-nav a.active { display: none; }
 }
 
 /* CSS-only tabs */
