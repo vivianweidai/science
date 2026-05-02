@@ -233,7 +233,7 @@
               "id": 16,
               "tech": "Spectrometer",
               "specs": "Disperse light",
-              "available": 0,
+              "available": 1,
               "tech_url": "/research/technology/physics/Spectrometer/"
             },
             {
@@ -255,7 +255,7 @@
       "categories": [
         {
           "id": 8,
-          "category": "Circuits",
+          "category": "Electronics",
           "techs": [
             {
               "id": 18,
@@ -285,7 +285,7 @@
               "id": 19,
               "tech": "3D Printing",
               "specs": "Filament fabrication",
-              "available": 0,
+              "available": 1,
               "tech_url": "/research/technology/physics/3D%20Printing/"
             }
           ]

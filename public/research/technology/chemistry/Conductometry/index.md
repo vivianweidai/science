@@ -4,6 +4,7 @@ science: Chemistry
 science_slug: chem
 topic: React
 category: Electrochemistry
+hero: conductometry.png
 toys:
   - name: Vernier Go Direct Conductivity Probe
     description: Solution conductance — ionic strength tracking

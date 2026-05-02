@@ -17,7 +17,9 @@
 #
 # Tech ↔ project links are populated via reverse-scan: declare the tech in
 # the project's `index.md` frontmatter `tech:` array and it shows up on
-# the tech page automatically.
+# the tech page automatically. For external (non-repo) project links,
+# add an `extra_projects:` array to the per-tech `index.md` frontmatter
+# (date, title, url, sciences[]) — these are merged with reverse-scan results.
 
 # ═══════════════════════════════════════════════════════════════
 # MATHEMATICS
@@ -108,13 +110,14 @@
           available: true
         - tech: Spectrometer
           specs: Disperse light
+          available: true
         - tech: Interferometer
           specs: Phase combining
 
 - science: Physics
   topic: Build
   categories:
-    - category: Circuits
+    - category: Electronics
       techs:
         - tech: Circuits
           specs: Voltage and waveforms
@@ -123,6 +126,7 @@
       techs:
         - tech: 3D Printing
           specs: Filament fabrication
+          available: true
 
 # ═══════════════════════════════════════════════════════════════
 # CHEMISTRY

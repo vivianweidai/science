@@ -230,6 +230,8 @@ Triggers to promote: a planned electrosynthesis project (water splitting, Cu pla
 
 Current shape: **Measure + Build** (2 topics). Restructured 2026-05-01 to a verb-pair matching every other science. Measure has Motion / Fluids / Electromagnetism (fields + optics merged). Build has Circuits / Prototypes (3D printing). Heat moved to Chem React → Thermal where Vernier Temperature Probe enables Melting Point.
 
+**Interferometer — PASCO OS-9255A on hold (decision-not-purchase, 2026-05-01).** The PASCO Precision Interferometer is the canonical educational Michelson but at ~$2,500 CAD via AYVA (quote-only, not click-and-buy) it doesn't pencil out for a single-experiment use case. The Interferometer tech remains as a placeholder slot on the page. Trigger to revisit: a sustained optics-bench project that justifies the spend, or a sale on a used PASCO unit.
+
 Categories worth adding (within Measure or Build, when toys commit):
 
 - **Measure → Materials** — hardness, elastic modulus, fracture, viscosity. Bridges to Chem-Thermal (TGA-DSC of polymers).

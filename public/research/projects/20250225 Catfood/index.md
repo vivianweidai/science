@@ -58,12 +58,11 @@ The chi-squared test and supporting plots are in the analysis <a href="https://g
 <div class="tech-table">
 <div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li data-subj="math"><span class="update-date">Numerical</span> <span class="update-name"><a href="/research/technology/mathematics/NumPy/">NumPy</a></span> <span class="update-desc">Array foundation — linear algebra and vectorized math</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li data-subj="math"><span class="update-date">Graphing</span> <span class="update-name"><a href="/research/technology/mathematics/Matplotlib/">Matplotlib</a></span> <span class="update-desc">Python 2D and 3D plotting</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li data-subj="math"><span class="update-date">Typesetting</span> <span class="update-name"><a href="/research/technology/mathematics/LaTeX/">LaTeX</a></span> <span class="update-desc">Equations, references and bibliographies</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
-  <li data-subj="comp"><span class="update-date">Statistics</span> <span class="update-name"><a href="/research/technology/computing/SciPy/">SciPy</a></span> <span class="update-desc">Hypothesis tests, distributions and confidence intervals</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
-  <li data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/technology/computing/GitHub/">GitHub</a></span> <span class="update-desc">Data and source code repositories</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
-  <li data-subj="comp"><span class="update-date">Repository</span> <span class="update-name"><a href="/research/technology/computing/Jupyter/">Jupyter</a></span> <span class="update-desc">Notebooks combining code, figures and narrative</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li data-subj="comp"><span class="update-date">Predict</span> <span class="update-name"><a href="/research/technology/computing/Statistics/">Statistics</a></span> <span class="update-desc">Inference</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li data-subj="comp"><span class="update-date">Produce</span> <span class="update-name"><a href="/research/technology/computing/Repository/">Repository</a></span> <span class="update-desc">Data code notebooks</span> <a class="chip comp" href="/research/#comp">Computing</a></li>
+  <li data-subj="math"><span class="update-date">Solve</span> <span class="update-name"><a href="/research/technology/mathematics/Numerical/">Numerical</a></span> <span class="update-desc">Approximate</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li data-subj="math"><span class="update-date">Display</span> <span class="update-name"><a href="/research/technology/mathematics/Graphic/">Graphic</a></span> <span class="update-desc">2D and 3D</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
+  <li data-subj="math"><span class="update-date">Display</span> <span class="update-name"><a href="/research/technology/mathematics/Typeset/">Typeset</a></span> <span class="update-desc">Equations and Reactions</span> <a class="chip math" href="/research/#math">Mathematics</a></li>
 </ul>
 </div>
 </div>

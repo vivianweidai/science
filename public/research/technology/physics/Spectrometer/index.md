@@ -6,6 +6,8 @@ topic: Measure
 category: Electromagnetism
 hero: spectrometer.png
 toys:
-  - name: Vernier Go Direct SpectroVis Plus
+  - name: Vernier Go Direct Fluorescence/UV-VIS Spectrophotometer
     description: Visible light spectrometer
+  - name: Vernier Spectrophotometer Optical Fiber
+    description: Spectra outside of cuvettes
 ---

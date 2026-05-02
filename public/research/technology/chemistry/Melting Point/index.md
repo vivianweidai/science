@@ -4,6 +4,7 @@ science: Chemistry
 science_slug: chem
 topic: React
 category: Thermal
+hero: melting-point.png
 toys:
   - name: Vernier Go Direct Temperature Probe
     description: Capillary tube + heated oil bath — classical Tm determination

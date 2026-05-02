@@ -14,4 +14,8 @@ toys:
     description: Reveal spectrum fingerprint
   - name: Pickles Stellar Atlas
     description: Reference for stellar spectra
+  - name: Vernier Go Direct Fluorescence/UV-VIS Spectrophotometer
+    description: Visible spectra for the Sun
+  - name: Vernier Spectrophotometer Optical Fiber
+    description: Spectra outside of cuvettes
 ---

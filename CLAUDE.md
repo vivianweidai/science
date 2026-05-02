@@ -107,7 +107,7 @@ science/
 │       │   ├── photos/           # setup/, samples/, data/ (data excluded from shuffle)
 │       │   ├── papers/           # Background papers
 │       │   └── output/           # Analysis scripts, notebooks, plots
-│       ├── tech/<science>/<Tech>/ # Per-Tech template page (Content Collection 'tech');
+│       ├── technology/<science>/<Tech>/ # Per-Tech template page (Content Collection 'tech');
 │       │                         #   <science> is the full word (mathematics, computing,
 │       │                         #   etc.) to mirror public/curriculum/source/
 │       │   ├── index.md          # Frontmatter `hero:` points to a sibling file

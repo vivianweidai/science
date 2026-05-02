@@ -91,9 +91,9 @@ Flat baseline across 500–3000 m/z — no analyte, no matrix, no peaks; if peak
 <div class="tech-table">
 <div class="tech-table-header">Technology</div>
 <ul class="updates-list">
-  <li data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/technology/chemistry/MALDI/">MALDI</a></span> <span class="update-desc">Direct ionization from a plate — no chromatograph, intact biomolecules via laser + matrix</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
-  <li data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/technology/chemistry/Gas Chromatography MS/">Gas Chromatography MS</a></span> <span class="update-desc">Volatile molecules — fragment fingerprints via electron ionization</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
-  <li data-subj="chem"><span class="update-date">Mass Spectrometry</span> <span class="update-name"><a href="/research/technology/chemistry/Liquid Chromatography MS/">Liquid Chromatography MS</a></span> <span class="update-desc">Nonvolatile molecules — intact weight via electrospray</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li data-subj="chem"><span class="update-date">Spectrometry</span> <span class="update-name"><a href="/research/technology/chemistry/MALDI/">MALDI</a></span> <span class="update-desc">Intact mass</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li data-subj="chem"><span class="update-date">Spectrometry</span> <span class="update-name"><a href="/research/technology/chemistry/Gas%20Chromatography%20MS/">Gas Chromatography MS</a></span> <span class="update-desc">Volatile</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
+  <li data-subj="chem"><span class="update-date">Spectrometry</span> <span class="update-name"><a href="/research/technology/chemistry/Liquid%20Chromatography%20MS/">Liquid Chromatography MS</a></span> <span class="update-desc">Nonvolatile molecules</span> <a class="chip chem" href="/research/#chem">Chemistry</a></li>
 </ul>
 </div>
 </div>
