@@ -186,18 +186,9 @@ Research project pages are **personal toolkit notes**, not publications. Their p
 
 Existing pages that model this style: `20260419 IR Spectroscopy/index.md` and `20260420 UV-Vis Spectroscopy/index.md`. When adding a new project or revising an old one, aim for their level of density.
 
-## INSTRUMENTS & DATA FORMATS
+## INSTRUMENTS
 
-**All instrument names must exactly match the canonical Toy List.** When referencing any instrument, verify the name — do not abbreviate, add prefixes, or rearrange words. Instruments used so far:
-- **Thermo Scientific Nicolet 380 FT-IR Spectrometer** — CSV files with wavenumber (cm⁻¹) vs. transmittance/absorbance
-- **Jandel RM3 Four-Point Probe** — sheet resistance measurements (Ω/□)
-- **OptiMelt Automated Melting Point System** — non-functional (touchscreen unresponsive)
-- **Next up: TA Instruments TGA Q50** — thermogravimetric analysis (walk-up guide available)
-
-## GIT WORKFLOW
-
-- **Always work on the `main` branch.** Never create feature branches, worktrees, or PRs. Commit and push directly to `main`.
-- Before starting work, verify you are on `main` with `git branch`. If not, switch with `git checkout main`.
+**All instrument names must exactly match the canonical Toy List** (`archives/technology/toys.pdf`). When referencing any instrument, verify the name — do not abbreviate, add prefixes, or rearrange words. The live registry of instruments and which technologies they enable is `public/research/technology.yml`; per-instrument data-format notes live in the relevant project's `index.md` Setup table.
 
 ## GITHUB & VISIBILITY
 
