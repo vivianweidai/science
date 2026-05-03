@@ -18,9 +18,7 @@
 #
 # Tech ↔ project links are populated via reverse-scan: declare the tech in
 # the project's `index.md` frontmatter `tech:` array and it shows up on
-# the tech page automatically. For external (non-repo) project links,
-# add an `extra_projects:` array to the per-tech `index.md` frontmatter
-# (date, title, url, sciences[]) — these are merged with reverse-scan results.
+# the tech page automatically.
 #
 # Tested vs Accessed marker on /research/:
 #   ✓ Tested  = at least one project links to the tech (default)

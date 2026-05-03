@@ -53,15 +53,6 @@ const tech = defineCollection({
       name: z.string(),
       description: z.string(),
     })).optional(),
-    // Placeholder projects that don't have a local project page yet —
-    // rendered in the Projects section alongside reverse-lookup hits.
-    // Each entry: { date: "YYYY-MM-DD", title, url (external), science (full) }.
-    extra_projects: z.array(z.object({
-      date: z.string(),
-      title: z.string(),
-      url: z.string(),
-      sciences: z.array(z.string()),
-    })).optional(),
   }),
 });
 

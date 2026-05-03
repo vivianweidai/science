@@ -1,6 +1,6 @@
 # Ideas — science
 
-Living backlog of research ideas. Public on purpose — we target underserved areas and do not care about being scooped. Ideas graduate out of this doc by getting promoted to `content/research/projects/YYYYMMDD Name/index.md` when a pilot actually starts.
+Living backlog of research ideas. Public on purpose — we target underserved areas and do not care about being scooped. Ideas graduate out of this doc by getting promoted to `public/research/projects/YYYYMMDD Name/index.md` when a pilot actually starts.
 
 _Last updated 2026-04-25._
 

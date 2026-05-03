@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Build public/content/truth/olympiads.json from the YAML source of truth.
+"""Build public/olympiads/olympiads.json from the YAML source of truth.
 
 Source of truth:
-  public/content/truth/olympiads.yml
+  public/olympiads/olympiads.yml
 
 Output (consumed by olympiads/index.md client-side JS and by the iOS app):
-  public/content/truth/olympiads.json
+  public/olympiads/olympiads.json
 
 Output shape:
     {"items": [ {id, type, subject, date, sort_key, name, highlighted,

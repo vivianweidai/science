@@ -38,14 +38,14 @@ The data layer matches this vocabulary end-to-end:
 
 ## REFERENCE MATERIALS
 
-All background materials live in the repo under `public/research/archives/`. Read these as needed for instrument details, context, and research planning:
+All background materials live in the repo under `archives/` at the **top level — NOT inside `public/`**, so they aren't served on vivianweidai.com (filenames disclose UNR/UBC/faculty references). Read these as needed for instrument details, context, and research planning:
 
-- **`public/research/archives/technology/`** — canonical instrument list (`toys.pdf`), plus technology landscape, UNR/UBC lab and faculty catalogues, and the university comparison. (Filename `toys.pdf` is the canonical Toy catalog under the new vocabulary — it lists physical instruments, which IS what we call Toys now.)
-- **`public/research/archives/toys/<Toy>/`** — per-Toy folder of reference photos and the walk-up guide PDF (flat layout — `photo1.jpeg`, …, `<Toy>.pdf`).
+- **`archives/technology/`** — canonical instrument list (`toys.pdf`), plus technology landscape, UNR/UBC lab and faculty catalogues, and the university comparison. (Filename `toys.pdf` is the canonical Toy catalog under the new vocabulary — it lists physical instruments, which IS what we call Toys now.)
+- **`archives/toys/<Toy>/`** — per-Toy folder of reference photos and the walk-up guide PDF (flat layout — `photo1.jpeg`, …, `<Toy>.pdf`).
 
 `IDEAS.md` at the repo root is a living backlog of research project ideas — promote one to `public/research/projects/YYYYMMDD Name/` when a pilot starts.
 
-All instrument names in code and prose must exactly match what's in `public/research/archives/technology/toys.pdf`.
+All instrument names in code and prose must exactly match what's in `archives/technology/toys.pdf`.
 
 ## STACK
 
@@ -79,6 +79,12 @@ science/
 │       ├── research/       # /research/ + dynamic /research/projects/[slug]/ + /research/technology/[science]/[tech]/
 │       └── privacy.md      # /privacy/
 │
+├── archives/               # Reference materials — read by Claude/the user, NOT
+│                           # served on vivianweidai.com. Top-level (outside public/)
+│                           # so faculty/lab catalogue filenames stay private.
+│   ├── technology/         # toys.pdf + lab/faculty catalogues + comparison
+│   └── toys/<Toy>/         # Per-Toy reference photos + walk-up guide PDF
+│
 ├── pipeline/
 │   ├── worker/             # Cloudflare Worker (ASSETS passthrough)
 │   │   ├── wrangler.toml   # name=science, [assets] dir=./dist (Astro outputs here)
@@ -99,8 +105,6 @@ science/
 │   │   ├── olympiads.yml         # Source of truth — edit, then rebuild
 │   │   └── olympiads.json        # Generated — DO NOT EDIT BY HAND
 │   └── research/
-│       ├── archives/             # Per-instrument reference (photos + walk-up guide PDF)
-│       │                         #   plus lab catalogues in technology/
 │       ├── projects/<folder>/    # YYYYMMDD Project Name
 │       │   ├── index.md          # Project page (Content Collection 'projects')
 │       │   ├── data/             # Raw instrument data

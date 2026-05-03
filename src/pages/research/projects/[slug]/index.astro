@@ -25,7 +25,7 @@ export async function getStaticPaths() {
             if (relative(photosRoot, full) === 'data') continue;
             walk(full);
           } else if (/\.(jpg|jpeg|png)$/i.test(name)) {
-            // Absolute URL since file path (under /content/) differs from page URL (/research/projects/<folder>/).
+            // Absolute URL since file path (under public/) differs from page URL (/research/projects/<folder>/).
             photos.push(`/research/projects/${folder}/photos/` + relative(photosRoot, full));
           }
         }
