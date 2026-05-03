@@ -19,14 +19,14 @@ imports only `ScienceCore` and owns its own views under `watch/`.
 Three tabs:
 
 - **Curriculum** — cascading subject → section → topic → table browser
-  driven by `content/curriculum/curriculum.json` (the same manifest the
+  driven by `curriculum/curriculum.json` (the same manifest the
   webapp uses). Individual tables are fetched from GitHub raw URLs and
   rendered with KaTeX in a `WKWebView`, including highlighted rows from
   the manifest.
 - **Olympiads** — contests tracker plus unified textbooks list, read
-  from `content/olympiads/olympiads.json` (built from
-  `olympiads.yml` via `content/research/build_olympiads.py`).
-- **Research** — tech browser driven by `content/research/technology.json`
+  from `olympiads/olympiads.json` (built from
+  `olympiads.yml` via `pipeline/scripts/build_olympiads.py`).
+- **Research** — tech browser driven by `research/technology.json`
   (topics → categories → techs). Project links open an in-app markdown
   render of the project's `index.md`; photo placeholder links open in
   an in-app `PhotoViewer`; GitHub / Colab / Wolfram links hand off to
@@ -35,7 +35,7 @@ Three tabs:
 ## Layout
 
 ```
-archives/apple/
+apple/
 ├── Package.swift             SwiftPM manifest — iOS 17 + watchOS 10
 ├── project.yml               XcodeGen spec — regenerate with `xcodegen generate`
 ├── shared/
