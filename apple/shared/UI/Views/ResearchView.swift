@@ -7,11 +7,6 @@ import ScienceCore
 struct ResearchView: View {
     @State private var store = ContentStore.shared
     @State private var subject: SubjectFilter = SubjectFilter.randomResearchSubject()
-    /// Photo-placeholder tech currently being previewed. Presented as a
-    /// modal sheet (slide-up) to match the in-project markdown image
-    /// preview — the user explicitly preferred the sheet over the
-    /// NavigationLink push, so both surfaces now use this pattern.
-    @State private var presentedImage: IdentifiableURL?
 
     var body: some View {
         NavigationStack {
@@ -34,16 +29,6 @@ struct ResearchView: View {
                 }
             }
             .refreshable { await store.refreshAll() }
-            .sheet(item: $presentedImage) { wrapper in
-                NavigationStack {
-                    PhotoViewer(title: wrapper.url.lastPathComponent, url: wrapper.url)
-                        .toolbar {
-                            ToolbarItem(placement: .primaryAction) {
-                                Button("Done") { presentedImage = nil }
-                            }
-                        }
-                }
-            }
         }
     }
 
@@ -57,7 +42,7 @@ struct ResearchView: View {
         return ScrollView {
             LazyVStack(alignment: .leading, spacing: 14) {
                 ForEach(filtered) { topic in
-                    TopicCard(topic: topic) { url in presentedImage = IdentifiableURL(url: url) }
+                    TopicCard(topic: topic)
                 }
                 if filtered.isEmpty {
                     Text("No toys yet.")
@@ -76,7 +61,6 @@ struct ResearchView: View {
 
 private struct TopicCard: View {
     let topic: ResearchTopic
-    let onImageTap: (URL) -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -84,7 +68,7 @@ private struct TopicCard: View {
             Divider()
             VStack(alignment: .leading, spacing: 0) {
                 ForEach(topic.categories) { category in
-                    TechnologyBlock(topic: topic, category: category, onImageTap: onImageTap)
+                    TechnologyBlock(topic: topic, category: category)
                 }
             }
         }
@@ -122,7 +106,6 @@ private struct TopicCard: View {
 private struct TechnologyBlock: View {
     let topic: ResearchTopic
     let category: ResearchCategory
-    let onImageTap: (URL) -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -134,7 +117,7 @@ private struct TechnologyBlock: View {
                 .background(ResearchColors.technologyHeader)
 
             ForEach(category.techs) { tech in
-                TechRow(topic: topic, category: category, tech: tech, onImageTap: onImageTap)
+                TechRow(topic: topic, category: category, tech: tech)
                 if tech.id != category.techs.last?.id {
                     Divider().padding(.leading, 28)
                 }
@@ -147,7 +130,6 @@ private struct TechRow: View {
     let topic: ResearchTopic
     let category: ResearchCategory
     let tech: ResearchTech
-    let onImageTap: (URL) -> Void
     @Environment(\.openURL) private var openURL
 
     private var hasLink: Bool { tech.techUrl != nil || tech.externalURL != nil }
@@ -156,16 +138,8 @@ private struct TechRow: View {
         Group {
             if tech.techUrl != nil {
                 NavigationLink {
-                    TechDetailView(topic: topic, category: category, tech: tech, onImageTap: onImageTap)
+                    TechDetailView(topic: topic, category: category, tech: tech)
                 } label: {
-                    rowBody
-                }
-                .buttonStyle(.plain)
-            } else if let external = tech.externalURL, Self.isImageURL(external) {
-                // Slide-up sheet (handled by ResearchView) instead of a
-                // NavigationLink push — matches the in-project markdown
-                // image preview so both surfaces feel the same.
-                Button { onImageTap(external) } label: {
                     rowBody
                 }
                 .buttonStyle(.plain)
@@ -178,12 +152,6 @@ private struct TechRow: View {
                 rowBody
             }
         }
-    }
-
-    private static func isImageURL(_ url: URL) -> Bool {
-        let lower = url.absoluteString.lowercased()
-        return lower.hasSuffix(".jpg") || lower.hasSuffix(".jpeg")
-            || lower.hasSuffix(".png") || lower.hasSuffix(".gif")
     }
 
     @ViewBuilder
@@ -225,7 +193,6 @@ struct TechDetailView: View {
     let topic: ResearchTopic
     let category: ResearchCategory
     let tech: ResearchTech
-    let onImageTap: (URL) -> Void
 
     var body: some View {
         ScrollView {
@@ -250,7 +217,6 @@ struct TechDetailView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.black.opacity(0.08), lineWidth: 1)
                     )
-                    .onTapGesture { onImageTap(url) }
                 }
 
                 HStack(spacing: 8) {
@@ -315,7 +281,6 @@ struct TechDetailView: View {
 
 private struct TechProjectRow: View {
     let project: ResearchTechProject
-    @Environment(\.openURL) private var openURL
 
     var body: some View {
         Group {
@@ -323,11 +288,6 @@ private struct TechProjectRow: View {
                 NavigationLink {
                     ProjectDetailView(title: project.title, indexURL: indexURL)
                 } label: {
-                    rowBody
-                }
-                .buttonStyle(.plain)
-            } else if let ext = project.externalURL {
-                Button { openURL(ext) } label: {
                     rowBody
                 }
                 .buttonStyle(.plain)
@@ -346,8 +306,7 @@ private struct TechProjectRow: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(project.title)
                     .font(.system(size: 14, weight: .medium))
-                    .foregroundStyle(project.indexURL != nil || project.externalURL != nil
-                                     ? Color.accentColor : Color.primary)
+                    .foregroundStyle(project.indexURL != nil ? Color.accentColor : Color.primary)
                 if !project.sciences.isEmpty {
                     HStack(spacing: 4) {
                         ForEach(project.sciences, id: \.self) { s in
@@ -395,7 +354,6 @@ struct ProjectDetailView: View {
     let indexURL: URL
     @State private var markdown: String = ""
     @State private var loading = true
-    @State private var presentedImage: IdentifiableURL?
     @State private var techNames: [String] = []
 
     var body: some View {
@@ -406,12 +364,7 @@ struct ProjectDetailView: View {
             } else {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 0) {
-                        MarkdownWebView(
-                            markdown: markdown,
-                            onImageTap: { url in
-                                presentedImage = IdentifiableURL(url: url)
-                            }
-                        )
+                        MarkdownWebView(markdown: markdown)
                         if !techNames.isEmpty {
                             ProjectTechnologySection(techNames: techNames)
                                 .padding(.horizontal, 14)
@@ -425,16 +378,6 @@ struct ProjectDetailView: View {
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
-        .sheet(item: $presentedImage) { wrapper in
-            NavigationStack {
-                PhotoViewer(title: wrapper.url.lastPathComponent, url: wrapper.url)
-                    .toolbar {
-                        ToolbarItem(placement: .primaryAction) {
-                            Button("Done") { presentedImage = nil }
-                        }
-                    }
-            }
-        }
         .task {
             do {
                 let (data, _) = try await URLSession.shared.data(from: indexURL)
@@ -583,8 +526,7 @@ private struct ProjectTechnologySection: View {
                     ForEach(Array(resolved.enumerated()), id: \.element.id) { idx, r in
                         NavigationLink {
                             TechDetailView(
-                                topic: r.topic, category: r.category, tech: r.tech,
-                                onImageTap: { _ in }
+                                topic: r.topic, category: r.category, tech: r.tech
                             )
                         } label: {
                             ProjectTechnologyRow(resolved: r)
@@ -634,94 +576,6 @@ private struct ProjectTechnologyRow: View {
         .padding(.vertical, 8)
         .padding(.horizontal, 12)
         .contentShape(Rectangle())
-    }
-}
-
-/// Wrapper so a `URL` can drive SwiftUI's `.sheet(item:)` binding,
-/// which requires `Identifiable`.
-private struct IdentifiableURL: Identifiable {
-    let url: URL
-    var id: String { url.absoluteString }
-}
-
-// MARK: - Photo viewer
-
-/// Simple in-app photo viewer for toys that are just placeholder image
-/// links (the webapp shows a 📷 next to them). AsyncImage handles load
-/// states; the image is centered and scaled to fit so portraits and
-/// landscapes both read well without cropping.
-struct PhotoViewer: View {
-    let title: String
-    let url: URL
-
-    // Pinch-to-zoom + drag-to-pan state. `scale`/`offset` are the
-    // committed values; `gestureScale`/`gestureOffset` accumulate the
-    // in-flight gesture so the image tracks smoothly while the user
-    // pinches or drags. Double-tap resets to fit.
-    @State private var scale: CGFloat = 1
-    @State private var gestureScale: CGFloat = 1
-    @State private var offset: CGSize = .zero
-    @State private var gestureOffset: CGSize = .zero
-
-    var body: some View {
-        AsyncImage(url: url) { phase in
-            switch phase {
-            case .empty:
-                ProgressView()
-            case .success(let image):
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .scaleEffect(scale * gestureScale)
-                    .offset(x: offset.width + gestureOffset.width,
-                            y: offset.height + gestureOffset.height)
-                    .gesture(
-                        SimultaneousGesture(
-                            MagnificationGesture()
-                                .onChanged { value in gestureScale = value }
-                                .onEnded { value in
-                                    scale = max(1, min(scale * value, 6))
-                                    gestureScale = 1
-                                    if scale == 1 { offset = .zero }
-                                },
-                            DragGesture()
-                                .onChanged { value in gestureOffset = value.translation }
-                                .onEnded { value in
-                                    offset.width += value.translation.width
-                                    offset.height += value.translation.height
-                                    gestureOffset = .zero
-                                }
-                        )
-                    )
-                    .onTapGesture(count: 2) {
-                        withAnimation(.spring(response: 0.3)) {
-                            if scale > 1 {
-                                scale = 1; offset = .zero
-                            } else {
-                                scale = 2.5
-                            }
-                        }
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-            case .failure:
-                VStack(spacing: 8) {
-                    Image(systemName: "photo.badge.exclamationmark")
-                        .font(.system(size: 36))
-                        .foregroundStyle(.secondary)
-                    Text("Couldn't load photo")
-                        .font(.system(size: 13))
-                        .foregroundStyle(.secondary)
-                }
-            @unknown default:
-                EmptyView()
-            }
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding()
-        .navigationTitle(title)
-        #if os(iOS)
-        .navigationBarTitleDisplayMode(.inline)
-        #endif
     }
 }
 

@@ -15,8 +15,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.gestures.detectTapGestures
-import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -41,8 +39,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontStyle
@@ -109,10 +105,6 @@ fun ResearchView(store: ContentStore, modifier: Modifier = Modifier) {
                                     .replace("+", "%20")
                                 nav.navigate("tech/$encoded")
                             },
-                            onPhoto = { title, url ->
-                                val encoded = URLEncoder.encode(url, "UTF-8")
-                                nav.navigate("photo/${URLEncoder.encode(title, "UTF-8")}/$encoded")
-                            },
                         )
                         error != null -> ErrorState(error!!)
                         else -> LoadingState(
@@ -140,10 +132,6 @@ fun ResearchView(store: ContentStore, modifier: Modifier = Modifier) {
                     val encoded = URLEncoder.encode(url, "UTF-8")
                     nav.navigate("project/${URLEncoder.encode(title, "UTF-8")}/$encoded")
                 },
-                onPhoto = { title, url ->
-                    val encoded = URLEncoder.encode(url, "UTF-8")
-                    nav.navigate("photo/${URLEncoder.encode(title, "UTF-8")}/$encoded")
-                },
             )
         }
         composable("project/{title}/{url}") { back ->
@@ -158,23 +146,7 @@ fun ResearchView(store: ContentStore, modifier: Modifier = Modifier) {
                     val encoded = URLEncoder.encode(name, "UTF-8").replace("+", "%20")
                     nav.navigate("tech/$encoded")
                 },
-                onImageTap = { imageUrl ->
-                    // Use the same push-from-right viewer that the main
-                    // research page uses for photo-placeholder techs, so
-                    // in-page image links behave the same as tech-row
-                    // image links.
-                    val encoded = URLEncoder.encode(imageUrl, "UTF-8")
-                    val titleSeg = URLEncoder.encode(
-                        imageUrl.substringAfterLast('/'), "UTF-8",
-                    )
-                    nav.navigate("photo/$titleSeg/$encoded")
-                },
             )
-        }
-        composable("photo/{title}/{url}") { back ->
-            val title = back.arguments?.getString("title") ?: ""
-            val url = back.arguments?.getString("url") ?: ""
-            PhotoViewerScreen(title, url) { nav.popBackStack() }
         }
     }
 }
@@ -189,7 +161,6 @@ private fun List<ResearchTopic>.filterBy(filter: SubjectFilter): List<ResearchTo
 private fun TopicList(
     topics: List<ResearchTopic>,
     onTech: (String) -> Unit,
-    onPhoto: (String, String) -> Unit,
 ) {
     LazyColumn(
         contentPadding = androidx.compose.foundation.layout.PaddingValues(vertical = 12.dp),
@@ -207,7 +178,7 @@ private fun TopicList(
             }
         }
         items(topics, key = { it.id }) { topic ->
-            TopicCard(topic, onTech, onPhoto)
+            TopicCard(topic, onTech)
         }
     }
 }
@@ -216,7 +187,6 @@ private fun TopicList(
 private fun TopicCard(
     topic: ResearchTopic,
     onTech: (String) -> Unit,
-    onPhoto: (String, String) -> Unit,
 ) {
     Surface(
         shape = RoundedCornerShape(10.dp),
@@ -251,7 +221,7 @@ private fun TopicCard(
                 }
                 HorizontalDivider()
                 topic.categories.forEach { category ->
-                    TechnologyBlock(category, onTech, onPhoto)
+                    TechnologyBlock(category, onTech)
                 }
             }
         }
@@ -262,7 +232,6 @@ private fun TopicCard(
 private fun TechnologyBlock(
     category: ResearchCategory,
     onTech: (String) -> Unit,
-    onPhoto: (String, String) -> Unit,
 ) {
     Column {
         Text(
@@ -275,7 +244,7 @@ private fun TechnologyBlock(
                 .padding(start = 14.dp, end = 12.dp, top = 6.dp, bottom = 6.dp),
         )
         category.techs.forEachIndexed { i, tech ->
-            TechRow(tech, onTech, onPhoto)
+            TechRow(tech, onTech)
             if (i != category.techs.lastIndex) {
                 HorizontalDivider(modifier = Modifier.padding(start = 28.dp))
             }
@@ -287,7 +256,6 @@ private fun TechnologyBlock(
 private fun TechRow(
     tech: ResearchTech,
     onTech: (String) -> Unit,
-    onPhoto: (String, String) -> Unit,
 ) {
     val context = LocalContext.current
     val externalUrl = tech.externalUrl
@@ -295,7 +263,6 @@ private fun TechRow(
 
     val onClick: (() -> Unit)? = when {
         tech.techUrl != null -> ({ onTech(tech.tech) })
-        externalUrl != null && externalUrl.isImageUrl() -> ({ onPhoto(tech.tech, externalUrl) })
         externalUrl != null -> ({
             context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(externalUrl)))
         })
@@ -338,12 +305,6 @@ private fun TechRow(
     else row()
 }
 
-private fun String.isImageUrl(): Boolean {
-    val l = lowercase()
-    return l.endsWith(".jpg") || l.endsWith(".jpeg") ||
-           l.endsWith(".png") || l.endsWith(".gif")
-}
-
 // ---------- Project detail ----------
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -354,7 +315,6 @@ private fun ProjectDetailScreen(
     indexUrl: String,
     onBack: () -> Unit,
     onTech: (String) -> Unit,
-    onImageTap: (String) -> Unit,
 ) {
     var loaded by remember(indexUrl) { mutableStateOf<ProjectDetail?>(null) }
     LaunchedEffect(indexUrl) {
@@ -387,7 +347,7 @@ private fun ProjectDetailScreen(
             } else {
                 androidx.compose.foundation.lazy.LazyColumn(Modifier.fillMaxSize()) {
                     item {
-                        MarkdownWebView(markdown = detail.markdown, onImageTap = onImageTap)
+                        MarkdownWebView(markdown = detail.markdown)
                     }
                     if (detail.techNames.isNotEmpty()) {
                         item {
@@ -417,7 +377,6 @@ private fun TechDetailScreen(
     techName: String,
     onBack: () -> Unit,
     onProject: (String, String) -> Unit,
-    onPhoto: (String, String) -> Unit,
 ) {
     val topics by store.topics.collectAsStateWithLifecycle()
     val resolved = remember(topics, techName) { store.findTech(techName) }
@@ -515,7 +474,7 @@ private fun TechDetailScreen(
                             ) {
                                 Column {
                                     projects.forEachIndexed { i, p ->
-                                        TechProjectRow(p, onProject, onPhoto)
+                                        TechProjectRow(p, onProject)
                                         if (i != projects.lastIndex) HorizontalDivider()
                                     }
                                 }
@@ -532,16 +491,8 @@ private fun TechDetailScreen(
 private fun TechProjectRow(
     project: ResearchTechProject,
     onProject: (String, String) -> Unit,
-    onPhoto: (String, String) -> Unit,
 ) {
-    val context = LocalContext.current
-    val onClick: (() -> Unit)? = when {
-        project.indexUrl != null -> ({ onProject(project.title, project.indexUrl!!) })
-        project.externalUrl != null -> ({
-            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(project.externalUrl!!)))
-        })
-        else -> null
-    }
+    val onClick: () -> Unit = { onProject(project.title, project.indexUrl) }
     val row = @Composable {
         Row(
             verticalAlignment = Alignment.Top,
@@ -561,8 +512,7 @@ private fun TechProjectRow(
                     project.title,
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Medium,
-                    color = if (onClick != null) MaterialTheme.colorScheme.primary
-                            else MaterialTheme.colorScheme.onSurface,
+                    color = MaterialTheme.colorScheme.primary,
                 )
                 if (project.sciences.isNotEmpty()) {
                     Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
@@ -572,8 +522,7 @@ private fun TechProjectRow(
             }
         }
     }
-    if (onClick != null) Surface(onClick = onClick, color = Color.Transparent) { row() }
-    else row()
+    Surface(onClick = onClick, color = Color.Transparent) { row() }
 }
 
 private fun formatProjectDate(iso: String): String {
@@ -759,65 +708,3 @@ private suspend fun scanProjectPhotos(indexUrl: String): List<String> {
     return all
 }
 
-// ---------- Photo viewer ----------
-
-/// Shared pinch-to-zoom + drag-to-pan viewer used by both Research
-/// (tech placeholder photos, in-page images) and Olympiads (activity
-/// photos). `internal` so OlympiadsView.kt in the same module can reuse
-/// the route target directly. Double-tap toggles between fit and 2.5x.
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-internal fun PhotoViewerScreen(title: String, url: String, onBack: () -> Unit) {
-    var scale by remember { mutableStateOf(1f) }
-    var offset by remember { mutableStateOf(androidx.compose.ui.geometry.Offset.Zero) }
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(title) },
-                navigationIcon = {
-                    IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-                    }
-                },
-            )
-        },
-    ) { p ->
-        Box(
-            modifier = Modifier.padding(p).fillMaxSize().padding(16.dp),
-            contentAlignment = Alignment.Center,
-        ) {
-            AsyncImage(
-                model = url,
-                contentDescription = title,
-                modifier = Modifier
-                    .fillMaxSize()
-                    .clip(RoundedCornerShape(8.dp))
-                    .graphicsLayer(
-                        scaleX = scale,
-                        scaleY = scale,
-                        translationX = offset.x,
-                        translationY = offset.y,
-                    )
-                    .pointerInput(Unit) {
-                        detectTransformGestures { _, pan, zoom, _ ->
-                            scale = (scale * zoom).coerceIn(1f, 6f)
-                            offset = if (scale > 1f) offset + pan
-                                     else androidx.compose.ui.geometry.Offset.Zero
-                        }
-                    }
-                    .pointerInput(Unit) {
-                        detectTapGestures(
-                            onDoubleTap = {
-                                if (scale > 1f) {
-                                    scale = 1f
-                                    offset = androidx.compose.ui.geometry.Offset.Zero
-                                } else {
-                                    scale = 2.5f
-                                }
-                            },
-                        )
-                    },
-            )
-        }
-    }
-}

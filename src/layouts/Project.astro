@@ -2,7 +2,6 @@
 import './base.css';
 import './tabs.css';
 import faviconSvg from './favicon.svg?url';
-import photoPreviewJs from './photo-preview.js?url';
 import PageHeader from './PageHeader.astro';
 import PageFooter from './PageFooter.astro';
 
@@ -255,7 +254,6 @@ const SLUG: Record<string, string> = {
 
   <PageFooter />
 
-  <script src={photoPreviewJs} is:inline></script>
   <script is:inline>
     // Top photo grid: shuffle on load and expose the function for the Shuffle button.
     window.shufflePhotos = function() {

@@ -11,14 +11,13 @@ Output shape:
   {"topics": [{id, science, science_slug, topic,
     categories: [{id, category,
       techs: [{id, tech, specs, available, tech_url, hero?, url?,
-              projects?: [{date, title, url, sciences[], folder?}]}]
+              projects?: [{date, title, url, sciences[]}]}]
     }]
   }]}
 
 The `projects[]` list is the one source for tech↔project links. It's
 assembled by reverse-scanning every research project's `index.md`
-frontmatter `tech:` array (each project declares which techs it used)
-plus each tech's own `extra_projects:` placeholder list.
+frontmatter `tech:` array (each project declares which techs it used).
 """
 
 from __future__ import annotations
@@ -83,37 +82,14 @@ def hero_for_tech(science_folder: str, tech_name: str) -> str | None:
     return base + urllib.parse.quote(hero)
 
 
-def extras_for_tech(science_folder: str, tech_name: str) -> list[dict]:
-    """Return the tech's `extra_projects:` frontmatter array — placeholder
-    entries for projects that don't have a local research folder yet
-    (external links, planned projects, etc.). Each entry is normalised to
-    {date, title, url, sciences[]} with `date` as YYYY-MM-DD."""
-    fm = _read_frontmatter(TECH_DIR / science_folder / tech_name / "index.md")
-    if not fm:
-        return []
-    out = []
-    for x in fm.get("extra_projects") or []:
-        date = str(x.get("date", ""))
-        m = re.match(r"^(\d{4})-(\d{2})-(\d{2})", date)
-        if not m:
-            continue
-        out.append({
-            "date": f"{m.group(1)}-{m.group(2)}-{m.group(3)}",
-            "title": x.get("title", ""),
-            "url": x.get("url", ""),
-            "sciences": list(x.get("sciences") or []),
-        })
-    return out
-
-
 def projects_per_tech() -> dict[str, list[dict]]:
     """Scan every research project's index.md and return a reverse map
     from tech name to the list of projects that reference it via the
     project's `tech:` frontmatter array. Each entry is {date, title,
-    url, sciences[], folder}, with `date` as YYYY-MM-DD parsed from the
-    folder's date prefix. Used to bake the per-tech projects list into
-    technology.json so iOS/Android can render the tech page natively without
-    re-scanning all projects at runtime."""
+    url, sciences[]}, with `date` as YYYY-MM-DD parsed from the folder's
+    date prefix. Used to bake the per-tech projects list into
+    technology.json so iOS/Android can render the tech page natively
+    without re-scanning all projects at runtime."""
     by_tech: dict[str, list[dict]] = {}
     if not PROJECTS.is_dir():
         return by_tech
@@ -136,7 +112,6 @@ def projects_per_tech() -> dict[str, list[dict]]:
                 "title": title,
                 "url": url,
                 "sciences": sciences,
-                "folder": proj.name,
             })
     return by_tech
 
@@ -184,12 +159,9 @@ def build() -> list[dict]:
                     t["url"] = tech["url"]
                 if "tested" in tech:
                     t["tested"] = bool(tech["tested"])
-                # Combine reverse-scanned projects (project frontmatter
-                # `tech:` array) with the tech's own `extra_projects:`
-                # placeholder list, sort newest first by date.
-                folder_for_extras = SCIENCE_FOLDERS[e["science"]]
+                # Reverse-scanned projects (whose frontmatter `tech:`
+                # array references this tech), newest first.
                 projects = list(proj_index.get(tech["tech"], []))
-                projects.extend(extras_for_tech(folder_for_extras, tech["tech"]))
                 if projects:
                     projects.sort(key=lambda p: p["date"], reverse=True)
                     t["projects"] = projects

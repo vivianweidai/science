@@ -153,14 +153,3 @@
 #flu-salicylate:checked ~ #content-flu-salicylate {
   display: block;
 }
-
-/* Chromatography Dry Run: LC vs GC mode tabs */
-#chrom-lc:checked ~ .tab-labels label[for="chrom-lc"],
-#chrom-gc:checked ~ .tab-labels label[for="chrom-gc"] {
-  color: #0969da;
-  border-bottom-color: #0969da;
-}
-#chrom-lc:checked ~ #content-chrom-lc,
-#chrom-gc:checked ~ #content-chrom-gc {
-  display: block;
-}

@@ -45,7 +45,6 @@ fun MarkdownWebView(
     markdown: String,
     tableName: String? = null,
     highlightedRows: List<Int> = emptyList(),
-    onImageTap: ((String) -> Unit)? = null,
 ) {
     val context = LocalContext.current
     var contentHeight: Dp by remember { mutableStateOf(80.dp) }
@@ -97,19 +96,11 @@ fun MarkdownWebView(
                         view: WebView,
                         req: WebResourceRequest,
                     ): Boolean {
-                        val url = req.url.toString()
-                        val lower = url.lowercase()
-                        val isImage = lower.endsWith(".jpg") || lower.endsWith(".jpeg") ||
-                                      lower.endsWith(".png") || lower.endsWith(".gif")
-                        return if (isImage && onImageTap != null) {
-                            onImageTap.invoke(url); true
-                        } else {
-                            context.startActivity(
-                                Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                            )
-                            true
-                        }
+                        context.startActivity(
+                            Intent(Intent.ACTION_VIEW, Uri.parse(req.url.toString()))
+                                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        )
+                        return true
                     }
                 }
 

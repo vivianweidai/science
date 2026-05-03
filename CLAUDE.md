@@ -158,7 +158,7 @@ YYYYMMDD Project Name/
 - **One-off HTML mockups (non-Astro)** — keep in `~/GITHUB/scratch/<topic>.html` per the global convention; serve with `live-server` if needed. Don't recreate the in-repo `scratch/` Jekyll preview folder — Astro's dev server replaces it.
 - **Layout-aware Astro mockups** — drop a temp `.astro` file under `src/pages/scratch-<topic>.astro`, view via `pnpm dev`, then `git restore` to remove. Same exception pattern as other Astro repos.
 - **Showing the user — default is Safari.** After a change, open the relevant URL in Safari (`open -a Safari 'http://127.0.0.1:4321/<path>'`) so the user sees the real rendering natively. `qlmanage -t -s 1200 -o /tmp <file>.html` is only an inline-in-chat fallback.
-- **Promoting from scratch to site** — move the chosen asset into the appropriate tracked path (e.g. `archives/layout/`, `archives/truth/`, or a project's `output/`).
+- **Promoting from scratch to site** — move the chosen asset into the appropriate tracked path (e.g. `archives/technology/`, `archives/toys/<Toy>/`, or a project's `output/`).
 
 ## ANALYSIS GUIDELINES
 
@@ -214,7 +214,7 @@ This repo is synced to GitHub at `vivianweidai/science` and served at `vivianwei
 - **Results links** should point to the GitHub blob URL (e.g. `https://github.com/vivianweidai/science/blob/main/...`) so files render inside GitHub.
 - Ensure all code, data, and documentation is presentable and well-organized.
 - Each project's `index.md` (not README.md) serves as the public-facing overview. Astro's content collection loader globs `*/index.md` under `research/projects/`, so the filename matters.
-- **When creating a new project**, always add it to the tabbed project table in `research/index.md` under the appropriate discipline tab (Mathematics, Computing, Physics, Chemistry, Biology, Astronomy). Also add any new instruments to the Instruments section in `research/index.md`.
+- **When creating a new project**, the project's `tech:` frontmatter array is the only registration step — `build_technology.py` reverse-scans projects and bakes them into `technology.json`, which the research page, tech detail pages, and Apple/Android apps all consume. Also add any new instrument as a Toy under the appropriate tech in `technology.yml`.
 - **Do not auto-commit or push.** The user reviews and commits locally. After finishing a change, show the change in Safari (see LOCAL PREVIEWS) and stop there — no `git commit` or `git push` unless explicitly asked. Before the user commits, scan for oversized images (see the resize rule above) and shrink any offenders — once a large blob is in git history it stays there forever.
 
 ## PROJECT README TEMPLATE

@@ -28,9 +28,8 @@ Three tabs:
   `olympiads.yml` via `pipeline/scripts/build_olympiads.py`).
 - **Research** — tech browser driven by `research/technology.json`
   (topics → categories → techs). Project links open an in-app markdown
-  render of the project's `index.md`; photo placeholder links open in
-  an in-app `PhotoViewer`; GitHub / Colab / Wolfram links hand off to
-  Safari.
+  render of the project's `index.md`; external links (photos, GitHub,
+  Colab, Wolfram, etc.) hand off to Safari.
 
 ## Layout
 
