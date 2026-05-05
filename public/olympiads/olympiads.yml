@@ -336,6 +336,7 @@
   subject: Biology
   date: April 2026
   name: Canadian Biology Olympiad Competition Exam
+  competitive: true
 - type: olympiad
   subject: Biology
   date: February 2026

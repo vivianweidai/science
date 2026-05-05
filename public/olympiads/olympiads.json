@@ -717,7 +717,8 @@
       "date": "April 2026",
       "sort_key": "2026-04",
       "name": "Canadian Biology Olympiad Competition Exam",
-      "highlighted": 0
+      "highlighted": 0,
+      "competitive": 1
     },
     {
       "id": 78,
